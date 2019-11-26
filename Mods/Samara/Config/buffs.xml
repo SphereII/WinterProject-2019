@@ -1,0 +1,57 @@
+<configs>
+	<append xpath="/buffs">
+		<buff name="Curse" icon="#@modfolder:ItemIcons/ui_game_symbol_helmetcam.png" hidden="true">
+			<stack_type value="ignore"/>
+			<duration value="10"/>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="#@modfolder:Resources/SamaraCase.unity3d?SamaraCase" local_offset="0,0,0" local_rotation="0,0,0"/>
+				<triggered_effect trigger="onSelfBuffFinish" action="RemovePrefabFromEntity" prefab="#@modfolder:Resources/SamaraCase.unity3d?SamaraCase"/>
+			</effect_group>
+		</buff>	
+		<buff name="CurseFlashback" name_key="buffElementFreezingName" description_key="buffElementFreezingDesc" tooltip_key="buffElementFreezingTooltip" icon="ui_game_symbol_cold" icon_color="255,0,0" icon_blink="true">
+			<duration value="10"/>
+			<stack_type value="ignore"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="#@modfolder:Resources/SamaraCase.unity3d?SamaraCurse" local_offset="0,0,0" local_rotation="0,0,0"/>
+					<triggered_effect trigger="onSelfBuffFinish" action="RemovePrefabFromEntity" prefab="#@modfolder:Resources/SamaraCase.unity3d?SamaraCurse"/>
+				</effect_group>
+		</buff>
+		<buff name="CurseOverlay" name_key="buffElementFreezingName" description_key="buffElementFreezingDesc" tooltip_key="buffElementFreezingTooltip" icon="ui_game_symbol_cold" icon_color="255,0,0" icon_blink="true">
+			<duration value="15"/>
+			<stack_type value="ignore"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="#@modfolder:Resources/SamaraCase.unity3d?SamaraCurseOverlay" parent_transform="CameraNode" local_offset="0,0,0" local_rotation="0,0,0"/>
+					<triggered_effect trigger="onSelfBuffFinish" action="RemovePrefabFromEntity" prefab="#@modfolder:Resources/SamaraCase.unity3d?SamaraCurseOverlay"/>
+				</effect_group>
+		</buff>
+	
+	
+	</append>
+	
+ <append xpath="/buffs/buff[@name='buffStatusCheck01']/effect_group">	
+			<triggered_effect trigger="onSelfBuffUpdate" action="RemovePrefabFromEntity" prefab="SamaraCase">
+				<requirement name="NotHasBuff" buff="Curse"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfBuffUpdate" action="AttachPrefabToEntity" prefab="SamaraCase">
+				<requirement name="HasBuff" buff="Curse"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfBuffUpdate" action="RemovePrefabFromEntity" prefab="SamaraCurse">
+				<requirement name="NotHasBuff" buff="CurseFlashback"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfBuffUpdate" action="AttachPrefabToEntity" prefab="SamaraCurse">
+				<requirement name="HasBuff" buff="CurseFlashback"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfBuffUpdate" action="RemovePrefabFromEntity" prefab="SamaraCurseOverlay">
+				<requirement name="NotHasBuff" buff="CurseOverlay"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfBuffUpdate" action="AttachPrefabToEntity" prefab="SamaraCurseOverlay">
+				<requirement name="HasBuff" buff="CurseOverlay"/>
+			</triggered_effect>
+			
+			
+	</append> 
+	
+	
+	
+
+</configs>
