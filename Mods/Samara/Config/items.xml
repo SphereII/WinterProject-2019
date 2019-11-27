@@ -56,10 +56,10 @@
 				<passive_effect name="DamageModifier" operation="perc_set" value="0" tags="metal"/>
 			</effect_group>
 		</item> 
-	<item name="SamaraCase">
+	<item name="CursedCase">
 		<property name="HoldType" value="3"/>
 		<property name="DisplayType" value="waterCoffee"/>
-		<property name="Meshfile" value="#@modfolder:Resources/SamaraCase.unity3d?SamaraCase" />	
+		<property name="Meshfile" value="#@modfolder:Resources/SamaraCurse.unity3d?SamaraCase" />	
 		<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
 		<property name="Material" value="Morganic"/>
 		<property name="Weight" value="10"/>
