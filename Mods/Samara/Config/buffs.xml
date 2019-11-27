@@ -107,7 +107,7 @@
 					<triggered_effect trigger="onSelfBuffFinish" action="RemovePrefabFromEntity" prefab="#@modfolder:Resources/SamaraCurse.unity3d?Overlay03"/>
 				</effect_group>
 		</buff>	
-	<!--	<buff name="buffJumpTag" name_key="buffElementFreezingName" description_key="buffElementFreezingDesc" tooltip_key="buffElementFreezingTooltip" icon="ui_game_symbol_cold" icon_color="255,0,0" icon_blink="true">
+		<buff name="buffJumpTag" name_key="buffElementFreezingName" description_key="buffElementFreezingDesc" tooltip_key="buffElementFreezingTooltip" icon="ui_game_symbol_cold" icon_color="255,0,0" icon_blink="true">
 			<duration value="0"/>
 			<stack_type value="ignore"/>
 			<effect_group>
@@ -115,13 +115,13 @@
 				<triggered_effect trigger="onSelfBuffUpdate" target="other" action="AnimatorSetBool" property="On" value="true"/>
 				<triggered_effect trigger="onSelfBuffUpdate" target="other" action="AnimatorSetBool" property="Off" value="false"/>
 				<triggered_effect trigger="onSelfBuffFinish" target="other" action="AnimatorSetBool" property="Off" value="true"/>
-					<triggered_effect trigger="onSelfBuffFinish" target="other" action="AnimatorSetBool" property="On" value="false"/>
+				<triggered_effect trigger="onSelfBuffFinish" target="other" action="AnimatorSetBool" property="On" value="false"/>
 			</effect_group>
-		</buff>	-->
+		</buff>	
 	</append>
 	
  <append xpath="/buffs/buff[@name='buffStatusCheck01']/effect_group">
-<!--			<triggered_effect trigger="onSelfEnteredGame" action="AddBuff" target="self" buff="buffJumpTag"/> -->
+			<triggered_effect trigger="onSelfEnteredGame" action="AddBuff" target="self" buff="buffJumpTag"/> 
 
 		<!-- buffs attached to Items  -->
 
