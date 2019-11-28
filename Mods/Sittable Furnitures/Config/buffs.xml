@@ -1,0 +1,119 @@
+<configs>
+<append xpath="/buffs/buff[@name='buffStatusCheck01']">
+<effect_group>
+<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="5" buff="buffVehiclecheck"/>
+
+</effect_group>
+ </append>
+
+	
+		<append xpath="/buffs">	
+	
+		<buff name="buffSleeping" hidden="true"> 
+		<stack_type value="ignore"/>
+		<duration value=".5"/>
+		<effect_group>
+	<requirement name="EntityTagCompare" tags="player"/>
+			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffSleepingHack"/>			
+		</effect_group>
+	</buff>
+	
+	<buff name="buffSleepingHack" name_key="Sleeping"  description_key="Sleep well my friend.                                     Regenerates Health slowly                             Grants you Rested Buff after a while.           You might be hungry when you wake up." tooltip_key="You feel relaxed..." icon="ui_game_symbol_map_bed" icon_color="0,153,0" icon_blink="true" tags="drug">
+		<stack_type value="replace"/>
+		<duration value="1.1"/>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$SleepCounter" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar="$SleepCounter" operation="add" value="1"/>
+<passive_effect name="HealthChangeOT" operation="base_add" value="0.25"/>
+<passive_effect name="HealthMaxModifierOT" operation="base_add" value="0.10"/>
+<passive_effect name="StaminaMaxModifierOT" operation="base_subtract" value="0.10" />
+		</effect_group>
+
+		<effect_group>
+				<requirement name="CVarCompare" cvar="$SleepCounter" operation="GTE" value="25"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffRested"/>
+			<triggered_effect trigger="onSelfBuffStack" action="AddBuff" buff="buffRested"/>
+		</effect_group>
+	</buff>
+	
+	    <buff name="buffToil" hidden="true"> 
+		<stack_type value="ignore"/>
+		<duration value=".5"/>
+		<effect_group>
+	<requirement name="EntityTagCompare" tags="player"/>
+			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffToilHack"/>			
+		</effect_group>
+	</buff>
+	
+	<buff name="buffToilHack" name_key="Toilet"  description_key="Makes you thirsty.                                     Removes dysentery after a while." tooltip_key="I wish I had a phone right now.." icon="ui_game_symbol_seats" icon_color="0,153,0" icon_blink="true" tags="drug">
+		<stack_type value="replace"/>
+		<duration value="1.1"/>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$ToiletCounter" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar="$ToiletCounter" operation="add" value="1"/>
+<passive_effect name="WaterChangeOT" operation="base_subtract" value="0.5"/>
+		</effect_group>	
+		<effect_group>
+				<requirement name="CVarCompare" cvar="$ToiletCounter" operation="GTE" value="25"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" target="self" buff="buffIllDysentery0"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" target="self" buff="buffIllDysentery1"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" target="self" buff="buffIllDysentery2"/>
+		</effect_group>
+	</buff>		
+	
+		<buff name="buffRested"  name_key="Rested"  description_key="Sleeping isn't overrated.                             Your stamina is on fire ! " tooltip_key="You got a great day ahead of you!" icon="ui_game_symbol_run" icon_color="89,155,255" icon_blink="false" tags="drug"> 
+		<stack_type value="replace"/>
+		<duration value="250"/>
+		<effect_group>
+		<requirement name="NotHasBuff" buff="buffSleepingHack"/>
+			<passive_effect name="AttributeLevel" operation="base_add" value="1" tags="attAgility"/>
+
+			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" target="self" buff="buffPerkAbilityUpdate"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="AddBuff" target="self" buff="buffPerkAbilityUpdate"/>
+
+			<passive_effect name="StaminaChangeOT" operation="base_add" value="2"/>
+			<passive_effect name="WaterChangeOT" operation="base_subtract" value="0.1944"/>
+			</effect_group>
+	</buff>
+	
+	<buff name="buffRest" name_key="Rest"  description_key="You are resting." tooltip_key="That's comfy." icon="ui_game_symbol_chair" icon_color="0,153,0" icon_blink="true" tags="drug">
+		<stack_type value="replace"/>
+		<duration value="1.1"/>
+		<effect_group>
+					<requirement name="EntityTagCompare" tags="player"/>
+		<passive_effect name="StaminaChangeOT" operation="perc_add" value="2">	
+		</passive_effect>
+		</effect_group>
+	</buff>	
+	
+			<buff name="buffVehiclecheck"  name_key="Vehiclecheck"  icon="ui_game_symbol_run" icon_color="89,155,255" icon_blink="false" hidden="true"> 
+		<stack_type value="replace"/>
+		<duration value="10"/>
+		<effect_group>
+			<requirement name="CVarCompare" cvar=".IsFPV" operation="LT" value="1"/>
+		<requirement name="EntityTagCompare" tags="rest"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="0.1" buff="buffRest"/>
+			<triggered_effect trigger="onSelfBuffStack" action="AddBuff" target="selfAOE" range="0.1" buff="buffRest"/>
+		
+			</effect_group>
+		<effect_group>
+			<requirement name="CVarCompare" cvar=".IsFPV" operation="LT" value="1"/>
+		<requirement name="EntityTagCompare" tags="sleep"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="0.1" buff="buffSleeping"/>
+			<triggered_effect trigger="onSelfBuffStack" action="AddBuff" target="selfAOE" range="0.1" buff="buffSleeping"/>
+			</effect_group>	
+         <effect_group>			
+		 	<requirement name="CVarCompare" cvar=".IsFPV" operation="LT" value="1"/>
+		<requirement name="EntityTagCompare" tags="toilet"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="0.1" buff="buffToil"/>
+			<triggered_effect trigger="onSelfBuffStack" action="AddBuff" target="selfAOE" range="0.1" buff="buffToil"/>
+			</effect_group>			
+	</buff>
+	
+			
+	
+
+	
+	
+		</append>
+</configs>

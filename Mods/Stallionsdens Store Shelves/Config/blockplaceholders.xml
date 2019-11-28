@@ -1,0 +1,28 @@
+<stallionsden>
+
+	<append xpath="/blockplaceholders">
+		<placeholder name="storeShelving01">
+			<block name="storeShelving01Empty" prob=".66"/>
+			<block name="storeShelving01Full" prob=".33"/>
+		</placeholder>
+	</append>
+	<append xpath="/blockplaceholders">
+		<placeholder name="storeShelving01Double">
+			<block name="storeShelving01DoubleEmpty" prob=".66"/>
+			<block name="storeShelving01DoubleFull" prob=".33"/>
+		</placeholder>
+	</append>
+	<append xpath="/blockplaceholders">
+		<placeholder name="storeShelving01Top">
+			<block name="storeShelving01TopEmpty" prob=".66"/>
+			<block name="storeShelving01TopFull" prob=".33"/>
+		</placeholder>
+	</append>
+	<append xpath="/blockplaceholders">
+		<placeholder name="storeShelving01TopDouble">
+			<block name="storeShelving01TopDoubleEmpty" prob=".66"/>
+			<block name="storeShelving01TopDoubleFull" prob=".33"/>
+		</placeholder>
+	</append>
+
+</stallionsden>

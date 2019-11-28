@@ -1,0 +1,11 @@
+<MeanCloud_ScrapBoneKnives>
+  
+  <!-- fix bone knife to be made of bone, not metal -->
+  <set xpath="/items/item[@name='meleeToolKnifeBone']/property[@name='Material']/@value">MresourceBone</set>
+  
+  <!-- add weight to the bone knife so that it can be scrapped to bone -->
+  <append xpath="/items/item[@name='meleeToolKnifeBone']">
+    <property name="Weight" value="6"/>
+  </append>
+  
+</MeanCloud_ScrapBoneKnives>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+  <ModInfo>
+    <Name value="MeanCloud's Scrap Bone Knives"/>
+    <Description value="Allows you to scrap bone knives."/>
+    <Author value="Mean.Cloud"/>
+    <Version value="A18.1 1.00"/>
+		<Website value="http://mean.cloud/" />
+  </ModInfo>
+</xml>

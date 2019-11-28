@@ -1,0 +1,185 @@
+<stallionsden>
+
+	<!-- Multi Blocks -->
+	<!-- blockMulti and MultiBlockDim mess up blockplaceholders! -->
+	<remove xpath="blocks/block[@name='bodyBagBlack']/property[@name='DisplayType' or @name='MultiBlockDim']"/>
+	<remove xpath="blocks/block[@name='decoPicnicTable']/property[@name='DisplayType' or @name='MultiBlockDim']"/>
+	<remove xpath="blocks/block[@name='couchSofa01']/property[@name='DisplayType' or @name='MultiBlockDim']"/>
+	<remove xpath="blocks/block[@name='leatherCouchSofa2']/property[@name='DisplayType' or @name='MultiBlockDim']"/>
+	<remove xpath="blocks/block[@name='parkBenchA']/property[@name='DisplayType' or @name='MultiBlockDim']"/>
+	<!-- <remove xpath="blocks/block[@name='parkBenchB']/property[@name='DisplayType' or @name='MultiBlockDim']"/> -->
+	<remove xpath="blocks/block[@name='decoWildWestWagon']/property[@name='DisplayType' or @name='MultiBlockDim']"/>
+	
+	<append xpath="/blocks">
+		<block name="bodyBagBlackEmpty">		<property name="Extends" value="bodyBagBlack"/></block>
+		<block name="bodyBagYellowEmpty">		<property name="Extends" value="bodyBagYellow"/></block>
+		<block name="bodyBagPileEmpty">			<property name="Extends" value="bodyBagPile"/></block>
+		<block name="bodyBagPileMixEmpty">		<property name="Extends" value="bodyBagPileMix"/></block>
+		<block name="bodyBagPairEmpty">			<property name="Extends" value="bodyBagPair"/></block>
+		<block name="bodyBagPairYellowEmpty">	<property name="Extends" value="bodyBagPairYellow"/></block>
+		<block name="bodyBagPairMixedEmpty">	<property name="Extends" value="bodyBagPairMixed"/></block>
+		<block name="bodyBagBlackFliesEmpty">	<property name="Extends" value="bodyBagBlackFlies"/></block>
+		<block name="bodyBagYellowFliesEmpty">	<property name="Extends" value="bodyBagYellowFlies"/></block>
+		
+		<block name="bodyBagBlackFull">			<property name="Extends" value="bodyBagBlackEmpty"/></block>
+		<block name="bodyBagYellowFull">        <property name="Extends" value="bodyBagYellowEmpty"/></block>
+		<block name="bodyBagPileFull">          <property name="Extends" value="bodyBagPileEmpty"/></block>
+		<block name="bodyBagPileMixFull">       <property name="Extends" value="bodyBagPileMixEmpty"/></block>
+		<block name="bodyBagPairFull">          <property name="Extends" value="bodyBagPairEmpty"/></block>
+		<block name="bodyBagPairYellowFull">    <property name="Extends" value="bodyBagPairYellowEmpty"/></block>
+		<block name="bodyBagPairMixedFull">     <property name="Extends" value="bodyBagPairMixedEmpty"/></block>
+		<block name="bodyBagBlackFliesFull">    <property name="Extends" value="bodyBagBlackFliesEmpty"/></block>
+		<block name="bodyBagYellowFliesFull">   <property name="Extends" value="bodyBagYellowFliesEmpty"/></block>
+		<block name="decoPicnicTableEmpty"><property name="Extends" value="decoPicnicTable"/></block>
+		<block name="decoPicnicTableFull"><property name="Extends" value="decoPicnicTableEmpty"/></block>
+		<block name="couchSofa01Empty"><property name="Extends" value="couchSofa01"/></block>
+		<block name="couchSofa01Full"><property name="Extends" value="couchSofa01Empty"/></block>
+		<block name="leatherCouchSofa2Empty"><property name="Extends" value="leatherCouchSofa2"/></block>
+		<block name="leatherCouchSofa2Full"><property name="Extends" value="leatherCouchSofa2Empty"/></block>
+		<block name="parkBenchAEmpty"><property name="Extends" value="parkBenchA"/></block>
+		<block name="parkBenchAFull"><property name="Extends" value="parkBenchAEmpty"/></block>
+		<block name="parkBenchBEmpty"><property name="Extends" value="parkBenchB"/></block>
+		<block name="parkBenchBFull"><property name="Extends" value="parkBenchBEmpty"/></block>
+		<block name="decoWildWestWagonEmpty"><property name="Extends" value="decoWildWestWagon"/></block>
+		<block name="decoWildWestWagonFull"><property name="Extends" value="decoWildWestWagonEmpty"/></block>
+	</append>
+	<!-- Body bags. First give them back their multi blocks, then give the lootable ones their class. -->
+	<!-- Can't us starts-with(@name,'bodyBag') and ends-with(@name, 'Empty'). 'and' seems to only work on simple stuff. -->
+	<append xpath="/blocks/block[@name='bodyBagBlackEmpty' or 
+								@name='bodyBagYellowEmpty' or 
+								@name='bodyBagPileEmpty' or 
+								@name='bodyBagPileMixEmpty' or 
+								@name='bodyBagPairEmpty' or 
+								@name='bodyBagPairYellowEmpty' or 
+								@name='bodyBagPairMixedEmpty' or 
+								@name='bodyBagBlackFliesEmpty' or 
+								@name='bodyBagYellowFliesEmpty']">
+			<property name="DisplayType" value="blockMulti"/>
+			<property name="MultiBlockDim" value="1,1,2"/>
+	</append>
+	
+	<append xpath="/blocks/block[@name='bodyBagBlackFull' or 
+								@name='bodyBagYellowFull' or 
+								@name='bodyBagPileFull' or 
+								@name='bodyBagPileMixFull' or 
+								@name='bodyBagPairFull' or 
+								@name='bodyBagPairYellowFull' or 
+								@name='bodyBagPairMixedFull' or 
+								@name='bodyBagBlackFliesFull' or 
+								@name='bodyBagYellowFliesFull']">
+			<property name="Class" value="Loot"/>
+			<property name="LootList" value="228"/>
+	</append>
+	<!-- picnic table -->
+	<append xpath="/blocks/block[@name='decoPicnicTableEmpty']">
+			<property name="DisplayType" value="blockMulti"/>
+			<property name="MultiBlockDim" value="3,1,3"/>
+	</append>
+	<append xpath="/blocks/block[@name='decoPicnicTableFull']">
+			<property name="Class" value="Loot"/>
+			<property name="LootList" value="251"/>
+	</append>
+	<!-- couches -->
+	<append xpath="/blocks/block[@name='couchSofa01Empty' or 
+								@name='leatherCouchSofa2Empty']">
+			<property name="DisplayType" value="blockMulti"/>
+			<property name="MultiBlockDim" value="3,1,1"/>
+	</append>
+	<append xpath="/blocks/block[@name='couchSofa01Full' or 
+								@name='leatherCouchSofa2Full']">
+			<property name="Class" value="Loot"/>
+			<property name="LootList" value="252"/>
+	</append>
+	<!-- park bench a and b -->
+	<append xpath="/blocks/block[@name='parkBenchAEmpty' or 
+								@name='parkBenchBEmpty']">
+			<property name="DisplayType" value="blockMulti"/>
+			<property name="MultiBlockDim" value="2,1,1"/>
+	</append>
+	<append xpath="/blocks/block[@name='parkBenchAFull' or 
+								@name='parkBenchBFull']">
+			<property name="Class" value="Loot"/>
+			<property name="LootList" value="254"/>
+	</append>
+	<!-- wild west wagon -->
+	<append xpath="/blocks/block[@name='decoWildWestWagonEmpty']">
+			<property name="DisplayType" value="blockMulti"/>
+			<property name="MultiBlockDim" value="4,3,2"/>
+	</append>
+	<append xpath="/blocks/block[@name='decoWildWestWagonFull']">
+			<property name="Class" value="Loot"/>
+			<property name="LootList" value="255"/>
+	</append>
+	
+	<!-- Single blocks. Much simpler. -->
+	<append xpath="/blocks">
+		<block name="goreBlockHumanCorpseEmpty"><property name="Extends" value="goreBlockHumanCorpse"/></block>
+		<block name="goreBlockHumanCorpseFull"><property name="Extends" value="goreBlockHumanCorpseEmpty"/></block>
+		<block name="goreBlockHumanBonesEmpty"><property name="Extends" value="goreBlockHumanBones"/></block>
+		<block name="goreBlockHumanBonesFull"><property name="Extends" value="goreBlockHumanBonesEmpty"/></block>
+		<block name="schoolDeskEmpty"><property name="Extends" value="schoolDesk"/></block>
+		<block name="schoolDeskFull"><property name="Extends" value="schoolDeskEmpty"/></block>
+		<block name="coffeeTableEmpty"><property name="Extends" value="coffeeTable"/></block>
+		<block name="coffeeTableFull"><property name="Extends" value="coffeeTableEmpty"/></block>
+		<block name="rScrapIronTableEmpty"><property name="Extends" value="rScrapIronTable"/></block>
+		<block name="rScrapIronTableFull"><property name="Extends" value="rScrapIronTableEmpty"/></block>
+		<block name="rustyIronTableEmpty"><property name="Extends" value="rustyIronTable"/></block>
+		<block name="rustyIronTableFull"><property name="Extends" value="rustyIronTableEmpty"/></block>
+		<block name="sectionalPlaidCouchSofaMiddleEmpty"><property name="Extends" value="sectionalPlaidCouchSofaMiddle"/></block>
+		<block name="sectionalPlaidCouchSofaMiddleFull"><property name="Extends" value="sectionalPlaidCouchSofaMiddleEmpty"/></block>
+		<block name="sectionalPlaidCouchSofaCornerEmpty"><property name="Extends" value="sectionalPlaidCouchSofaCorner"/></block>
+		<block name="sectionalPlaidCouchSofaCornerFull"><property name="Extends" value="sectionalPlaidCouchSofaCornerEmpty"/></block>
+		<block name="sectionalLeatherCouchSofaMiddleEmpty"><property name="Extends" value="sectionalLeatherCouchSofaMiddle"/></block>
+		<block name="sectionalLeatherCouchSofaMiddleFull"><property name="Extends" value="sectionalLeatherCouchSofaMiddleEmpty"/></block>
+		<block name="sectionalLeatherCouchSofaCornerEmpty"><property name="Extends" value="sectionalLeatherCouchSofaCorner"/></block>
+		<block name="sectionalLeatherCouchSofaCornerFull"><property name="Extends" value="sectionalLeatherCouchSofaCornerEmpty"/></block>
+		<block name="chairCouchSofa01Empty"><property name="Extends" value="chairCouchSofa01"/></block>
+		<block name="chairCouchSofa01Full"><property name="Extends" value="chairCouchSofa01Empty"/></block>
+		<block name="leatherChairCouchSofa2Empty"><property name="Extends" value="leatherChairCouchSofa2"/></block>
+		<block name="leatherChairCouchSofa2Full"><property name="Extends" value="leatherChairCouchSofa2Empty"/></block>
+		<block name="pew_segment01Empty"><property name="Extends" value="pew_segment01"/></block>
+		<block name="pew_segment01Full"><property name="Extends" value="pew_segment01Empty"/></block>
+		<block name="pew_segment02Empty"><property name="Extends" value="pew_segment02"/></block>
+		<block name="pew_segment02Full"><property name="Extends" value="pew_segment02Empty"/></block>
+		<block name="pew_segment03Empty"><property name="Extends" value="pew_segment03"/></block>
+		<block name="pew_segment03Full"><property name="Extends" value="pew_segment03Empty"/></block>
+		<block name="cntIceMachineEmpty"><property name="Extends" value="cntIceMachine"/></block>
+		<block name="cntIceMachineFull"><property name="Extends" value="cntIceMachineEmpty"/></block>
+	</append>
+	<!-- now add loot class  and lists to full blocks -->
+	<append xpath="/blocks/block[@name='goreBlockHumanCorpseFull' or
+								@name='goreBlockHumanBonesFull']">
+			<property name="Class" value="Loot"/>
+			<property name="LootList" value="229"/>
+	</append>
+	<append xpath="/blocks/block[@name='schoolDeskFull']">
+			<property name="Class" value="Loot"/>
+			<property name="LootList" value="249"/>
+	</append>
+	<append xpath="/blocks/block[@name='coffeeTableFull' or 
+								@name='rScrapIronTableFull' or 
+								@name='rustyIronTableFull']">
+			<property name="Class" value="Loot"/>
+			<property name="LootList" value="250"/>
+	</append>
+	<append xpath="/blocks/block[@name='sectionalPlaidCouchSofaMiddleFull' or
+								 @name='sectionalPlaidCouchSofaCornerFull' or
+								 @name='sectionalLeatherCouchSofaMiddleFull' or
+								 @name='sectionalLeatherCouchSofaCornerFull' or
+								 @name='chairCouchSofa01Full' or
+								 @name='leatherChairCouchSofa2Full']">
+			<property name="Class" value="Loot"/>
+			<property name="LootList" value="252"/>
+	</append>
+	<append xpath="/blocks/block[@name='pew_segment01Full' or
+								 @name='pew_segment02Full' or
+								 @name='pew_segment03Full']">
+			<property name="Class" value="Loot"/>
+			<property name="LootList" value="253"/>
+	</append>
+	<append xpath="/blocks/block[@name='cntIceMachineFull']">
+			<property name="Class" value="Loot"/>
+			<property name="LootList" value="256"/>
+	</append> 
+
+</stallionsden>

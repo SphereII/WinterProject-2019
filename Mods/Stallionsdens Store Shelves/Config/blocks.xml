@@ -1,0 +1,38 @@
+<stallionsden>
+
+	<append xpath="/blocks">
+		<block name="storeShelving01Full">
+			<property name="Extends" value="storeShelving01"/>
+			<property name="Class" value="Loot"/>
+			<property name="LootList" value="212"/>
+		</block>
+		<block name="storeShelving01Empty">
+			<property name="Extends" value="storeShelving01"/>
+		</block>
+		<block name="storeShelving01DoubleFull">
+			<property name="Extends" value="storeShelving01Double"/>
+			<property name="Class" value="Loot"/>
+			<property name="LootList" value="213"/>
+		</block>
+		<block name="storeShelving01DoubleEmpty">
+			<property name="Extends" value="storeShelving01Double"/>
+		</block>
+		<block name="storeShelving01TopFull">
+			<property name="Extends" value="storeShelving01Top"/>
+			<property name="Class" value="Loot"/>
+			<property name="LootList" value="214"/>
+		</block>
+		<block name="storeShelving01TopEmpty">
+			<property name="Extends" value="storeShelving01Top"/>
+		</block>
+		<block name="storeShelving01TopDoubleFull">
+			<property name="Extends" value="storeShelving01TopDouble"/>
+			<property name="Class" value="Loot"/>
+			<property name="LootList" value="215"/>
+		</block>
+		<block name="storeShelving01TopDoubleEmpty">
+			<property name="Extends" value="storeShelving01TopDouble"/>
+		</block>
+	</append>
+	
+</stallionsden>

@@ -1,0 +1,5 @@
+<configs>
+	<!-- license unknwon: https://art.alphacoders.com/arts/view/84131 -->
+	<set xpath="/windows/window[@name='menuBackground']/texture[@name='SMXmainMenuBG']/@texture">@file:Mods/WinterProjectMenu/Textures/mainmenu/winterprojectbackground.png</set>
+	
+</configs>

@@ -1,0 +1,88 @@
+<potato>
+
+<append xpath="/Sounds">
+	
+	<SoundDataNode name="skate_pedal"> <AudioSource name="Sounds/AudioSource_Vehicle"/>
+	<Noise ID="1" volume="7" time="2" muffled_when_crouched=".5"/>
+	<AudioClip ClipName="#@modfolder:Resources/Audio.unity3d?skate"/>
+	<MaxVoices value="2"/> <MaxRepeatRate value=".01"/>
+</SoundDataNode><AudioClip ClipName="#@modfolder:Resources/Audio.unity3d?siffle"/>
+	
+		<SoundDataNode name="siffle"> <AudioSource name="Sounds/AudioSource_WeaponFire"/>
+	<Noise ID="1" volume="0.5" time="1" heat_map_strength="0.2" heat_map_time="90"/>
+	<AudioClip ClipName="#@modfolder:Resources/Audio.unity3d?siffle"/>
+	<AudioClip ClipName="#@modfolder:Resources/Audio.unity3d?siffle2"/>
+	<AudioClip ClipName="#@modfolder:Resources/Audio.unity3d?siffle3"/>
+	<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="15"/> <MaxEntities name="25"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>
+
+		<SoundDataNode name="got"> <AudioSource name="Sounds/AudioSource_WeaponFire"/>
+	<Noise ID="1" volume="0.5" time="1" heat_map_strength="0.2" heat_map_time="90"/>
+	<AudioClip ClipName="#@modfolder:Resources/Audio.unity3d?got"/>
+	<AudioClip ClipName="#@modfolder:Resources/Audio.unity3d?siffle2"/>
+	<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="15"/> <MaxEntities name="25"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>
+
+
+			<SoundDataNode name="pisse">
+		<AudioSource name="Sounds/AudioSource_WeaponFire"/>
+		<Noise ID="1" range="4" volume="0.1" time="1" muffled_when_crouched="1" />
+		<AudioClip ClipName="#@modfolder:Resources/Audio.unity3d?pisse"/>
+		<LocalCrouchVolumeScale value="1" />
+		<CrouchNoiseScale value="1" />
+		<NoiseScale value="1" />
+		<MaxVoices value="10" />
+		<MaxRepeatRate value="0.01" />
+	</SoundDataNode>
+	
+				<SoundDataNode name="radio">
+		<AudioSource name="Sounds/AudioSource_WeaponFire"/>
+		<Noise ID="1" range="4" volume="0.1" time="1" muffled_when_crouched="1" />
+		<AudioClip ClipName="#@modfolder:Resources/sot"/>
+		<LocalCrouchVolumeScale value="1" />
+		<CrouchNoiseScale value="1" />
+		<NoiseScale value="1" />
+		<MaxVoices value="10" />
+		<MaxRepeatRate value="0.01" />
+	</SoundDataNode>
+	
+	
+	<SoundDataNode name="ronfle"> <AudioSource name="Sounds/AudioSource_SmallHorn"/>
+	<Noise ID="1" volume="0.5" time="1" heat_map_strength="0.2" heat_map_time="90"/>
+	<AudioClip ClipName="#@modfolder:Resources/Audio.unity3d?snore1"/>
+	<AudioClip ClipName="#@modfolder:Resources/Audio.unity3d?snore2"/>
+	<AudioClip ClipName="#@modfolder:Resources/Audio.unity3d?snore3"/>
+	<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="15"/> <MaxEntities name="25"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>
+
+	
+	<SoundDataNode name="pianote"> <AudioSource name="Sounds/AudioSource_WeaponFire"/>
+	<Noise ID="1" volume="0.1" time="1" heat_map_strength="0.2" heat_map_time="90"/>
+	<AudioClip ClipName="#@modfolder:Resources/Audio.unity3d?piano1"/>
+	<AudioClip ClipName="#@modfolder:Resources/Audio.unity3d?piano2"/>
+	<AudioClip ClipName="#@modfolder:Resources/Audio.unity3d?piano3"/>
+		<AudioClip ClipName="#@modfolder:Resources/Audio.unity3d?piano4"/>
+	<AudioClip ClipName="#@modfolder:Resources/Audio.unity3d?piano5"/>
+	<AudioClip ClipName="#@modfolder:Resources/Audio.unity3d?piano6"/>
+		<AudioClip ClipName="#@modfolder:Resources/Audio.unity3d?piano7"/>
+			<AudioClip ClipName="#@modfolder:Resources/Audio.unity3d?piano8"/>
+	<AudioClip ClipName="#@modfolder:Resources/Audio.unity3d?piano9"/>
+	<AudioClip ClipName="#@modfolder:Resources/Audio.unity3d?piano10"/>
+		<AudioClip ClipName="#@modfolder:Resources/Audio.unity3d?piano11"/>
+	<AudioClip ClipName="#@modfolder:Resources/Audio.unity3d?piano12"/>
+	<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="15"/> <MaxEntities name="25"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>
+
+		
+	<SoundDataNode name="typing"> <AudioSource name="Sounds/AudioSource_WeaponFire"/>
+	<Noise ID="1" volume="0.1" time="1" heat_map_strength="0.2" heat_map_time="90"/>
+	<AudioClip ClipName="#@modfolder:Resources/Audio.unity3d?typing1"/>
+	<AudioClip ClipName="#@modfolder:Resources/Audio.unity3d?typing2"/>
+	<AudioClip ClipName="#@modfolder:Resources/Audio.unity3d?typing3"/>
+		<AudioClip ClipName="#@modfolder:Resources/Audio.unity3d?mouseclick1"/>
+		<AudioClip ClipName="#@modfolder:Resources/Audio.unity3d?typing4"/>
+			<AudioClip ClipName="#@modfolder:Resources/Audio.unity3d?typing4"/>
+	<AudioClip ClipName="#@modfolder:Resources/Audio.unity3d?typing2"/>
+	<AudioClip ClipName="#@modfolder:Resources/Audio.unity3d?typing3"/>
+		<AudioClip ClipName="#@modfolder:Resources/Audio.unity3d?typing1"/>
+	<AudioClip ClipName="#@modfolder:Resources/Audio.unity3d?mouseclick2"/>
+	<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="15"/> <MaxEntities name="25"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>
+
+	</append>
+</potato>

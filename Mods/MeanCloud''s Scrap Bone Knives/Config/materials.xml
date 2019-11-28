@@ -1,0 +1,8 @@
+<MeanCloud_ScrapBoneKnives>
+
+  <!-- allow stuff with a 'Weight' value that's made of bone 'MresourceBone' material to be scrapped -->
+  <append xpath="/materials/material[@id='MresourceBone']">
+    <property name="forge_category" value="resourceBone" />
+  </append>
+
+</MeanCloud_ScrapBoneKnives>

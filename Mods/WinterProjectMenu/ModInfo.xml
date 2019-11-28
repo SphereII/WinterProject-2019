@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<xml>
+	<ModInfo>
+		<Name value="Winter Project Main Menu" />
+		<Description value="A modlet that extends SMX Main Menu for the Winter Project"/>
+		<Author value="sphereii" />
+		<Version value="1.0.0.0" />
+	</ModInfo>
+</xml>

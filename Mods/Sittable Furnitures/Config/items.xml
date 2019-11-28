@@ -1,0 +1,357 @@
+<configs>
+
+
+		<append xpath="/items">	
+					<item name="Chair">
+			<property name="Extends" value="vehicleMinibikePlaceable"/>
+			<property name="DescriptionKey" value="chairbasicdesc"/>
+				<property name="Meshfile" value="#@modfolder:Resources/test.unity3d?Chair.prefab"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="CustomIcon" value="3chair"/>
+			<property class="Action1">
+				<property name="Vehicle" value="Chair"/>
+				<property name="VehicleSize" value="0.2, 0.2, 0.2"/>
+			</property>
+			<effect_group name="Base Effects" tiered = "false">
+				<passive_effect name="DegradationMax" operation="base_set" value="100"/>
+			</effect_group>
+		</item>
+
+					<item name="Chair2">
+			<property name="Extends" value="vehicleMinibikePlaceable"/>
+			<property name="DescriptionKey" value="chairbasicdesc"/>
+			<property name="Meshfile" value="#@modfolder:Resources/test.unity3d?Chair2.prefab"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="CustomIcon" value="3chair2"/>
+			<property class="Action1">
+				<property name="Vehicle" value="Chair2"/>
+				<property name="VehicleSize" value="0.2, 0.2, 0.2"/>
+			</property>
+			<effect_group name="Base Effects" tiered = "false">
+				<passive_effect name="DegradationMax" operation="base_set" value="100"/>
+			</effect_group>
+		</item>
+
+					<item name="Chair3">
+			<property name="Extends" value="vehicleMinibikePlaceable"/>
+			<property name="DescriptionKey" value="chairbasicdesc"/>
+			<property name="Meshfile" value="#@modfolder:Resources/test.unity3d?Chair3.prefab"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="CustomIcon" value="3chair3"/>
+			<property class="Action1">
+				<property name="Vehicle" value="Chair3"/>
+				<property name="VehicleSize" value="0.2, 0.2, 0.2"/>
+			</property>
+			<effect_group name="Base Effects" tiered = "false">
+				<passive_effect name="DegradationMax" operation="base_set" value="100"/>
+			</effect_group>
+		</item>
+
+					<item name="Chair4">
+			<property name="Extends" value="vehicleMinibikePlaceable"/>
+			<property name="DescriptionKey" value="chairbasicdesc"/>
+			<property name="Meshfile" value="#@modfolder:Resources/test.unity3d?Chair4.prefab"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="CustomIcon" value="3chair4"/>
+			<property class="Action1">
+				<property name="Vehicle" value="Chair4"/>
+				<property name="VehicleSize" value="0.2, 0.2, 0.2"/>
+			</property>
+			<effect_group name="Base Effects" tiered = "false">
+				<passive_effect name="DegradationMax" operation="base_set" value="100"/>
+			</effect_group>
+		</item>		
+
+					<item name="Chair5">
+			<property name="Extends" value="vehicleMinibikePlaceable"/>
+			<property name="DescriptionKey" value="chairwesterndesc"/>
+			<property name="Meshfile" value="#@modfolder:Resources/test.unity3d?Chair5.prefab"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="CustomIcon" value="3chair5"/>
+			<property class="Action1">
+				<property name="Vehicle" value="Chair5"/>
+				<property name="VehicleSize" value="0.2, 0.2, 0.2"/>
+			</property>
+			<effect_group name="Base Effects" tiered = "false">
+				<passive_effect name="DegradationMax" operation="base_set" value="100"/>
+			</effect_group>
+		</item>		
+
+
+					<item name="Ballchair">
+			<property name="Extends" value="vehicleMinibikePlaceable"/>
+			<property name="DescriptionKey" value="chairbasicdesc"/>
+			<property name="Meshfile" value="#@modfolder:Resources/test.unity3d?Ballchair.prefab"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="CustomIcon" value="3eggchair"/>
+			<property class="Action1">
+				<property name="Vehicle" value="Ballchair"/>
+				<property name="VehicleSize" value="0.2, 0.2, 0.2"/>
+			</property>
+			<effect_group name="Base Effects" tiered = "false">
+				<passive_effect name="DegradationMax" operation="base_set" value="100"/>
+			</effect_group>
+		</item>		
+		
+					<item name="Trone">
+			<property name="Extends" value="vehicleMinibikePlaceable"/>
+			<property name="DescriptionKey" value="chairbasicdesc"/>
+			<property name="Meshfile" value="#@modfolder:Resources/test.unity3d?Trone.prefab"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="CustomIcon" value="3trone"/>
+			<property class="Action1">
+				<property name="Vehicle" value="Trone"/>
+				<property name="VehicleSize" value="0.2, 0.2, 0.2"/>
+			</property>
+			<effect_group name="Base Effects" tiered = "false">
+				<passive_effect name="DegradationMax" operation="base_set" value="100"/>
+			</effect_group>
+		</item>		
+
+					<item name="Pouf">
+			<property name="Extends" value="vehicleMinibikePlaceable"/>
+			<property name="DescriptionKey" value="chairbasicdesc"/>
+			<property name="Meshfile" value="#@modfolder:Resources/test.unity3d?Pouf.prefab"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="CustomIcon" value="3pouf"/>
+			<property class="Action1">
+				<property name="Vehicle" value="Pouf"/>
+				<property name="VehicleSize" value="0.2, 0.2, 0.2"/>
+			</property>
+			<effect_group name="Base Effects" tiered = "false">
+				<passive_effect name="DegradationMax" operation="base_set" value="100"/>
+			</effect_group>
+		</item>		
+		
+					<item name="Bar Stool">
+			<property name="Extends" value="vehicleMinibikePlaceable"/>
+			<property name="DescriptionKey" value="chairbasicdesc"/>
+			<property name="Meshfile" value="#@modfolder:Resources/test.unity3d?BarStool.prefab"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="CustomIcon" value="3barstool"/>
+			<property class="Action1">
+				<property name="Vehicle" value="Bar Stool"/>
+				<property name="VehicleSize" value="0.2, 0.2, 0.2"/>
+			</property>
+			<effect_group name="Base Effects" tiered = "false">
+				<passive_effect name="DegradationMax" operation="base_set" value="100"/>
+			</effect_group>
+		</item>				
+		
+					<item name="Shower">
+			<property name="Extends" value="vehicleMinibikePlaceable"/>
+			<property name="DescriptionKey" value="chairactivedesc"/>
+			<property name="Meshfile" value="#@modfolder:Resources/test.unity3d?Showeroff.prefab"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="CustomIcon" value="3shower"/>
+			<property class="Action1">
+				<property name="Vehicle" value="Shower"/>
+				<property name="VehicleSize" value="0.2, 0.2, 0.2"/>
+			</property>
+			<effect_group name="Base Effects" tiered = "false">
+				<passive_effect name="DegradationMax" operation="base_set" value="100"/>
+			</effect_group>
+		</item>			
+		
+		
+									<item name="Carousel">
+			<property name="Extends" value="vehicleMinibikePlaceable"/>
+			<property name="Meshfile" value="#@modfolder:Resources/test.unity3d?Carousel.prefab"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="CustomIcon" value="3carousel"/>
+			<property class="Action1">
+				<property name="Vehicle" value="Carousel"/>
+				<property name="VehicleSize" value="0.2, 0.2, 0.2"/>
+			</property>
+			<effect_group name="Base Effects" tiered = "false">
+				<passive_effect name="DegradationMax" operation="base_set" value="100"/>
+			</effect_group>
+		</item>	
+		
+		
+							<item name="PC">
+			<property name="Extends" value="vehicleMinibikePlaceable"/>
+			<property name="DescriptionKey" value="chairactivedesc"/>
+			<property name="Meshfile" value="#@modfolder:Resources/test.unity3d?PCoff.prefab"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="CustomIcon" value="3pc"/>
+			<property class="Action1">
+				<property name="Vehicle" value="PC"/>
+				<property name="VehicleSize" value="0.2, 0.2, 0.2"/>
+			</property>
+			<effect_group name="Base Effects" tiered = "false">
+				<passive_effect name="DegradationMax" operation="base_set" value="100"/>
+			</effect_group>
+		</item>		
+		
+									<item name="Food Table">
+			<property name="Extends" value="vehicleMinibikePlaceable"/>
+			<property name="DescriptionKey" value="chairbasicdesc"/>
+			<property name="Meshfile" value="#@modfolder:Resources/test.unity3d?FoodTable.prefab"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="CustomIcon" value="3foodtable"/>
+			<property class="Action1">
+				<property name="Vehicle" value="Food Table"/>
+				<property name="VehicleSize" value="0.2, 0.2, 0.2"/>
+			</property>
+			<effect_group name="Base Effects" tiered = "false">
+				<passive_effect name="DegradationMax" operation="base_set" value="100"/>
+			</effect_group>
+		</item>		
+				
+					<item name="Bath">
+			<property name="Extends" value="vehicleMinibikePlaceable"/>
+			<property name="DescriptionKey" value="chairactivedesc"/>
+			<property name="Meshfile" value="#@modfolder:Resources/test.unity3d?Bathoff.prefab"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="CustomIcon" value="3bath"/>
+			<property class="Action1">
+				<property name="Vehicle" value="Bath"/>
+				<property name="VehicleSize" value="0.2, 0.2, 0.2"/>
+			</property>
+			<effect_group name="Base Effects" tiered = "false">
+				<passive_effect name="DegradationMax" operation="base_set" value="100"/>
+			</effect_group>
+		</item>		
+		
+							<item name="Jacuzzi">
+			<property name="Extends" value="vehicleMinibikePlaceable"/>
+			<property name="DescriptionKey" value="chairactivedesc"/>
+			<property name="Meshfile" value="#@modfolder:Resources/test.unity3d?Jacuzzioff.prefab"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="CustomIcon" value="3jacuzzi"/>
+			<property class="Action1">
+				<property name="Vehicle" value="Jacuzzi"/>
+				<property name="VehicleSize" value="0.2, 0.2, 0.2"/>
+			</property>
+			<effect_group name="Base Effects" tiered = "false">
+				<passive_effect name="DegradationMax" operation="base_set" value="100"/>
+			</effect_group>
+		</item>		
+		
+		
+		
+							<item name="Toilet">
+			<property name="Extends" value="vehicleMinibikePlaceable"/>
+			<property name="DescriptionKey" value="chairbasicdesc"/>
+			<property name="Meshfile" value="#@modfolder:Resources/test.unity3d?Toilet.prefab"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="CustomIcon" value="3toilet"/>
+			<property class="Action1">
+				<property name="Vehicle" value="Toilet"/>
+				<property name="VehicleSize" value="0.2, 0.2, 0.2"/>
+			</property>
+			<effect_group name="Base Effects" tiered = "false">
+				<passive_effect name="DegradationMax" operation="base_set" value="100"/>
+			</effect_group>
+		</item>
+		
+
+		
+							<item name="Superior Couch">
+			<property name="Extends" value="vehicleMinibikePlaceable"/>
+			<property name="DescriptionKey" value="chairbasicdesc"/>
+			<property name="Meshfile" value="#@modfolder:Resources/test.unity3d?Couch.prefab"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="CustomIcon" value="3couch"/>
+			<property class="Action1">
+				<property name="Vehicle" value="Superior Couch"/>
+				<property name="VehicleSize" value="0.2, 0.2, 0.2"/>
+			</property>
+			<effect_group name="Base Effects" tiered = "false">
+				<passive_effect name="DegradationMax" operation="base_set" value="100"/>
+			</effect_group>
+		</item>
+		
+							<item name="Bench">
+			<property name="Extends" value="vehicleMinibikePlaceable"/>
+			<property name="DescriptionKey" value="chairbasicdesc"/>
+			<property name="Meshfile" value="#@modfolder:Resources/test.unity3d?Bench.prefab"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="CustomIcon" value="3bench"/>
+			<property class="Action1">
+				<property name="Vehicle" value="Bench"/>
+				<property name="VehicleSize" value="0.2, 0.2, 0.2"/>
+			</property>
+			<effect_group name="Base Effects" tiered = "false">
+				<passive_effect name="DegradationMax" operation="base_set" value="100"/>
+			</effect_group>
+		</item>		
+		
+									<item name="Swing">
+			<property name="Extends" value="vehicleMinibikePlaceable"/>
+			<property name="DescriptionKey" value="chairbasicdesc"/>
+			<property name="Meshfile" value="#@modfolder:Resources/test.unity3d?Swing.prefab"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="CustomIcon" value="3swing"/>
+			<property class="Action1">
+				<property name="Vehicle" value="Swing"/>
+				<property name="VehicleSize" value="0.2, 0.2, 0.2"/>
+			</property>
+			<effect_group name="Base Effects" tiered = "false">
+				<passive_effect name="DegradationMax" operation="base_set" value="100"/>
+			</effect_group>
+		</item>
+		
+									<item name="Piano">
+			<property name="Extends" value="vehicleMinibikePlaceable"/>
+			<property name="DescriptionKey" value="chairbasicdesc"/>
+			<property name="Meshfile" value="#@modfolder:Resources/test.unity3d?Piano.prefab"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="CustomIcon" value="3piano"/>
+			<property class="Action1">
+				<property name="Vehicle" value="Piano"/>
+				<property name="VehicleSize" value="0.2, 0.2, 0.2"/>
+			</property>
+			<effect_group name="Base Effects" tiered = "false">
+				<passive_effect name="DegradationMax" operation="base_set" value="100"/>
+			</effect_group>
+		</item>
+				
+									<item name="Bed">
+			<property name="Extends" value="vehicleMinibikePlaceable"/>
+			<property name="DescriptionKey" value="chairbeddesc"/>
+			<property name="Meshfile" value="#@modfolder:Resources/test.unity3d?Bed.prefab"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="CustomIcon" value="3bed"/>
+			<property class="Action1">
+				<property name="Vehicle" value="Bed"/>
+				<property name="VehicleSize" value="0.2, 0.2, 0.2"/>
+			</property>
+			<effect_group name="Base Effects" tiered = "false">
+				<passive_effect name="DegradationMax" operation="base_set" value="100"/>
+			</effect_group>
+		</item>
+		
+											<item name="Hammock">
+			<property name="Extends" value="vehicleMinibikePlaceable"/>
+			<property name="DescriptionKey" value="chairbasicdesc"/>
+			<property name="Meshfile" value="#@modfolder:Resources/test.unity3d?Hammock.prefab"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="CustomIcon" value="3hammock"/>
+			<property class="Action1">
+				<property name="Vehicle" value="Hammock"/>
+				<property name="VehicleSize" value="0.2, 0.2, 0.2"/>
+			</property>
+			<effect_group name="Base Effects" tiered = "false">
+				<passive_effect name="DegradationMax" operation="base_set" value="100"/>
+			</effect_group>
+		</item>
+			
+														<item name="Recliner Chair">
+			<property name="Extends" value="vehicleMinibikePlaceable"/>
+			<property name="DescriptionKey" value="chairbasicdesc"/>
+			<property name="Meshfile" value="#@modfolder:Resources/test.unity3d?Recliner.prefab"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="CustomIcon" value="3recliner"/>
+			<property class="Action1">
+				<property name="Vehicle" value="Recliner Chair"/>
+				<property name="VehicleSize" value="0.2, 0.2, 0.2"/>
+			</property>
+			<effect_group name="Base Effects" tiered = "false">
+				<passive_effect name="DegradationMax" operation="base_set" value="100"/>
+			</effect_group>
+		</item>
+			
+		</append>
+</configs>

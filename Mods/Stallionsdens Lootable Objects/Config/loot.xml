@@ -1,0 +1,170 @@
+<stallionsden>
+<append xpath="/lootcontainers">
+<!-- bodyBagBlackFull, bodyBagYellowFull,bodyBagPileFull,bodyBagPileMixFull,bodyBagPairFull,bodyBagPairYellowFull,bodyBagPairMixedFull -->
+<lootcontainer id="228" count="1,2" size="8,9" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="2" loot_quality_template="qualBaseTemplate">
+	<item group="rottenFood" prob="1"/>
+	<item name="foodRottingFlesh" count="5,12"/>
+	<item group="junk"/>
+	<item group="automotive+tools+junk"/>
+	<item name="casinoCoin" count="10,25" prob="2.5"/>
+	<item name="oldCash" count="50,100" prob="2.5"/>
+	<item group="garbage"/>
+	<item group="backpacks/survival"/>
+	<item group="warmClothes" prob="0.08"/>
+	<item group="groupApparelClothes"/>
+	<item group="groupWeaponsMeleeScaled" count="1" prob="0.05" />
+	<item group="groupWeaponsRangedScaled" count="1" prob="0.05" />
+	<item name="gunBowCompound" loot_prob_template="probTemplate0.5"/>
+	<item name="resourceCloth" count="1,3"/>
+	<item name="resourceBulletCasing" count="1,3"/>
+	</lootcontainer>
+
+<!-- goreBlockHumanCorpse,goreBlockHumanBones -->
+<lootcontainer id="229" count="1,2" size="8,9" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="2" loot_quality_template="qualBaseTemplate">
+	<item group="rottenFood" prob="1"/>
+	<item name="foodRottingFlesh" count="5,12"/>
+	<item group="junk"/>
+	<item name="casinoCoin" count="10,25" prob="2.5"/>
+	<item name="oldCash" count="50,100" prob="2.5"/>
+	<item group="garbage"/>
+	<item name="resourceCloth" count="1,3"/>
+	<item name="resourceBulletCasing" count="1,10"/>
+	</lootcontainer>
+<!-- goreBlockHumanCorpse,GoreBlockHumanBones -->
+<!-- Miscellaneous Loot -->
+<!-- School Desk -->
+<lootcontainer id="249" count="1,2" size="8,9" sound_open="UseActions/open_chest" sound_close="UseActions/close_chest" open_time="2" loot_quality_template="qualBaseTemplate">
+	<item group="rottenFood" prob="1"/>
+	<item name="foodRottingFlesh" count="5,12"/>
+	<item group="junk"/>
+	<item name="casinoCoin" count="10,25" prob="2.5"/>
+	<item name="oldCash" count="50,100" prob="2.5"/>
+	<item group="garbage"/>
+	<item name="resourceCloth" count="1,3"/>
+	<item group="commonBooks" count="1,2" prob="0.1"/>
+	<item group="rareBooks" count="1,2" prob="0.1"/>
+	<item name="resourcePaper" count="5,15"/>
+	<item group="groupAmmoRegular" prob=".3" count="2,3"/>
+	<item group="groupWeaponsScaled" prob="0.3"/>
+	</lootcontainer>
+<!--  School Desk -->
+<!-- Tables -->
+<lootcontainer id="250" count="1,2" size="8,9" sound_open="UseActions/open_chest" sound_close="UseActions/close_chest" open_time="2" loot_quality_template="qualBaseTemplate">
+	<item group="rottenFood" prob="1"/>
+	<item group="perkBooks" prob="1"/>
+	<item group="junk"/>
+	<item name="casinoCoin" count="10,25" prob="2.5"/>
+	<item name="oldCash" count="50,100" prob="2.5"/>
+	<item group="garbage"/>
+	<item name="resourceCloth" count="1,3"/>
+	<item name="resourcePaper" count="5,15"/>
+	<item name="drinkJarCoffee" count="1,2"/>
+</lootcontainer>
+<!-- Tables -->
+<!-- Picnic Table -->
+ <lootcontainer id="251" count="1,2" size="8,9" sound_open="UseActions/open_chest" sound_close="UseActions/close_chest" open_time="2" loot_quality_template="qualBaseTemplate">
+	<item group="cannedfood" prob="1"/>
+	<item group="grills" prob="1"/>
+	<item group="junk"/>
+	<item group="schematicsToolsCommon" count="1,5" prob="2.5"/>
+	<item name="oldCash" count="50,100" prob="2.5"/>
+	<item group="garbage"/>
+	<item name="resourceCloth" count="1,3"/>
+	<item name="resourcePaper" count="5,15"/>
+	<item group="farmingCookingRecipes" count="1,2"/>
+</lootcontainer> 
+<!-- Picnic Table -->
+<!-- Couches and Sofas -->
+<lootcontainer id="252" count="1,2" size="8,9" sound_open="UseActions/open_chest" sound_close="UseActions/close_chest" open_time="2" loot_quality_template="qualBaseTemplate">
+	<item group="groupApparelClothes" prob="1"/>
+	<item name="drugVitamins" prob="1"/>
+	<item group="junk"/>
+	<item group="trophyGroup" count="1,5" prob="2.5"/>
+	<item name="oldCash" count="50,100" prob="2.5"/>
+	<item group="garbage"/>
+	<item name="resourceCloth" count="1,3"/>
+	<item name="resourcePaper" count="5,15"/>
+	<item name="drugPainkillers" count="1,2"/>
+</lootcontainer>
+<!-- Couches and Sofas -->
+<!-- Church Pews -->
+<lootcontainer id="253" count="1,2" size="8,9" sound_open="UseActions/open_chest" sound_close="UseActions/close_chest" open_time="2" loot_quality_template="qualBaseTemplate">
+	<item group="rottenFood" prob="1"/>
+	<item group="perkBooks" prob="1"/>
+	<item name="oldCash" count="50,100" prob="2.5"/>
+	<item group="garbage"/>
+	<item name="resourceCloth" count="1,3"/>
+	<item name="resourcePaper" count="5,15"/>	
+</lootcontainer>
+<!-- Church Pews -->
+<!-- Park Bench A & B -->
+<lootcontainer id="254" count="1,2" size="8,9" sound_open="UseActions/open_chest" sound_close="UseActions/close_chest" open_time="2" loot_quality_template="qualBaseTemplate">
+	<item group="rottenFood" prob="1"/>
+	<item group="rareBooks" prob="1"/>
+	<item group="junk"/>
+	<item group="commonBooks" count="1,5" prob="2.5"/>
+	<item name="oldCash" count="5,100" prob="2.5"/>
+	<item group="garbage"/>
+	<item group="drinks"/>
+	<item name="resourceCloth" count="1,3"/>
+	<item name="resourcePaper" count="5,15"/>
+	<item name="drinkJarCoffee" count="1,2"/>
+</lootcontainer>
+<!-- Park Bench A & B -->
+<!-- Wild West Wagon -->
+ <lootcontainer id="255" count="1,6" size="8,9" sound_open="UseActions/open_chest" sound_close="UseActions/close_chest" open_time="2" loot_quality_template="qualBaseTemplate">
+	<item group="rottenFood" prob="1"/>
+	<item group="perkBooks" prob="1"/>
+	<item group="junk" count="10,30" prob="1"/>
+	<item name="casinoCoin" count="10,25" prob="1"/>
+	<item name="oldCash" count="50,100" prob="1"/>
+	<item group="garbage" count="1,3" prob="1"/>
+	<item name="resourceCloth" count="1,3" prob="0.01"/>
+	<item name="resourcePaper" count="5,15" prob="0.01"/>
+	<item name="drinkJarCoffee" count="1,3" prob="0.01"/>
+	<item group="groupAllArmor/Cloth" count="1,3" prob="0.01"/>
+	<item group="trophyGroup" count="1,3" prob="0.01"/>
+	<item group="groupAmmoAdvanced" count="1,3" prob="0.01"/>
+	<item group="groupAmmoRegular" count="1,3" prob="0.01"/>
+	<item group="groupWeaponsScaled" count="1,3" prob="0.01"/>
+	<item group="dyes" count="1,3" prob="0.01"/>
+	<item group="groupModAllScaled" count="1,3" prob="0.01"/>
+	<item group="herbalRecipes" count="1,3" prob="0.01"/>
+	<item group="grills" count="1,3" prob="0.01"/>
+	<item group="schematicsModsCommon" count="1,3" prob="0.01"/>
+	<item group="schematicsModsRare" count="1,3" prob="0.01"/>
+	<item group="schematicsToolsCommon" count="1,3" prob="0.01"/>
+	<item group="schematicsToolsRare" count="1,3" prob="0.01"/>
+	<item group="schematicsWeaponsCommon" count="1,3" prob="0.01"/>
+	<item group="schematicsWeaponsRare" count="1,3" prob="0.01"/>
+	<item group="schematicsVehiclesCommon" count="1,3" prob="0.01"/>
+	<item group="schematicsVehiclesRare" count="1,3" prob="0.01"/>
+	<item group="farmingCookingRecipes" count="1,3" prob="0.01"/>
+	<item group="rareFoodDrink" count="1,3" prob="0.01"/>
+	<item group="schematicsElectrical" count="1,3" prob="0.01"/>
+	<item group="commonBooks" count="1,3" prob="0.01"/>
+	<item group="rareBooks" count="1,3" prob="0.01"/>
+	<item group="electricalDevices" count="1,3" prob="0.01"/>
+	<item group="cannedfood" count="1,3" prob="0.01"/>
+	<item group="seeds" count="1,3" prob="0.01"/>
+	<item group="farmCrops" count="1,3" prob="0.01"/>
+	<item group="drinks" count="1,3" prob="0.01"/>
+	<item group="medicine" count="1,3" prob="0.01"/>
+	<item group="automotive" count="1,3" prob="0.01"/>
+	<item group="toolParts" count="1,3" prob="0.01"/>
+	<item group="rareTools" count="1,3" prob="0.01"/>
+	<item group="rareFoodDrink" count="1,3" prob="0.01"/>
+	<item group="tools" count="1,3" prob="0.01"/>
+</lootcontainer> 
+<!-- Wild West Wagon -->
+<!-- Ice Machine -->
+<lootcontainer id="256" count="1,2" size="8,9" sound_open="UseActions/open_chest" sound_close="UseActions/close_chest" open_time="2" loot_quality_template="qualBaseTemplate">
+	<item group="rottenFood" prob="1"/>
+	<item group="junk"/>
+	<item name="terrIce" count="5,100" prob="2.5"/>
+	<item group="garbage"/>	
+</lootcontainer>
+<!-- Ice Machine -->
+</append>
+
+</stallionsden>

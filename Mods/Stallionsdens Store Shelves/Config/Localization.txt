@@ -1,0 +1,5 @@
+Key,Source,Context,Changes,English
+storeShelving01Full,blocks,Container,KgNone,store Shelving 01
+storeShelving01DoubleFull,blocks,Container,KgNone,store Shelving 01 Double
+storeShelving01TopFull,blocks,Container,KgNone,store Shelving 01 Top
+storeShelving01TopDoubleFull,blocks,Container,KgNone,store Shelving 01 Top Double

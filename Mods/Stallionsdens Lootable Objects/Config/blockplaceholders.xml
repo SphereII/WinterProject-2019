@@ -1,0 +1,120 @@
+<stallionsden>
+		<append xpath="/blockplaceholders">
+		<placeholder name="bodyBagBlack">
+			<block name="bodyBagBlackEmpty" prob=".66"/>
+			<block name="bodyBagBlackFull" prob=".33"/>
+		</placeholder>
+		<placeholder name="bodyBagYellow">
+			<block name="bodyBagYellowEmpty" prob=".66"/>
+			<block name="bodyBagYellowFull" prob=".33"/>
+		</placeholder>
+		<placeholder name="bodyBagPile">
+			<block name="bodyBagPileEmpty" prob=".66"/>
+			<block name="bodyBagPileFull" prob=".33"/>
+		</placeholder>
+		<placeholder name="bodyBagPileMix">
+			<block name="bodyBagPileMixEmpty" prob=".66"/>
+			<block name="bodyBagPileMixFull" prob=".33"/>
+		</placeholder>
+		<placeholder name="bodyBagPair">
+			<block name="bodyBagPairEmpty" prob=".66"/>
+			<block name="bodyBagPairFull" prob=".33"/>
+		</placeholder>
+		<placeholder name="bodyBagPairYellow">
+			<block name="bodyBagPairYellowEmpty" prob=".66"/>
+			<block name="bodyBagPairYellowFull" prob=".33"/>
+		</placeholder>
+		<placeholder name="bodyBagPairMixed">
+			<block name="bodyBagPairMixedEmpty" prob=".66"/>
+			<block name="bodyBagPairMixedFull" prob=".33"/>
+		</placeholder>
+		<placeholder name="goreBlockHumanCorpse">
+			<block name="goreBlockHumanCorpseEmpty" prob=".66"/>
+			<block name="goreBlockHumanCorpseFull" prob=".33"/>
+		</placeholder>
+		<placeholder name="goreBlockHumanBones">
+			<block name="goreBlockHumanBonesEmpty" prob=".66"/>
+			<block name="goreBlockHumanBonesFull" prob=".33"/>
+		</placeholder>
+		<placeholder name="schoolDesk">
+			<block name="schoolDeskEmpty" prob=".66"/>
+			<block name="schoolDeskFull" prob=".33"/>
+		</placeholder>
+		<placeholder name="coffeeTable">
+			<block name="coffeeTableEmpty" prob=".66"/>
+			<block name="coffeeTableFull" prob=".33"/>
+		</placeholder>
+		<placeholder name="rScrapIronTable">
+			<block name="rScrapIronTableEmpty" prob=".66"/>
+			<block name="rScrapIronTableFull" prob=".33"/>
+		</placeholder>
+		<placeholder name="rustyIronTable">
+			<block name="rustyIronTableEmpty" prob=".66"/>
+			<block name="rustyIronTableFull" prob=".33"/>
+		</placeholder>
+		<placeholder name="decoPicnicTable">
+			<block name="decoPicnicTableEmpty" prob=".66"/>
+			<block name="decoPicnicTableFull" prob=".33"/>
+		</placeholder>
+		<placeholder name="sectionalPlaidCouchSofaMiddle">
+			<block name="sectionalPlaidCouchSofaMiddleEmpty" prob=".66"/>
+			<block name="sectionalPlaidCouchSofaMiddleFull" prob=".33"/>
+		</placeholder>
+		<placeholder name="sectionalPlaidCouchSofaCorner">
+			<block name="sectionalPlaidCouchSofaCornerEmpty" prob=".66"/>
+			<block name="sectionalPlaidCouchSofaCornerFull" prob=".33"/>
+		</placeholder>
+		<placeholder name="sectionalLeatherCouchSofaCorner">
+			<block name="sectionalLeatherCouchSofaCornerEmpty" prob=".66"/>
+			<block name="sectionalLeatherCouchSofaCornerFull" prob=".33"/>
+		</placeholder>
+		<placeholder name="sectionalLeatherCouchSofaMiddle">
+			<block name="sectionalLeatherCouchSofaMiddleEmpty" prob=".66"/>
+			<block name="sectionalLeatherCouchSofaMiddleFull" prob=".33"/>
+		</placeholder>
+		<placeholder name="couchSofa01">
+			<block name="couchSofa01Empty" prob=".66"/>
+			<block name="couchSofa01Full" prob=".33"/>
+		</placeholder>
+		<placeholder name="chairCouchSofa01">
+			<block name="chairCouchSofa01Empty" prob=".66"/>
+			<block name="chairCouchSofa01Full" prob=".33"/>
+		</placeholder>
+		<placeholder name="leatherCouchSofa2">
+			<block name="leatherCouchSofa2Empty" prob=".66"/>
+			<block name="leatherCouchSofa2Full" prob=".33"/>
+		</placeholder>
+		<placeholder name="leatherChairCouchSofa2">
+			<block name="leatherChairCouchSofa2Empty" prob=".66"/>
+			<block name="leatherChairCouchSofa2Full" prob=".33"/>
+		</placeholder>
+		<placeholder name="pew_segment01">
+			<block name="pew_segment01Empty" prob=".66"/>
+			<block name="pew_segment01Full" prob=".33"/>
+		</placeholder>
+		<placeholder name="pew_segment02">
+			<block name="pew_segment02Empty" prob=".66"/>
+			<block name="pew_segment02Full" prob=".33"/>
+		</placeholder>
+		<placeholder name="pew_segment03">
+			<block name="pew_segment03Empty" prob=".66"/>
+			<block name="pew_segment03Full" prob=".33"/>
+		</placeholder>
+		<placeholder name="parkBenchA">
+			<block name="parkBenchAEmpty" prob=".66"/>
+			<block name="parkBenchAFull" prob=".33"/>
+		</placeholder>
+		<placeholder name="parkBenchB">
+			<block name="parkBenchBEmpty" prob=".66"/>
+			<block name="parkBenchBFull" prob=".33"/>
+		</placeholder>
+		<placeholder name="decoWildWestWagon">
+			<block name="decoWildWestWagonEmpty" prob=".66"/>
+			<block name="decoWildWestWagonFull" prob=".33"/>
+		</placeholder>
+		<placeholder name="cntIceMachine">
+			<block name="cntIceMachineEmpty" prob=".66"/>
+			<block name="cntIceMachineFull" prob=".33"/>
+		</placeholder>
+		</append>
+</stallionsden>

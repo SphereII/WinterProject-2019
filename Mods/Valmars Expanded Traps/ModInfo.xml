@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+    <ModInfo>
+        <Name value="Valmars Expanded Traps" />
+        <Description value="Adds New Traps To The Game." />
+        <Author value="Valmar" />
+        <Version value="A18" />
+    </ModInfo>
+</xml>

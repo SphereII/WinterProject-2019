@@ -1,0 +1,347 @@
+<configs>
+	<append xpath="/entity_classes">
+
+		
+				<entity_class name="Chair">
+			<property name="Tags" value="vehicle,rest"/>
+			<property name="Class" value="EntityBicycle"/>
+			<property name="Parent" value="Cars"/>
+	<property name="Prefab" value="#@modfolder:Resources/test.unity3d?Chair.prefab"/>
+			<property name="ModelType" value="Standard"/>
+			<property name="SurfaceCategory" value="wood"/>
+			<property name="LootListAlive" value="76"/>
+			<property name="IsEnemyEntity" value="false"/>
+			<property name="RotateToGround" value="true"/>
+			<property name="Faction" value="none"/>
+			<property name="MapIcon" value="none"/>
+		</entity_class>
+		
+
+		
+						<entity_class name="Chair2">
+			<property name="Tags" value="vehicle,rest"/>
+			<property name="Class" value="EntityVJeep"/>
+			<property name="Parent" value="Cars"/>
+			<property name="Prefab" value="#@modfolder:Resources/test.unity3d?Chair2.prefab"/>
+			<property name="ModelType" value="Standard"/>
+			<property name="SurfaceCategory" value="wood"/>
+			<property name="LootListAlive" value="76"/>
+			<property name="IsEnemyEntity" value="false"/>
+			<property name="RotateToGround" value="true"/>
+			<property name="Faction" value="none"/>
+			<property name="MapIcon" value="none"/>
+		</entity_class>
+		
+						<entity_class name="Chair3">
+			<property name="Tags" value="vehicle,rest"/>
+			<property name="Class" value="EntityVJeep"/>
+			<property name="Parent" value="Cars"/>
+			<property name="Prefab" value="#@modfolder:Resources/test.unity3d?Chair3.prefab"/>
+			<property name="ModelType" value="Standard"/>
+			<property name="SurfaceCategory" value="wood"/>
+			<property name="LootListAlive" value="76"/>
+			<property name="IsEnemyEntity" value="false"/>
+			<property name="RotateToGround" value="true"/>
+			<property name="Faction" value="none"/>
+			<property name="MapIcon" value="none"/>
+		</entity_class>	
+		
+						<entity_class name="Chair4">
+			<property name="Tags" value="vehicle,rest"/>
+			<property name="Class" value="EntityVJeep"/>
+			<property name="Parent" value="Cars"/>
+			<property name="Prefab" value="#@modfolder:Resources/test.unity3d?Chair4.prefab"/>
+			<property name="ModelType" value="Standard"/>
+			<property name="SurfaceCategory" value="wood"/>
+			<property name="LootListAlive" value="76"/>
+			<property name="IsEnemyEntity" value="false"/>
+			<property name="RotateToGround" value="true"/>
+			<property name="Faction" value="none"/>
+			<property name="MapIcon" value="none"/>
+		</entity_class>	
+		
+								<entity_class name="Chair5">
+			<property name="Tags" value="vehicle,rest"/>
+			<property name="Class" value="EntityVJeep"/>
+			<property name="Parent" value="Cars"/>
+			<property name="Prefab" value="#@modfolder:Resources/test.unity3d?Chair5.prefab"/>
+			<property name="ModelType" value="Standard"/>
+			<property name="SurfaceCategory" value="wood"/>
+			<property name="LootListAlive" value="76"/>
+			<property name="IsEnemyEntity" value="false"/>
+			<property name="RotateToGround" value="true"/>
+			<property name="Faction" value="none"/>
+			<property name="MapIcon" value="none"/>
+		</entity_class>	
+		
+				
+		
+						<entity_class name="Ballchair">
+			<property name="Tags" value="vehicle,rest"/>
+			<property name="Class" value="EntityVJeep"/>
+			<property name="Parent" value="Cars"/>
+			<property name="Prefab" value="#@modfolder:Resources/test.unity3d?Ballchair.prefab"/>
+			<property name="ModelType" value="Standard"/>
+			<property name="SurfaceCategory" value="wood"/>
+			<property name="LootListAlive" value="76"/>
+			<property name="IsEnemyEntity" value="false"/>
+			<property name="RotateToGround" value="true"/>
+			<property name="Faction" value="none"/>
+			<property name="MapIcon" value="none"/>
+		</entity_class>			
+
+						<entity_class name="Trone">
+			<property name="Tags" value="vehicle,rest"/>
+			<property name="Class" value="EntityVJeep"/>
+			<property name="Parent" value="Cars"/>
+			<property name="Prefab" value="#@modfolder:Resources/test.unity3d?Trone.prefab"/>
+			<property name="ModelType" value="Standard"/>
+			<property name="SurfaceCategory" value="wood"/>
+			<property name="LootListAlive" value="76"/>
+			<property name="IsEnemyEntity" value="false"/>
+			<property name="RotateToGround" value="true"/>
+			<property name="Faction" value="none"/>
+			<property name="MapIcon" value="none"/>
+		</entity_class>				
+		
+
+						<entity_class name="Pouf">
+			<property name="Tags" value="vehicle,rest"/>
+			<property name="Class" value="EntityVJeep"/>
+			<property name="Parent" value="Cars"/>
+			<property name="Prefab" value="#@modfolder:Resources/test.unity3d?Pouf.prefab"/>
+			<property name="ModelType" value="Standard"/>
+			<property name="SurfaceCategory" value="wood"/>
+			<property name="LootListAlive" value="76"/>
+			<property name="IsEnemyEntity" value="false"/>
+			<property name="RotateToGround" value="true"/>
+			<property name="Faction" value="none"/>
+			<property name="MapIcon" value="none"/>
+		</entity_class>		
+		
+						<entity_class name="Bar Stool">
+			<property name="Tags" value="vehicle,rest"/>
+			<property name="Class" value="EntityVJeep"/>
+			<property name="Parent" value="Cars"/>
+			<property name="Prefab" value="#@modfolder:Resources/test.unity3d?BarStool.prefab"/>
+			<property name="ModelType" value="Standard"/>
+			<property name="SurfaceCategory" value="metal"/>
+			<property name="LootListAlive" value="76"/>
+			<property name="IsEnemyEntity" value="false"/>
+			<property name="RotateToGround" value="true"/>
+			<property name="Faction" value="none"/>
+			<property name="MapIcon" value="none"/>
+		</entity_class>			
+		
+						<entity_class name="Shower">
+			<property name="Tags" value="vehicle"/>
+			<property name="Class" value="EntityVJeep"/>
+			<property name="Parent" value="Cars"/>
+			<property name="Prefab" value="#@modfolder:Resources/test.unity3d?Shower.prefab"/>
+			<property name="ModelType" value="Standard"/>
+			<property name="SurfaceCategory" value="glass"/>
+			<property name="LootListAlive" value="76"/>
+			<property name="IsEnemyEntity" value="false"/>
+			<property name="RotateToGround" value="true"/>
+			<property name="Faction" value="none"/>
+			<property name="MapIcon" value="none"/>
+		</entity_class>
+		
+			
+										<entity_class name="Carousel">
+			<property name="Tags" value="vehicle"/>
+			<property name="Class" value="EntityVJeep"/>
+			<property name="Parent" value="Cars"/>
+			<property name="Prefab" value="#@modfolder:Resources/test.unity3d?Carousel.prefab"/>
+			<property name="ModelType" value="Standard"/>
+			<property name="SurfaceCategory" value="glass"/>
+			<property name="LootListAlive" value="76"/>
+			<property name="IsEnemyEntity" value="false"/>
+			<property name="RotateToGround" value="true"/>
+			<property name="Faction" value="none"/>
+			<property name="MapIcon" value="none"/>
+		</entity_class>
+		
+	
+								<entity_class name="Food Table">
+			<property name="Tags" value="vehicle,rest"/>
+			<property name="Class" value="EntityVJeep"/>
+			<property name="Parent" value="Cars"/>
+			<property name="Prefab" value="#@modfolder:Resources/test.unity3d?Foodtable.prefab"/>
+			<property name="ModelType" value="Standard"/>
+			<property name="SurfaceCategory" value="glass"/>
+			<property name="LootListAlive" value="76"/>
+			<property name="IsEnemyEntity" value="false"/>
+			<property name="RotateToGround" value="true"/>
+			<property name="Faction" value="none"/>
+			<property name="MapIcon" value="none"/>
+		</entity_class>
+		
+										<entity_class name="PC">
+			<property name="Tags" value="vehicle,rest"/>
+			<property name="Class" value="EntityVJeep"/>
+			<property name="Parent" value="Cars"/>
+			<property name="Prefab" value="#@modfolder:Resources/test.unity3d?PC.prefab"/>
+			<property name="ModelType" value="Standard"/>
+			<property name="SurfaceCategory" value="wood"/>
+			<property name="LootListAlive" value="76"/>
+			<property name="IsEnemyEntity" value="false"/>
+			<property name="RotateToGround" value="true"/>
+			<property name="Faction" value="none"/>
+			<property name="MapIcon" value="none"/>
+		</entity_class>
+		
+								<entity_class name="Bath">
+			<property name="Tags" value="vehicle,rest"/>
+			<property name="Class" value="EntityMotorcycle"/>
+			<property name="Parent" value="Cars"/>
+			<property name="Prefab" value="#@modfolder:Resources/test.unity3d?Bath.prefab"/>
+			<property name="ModelType" value="Standard"/>
+			<property name="SurfaceCategory" value="glass"/>
+			<property name="LootListAlive" value="76"/>
+			<property name="IsEnemyEntity" value="false"/>
+			<property name="RotateToGround" value="true"/>
+			<property name="Faction" value="none"/>
+			<property name="MapIcon" value="none"/>
+		</entity_class>
+
+								<entity_class name="Jacuzzi">
+			<property name="Tags" value="vehicle,rest"/>
+			<property name="Class" value="EntityMotorcycle"/>
+			<property name="Parent" value="Cars"/>
+			<property name="Prefab" value="#@modfolder:Resources/test.unity3d?Jacuzzi.prefab"/>
+			<property name="ModelType" value="Standard"/>
+			<property name="SurfaceCategory" value="glass"/>
+			<property name="LootListAlive" value="76"/>
+			<property name="IsEnemyEntity" value="false"/>
+			<property name="RotateToGround" value="true"/>
+			<property name="Faction" value="none"/>
+			<property name="MapIcon" value="none"/>
+		</entity_class>
+				
+		
+						<entity_class name="Toilet">
+			<property name="Tags" value="vehicle,toilet"/>
+			<property name="Class" value="EntityVJeep"/>
+			<property name="Parent" value="Cars"/>
+			<property name="Prefab" value="#@modfolder:Resources/test.unity3d?Toilet.prefab"/>
+			<property name="ModelType" value="Standard"/>
+			<property name="SurfaceCategory" value="wood"/>
+			<property name="IgnoreTrigger" value="true"/>
+			<property name="LootListAlive" value="76"/>
+			<property name="IsEnemyEntity" value="false"/>
+			<property name="RotateToGround" value="false"/>
+			<property name="Faction" value="none"/>
+			<property name="MapIcon" value="none"/>
+		</entity_class>
+		
+						<entity_class name="Superior Couch">
+			<property name="Tags" value="vehicle,rest"/>
+			<property name="Class" value="EntityVJeep"/>
+			<property name="Parent" value="Cars"/>
+			<property name="Prefab" value="#@modfolder:Resources/test.unity3d?Couch.prefab"/>
+			<property name="ModelType" value="Standard"/>
+			<property name="SurfaceCategory" value="wood"/>
+			<property name="IgnoreTrigger" value="true"/>
+			<property name="LootListAlive" value="76"/>
+			<property name="IsEnemyEntity" value="false"/>
+			<property name="RotateToBlock" value="true"/>
+			<property name="Faction" value="none"/>
+			<property name="MapIcon" value="none"/>
+		</entity_class>
+		
+						<entity_class name="Bench">
+			<property name="Tags" value="vehicle,rest"/>
+			<property name="Class" value="EntityVJeep"/>
+			<property name="Parent" value="Cars"/>
+			<property name="Prefab" value="#@modfolder:Resources/test.unity3d?Bench.prefab"/>
+			<property name="ModelType" value="Standard"/>
+			<property name="SurfaceCategory" value="wood"/>
+			<property name="IgnoreTrigger" value="true"/>
+			<property name="LootListAlive" value="76"/>
+			<property name="IsEnemyEntity" value="false"/>
+			<property name="RotateToBlock" value="true"/>
+			<property name="Faction" value="none"/>
+			<property name="MapIcon" value="none"/>
+		</entity_class>
+		
+			<entity_class name="Swing">
+			<property name="Tags" value="vehicle,rest"/>
+			<property name="Class" value="EntityVJeep"/>
+			<property name="Parent" value="Cars"/>
+			<property name="Prefab" value="#@modfolder:Resources/test.unity3d?Swing.prefab"/>
+			<property name="ModelType" value="Standard"/>
+			<property name="SurfaceCategory" value="wood"/>
+			<property name="IgnoreTrigger" value="true"/>
+			<property name="LootListAlive" value="76"/>
+			<property name="IsEnemyEntity" value="false"/>
+			<property name="RotateToBlock" value="true"/>
+			<property name="Faction" value="none"/>
+			<property name="MapIcon" value="none"/>
+		</entity_class>
+		
+						<entity_class name="Piano">
+			<property name="Tags" value="vehicle"/>
+			<property name="Class" value="EntityVJeep"/>
+			<property name="Parent" value="Cars"/>
+			<property name="Prefab" value="#@modfolder:Resources/test.unity3d?Piano.prefab"/>
+			<property name="ModelType" value="Standard"/>
+			<property name="SurfaceCategory" value="wood"/>
+			<property name="IgnoreTrigger" value="true"/>
+			<property name="LootListAlive" value="76"/>
+			<property name="IsEnemyEntity" value="false"/>
+			<property name="RotateToBlock" value="true"/>
+			<property name="Faction" value="none"/>
+			<property name="MapIcon" value="none"/>
+		</entity_class>
+		
+						<entity_class name="Bed">
+			<property name="Tags" value="vehicle,sleep"/>
+			<property name="Class" value="EntityVJeep"/>
+			<property name="Parent" value="Cars"/>
+			<property name="Prefab" value="#@modfolder:Resources/test.unity3d?Bed.prefab"/>
+			<property name="ModelType" value="Standard"/>
+			<property name="SurfaceCategory" value="wood"/>
+			<property name="IgnoreTrigger" value="true"/>
+			<property name="LootListAlive" value="76"/>
+			<property name="IsEnemyEntity" value="false"/>
+			<property name="RotateToGround" value="false"/>
+			<property name="Faction" value="none"/>
+			<property name="MapIcon" value="none"/>
+		</entity_class>
+		
+								<entity_class name="Hammock">
+			<property name="Tags" value="vehicle,sleep"/>
+			<property name="Class" value="EntityVJeep"/>
+			<property name="Parent" value="Cars"/>
+			<property name="Prefab" value="#@modfolder:Resources/test.unity3d?Hammock.prefab"/>
+			<property name="ModelType" value="Standard"/>
+			<property name="SurfaceCategory" value="wood"/>
+			<property name="IgnoreTrigger" value="true"/>
+			<property name="LootListAlive" value="76"/>
+			<property name="IsEnemyEntity" value="false"/>
+			<property name="RotateToGround" value="false"/>
+			<property name="Faction" value="none"/>
+			<property name="MapIcon" value="none"/>
+		</entity_class>
+		
+										<entity_class name="Recliner Chair">
+			<property name="Tags" value="vehicle,rest"/>
+			<property name="Class" value="EntityVJeep"/>
+			<property name="Parent" value="Cars"/>
+			<property name="Prefab" value="#@modfolder:Resources/test.unity3d?Recliner.prefab"/>
+			<property name="ModelType" value="Standard"/>
+			<property name="SurfaceCategory" value="wood"/>
+			<property name="IgnoreTrigger" value="true"/>
+			<property name="LootListAlive" value="76"/>
+			<property name="IsEnemyEntity" value="false"/>
+			<property name="RotateToGround" value="false"/>
+			<property name="Faction" value="none"/>
+			<property name="MapIcon" value="none"/>
+		</entity_class>
+	
+	
+	
+	
+	 </append>
+</configs>

@@ -1,0 +1,12 @@
+<MeanCloud_ScrapBoneKnives>
+
+  <append xpath="/recipes">
+
+    <!-- allow stuff with a 'Weight' value that's made of bone 'MresourceBone' material to be scrapped -->
+    <recipe name="resourceBone" count="1" tooltip="ttScrapMetalBrass" always_unlocked="true" tags="salvageScrap">
+      <wildcard_forge_category />
+    </recipe>
+
+  </append>
+
+</MeanCloud_ScrapBoneKnives>

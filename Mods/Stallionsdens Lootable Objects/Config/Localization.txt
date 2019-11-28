@@ -1,0 +1,30 @@
+Key,Source,Context,Changes,English
+bodyBagBlackFull,blocks,Container,KgNone,body Bag Black
+bodyBagYellowFull,blocks,Container,KgNone,body Bag Yellow
+bodyBagPileFull,blocks,Container,KgNone,body Bag Pile
+bodyBagPileMixFull,blocks,Container,KgNone,body Bag Pile Mix
+bodyBagPairFull,blocks,Container,KgNone,body Bag Pair
+bodyBagPairYellowFull,blocks,Container,KgNone,body Bag Pair Yellow
+bodyBagPairMixedFull,blocks,Container,KgNone,body Bag Pair Mixed
+goreBlockHumanCorpseFull,blocks,Container,KgNone,gore Block Human Corpse
+goreBlockHumanBonesFull,blocks,Container,KgNone,gore Block Human Bones Full
+schoolDeskFull,blocks,Container,KgNone,school Desk
+coffeeTableFull,blocks,Container,KgNone,coffee Table
+rScrapIronTableFull,blocks,Container,KgNone,rScrap Iron Table
+rustyIronTableFull,blocks,Container,KgNone,rusty Iron Table
+decoPicnicTableFull,blocks,Container,KgNone,Picnic Table
+sectionalPlaidCouchSofaMiddleFull,blocks,Container,KgNone,sectional Plaid Couch Sofa Middle
+sectionalPlaidCouchSofaCornerFull,blocks,Container,KgNone,sectional Plaid Couch Sofa Corner
+sectionalLeatherCouchSofaCornerFull,blocks,Container,KgNone,sectional Leather Couch Sofa Corner
+sectionalLeatherCouchSofaMiddleFull,blocks,Container,KgNone,sectional Leather Couch Sofa Middle
+couchSofa01Full,blocks,Container,KgNone,couch Sofa 01
+chairCouchSofa01Full,blocks,Container,KgNone,chair Couch Sofa 01
+leatherCouchSofa2Full,blocks,Container,KgNone,leather Couch Sofa 2
+leatherChairCouchSofa2Full,blocks,Container,KgNone,leather Chair Couch Sofa 2
+pew_segment01Full,blocks,Container,KgNone,pew_segment 01
+pew_segment02Full,blocks,Container,KgNone,pew_segment 02
+pew_segment03Full,blocks,Container,KgNone,pew_segment 03
+parkBenchAFull,blocks,Container,KgNone,park Bench A
+parkBenchBFull,blocks,Container,KgNone,park Bench B
+decoWildWestWagonFull,blocks,Container,KgNone,Wild West Wagon
+cntIceMachineFull,blocks,Container,KgNone,Ice Machine

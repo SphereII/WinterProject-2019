@@ -1,0 +1,6 @@
+<configs>
+
+<set xpath="/archetypes/archetype/base_mesh_parts/part[@mesh='unisex_gear_backpack01']/@mesh">unisex_base_back</set>
+
+
+</configs>

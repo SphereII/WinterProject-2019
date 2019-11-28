@@ -1,0 +1,70 @@
+<configs>
+	
+		<append xpath="/blocks">		
+
+	<block name="Bed Structure">
+	<property name="CustomIcon" value="3bedsup"/>
+	<property name="DescriptionKey" value="chairbedstructuredesc"/>
+	<property name="Class" value="SleepingBag"/>
+	<property name="Material" value="Mwood"/>
+	<property name="SellableToTrader" value="false"/>
+	<property name="Weight" value="20"/>
+	<property name="MaxDamage" value="150"/>
+	<property name="StabilitySupport" value="false"/>
+	<property name="Shape" value="ModelEntity"/>
+		<property name="Model" value="#@modfolder:Resources/test.unity3d?Bedstructure"/>
+	<property name="StabilitySupport" value="false"/>
+	<property name="IsTerrainDecoration" value="true"/>
+	<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+ <property name="MultiBlockDim" value="2,1,1" />
+	<property name="CanPickup" value="true"/>
+	<property class="RepairItems">
+		<property name="resourceWood" value="5"/>
+	</property>
+	<property class="UpgradeBlock">
+		<property name="ToBlock" value="Bed Structure "/>
+		<property name="Item" value="resourceWood"/>
+		<property name="ItemCount" value="1"/>
+		<property name="UpgradeHitCount" value="1"/>
+	</property>
+	<drop event="Destroy" name="resourceWood" count="2,4"/>
+	<drop event="Fall" count="0"/>
+	<property name="FilterTags" value="floot,ffurniture,fdecor,fother"/>
+	<property name="Group" value="Decor/Miscellaneous"/>
+</block>
+
+	<block name="Bed Structure ">
+	<property name="CustomIcon" value="3bedsup"/>
+	<property name="DescriptionKey" value="chairbedstructuredesc"/>
+	<property name="Class" value="SleepingBag"/>
+	<property name="Material" value="Mwood"/>
+	<property name="SellableToTrader" value="false"/>
+	<property name="Weight" value="20"/>
+	<property name="MaxDamage" value="150"/>
+	<property name="StabilitySupport" value="false"/>
+	<property name="Shape" value="ModelEntity"/>
+		<property name="Model" value="#@modfolder:Resources/test.unity3d?Bedstructure"/>
+	<property name="StabilitySupport" value="false"/>
+	<property name="IsTerrainDecoration" value="true"/>
+	<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+ <property name="MultiBlockDim" value="2,1,1" />
+	<property name="CanPickup" value="true"/>
+	<property class="RepairItems">
+		<property name="resourceWood" value="5"/>
+	</property>
+	<property class="UpgradeBlock">
+		<property name="ToBlock" value="Bed Structure "/>
+		<property name="Item" value="resourceWood"/>
+		<property name="ItemCount" value="1"/>
+		<property name="UpgradeHitCount" value="1"/>
+	</property>
+	<drop event="Destroy" name="resourceWood" count="2,4"/>
+	<drop event="Fall" count="0"/>
+	<property name="FilterTags" value="floot,ffurniture,fdecor,fother"/>
+	<property name="Group" value="Decor/Miscellaneous"/>
+</block>
+
+
+
+		</append>
+</configs>
