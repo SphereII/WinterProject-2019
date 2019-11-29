@@ -56,15 +56,15 @@
 				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="EntityBoss" operation="set" value="1"/>
 			</effect_group>				
 		</entity_class>
-		<entity_class name="EntityLootContainerSanta"> 
-			<property name="Mesh" value="LootContainers/zpackPrefab"/>
-			<property name="ModelType" value="Custom"/>
+		<entity_class name="EntityLootContainerSanta">
+      <property name="Mesh" value="#Entities/LootContainers?backpack_droppedPrefab.prefab"/>
+      <property name="ModelType" value="Custom"/>
 			<property name="Prefab" value="Backpack"/>
 			<property name="Class" value="EntityLootContainer"/>
 			<property name="Parent" value="Backpack"/>
 			<property name="IsEnemyEntity" value="false"/>
 			<property name="TimeStayAfterDeath" value="300"/>
-			<property name="LootListOnDeath" value="111"/> <!-- presents, cookies, and coal -->
+			<property name="LootListOnDeath" value="227"/> <!-- presents, cookies, and coal -->
 			<property name="Faction" value="none"/>
 		</entity_class>
 		<!--
