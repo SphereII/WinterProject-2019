@@ -15,18 +15,13 @@
 	<!-- buffs that show video full screen over the top of the UI and player  -->	
 		
 		<buff name="buffCutscene00"  name_key="Buff" icon="ui_game_symbol_destruction2" hidden="false">
-			<duration value="52"/>
-			<stack_type value="ignore"/>
-
+			<duration value="10"/>
+			<stack_type value="replace"/>
+				<effect_group>
 					<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="#@modfolder:Resources/SamaraCurse.unity3d?Cutscene00" parent_transform="CameraNode" local_offset="0,0,0" local_rotation="0,0,0"/>
 					<triggered_effect trigger="onSelfBuffFinish" action="RemovePrefabFromEntity" prefab="#@modfolder:Resources/SamaraCurse.unity3d?Cutscene00"/>
-<!--					<triggered_effect trigger="onSelfBuffRemove" action="RemovePrefabFromEntity" prefab="#@modfolder:Resources/SamaraCurse.unity3d?Cutscene00"/> -->
-<!--					<triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="buff_Cutscenesound00" play_in_head="true"/> 
-					
-					<triggered_effect trigger="onSelfBuffFinish" action="StopSound" sound="buff_Cutscenesound00" play_in_head="true"/>
-					<triggered_effect trigger="onSelfBuffRemove" action="StopSound" sound="buff_Cutscenesound00" play_in_head="true"/>
-					<triggered_effect trigger="onSelfLeaveGame" action="StopSound" sound="buff_Cutscenesound00" play_in_head="true"/> -->
-				
+					<triggered_effect trigger="onSelfBuffRemove" action="RemovePrefabFromEntity" prefab="#@modfolder:Resources/SamaraCurse.unity3d?Cutscene00"/> 
+				</effect_group>	
 		</buff>
 		
 		<buff name="buffCutscene01" name_key="Buff" icon="ui_game_symbol_destruction2" remove_on_death="true" hidden="true">
@@ -118,17 +113,10 @@
 					<triggered_effect trigger="onSelfBuffFinish" action="RemovePrefabFromEntity" prefab="#@modfolder:Resources/SamaraCurse.unity3d?Overlay03"/>
 				</effect_group>
 		</buff>	
-<!--		<buff name="buffJumpTag" name_key="buffElementFreezingName" description_key="buffElementFreezingDesc" tooltip_key="buffElementFreezingTooltip" icon="ui_game_symbol_cold" icon_color="255,0,0" icon_blink="true">
-			<duration value="10"/>
+		<buff name="buffJumpTag" name_key="buffElementFreezingName" description_key="buffElementFreezingDesc" tooltip_key="buffElementFreezingTooltip" icon="ui_game_symbol_cold" icon_color="255,0,0" icon_blink="true">
+			<duration value="0"/>
 			<stack_type value="ignore"/>
-			<effect_group>
-			<requirement name="IsLookingAtBlock" tags="JumpTag"/> 
-				<triggered_effect trigger="onSelfBuffUpdate" target="other" action="AnimatorSetBool" property="On" value="true"/>
-				<triggered_effect trigger="onSelfBuffUpdate" target="other" action="AnimatorSetBool" property="Off" value="false"/>
-				<triggered_effect trigger="onSelfBuffFinish" target="other" action="AnimatorSetBool" property="Off" value="true"/>
-				<triggered_effect trigger="onSelfBuffFinish" target="other" action="AnimatorSetBool" property="On" value="false"/>
-			</effect_group>
-		</buff>	-->
+		</buff>	
 	</append>
 	
 	<append xpath="/buffs/buff[@name='buffStatusCheck01']/effect_group">
@@ -151,8 +139,9 @@
 <!--			<triggered_effect trigger="onSelfBuffUpdate" action="RemovePrefabFromEntity" prefab="Cutscene00">
 				<requirement name="PlayerLevel" operation="GE" value="2"/>
 			</triggered_effect> -->
-			
+<!--			<triggered_effect trigger="onSelfEnteredGame" action="AddBuff" buff="buffJumpTag"/> -->
 			<triggered_effect trigger="onSelfEnteredGame" action="AddBuff" buff="buffCutscene00"/> 
+			
 			<triggered_effect trigger="onSelfBuffUpdate" action="RemovePrefabFromEntity" prefab="Cutscene00">
 				<requirement name="NotHasBuff" buff="buffCutscene00"/>
 			</triggered_effect>
@@ -197,7 +186,6 @@
 				<requirement name="HasBuff" buff="buffCutscene05"/>
 			</triggered_effect>	
 			
-			
 	<!-- buffs that show video full screen over the top of the UI and player  -->	
 
 			<triggered_effect trigger="onSelfBuffUpdate" action="RemovePrefabFromEntity" prefab="Overlay01">
@@ -218,6 +206,8 @@
 			<triggered_effect trigger="onSelfBuffUpdate" action="AttachPrefabToEntity" prefab="Overlay03">
 				<requirement name="HasBuff" buff="buffOverlay03"/>
 			</triggered_effect>	
+		
+			
 	</append> 					
 
 	

@@ -1,7 +1,7 @@
 <configs>
 	<append xpath="/blocks">
 	
-<!--		<block name="JumpPic02">
+		<block name="JumpPic02">
 			<property name="CreativeMode" value="Player"/>
 			<property name="Collide" value="sight,movement,melee,rocket"/>
 			<property name="Material" value="Mglass"/>
@@ -18,11 +18,19 @@
 			<property name="SortOrder2" value="0002"/>
 			<property name="DescriptionKey" value="decorativeBlockGroupDesc"/>
 			<property name="CustomIcon" value="cntStorageHealth"/>
-	<property name="Class" value="Loot"/>
-	<property name="AlwaysActive" value="true" />
-	<property name="LootList" value="92"/>
-			<property name="Tags" value="JumpTag"/>
+			<property name="Class" value="TriggeredSDX, Mods"/>
+			<property name="LootList" value="92"/>
+			  <!-- Allows the  Trigger to work -->
+			  <property name="AlwaysActive" value="true" />
+
+			  <!-- How far out the tile entity will re-scan to detect the player -->
+			  <property name="ActivationDistance" value="6" />   <!-- 4 is default -->
+<!--			  <property name="ActivateOnLook" value="true" /> -->
+			  
+			  <!-- Triggers the block if the buff buffCurseSamara is active on the player, or if the player has a cvar called "cvar" with a value of 4, or if myOtherCvar is available, regardless of value -->
+<!--			  <property name="ActivationBuffs" value="buffJumpTag" /> -->
 		</block>
+		
 		<block name="JumpPic01"> 
 			<property name="CreativeMode" value="Player"/>
 			<property name="Shape" value="ModelEntity" />
@@ -51,7 +59,7 @@
 			<drop event="Harvest" name="resourceElectricParts" count="1,4" tag="salvageHarvest"/> 
 			<drop event="Destroy" name="resourceScrapIron" count="5" prob="1"/>
 			<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
-		</block> -->
+		</block> 
 		
 		
 		
