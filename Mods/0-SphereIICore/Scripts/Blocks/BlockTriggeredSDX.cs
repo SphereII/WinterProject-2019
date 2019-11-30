@@ -58,7 +58,7 @@ class BlockTriggeredSDX : BlockLoot
                     animator.enabled = true;
                     if ( !TriggerOnly)
                         animator.SetBool("On", true);
-                    animator.SetTrigger("On");
+                    animator.SetTrigger("TriggerOn");
                 }
 
                 if (isOn == false)
