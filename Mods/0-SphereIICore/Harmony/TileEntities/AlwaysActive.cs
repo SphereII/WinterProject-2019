@@ -82,7 +82,15 @@ public class SphereII_TileEntityAlwaysActive
                                         }
 
                                     }
+
                                 }
+                                else
+                                {
+                                    blCanTrigger = true;
+                                }
+
+                                if (blCanTrigger)
+                                    break;
                             }
 
                         }
