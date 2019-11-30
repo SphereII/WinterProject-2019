@@ -1,0 +1,97 @@
+<configs>
+	<append xpath="/items">	
+		<item name="rabbitItem">
+			<property name="DescriptionKey" value="toysDesc" />
+			<property name="Meshfile" value="#@modfolder:Resources/XmasDeco.unity3d?RabbitItem_X" /> 
+			<!-- Rabbit Christmas by Chaitanya Krishnan is licensed under CC Attribution -->
+			<property name="DropMeshfile" value="#@modfolder:Resources/XmasDeco.unity3d?RabbitItem_X" />
+			<property name="Material" value="Mcloth" />
+			<property name="HoldType" value="31" />
+			<property name="CustomIcon" value="xmasRabbit" />
+			<property name="Stacknumber" value="1" />		
+			<property class="Action1">
+				<property name="Class" value="PlaceAsBlock" />
+				<property name="Delay" value="0.1" />
+				<property name="Blockname" value="rabbitBlock" />
+			</property>
+			<property name="Group" value="Basics,Decor/Miscellaneous" />
+			<property name="EconomicValue" value="25" />
+		</item> 
+		<item name="snowShovel">
+			<property name="Extends" value="meleeToolShovelIron"/>
+			<property name="DescriptionKey" value="snowShovelDesc" />
+			<property name="Meshfile" value="#@modfolder:Resources/XmasDeco.unity3d?SnowShovel_X" /> 
+			<property name="DropMeshfile" value="#@modfolder:Resources/XmasDeco.unity3d?SnowShovel_X" />
+			<property name="CustomIcon" value="snowShovel" />
+			<effect_group name="Base Effects">
+				<passive_effect name="MaxRange" operation="base_set" value="3.4"/>
+				<passive_effect name="BlockRange" operation="base_set" value="4"/>
+				<passive_effect name="EntityDamage" operation="base_set" value="13"/>
+				<!-- meleeToolShovelIron -->
+				<passive_effect name="BlockDamage" operation="base_set" value="18"/>
+				<passive_effect name="DamageModifier" operation="perc_add" value="-.7" tags="wood"/>
+				<passive_effect name="DamageModifier" operation="perc_add" value="-.5" tags="stone"/>
+				<passive_effect name="DamageModifier" operation="perc_add" value="-.75" tags="metal"/>
+				<passive_effect name="DamageModifier" operation="perc_add" value="1" tags="earth"/>
+				<!-- Added the bonus for snow -->
+				<passive_effect name="DamageModifier" operation="perc_add" value="1.5" tags="snow"/>
+				<passive_effect name="AttacksPerMinute" operation="base_set" value="50"/>
+				<passive_effect name="StaminaLoss" operation="base_set" value="16" tags="primary"/>
+				<passive_effect name="DegradationMax" operation="base_set" value="200,800" tier="1,6"/>
+				<passive_effect name="ModSlots" operation="base_set" value="0,5" tier="1,6"/>
+				<passive_effect name="ModPowerBonus" operation="perc_add" value=".15" tags="EntityDamage,BlockDamage"/>
+				<passive_effect name="ModPowerBonus" operation="base_add" value="200" tags="EconomicValue"/>
+			</effect_group>
+		</item>
+		<item name="candyCane">
+			<property name="Extends" value="meleeClubIron" />
+			<property name="Material" value="Mwood" />
+			<property name="RepairTools" value="resourceRepairKit" />
+			<property name="Meshfile" value="#@modfolder:Resources/XmasDeco.unity3d?CandyCane_X" />
+			<property name="CustomIcon" value="candyCane" />
+		</item>
+		<item name="waxCandle">
+			<property name="Class" value="ItemClassTorch"/>
+			<property name="CustomIcon" value="waxcandle" />
+			<property name="Meshfile" value="#@modfolder:Resources/XmasDeco.unity3d?WaxCandle_X" />
+			<property name="Material" value="Morganic" />
+			<property name="HoldType" value="12" />
+			<property name="Stacknumber" value="50" />
+			<property name="FuelValue" value="16" />
+			<property name="EconomicValue" value="24" />
+			<property class="Action1">
+				<property name="Class" value="PlaceAsBlock" />
+				<property name="Delay" value="0.5" />
+				<property name="Blockname" value="beesWaxCandle" />
+			</property>
+			<property name="Group" value="Basics,Decor/Miscellaneous" />
+		</item>
+
+		<!-- Copied the corn for the cookies -->
+		<item  name="Cookies">
+			<property name="HoldType" value="31"/>
+			<property name="DisplayType" value="food"/>
+			<property name="Meshfile" value="Items/Misc/parcelPrefab"/>
+			<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="50"/>
+			<!-- STK food -->
+			<property name="EconomicValue" value="1"/>
+			<property class="Action0">
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="1.0"/>
+				<property name="Use_time" value="..."/>
+				<property name="Sound_start" value="player_eating"/>
+				<!-- jar from cooking food <property name="Create_item" value="drinkJarEmpty"/> -->
+			</property>
+			<property name="Group" value="Food/Cooking"/>
+
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodAmount" operation="add" value="5"/>
+				<!-- <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodPerkDisplay" operation="add" value="@foodSatiationPSec"/> -->
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="2"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffProcessConsumables"/>
+			</effect_group>
+		</item>
+	</append>
+</configs>

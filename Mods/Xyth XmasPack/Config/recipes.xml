@@ -1,0 +1,22 @@
+<configs>
+	<append xpath="/recipes" >
+		<recipe name="xmasGift" count="1" craft_area="wrappingstation">
+			<ingredient name="resourcePaper" count="2" />
+			<ingredient name="resourceGlue" count="1" />
+		</recipe>			
+		<recipe name="xmasGifts" count="1" craft_area="wrappingstation">
+			<ingredient name="resourcePaper" count="10" />
+			<ingredient name="resourceGlue" count="2" />
+		</recipe>	
+		<recipe name="snowShovel" count="1" craft_area="workstation">
+			<ingredient name="resourceForgedIron" count="15" />
+			<ingredient name="resourceWood" count="10" />
+		</recipe>
+		<recipe name="wrappingstation" count="1" craft_area="workstation">
+			<ingredient name="resourceForgedIron" count="2" />
+			<ingredient name="resourceWood" count="15" />
+			<ingredient name="resourceGlue" count="1" />
+			<ingredient name="resourcePaper" count="30" />
+		</recipe>
+	</append>
+</configs>

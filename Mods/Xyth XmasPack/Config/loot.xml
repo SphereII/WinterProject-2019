@@ -1,0 +1,12 @@
+<configs>
+   <append xpath="/lootcontainers/lootgroup[@name='groupWeaponsMeleeScaled']">
+		<item name="candyCane" prob="0.05" />
+		<item name="snowShovel" prob="0.05" />
+   </append>
+  
+  <append xpath="/lootcontainers/lootgroup[@name='junk']">
+    <item name="Cookies" count="1,4" prob="0.1" />
+  </append>
+
+  
+</configs> 

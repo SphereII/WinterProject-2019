@@ -1,0 +1,441 @@
+<configs>
+
+  <!-- Block Replacement for Christmast decorations -->
+
+  <set xpath="/blocks/block[@name='woodTable']/@name">old_woodtable</set>
+  <set xpath="/blocks/block[@name='woodChair1']/@name">old_woodChair1</set>
+  <set xpath="/blocks/block[@name='oldChair1']/@name">old_oldChair1</set>
+  <set xpath="/blocks/block[@name='candleTableLight']/@name">old_candleTable</set>
+  
+	<set xpath="/blocks/block[@name='questRallyMarker']/property[@name='Model']/@value">#@modfolder:Resources/RallyFlags.unity3d?rally_pointprefab_X</set>
+  <append xpath="/blocks/block[@name='questRallyMarker']">
+		  <!-- Flag model by s.probka is licensed under CC Attribution  -->
+<!--    <property name="MultiBlockDim" value="1,9,1"/> -->
+    <property name="Collide" value="sight,movement,melee,bullet,arrow,rocket"/>
+
+
+  </append>
+  
+  
+
+  <append xpath="/blocks">
+
+    <block name="xmasGift">
+      <property name="Class" value="Loot" />
+      <property name="LootList" value="8" />
+      <property name="CustomIcon" value="xmasGift" />
+      <property name="Material" value="Mpaper" />
+      <property name="Shape" value="ModelEntity" />
+      <property name="Model" value="#@modfolder:Resources/XmasDeco.unity3d?Gift_X" />
+      <!-- Present by holtkamp is licensed under CC Attribution  -->
+      <property name="Collide" value="movement,melee,bullet,arrow,rocket" />
+      <property name="DescriptionKey" value="xmasGift" />
+      <drop event="Destroy" count="0" />
+      <drop event="Destroy" name="resourcePaper" count="1" prob="1" />
+      <drop event="Fall" name="resourcePaper" count="0" prob="1" stick_chance="1" />
+      <drop event="Fall" name="resourcePaper" count="1" prob=".75" stick_chance="1" />
+    </block>
+
+
+    <block name="xmasGifts">
+      <property name="Class" value="Loot" />
+      <property name="LootList" value="8" />
+      <property name="CustomIcon" value="xmasGifts" />
+      <property name="Material" value="Mpaper" />
+      <property name="Shape" value="ModelEntity"/>
+      <property name="Model" value="#@modfolder:Resources/XmasDeco.unity3d?Gifts_X" />
+      <!-- Stack of Christmas Gifts by Damco is licensed under CC Attribution  -->
+      <property name="Collide" value="movement,melee,bullet,arrow,rocket" />
+      <property name="DescriptionKey" value="xmasGifts" />
+      <property name="OnlySimpleRotations" value="true" />
+      <drop event="Destroy" count="0" />
+      <drop event="Destroy" name="resourcePaper" count="5" prob="1" />
+      <drop event="Fall" name="resourcePaper" count="0" prob="1" stick_chance="1" />
+      <drop event="Fall" name="resourcePaper" count="5" prob=".75" stick_chance="1" />
+    </block>
+    <block name="ChristmasTreeCB">
+      <property name="CustomIcon" value="xmasTree" />
+      <property name="Material" value="MtreeWoodSmall" />
+      <property name="Shape" value="ModelEntity" />
+      <property name="Model" value="#@modfolder:Resources/XmasDeco.unity3d?ChristmasTreeCB_X" />
+      <property name="CanPickup" value="true" />
+      <property name="Collide" value="movement,melee,bullet,arrow,rocket" />
+      <property name="DescriptionKey" value="xmasTree" />
+      <drop event="Destroy" count="0" />
+      <drop event="Harvest" name="wood" count="10" tool_category="harvestingTools" />
+      <property name="MultiBlockDim" value="2,3,2" />
+      <property name="CanPlayersSpawnOn" value="false" />
+      <property name="ParticleOnDeath" value="treeGib_small_dust" />
+    </block>
+    <block name="ChristmasTreeNaughty">
+      <property name="CustomIcon" value="xmasTree" />
+      <property name="Shape" value="ModelEntity" />
+      <property name="Model" value="#@modfolder:Resources/XmasDeco.unity3d?ChristmasTreeNaughty_X"/>
+      <property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+      <property name="Path" value="solid"/>
+      <property name="StabilitySupport" value="false"/>
+      <property name="ModelOffset" value="0,0,0"/>
+      <!-- left the model at 000 in Unity so LOD component is on top parent so needs offseting -->
+      <drop event="Destroy" count="0" />
+      <property name="DisplayType" value="blockMulti" />
+      <property name="MultiBlockDim" value="3,5,3" />
+      <property name="BigDecorationRadius" value="3" />
+      <property name="Class" value="ModelTree"/>
+      <property name="Material" value="MtreeWoodSmall"/>
+      <property name="LightOpacity" value="0"/>
+      <property name="ImposterExclude" value="true"/>
+      <property name="ImposterDontBlock" value="true"/>
+      <property name="CreativeMode" value="Player"/>
+      <property name="CanPlayersSpawnOn" value="false"/>
+      <property name="IsTerrainDecoration" value="true"/>
+      <property name="IsDecoration" value="true"/>
+      <property name="IsDistantDecoration" value="false"/>
+      <!-- If this is true you get that annoying deco error -->
+      <property name="OnlySimpleRotations" value="true"/>
+      <!-- make sure you set rotatemax=3 in your biome decotype line or your will get Rot errors -->
+      <property name="Tag" value="TreeTrunk"/>
+      <property name="IsPlant" value="true"/>
+      <property name="ParticleOnDeath" value="treeGib_burnt"/>
+	  <drop event="Harvest" name="resourceWood" count="30" tag="oreWoodHarvest"/>
+      <property name="ActiveRadiusEffects" value="buffPuking1"/>
+
+
+    </block>
+    <block name="ChristmasTreeNice">
+      <property name="CustomIcon" value="xmasTree" />
+      <property name="Shape" value="ModelEntity" />
+      <property name="Model" value="#@modfolder:Resources/XmasDeco.unity3d?ChristmasTreeNice_X"/>
+      <property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+      <property name="Path" value="solid"/>
+      <property name="StabilitySupport" value="false"/>
+      <property name="ModelOffset" value="0,0,0"/>
+      <!-- left the model at 000 in Unity so LOD component is on top parent so needs offseting -->
+      <drop event="Destroy" count="0" />
+      <property name="DisplayType" value="blockMulti" />
+      <property name="MultiBlockDim" value="3,5,3" />
+      <property name="BigDecorationRadius" value="3" />
+      <property name="Class" value="ModelTree"/>
+      <property name="Material" value="MtreeWoodSmall"/>
+      <property name="LightOpacity" value="0"/>
+      <property name="ImposterExclude" value="true"/>
+      <property name="ImposterDontBlock" value="true"/>
+      <property name="CreativeMode" value="Player"/>
+      <property name="CanPlayersSpawnOn" value="false"/>
+      <property name="IsTerrainDecoration" value="true"/>
+      <property name="IsDecoration" value="true"/>
+      <property name="IsDistantDecoration" value="false"/>
+      <!-- If this is true you get that annoying deco error -->
+      <property name="OnlySimpleRotations" value="true"/>
+      <!-- make sure you set rotatemax=3 in your biome decotype line or your will get Rot errors -->
+      <property name="Tag" value="TreeTrunk"/>
+      <property name="IsPlant" value="true"/>
+      <property name="ParticleOnDeath" value="treeGib_burnt"/>
+	  <drop event="Harvest" name="resourceWood" count="30" tag="oreWoodHarvest"/>
+      
+      <!-- Adding a slight warming effect on the tree -->
+      <property name="ActiveRadiusEffects" value="buffCampfireAOE(3)"/>
+
+    </block>
+    <block name="ChristmasTreeSmall">
+      <property name="CustomIcon" value="xmasTree" />
+      <property name="Shape" value="ModelEntity" />
+      <property name="Model" value="#@modfolder:Resources/XmasDeco.unity3d?ChristmasTreeSmall_X"/>
+      <property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+      <property name="Path" value="solid"/>
+      <property name="StabilitySupport" value="false"/>
+      <property name="ModelOffset" value="-.4,0,0"/>
+      <!-- left the model at 000 in Unity so LOD component is on top parent so needs offseting -->
+      <drop event="Destroy" count="0" />
+      <property name="DisplayType" value="blockMulti" />
+      <property name="MultiBlockDim" value="3,3,3" />
+      <property name="BigDecorationRadius" value="3" />
+      <!-- dont spawn this tree with biomes.xml !!  -->
+      <property name="Material" value="MtreeWoodSmall"/>
+      <property name="CreativeMode" value="Player"/>
+      <property name="CanPlayersSpawnOn" value="false"/>
+      <property name="ParticleOnDeath" value="treeGib_burnt"/>
+	   <drop event="Harvest" name="resourceWood" count="15" tag="oreWoodHarvest"/>
+    </block>
+    <block name="icicle">
+      <property name="Material" value="Msnow" />
+      <property name="Shape" value="ModelEntity" />
+      <property name="Model" value="#@modfolder:Resources/XmasDeco.unity3d?Icicle_X"/>
+      <property name="CanPickup" value="false" />
+      <property name="CustomIcon" value="icicles" />
+      <property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+      <drop event="Harvest" name="resourceSnowBall" count="3" tool_category="harvestingTools"/>
+      <drop event="Destroy" count="0"/>
+      <drop event="Fall" name="terrSnow" count="1" prob="0.1" stick_chance="1"/>
+      <drop event="Fall" name="resourceSnowBall" count="3" prob="0.187" stick_chance="0"/>
+    </block>
+    <block name="icicles">
+      <property name="Material" value="Msnow" />
+      <property name="Shape" value="ModelEntity" />
+      <property name="Model" value="#@modfolder:Resources/XmasDeco.unity3d?Icicles_X"/>
+      <property name="CanPickup" value="false" />
+      <property name="CustomIcon" value="icicles" />
+      <property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+      <drop event="Harvest" name="resourceSnowBall" count="10" tool_category="harvestingTools"/>
+      <drop event="Destroy" count="0"/>
+      <drop event="Fall" name="terrSnow" count="1" prob="0.1" stick_chance="1"/>
+      <drop event="Fall" name="resourceSnowBall" count="10" prob="0.187" stick_chance="0"/>
+    </block>
+
+    <block name="iceBlock">
+      <property name="Material" value="Msnow" />
+      <property name="Shape" value="ModelEntity" />
+      <property name="Model" value="#@modfolder:Resources/XmasDeco.unity3d?IceBlock_X"/>
+      <!-- Ice Blocks by vanquish99 is licensed under CC Attribution -->
+      <property name="CanPickup" value="false" />
+      <property name="CustomIcon" value="iceblock" />
+      <property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+      <property name="ImposterExchange" value="imposterBlock" param1="62" />
+      <property name="DropScale" value="2" />
+      <property class="RepairItems">
+        <property name="resourceSnowBall" value="10" />
+      </property>
+      <drop event="Harvest" name="resourceSnowBall" count="10" tool_category="harvestingTools" />
+      <drop event="Destroy" count="0" />
+      <drop event="Fall" name="terrSnow" count="1" prob="0.25" stick_chance="1" />
+      <drop event="Fall" name="resourceSnowBall" count="10" prob="0.187" stick_chance="0" />
+      <property name="EconomicValue" value="5" />
+      <property name="EconomicBundleSize" value="1" />
+      <property name="SellableToTrader" value="false" />
+    </block>
+    <block name="snowBlock">
+      <property name="Material" value="Msnow" />
+      <property name="Shape" value="ModelEntity" />
+      <property name="Model" value="#@modfolder:Resources/XmasDeco.unity3d?SnowBlock_X"/>
+      <!-- Ice Blocks by vanquish99 is licensed under CC Attribution -->
+      <property name="CanPickup" value="false" />
+      <property name="CustomIcon" value="snowblock" />
+      <property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+      <property name="ImposterExchange" value="imposterBlock" param1="62" />
+      <property name="DropScale" value="2" />
+      <property class="RepairItems">
+        <property name="resourceSnowBall" value="10" />
+      </property>
+      <drop event="Harvest" name="resourceSnowBall" count="10" tool_category="harvestingTools" />
+      <drop event="Destroy" count="0" />
+      <drop event="Fall" name="terrSnow" count="1" prob="0.25" stick_chance="1" />
+      <drop event="Fall" name="resourceSnowBall" count="10" prob="0.187" stick_chance="0" />
+      <property name="EconomicValue" value="5" />
+      <property name="EconomicBundleSize" value="1" />
+      <property name="SellableToTrader" value="false" />
+    </block>
+    <block name="rabbitBlock">
+      <property name="Material" value="Mcloth" />
+      <property name="Shape" value="ModelEntity" />
+      <!-- Rabbit Christmas by Chaitanya Krishnan is licensed under CC Attribution -->
+      <property name="Model" value="#@modfolder:Resources/XmasDeco.unity3d?RabbitBlock_X" />
+      <property name="IsDecoration" value="true" />
+      <property name="ImposterExclude" value="true" />
+      <property name="Place" value="TowardsPlacer" />
+      <property name="Weight" value="30" />
+      <property name="CanPickup" value="true" param1="rabbitItem" />
+      <property name="CustomIcon" value="xmasRabbit" />
+      <property name="DescriptionKey" value="" />
+      <drop event="Destroy" name="cloth" count="1,3" prob="1" />
+    </block>
+    <block name="wreath">
+      <property name="Material" value="MtreeWoodSmall" />
+      <property name="Shape" value="ModelEntity" />
+      <property name="Model" value="#@modfolder:Resources/XmasDeco.unity3d?Wreath_X" />
+      <property name="IsDecoration" value="true" />
+      <property name="ImposterExclude" value="true" />
+      <property name="CanPickup" value="true" />
+      <property name="CustomIcon" value="xmasWreath" />
+      <property name="Collide" value="movement,melee,bullet,arrow,rocket" />
+      <property name="DescriptionKey" value="wreath" />
+      <drop event="Destroy" count="0" />
+      <drop event="Harvest" name="resourceWood" count="1" tag="oreWoodHarvest"/>
+      <property name="ParticleOnDeath" value="treeGib_small_dust" />
+    </block>
+    <!--		<block name="stockings1">
+			<property name="Material" value="Mcloth" />
+			<property name="Shape" value="ModelEntity" /> 
+			<property name="Model" value="#@modfolder:Resources/XmasDeco.unity3d?Stockings1_X" />		
+			<property name="IsDecoration" value="true" />
+			<property name="ImposterExclude" value="true" />
+			<property name="Weight" value="30" />
+			<property name="CanPickup" value="true" />
+			<property name="DescriptionKey" value="" />
+			<drop event="Destroy" name="cloth" count="1,3" prob="1" />
+		</block>
+		<block name="stockings2">
+			<property name="Material" value="Mcloth" />
+			<property name="Shape" value="ModelEntity" /> 
+			<property name="Model" value="#@modfolder:Resources/XmasDeco.unity3d?Stockings2_X" />		
+			<property name="IsDecoration" value="true" />
+			<property name="ImposterExclude" value="true" />
+			<property name="Weight" value="30" />
+			<property name="CanPickup" value="true" />
+			<property name="DescriptionKey" value="" />
+			<drop event="Destroy" name="cloth" count="1,3" prob="1" />
+		</block> -->
+    <block name="wrappingstation">
+      <property name="Extends" value="workbench"/>
+      <property name="Class" value="Workstation"/>
+      <property name="DisplayType" value="blockMulti" />
+      <property name="Material" value="Mwood" />
+      <property name="Shape" value="ModelEntity" />
+      <property name="Stacknumber" value="1" />
+      <property name="Model" value="#@modfolder:Resources/XmasDeco.unity3d?WrappingStation_X" />
+      <property name="CustomIcon" value="wrappingStation" />
+      <property name="MultiBlockDim" value="1,2,1" />
+      <property name="Place" value="TowardsPlacerInverted"/>
+      <property class="RepairItems">
+        <property name="resourceWood" value="15" />
+        <property name="resourceForgedIron" value="2" />
+      </property>
+      <property name="Group" value="Basics,Building" />
+      <property class="Workstation">
+        <property name="CraftingAreaRecipes" value="wrappingstation" />
+        <property name="Modules" value="tools,output" />
+      </property>
+      <property name="CanPickup" value="true" />
+      <property name="EconomicValue" value="100" />
+      <drop event="Destroy" count="0" />
+      <drop event="Harvest" name="resourceWood" count="2,4" tool_category="Disassemble" />
+    </block>
+    <block name="poinsettia">
+      <property name="CustomIcon" value="poinsettia" />
+      <property name="Material" value="MtreeWoodSmall" />
+      <property name="Shape" value="ModelEntity" />
+      <property name="Model" value="#@modfolder:Resources/XmasDeco.unity3d?Poinsettia_X" />
+      <property name="CanPickup" value="true" />
+      <property name="Collide" value="movement,melee,bullet,arrow,rocket" />
+      <property name="DescriptionKey" value="poinsettia" />
+      <drop event="Destroy" count="0" />
+      <drop event="Harvest" name="resourceWood" count="1" tool_category="harvestingTools" />
+      <property name="CanPlayersSpawnOn" value="false" />
+      <property name="ParticleOnDeath" value="treeGib_small_dust" />
+    </block>
+    <block name="lightString">
+      <property name="Material" value="Mglass" />
+      <property name="Shape" value="ModelEntity" />
+      <property name="Model" value="#@modfolder:Resources/XmasDeco.unity3d?LightString_X" />
+      <property name="IsDecoration" value="true" />
+      <property name="ImposterExclude" value="true" />
+      <property name="Weight" value="30" />
+      <property name="CanPickup" value="true" />
+      <property name="DescriptionKey" value="" />
+      <property name="CustomIcon" value="lightString" />
+      <drop event="Destroy" name="resourceBrokenGlass" count="1" prob="1" />
+    </block>
+    <block name="lightStringDiag">
+      <property name="Material" value="Mglass" />
+      <property name="Shape" value="ModelEntity" />
+      <property name="Model" value="#@modfolder:Resources/XmasDeco.unity3d?LightStringDiag_X" />
+      <property name="IsDecoration" value="true" />
+      <property name="ImposterExclude" value="true" />
+      <property name="Weight" value="30" />
+      <property name="CanPickup" value="true" />
+      <property name="DescriptionKey" value="" />
+      <drop event="Destroy" name="resourceBrokenGlass" count="1" prob="1" />
+      <property name="CustomIcon" value="lightString" />
+    </block>
+    <block name="xmasCandle">
+      <property name="Shape" value="ModelEntity" />
+      <property name="Model" value="#@modfolder:Resources/XmasDeco.unity3d?XmasCandle_X"/>
+      <property name="CustomIcon" value="xmasCandle" />
+      <property name="Collide" value="melee,bullet,arrow,rocket"/>
+      <property name="IsDecoration" value="true"/>
+      <property name="StabilitySupport" value="false"/>
+      <property name="CreativeMode" value="Player" />
+      <property name="Class" value="Torch" />
+      <property name="Material" value="Mwood_weak" />
+      <property name="MaxDamage" value="1" />
+      <property name="Place" value="TowardsPlacerInverted" />
+      <property name="OnlySimpleRotations" value="true" />
+      <property name="CanPickup" value="true" />
+      <property name="HeatMapStrength" value="1" />
+      <property name="CustomIcon" value="xmasCandle" />
+      <property name="HeatMapTime" value="1200" />
+      <property name="HeatMapFrequency" value="15" />
+      <drop event="Destroy" name="candle" count="1" />
+      <property name="Group" value="Building" />
+      <property name="DescriptionKey" value="torchGroupDesc" />
+    </block>
+    <block name="beesWaxCandle">
+      <property name="Shape" value="ModelEntity" />
+      <property name="Model" value="#@modfolder:Resources/XmasDeco.unity3d?CandleBeesWax_X"/>
+      <property name="CustomIcon" value="waxCandle" />
+      <property name="Collide" value="melee,bullet,arrow,rocket"/>
+      <property name="IsDecoration" value="true"/>
+      <property name="StabilitySupport" value="false"/>
+      <property name="CreativeMode" value="Player" />
+      <property name="Class" value="Torch" />
+      <property name="Material" value="Morganic" />
+      <property name="MaxDamage" value="1" />
+      <property name="Place" value="TowardsPlacerInverted" />
+      <property name="OnlySimpleRotations" value="true" />
+      <property name="CanPickup" value="true" param1="waxCandle"/>
+      <property name="HeatMapStrength" value="1" />
+      <property name="HeatMapTime" value="1200" />
+      <property name="HeatMapFrequency" value="15" />
+      <drop event="Destroy" name="waxCandle" count="1" />
+      <property name="Group" value="Building" />
+      <property name="DescriptionKey" value="torchGroupDesc" />
+    </block>
+    <block name="XmasPoster01">
+      <property name="Material" value="Mpaper" />
+      <property name="Shape" value="ModelEntity" />
+      <property name="Model" value="#@modfolder:Resources/XmasDeco.unity3d?XmasPoster01_X"/>
+      <property name="CanPickup" value="true" />
+      <!--     <property name="CustomIcon" value="" /> -->
+      <property name="Collide" value="melee,bullet,arrow,rocket"/>
+      <drop event="Harvest" name="resourcePaper" count="1" tool_category="harvestingTools"/>
+      <drop event="Destroy" count="0"/>
+      <drop event="Fall" name="resourcePaper" count="1" prob="0.187" stick_chance="0"/>
+    </block>
+
+    <!-- change the wood table to be based off of a loot replace -->
+    <block name="woodTable">
+      <property name="CreativeMode" value="Dev"/>
+      <property name="CustomIcon" value="cntWastelandRandomLootHelper"/>
+      <property name="DescriptionKey" value="randomLootSpawnerDesc"/>
+      <property name="Material" value="Mstone"/>
+      <property name="Texture" value="277"/>
+      <property name="ImposterExclude" value="true"/>
+      <property name="DisplayInfo" value="Name"/>
+      <property name="FilterTags" value="floot,fdesign"/>
+      <property name="Mesh" value="opaque2"/>
+    </block>
+    <block name="woodChair1">
+      <property name="Extends" value="woodTable" />
+    </block>
+    <block name="oldChair1">
+      <property name="Extends" value="woodTable" />
+    </block>
+
+    <block name="treePlant02">
+      <property name="Extends" value="poinsettia" />
+    </block>
+    <block name="candleTableLight">
+      <property name="Extends" value="woodTable" />
+    </block>
+  </append>
+
+
+
+  <!-- The tv is strange. It needs to extend off the wreath, but other tv's extend from it. So we'll rename the original tv -->
+  <!-- and update all the extends to point to that, then load up our new tv after wreath-->
+  <set xpath="/blocks/block[@name='tv']/@name">original_tv</set>
+  <set xpath="/blocks/block/property[@name='Extends' and @value='tv']/@value">original_tv</set>
+  <insertAfter xpath="/blocks/block[@name='wreath']">
+    <block name="tv">
+      <property name="CreativeMode" value="Dev"/>
+      <property name="CustomIcon" value="cntWastelandRandomLootHelper"/>
+      <property name="DescriptionKey" value="randomLootSpawnerDesc"/>
+      <property name="Material" value="Mstone"/>
+      <property name="Texture" value="277"/>
+      <property name="ImposterExclude" value="true"/>
+      <property name="DisplayInfo" value="Name"/>
+      <property name="FilterTags" value="floot,fdesign"/>
+      <property name="Mesh" value="opaque2"/>
+    </block>
+  </insertAfter>
+
+
+</configs>

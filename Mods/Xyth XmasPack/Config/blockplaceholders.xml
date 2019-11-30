@@ -1,0 +1,48 @@
+﻿<configs>
+  <!-- re-adjust the probability of the workstations to fit the extra one -->
+  <set xpath="/blockplaceholders/placeholder[@name='cntWorkstationsRandomLootHelper']/block[@name='forge']/@prob">20</set>
+  <set xpath="/blockplaceholders/placeholder[@name='cntWorkstationsRandomLootHelper']/block[@name='workbench']/@prob">20</set>
+  <set xpath="/blockplaceholders/placeholder[@name='cntWorkstationsRandomLootHelper']/block[@name='chemistryStation']/@prob">20</set>
+  <set xpath="/blockplaceholders/placeholder[@name='cntWorkstationsRandomLootHelper']/block[@name='cementMixer']/@prob">20</set>
+  
+  <!-- add the wrapping station to be distributed -->
+  <append xpath="/blockplaceholders/placeholder[@name='cntWorkstationsRandomLootHelper']">
+    <block name="wrappingstation" prob="20" />
+  </append>
+
+  <!-- put the crhstimas trees in a placeholder block, with a chance of spawning an iron table instead. Should thin out some aggressive trees spawns in certain buildings. -->
+  <append xpath="/blockplaceholders">
+    <placeholder name="woodTable">
+      <block name="ChristmasTreeCB" prob="0.3"/>
+      <block name="ChristmasTreeSmall" prob="0.3"/>
+      <block name="air" prob="0.4" />
+    </placeholder>
+
+    <!-- same with the christmas gifts, to disperse them a bit.-->
+    <placeholder name="woodChair1">
+      <block name="xmasGifts" prob="0.3"/>
+      <block name="xmasGift" prob="0.3"/>
+      <block name="air" prob="0.4" />
+    </placeholder>
+
+    <placeholder name="oldChair1">
+      <block name="xmasGifts" prob="0.3"/>
+      <block name="xmasGift" prob="0.3"/>
+      <block name="air" prob="0.2" />
+      <block name="rabbitBlock" prob="0.2" />
+      
+    </placeholder>
+
+    <placeholder name="candleTableLight">
+      <block name="beesWaxCandle" prob="0.3"/>
+      <block name="xmasCandle" prob="0.3"/>
+      <block name="candleTableLight" prob="0.4" />
+    </placeholder>
+
+    <placeholder name="tv">
+      <block name="wreath" prob="0.4"/>
+      <block name="XmasPoster01" prob="0.4"/>
+      <block name="original_tv" prob="0.2" />
+    </placeholder>
+  </append>
+</configs>

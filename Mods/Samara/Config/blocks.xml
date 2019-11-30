@@ -1,7 +1,7 @@
 <configs>
 	<append xpath="/blocks">
 	
-		<block name="JumpPic02">
+<!--		<block name="JumpPic02">
 			<property name="CreativeMode" value="Player"/>
 			<property name="Collide" value="sight,movement,melee,rocket"/>
 			<property name="Material" value="Mglass"/>
@@ -51,7 +51,7 @@
 			<drop event="Harvest" name="resourceElectricParts" count="1,4" tag="salvageHarvest"/> 
 			<drop event="Destroy" name="resourceScrapIron" count="5" prob="1"/>
 			<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
-		</block>
+		</block> -->
 		
 		
 		
