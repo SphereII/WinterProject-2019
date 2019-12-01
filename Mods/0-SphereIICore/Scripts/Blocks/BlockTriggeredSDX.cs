@@ -68,7 +68,7 @@ class BlockTriggeredSDX : BlockLoot
                 {
                     AdvLogging.DisplayLog(AdvFeatureClass, _blockValue.Block.GetBlockName() + ": Starting Animator: " + animator.name);
                     animator.enabled = true;
-                    if (!TriggerOnly)
+               //     if (!TriggerOnly)
                     {
                         AdvLogging.DisplayLog(AdvFeatureClass, _blockValue.Block.GetBlockName() + ": Setting Bool for On: True " + animator.name);
                         animator.SetBool("On", true);
