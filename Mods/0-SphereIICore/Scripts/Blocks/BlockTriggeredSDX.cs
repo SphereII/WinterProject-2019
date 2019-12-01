@@ -20,8 +20,12 @@ using UnityEngine;
 */
 class BlockTriggeredSDX : BlockLoot
 {
+    private static string AdvFeatureClass = "AdvancedTileEntities";
 
+    float timeOut = 5f;
+    float NextCheck = 0f;
     bool TriggerOnly = false;
+
     public override string GetActivationText(WorldBase _world, BlockValue _blockValue, int _clrIdx, Vector3i _blockPos, EntityAlive _entityFocusing)
     {
         if (_blockValue.Block.Properties.Values.ContainsKey("ActivateOnLook"))
@@ -29,6 +33,8 @@ class BlockTriggeredSDX : BlockLoot
             bool ActivateOnLook = StringParsers.ParseBool(_blockValue.Block.Properties.Values["ActivateOnLook"], 0, -1, true);
             if (ActivateOnLook)
             {
+                AdvLogging.DisplayLog(AdvFeatureClass, _blockValue.Block.GetBlockName() + ": Activating Block on GetActivationText");
+
                 TriggerOnly = true;
                 ActivateBlock(_world, _clrIdx, _blockPos, _blockValue, true, true);
                 TriggerOnly = false;
@@ -37,8 +43,7 @@ class BlockTriggeredSDX : BlockLoot
         }
         return "";
     }
-
-
+   
     public override bool ActivateBlock(WorldBase _world, int _cIdx, Vector3i _blockPos, BlockValue _blockValue, bool isOn, bool isPowered)
     {
         // If there's no transform, no sense on keeping going for this class.
@@ -46,25 +51,38 @@ class BlockTriggeredSDX : BlockLoot
         if (_ebcd == null || _ebcd.transform == null)
             return false;
 
+        //if (NextCheck > Time.time)
+        //    return true;
+
+        //NextCheck = Time.time + this.timeOut;
+
         Animator[] componentsInChildren = _ebcd.transform.GetComponentsInChildren<Animator>();
         if (componentsInChildren != null)
         {
             for (int i = componentsInChildren.Length - 1; i >= 0; i--)
             {
                 Animator animator = componentsInChildren[i];
-                if (isOn )
+
+                AdvLogging.DisplayLog(AdvFeatureClass, _blockValue.Block.GetBlockName() + ": Animator: " + animator.name + " : Active: " + isOn);
+                if (isOn)
                 {
-                    //Debug.Log("Triggering Animation");
+                    AdvLogging.DisplayLog(AdvFeatureClass, _blockValue.Block.GetBlockName() + ": Starting Animator: " + animator.name);
                     animator.enabled = true;
-                    if ( !TriggerOnly)
+                    if (!TriggerOnly)
+                    {
+                        AdvLogging.DisplayLog(AdvFeatureClass, _blockValue.Block.GetBlockName() + ": Setting Bool for On: True " + animator.name);
                         animator.SetBool("On", true);
+                    }
+                    AdvLogging.DisplayLog(AdvFeatureClass, _blockValue.Block.GetBlockName() + ": Trigger for On: " + animator.name);
                     animator.SetTrigger("TriggerOn");
                 }
 
                 if (isOn == false)
                 {
-                   // Debug.Log("Turning off animator");
+                    AdvLogging.DisplayLog(AdvFeatureClass, _blockValue.Block.GetBlockName() + ": Setting Bool for On: false" + animator.name);
+
                     animator.SetBool("On", false);
+                    AdvLogging.DisplayLog(AdvFeatureClass, _blockValue.Block.GetBlockName() + ": Turning Off Animator " + animator.name);
                     animator.enabled = false;
                 }
             }

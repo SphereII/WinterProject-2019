@@ -17,6 +17,9 @@ using UnityEngine;
 */
 public class SphereII_TileEntityAlwaysActive
 {
+    private static string AdvFeatureClass = "AdvancedTileEntities";
+    
+
     [HarmonyPatch(typeof(TileEntity))]
     [HarmonyPatch("IsActive")]
     public class SphereII_TileEntity_IsActive
@@ -31,21 +34,30 @@ public class SphereII_TileEntityAlwaysActive
                 isAlwaysActive = StringParsers.ParseBool(block2.Properties.Values["AlwaysActive"], 0, -1, true);
                 if (isAlwaysActive)
                 {
+                    AdvLogging.DisplayLog(AdvFeatureClass, block2.GetBlockName() + ": TileEntity is Active.");
                     bool blCanTrigger = false;
 
+                    int Bounds = 6;
+                    if (block2.Properties.Values.ContainsKey("ActivationDistance"))
+                        Bounds = StringParsers.ParseSInt32(block2.Properties.Values["ActivationDistance"].ToString());
+
                     // Scan for the player in the radius as defined by the Activation distance of the block
-                    List<Entity> entitiesInBounds = GameManager.Instance.World.GetEntitiesInBounds(null, new Bounds(__instance.ToWorldPos().ToVector3(), Vector3.one * ( block2.GetActivationDistanceSq() / block2.GetActivationDistanceSq() )));
+                    List <Entity> entitiesInBounds = GameManager.Instance.World.GetEntitiesInBounds(null, new Bounds(__instance.ToWorldPos().ToVector3(),  (Vector3.one * Bounds )));
                     if (entitiesInBounds.Count > 0)
                     {
+                        AdvLogging.DisplayLog(AdvFeatureClass, block2.GetBlockName() + ": TileEntity has Entities in Bound of " + Bounds);
                         for (int i = 0; i < entitiesInBounds.Count; i++)
                         {
                             EntityPlayer player = entitiesInBounds[i] as EntityPlayer;
                             if (player)
                             {
+                                AdvLogging.DisplayLog(AdvFeatureClass, block2.GetBlockName() + ": Player: " + player.EntityName + " is in bounds");
+
                                 if (block2.Properties.Values.ContainsKey("ActivationBuffs"))
                                 {
                                     foreach (String strbuff in block2.Properties.Values["ActivationBuffs"].Split(','))
                                     {
+                                        AdvLogging.DisplayLog(AdvFeatureClass, block2.GetBlockName() + ": Checking ActivationBuffs: " + strbuff );
                                         String strBuffName = strbuff;
                                         float CheckValue = -1f;
 
@@ -54,31 +66,47 @@ public class SphereII_TileEntityAlwaysActive
                                         int end = strbuff.IndexOf(')');
                                         if (start != -1 && end != -1 && end > start + 1)
                                         {
+                                            
                                             CheckValue = StringParsers.ParseFloat(strbuff.Substring(start + 1, end - start - 1), 0, -1, NumberStyles.Any);
                                             strBuffName = strbuff.Substring(0, start);
+                                            AdvLogging.DisplayLog(AdvFeatureClass, block2.GetBlockName() + ": Actviation Buff is a cvar: " + strBuffName + ". Requires value: " + CheckValue );
                                         }
 
                                         // If the player has a buff by this name, trigger it.
                                         if (player.Buffs.HasBuff(strBuffName))
+                                        {
+                                            AdvLogging.DisplayLog(AdvFeatureClass, block2.GetBlockName() + ": Buff has been found: " + strBuffName );
                                             blCanTrigger = true;
+                                        }
 
                                         // If the player has a cvar, then do some extra checks
                                         if (player.Buffs.HasCustomVar(strBuffName))
                                         {
+                                            AdvLogging.DisplayLog(AdvFeatureClass, block2.GetBlockName() + ": Cvar has been found: " + strBuffName);
                                             // If there's no cvar value specified, just allow it.
                                             if (CheckValue == -1)
+                                            {
+                                                AdvLogging.DisplayLog(AdvFeatureClass, block2.GetBlockName() + ": Cvar found, and does not require a specific value." );
                                                 blCanTrigger = true;
-
+                                            }
                                             // If a cvar is set, then check to see if it matches
                                             if (CheckValue > -1)
                                             {
+                                                AdvLogging.DisplayLog(AdvFeatureClass, block2.GetBlockName() + ": Cvar found, and requires a value of " + CheckValue + " Player has: " + player.Buffs.GetCustomVar( strBuffName ));
                                                 if (player.Buffs.GetCustomVar(strBuffName) == CheckValue)
                                                     blCanTrigger = true;
                                             }
 
                                             // If any of these conditions match, trigger the Activate block
                                             if (blCanTrigger)
+                                            {
+                                                AdvLogging.DisplayLog(AdvFeatureClass, block2.GetBlockName() + ":  Checks successfully passed for player: " + player.EntityName);
                                                 break;
+                                            }
+                                            else
+                                            {
+                                                AdvLogging.DisplayLog(AdvFeatureClass, block2.GetBlockName() + ": Checks were NOT success for player: " + player.EntityName);
+                                            }
                                         }
 
                                     }
@@ -98,12 +126,15 @@ public class SphereII_TileEntityAlwaysActive
 
                     if (blCanTrigger)
                     {
+                     
+                        AdvLogging.DisplayLog(AdvFeatureClass, block2.GetBlockName() + ": TileEntity can call ActivateBlock. Calling it...");
                         Block.list[block.type].ActivateBlock(world, __instance.GetClrIdx(), __instance.ToWorldPos(), block, true, true);
                         return true;
                     }
                     else
                     {
-                            Block.list[block.type].ActivateBlock(world, __instance.GetClrIdx(), __instance.ToWorldPos(), block, false, true);
+                        AdvLogging.DisplayLog(AdvFeatureClass, block2.GetBlockName() + ": TileEntity is Active but is not Activating.");
+                        Block.list[block.type].ActivateBlock(world, __instance.GetClrIdx(), __instance.ToWorldPos(), block, false, true);
                     }
                     
                 }
