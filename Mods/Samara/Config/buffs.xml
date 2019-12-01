@@ -16,7 +16,7 @@
 	
 		
 		<buff name="buffCutscene00"  name_key="Buff" icon="ui_game_symbol_destruction2" hidden="false">
-			<duration value="52"/>
+			<duration value="51"/>
 			<stack_type value="replace"/>
 				<effect_group>
 					<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="#@modfolder:Resources/SamaraCurse.unity3d?Cutscene00" parent_transform="CameraNode" local_offset="0,0,0" local_rotation="0,0,0"/>
@@ -128,17 +128,19 @@
 
 
 
-  <append xpath="/buffs/buff[@name='buffStatusCheck01']">
+	<append xpath="/buffs/buff[@name='buffStatusCheck01']"> 
 
-    <!-- Intro Video, determined to a cvar. The cvar default value is 0. -->
-    <effect_group name="IntroVideo">
-      <requirement name="CVarCompare" cvar="$WinterProject_IntroVideo" operation="LT" value="1"/>
-      <triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffCutscene00" />
-      <!-- Set to 1 so it does not re-trigger-->
-      <triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$WinterProject_IntroVideo" operation="set" value="1"/>
-    </effect_group>
+		<!-- Intro Video, determined to a cvar. The cvar default value is 0. -->
+		<effect_group name="IntroVideo">
+		  <requirement name="CVarCompare" cvar="$WinterProject_IntroVideo" operation="LT" value="1"/>
+		  <triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffCutscene00" />
+		  <!-- Set to 1 so it does not re-trigger-->
+		  <triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$WinterProject_IntroVideo" operation="set" value="1"/>
+		</effect_group>
 
-    <effect_group name="Curses">
+	</append> 
+	
+	<append xpath="/buffs/buff[@name='buffStatusCheck01']/effect_group">
 
       <!-- Item buffs  Fires the buff effect if the item is active on toolbelt or in hand.      -->
       <triggered_effect trigger="onSelfBuffUpdate" action="RemovePrefabFromEntity" prefab="SamaraCase">
@@ -212,8 +214,8 @@
       <triggered_effect trigger="onSelfBuffUpdate" action="AttachPrefabToEntity" prefab="Overlay03">
         <requirement name="HasBuff" buff="buffOverlay03"/>
       </triggered_effect>
-    </effect_group>
+   
+	
 	</append> 					
 
-	
 </configs>
