@@ -1,12 +1,13 @@
 <configs>
+
+<!--  If the video clip you want to show doesnt have embedded sound, you can call a .unity3d sound prefab using a sound node instead.  This is used on buffCutscene04  -->
+
 	<append xpath="/Sounds">
 		<SoundDataNode name="buff_SamaraScream"> <AudioSource name="Sounds/AudioSource_Notifications"/>
 			<AudioClip ClipName="#@modfolder:Resources/SamaraCurse.unity3d?scream" Loop="true" />  
 			<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>
 			
-		<SoundDataNode name="buff_Cutscenesound00"> <AudioSource name="Sounds/AudioSource_Notifications"/>
-			<AudioClip ClipName="#@modfolder:Resources/SamaraCurse.unity3d?cutscenesound00" Loop="false" />  
-			<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="0.01"/> <MaxEntities name="30"/> 	 </SoundDataNode> 
+
 	</append> 
 	
 </configs>
