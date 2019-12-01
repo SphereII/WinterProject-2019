@@ -117,7 +117,7 @@
 		
 <!-- buff for activating the JumpPic02 if you want to configure that to trigger when the player has a buff and is near the Pic.  -->
 	
-		<buff name="buffJumpTag" name_key="Buff" icon="ui_game_symbol_destruction2" remove_on_death="false" hidden="true">
+		<buff name="buffJumpTag" name_key="Buff" icon="ui_game_symbol_destruction2" remove_on_death="false" hidden="false">
 			<duration value="0"/>
 			<stack_type value="replace"/>
 		</buff>	
@@ -143,6 +143,9 @@
 	<append xpath="/buffs/buff[@name='buffStatusCheck01']/effect_group">
 
       <!-- Item buffs  Fires the buff effect if the item is active on toolbelt or in hand.      -->
+	  
+	  <triggered_effect trigger="onSelfEnteredGame" action="AddBuff" buff="buffJumpTag"/> 
+	  
       <triggered_effect trigger="onSelfBuffUpdate" action="RemovePrefabFromEntity" prefab="SamaraCase">
         <requirement name="NotHasBuff" buff="buffCursedCase"/>
       </triggered_effect>
