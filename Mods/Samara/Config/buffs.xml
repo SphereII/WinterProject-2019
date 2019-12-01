@@ -127,89 +127,92 @@
 <!--  appends to the update loop             -->
 
 
-	
-	
-	<append xpath="/buffs/buff[@name='buffStatusCheck01']/effect_group">
 
-	<!-- Item buffs  Fires the buff effect if the item is active on toolbelt or in hand.      -->
-			<triggered_effect trigger="onSelfBuffUpdate" action="RemovePrefabFromEntity" prefab="SamaraCase">
-				<requirement name="NotHasBuff" buff="buffCursedCase"/> 
-			</triggered_effect>
-			<triggered_effect trigger="onSelfBuffUpdate" action="AttachPrefabToEntity" prefab="SamaraCase">
-				<requirement name="HasBuff" buff="buffCursedCase"/>
-			</triggered_effect>
-			
-	<!-- Cutscene buffs        -->
-			
-<!--			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="buffCutscene00"/>  Not hooked up yet.  Would only fire the buff the first time a player enters a new game  -->
+  <append xpath="/buffs/buff[@name='buffStatusCheck01']">
 
-			<triggered_effect trigger="onSelfEnteredGame" action="AddBuff" buff="buffCutscene00"/>      <!-- only fire the buff the first time a player enters a new game  -->
+    <!-- Intro Video, determined to a cvar. The cvar default value is 0. -->
+    <effect_group name="IntroVideo">
+      <requirement name="CVarCompare" cvar="$WinterProject_IntroVideo" operation="LT" value="1"/>
+      <triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffCutscene00" />
+      <!-- Set to 1 so it does not re-trigger-->
+      <triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$WinterProject_IntroVideo" operation="set" value="1"/>
+    </effect_group>
 
-			<triggered_effect trigger="onSelfBuffUpdate" action="RemovePrefabFromEntity" prefab="Cutscene00">
-				<requirement name="NotHasBuff" buff="buffCutscene00"/>
-			</triggered_effect>
-			<triggered_effect trigger="onSelfBuffUpdate" action="AttachPrefabToEntity" prefab="Cutscene00">
-				<requirement name="HasBuff" buff="buffCutscene00"/>
-			</triggered_effect> 
-			
-			<triggered_effect trigger="onSelfBuffUpdate" action="RemovePrefabFromEntity" prefab="Cutscene01">
-				<requirement name="NotHasBuff" buff="buffCutscene01"/>
-			</triggered_effect>
-			<triggered_effect trigger="onSelfBuffUpdate" action="AttachPrefabToEntity" prefab="Cutscene01">
-				<requirement name="HasBuff" buff="buffCutscene01"/>
-			</triggered_effect>
-			<triggered_effect trigger="onSelfBuffUpdate" action="RemovePrefabFromEntity" prefab="Cutscene02">
-				<requirement name="NotHasBuff" buff="buffCutscene02"/>
-			</triggered_effect>
-			<triggered_effect trigger="onSelfBuffUpdate" action="AttachPrefabToEntity" prefab="Cutscene02">
-				<requirement name="HasBuff" buff="buffCutscene02"/>
-			</triggered_effect>		
-			<triggered_effect trigger="onSelfBuffUpdate" action="RemovePrefabFromEntity" prefab="Cutscene03">
-				<requirement name="NotHasBuff" buff="buffCutscene03"/>
-			</triggered_effect>
-			<triggered_effect trigger="onSelfBuffUpdate" action="AttachPrefabToEntity" prefab="Cutscene03">
-				<requirement name="HasBuff" buff="buffCutscene03"/>
-			</triggered_effect>
-			<triggered_effect trigger="onSelfBuffUpdate" action="RemovePrefabFromEntity" prefab="Cutscene04">
-				<requirement name="NotHasBuff" buff="buffCutscene04"/>
-			</triggered_effect>
-			<triggered_effect trigger="onSelfBuffUpdate" action="AttachPrefabToEntity" prefab="Cutscene04">
-				<requirement name="HasBuff" buff="buffCutscene04"/>
-			</triggered_effect>		
-			<triggered_effect trigger="onSelfBuffUpdate" action="RemovePrefabFromEntity" prefab="Cutscene05">
-				<requirement name="NotHasBuff" buff="buffCutscene05"/>
-			</triggered_effect>
-			<triggered_effect trigger="onSelfBuffUpdate" action="AttachPrefabToEntity" prefab="Cutscene05">
-				<requirement name="HasBuff" buff="buffCutscene05"/>
-			</triggered_effect>		
-			<triggered_effect trigger="onSelfBuffUpdate" action="RemovePrefabFromEntity" prefab="Cutscene06">
-				<requirement name="NotHasBuff" buff="buffCutscene06"/>
-			</triggered_effect>
-			<triggered_effect trigger="onSelfBuffUpdate" action="AttachPrefabToEntity" prefab="Cutscene06">
-				<requirement name="HasBuff" buff="buffCutscene06"/>
-			</triggered_effect>	
-			
-	<!-- Overlay buffs  -->	
+    <effect_group name="Curses">
 
-			<triggered_effect trigger="onSelfBuffUpdate" action="RemovePrefabFromEntity" prefab="Overlay01">
-				<requirement name="NotHasBuff" buff="buffOverlay01"/>
-			</triggered_effect>
-			<triggered_effect trigger="onSelfBuffUpdate" action="AttachPrefabToEntity" prefab="Overlay01">
-				<requirement name="HasBuff" buff="buffOverlay01"/>
-			</triggered_effect>	
-				<triggered_effect trigger="onSelfBuffUpdate" action="RemovePrefabFromEntity" prefab="Overlay02">
-				<requirement name="NotHasBuff" buff="buffOverlay02"/>
-			</triggered_effect>
-			<triggered_effect trigger="onSelfBuffUpdate" action="AttachPrefabToEntity" prefab="Overlay02">
-				<requirement name="HasBuff" buff="buffOverlay02"/>
-			</triggered_effect>	
-			<triggered_effect trigger="onSelfBuffUpdate" action="RemovePrefabFromEntity" prefab="Overlay03">
-				<requirement name="NotHasBuff" buff="buffOverlay03"/>
-			</triggered_effect>
-			<triggered_effect trigger="onSelfBuffUpdate" action="AttachPrefabToEntity" prefab="Overlay03">
-				<requirement name="HasBuff" buff="buffOverlay03"/>
-			</triggered_effect>	
-			
+      <!-- Item buffs  Fires the buff effect if the item is active on toolbelt or in hand.      -->
+      <triggered_effect trigger="onSelfBuffUpdate" action="RemovePrefabFromEntity" prefab="SamaraCase">
+        <requirement name="NotHasBuff" buff="buffCursedCase"/>
+      </triggered_effect>
+      <triggered_effect trigger="onSelfBuffUpdate" action="AttachPrefabToEntity" prefab="SamaraCase">
+        <requirement name="HasBuff" buff="buffCursedCase"/>
+      </triggered_effect>
+
+      <triggered_effect trigger="onSelfBuffUpdate" action="RemovePrefabFromEntity" prefab="Cutscene00">
+        <requirement name="NotHasBuff" buff="buffCutscene00"/>
+      </triggered_effect>
+      <triggered_effect trigger="onSelfBuffUpdate" action="AttachPrefabToEntity" prefab="Cutscene00">
+        <requirement name="HasBuff" buff="buffCutscene00"/>
+      </triggered_effect>
+
+      <triggered_effect trigger="onSelfBuffUpdate" action="RemovePrefabFromEntity" prefab="Cutscene01">
+        <requirement name="NotHasBuff" buff="buffCutscene01"/>
+      </triggered_effect>
+      <triggered_effect trigger="onSelfBuffUpdate" action="AttachPrefabToEntity" prefab="Cutscene01">
+        <requirement name="HasBuff" buff="buffCutscene01"/>
+      </triggered_effect>
+      <triggered_effect trigger="onSelfBuffUpdate" action="RemovePrefabFromEntity" prefab="Cutscene02">
+        <requirement name="NotHasBuff" buff="buffCutscene02"/>
+      </triggered_effect>
+      <triggered_effect trigger="onSelfBuffUpdate" action="AttachPrefabToEntity" prefab="Cutscene02">
+        <requirement name="HasBuff" buff="buffCutscene02"/>
+      </triggered_effect>
+      <triggered_effect trigger="onSelfBuffUpdate" action="RemovePrefabFromEntity" prefab="Cutscene03">
+        <requirement name="NotHasBuff" buff="buffCutscene03"/>
+      </triggered_effect>
+      <triggered_effect trigger="onSelfBuffUpdate" action="AttachPrefabToEntity" prefab="Cutscene03">
+        <requirement name="HasBuff" buff="buffCutscene03"/>
+      </triggered_effect>
+      <triggered_effect trigger="onSelfBuffUpdate" action="RemovePrefabFromEntity" prefab="Cutscene04">
+        <requirement name="NotHasBuff" buff="buffCutscene04"/>
+      </triggered_effect>
+      <triggered_effect trigger="onSelfBuffUpdate" action="AttachPrefabToEntity" prefab="Cutscene04">
+        <requirement name="HasBuff" buff="buffCutscene04"/>
+      </triggered_effect>
+      <triggered_effect trigger="onSelfBuffUpdate" action="RemovePrefabFromEntity" prefab="Cutscene05">
+        <requirement name="NotHasBuff" buff="buffCutscene05"/>
+      </triggered_effect>
+      <triggered_effect trigger="onSelfBuffUpdate" action="AttachPrefabToEntity" prefab="Cutscene05">
+        <requirement name="HasBuff" buff="buffCutscene05"/>
+      </triggered_effect>
+      <triggered_effect trigger="onSelfBuffUpdate" action="RemovePrefabFromEntity" prefab="Cutscene06">
+        <requirement name="NotHasBuff" buff="buffCutscene06"/>
+      </triggered_effect>
+      <triggered_effect trigger="onSelfBuffUpdate" action="AttachPrefabToEntity" prefab="Cutscene06">
+        <requirement name="HasBuff" buff="buffCutscene06"/>
+      </triggered_effect>
+
+      <!-- Overlay buffs  -->
+
+      <triggered_effect trigger="onSelfBuffUpdate" action="RemovePrefabFromEntity" prefab="Overlay01">
+        <requirement name="NotHasBuff" buff="buffOverlay01"/>
+      </triggered_effect>
+      <triggered_effect trigger="onSelfBuffUpdate" action="AttachPrefabToEntity" prefab="Overlay01">
+        <requirement name="HasBuff" buff="buffOverlay01"/>
+      </triggered_effect>
+      <triggered_effect trigger="onSelfBuffUpdate" action="RemovePrefabFromEntity" prefab="Overlay02">
+        <requirement name="NotHasBuff" buff="buffOverlay02"/>
+      </triggered_effect>
+      <triggered_effect trigger="onSelfBuffUpdate" action="AttachPrefabToEntity" prefab="Overlay02">
+        <requirement name="HasBuff" buff="buffOverlay02"/>
+      </triggered_effect>
+      <triggered_effect trigger="onSelfBuffUpdate" action="RemovePrefabFromEntity" prefab="Overlay03">
+        <requirement name="NotHasBuff" buff="buffOverlay03"/>
+      </triggered_effect>
+      <triggered_effect trigger="onSelfBuffUpdate" action="AttachPrefabToEntity" prefab="Overlay03">
+        <requirement name="HasBuff" buff="buffOverlay03"/>
+      </triggered_effect>
+    </effect_group>
 	</append> 					
 
 	
