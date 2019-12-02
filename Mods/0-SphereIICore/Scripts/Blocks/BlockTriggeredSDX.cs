@@ -14,6 +14,9 @@ using UnityEngine;
        <!-- this triggers a SetTrigger("On") when looked at -->
       <property name="ActivateOnLook" value="true" />
       
+    <!-- allows the block to be used as a storage device -->
+      <property name="IsContainer" value="true" />
+
       <!-- Triggers the block if the buff buffCurseSamara is active on the player, or if the player has a cvar called "cvar" with a value of 4, or if myOtherCvar is available, regardless of value -->
        <property name="ActivationBuffs" value="buffCurseSamara,cvar(4),myOtherCvar" />
 
@@ -44,6 +47,20 @@ class BlockTriggeredSDX : BlockLoot
         return "";
     }
 
+    // don't open the loot container.
+    public override bool OnBlockActivated(WorldBase _world, int _cIdx, Vector3i _blockPos, BlockValue _blockValue, EntityAlive _player)
+    {
+        if (_blockValue.Block.Properties.Values.ContainsKey("IsContainer"))
+        {
+            bool IsContainer = StringParsers.ParseBool(_blockValue.Block.Properties.Values["IsContainer"], 0, -1, true);
+            if (IsContainer)
+            {
+                base.OnBlockActivated(_world, _cIdx, _blockPos, _blockValue, _player);
+                return true;
+            }
+        }
+            return true;
+    }
     public override bool ActivateBlock(WorldBase _world, int _cIdx, Vector3i _blockPos, BlockValue _blockValue, bool isOn, bool isPowered)
     {
         // If there's no transform, no sense on keeping going for this class.
@@ -61,28 +78,19 @@ class BlockTriggeredSDX : BlockLoot
                 AdvLogging.DisplayLog(AdvFeatureClass, _blockValue.Block.GetBlockName() + ": Animator: " + animator.name + " : Active: " + isOn);
                 if (isOn)
                 {
-                    //AdvLogging.DisplayLog(AdvFeatureClass, _blockValue.Block.GetBlockName() + ": Starting Animator: " + animator.name);
-                    //animator.enabled = true;
-                    //if (animator.GetCurrentAnimatorStateInfo(0).IsName("JumppicOn"))
-                    //    continue;
-
-                    ////     if (!TriggerOnly)
-                    //{
                     AdvLogging.DisplayLog(AdvFeatureClass, _blockValue.Block.GetBlockName() + ": Setting Bool for On: True " + animator.name);
                     animator.SetBool("On", true);
-                    //}
-                    //AdvLogging.DisplayLog(AdvFeatureClass, _blockValue.Block.GetBlockName() + ": Trigger for On: " + animator.name);
+                    AdvLogging.DisplayLog(AdvFeatureClass, _blockValue.Block.GetBlockName() + ": Trigger for On: " + animator.name);
                     animator.SetTrigger("TriggerOn");
                 }
 
-                //if (isOn == false)
-                //{
-                //    AdvLogging.DisplayLog(AdvFeatureClass, _blockValue.Block.GetBlockName() + ": Setting Bool for On: false" + animator.name);
-
-                //    animator.SetBool("On", false);
-                //    AdvLogging.DisplayLog(AdvFeatureClass, _blockValue.Block.GetBlockName() + ": Turning Off Animator " + animator.name);
-                //    animator.enabled = false;
-                //}
+                if (isOn == false)
+                {
+                    AdvLogging.DisplayLog(AdvFeatureClass, _blockValue.Block.GetBlockName() + ": Setting Bool for On: false" + animator.name);
+                    animator.SetBool("On", false);
+                  //  AdvLogging.DisplayLog(AdvFeatureClass, _blockValue.Block.GetBlockName() + ": Turning Off Animator " + animator.name);
+                  //  animator.enabled = false;
+                }
             }
         }
         return true;
