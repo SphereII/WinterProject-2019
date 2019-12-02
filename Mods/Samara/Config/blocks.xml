@@ -53,15 +53,22 @@
 			<property name="DescriptionKey" value="decorativeBlockGroupDesc"/>
 			<property name="CustomIcon" value="Picture01"/>
 			<property name="Class" value="TriggeredSDX, Mods"/>
-			<property name="LootList" value="92"/>
-			  <!-- Allows the  Trigger to work -->
+			<property name="LootList" value="92"/> <!-- a lootlist is required but not actually used -->
+			
+<!-- Required configuration settings, only change the values  -->			
+			  <!-- Allows the  Trigger to work, set to false if you want to disactive the blocks special effects -->
 			  <property name="AlwaysActive" value="true" />
-			  <!-- How far out the tile entity will re-scan to detect the player -->
-			  <property name="ActivationDistance" value="6" />   <!-- 4 is default -->
-<!--			  <property name="ActivateOnLook" value="true" /> -->
-			  <!-- Triggers the block if the buff buffCurseSamara is active on the player, or if the player has a cvar called "cvar" with a value of 4, or if myOtherCvar is available, regardless of value -->
-<!--			  <property name="ActivationBuffs" value="buffJumpTag" /> -->
+			  <!-- How far out the tile entity will re-scan to detect the player, 4 is the default setting.  If there is no additional requirements (see below) the effect will fire if AlwaysActive is true and the player is within the activation distance. -->
+			  <property name="ActivationDistance" value="4" />
+<!-- End of required configuration settings  -->	
+			  
+<!-- Optional configuration settings,  you may pick one additional requirement to determine if the effect will trigger    -->
+			   <!-- Triggers the block if the buff buffCurseSamara is active on the player, or if the player has a cvar called "myCvar", with a value of 4, or if myOtherCvar is available, regardless of value -->
+			  <property name="ActivationBuffs" value="buffCurseSamara,myCvar(4),myOtherCvar" /> 
+			  <!-- Triggers the block if the player is looking at the block (commented out here because we want the buff as the trigger-->
+		<!--  <property name="ActivateOnLook" value="true" /> -->
+<!-- End of Optional configuration settings             -->	
+	
 		</block>
-		
 	</append>
 </configs>

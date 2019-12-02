@@ -117,7 +117,7 @@
 		
 <!-- buff for activating the JumpPic02 if you want to configure that to trigger when the player has a buff and is near the Pic.  -->
 	
-		<buff name="buffJumpTag" name_key="Buff" icon="ui_game_symbol_destruction2" remove_on_death="false" hidden="false">
+		<buff name="buffCurseSamara" name_key="Buff" icon="ui_game_symbol_destruction2" remove_on_death="false" hidden="false">
 			<duration value="0"/>
 			<stack_type value="replace"/>
 		</buff>	
@@ -137,14 +137,15 @@
 		  <!-- Set to 1 so it does not re-trigger-->
 		  <triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$WinterProject_IntroVideo" operation="set" value="1"/>
 		</effect_group>
-
+		<effect_group name="SamaraCurse">
+		  <requirement name="CVarCompare" cvar="$SamaraCurse" operation="EQ" value="1"/>
+		  <triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffCurseSamara" />
+		</effect_group>
 	</append> 
 	
 	<append xpath="/buffs/buff[@name='buffStatusCheck01']/effect_group">
 
       <!-- Item buffs  Fires the buff effect if the item is active on toolbelt or in hand.      -->
-	  
-	  <triggered_effect trigger="onSelfEnteredGame" action="AddBuff" buff="buffJumpTag"/> 
 	  
       <triggered_effect trigger="onSelfBuffUpdate" action="RemovePrefabFromEntity" prefab="SamaraCase">
         <requirement name="NotHasBuff" buff="buffCursedCase"/>
