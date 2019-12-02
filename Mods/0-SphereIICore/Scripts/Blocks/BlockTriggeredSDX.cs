@@ -43,18 +43,13 @@ class BlockTriggeredSDX : BlockLoot
         }
         return "";
     }
-   
+
     public override bool ActivateBlock(WorldBase _world, int _cIdx, Vector3i _blockPos, BlockValue _blockValue, bool isOn, bool isPowered)
     {
         // If there's no transform, no sense on keeping going for this class.
         BlockEntityData _ebcd = _world.GetChunkFromWorldPos(_blockPos).GetBlockEntity(_blockPos);
         if (_ebcd == null || _ebcd.transform == null)
             return false;
-
-        //if (NextCheck > Time.time)
-        //    return true;
-
-        //NextCheck = Time.time + this.timeOut;
 
         Animator[] componentsInChildren = _ebcd.transform.GetComponentsInChildren<Animator>();
         if (componentsInChildren != null)
@@ -66,25 +61,28 @@ class BlockTriggeredSDX : BlockLoot
                 AdvLogging.DisplayLog(AdvFeatureClass, _blockValue.Block.GetBlockName() + ": Animator: " + animator.name + " : Active: " + isOn);
                 if (isOn)
                 {
-                    AdvLogging.DisplayLog(AdvFeatureClass, _blockValue.Block.GetBlockName() + ": Starting Animator: " + animator.name);
-                    animator.enabled = true;
-               //     if (!TriggerOnly)
-                    {
-                        AdvLogging.DisplayLog(AdvFeatureClass, _blockValue.Block.GetBlockName() + ": Setting Bool for On: True " + animator.name);
-                        animator.SetBool("On", true);
-                    }
-                    AdvLogging.DisplayLog(AdvFeatureClass, _blockValue.Block.GetBlockName() + ": Trigger for On: " + animator.name);
+                    //AdvLogging.DisplayLog(AdvFeatureClass, _blockValue.Block.GetBlockName() + ": Starting Animator: " + animator.name);
+                    //animator.enabled = true;
+                    //if (animator.GetCurrentAnimatorStateInfo(0).IsName("JumppicOn"))
+                    //    continue;
+
+                    ////     if (!TriggerOnly)
+                    //{
+                    AdvLogging.DisplayLog(AdvFeatureClass, _blockValue.Block.GetBlockName() + ": Setting Bool for On: True " + animator.name);
+                    animator.SetBool("On", true);
+                    //}
+                    //AdvLogging.DisplayLog(AdvFeatureClass, _blockValue.Block.GetBlockName() + ": Trigger for On: " + animator.name);
                     animator.SetTrigger("TriggerOn");
                 }
 
-                if (isOn == false)
-                {
-                    AdvLogging.DisplayLog(AdvFeatureClass, _blockValue.Block.GetBlockName() + ": Setting Bool for On: false" + animator.name);
+                //if (isOn == false)
+                //{
+                //    AdvLogging.DisplayLog(AdvFeatureClass, _blockValue.Block.GetBlockName() + ": Setting Bool for On: false" + animator.name);
 
-                    animator.SetBool("On", false);
-                    AdvLogging.DisplayLog(AdvFeatureClass, _blockValue.Block.GetBlockName() + ": Turning Off Animator " + animator.name);
-                    animator.enabled = false;
-                }
+                //    animator.SetBool("On", false);
+                //    AdvLogging.DisplayLog(AdvFeatureClass, _blockValue.Block.GetBlockName() + ": Turning Off Animator " + animator.name);
+                //    animator.enabled = false;
+                //}
             }
         }
         return true;
