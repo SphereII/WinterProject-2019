@@ -1,0 +1,15 @@
+﻿<configs>
+
+ 
+   <append xpath="/blockplaceholders">
+		<placeholder name="cntMedicineCabinetClosedRandomLootHelper">
+			<block name="cntJumpMedicineCabinetClosed" prob="10"/>
+		</placeholder> 
+		<placeholder name="cntMedicineCabinetFaucetRandomLootHelper">
+			<block name="cntJumpMedicineCabinetClosed" prob="10"/>
+		</placeholder>
+		<placeholder name="paintingPictureRandomHelper">
+			<block name="JumpPic02" prob="10" />
+		</placeholder>
+  </append>
+</configs>

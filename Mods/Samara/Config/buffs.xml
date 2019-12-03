@@ -12,6 +12,19 @@
 			</effect_group>
 		</buff>	
 		
+	<!-- buffs used to enable sounddatanode that play inside cursed players head   -->	
+		
+		
+		<buff name="buffSamaraHumSound" name_key="Buff" icon="ui_game_symbol_add" remove_on_death="true" hidden="false">
+			<duration value="5"/>
+			<stack_type value="replace"/>
+			<triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="buff_SamaraHum" play_in_head="true"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="FadeOutSound" sound="buff_SamaraHum" play_in_head="true"/>
+			<triggered_effect trigger="onSelfLeaveGame" action="StopSound" sound="buff_SamaraHum" play_in_head="true"/> 
+		</buff>
+		
+		
+			
 	<!-- buffs that show video full screen over the top of the UI and player.  These will loop until the duration ends.  -->
 	
 		
@@ -115,7 +128,7 @@
 				</effect_group>
 		</buff>	
 		
-<!-- buff for activating the JumpPic02 if you want to configure that to trigger when the player has a buff and is near the Pic.  -->
+<!-- buff for activating the Jumpthings if you want to configure that to trigger when the player has a buff and is near the Pic.  -->
 	
 		<buff name="buffCurseSamara" name_key="Buff" icon="ui_game_symbol_destruction2" remove_on_death="false" hidden="false">
 			<duration value="0"/>

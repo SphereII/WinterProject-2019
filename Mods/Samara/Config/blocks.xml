@@ -1,4 +1,12 @@
 <configs>
+
+<!--	<set xpath="/blocks/block[@name='cntMedicineCabinetClosed']/@name">old_cntMedicineCabinetClosed</set> -->
+
+
+
+
+
+
 	<append xpath="/blocks">
 	
 <!-- Example of using a picture to loop a video. Manually activated by adding a wire to the picture then disconnection it.  Turn on and off as desired. Vanilla compatible -->
@@ -70,5 +78,38 @@
 <!-- End of Optional configuration settings             -->	
 	
 		</block>
+			<block name="cntJumpMedicineCabinetClosed">
+			<property name="Extends" value="cntMedicineCabinetOpen"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="Collide" value="sight,movement,melee,rocket"/>
+			<property name="Material" value="Mglass"/>
+			<property name="StabilitySupport" value="false"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/JumpPics.unity3d?JumpMedcab01_X"/>
+			<property name="Place" value="TowardsPlacerInverted"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="CustomIcon" value="Picture01"/>
+			<property name="ActiveRadiusEffects" value="buffSamaraHumSound(4)"/> <!-- Enabling the sound, note match the value with distance below -->
+			<property name="Class" value="TriggeredSDX, Mods"/>
+			<property name="LootList" value="7"/> <!-- a lootlist is required but not actually used -->
+			
+<!-- Required configuration settings, only change the values  -->			
+			  <!-- Allows the  Trigger to work, set to false if you want to disactive the blocks special effects -->
+			  <property name="AlwaysActive" value="true" />
+			  <!-- How far out the tile entity will re-scan to detect the player, 4 is the default setting.  If there is no additional requirements (see below) the effect will fire if AlwaysActive is true and the player is within the activation distance. -->
+			  <property name="ActivationDistance" value="4" />
+<!-- End of required configuration settings  -->	
+			  
+<!-- Optional configuration settings,  you may pick one additional requirement to determine if the effect will trigger    -->
+			   <!-- Triggers the block if the buff buffCurseSamara is active on the player, or if the player has a cvar called "myCvar", with a value of 4, or if myOtherCvar is available, regardless of value -->
+			  <property name="ActivationBuffs" value="buffCurseSamara,myCvar(4),myOtherCvar" /> 
+			  <!-- Triggers the block if the player is looking at the block (commented out here because we want the buff as the trigger-->
+		<!--  <property name="ActivateOnLook" value="true" /> -->
+<!-- End of Optional configuration settings             -->	
+	
+		</block>	
+
+		
+		
 	</append>
 </configs>
