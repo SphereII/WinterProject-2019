@@ -11,9 +11,6 @@
       <property name="difficulty" value="medium" />
       <property name="shareable" value="false" />
 
-      <action type="ShowTip" value="Welcome to the Winter Project">
-        <property name="delay" value="5" />
-      </action>
       <reward type="Item" id="apparelCoatPufferCoat" value="1"/>
       <reward type="Item" id="apparelWornBoots" value="1"/>
       <reward type="Item" id="gunBowPrimitive" value="1"/>
