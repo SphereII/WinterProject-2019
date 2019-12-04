@@ -82,8 +82,8 @@
       </property>
 
       <property class="AdvancedTroubleshootingFeatures" >
-        <property name="Logging" value="false"/>
-        <property name="VerboseXMLParser" value="false" />
+        <property name="Logging" value="true"/>
+        <property name="VerboseXMLParser" value="true" />
       </property>
       
       <property class="AdvancedPrefabFeatures" >

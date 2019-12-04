@@ -1,0 +1,101 @@
+<!--Created using the 7 Days To Dialog Application-->
+<configs>
+  <append xpath="/dialogs">
+    <dialog startstatementid="start" id="Santa Claus">
+      <statement id="start" text="Merry Christmas! Ho Ho Ho" nextstatementid="">
+        <response_entry id="responseID_-1049882377" ref_text="What's the secret of Christmas spirit?" />
+        <response_entry id="admin" ref_text="dialog_trader_response_admin" />
+        <response_entry id="jobshave" ref_text="dialog_trader_response_jobshave" />
+        <response_entry id="jobsnone" ref_text="dialog_trader_response_jobsnone" />
+        <response_entry id="shop" ref_text="dialog_trader_response_shop" />
+        <response_entry id="done" ref_text="dialog_trader_response_nevermind" />
+      </statement>
+      <statement id="background" text="dialog_trader_statement_background" nextstatementid="">
+        <response_entry id="navezgane" ref_text="dialog_trader_response_navezgane" />
+        <response_entry id="theduke" ref_text="dialog_trader_response_theduke" />
+        <response_entry id="cassadores" ref_text="dialog_trader_response_cassadores" />
+        <response_entry id="noah" ref_text="dialog_trader_response_noah" />
+        <response_entry id="nevermind" ref_text="dialog_trader_response_nevermind" />
+      </statement>
+      <statement id="navezgane" text="dialog_trader_statement_navezgane" nextstatementid="background" />
+      <statement id="theduke" text="dialog_trader_statement_theduke" nextstatementid="background" />
+      <statement id="cassadores" text="dialog_trader_statement_cassadores" nextstatementid="background" />
+      <statement id="noah" text="dialog_trader_statement_noah" nextstatementid="background" />
+      <statement id="currentjobs" text="dialog_trader_statement_currentjobs" nextstatementid="start">
+        <response_entry id="nevermind" ref_text="dialog_trader_response_nevermind" />
+        <quest_entry type="add" id="" />
+      </statement>
+      <statement id="nojobs" text="dialog_trader_statement_nojobs" nextstatementid="start" />
+      <statement id="admin" text="dialog_trader_statement_admin" nextstatementid="">
+        <response_entry id="restock" ref_text="dialog_trader_response_restock" />
+        <response_entry id="resetquests" ref_text="dialog_trader_response_resetquests" />
+        <response_entry id="nevermind" ref_text="dialog_trader_response_nevermind" />
+      </statement>
+      <statement id="statement_-744444256" text="Ho Ho Ho! The Christmas spirit hasn't changed at all, despite the apocalypse! It's important to remember to be kind, generous in giving, and selfess in nature." nextstatementid="">
+        <response_entry id="responseID_-500748127" ref_text="How can I give when there's so few survivors?" />
+        <response_entry id="responseID_224998811" ref_text="You have got to be kidding me! Christmas spirit?! In the apocalypse!" />
+      </statement>
+      <statement id="statement_-2093125423" text="Remember, the quantity of survivors does not matter. Every survivor deserves their place in the world." nextstatementid="">
+        <response_entry id="responseID_-1220251540" ref_text="That's true. Thank you for the perspective." />
+      </statement>
+      <statement id="statement_75697313" text="Even at its darkest hour, humanity has survived. There's settlements out there. Some are very small, but are growing as others find them. There's hope. You just need to know where to look." nextstatementid="">
+        <response_entry id="responseID_444414409" ref_text="Thank you." />
+        <response_entry id="responseID_-257335527" ref_text="Can you tell me where to find them?" />
+        <response_entry id="responseID_-1702633116" ref_text="Nevermind" />
+        <response_entry id="responseID_-1041740475" ref_text="How can I help them?" />
+      </statement>
+      <statement id="statement_-1302907174" text="Men, women, and children, of course. Not that many children sadly." nextstatementid="">
+        <response_entry id="" ref_text="Thank you." />
+      </statement>
+      <statement id="statement_1296602149" text="I'm afraid I can't at this time. Some of the settlements are sealed completely, while others are hidden in remote corners of the world. Even if you were to find them, a lot of them implement a shoot first, ask questions later. I'm sure you understand." nextstatementid="">
+        <response_entry id="responseID_270172992" ref_text="I understand." />
+        <response_entry id="responseID_-2095013799" ref_text="I insist your tell me where." />
+      </statement>
+      <statement id="statement_1792262665" text="Insist all you want, friend. My answer won't change for you at this time." nextstatementid="">
+        <response_entry id="responseID_1023935487" ref_text="I understand. I'm sorry." />
+      </statement>
+      <statement id="statement_692560545" text="That is very kind of you." nextstatementid="">
+        <response_entry id="responseID_-153809561" ref_text="I know." />
+      </statement>
+      <response id="shop" text="dialog_trader_response_shop" nextstatementid="">
+        <action type="Trader" id="trade" />
+      </response>
+      <response id="jobsnone" text="dialog_trader_response_jobsnone" nextstatementid="nojobs">
+        <requirement type="QuestStatus" value="InProgress" requirementtype="Hide" operator="" id="" Hash="Requirement_642165640" />
+      </response>
+      <response id="jobshave" text="dialog_trader_response_jobshave" nextstatementid="currentjobs">
+        <requirement type="QuestStatus" value="NotStarted" requirementtype="Hide" operator="" id="" Hash="Requirement_1302710497" />
+        <action type="AddJournalEntry" id="questTip" />
+      </response>
+      <response id="background" text="dialog_trader_response_background" nextstatementid="background" />
+      <response id="navezgane" text="dialog_trader_response_navezgane" nextstatementid="navezgane" />
+      <response id="theduke" text="dialog_trader_response_theduke" nextstatementid="theduke" />
+      <response id="cassadores" text="dialog_trader_response_cassadores" nextstatementid="cassadores" />
+      <response id="noah" text="dialog_trader_response_noah" nextstatementid="noah" />
+      <response id="whiteriveroutposts" text="dialog_trader_response_whiteriveroutposts" nextstatementid="whiteriveroutposts" />
+      <response id="nevermind" text="dialog_trader_response_nevermind" nextstatementid="start" />
+      <response id="admin" text="dialog_trader_response_admin" nextstatementid="admin">
+        <requirement type="Admin" value="" requirementtype="Hide" operator="" id="" Hash="Requirement_1524861875" />
+      </response>
+      <response id="restock" text="dialog_trader_response_restock" nextstatementid="">
+        <action type="Trader" id="restock" />
+      </response>
+      <response id="resetquests" text="dialog_trader_response_resetquests" nextstatementid="">
+        <action type="Trader" id="reset_quests" />
+      </response>
+      <response id="done" text="dialog_trader_response_nevermind" nextstatementid="" />
+      <response id="responseID_-1049882377" text="What's the secret of Christmas spirit?" nextstatementid="statement_-744444256" />
+      <response id="responseID_-500748127" text="How can I give when there's so few survivors?" nextstatementid="statement_-2093125423" />
+      <response id="responseID_224998811" text="You have got to be kidding me! Christmas spirit?! In the apocalypse!" nextstatementid="statement_75697313" />
+      <response id="" text="Thank you." nextstatementid="statement_75697313" />
+      <response id="responseID_-257335527" text="Can you tell me where to find them?" nextstatementid="statement_1296602149" />
+      <response id="responseID_270172992" text="I understand." nextstatementid="statement_75697313" />
+      <response id="responseID_-2095013799" text="I insist your tell me where." nextstatementid="statement_1792262665" />
+      <response id="responseID_1023935487" text="I understand. I'm sorry." nextstatementid="statement_75697313" />
+      <response id="responseID_-1041740475" text="How can I help them?" nextstatementid="statement_692560545" />
+      <response id="responseID_-1702633116" text="Nevermind" nextstatementid="start" />
+      <response id="responseID_-153809561" text="I know." nextstatementid="statement_-744444256" />
+      <response id="responseID_-1220251540" text="That's true. Thank you for the perspective." nextstatementid="statement_-744444256" />
+    </dialog>
+  </append>
+</configs>

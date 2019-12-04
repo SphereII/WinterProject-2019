@@ -1,6 +1,6 @@
 <configs>
 	<append xpath="/items">	
-<!--		<item name="snowShovel">
+		<item name="snowShovel">
 			<property name="Extends" value="meleeToolShovelIron"/>
 			<property name="DescriptionKey" value="snowShovelDesc" />
 			<property name="Meshfile" value="#@modfolder:Resources/snowShovel.unity3d?SnowShovel_X" /> 
@@ -25,6 +25,6 @@
 				<passive_effect name="ModPowerBonus" operation="perc_add" value=".15" tags="EntityDamage,BlockDamage"/>
 				<passive_effect name="ModPowerBonus" operation="base_add" value="200" tags="EconomicValue"/>
 			</effect_group>
-		</item> -->
+		</item> 
 	</append>
 </configs>

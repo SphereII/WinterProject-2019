@@ -34,6 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="Mods\CCTV\Resources\CCTV.unity3d" />
     <None Include="Mods\Donovan_BetterBridges\README.md" />
     <None Include="Mods\Donovan_BetterSpears\README.md" />
     <None Include="Mods\Donovan_CraftJail\README.md" />
@@ -71,6 +72,19 @@
     <None Include="Mods\Wasteland Weapons\Resources\RailwayRifle1.unity3d" />
     <None Include="Mods\Wasteland Weapons\Resources\Sounds.unity3d" />
     <None Include="Mods\Wasteland Weapons\Resources\SpikeTest.unity3d" />
+    <None Include="Mods\Xyth EntitiesWinter\Config\Resources\FrostShieldParticle.unity3d" />
+    <None Include="Mods\Xyth EntitiesWinter\Resources\Abominable.unity3d" />
+    <None Include="Mods\Xyth EntitiesWinter\Resources\AbominableSounds.unity3d" />
+    <None Include="Mods\Xyth EntitiesWinter\Resources\ArcticFox.unity3d" />
+    <None Include="Mods\Xyth EntitiesWinter\Resources\DeadSnake.unity3d" />
+    <None Include="Mods\Xyth EntitiesWinter\Resources\FrostBreath.unity3d" />
+    <None Include="Mods\Xyth EntitiesWinter\Resources\Maw.unity3d" />
+    <None Include="Mods\Xyth EntitiesWinter\Resources\Polarbear.unity3d" />
+    <None Include="Mods\Xyth EntitiesWinter\Resources\SealCub.unity3d" />
+    <None Include="Mods\Xyth EntitiesWinter\Resources\SnowballParticle.unity3d" />
+    <None Include="Mods\Xyth EntitiesWinter\Resources\Snowmen.unity3d" />
+    <None Include="Mods\Xyth XmasPack\Resources\RallyFlags.unity3d" />
+    <None Include="Mods\Xyth XmasPack\Resources\XmasDeco.unity3d" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Mods\0-SphereIICore\Config\blocks.xml" />
@@ -84,6 +98,24 @@
     <Content Include="Mods\0-SphereIICore\Harmony\Harmony-0-SphereIICore.pdb" />
     <Content Include="Mods\0-SphereIICore\mod.xml" />
     <Content Include="Mods\0-SphereIICore\ModInfo.xml" />
+    <Content Include="Mods\CCTV\Config\blocks.xml" />
+    <Content Include="Mods\CCTV\Config\items.xml" />
+    <Content Include="Mods\CCTV\Config\Localization.txt" />
+    <Content Include="Mods\CCTV\Config\progression.xml" />
+    <Content Include="Mods\CCTV\Config\recipes.xml" />
+    <Content Include="Mods\CCTV\mod.xml" />
+    <Content Include="Mods\CCTV\ModInfo.xml" />
+    <Content Include="Mods\CCTV\UIAtlases\ItemIconAtlas\Cam0.png" />
+    <Content Include="Mods\CCTV\UIAtlases\ItemIconAtlas\Cam1.png" />
+    <Content Include="Mods\CCTV\UIAtlases\ItemIconAtlas\Cam2.png" />
+    <Content Include="Mods\CCTV\UIAtlases\ItemIconAtlas\Cam3.png" />
+    <Content Include="Mods\CCTV\UIAtlases\ItemIconAtlas\Cam4.png" />
+    <Content Include="Mods\CCTV\UIAtlases\ItemIconAtlas\Cam5.png" />
+    <Content Include="Mods\CCTV\UIAtlases\ItemIconAtlas\Cam6.png" />
+    <Content Include="Mods\CCTV\UIAtlases\ItemIconAtlas\Cam7.png" />
+    <Content Include="Mods\CCTV\UIAtlases\ItemIconAtlas\CCTV1.png" />
+    <Content Include="Mods\CCTV\UIAtlases\ItemIconAtlas\CCTV2.png" />
+    <Content Include="Mods\CCTV\UIAtlases\ItemIconAtlas\CCTVSchematic.png" />
     <Content Include="Mods\Donovan_BetterBridges\Config\blocks.xml" />
     <Content Include="Mods\Donovan_BetterBridges\ModInfo.xml" />
     <Content Include="Mods\Donovan_BetterSpears\Config\items.xml" />
@@ -573,6 +605,42 @@
     <Content Include="Mods\Wasteland Weapons\UIAtlases\ItemIconAtlas\railspike.png" />
     <Content Include="Mods\Wasteland Weapons\UIAtlases\ItemIconAtlas\railwayrifle.png" />
     <Content Include="Mods\Wasteland Weapons\UIAtlases\ItemIconAtlas\ShotgunEM.png" />
+    <Content Include="Mods\Xyth EntitiesWinter\Config\blocks.xml" />
+    <Content Include="Mods\Xyth EntitiesWinter\Config\buffs.xml" />
+    <Content Include="Mods\Xyth EntitiesWinter\Config\entityclasses.xml" />
+    <Content Include="Mods\Xyth EntitiesWinter\Config\entitygroups.xml" />
+    <Content Include="Mods\Xyth EntitiesWinter\Config\items.xml" />
+    <Content Include="Mods\Xyth EntitiesWinter\Config\sounds.xml" />
+    <Content Include="Mods\Xyth EntitiesWinter\mod.xml" />
+    <Content Include="Mods\Xyth EntitiesWinter\ModInfo.xml" />
+    <Content Include="Mods\Xyth XmasPack\Config\blockplaceholders.xml" />
+    <Content Include="Mods\Xyth XmasPack\Config\blocks.xml" />
+    <Content Include="Mods\Xyth XmasPack\Config\Items.xml" />
+    <Content Include="Mods\Xyth XmasPack\Config\Localization.txt" />
+    <Content Include="Mods\Xyth XmasPack\Config\loot.xml" />
+    <Content Include="Mods\Xyth XmasPack\Config\recipes.xml" />
+    <Content Include="Mods\Xyth XmasPack\Config\traders.xml" />
+    <Content Include="Mods\Xyth XmasPack\Config\XUi\xui.xml" />
+    <Content Include="Mods\Xyth XmasPack\mod.xml" />
+    <Content Include="Mods\Xyth XmasPack\ModInfo.xml" />
+    <Content Include="Mods\Xyth XmasPack\UIAtlases\ItemIconAtlas\candyCane.png" />
+    <Content Include="Mods\Xyth XmasPack\UIAtlases\ItemIconAtlas\casinoCoin.png" />
+    <Content Include="Mods\Xyth XmasPack\UIAtlases\ItemIconAtlas\Cookies.png" />
+    <Content Include="Mods\Xyth XmasPack\UIAtlases\ItemIconAtlas\iceBlock.png" />
+    <Content Include="Mods\Xyth XmasPack\UIAtlases\ItemIconAtlas\icicles.png" />
+    <Content Include="Mods\Xyth XmasPack\UIAtlases\ItemIconAtlas\lightString.png" />
+    <Content Include="Mods\Xyth XmasPack\UIAtlases\ItemIconAtlas\poinsettia.png" />
+    <Content Include="Mods\Xyth XmasPack\UIAtlases\ItemIconAtlas\snowBlock.png" />
+    <Content Include="Mods\Xyth XmasPack\UIAtlases\ItemIconAtlas\snowShovel.png" />
+    <Content Include="Mods\Xyth XmasPack\UIAtlases\ItemIconAtlas\waxCandle.png" />
+    <Content Include="Mods\Xyth XmasPack\UIAtlases\ItemIconAtlas\wrappingStation.png" />
+    <Content Include="Mods\Xyth XmasPack\UIAtlases\ItemIconAtlas\XmasCandle.png" />
+    <Content Include="Mods\Xyth XmasPack\UIAtlases\ItemIconAtlas\xmasGift.png" />
+    <Content Include="Mods\Xyth XmasPack\UIAtlases\ItemIconAtlas\xmasGifts.png" />
+    <Content Include="Mods\Xyth XmasPack\UIAtlases\ItemIconAtlas\xmasPoster.png" />
+    <Content Include="Mods\Xyth XmasPack\UIAtlases\ItemIconAtlas\xmasRabbit.png" />
+    <Content Include="Mods\Xyth XmasPack\UIAtlases\ItemIconAtlas\xmasTree.png" />
+    <Content Include="Mods\Xyth XmasPack\UIAtlases\ItemIconAtlas\xmasWreath.png" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Mods\0-SphereIICore\Harmony\Dialog\DialogFromXML.cs" />
@@ -611,6 +679,7 @@
     <Compile Include="Mods\0-SphereIICore\Scripts\Animation\MecanimSDX.cs" />
     <Compile Include="Mods\0-SphereIICore\Scripts\Blocks\BlockMortSpawner.cs" />
     <Compile Include="Mods\0-SphereIICore\Scripts\Blocks\BlockPoweredWorkstation.cs" />
+    <Compile Include="Mods\0-SphereIICore\Scripts\Blocks\BlockTriggeredSDX.cs" />
     <Compile Include="Mods\0-SphereIICore\Scripts\Blocks\BlockUtilitiesSDX.cs" />
     <Compile Include="Mods\0-SphereIICore\Scripts\Blocks\PickUpAndReplace.cs" />
     <Compile Include="Mods\0-SphereIICore\Scripts\Buffs\RequirementEveryDawn.cs" />
@@ -619,6 +688,8 @@
     <Compile Include="Mods\0-SphereIICore\Scripts\Buffs\RequirementOnSpecificBiomeSDX.cs" />
     <Compile Include="Mods\0-SphereIICore\Scripts\Buffs\RequirementSameFactionSDX.cs" />
     <Compile Include="Mods\0-SphereIICore\Scripts\Dialogs\DialogActionExecuteCommandSDX.cs" />
+    <Compile Include="Mods\0-SphereIICore\Scripts\Dialogs\DialogActionAddCVar.cs" />
+    <Compile Include="Mods\0-SphereIICore\Scripts\Dialogs\DialogActionGiveToNPC.cs" />
     <Compile Include="Mods\0-SphereIICore\Scripts\Dialogs\DialogActionOpenDialogSDX.cs" />
     <Compile Include="Mods\0-SphereIICore\Scripts\Dialogs\DialogActionShowToolTipSDX.cs" />
     <Compile Include="Mods\0-SphereIICore\Scripts\Dialogs\DialogRequirementHasBuffSDX.cs" />
@@ -711,6 +782,9 @@
     </Reference>
     <Reference Include="UnityEngine">
       <HintPath>C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\7DaysToDie_Data\Managed\UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AnimationModule">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\7DaysToDie_Data\Managed\UnityEngine.AnimationModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.CoreModule">
       <HintPath>C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\7DaysToDie_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
