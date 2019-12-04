@@ -24,7 +24,7 @@ public class SphereII_TileEntityAlwaysActive
     [HarmonyPatch("IsActive")]
     public class SphereII_TileEntity_IsActive
     {
-        public static bool Prefix(ref bool __result, TileEntity __instance, World world)
+        public static bool Postfix(bool ___result, TileEntity __instance, World world)
         {
             BlockValue block = GameManager.Instance.World.GetBlock(__instance.ToWorldPos());
             Block block2 = Block.list[block.type];
@@ -34,6 +34,7 @@ public class SphereII_TileEntityAlwaysActive
                 isAlwaysActive = StringParsers.ParseBool(block2.Properties.Values["AlwaysActive"], 0, -1, true);
                 if (isAlwaysActive)
                 {
+                    ___result = true;
                     AdvLogging.DisplayLog(AdvFeatureClass, block2.GetBlockName() + ": TileEntity is Active.");
                     bool blCanTrigger = false;
 
@@ -129,19 +130,19 @@ public class SphereII_TileEntityAlwaysActive
                      
                         AdvLogging.DisplayLog(AdvFeatureClass, block2.GetBlockName() + ": TileEntity can call ActivateBlock. Calling it...");
                         Block.list[block.type].ActivateBlock(world, __instance.GetClrIdx(), __instance.ToWorldPos(), block, true, true);
-                        return true;
                     }
                     else
                     {
                         AdvLogging.DisplayLog(AdvFeatureClass, block2.GetBlockName() + ": TileEntity is Active but is not Activating.");
                         Block.list[block.type].ActivateBlock(world, __instance.GetClrIdx(), __instance.ToWorldPos(), block, false, true);
                     }
-                    
+                    return true;
+
+
                 }
 
             }
-
-            return true;
+            return false;
         }
     }
 }

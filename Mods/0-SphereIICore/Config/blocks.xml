@@ -92,7 +92,7 @@
       </property>
 
         <property class="AdvancedTileEntities" >
-          <property name="Logging" value="true"/>
+          <property name="Logging" value="false"/>
         </property>
 
     </block>
