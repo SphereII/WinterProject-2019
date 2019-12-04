@@ -43,7 +43,7 @@ public class SphereII_TileEntityAlwaysActive
                         Bounds = StringParsers.ParseSInt32(block2.Properties.Values["ActivationDistance"].ToString());
 
                     // Scan for the player in the radius as defined by the Activation distance of the block
-                    List <Entity> entitiesInBounds = GameManager.Instance.World.GetEntitiesInBounds(null, new Bounds(__instance.ToWorldPos().ToVector3(),  (Vector3.one * Bounds )));
+                    List <Entity> entitiesInBounds = GameManager.Instance.World.GetEntitiesInBounds(null, new Bounds(__instance.ToWorldPos().ToVector3(),  (Vector3.one * 20 )));
                     if (entitiesInBounds.Count > 0)
                     {
                         AdvLogging.DisplayLog(AdvFeatureClass, block2.GetBlockName() + ": TileEntity has Entities in Bound of " + Bounds);
@@ -52,6 +52,10 @@ public class SphereII_TileEntityAlwaysActive
                             EntityPlayer player = entitiesInBounds[i] as EntityPlayer;
                             if (player)
                             {
+                                float distance = (player.position - __instance.ToWorldPos().ToVector3()).sqrMagnitude;
+                                if (distance > block2.GetActivationDistanceSq())
+                                    continue;
+
                                 AdvLogging.DisplayLog(AdvFeatureClass, block2.GetBlockName() + ": Player: " + player.EntityName + " is in bounds");
 
                                 if (block2.Properties.Values.ContainsKey("ActivationBuffs"))
