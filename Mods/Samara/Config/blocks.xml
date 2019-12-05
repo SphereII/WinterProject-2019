@@ -45,7 +45,7 @@
 			<property name="Material" value="Mglass"/>
 			<property name="StabilitySupport" value="false"/>
 			<property name="Shape" value="ModelEntity"/>
-			<property name="Model" value="#@modfolder:Resources/SamaraCurse.unity3d?JumpPic02"/>
+			<property name="Model" value="#@modfolder:Resources/SamaraCurse.unity3d?JumpPic02"/> <!-- Example: This one pulls a .mp4 file from the modlet folder -->
 			<property name="Place" value="TowardsPlacerInverted"/>
 			<property name="Stacknumber" value="1"/>
 			<property name="IsDecoration" value="false"/>
@@ -82,7 +82,7 @@
 			<property name="Material" value="Mglass"/>
 			<property name="StabilitySupport" value="false"/>
 			<property name="Shape" value="ModelEntity"/>
-			<property name="Model" value="#@modfolder:Resources/SamaraCurse.unity3d?JumpMedcab01_X"/>
+			<property name="Model" value="#@modfolder:Resources/SamaraCurse.unity3d?JumpMedcab01_X"/> <!-- Example: This one has the .mp4 clip attached in Unity. --> 
 			<property name="Place" value="TowardsPlacerInverted"/>
 			<property name="Stacknumber" value="1"/>
 			<property name="CustomIcon" value="Picture01"/>
