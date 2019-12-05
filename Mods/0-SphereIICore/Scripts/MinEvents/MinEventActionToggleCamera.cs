@@ -10,23 +10,15 @@ public class MinEventActionToggleCamera: MinEventActionRemoveBuff
     {
         foreach (GameObject temp in GameObject.FindObjectsOfType<GameObject>())
         {
-            foreach (Camera cam in temp.GetComponentsInChildren<Camera>())
+    //        Debug.Log(temp.name);
+            if (temp.GetComponent<Camera>() != null)
             {
-                if ( CameraStatus)
-                    Time.timeScale = 1;
-                else
-                    Time.timeScale = 0;
+                if (Camera.Contains(temp.name))
+                {
+                    Debug.Log("Camera: " + temp.name);
+                    temp.GetComponent<Camera>().enabled = CameraStatus;
+                }
             }
-    //            Debug.Log("Cam: " + cam.name);
-    ////        Debug.Log(temp.name);
-    //        if (temp.GetComponent<Camera>() != null)
-    //        {
-    //            if (Camera.Contains(temp.name))
-    //            {
-    //                Debug.Log("Camera: " + temp.name);
-    //                temp.GetComponent<Camera>().enabled = CameraStatus;
-    //            }
-    //        }
         }
     }
 
