@@ -46,7 +46,7 @@ public class SphereII_XML_Debugging
 
             if (e != null)
             {
-                strDisplay = "DialogFromXML ParseREsponse: Element: " + e.OuterXml;
+                strDisplay = "DialogFromXML ParseREsponse: Element: " + e.OuterXml.Trim();
                 AdvLogging.DisplayLog(AdvFeatureClass, strDisplay);
             }
 

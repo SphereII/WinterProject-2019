@@ -1,7 +1,9 @@
 ﻿using UnityEngine;
 public class DialogActionAddCVar : DialogActionAddBuff
 {
-    public string strOperator = "set";
+    private static string AdvFeatureClass = "AdvancedDialogDebugging";
+
+    public string strOperator = "add";
 
     public override void PerformAction(EntityPlayer player)
     {
@@ -11,25 +13,23 @@ public class DialogActionAddCVar : DialogActionAddBuff
         int flValue = 1;
         int.TryParse(Value, out flValue);
 
-        
-        if (player.Buffs.HasCustomVar(ID))
+        string strDisplay = "AddCVar: " + ID + " Value: " + flValue + " Operator: " + strOperator;
+        if (!player.Buffs.HasCustomVar(ID))
         {
-            float CurrentValue = player.Buffs.GetCustomVar(ID);
-            if (strOperator.ToLower() == "add")
-                CurrentValue += flValue;
-
-            if (strOperator.ToLower() == "sub")
-                CurrentValue -= flValue;
-
-            if (strOperator.ToLower() == "set")
-                CurrentValue = flValue;
-
-            player.Buffs.SetCustomVar(ID, CurrentValue, false);
-            return;
-
-
+            AdvLogging.DisplayLog(AdvFeatureClass, strDisplay + " Adding Custom CVAr");
+            (player as EntityPlayerLocal).Buffs.AddCustomVar(ID, 0);
         }
+
+        float CurrentValue = player.Buffs.GetCustomVar(ID);
+        if (strOperator.ToLower() == "add")
+            CurrentValue += flValue;
+        else if (strOperator.ToLower() == "sub")
+            CurrentValue -= flValue;
+        else  /// default is set
+            CurrentValue = flValue;
+
+        player.Buffs.SetCustomVar(ID, CurrentValue, true);
+        AdvLogging.DisplayLog(AdvFeatureClass, strDisplay + " Setting to " + CurrentValue);
+        return;
     }
-
-
 }
