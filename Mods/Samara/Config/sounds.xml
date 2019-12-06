@@ -1,14 +1,28 @@
 <configs>
 
-<!--  If the video clip you want to show doesnt have embedded sound, you can call a .unity3d sound prefab using a sound node instead.  This is used on buffCutscene04  -->
+<!--  If the video clip you want to show doesnt have embedded sound, or you want that sound to play inside the player head, you can call a .unity3d sound prefab using a sound node instead.    -->
 
 	<append xpath="/Sounds">
-		<SoundDataNode name="buff_SamaraScream"> <AudioSource name="Sounds/AudioSource_Notifications"/>
+	
+		<SoundDataNode name="buffSamaraScream"> <AudioSource name="Sounds/AudioSource_Notifications"/>
 			<AudioClip ClipName="#@modfolder:Resources/SamaraCurse.unity3d?scream" Loop="true" />  
 			<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>
-			<SoundDataNode name="buff_SamaraHum"> <AudioSource name="Sounds/AudioSource_Notifications"/>
-			<AudioClip ClipName="#@modfolder:Resources/SamaraCurse.unity3d?humsound" Loop="true" />  
-			<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>	
+			
+		<SoundDataNode name="buffSamaraHum"> <AudioSource name="Sounds/AudioSource_Notifications"/>
+			<AudioClip ClipName="#@modfolder:Resources/SamaraCurse.unity3d?humm" Loop="false" />  
+			<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="60"/> </SoundDataNode>	
+			
+		<SoundDataNode name="buffScaryScream"> <AudioSource name="Sounds/AudioSource_Notifications"/>
+			<AudioClip ClipName="#@modfolder:Resources/SamaraCurse.unity3d?scaryscream" Loop="false" />  
+			<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="60"/> </SoundDataNode>		
+
+		<SoundDataNode name="buffCutscene00"> <AudioSource name="Sounds/AudioSource_Notifications"/>
+			<AudioClip ClipName="#@modfolder:Resources/SamaraCurse.unity3d?cutscene00sound" Loop="false" />  
+			<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value=".01"/> </SoundDataNode>		
+			
+		<SoundDataNode name="buffCutscene06"> <AudioSource name="Sounds/AudioSource_Notifications"/>
+			<AudioClip ClipName="#@modfolder:Resources/SamaraCurse.unity3d?cutscene06sound" Loop="false" />  
+			<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value=".01"/> </SoundDataNode>		
 
 	</append> 
 	
