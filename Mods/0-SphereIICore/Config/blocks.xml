@@ -81,6 +81,10 @@
         <property name="EnablePoweredWorkstations" value="false" />
       </property>
 
+      <property class="AdvancedDialogDebugging" >
+        <property name="Logging" value="true"/>
+      </property>
+
       <property class="AdvancedTroubleshootingFeatures" >
         <property name="Logging" value="true"/>
         <property name="VerboseXMLParser" value="true" />
