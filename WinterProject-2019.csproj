@@ -39,6 +39,7 @@
     <None Include="Mods\Donovan_BetterSpears\README.md" />
     <None Include="Mods\Donovan_CraftJail\README.md" />
     <None Include="Mods\Donovan_CraftSpikes\README.md" />
+    <None Include="Mods\Oignon Vehicles Pack\Resources\wip.unity3d" />
     <None Include="Mods\README.md" />
     <None Include="Mods\Rebar Club\Resources\rebarclub.unity3d" />
     <None Include="Mods\Samara\Resources\JumpPics.unity3d" />
@@ -277,6 +278,20 @@
     <Content Include="Mods\More Vanilla Food\UIAtlases\ItemIconAtlas\ATYuccaSponge.png" />
     <Content Include="Mods\More Vanilla Food\UIAtlases\UIAtlas\ATCandyIcon.png" />
     <Content Include="Mods\More Vanilla Food\UIAtlases\UIAtlas\ATIceDrink.png" />
+    <Content Include="Mods\Oignon Vehicles Pack\Config\buffs.xml" />
+    <Content Include="Mods\Oignon Vehicles Pack\Config\entityclasses.xml" />
+    <Content Include="Mods\Oignon Vehicles Pack\Config\items.xml" />
+    <Content Include="Mods\Oignon Vehicles Pack\Config\recipes.xml" />
+    <Content Include="Mods\Oignon Vehicles Pack\Config\vehicles.xml" />
+    <Content Include="Mods\Oignon Vehicles Pack\mod.xml" />
+    <Content Include="Mods\Oignon Vehicles Pack\ModInfo.xml" />
+    <Content Include="Mods\Oignon Vehicles Pack\UIAtlases\ItemIconAtlas\3luge.png" />
+    <Content Include="Mods\Oignon Vehicles Pack\UIAtlases\ItemIconAtlas\3offchair.png" />
+    <Content Include="Mods\Oignon Vehicles Pack\UIAtlases\ItemIconAtlas\3scooter.png" />
+    <Content Include="Mods\Oignon Vehicles Pack\UIAtlases\ItemIconAtlas\3skate.png" />
+    <Content Include="Mods\Oignon Vehicles Pack\UIAtlases\ItemIconAtlas\3ski.png" />
+    <Content Include="Mods\Oignon Vehicles Pack\UIAtlases\ItemIconAtlas\3sled.png" />
+    <Content Include="Mods\Oignon Vehicles Pack\UIAtlases\ItemIconAtlas\3snowboard.png" />
     <Content Include="Mods\Rebar Club\Config\items.xml" />
     <Content Include="Mods\Rebar Club\Config\Localization.txt" />
     <Content Include="Mods\Rebar Club\Config\loot.xml" />
@@ -284,6 +299,7 @@
     <Content Include="Mods\Rebar Club\mod.xml" />
     <Content Include="Mods\Rebar Club\ModInfo.xml" />
     <Content Include="Mods\Rebar Club\UIAtlases\ItemIconAtlas\rebarclubicon.png" />
+    <Content Include="Mods\Samara\Config\blockplaceholders.xml" />
     <Content Include="Mods\Samara\Config\blocks.xml" />
     <Content Include="Mods\Samara\Config\buffs.xml" />
     <Content Include="Mods\Samara\Config\entityclasses.xml" />
@@ -419,10 +435,14 @@
     <Content Include="Mods\SphereII NPC Dialog Windows\Textures\trader\smx_trader_bg.png" />
     <Content Include="Mods\SphereII NPC Dialog Windows\UIAtlases\ItemIconAtlas\smx_bulletpoint_icon.png" />
     <Content Include="Mods\SphereII Santas\Config\blocks.xml" />
+    <Content Include="Mods\SphereII Santas\Config\dialogs.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Mods\SphereII Santas\Config\entityclasses.xml" />
     <Content Include="Mods\SphereII Santas\Config\entitygroups.xml" />
     <Content Include="Mods\SphereII Santas\Config\items.xml" />
     <Content Include="Mods\SphereII Santas\Config\loot.xml" />
+    <Content Include="Mods\SphereII Santas\Config\npc.xml" />
     <Content Include="Mods\SphereII Santas\Config\sounds.xml" />
     <Content Include="Mods\SphereII Santas\ModInfo.xml" />
     <Content Include="Mods\SphereII Take And Replace\Config\blocks.xml" />
@@ -449,10 +469,11 @@
     <Content Include="Mods\SphereII Winter Project\Config\buffs.xml" />
     <Content Include="Mods\SphereII Winter Project\Config\entityclasses.xml" />
     <Content Include="Mods\SphereII Winter Project\Config\Items.xml" />
-    <Content Include="Mods\SphereII Winter Project\Config\Localization - Quest.txt" />
     <Content Include="Mods\SphereII Winter Project\Config\Localization.txt" />
     <Content Include="Mods\SphereII Winter Project\Config\loot.xml" />
-    <Content Include="Mods\SphereII Winter Project\Config\quests.xml" />
+    <Content Include="Mods\SphereII Winter Project\Config\quests.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Mods\SphereII Winter Project\Config\recipes.xml" />
     <Content Include="Mods\SphereII Winter Project\Config\rwgmixer.xml" />
     <Content Include="Mods\SphereII Winter Project\Config\traders.xml" />
@@ -654,6 +675,7 @@
     <Compile Include="Mods\0-SphereIICore\Harmony\NPCFeatures\EntityNPCFixSpeed.cs" />
     <Compile Include="Mods\0-SphereIICore\Harmony\NPCFeatures\EntityNPCGreetingFix.cs" />
     <Compile Include="Mods\0-SphereIICore\Harmony\NPCFeatures\EntityNPCMakeVulnerable.cs" />
+    <Compile Include="Mods\0-SphereIICore\Harmony\PlayerFeatures\PlayerMoveController.cs" />
     <Compile Include="Mods\0-SphereIICore\Harmony\PlayerFeatures\AntiNerdPole.cs" />
     <Compile Include="Mods\0-SphereIICore\Harmony\PlayerFeatures\OneBlockCrouch.cs" />
     <Compile Include="Mods\0-SphereIICore\Harmony\PlayerFeatures\SoftHands.cs" />
@@ -742,6 +764,7 @@
     <Compile Include="Mods\0-SphereIICore\Scripts\MinEvents\MinEventActionNotifyTeam.cs" />
     <Compile Include="Mods\0-SphereIICore\Scripts\MinEvents\MinEventActionPlayerLevelSDX.cs" />
     <Compile Include="Mods\0-SphereIICore\Scripts\MinEvents\MinEventActionPumpQuestSDX.cs" />
+    <Compile Include="Mods\0-SphereIICore\Scripts\MinEvents\MinEventActionToggleCamera.cs" />
     <Compile Include="Mods\0-SphereIICore\Scripts\MinEvents\MinEventActionSkillPointSDX.cs" />
     <Compile Include="Mods\0-SphereIICore\Scripts\MinEvents\MinEventActionSpawnBabySDX.cs" />
     <Compile Include="Mods\0-SphereIICore\Scripts\MusicBoxes\MusicBox.cs" />
@@ -780,6 +803,7 @@
     <Reference Include="DMT">
       <HintPath>C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\7DaysToDie_Data\Managed\DMT.dll</HintPath>
     </Reference>
+    <Reference Include="System.Xml" />
     <Reference Include="UnityEngine">
       <HintPath>C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\7DaysToDie_Data\Managed\UnityEngine.dll</HintPath>
     </Reference>
