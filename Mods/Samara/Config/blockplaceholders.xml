@@ -10,6 +10,43 @@
 		</placeholder>
 		<placeholder name="paintingPictureRandomHelper">
 			<block name="JumpPic02" prob="10" />
+			<block name="paintingLorienZed" prob="10" />
+			<block name="paintingLorienEyes" prob="10" />
+			<block name="paintingDerekZed" prob="10" />
+			<block name="paintingKenZed" prob="10" />
+			<block name="paintingDukeZed" prob="10" />
+			<block name="paintingNoahZed" prob="10" />
+			<block name="paintingBenZed" prob="10" />
+			<block name="posterMorph01" prob="10" />
 		</placeholder>
+		
+		<placeholder name="cntPaintingPictureSafeRandomLootHelper">
+			<block name="hiddenSafepaintingLorienZed" prob="1" />
+			<block name="hiddenSafepaintingLorienEyes" prob="1" />
+			<block name="hiddenSafepaintingDerekZed" prob="1" />
+			<block name="hiddenSafepaintingKenZed" prob="1" />
+			<block name="hiddenSafepaintingDukeZed" prob="1" />
+			<block name="hiddenSafepaintingNoahZed" prob="1" />
+			<block name="hiddenSafepaintingBenZed" prob="1" />
+			<block name="hiddenSafeposterMorph01" prob="1" />
+		</placeholder>
+		
+		<placeholder name="cntForestRandomLootHelper">
+			<block name="Hallucinations_punch" prob="10" />
+		</placeholder>
+		
+		<placeholder name="cntWastelandRandomLootHelper">
+			<block name="Hallucinations_punch" prob="10" />
+		</placeholder>
+		
+		<placeholder name="cntDesertRandomLootHelper">
+			<block name="Hallucinations_punch" prob="10" />
+		</placeholder>
+		
+		<placeholder name="cntBurntForestRandomLootHelper">
+			<block name="Hallucinations_punch" prob="10" />
+		</placeholder>
+		
+		
   </append>
 </configs>
