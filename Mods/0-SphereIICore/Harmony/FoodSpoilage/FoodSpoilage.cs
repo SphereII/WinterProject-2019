@@ -224,7 +224,7 @@ public class FoodSpoilage_Mod
                     while(DegradationMax <= __instance.ItemStack.itemValue.UseTimes)
                     //if(DegradationMax <= __instance.ItemStack.itemValue.UseTimes)
                     {
-                        __instance.ItemStack.itemValue.UseTimes -= DegradationMax;
+                
 
                         // If not defined, set the foodRottingFlesh as a spoiled product. Otherwise use the global / item.
                         String strSpoiledItem = Configuration.GetPropertyValue("FoodSpoilage", "SpoiledItem");
@@ -249,6 +249,7 @@ public class FoodSpoilage_Mod
                         {
                             AdvLogging.DisplayLog(AdvFeatureClass, __instance.ItemStack.itemValue.ItemClass.GetItemName() + ": Reducing Stack by 1");
                             __instance.ItemStack.count--;
+                            __instance.ItemStack.itemValue.UseTimes -= DegradationMax;
                         }
                         else
                         {
@@ -256,8 +257,7 @@ public class FoodSpoilage_Mod
                             __instance.ItemStack = new ItemStack(ItemValue.None.Clone(), 0);
                             break;  // Nothing more to spoil
                         }
-
-
+                       // break;
 
 
                     }
