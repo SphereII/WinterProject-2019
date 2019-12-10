@@ -7,6 +7,10 @@
   <set xpath="/blocks/block[@name='ConfigFeatureBlock']/property[@class='FoodSpoilage']/property[@name='TickPerLoss']/@value">10</set>
   <set xpath="/blocks/block[@name='ConfigFeatureBlock']/property[@class='FoodSpoilage']/property[@name='Logging']/@value">true</set>
 
+  <append xpath="/blocks/block[@name='ConfigFeatureBlock']/property[@class='FoodSpoilage']" >
+      <property name="FullStackSpoil" value="true" />
+ </append>>
+  
 
   <append xpath="/blocks/block[@name='bed01']">
 		<property name="BuffsWhenWalkedOn" value="buffsmallBed"/>

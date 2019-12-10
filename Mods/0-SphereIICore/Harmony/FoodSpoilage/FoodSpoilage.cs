@@ -22,9 +22,9 @@ public class FoodSpoilage_Mod
             // Grab all the instructions
             var codes = new List<CodeInstruction>(instructions);
 
-            for(int i = 0; i < codes.Count; i++)
+            for (int i = 0; i < codes.Count; i++)
             {
-                if(codes[i].opcode == OpCodes.Conv_U2)
+                if (codes[i].opcode == OpCodes.Conv_U2)
                     codes[i].opcode = OpCodes.Conv_I;
             }
 
@@ -40,34 +40,34 @@ public class FoodSpoilage_Mod
 
         public static void Postfix(XUiC_ItemStack __instance, bool ___bLocked, bool ___isDragAndDrop)
         {
-            if(!Configuration.CheckFeatureStatus(AdvFeatureClass, Feature))
+            if (!Configuration.CheckFeatureStatus(AdvFeatureClass, Feature))
                 return;
 
             // Make sure we are dealing with legitimate stacks.
-            if(__instance.ItemStack.IsEmpty())
+            if (__instance.ItemStack.IsEmpty())
                 return;
 
-            if(__instance.ItemStack.itemValue == null)
+            if (__instance.ItemStack.itemValue == null)
                 return;
 
-            if(___bLocked && ___isDragAndDrop)
+            if (___bLocked && ___isDragAndDrop)
                 return;
 
             //  if (__instance.ItemStack.itemValue.Meta < (int)GameManager.Instance.World.GetWorldTime())
             {
-                if(__instance.ItemStack.itemValue.ItemClass != null && __instance.ItemStack.itemValue.ItemClass.Properties.Contains("Spoilable"))
+                if (__instance.ItemStack.itemValue.ItemClass != null && __instance.ItemStack.itemValue.ItemClass.Properties.Contains("Spoilable"))
                 {
                     float DegradationMax = 1000f;
-                    if(__instance.ItemStack.itemValue.ItemClass.Properties.Contains("SpoilageMax"))
+                    if (__instance.ItemStack.itemValue.ItemClass.Properties.Contains("SpoilageMax"))
                         DegradationMax = __instance.ItemStack.itemValue.ItemClass.Properties.GetFloat("SpoilageMax");
 
                     __instance.durability.IsVisible = true;
                     __instance.durabilityBackground.IsVisible = true;
                     float PerCent = 1f - Mathf.Clamp01(__instance.ItemStack.itemValue.UseTimes / DegradationMax);
                     int TierColor = 7 + (int)Math.Round(8 * PerCent);
-                    if(TierColor < 0)
+                    if (TierColor < 0)
                         TierColor = 0;
-                    if(TierColor > 7)
+                    if (TierColor > 7)
                         TierColor = 7;
 
                     __instance.durability.Color = QualityInfo.GetQualityColor(TierColor);
@@ -80,33 +80,33 @@ public class FoodSpoilage_Mod
 
         public static bool Prefix(XUiC_ItemStack __instance, bool ___bLocked, bool ___isDragAndDrop)
         {
-            if(!Configuration.CheckFeatureStatus(AdvFeatureClass, Feature))
+            if (!Configuration.CheckFeatureStatus(AdvFeatureClass, Feature))
                 return true;
 
             // Make sure we are dealing with legitimate stacks.
-            if(__instance.ItemStack.IsEmpty())
+            if (__instance.ItemStack.IsEmpty())
                 return true;
 
-            if(__instance.ItemStack.itemValue == null)
+            if (__instance.ItemStack.itemValue == null)
                 return true;
 
-            if(___bLocked && ___isDragAndDrop)
+            if (___bLocked && ___isDragAndDrop)
                 return true;
 
             // Reset the durability
             //__instance.durability.IsVisible = false;
 
             // If the item class has a SpoilageTime, that means it can spoil over time.        
-            if(__instance.ItemStack.itemValue.ItemClass != null && __instance.ItemStack.itemValue.ItemClass.Properties.Contains("Spoilable"))
+            if (__instance.ItemStack.itemValue.ItemClass != null && __instance.ItemStack.itemValue.ItemClass.Properties.Contains("Spoilable"))
             {
                 String strDisplay = "XUiC_ItemStack: " + __instance.ItemStack.itemValue.ItemClass.GetItemName();
                 float DegradationMax = 0f;
                 float DegradationPerUse = 0f;
 
-                if(__instance.ItemStack.itemValue.ItemClass.Properties.Contains("SpoilageMax"))
+                if (__instance.ItemStack.itemValue.ItemClass.Properties.Contains("SpoilageMax"))
                     DegradationMax = __instance.ItemStack.itemValue.ItemClass.Properties.GetFloat("SpoilageMax");
 
-                if(__instance.ItemStack.itemValue.ItemClass.Properties.Contains("SpoilagePerTick"))
+                if (__instance.ItemStack.itemValue.ItemClass.Properties.Contains("SpoilagePerTick"))
                     DegradationPerUse = __instance.ItemStack.itemValue.ItemClass.Properties.GetFloat("SpoilagePerTick");
 
                 // By default, have a spoiler hit every 100 ticks, but allow it to be over-rideable in the xml.
@@ -117,16 +117,16 @@ public class FoodSpoilage_Mod
                 TickPerLoss = int.Parse(Configuration.GetPropertyValue("FoodSpoilage", "TickPerLoss"));
 
                 // Check if there's a item-specific TickPerLoss
-                if(__instance.ItemStack.itemValue.ItemClass.Properties.Contains("TickPerLoss"))
+                if (__instance.ItemStack.itemValue.ItemClass.Properties.Contains("TickPerLoss"))
                     TickPerLoss = __instance.ItemStack.itemValue.ItemClass.Properties.GetInt("TickPerLoss");
                 strDisplay += " Ticks Per Loss: " + TickPerLoss;
 
                 // Meta will hold the world time + how many ticks until the next spoilage.
-                if(__instance.ItemStack.itemValue.Meta == 0)
+                if (__instance.ItemStack.itemValue.Meta == 0)
                     __instance.ItemStack.itemValue.Meta = (int)GameManager.Instance.World.GetWorldTime() + TickPerLoss;
 
                 // Throttles the amount of times it'll trigger the spoilage, based on the TickPerLoss
-                if(__instance.ItemStack.itemValue.Meta < (int)GameManager.Instance.World.GetWorldTime())
+                if (__instance.ItemStack.itemValue.Meta < (int)GameManager.Instance.World.GetWorldTime())
                 {
                     // How much spoilage to apply 
                     float PerUse = DegradationPerUse;
@@ -143,7 +143,7 @@ public class FoodSpoilage_Mod
 
                     float containerValue = 0;
                     // Additional Spoiler flags to increase or decrease the spoil rate
-                    switch(__instance.StackLocation)
+                    switch (__instance.StackLocation)
                     {
                         case XUiC_ItemStack.StackLocationTypes.ToolBelt:  // Tool belt Storage check
                             containerValue = float.Parse(Configuration.GetPropertyValue("FoodSpoilage", "Toolbelt"));
@@ -159,7 +159,7 @@ public class FoodSpoilage_Mod
                             break;
                         case XUiC_ItemStack.StackLocationTypes.LootContainer:    // Loot Container Storage check
                             TileEntityLootContainer container = __instance.xui.lootContainer;
-                            if(container != null)
+                            if (container != null)
                             {
                                 BlockValue Container = GameManager.Instance.World.GetBlock(container.ToWorldPos());
                                 String lootContainerName = Localization.Get(Block.list[Container.type].GetBlockName(), string.Empty);
@@ -169,7 +169,7 @@ public class FoodSpoilage_Mod
                                 strDisplay += " Storage Type: Container ( " + containerValue + " )";
                                 PerUse += containerValue;
 
-                                if(Container.Block.Properties.Contains("PreserveBonus"))
+                                if (Container.Block.Properties.Contains("PreserveBonus"))
                                 {
                                     strDisplay += " Preservation Bonus ( " + Container.Block.Properties.GetFloat("PreserveBonus") + " )";
                                     PerUse -= Container.Block.Properties.GetFloat("PreserveBonus");
@@ -197,7 +197,7 @@ public class FoodSpoilage_Mod
                     MinimumSpoilage = Math.Max(0.1f, MinimumSpoilage);
 
                     // Worse case scenario, no matter what, Spoilage will increment.
-                    if(PerUse <= MinimumSpoilage)
+                    if (PerUse <= MinimumSpoilage)
                     {
                         strDisplay += " Minimum spoilage Detected (PerUse: " + PerUse + " Minimum: " + MinimumSpoilage + " )";
                         PerUse = MinimumSpoilage;
@@ -205,7 +205,7 @@ public class FoodSpoilage_Mod
                     // Calculate how many Spoils we may have missed over time. If we left our base and came back to our storage box, this will help accurately determine how much
                     // spoilage should apply.
                     int TotalSpoilageMultiplier = ((int)GameManager.Instance.World.GetWorldTime() - __instance.ItemStack.itemValue.Meta) / TickPerLoss;
-                    if(TotalSpoilageMultiplier == 0)
+                    if (TotalSpoilageMultiplier == 0)
                         TotalSpoilageMultiplier = 1;
 
                     float TotalSpoilage = PerUse * TotalSpoilageMultiplier;
@@ -221,31 +221,45 @@ public class FoodSpoilage_Mod
                     __instance.ItemStack.itemValue.Meta = (int)GameManager.Instance.World.GetWorldTime() + TickPerLoss;
 
                     // If the spoil time is is greater than the degradation, loop around the stack, removing each layer of items.
-                    while(DegradationMax <= __instance.ItemStack.itemValue.UseTimes)
+                    while (DegradationMax <= __instance.ItemStack.itemValue.UseTimes)
                     //if(DegradationMax <= __instance.ItemStack.itemValue.UseTimes)
                     {
-                
+
 
                         // If not defined, set the foodRottingFlesh as a spoiled product. Otherwise use the global / item.
                         String strSpoiledItem = Configuration.GetPropertyValue("FoodSpoilage", "SpoiledItem");
-                        if ( string.IsNullOrEmpty( strSpoiledItem))
+                        if (string.IsNullOrEmpty(strSpoiledItem))
                             strSpoiledItem = "foodRottingFlesh";
 
-                        if(__instance.ItemStack.itemValue.ItemClass.Properties.Contains("SpoiledItem"))
+                        if (__instance.ItemStack.itemValue.ItemClass.Properties.Contains("SpoiledItem"))
                             strSpoiledItem = __instance.ItemStack.itemValue.ItemClass.Properties.GetString("SpoiledItem");
 
 
                         EntityPlayerLocal player = GameManager.Instance.World.GetPrimaryPlayer();
-                        if(player)
+                        if (player)
                         {
-                            ItemStack itemStack = new ItemStack(ItemClass.GetItem(strSpoiledItem, false), 1);
-                            if(itemStack.itemValue.ItemClass.GetItemName() != __instance.ItemStack.itemValue.ItemClass.GetItemName())
-                                if(!LocalPlayerUI.GetUIForPlayer(player as EntityPlayerLocal).xui.PlayerInventory.AddItem(itemStack, true))
+                            int Count = 1;
+
+                            if (Configuration.CheckFeatureStatus(AdvFeatureClass, "FullStackSpoil"))
+                            {
+                                AdvLogging.DisplayLog(AdvFeatureClass, __instance.ItemStack.itemValue.ItemClass.GetItemName() + ":Full Stack Spoil");
+                                Count = __instance.ItemStack.count;
+                                __instance.ItemStack = new ItemStack(ItemClass.GetItem(strSpoiledItem, false), Count);
+                                break;
+
+                            }
+                            ItemStack itemStack = new ItemStack(ItemClass.GetItem(strSpoiledItem, false), Count);
+                            
+                            if (itemStack.itemValue.ItemClass.GetItemName() != __instance.ItemStack.itemValue.ItemClass.GetItemName())
+                            {
+                                if (!LocalPlayerUI.GetUIForPlayer(player as EntityPlayerLocal).xui.PlayerInventory.AddItem(itemStack, true))
                                 {
                                     player.world.gameManager.ItemDropServer(itemStack, player.GetPosition(), Vector3.zero, -1, 60f, false);
                                 }
+                            }
                         }
-                        if(__instance.ItemStack.count > 2)
+
+                        if (__instance.ItemStack.count > 2)
                         {
                             AdvLogging.DisplayLog(AdvFeatureClass, __instance.ItemStack.itemValue.ItemClass.GetItemName() + ": Reducing Stack by 1");
                             __instance.ItemStack.count--;
@@ -257,7 +271,7 @@ public class FoodSpoilage_Mod
                             __instance.ItemStack = new ItemStack(ItemValue.None.Clone(), 0);
                             break;  // Nothing more to spoil
                         }
-                       // break;
+                        // break;
 
 
                     }

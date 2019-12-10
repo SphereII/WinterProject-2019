@@ -33,11 +33,11 @@
       <property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
       <property name="Material" value="Morganic"/>
       <property name="EconomicValue" value="1"/>
-      <property name="Stacknumber" value="10"/>
+      <property name="Stacknumber" value="125"/>
       <property name="Group" value="Food"/>
-      <property name="CustomIconTint" value="160,180,200"/>
       <property name="DescriptionKey" value="foodFrozenDesc" />
-   </item>
+      <property name="ItemTypeIcon" value="cold"/>
+    </item>
 
     <!-- Frozen Drinks -->
     <item name="foodHoneyFrozen">
