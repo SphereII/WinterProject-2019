@@ -62,7 +62,7 @@
 		  <property name="Meshfile" value="#@modfolder:Resources/MediaCases.unity3d?CDCase03_X" /> 
 		  <property name="HandMeshfile" value="#@modfolder:Resources/MediaCases.unity3d?CDCase03_X"/>
 		  <property name="HoldType" value="21"/> 
-		  <property name="CustomIcon" value="CD" />
+		  <property name="CustomIcon" value="audioCD03" />
 		  <property name="Material" value="Mplastics"/>
 		  <property name="Stacknumber" value="1"/>
 		  <property name="SoundDataNode" value="christmasmusic03" />
@@ -72,7 +72,7 @@
 		  <property name="Meshfile" value="#@modfolder:Resources/MediaCases.unity3d?CDCase04_X" /> 
 		  <property name="HandMeshfile" value="#@modfolder:Resources/MediaCases.unity3d?CDCase04_X"/> 
 		  <property name="HoldType" value="21"/> 
-		  <property name="CustomIcon" value="CD" />
+		  <property name="CustomIcon" value="audioCD04" />
 		  <property name="Material" value="Mplastics"/>
 		  <property name="Stacknumber" value="1"/>
       <!-- Sound Data node is tied to the Carousol -->
@@ -83,7 +83,7 @@
 		  <property name="Meshfile" value="#@modfolder:Resources/MediaCases.unity3d?CDCase05_X" /> 
 		  <property name="HandMeshfile" value="#@modfolder:Resources/MediaCases.unity3d?CDCase05_X"/>
 		  <property name="HoldType" value="21"/> 
-		  <property name="CustomIcon" value="CD" />
+		  <property name="CustomIcon" value="audioCD05" />
 		  <property name="Material" value="Mplastics"/>
 		  <property name="Stacknumber" value="1"/>
 		  <property name="SoundDataNode" value="christmasmusic05" />
@@ -93,7 +93,7 @@
 		  <property name="Meshfile" value="#@modfolder:Resources/MediaCases.unity3d?CDCase06_X" /> 
 		  <property name="HandMeshfile" value="#@modfolder:Resources/MediaCases.unity3d?CDCase06_X"/> 
 		  <property name="HoldType" value="21"/> 
-		  <property name="CustomIcon" value="CD" />
+		  <property name="CustomIcon" value="audioCD06" />
 		  <property name="Material" value="Mplastics"/>
 		  <property name="Stacknumber" value="1"/>
       <!-- Sound Data node is tied to the Carousol -->
