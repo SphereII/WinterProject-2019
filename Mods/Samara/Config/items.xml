@@ -56,6 +56,49 @@
 				<passive_effect name="DamageModifier" operation="perc_set" value="0" tags="metal"/>
 			</effect_group>
 		</item> 
+<!--  More Music CDs   -->								
+		<item name="audioCD03">
+		  <property name="Extends" value="casinoCoin"/>
+		  <property name="Meshfile" value="#@modfolder:Resources/MediaCases.unity3d?CDCase03_X" /> 
+		  <property name="HandMeshfile" value="#@modfolder:Resources/MediaCases.unity3d?CDCase03_X"/>
+		  <property name="HoldType" value="21"/> 
+		  <property name="CustomIcon" value="CD" />
+		  <property name="Material" value="Mplastics"/>
+		  <property name="Stacknumber" value="1"/>
+		  <property name="SoundDataNode" value="christmasmusic03" />
+		</item>
+		<item name="audioCD04">
+		  <property name="Extends" value="casinoCoin"/>
+		  <property name="Meshfile" value="#@modfolder:Resources/MediaCases.unity3d?CDCase04_X" /> 
+		  <property name="HandMeshfile" value="#@modfolder:Resources/MediaCases.unity3d?CDCase04_X"/> 
+		  <property name="HoldType" value="21"/> 
+		  <property name="CustomIcon" value="CD" />
+		  <property name="Material" value="Mplastics"/>
+		  <property name="Stacknumber" value="1"/>
+      <!-- Sound Data node is tied to the Carousol -->
+		  <property name="SoundDataNode" value="christmasmusic04" />
+		</item>
+		<item name="audioCD05">
+		  <property name="Extends" value="casinoCoin"/>
+		  <property name="Meshfile" value="#@modfolder:Resources/MediaCases.unity3d?CDCase05_X" /> 
+		  <property name="HandMeshfile" value="#@modfolder:Resources/MediaCases.unity3d?CDCase05_X"/>
+		  <property name="HoldType" value="21"/> 
+		  <property name="CustomIcon" value="CD" />
+		  <property name="Material" value="Mplastics"/>
+		  <property name="Stacknumber" value="1"/>
+		  <property name="SoundDataNode" value="christmasmusic05" />
+		</item>
+		<item name="audioCD06">
+		  <property name="Extends" value="casinoCoin"/>
+		  <property name="Meshfile" value="#@modfolder:Resources/MediaCases.unity3d?CDCase06_X" /> 
+		  <property name="HandMeshfile" value="#@modfolder:Resources/MediaCases.unity3d?CDCase06_X"/> 
+		  <property name="HoldType" value="21"/> 
+		  <property name="CustomIcon" value="CD" />
+		  <property name="Material" value="Mplastics"/>
+		  <property name="Stacknumber" value="1"/>
+      <!-- Sound Data node is tied to the Carousol -->
+		  <property name="SoundDataNode" value="christmasmusic06" />
+		</item>						 
 	<item name="CursedCase">
 		<property name="HoldType" value="3"/>
 		<property name="DisplayType" value="waterCoffee"/>
@@ -129,6 +172,7 @@
 		</property>	
 		<property name="DescriptionKey" value="makeupGroupDesc"/>
 	</item>
+	
 
     <!-- The Full Diary -->
     <item name="SamaraMorganDiary">
