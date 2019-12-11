@@ -73,6 +73,9 @@
     <None Include="Mods\Wasteland Weapons\Resources\RailwayRifle1.unity3d" />
     <None Include="Mods\Wasteland Weapons\Resources\Sounds.unity3d" />
     <None Include="Mods\Wasteland Weapons\Resources\SpikeTest.unity3d" />
+    <None Include="Mods\winter_zeds_blue\Resources\winter_zeds_blue1.unity3d" />
+    <None Include="Mods\winter_zeds_blue\Resources\winter_zeds_blue2.unity3d" />
+    <None Include="Mods\winter_zeds_blue\Resources\winter_zeds_blue3.unity3d" />
     <None Include="Mods\Xyth EntitiesWinter\Config\Resources\FrostShieldParticle.unity3d" />
     <None Include="Mods\Xyth EntitiesWinter\Resources\Abominable.unity3d" />
     <None Include="Mods\Xyth EntitiesWinter\Resources\AbominableSounds.unity3d" />
@@ -305,6 +308,10 @@
     <Content Include="Mods\Samara\Config\entityclasses.xml" />
     <Content Include="Mods\Samara\Config\entitygroups.xml" />
     <Content Include="Mods\Samara\Config\items.xml" />
+    <Content Include="Mods\Samara\Config\item_modifiers.xml" />
+    <Content Include="Mods\Samara\Config\Localization.txt" />
+    <Content Include="Mods\Samara\Config\quests.xml" />
+    <Content Include="Mods\Samara\Config\recipes.xml" />
     <Content Include="Mods\Samara\Config\sounds.xml" />
     <Content Include="Mods\Samara\mod.xml" />
     <Content Include="Mods\Samara\ModInfo.xml" />
@@ -626,6 +633,10 @@
     <Content Include="Mods\Wasteland Weapons\UIAtlases\ItemIconAtlas\railspike.png" />
     <Content Include="Mods\Wasteland Weapons\UIAtlases\ItemIconAtlas\railwayrifle.png" />
     <Content Include="Mods\Wasteland Weapons\UIAtlases\ItemIconAtlas\ShotgunEM.png" />
+    <Content Include="Mods\winter_zeds_blue\Config\blocks.xml" />
+    <Content Include="Mods\winter_zeds_blue\Config\entityclasses.xml" />
+    <Content Include="Mods\winter_zeds_blue\mod.xml" />
+    <Content Include="Mods\winter_zeds_blue\ModInfo.xml" />
     <Content Include="Mods\Xyth EntitiesWinter\Config\blocks.xml" />
     <Content Include="Mods\Xyth EntitiesWinter\Config\buffs.xml" />
     <Content Include="Mods\Xyth EntitiesWinter\Config\entityclasses.xml" />

@@ -128,7 +128,28 @@
 			<property name="ShowAltHair" value="false" />		
 		</property>	
 		<property name="DescriptionKey" value="makeupGroupDesc"/>
-	</item>		
-		
+	</item>
+
+    <!-- 4 Pieces of Diary -->
+    <item name="SamaraMorganDiary01">
+      <property name="Extends" value="resourcePaper"/>
+    </item>
+    <item name="SamaraMorganDiary02">
+      <property name="Extends" value="resourcePaper"/>
+    </item>
+    <item name="SamaraMorganDiary03">
+      <property name="Extends" value="resourcePaper"/>
+    </item>
+    <item name="SamaraMorganDiary04">
+      <property name="Extends" value="resourcePaper"/>
+    </item>
+    <!-- The Full Diary -->
+    <item name="SamaraMorganDiary">
+      <property name="Extends" value="schematicMaster"/>
+      <effect_group tiered="false">
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="curseSamaraMorgan" operation="add" value="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+      </effect_group>
+    </item>
 	</append>	  
 </configs>

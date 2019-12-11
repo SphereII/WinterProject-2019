@@ -1,0 +1,14 @@
+﻿<configs>
+  <append xpath="/recipes">
+
+    <recipe name="SamaraMorganDiary" count="1" >
+      <ingredient name="resourceDuctTape" count="3"/>
+      <ingredient name="SamaraMorganDiary01" count="1"/>
+      <ingredient name="SamaraMorganDiary02" count="1"/>
+      <ingredient name="SamaraMorganDiary03" count="1"/>
+      <ingredient name="SamaraMorganDiary04" count="1"/>
+   
+    </recipe>
+
+  </append>
+</configs>

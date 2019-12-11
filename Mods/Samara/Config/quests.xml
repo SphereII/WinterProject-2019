@@ -1,0 +1,196 @@
+﻿<configs>
+  <append xpath="/quests">
+  <quest id="quest_Samara_Diary01">
+    <property name="group_name_key" value="Samara Morgan's Diary" />
+    <property name="name_key" value="Samara Morgan's Diary" />
+    <property name="subtitle_key" value="Find Samara Morgan's Diary" />
+    <property name="description_key" value="The diary couldn't be completely destroyed. Find the missing pieces." />
+    <property name="icon" value="ui_game_symbol_quest"/>
+    <property name="repeatable" value="false"/>
+    <property name="category_key" value="challenge"/>
+    <property name="difficulty" value="medium"/>
+    <property name="difficulty_tier" value="1"/>
+    <property name="offer_key" value="The missing diary could give us a clue on how to remove her curse."/>
+    <property name="statement_key" value="The missing diary could give us a clue on how to remove her curse"/>
+    <property name="response_key" value="Fetch ([DECEA3]{poi.distance} {poi.direction}[-])"/>
+    <property name="login_rally_reset" value="true"/>
+
+    <property name="completiontype" value="AutoComplete"/>
+    <property name="completion_key" value="Great job. Keep looking for the other parts."/>
+
+    <objective type="RandomPOIGoto">
+      <property name="phase" value="1"/>
+    </objective>
+
+    <objective type="RallyPoint">
+      <property name="phase" value="2"/>
+    </objective>
+
+    <objective type="FetchFromContainer">
+      <property name="phase" value="3"/>
+      <property name="quest_item_ID" value="3"/>
+      <property name="questItem" value="SamaraMorganDiary01"/>
+      <property name="item_count" value="1"/>
+      <property name="default_container" value="cntFetchQuestSatchel"/>
+    </objective>
+
+    <reward type="Exp" value="500"/>
+    <reward type="Quest" id="quest_Samara_Diary02"/>
+  </quest>
+    <quest id="quest_Samara_Diary02">
+      <property name="group_name_key" value="Samara Morgan's Diary" />
+      <property name="name_key" value="Samara Morgan's Diary" />
+      <property name="subtitle_key" value="Find Samara Morgan's Diary" />
+      <property name="description_key" value="The diary couldn't be completely destroyed. Find the missing pieces." />
+      <property name="icon" value="ui_game_symbol_quest"/>
+      <property name="repeatable" value="false"/>
+      <property name="category_key" value="challenge"/>
+      <property name="difficulty" value="medium"/>
+      <property name="difficulty_tier" value="1"/>
+      <property name="offer_key" value="The missing diary could give us a clue on how to remove her curse."/>
+      <property name="statement_key" value="The missing diary could give us a clue on how to remove her curse"/>
+      <property name="response_key" value="Fetch ([DECEA3]{poi.distance} {poi.direction}[-])"/>
+      <property name="login_rally_reset" value="true"/>
+
+      <property name="completiontype" value="AutoComplete"/>
+      <property name="completion_key" value="Great job. Keep looking for the other parts."/>
+      <objective type="TreasureChest">
+        <property name="block" value="cntBuriedWeaponChest"/>
+        <property name="distance" value="500-750"/>
+        <property name="default_radius" value="7"/>
+        <property name="container_type" value="Supplies"/>
+      </objective>
+      <objective type="FetchFromTreasure">
+        <property name="block" value="cntBuriedWeaponChest"/>
+        <property name="quest_item_ID" value="4"/>
+        <property name="questItem" value="SamaraMorganDiary02"/>
+        <property name="item_count" value="1"/>
+      </objective>
+      <reward type="Exp" value="500"/>
+      <reward type="Quest" id="quest_Samara_Diary03"/>
+    </quest>
+    <quest id="quest_Samara_Diary03">
+      <property name="group_name_key" value="Samara Morgan's Diary" />
+      <property name="name_key" value="Samara Morgan's Diary" />
+      <property name="subtitle_key" value="Find Samara Morgan's Diary" />
+      <property name="description_key" value="The diary couldn't be completely destroyed. Find the missing pieces." />
+      <property name="icon" value="ui_game_symbol_quest"/>
+      <property name="repeatable" value="false"/>
+      <property name="category_key" value="challenge"/>
+      <property name="difficulty" value="medium"/>
+      <property name="difficulty_tier" value="1"/>
+      <property name="offer_key" value="The missing diary could give us a clue on how to remove her curse."/>
+      <property name="statement_key" value="The missing diary could give us a clue on how to remove her curse"/>
+      <property name="response_key" value="Fetch ([DECEA3]{poi.distance} {poi.direction}[-])"/>
+      <property name="difficulty_tier" value="4"/>
+
+      <property name="login_rally_reset" value="true"/>
+
+      <property name="completiontype" value="AutoComplete"/>
+      <property name="completion_key" value="Great job. Keep looking for the last part."/>
+      
+      <objective type="RandomPOIGoto">
+        <property name="phase" value="1"/>
+      </objective>
+
+      <objective type="RallyPoint">
+        <property name="phase" value="2"/>
+      </objective>
+
+      <objective type="ClearSleepers">
+        <property name="phase" value="3"/>
+      </objective>
+
+      <objective type="FetchFromContainer">
+        <property name="phase" value="3"/>
+        <property name="quest_item_ID" value="5"/>
+        <property name="questItem" value="SamaraMorganDiary03"/>
+        <property name="item_count" value="1"/>
+        <property name="default_container" value="cntFetchQuestSatchel"/>
+      </objective>
+
+      <objective type="POIStayWithin">
+        <property name="phase" value="3"/>
+        <property name="radius" value="25"/>
+      </objective>
+      <reward type="Exp" value="500"/>
+      <reward type="Quest" id="quest_Samara_Diary04"/>
+   </quest>
+
+    <quest id="quest_Samara_Diary04">
+      <property name="group_name_key" value="Samara Morgan's Diary" />
+      <property name="name_key" value="Samara Morgan's Diary" />
+      <property name="subtitle_key" value="Find Samara Morgan's Diary" />
+      <property name="description_key" value="The diary couldn't be completely destroyed. Find the missing pieces." />
+      <property name="icon" value="ui_game_symbol_quest"/>
+      <property name="repeatable" value="false"/>
+      <property name="category_key" value="challenge"/>
+      <property name="difficulty" value="medium"/>
+      <property name="difficulty_tier" value="1"/>
+      <property name="offer_key" value="The missing diary could give us a clue on how to remove her curse."/>
+      <property name="statement_key" value="The missing diary could give us a clue on how to remove her curse"/>
+      <property name="response_key" value="Fetch ([DECEA3]{poi.distance} {poi.direction}[-])"/>
+      <property name="login_rally_reset" value="true"/>
+
+      <property name="completiontype" value="AutoComplete"/>
+      <property name="completion_key" value="Great job. Keep looking for the other parts."/>
+      <objective type="TreasureChest">
+        <property name="block" value="cntBuriedWeaponChest"/>
+        <property name="distance" value="500-750"/>
+        <property name="default_radius" value="7"/>
+        <property name="container_type" value="Supplies"/>
+      </objective>
+      <objective type="FetchFromTreasure">
+        <property name="block" value="cntBuriedWeaponChest"/>
+        <property name="quest_item_ID" value="6"/>
+        <property name="item_count" value="1"/>
+        <property name="questItem" value="SamaraMorganDiary04"/>
+      </objective>
+      <objective type="ReturnToNPC">
+        <property name="phase" value="4"/>
+      </objective>
+
+      <objective type="InteractWithNPC">
+        <property name="phase" value="4"/>
+      </objective>
+    </quest>
+
+    <quest id="quest_Samara_Diary05">
+      <property name="group_name_key" value="Samara Morgan's Diary" />
+      <property name="name_key" value="Samara Morgan's Diary" />
+      <property name="subtitle_key" value="Fix Samara Morgan's Diary" />
+      <property name="description_key" value="The diary couldn't be completely destroyed. Put it back together." />
+      <property name="icon" value="ui_game_symbol_quest"/>
+      <property name="repeatable" value="false"/>
+      <property name="category_key" value="challenge"/>
+      <property name="difficulty" value="medium"/>
+      <property name="difficulty_tier" value="1"/>
+      <property name="offer_key" value="The missing diary could give us a clue on how to remove her curse."/>
+      <property name="statement_key" value="You need to assemble the diary pieces now to read them."/>
+
+      <property name="completiontype" value="AutoComplete"/>
+      <property name="completion_key" value="Great job."/>
+
+      <objective type="FetchKeep" id="resourceDuctTape" value="3" phase="1"/>
+      <objective type="FetchKeep" id="SamaraMorganDiary01" value="1" phase="1"/>
+      <objective type="FetchKeep" id="SamaraMorganDiary02" value="1" phase="1"/>
+      <objective type="FetchKeep" id="SamaraMorganDiary03" value="1" phase="1"/>
+      <objective type="FetchKeep" id="SamaraMorganDiary04" value="1" phase="1"/>
+
+      <objective type="Craft">
+        <property name="phase" value="2"/>
+        <property name="item" value="SamaraMorganDiary"/>
+        <property name="count" value="1"/>
+      </objective>
+
+      <reward type="Exp" value="500"/>
+      <reward type="Quest" id="quest_Samara_Diary02"/>
+    </quest>
+  </append>
+  <append xpath="/quests/quest_items">
+    <quest_item id="3" name="Samara's Diary 1/4" icon="questCassadoreSupplies" icon_color="255,255,255"/>
+    <quest_item id="4" name="Samara's Diary 2/4" icon="questCassadoreSupplies" icon_color="255,255,255"/>
+    <quest_item id="5" name="Samara's Diary 3/4" icon="questCassadoreSupplies" icon_color="255,255,255"/>
+    <quest_item id="6" name="Samara's Diary 4/4" icon="questCassadoreSupplies" icon_color="255,255,255"/>
+  </append>
+</configs>
