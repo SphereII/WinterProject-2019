@@ -782,6 +782,7 @@
     <Compile Include="Mods\0-SphereIICore\Scripts\MusicBoxes\MusicBoxScript.cs" />
     <Compile Include="Mods\0-SphereIICore\Scripts\Quests\ObjectiveBuffSDX.cs" />
     <Compile Include="Mods\0-SphereIICore\Scripts\Quests\ObjectiveGotoPOISDX.cs" />
+    <Compile Include="Mods\0-SphereIICore\Scripts\Quests\QuestActionGiveCVarBuffSDX.cs" />
     <Compile Include="Mods\0-SphereIICore\Scripts\Quests\QuestActionGiveBuffSDX.cs" />
     <Compile Include="Mods\0-SphereIICore\Scripts\Quests\QuestActionPlaySound.cs" />
     <Compile Include="Mods\0-SphereIICore\Scripts\Quests\QuestActionReplaceEntitySDX.cs" />

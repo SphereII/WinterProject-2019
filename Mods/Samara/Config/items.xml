@@ -130,19 +130,6 @@
 		<property name="DescriptionKey" value="makeupGroupDesc"/>
 	</item>
 
-    <!-- 4 Pieces of Diary -->
-    <item name="SamaraMorganDiary01">
-      <property name="Extends" value="resourcePaper"/>
-    </item>
-    <item name="SamaraMorganDiary02">
-      <property name="Extends" value="resourcePaper"/>
-    </item>
-    <item name="SamaraMorganDiary03">
-      <property name="Extends" value="resourcePaper"/>
-    </item>
-    <item name="SamaraMorganDiary04">
-      <property name="Extends" value="resourcePaper"/>
-    </item>
     <!-- The Full Diary -->
     <item name="SamaraMorganDiary">
       <property name="Extends" value="schematicMaster"/>

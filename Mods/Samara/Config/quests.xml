@@ -28,12 +28,13 @@
 
     <objective type="FetchFromContainer">
       <property name="phase" value="3"/>
-      <property name="quest_item_ID" value="3"/>
+      <property name="quest_item_ID" value="4"/>
       <property name="questItem" value="SamaraMorganDiary01"/>
       <property name="item_count" value="1"/>
       <property name="default_container" value="cntFetchQuestSatchel"/>
     </objective>
 
+    <action type="GiveCVarBuffSDX, Mods" id="quest_Samara_Diary" value="1" />    
     <reward type="Exp" value="500"/>
     <reward type="Quest" id="quest_Samara_Diary02"/>
   </quest>
@@ -66,6 +67,8 @@
         <property name="questItem" value="SamaraMorganDiary02"/>
         <property name="item_count" value="1"/>
       </objective>
+
+      <action type="GiveCVarBuffSDX, Mods" id="quest_Samara_Diary" value="2" />
       <reward type="Exp" value="500"/>
       <reward type="Quest" id="quest_Samara_Diary03"/>
     </quest>
@@ -96,11 +99,11 @@
       <objective type="RallyPoint">
         <property name="phase" value="2"/>
       </objective>
-
+      <!--
       <objective type="ClearSleepers">
         <property name="phase" value="3"/>
       </objective>
-
+-->
       <objective type="FetchFromContainer">
         <property name="phase" value="3"/>
         <property name="quest_item_ID" value="5"/>
@@ -113,6 +116,8 @@
         <property name="phase" value="3"/>
         <property name="radius" value="25"/>
       </objective>
+
+      <action type="GiveCVarBuffSDX, Mods" id="quest_Samara_Diary" value="3" />
       <reward type="Exp" value="500"/>
       <reward type="Quest" id="quest_Samara_Diary04"/>
    </quest>
@@ -146,6 +151,11 @@
         <property name="item_count" value="1"/>
         <property name="questItem" value="SamaraMorganDiary04"/>
       </objective>
+      <action type="GiveCVarBuffSDX, Mods" id="quest_Samara_Diary" value="4" />
+      
+      <!-- Recipe unlock -->
+      <action type="GiveCVarBuffSDX, Mods" id="SamaraMorganDiary" value="1" />
+
       <objective type="ReturnToNPC">
         <property name="phase" value="4"/>
       </objective>
@@ -153,6 +163,9 @@
       <objective type="InteractWithNPC">
         <property name="phase" value="4"/>
       </objective>
+
+      
+
     </quest>
 
     <quest id="quest_Samara_Diary05">
@@ -172,10 +185,7 @@
       <property name="completion_key" value="Great job."/>
 
       <objective type="FetchKeep" id="resourceDuctTape" value="3" phase="1"/>
-      <objective type="FetchKeep" id="SamaraMorganDiary01" value="1" phase="1"/>
-      <objective type="FetchKeep" id="SamaraMorganDiary02" value="1" phase="1"/>
-      <objective type="FetchKeep" id="SamaraMorganDiary03" value="1" phase="1"/>
-      <objective type="FetchKeep" id="SamaraMorganDiary04" value="1" phase="1"/>
+      <objective type="FetchKeep" id="resourcePaper" value="10" phase="1"/>
 
       <objective type="Craft">
         <property name="phase" value="2"/>
@@ -184,7 +194,6 @@
       </objective>
 
       <reward type="Exp" value="500"/>
-      <reward type="Quest" id="quest_Samara_Diary02"/>
     </quest>
   </append>
   <append xpath="/quests/quest_items">
