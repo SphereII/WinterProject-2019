@@ -18,8 +18,31 @@
     <lootgroup name="questMusic">
       <item name="Carousel" />
     </lootgroup>
-
+    <lootgroup name="SamamaMorganDiary01">
+      <item name="SamamaMorganDiary01" />
+    </lootgroup>
+    <lootgroup name="SamamaMorganDiary02">
+      <item name="SamamaMorganDiary02" />
+    </lootgroup>
+    <lootgroup name="SamamaMorganDiary03">
+      <item name="SamamaMorganDiary03" />
+    </lootgroup>
+    <lootgroup name="SamamaMorganDiary04">
+      <item name="SamamaMorganDiary04" />
+    </lootgroup>
     
+    <lootcontainer id="663" count="1" size="1,1" sound_open="UseActions/open_garbage" sound_close="UseActions/close_garbage" loot_quality_template="qualBaseTemplate">
+      <item name="SamamaMorganDiary01" count="1"/>
+    </lootcontainer>
+    <lootcontainer id="664" count="1" size="1,1" sound_open="UseActions/open_garbage" sound_close="UseActions/close_garbage" loot_quality_template="qualBaseTemplate">
+      <item name="SamamaMorganDiary02" count="1"/>
+    </lootcontainer>
+    <lootcontainer id="665" count="1" size="1,1" sound_open="UseActions/open_garbage" sound_close="UseActions/close_garbage" loot_quality_template="qualBaseTemplate">
+      <item name="SamamaMorganDiary03" count="1"/>
+    </lootcontainer>
+    <lootcontainer id="666" count="1" size="1,1" sound_open="UseActions/open_garbage" sound_close="UseActions/close_garbage" loot_quality_template="qualBaseTemplate">
+      <item name="SamamaMorganDiary04" count="1"/>
+    </lootcontainer>
   </append>
 
 </configs>

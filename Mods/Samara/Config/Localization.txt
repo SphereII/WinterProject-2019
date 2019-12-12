@@ -5,4 +5,17 @@ quest_Samara_Diary01_subtitle,Quest,Quest Info,"Find the Diary"
 quest_Samara_Diary01_offer,Quest,Quest Info,"Find the missing diary piece so we can try to make sense of this story."
 quest_Samara_Diary01_statement,,Quest,Quest Info,newKey,Find the missing Diary pieces.
 quest_Samara_Diary01_response,,Quest,Quest Info,newKey,Fetch ([DECEA3]{poi.distance} {poi.direction}[-])
-quest_Samara_Diary01_completion,,Quest,Quest Info,newKey,"Great job. Let's see if we can find the other pieces."
+quest_Samara_Diary01_completion,Quest,Quest Info,newKey,"Great job. Let's see if we can find the other pieces."
+
+SamaraMorganDiary01_title,item,Items,"Samara Morgan's Diary Part 1"
+SamaraMorganDiary01,item,Items,"You start to play it and it's like somebody's nightmare. And then this woman comes on, smiling at you, right? Seeing you... through the screen. Then when it's over, your phone rings, someone knows you watched the tape... and what they say is, 'You will die in seven days'."
+
+SamaraMorganDiary02_title,item,Items,"Samara Morgan's Diary Part 2"
+SamaraMorganDiary02,item,Items,"Doctor: That's why you're here so that we can help you to make it stop.\nSamara: He's going to leave me here.\nDoctor: Who?\nSamara: Daddy.\nDoctor: Your daddy loves you.\nSamara: Daddy loves the horses. He wants me to go away.\nDoctor: No he doesn't.\nSamara: But he doesn't know.\nDoctor: Doesn't know what?\nSamara:\nDoctor: Samara?"
+
+SamaraMorganDiary03_title,item,Items,"Samara Morgan's Diary Part 3"
+SamaraMorganDiary03,item,Items,"Samara: Round we go. The World is spinnig. When it stops it's just begginig. Sun comes up, we live and we cry. SUn comes down and the we alll die.\nSamara: Here we go, the world is spinning. When it stops, it's just beginning. Sun comes up, we all laugh. Sun goes down, we all die..."
+
+SamaraMorganDiary04_title,item,Items,"Samara Morgan's Diary Part 4"
+SamaraMorganDiary04,item,Items,"Doctor: Samara, how did you make these pictures?\nSamara: I don't...make them...I see them...and then...they just...are.\nDoctor: Samara I need you to start telling me the truth.\nSamara: Can I see my mommy?\nDoctor: No, Samara. Not until we can figure out what's wrong with you.\nSamara: I love my mommy.\nDoctor: Yes you do. But you don't want to hurt her anymore. You don't want to hurt anyone.\nSamara: But I do, and I'm sorry. It won't stop."
+

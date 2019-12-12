@@ -18,25 +18,14 @@
     <property name="completiontype" value="AutoComplete"/>
     <property name="completion_key" value="Great job. Keep looking for the other parts."/>
 
-    <objective type="RandomPOIGoto">
-      <property name="phase" value="1"/>
-    </objective>
-
-    <objective type="RallyPoint">
-      <property name="phase" value="2"/>
-    </objective>
-
-    <objective type="FetchFromContainer">
-      <property name="phase" value="3"/>
-      <property name="quest_item_ID" value="4"/>
-      <property name="questItem" value="SamaraMorganDiary01"/>
-      <property name="item_count" value="1"/>
-      <property name="default_container" value="cntFetchQuestSatchel"/>
-    </objective>
-
+     <objective type="TreasureChest">
+        <property name="block" value="SamaraWell01"/>
+        <property name="distance" value="500-750"/>
+      </objective>
+    
+    
     <action type="GiveCVarBuffSDX, Mods" id="quest_Samara_Diary" value="1" />    
     <reward type="Exp" value="500"/>
-    <reward type="Quest" id="quest_Samara_Diary02"/>
   </quest>
     <quest id="quest_Samara_Diary02">
       <property name="group_name_key" value="Samara Morgan's Diary" />
@@ -51,26 +40,16 @@
       <property name="offer_key" value="The missing diary could give us a clue on how to remove her curse."/>
       <property name="statement_key" value="The missing diary could give us a clue on how to remove her curse"/>
       <property name="response_key" value="Fetch ([DECEA3]{poi.distance} {poi.direction}[-])"/>
-      <property name="login_rally_reset" value="true"/>
 
       <property name="completiontype" value="AutoComplete"/>
       <property name="completion_key" value="Great job. Keep looking for the other parts."/>
-      <objective type="TreasureChest">
-        <property name="block" value="cntBuriedWeaponChest"/>
+       <objective type="TreasureChest">
+        <property name="block" value="SamaraWell02"/>
         <property name="distance" value="500-750"/>
-        <property name="default_radius" value="7"/>
-        <property name="container_type" value="Supplies"/>
-      </objective>
-      <objective type="FetchFromTreasure">
-        <property name="block" value="cntBuriedWeaponChest"/>
-        <property name="quest_item_ID" value="4"/>
-        <property name="questItem" value="SamaraMorganDiary02"/>
-        <property name="item_count" value="1"/>
       </objective>
 
       <action type="GiveCVarBuffSDX, Mods" id="quest_Samara_Diary" value="2" />
       <reward type="Exp" value="500"/>
-      <reward type="Quest" id="quest_Samara_Diary03"/>
     </quest>
     <quest id="quest_Samara_Diary03">
       <property name="group_name_key" value="Samara Morgan's Diary" />
@@ -87,39 +66,17 @@
       <property name="response_key" value="Fetch ([DECEA3]{poi.distance} {poi.direction}[-])"/>
       <property name="difficulty_tier" value="4"/>
 
-      <property name="login_rally_reset" value="true"/>
-
       <property name="completiontype" value="AutoComplete"/>
       <property name="completion_key" value="Great job. Keep looking for the last part."/>
       
-      <objective type="RandomPOIGoto">
-        <property name="phase" value="1"/>
+  
+       <objective type="TreasureChest">
+        <property name="block" value="SamaraWell03"/>
+        <property name="distance" value="500-750"/>
       </objective>
-
-      <objective type="RallyPoint">
-        <property name="phase" value="2"/>
-      </objective>
-      <!--
-      <objective type="ClearSleepers">
-        <property name="phase" value="3"/>
-      </objective>
--->
-      <objective type="FetchFromContainer">
-        <property name="phase" value="3"/>
-        <property name="quest_item_ID" value="5"/>
-        <property name="questItem" value="SamaraMorganDiary03"/>
-        <property name="item_count" value="1"/>
-        <property name="default_container" value="cntFetchQuestSatchel"/>
-      </objective>
-
-      <objective type="POIStayWithin">
-        <property name="phase" value="3"/>
-        <property name="radius" value="25"/>
-      </objective>
-
+  
       <action type="GiveCVarBuffSDX, Mods" id="quest_Samara_Diary" value="3" />
       <reward type="Exp" value="500"/>
-      <reward type="Quest" id="quest_Samara_Diary04"/>
    </quest>
 
     <quest id="quest_Samara_Diary04">
@@ -135,37 +92,19 @@
       <property name="offer_key" value="The missing diary could give us a clue on how to remove her curse."/>
       <property name="statement_key" value="The missing diary could give us a clue on how to remove her curse"/>
       <property name="response_key" value="Fetch ([DECEA3]{poi.distance} {poi.direction}[-])"/>
-      <property name="login_rally_reset" value="true"/>
 
       <property name="completiontype" value="AutoComplete"/>
       <property name="completion_key" value="Great job. Keep looking for the other parts."/>
-      <objective type="TreasureChest">
-        <property name="block" value="cntBuriedWeaponChest"/>
+   
+       <objective type="TreasureChest">
+        <property name="block" value="SamaraWell04"/>
         <property name="distance" value="500-750"/>
-        <property name="default_radius" value="7"/>
-        <property name="container_type" value="Supplies"/>
       </objective>
-      <objective type="FetchFromTreasure">
-        <property name="block" value="cntBuriedWeaponChest"/>
-        <property name="quest_item_ID" value="6"/>
-        <property name="item_count" value="1"/>
-        <property name="questItem" value="SamaraMorganDiary04"/>
-      </objective>
+      
       <action type="GiveCVarBuffSDX, Mods" id="quest_Samara_Diary" value="4" />
       
       <!-- Recipe unlock -->
       <action type="GiveCVarBuffSDX, Mods" id="SamaraMorganDiary" value="1" />
-
-      <objective type="ReturnToNPC">
-        <property name="phase" value="4"/>
-      </objective>
-
-      <objective type="InteractWithNPC">
-        <property name="phase" value="4"/>
-      </objective>
-
-      
-
     </quest>
 
     <quest id="quest_Samara_Diary05">
@@ -185,7 +124,10 @@
       <property name="completion_key" value="Great job."/>
 
       <objective type="FetchKeep" id="resourceDuctTape" value="3" phase="1"/>
-      <objective type="FetchKeep" id="resourcePaper" value="10" phase="1"/>
+      <objective type="FetchKeep" id="SamamaMorganDiary01" value="1" phase="1"/>
+      <objective type="FetchKeep" id="SamamaMorganDiary02" value="1" phase="1"/>
+      <objective type="FetchKeep" id="SamamaMorganDiary03" value="1" phase="1"/>
+      <objective type="FetchKeep" id="SamamaMorganDiary04" value="1" phase="1"/>
 
       <objective type="Craft">
         <property name="phase" value="2"/>
