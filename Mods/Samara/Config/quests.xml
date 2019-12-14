@@ -22,10 +22,10 @@
         <property name="block" value="SamaraWell01"/>
         <property name="distance" value="500-750"/>
       </objective>
-    
-    
     <action type="GiveCVarBuffSDX, Mods" id="quest_Samara_Diary" value="1" />    
     <reward type="Exp" value="500"/>
+    
+    
   </quest>
     <quest id="quest_Samara_Diary02">
       <property name="group_name_key" value="Samara Morgan's Diary" />
@@ -51,6 +51,7 @@
       <action type="GiveCVarBuffSDX, Mods" id="quest_Samara_Diary" value="2" />
       <reward type="Exp" value="500"/>
     </quest>
+
     <quest id="quest_Samara_Diary03">
       <property name="group_name_key" value="Samara Morgan's Diary" />
       <property name="name_key" value="Samara Morgan's Diary" />

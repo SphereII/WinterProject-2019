@@ -19,3 +19,38 @@ SamaraMorganDiary03,item,Items,"Samara: Round we go. The World is spinnig. When 
 SamaraMorganDiary04_title,item,Items,"Samara Morgan's Diary Part 4"
 SamaraMorganDiary04,item,Items,"Doctor: Samara, how did you make these pictures?\nSamara: I don't...make them...I see them...and then...they just...are.\nDoctor: Samara I need you to start telling me the truth.\nSamara: Can I see my mommy?\nDoctor: No, Samara. Not until we can figure out what's wrong with you.\nSamara: I love my mommy.\nDoctor: Yes you do. But you don't want to hurt her anymore. You don't want to hurt anyone.\nSamara: But I do, and I'm sorry. It won't stop."
 
+samaraHorse01,item,Items,"A strange horse"
+samaraHorse01Desc,item,Items,"A strange horse with a date carved in the bottom: Kentucky Derby Champion 1973"
+samaraHorse01_ToolTip_title,item,Items,"Kentucky Derby Champion 1973"
+samaraHorse01_ToolTip,items,Items,"A small engraving adorns the bottom of the small statuette:  \nBreeder: Anna Morgan. \nMoesko Island \nWinner 1973"
+
+samaraHorse02,item,Items,"A strange horse"
+samaraHorse02Desc,item,Items,"A strange horse with a date carved in the bottom: Nakayama Grand Jump 1974"
+samaraHorse02_ToolTip_title,item,Items,"Nakayama Grand Jump 1974"
+samaraHorse02_ToolTip,items,Items,"A small engraving adorns the bottom of the small statuette:  \nBreeder: Richard Morgan. \nMoesko Island \nWinner 1974"
+
+samaraHorse03,item,Items,"A strange horse"
+samaraHorse03Desc,item,Items,"A strange horse with a date carved in the bottom: The Royal Ascot 1976"
+samaraHorse03_ToolTip_title,item,Items,"The Royal Ascot 1976"
+samaraHorse03_ToolTip,items,Items,"A small engraving adorns the bottom of the small statuette:  \nBreeder: Anna Morgan. \nMoesko Island \nWinner 1976"
+
+samaraHorse04,item,Items,"A strange horse"
+samaraHorse04Desc,item,Items,"A strange horse with a date carved in the bottom: Best Of Show 1978"
+
+samaraHorse04_ToolTip_title,item,Items,"Best of Show 1978"
+samaraHorse04_ToolTip,item,Items,"A small engraving adorns the bottom of the small statuette:  Breeder: Richard Morgan. Moesko Island"
+
+samaraMorganBinds_title,item,Items,"You snap the horse into two."
+samaraMorganBinds,item,Items,"Without knowing where the words are coming from, you find yourself uttering the words 'I release this bond of this evil spirit from this world. Back to the dark depths! Begone!'\n\nYou gasp for breath as a chill runs down your spine."
+
+samaraMorganBinds_02_title,item,Items,"You snap the horse into two."
+samaraMorganBinds_02,item,Items,"The horse crumbles in your hands, covering them in a sheen of fine silt. You cough a bit as a small cloud puffs up.\n\nThe silt gets colder as you frantically try to wipe it off your hands. As quickly as it began, the cold sensation fades away. \n\nYou feel like she knows about you now."
+
+samaraMorganBinds_03_title,item,Items,"Her strength is weakened!"
+samaraMorganBinds_03,item,Items,"The horse feels warm in your hands as it slowly liquifies. You try to wipe it off on your hands, but the feeling of warmth grows steadily hotter until your wince in pain.\n\nA flash of heat passes throughout your body. You feel an intense rage that quickly vanishes.\n\nShe's paying attention now."
+
+samaraMorganBinds_04_title,item,Items,"A chill goes down your spine."
+samaraMorganBinds_04,item,Items,"Her binds that ties her to this world has been weakened. But she knows what you are trying to do now.\n\nShe's not happy.\n\nAs the horse figurine crumbles through your worn fingers, a scrap of paper falls out. It's a small map."
+
+samaraMorganBinds_NoCurse_title,item,Items,"Your broke the horse."
+samaraMorganBinds_NoCurse,item,Items,"The horse breaks very easily in your hands."
