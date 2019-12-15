@@ -366,18 +366,39 @@
 
 
     </buff>
+	
+		<buff name="buffSnowSwarm" name_key="buffSnowSwarmName" description_key="buffSnowSwarmDesc" tooltip_key="buffSnowSwarmTooltip" icon="ui_game_symbol_critical" icon_color="255,0,0">
+			<damage_type value="cold"/>
+			<stack_type value="ignore"/>
+			<duration value="0"/>
 
-    <!--	<buff name="buffCurseSamara" name_key="Buff" icon="ui_game_symbol_destruction2" remove_on_death="false" hidden="false">
-      <duration value="10"/>
-      <stack_type value="ignore"/>
-		<effect_group>
-			<triggered_effect trigger="onSelfBuffStart" action="ToggleCamera, Mods" cameraName="Camera, NGUI Camera, CameraNode, WeaponCamera" value="false" />
-		 <triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="#@modfolder:Resources/SamaraCurse.unity3d?Overlay01" parent_transform="CameraNode" local_offset="0,0,0" local_rotation="0,0,0"/>
-			<triggered_effect trigger="onSelfBuffFinish" action="RemovePrefabFromEntity" prefab="#@modfolder:Resources/SamaraCurse.unity3d?Overlay01"/>
-			<triggered_effect trigger="onSelfBuffFinish" action="ToggleCamera, Mods" cameraName="Camera, NGUI Camera, CameraNode, WeaponCamera" value="true" />
-		  </effect_group>
-    </buff> -->
+			<effect_group>
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="buffSnowSwarmAOE"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffSnowSwarmAOE" />
+			</effect_group>
+		</buff>
+		<buff name="buffSnowSwarmAOE" name_key="buffSnowSwarmAOEName" description_key="buffSnowSwarmAOEDesc" tooltip_key="buffSnowSwarmAOETooltip" icon="ui_game_symbol_critical" icon_color="255,0,0" icon_blink="true">
+			<damage_type value="cold"/>
+			<stack_type value="ignore"/>
+			<duration value="0"/>
 
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="otherAOE" range="30" buff="buffFrostbite"/>
+				<requirement name="EntityTagCompare" tags="player"/>
+			</effect_group>
+		</buff>
+
+		<buff name="buffFrostbite" name_key="buffFrostbiteName" description_key="buffFrostbiteDesc" tooltip_key="buffFrostbiteTooltip" icon="ui_game_symbol_critical" icon_color="255,0,0" icon_blink="true">
+			<damage_type value="cold"/>
+			<stack_type value="ignore"/>
+			<duration value="5"/>
+
+			<effect_group>
+				<passive_effect name="HealthChangeOT" operation="base_subtract" value="1,3,5" duration="0,2,4"/>
+				<triggered_effect trigger="onSelfDied" action="RemoveBuff" buff="buffFrostbite"/>
+			</effect_group>
+		</buff>
+		
   </append>
 
   <!--  appends to the update loop             -->

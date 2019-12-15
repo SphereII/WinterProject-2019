@@ -112,6 +112,103 @@
 			<property name="AINoiseSeekDist" value="8"/>
 			<property name="AIPathCostScale" value=".9, .9"/>
 		</entity_class> 
-
+		<entity_class name="SnowShark" extends="animalBear">
+			<property name="Mesh" value="#@modfolder:Resources/SnowShark.unity3d?SnowShark_X" /> 
+			<property name="HandItem" value="handSnowShark"/> 
+			<property name="Tags" value="entity,animal,hostile,perkAT05"/>
+			<property name="AvatarController" value="MecanimSDX, Mods" />
+			<property name="RootMotion" value="false" />
+			<property name="JumpMaxDistance" value="5, 7"/>
+			<property name="AINoiseSeekDist" value="8"/>
+			<property name="AIPathCostScale" value=".6, 1"/>
+			<property name="AITask-1" value="Leap"/>
+			<property name="AITask-2" value="BreakBlock"/>
+			<property name="AITask-3" value="DestroyArea"/>
+			<property name="AITask-4" value="Territorial"/>
+			<property name="AITask-5" value="ApproachAndAttackTarget" data="class=EntityAnimalStag,40,EntityPlayer,25,EntityZombie,30"/>
+			<property name="AITask-6" value="ApproachSpot"/>
+			<property name="AITask-7" value="Look"/>
+			<property name="AITask-8" value="Wander"/>
+			<property name="AITask-9" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/>
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,13,8,EntityAnimalStag,0,0,EntityZombie,0,0"/>
+			<property name="AITarget-4" value=""/>
+			<property name="SoundHurt" value=""/>
+			<property name="SoundDeath" value=""/>
+			<property name="SoundRandom" value="SharkIdle"/>
+			<property name="SoundSense" value="SharkIdle"/>
+			<property name="SoundAlert" value="SharkAlert"/>
+			<property name="SoundAttack" value="SharkAttack"/>
+			<property name="SoundFootstepModifier" value=""/>
+			<property name="SoundGiveUp" value="SharkIdle"/>
+			
+		</entity_class> 
+		<entity_class name="animalSnowSwarm_X" extends="animalZombieVulture">
+			<property name="Tags" value="hostile"/>
+			<property name="Class" value="EntityVulture" />
+			<property name="AvatarController" value="MecanimSDX, Mods" />
+			<property name="ModelType" value="Standard" />
+			<property name="HasRagdoll" value="true" />
+			<property name="PhysicsBody" value="vulture" />
+			<property name="SurfaceCategory" value="organic"/>
+			<property name="Mass" value="10"/>
+			<property name="Mesh" value="#@modfolder:Resources/Swarms.unity3d?SnowSwarm_X" /> 
+		
+			<property name="AttackIndexes" value="0" />
+			<property name="HandItem" value="meleeHandSnowstorm" />
+			<property name="SoundRandom" value="" />
+			<property name="SoundRandomTime" value="60.0"/>
+			<property name="SoundAlert" value=""/>
+			<property name="SoundHurt" value=""/>
+			<property name="SoundDeath" value=""/>
+			<property name="SoundAttack" value=""/>
+			<property name="SoundSense" value=""/>
+			<property name="SoundGiveUp" value=""/>
+			<property name="ExperienceGain" value="1500" />
+			<property name="DeadBodyHitPoints" value="1" />
+			<property name="LootDropProb" value="0"/> 
+			<property name="TimeStayAfterDeath" value="2.0"/>
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="50"/>
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="buffSnowSwarm"/>
+			</effect_group>
+			<property name="MoveSpeed" value=".15"/>
+			<property name="MoveSpeedAggro" value=".6, 1.0"/> <!-- Used when player in vehicle -->
+		</entity_class> 
+		<entity_class name="animalBloodFlySwarm_X" extends="animalZombieVulture">
+			<property name="Tags" value="insect,hostile"/>
+			<property name="Class" value="EntityVulture" />
+			<property name="AvatarController" value="MecanimSDX, Mods" />
+			<property name="ModelType" value="Standard" />
+			<property name="HasRagdoll" value="false" />
+			<property name="PhysicsBody" value="vulture" />
+			<property name="SurfaceCategory" value="organic"/>
+			<property name="Mass" value="10"/>
+			<property name="Mesh" value="#@modfolder:Resources/Swarms.unity3d?Swarm_X" /> 
+			<property name="SizeScale" value="1.0"/>
+			<property name="AttackIndexes" value="0" />
+			<property name="HandItem" value="meleeHandBloodFly" />
+			<property name="SoundRandom" value="" />
+			<property name="SoundRandomTime" value="60.0"/>
+			<property name="SoundAlert" value=""/>
+			<property name="SoundHurt" value=""/>
+			<property name="SoundDeath" value=""/>
+			<property name="SoundAttack" value=""/>
+			<property name="SoundSense" value=""/>
+			<property name="SoundGiveUp" value=""/>
+			<property name="ExperienceGain" value="1500" />
+			<property name="DeadBodyHitPoints" value="1" />
+			<property name="LootDropProb" value="0"/> 
+			<property name="TimeStayAfterDeath" value="2.0"/>
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="10"/>
+			</effect_group>
+			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
+			<drop event="Harvest" name="foodRottingFlesh" tag="butcherHarvest" count="0"/> <!-- animalZombieVulture -->
+			<drop event="Harvest" name="resourceFeather" tag="butcherHarvest" count="0"/>
+			<property name="MoveSpeed" value=".15"/>
+			<property name="MoveSpeedAggro" value=".6, 1.0"/> <!-- Used when player in vehicle -->
+		</entity_class> 
 	</append>
 </configs>
