@@ -1,8 +1,6 @@
 Key,Source,Context,Changes,English,French,German,Klingon,Spanish,Polish
 buffsmallBed,items,Medical,KgNone,Small bed,,,,,
 buffsmallBedDesc,items,Medical,New,A small bed will help you rest up.,,,,,
-snowShovel,items,Tool,KgNone,An sturdy shovel,,,,,
-snowShovelDesc,items,Tool,KgNone,"A sturdy snow shovel, for all our winter shovelling needs.",,,,,
 tutorialTipQuest01,,Quest Info,KeyCon KgNone,"Welcome to the Winter Project\nExplore and try to survive in the frozen landscape of the Winter Project.\n\n-sphereii and xyth",,,,
 foodHoneyFrozen,items,Food,--,Frozen Jar of Honey,,,,,
 foodFrozenDesc,items,Medical,--,"This looks like it's frozen solid. I'll have to thaw it before I can use it.",,,,,

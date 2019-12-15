@@ -56,49 +56,7 @@
         <passive_effect name="DamageModifier" operation="perc_set" value="0" tags="metal"/>
       </effect_group>
     </item>
-    <!--  More Music CDs   -->
-    <item name="audioCD03">
-      <property name="Extends" value="casinoCoin"/>
-      <property name="Meshfile" value="#@modfolder:Resources/MediaCases.unity3d?CDCase03_X" />
-      <property name="HandMeshfile" value="#@modfolder:Resources/MediaCases.unity3d?CDCase03_X"/>
-      <property name="HoldType" value="21"/>
-      <property name="CustomIcon" value="audioCD03" />
-      <property name="Material" value="Mplastics"/>
-      <property name="Stacknumber" value="1"/>
-      <property name="SoundDataNode" value="christmasmusic03" />
-    </item>
-    <item name="audioCD04">
-      <property name="Extends" value="casinoCoin"/>
-      <property name="Meshfile" value="#@modfolder:Resources/MediaCases.unity3d?CDCase04_X" />
-      <property name="HandMeshfile" value="#@modfolder:Resources/MediaCases.unity3d?CDCase04_X"/>
-      <property name="HoldType" value="21"/>
-      <property name="CustomIcon" value="audioCD04" />
-      <property name="Material" value="Mplastics"/>
-      <property name="Stacknumber" value="1"/>
-      <!-- Sound Data node is tied to the Carousol -->
-      <property name="SoundDataNode" value="christmasmusic04" />
-    </item>
-    <item name="audioCD05">
-      <property name="Extends" value="casinoCoin"/>
-      <property name="Meshfile" value="#@modfolder:Resources/MediaCases.unity3d?CDCase05_X" />
-      <property name="HandMeshfile" value="#@modfolder:Resources/MediaCases.unity3d?CDCase05_X"/>
-      <property name="HoldType" value="21"/>
-      <property name="CustomIcon" value="audioCD05" />
-      <property name="Material" value="Mplastics"/>
-      <property name="Stacknumber" value="1"/>
-      <property name="SoundDataNode" value="christmasmusic05" />
-    </item>
-    <item name="audioCD06">
-      <property name="Extends" value="casinoCoin"/>
-      <property name="Meshfile" value="#@modfolder:Resources/MediaCases.unity3d?CDCase06_X" />
-      <property name="HandMeshfile" value="#@modfolder:Resources/MediaCases.unity3d?CDCase06_X"/>
-      <property name="HoldType" value="21"/>
-      <property name="CustomIcon" value="audioCD06" />
-      <property name="Material" value="Mplastics"/>
-      <property name="Stacknumber" value="1"/>
-      <!-- Sound Data node is tied to the Carousol -->
-      <property name="SoundDataNode" value="christmasmusic06" />
-    </item>
+ 
     <item name="CursedCase">
       <property name="HoldType" value="3"/>
       <property name="DisplayType" value="waterCoffee"/>
@@ -244,10 +202,11 @@
       <property name="Extends" value="SamamaMorganDiary01"/>
       <effect_group tiered="false">
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="curseSamaraMorgan" operation="add" value="1"/>
-        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolTipSDX, Mods" message_key="SamaraMorganDiary"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolTipSDX, Mods" message_key="samaraMorganFreed"/>
       </effect_group>
     </item>
 
+    <!-- Resets the Player-->
     <item name="SamaraMorganClear">
       <property name="Extends" value="schematicMaster" />
       <property name="CustomIcon" value="samaraHorse01" />
@@ -259,16 +218,101 @@
         <property name="Sound_start" value="read_skillbook"/>
         <property name="Consume" value="false"/>
         <property name="UseAnimation" value="true"/>
-
       </property>
       <effect_group tiered="false">
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="curseSamaraMorganHorses" operation="set" value="0"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="RemoveBuff" buff="buffCurseSamara"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="curseSamaraMorganPictures" operation="set" value="0"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="CVarLogValue" cvar="curseSamaraMorganHorses"/>
-
       </effect_group>
     </item>
 
+    <item name="SamaraMorganBody">
+      <property name="Extends" value="schematicMaster" />
+        <property name="Model" value="Entities/Misc/body_bagPrefab"/>
+        <property name="DescriptionKey" value="SamaraWell04Desc"/>
+      <property class="Action0">
+        <property name="Class" value="Eat"/>
+        <property name="Delay" value="1.0"/>
+        <property name="Use_time" value="..."/>
+        <property name="Sound_start" value="read_skillbook"/>
+        <property name="Consume" value="true"/>
+      </property>
+      <effect_group tiered="false">
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffCurseSamaraWell"/>
+      </effect_group>
+      </item>
+    
+    <item name="SamaraMemories01">
+      <property name="Extends" value="schematicMaster" />
+      <property name="CustomIcon" value="samaraplasticHairBrush" />
+      <property name="DescriptionKey" value="samaraMemories01Desc" />
+      <property class="Action0">
+        <property name="Class" value="Eat"/>
+        <property name="Delay" value="1.0"/>
+        <property name="Use_time" value="..."/>
+        <property name="Sound_start" value="read_skillbook"/>
+        <property name="Consume" value="true"/>
+      </property>
+      <effect_group tiered="false">
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffCurseSamaraMemories"/>
+      </effect_group>
+    </item>
+    <item name="SamaraMemories02">
+      <property name="Extends" value="schematicMaster" />
+      <property name="CustomIcon" value="samaraplasticHairBrush" />
+      <property name="DescriptionKey" value="samaraMorganMemories02Desc" />
+      <property class="Action0">
+        <property name="Class" value="Eat"/>
+        <property name="Delay" value="1.0"/>
+        <property name="Use_time" value="..."/>
+        <property name="Sound_start" value="read_skillbook"/>
+        <property name="Consume" value="true"/>
+      </property>
+      <effect_group tiered="false">
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffCurseSamaraMemories"/>
+      </effect_group>
+    </item>
+    <item name="SamaraPostCard01">
+      <property name="Extends" value="schematicMaster" />
+      <property name="CustomIcon" value="postCard01" />
+      <property name="DescriptionKey" value="samaraPostcard01Desc" />
+      <property class="Action0">
+        <property name="Class" value="Eat"/>
+        <property name="Delay" value="1.0"/>
+        <property name="Use_time" value="..."/>
+        <property name="Sound_start" value="read_skillbook"/>
+        <property name="Consume" value="true"/>
+      </property>
+      <effect_group tiered="false">
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffCurseSamaraPictures"/>
+      </effect_group>
+    </item>
+    <item name="SamaraPostCard02">
+      <property name="Extends" value="SamaraPostCard01" />
+      <property name="CustomIcon" value="postCard02" />
+      <property name="DescriptionKey" value="SamaraPostCard02Desc" />
+      <effect_group tiered="false">
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffCurseSamaraPictures"/>
+      </effect_group>
+    </item>
+    <item name="SamaraPostCard03">
+      <property name="Extends" value="SamaraPostCard01" />
+      <property name="CustomIcon" value="postCard03" />
+      <property name="DescriptionKey" value="SamaraPostCard03Desc" />
+      <effect_group tiered="false">
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffCurseSamaraPictures"/>
+      </effect_group>
+    </item>
+    <item name="SamaraPostCard04">
+      <property name="Extends" value="SamaraPostCard01" />
+      <property name="CustomIcon" value="postCard04" />
+      <property name="DescriptionKey" value="SamaraPostCard04Desc" />
+      <effect_group tiered="false">
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffCurseSamaraPictures"/>
+      </effect_group>
+    </item>
+    
     <item name="SamaraMorganHorse01">
       <property name="Extends" value="schematicMaster" />
       <property name="CustomIcon" value="samaraHorse01" />

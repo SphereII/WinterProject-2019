@@ -108,20 +108,6 @@
 			<property name="MapIcon" value="ui_game_symbol_bicycle"/>
 		</entity_class>				
 
-		<entity_class name="Parachute">			
-			<property name="Tags" value="vehicle,rest"/>
-			<property name="Class" value="EntityBicycle"/>
-			<property name="Parent" value="Cars"/>
-			<property name="ModelType" value="Standard"/>
-			<property name="SurfaceCategory" value="wood"/>
-			<property name="Prefab" value="#@modfolder:Resources/wip.unity3d?Roller.prefab"/>
-			<property name="IgnoreTrigger" value="true"/>
-			<property name="LootListAlive" value="76"/>
-			<property name="IsEnemyEntity" value="false"/>
-			<property name="RotateToGround" value="true"/>
-			<property name="Faction" value="none"/>
-			<property name="MapIcon" value="ui_game_symbol_bicycle"/>
-		</entity_class>	
-
+	
 	</append>
 </configs>

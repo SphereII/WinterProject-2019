@@ -175,12 +175,21 @@
       <stack_type value="replace"/>
     </buff>
 
-    <buff name="buffCurseSamaraHorses" remove_on_death="true" hidden="true">
+    <!-- This buff is to be used when players activate the horse icons. The intention is that they can activate the horses at any time, and their effect will be different
+    dependeing on the character state: Are thy cursed? What level of a curse do they have?
+    -->
+    <buff name="buffCurseSamaraHorses" remove_on_death="false" hidden="true">
       <duration value="0.1" />
       <stack_type value="ignore"/>
+
+      <!-- If the player isn't cursed, then display a generic message to them. We want the players to know something is unique about them, without
+      telling them exactly what it's for, in case they stumble upon it before they even found out about curses 
+      -->
       <effect_group tiered="false" name="No Curses">
         <requirement name="NotHasBuff" buff="buffCurseSamara"/>
         <triggered_effect trigger="onSelfBuffRemove" action="ShowToolTipSDX, Mods" message_key="samaraMorganBinds_NoCurse" />
+        <!-- Reset the counter, just in case -->
+        <triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="curseSamaraMorganHorses" operation="set" value="0" />
         <triggered_effect trigger="onSelfBuffRemove" action="CVarLogValue" cvar="curseSamaraMorganHorses"/>
         <triggered_effect trigger="onSelfBuffRemove" action="LogMessage" message="No Curse Samara Morgan "/>
       </effect_group>
@@ -188,17 +197,19 @@
       <!-- the cvar checks have to be in reverse order here. Highest number is checked first, rather than starting low than working up, 
       as each effect_group adds to the cvar, updating the cvar number before the next effect_group fires.
       -->
+      <!-- Fourth Horse -->
       <effect_group name="Destroy_4">
         <requirement name="HasBuff" buff="buffCurseSamara"/>
         <requirement name="CVarCompare" target="self" cvar="curseSamaraMorganHorses" operation="Equals" value="3"/>
         <triggered_effect trigger="onSelfBuffRemove" action="PlaySound" sound="buffSamaraScream" />
         <triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="curseSamaraMorganHorses" operation="add" value="1" />
         <triggered_effect trigger="onSelfBuffRemove" action="ShowToolTipSDX, Mods" message_key="samaraMorganBinds_04"/>
-        <triggered_effect trigger="onSelfBuffRemove" action="GiveQuestSDX, Mods" target="self" quest="quest_Samara_Diary02" />
+        <triggered_effect trigger="onSelfBuffRemove" action="GiveQuestSDX, Mods" target="self" quest="quest_Samara_Diary03" />
         <triggered_effect trigger="onSelfBuffRemove" action="CVarLogValue" cvar="curseSamaraMorganHorses"/>
         <triggered_effect trigger="onSelfBuffRemove" action="LogMessage" message="Curse Samara Morgan Level 4"/>
       </effect_group>
 
+      <!-- Third Horse -->
       <effect_group name="Destroy_3">
         <requirement name="HasBuff" buff="buffCurseSamara"/>
         <requirement name="CVarCompare" target="self" cvar="curseSamaraMorganHorses" operation="Equals" value="2"/>
@@ -209,7 +220,7 @@
         <triggered_effect trigger="onSelfBuffRemove" action="LogMessage" message="Curse Samara Morgan Level 3"/>
       </effect_group>
 
-
+      <!-- Second Horse -->
       <effect_group name="Destroy_2">
         <requirement name="HasBuff" buff="buffCurseSamara"/>
         <requirement name="CVarCompare" target="self" cvar="curseSamaraMorganHorses" operation="Equals" value="1"/>
@@ -220,7 +231,7 @@
         <triggered_effect trigger="onSelfBuffRemove" action="LogMessage" message="Curse Samara Morgan Level 2"/>
       </effect_group>
 
-
+      <!-- First horse -->
       <effect_group name="Destroy">
         <requirement name="HasBuff" buff="buffCurseSamara"/>
         <requirement name="CVarCompare" target="self" cvar="curseSamaraMorganHorses" operation="Equals" value="0"/>
@@ -234,6 +245,127 @@
    
     </buff>
 
+    <buff name="buffCurseSamaraWell" remove_on_death="false" hidden="true">
+      <duration value="0.1" />
+      <stack_type value="ignore"/>
+      <effect_group name="Destroy_4">
+        <triggered_effect trigger="onSelfBuffRemove" action="PlaySound" sound="buffSamaraScream" />
+        <triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="curseSamaraMorganTask" operation="set" value="1" />
+        <triggered_effect trigger="onSelfBuffRemove" action="ShowToolTipSDX, Mods" message_key="samaraMorganWell"/>
+        <triggered_effect trigger="onSelfBuffRemove" action="CVarLogValue" cvar="curseSamaraMorganHorses"/>
+        <triggered_effect trigger="onSelfBuffRemove" action="LogMessage" message="Curse Samara Morgan Level 4"/>
+      </effect_group>
+    </buff>
+
+    <buff name="buffCurseSamaraMemories" remove_on_death="false" hidden="true">
+      <duration value="0.1" />
+      <stack_type value="ignore"/>
+
+      <!-- If the player isn't cursed, then display a generic message to them. We want the players to know something is unique about them, without
+      telling them exactly what it's for, in case they stumble upon it before they even found out about curses 
+      -->
+      <effect_group tiered="false" name="No Curses">
+        <requirement name="NotHasBuff" buff="buffCurseSamara"/>
+        <triggered_effect trigger="onSelfBuffRemove" action="ShowToolTipSDX, Mods" message_key="samaraMorganMemoriesBinds_NoCurse" />
+        <!-- Reset the counter, just in case -->
+        <triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="curseSamaraMorganMemories" operation="set" value="0" />
+        <triggered_effect trigger="onSelfBuffRemove" action="CVarLogValue" cvar="curseSamaraMorganMemories"/>
+        <triggered_effect trigger="onSelfBuffRemove" action="LogMessage" message="No Curse Samara Morgan "/>
+      </effect_group>
+
+      <!-- the cvar checks have to be in reverse order here. Highest number is checked first, rather than starting low than working up, 
+      as each effect_group adds to the cvar, updating the cvar number before the next effect_group fires.
+      -->
+      <effect_group name="Destroy_2">
+        <requirement name="HasBuff" buff="buffCurseSamara"/>
+        <requirement name="CVarCompare" target="self" cvar="curseSamaraMorganMemories" operation="Equals" value="1"/>
+        <triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="curseSamaraMorganMemories" operation="add" value="1" />
+        <triggered_effect trigger="onSelfBuffRemove" action="PlaySound" sound="buffSamaraScream" />
+        <triggered_effect trigger="onSelfBuffRemove" action="ShowToolTipSDX, Mods" message_key="samaraMorganMemories02_ToolTip"/>
+        <triggered_effect trigger="onSelfBuffRemove" action="GiveQuestSDX, Mods" target="self" quest="quest_Samara_Diary04" />
+
+        <triggered_effect trigger="onSelfBuffRemove" action="CVarLogValue" cvar="curseSamaraMorganMemories"/>
+        <triggered_effect trigger="onSelfBuffRemove" action="LogMessage" message="Curse Samara Morgan Level 2"/>
+      </effect_group>
+
+      <effect_group name="Destroy">
+        <requirement name="HasBuff" buff="buffCurseSamara"/>
+        <requirement name="CVarCompare" target="self" cvar="curseSamaraMorganMemories" operation="Equals" value="0"/>
+        <triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="curseSamaraMorganMemories" operation="add" value="1" />
+        <triggered_effect trigger="onSelfBuffRemove" action="PlaySound" sound="buffSamaraScream" />
+        <triggered_effect trigger="onSelfBuffRemove" action="ShowToolTipSDX, Mods" message_key="samaraMorganMemories01_ToolTip"/>
+        <triggered_effect trigger="onSelfBuffRemove" action="CVarLogValue" cvar="curseSamaraMorganMemories"/>
+        <triggered_effect trigger="onSelfBuffRemove" action="LogMessage" message="Curse Samara Morgan Level 1"/>
+      </effect_group>
+
+
+    </buff>
+    <buff name="buffCurseSamaraPictures" remove_on_death="false" hidden="true">
+      <duration value="0.1" />
+      <stack_type value="ignore"/>
+
+      <!-- If the player isn't cursed, then display a generic message to them. We want the players to know something is unique about them, without
+      telling them exactly what it's for, in case they stumble upon it before they even found out about curses 
+      -->
+      <effect_group tiered="false" name="No Curses">
+        <requirement name="NotHasBuff" buff="buffCurseSamara"/>
+        <triggered_effect trigger="onSelfBuffRemove" action="ShowToolTipSDX, Mods" message_key="samaraMorganPictureBinds_NoCurse" />
+        <!-- Reset the counter, just in case -->
+        <triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="curseSamaraMorganPictures" operation="set" value="0" />
+        <triggered_effect trigger="onSelfBuffRemove" action="CVarLogValue" cvar="curseSamaraMorganPictures"/>
+        <triggered_effect trigger="onSelfBuffRemove" action="LogMessage" message="No Curse Samara Morgan "/>
+      </effect_group>
+
+      <!-- the cvar checks have to be in reverse order here. Highest number is checked first, rather than starting low than working up, 
+      as each effect_group adds to the cvar, updating the cvar number before the next effect_group fires.
+      -->
+      <!-- Fourth Horse -->
+      <effect_group name="Destroy_4">
+        <requirement name="HasBuff" buff="buffCurseSamara"/>
+        <requirement name="CVarCompare" target="self" cvar="curseSamaraMorganPictures" operation="Equals" value="3"/>
+        <triggered_effect trigger="onSelfBuffRemove" action="PlaySound" sound="buffSamaraScream" />
+        <triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="curseSamaraMorganPictures" operation="add" value="1" />
+        <triggered_effect trigger="onSelfBuffRemove" action="ShowToolTipSDX, Mods" message_key="samaraPostcard04_ToolTip"/>
+        <triggered_effect trigger="onSelfBuffRemove" action="GiveQuestSDX, Mods" target="self" quest="quest_Samara_Diary02" />
+        <triggered_effect trigger="onSelfBuffRemove" action="CVarLogValue" cvar="curseSamaraMorganPictures"/>
+        <triggered_effect trigger="onSelfBuffRemove" action="LogMessage" message="Curse Samara Morgan Level 4"/>
+      </effect_group>
+
+      <!-- Third Horse -->
+      <effect_group name="Destroy_3">
+        <requirement name="HasBuff" buff="buffCurseSamara"/>
+        <requirement name="CVarCompare" target="self" cvar="curseSamaraMorganPictures" operation="Equals" value="2"/>
+        <triggered_effect trigger="onSelfBuffRemove" action="PlaySound" sound="buffSamaraScream" />
+        <triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="curseSamaraMorganPictures" operation="add" value="1" />
+        <triggered_effect trigger="onSelfBuffRemove" action="ShowToolTipSDX, Mods" message_key="samaraPostcard03_ToolTip"/>
+        <triggered_effect trigger="onSelfBuffRemove" action="CVarLogValue" cvar="curseSamaraMorganPictures"/>
+        <triggered_effect trigger="onSelfBuffRemove" action="LogMessage" message="Curse Samara Morgan Level 3"/>
+      </effect_group>
+
+      <!-- Second Horse -->
+      <effect_group name="Destroy_2">
+        <requirement name="HasBuff" buff="buffCurseSamara"/>
+        <requirement name="CVarCompare" target="self" cvar="curseSamaraMorganPictures" operation="Equals" value="1"/>
+        <triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="curseSamaraMorganPictures" operation="add" value="1" />
+        <triggered_effect trigger="onSelfBuffRemove" action="PlaySound" sound="buffSamaraScream" />
+        <triggered_effect trigger="onSelfBuffRemove" action="ShowToolTipSDX, Mods" message_key="samaraPostcard02_ToolTip"/>
+        <triggered_effect trigger="onSelfBuffRemove" action="CVarLogValue" cvar="curseSamaraMorganPictures"/>
+        <triggered_effect trigger="onSelfBuffRemove" action="LogMessage" message="Curse Samara Morgan Level 2"/>
+      </effect_group>
+
+      <!-- First horse -->
+      <effect_group name="Destroy">
+        <requirement name="HasBuff" buff="buffCurseSamara"/>
+        <requirement name="CVarCompare" target="self" cvar="curseSamaraMorganPictures" operation="Equals" value="0"/>
+        <triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="curseSamaraMorganPictures" operation="add" value="1" />
+        <triggered_effect trigger="onSelfBuffRemove" action="PlaySound" sound="buffSamaraScream" />
+        <triggered_effect trigger="onSelfBuffRemove" action="ShowToolTipSDX, Mods" message_key="samaraPostcard01_ToolTip"/>
+        <triggered_effect trigger="onSelfBuffRemove" action="CVarLogValue" cvar="curseSamaraMorganPictures"/>
+        <triggered_effect trigger="onSelfBuffRemove" action="LogMessage" message="Curse Samara Morgan Level 1"/>
+      </effect_group>
+
+
+    </buff>
 
     <!--	<buff name="buffCurseSamara" name_key="Buff" icon="ui_game_symbol_destruction2" remove_on_death="false" hidden="false">
       <duration value="10"/>

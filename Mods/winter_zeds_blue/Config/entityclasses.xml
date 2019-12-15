@@ -1,232 +1,183 @@
 <?xml version="1.0"?>
 <configs>
-  <append xpath="/entity_classes">
-
-    <entity_class name="zombieArlene_blue" extends="zombieArlene">
-      <property name="ReplaceMaterial0" value="#@modfolder:Resources/winter_zeds_blue1.unity3d?arlene_blue"/>
-      <property name="ReplaceMaterial1" value="#@modfolder:Resources/winter_zeds_blue3.unity3d?zhair_blue"/>
-      <property name="ReplaceMaterial2" value="#@modfolder:Resources/winter_zeds_blue3.unity3d?zeye_blue"/>
-      <property name="ReplaceMaterial3" value="#@modfolder:Resources/winter_zeds_blue3.unity3d?zeye_blue"/>
-    </entity_class>
-
-    <entity_class name="animalBear_blue" extends="animalBear">
-      <property name="ReplaceMaterial0" value="#@modfolder:Resources/winter_zeds_blue1.unity3d?bear_blue"/>
-    </entity_class>
-
-    <entity_class name="zombieBiker_blue" extends="zombieBiker">
-      <property name="ReplaceMaterial0" value="#@modfolder:Resources/winter_zeds_blue1.unity3d?biker_blue"/>
-      <property name="ReplaceMaterial1" value="#@modfolder:Resources/winter_zeds_blue3.unity3d?zeye_blue"/>
-      <property name="ReplaceMaterial2" value="#@modfolder:Resources/winter_zeds_blue3.unity3d?zhair_blue"/>
-    </entity_class>
-
-    <entity_class name="animalBoar_blue" extends="animalBoar">
-      <property name="ReplaceMaterial0" value="#@modfolder:Resources/winter_zeds_blue1.unity3d?boar_blue"/>
-    </entity_class>
-
-    <entity_class name="zombieBoe_blue" extends="zombieBoe">
-      <property name="ReplaceMaterial0" value="#@modfolder:Resources/winter_zeds_blue1.unity3d?boe_blue"/>
-      <property name="ReplaceMaterial1" value="#@modfolder:Resources/winter_zeds_blue3.unity3d?zeye_blue"/>
-    </entity_class>
-
-    <entity_class name="zombieBurnt_blue" extends="zombieBurnt">
-      <property name="ReplaceMaterial0" value="#@modfolder:Resources/winter_zeds_blue1.unity3d?burnt_blue"/>
-    </entity_class>
-
-    <entity_class name="zombieCheerleader_blue" extends="zombieCheerleader">
-      <property name="ReplaceMaterial0" value="#@modfolder:Resources/winter_zeds_blue1.unity3d?cheerleader_blue"/>
-      <property name="ReplaceMaterial1" value="#@modfolder:Resources/winter_zeds_blue3.unity3d?zeye_blue"/>
-      <property name="ReplaceMaterial2" value="#@modfolder:Resources/winter_zeds_blue3.unity3d?zhair_blue"/>
-    </entity_class>
-
-    <entity_class name="animalChicken_blue" extends="animalChicken">
-      <property name="ReplaceMaterial0" value="#@modfolder:Resources/winter_zeds_blue1.unity3d?chicken_blue"/>
-    </entity_class>
-
-    <entity_class name="animalCoyote_blue" extends="animalCoyote">
-      <property name="ReplaceMaterial0" value="#@modfolder:Resources/winter_zeds_blue1.unity3d?coyote_blue"/>
-    </entity_class>
-
-    <entity_class name="zombieDemolition_blue" extends="zombieDemolition">
-      <property name="ReplaceMaterial0" value="#@modfolder:Resources/winter_zeds_blue1.unity3d?demolition_blue"/>
-    </entity_class>
-
-    <entity_class name="animalDireWolf_blue" extends="animalDireWolf">
-      <property name="ReplaceMaterial0" value="#@modfolder:Resources/winter_zeds_blue1.unity3d?direwolf_blue"/>
-    </entity_class>
-
-    <entity_class name="animalDoe_blue" extends="animalDoe">
-      <property name="ReplaceMaterial0" value="#@modfolder:Resources/winter_zeds_blue1.unity3d?doe_blue"/>
-    </entity_class>
-
-    <entity_class name="zombieFarmer_blue" extends="zombieFarmer">
-      <property name="ReplaceMaterial0" value="#@modfolder:Resources/winter_zeds_blue1.unity3d?farmer_blue"/>
-      <property name="ReplaceMaterial1" value="#@modfolder:Resources/winter_zeds_blue3.unity3d?zhair_blue"/>
-      <property name="ReplaceMaterial2" value="#@modfolder:Resources/winter_zeds_blue3.unity3d?zeye_blue"/>
-    </entity_class>
-
-    <entity_class name="zombieFatCop_blue" extends="zombieFatCop">
-      <property name="ReplaceMaterial0" value="#@modfolder:Resources/winter_zeds_blue1.unity3d?fatcop_blue"/>
-      <property name="ReplaceMaterial1" value="#@modfolder:Resources/winter_zeds_blue3.unity3d?zeye_blue"/>
-    </entity_class>
-
-    <entity_class name="zombieFemaleFat_blue" extends="zombieFemaleFat">
-      <property name="ReplaceMaterial0" value="#@modfolder:Resources/winter_zeds_blue1.unity3d?fatlady_blue"/>
-      <property name="ReplaceMaterial1" value="#@modfolder:Resources/winter_zeds_blue3.unity3d?zeye_blue"/>
-      <property name="ReplaceMaterial2" value="#@modfolder:Resources/winter_zeds_blue3.unity3d?zhair_blue"/>
-    </entity_class>
-
-    <entity_class name="zombieFatHawaiian_blue" extends="zombieFatHawaiian">
-      <property name="ReplaceMaterial0" value="#@modfolder:Resources/winter_zeds_blue2.unity3d?fattourist_blue"/>
-      <property name="ReplaceMaterial1" value="#@modfolder:Resources/winter_zeds_blue3.unity3d?zeye_blue"/>
-    </entity_class>
-
-    <entity_class name="zombieWightFeral_blue" extends="zombieWightFeral">
-      <property name="ReplaceMaterial0" value="#@modfolder:Resources/winter_zeds_blue2.unity3d?feral_blue"/>
-      <property name="ReplaceMaterial1" value="#@modfolder:Resources/winter_zeds_blue3.unity3d?zeye_blue"/>
-    </entity_class>
-
-    <entity_class name="zombieFootballPlayer_blue" extends="zombieFootballPlayer">
-      <property name="ReplaceMaterial0" value="#@modfolder:Resources/winter_zeds_blue2.unity3d?football_blue"/>
-      <property name="ReplaceMaterial1" value="#@modfolder:Resources/winter_zeds_blue3.unity3d?zeye_blue"/>
-    </entity_class>
-
-    <entity_class name="zombieMaleHazmat_blue" extends="zombieMaleHazmat">
-      <property name="ReplaceMaterial0" value="#@modfolder:Resources/winter_zeds_blue2.unity3d?hazmat_blue"/>
-      <property name="ReplaceMaterial1" value="#@modfolder:Resources/winter_zeds_blue3.unity3d?zeye_blue"/>
-    </entity_class>
-
-    <entity_class name="zombieSkateboarder_blue" extends="zombieSkateboarder">
-      <property name="ReplaceMaterial0" value="#@modfolder:Resources/winter_zeds_blue2.unity3d?hoodie_blue"/>
-      <property name="ReplaceMaterial1" value="#@modfolder:Resources/winter_zeds_blue3.unity3d?zeye_blue"/>
-    </entity_class>
-
-    <entity_class name="zombieJoe_blue" extends="zombieJoe">
-      <property name="ReplaceMaterial0" value="#@modfolder:Resources/winter_zeds_blue2.unity3d?joe_blue"/>
-      <property name="ReplaceMaterial1" value="#@modfolder:Resources/winter_zeds_blue3.unity3d?zmouth_blue"/>
-      <property name="ReplaceMaterial2" value="#@modfolder:Resources/winter_zeds_blue3.unity3d?zhair_blue"/>
-      <property name="ReplaceMaterial3" value="#@modfolder:Resources/winter_zeds_blue3.unity3d?zeye_blue"/>
-    </entity_class>
-
-    <entity_class name="zombieLab_blue" extends="zombieLab">
-      <property name="ReplaceMaterial0" value="#@modfolder:Resources/winter_zeds_blue2.unity3d?lab_blue"/>
-      <property name="ReplaceMaterial1" value="#@modfolder:Resources/winter_zeds_blue3.unity3d?zeye_blue"/>
-      <property name="ReplaceMaterial2" value="#@modfolder:Resources/winter_zeds_blue3.unity3d?zhair_blue"/>
-    </entity_class>
-
-    <entity_class name="zombieMarlene_blue" extends="zombieMarlene">
-      <property name="ReplaceMaterial0" value="#@modfolder:Resources/winter_zeds_blue2.unity3d?marlene_blue"/>
-      <property name="ReplaceMaterial1" value="#@modfolder:Resources/winter_zeds_blue3.unity3d?zeye_blue"/>
-      <property name="ReplaceMaterial2" value="#@modfolder:Resources/winter_zeds_blue3.unity3d?zhair_blue"/>
-    </entity_class>
-
-    <entity_class name="zombieMoe_blue" extends="zombieMoe">
-      <property name="ReplaceMaterial0" value="#@modfolder:Resources/winter_zeds_blue2.unity3d?moe_blue"/>
-      <property name="ReplaceMaterial1" value="#@modfolder:Resources/winter_zeds_blue3.unity3d?zeye_blue"/>
-      <property name="ReplaceMaterial2" value="#@modfolder:Resources/winter_zeds_blue3.unity3d?zhair_blue"/>
-    </entity_class>
-
-    <entity_class name="animalMountainLion_blue" extends="animalMountainLion">
-      <property name="ReplaceMaterial0" value="#@modfolder:Resources/winter_zeds_blue2.unity3d?mountainlion_blue"/>
-    </entity_class>
-
-    <entity_class name="zombieNurse_blue" extends="zombieNurse">
-      <property name="ReplaceMaterial0" value="#@modfolder:Resources/winter_zeds_blue2.unity3d?nurse_blue"/>
-      <property name="ReplaceMaterial1" value="#@modfolder:Resources/winter_zeds_blue3.unity3d?zeye_blue"/>
-    </entity_class>
-
-    <entity_class name="zombieOldTimer_blue" extends="zombieOldTimer">
-      <property name="ReplaceMaterial0" value="#@modfolder:Resources/winter_zeds_blue2.unity3d?oldtimer_blue"/>
-      <property name="ReplaceMaterial1" value="#@modfolder:Resources/winter_zeds_blue3.unity3d?zeye_blue"/>
-      <property name="ReplaceMaterial2" value="#@modfolder:Resources/winter_zeds_blue3.unity3d?zhair_blue"/>
-    </entity_class>
-
-    <entity_class name="animalRabbit_blue" extends="animalRabbit">
-      <property name="ReplaceMaterial0" value="#@modfolder:Resources/winter_zeds_blue2.unity3d?rabbit_blue"/>
-    </entity_class>
-
-    <entity_class name="zombieScreamer_blue" extends="zombieScreamer">
-      <property name="ReplaceMaterial0" value="#@modfolder:Resources/winter_zeds_blue2.unity3d?screamer_blue"/>
-      <property name="ReplaceMaterial1" value="#@modfolder:Resources/winter_zeds_blue3.unity3d?zeye_blue"/>
-      <property name="ReplaceMaterial2" value="#@modfolder:Resources/winter_zeds_blue3.unity3d?zlonghair_blue"/>
-    </entity_class>
-
-    <entity_class name="animalSnake_blue" extends="animalSnake">
-      <property name="ReplaceMaterial0" value="#@modfolder:Resources/winter_zeds_blue2.unity3d?snake_blue"/>
-    </entity_class>
-
-    <entity_class name="zombieSnow_blue" extends="zombieSnow">
-      <property name="ReplaceMaterial0" value="#@modfolder:Resources/winter_zeds_blue3.unity3d?snowman_blue"/>
-      <property name="ReplaceMaterial1" value="#@modfolder:Resources/winter_zeds_blue3.unity3d?zeye_blue"/>
-    </entity_class>
-
-    <entity_class name="zombieSoldier_blue" extends="zombieSoldier">
-      <property name="ReplaceMaterial0" value="#@modfolder:Resources/winter_zeds_blue3.unity3d?zeye_blue"/>
-      <property name="ReplaceMaterial1" value="#@modfolder:Resources/winter_zeds_blue3.unity3d?soldier_blue"/>
-    </entity_class>
-
-    <entity_class name="zombieSpider_blue" extends="zombieSpider">
-      <property name="ReplaceMaterial0" value="#@modfolder:Resources/winter_zeds_blue3.unity3d?spider_blue"/>
-      <property name="ReplaceMaterial1" value="#@modfolder:Resources/winter_zeds_blue3.unity3d?zeye_blue"/>
-    </entity_class>
-
-    <entity_class name="animalStag_blue" extends="animalStag">
-      <property name="ReplaceMaterial0" value="#@modfolder:Resources/winter_zeds_blue3.unity3d?stag_blue"/>
-    </entity_class>
-
-    <entity_class name="zombieSteve_blue" extends="zombieSteve">
-      <property name="ReplaceMaterial0" value="#@modfolder:Resources/winter_zeds_blue3.unity3d?steve_blue"/>
-      <property name="ReplaceMaterial1" value="#@modfolder:Resources/winter_zeds_blue3.unity3d?zeye_blue"/>
-      <property name="ReplaceMaterial2" value="#@modfolder:Resources/winter_zeds_blue3.unity3d?zhair_blue"/>
-    </entity_class>
-
-    <entity_class name="zombieStripper_blue" extends="zombieStripper">
-      <property name="ReplaceMaterial0" value="#@modfolder:Resources/winter_zeds_blue3.unity3d?stripper_blue"/>
-      <property name="ReplaceMaterial1" value="#@modfolder:Resources/winter_zeds_blue3.unity3d?zeye_blue"/>
-      <property name="ReplaceMaterial2" value="#@modfolder:Resources/winter_zeds_blue3.unity3d?zhair_blue"/>
-    </entity_class>
-
-    <entity_class name="zombieBusinessMan_blue" extends="zombieBusinessMan">
-      <property name="ReplaceMaterial0" value="#@modfolder:Resources/winter_zeds_blue3.unity3d?suit_blue"/>
-      <property name="ReplaceMaterial1" value="#@modfolder:Resources/winter_zeds_blue3.unity3d?zhair_blue"/>
-      <property name="ReplaceMaterial2" value="#@modfolder:Resources/winter_zeds_blue3.unity3d?zeye_blue"/>
-    </entity_class>
-
-    <entity_class name="animalZombieVulture_blue" extends="animalZombieVulture">
-      <property name="ReplaceMaterial0" value="#@modfolder:Resources/winter_zeds_blue3.unity3d?vulture_blue"/>
-    </entity_class>
-
-    <entity_class name="animalWolf_blue" extends="animalWolf">
-      <property name="ReplaceMaterial0" value="#@modfolder:Resources/winter_zeds_blue3.unity3d?wolf_blue"/>
-    </entity_class>
-
-    <entity_class name="zombieUtilityWorker_blue" extends="zombieUtilityWorker">
-      <property name="ReplaceMaterial0" value="#@modfolder:Resources/winter_zeds_blue3.unity3d?worker_blue"/>
-      <property name="ReplaceMaterial1" value="#@modfolder:Resources/winter_zeds_blue3.unity3d?zeye_blue"/>
-      <property name="ReplaceMaterial2" value="#@modfolder:Resources/winter_zeds_blue3.unity3d?zhair_blue"/>
-    </entity_class>
-
-    <entity_class name="zombieYo_blue" extends="zombieYo">
-      <property name="ReplaceMaterial0" value="#@modfolder:Resources/winter_zeds_blue3.unity3d?yo_blue"/>
-      <property name="ReplaceMaterial1" value="#@modfolder:Resources/winter_zeds_blue3.unity3d?zeye_blue"/>
-      <property name="ReplaceMaterial2" value="#@modfolder:Resources/winter_zeds_blue3.unity3d?zhair_blue"/>
-    </entity_class>
-
-    <entity_class name="animalZombieBear_blue" extends="animalZombieBear">
-      <property name="ReplaceMaterial0" value="#@modfolder:Resources/winter_zeds_blue3.unity3d?zbear_blue"/>
-    </entity_class>
-
-    <entity_class name="animalBossGrace_blue" extends="animalBossGrace">
-      <property name="ReplaceMaterial0" value="#@modfolder:Resources/winter_zeds_blue3.unity3d?zboar_blue"/>
-    </entity_class>
-
-    <entity_class name="animalZombieDog_blue" extends="animalZombieDog">
-      <property name="ReplaceMaterial0" value="#@modfolder:Resources/winter_zeds_blue3.unity3d?zdog_blue"/>
-    </entity_class>
-
-    <entity_class name="animalZombieWolf_blue" extends="animalDireWolf_blue">
-      <property name="ReplaceMaterial0" value="#@modfolder:Resources/winter_zeds_blue3.unity3d?zwolf_blue"/>
-    </entity_class>
-
-
+  <append xpath="//entity_class[@name='zombieArlene']">
+    <property name="ReplaceMaterial0" value="#@modfolder:Resources/winter_zeds_blue1.unity3d?arlene_blue"/>
+    <property name="ReplaceMaterial1" value="#@modfolder:Resources/winter_zeds_blue3.unity3d?zhair_blue"/>
+    <property name="ReplaceMaterial2" value="#@modfolder:Resources/winter_zeds_blue3.unity3d?zeye_blue"/>
+    <property name="ReplaceMaterial3" value="#@modfolder:Resources/winter_zeds_blue3.unity3d?zeye_blue"/>
+  </append>
+  <append xpath="//entity_class[@name='animalBear']">
+    <property name="ReplaceMaterial0" value="#@modfolder:Resources/winter_zeds_blue1.unity3d?bear_blue"/>
+  </append>
+  <append xpath="//entity_class[@name='zombieBiker']">
+    <property name="ReplaceMaterial0" value="#@modfolder:Resources/winter_zeds_blue1.unity3d?biker_blue"/>
+    <property name="ReplaceMaterial1" value="#@modfolder:Resources/winter_zeds_blue3.unity3d?zeye_blue"/>
+    <property name="ReplaceMaterial2" value="#@modfolder:Resources/winter_zeds_blue3.unity3d?zhair_blue"/>
+  </append>
+  <append xpath="//entity_class[@name='animalBoar']">
+    <property name="ReplaceMaterial0" value="#@modfolder:Resources/winter_zeds_blue1.unity3d?boar_blue"/>
+  </append>
+  <append xpath="//entity_class[@name='zombieBoe']">
+    <property name="ReplaceMaterial0" value="#@modfolder:Resources/winter_zeds_blue1.unity3d?boe_blue"/>
+    <property name="ReplaceMaterial1" value="#@modfolder:Resources/winter_zeds_blue3.unity3d?zeye_blue"/>
+  </append>
+  <append xpath="//entity_class[@name='zombieBurnt']">
+    <property name="ReplaceMaterial0" value="#@modfolder:Resources/winter_zeds_blue1.unity3d?burnt_blue"/>
+  </append>
+  <append xpath="//entity_class[@name='zombieCheerleader']">
+    <property name="ReplaceMaterial0" value="#@modfolder:Resources/winter_zeds_blue1.unity3d?cheerleader_blue"/>
+    <property name="ReplaceMaterial1" value="#@modfolder:Resources/winter_zeds_blue3.unity3d?zeye_blue"/>
+    <property name="ReplaceMaterial2" value="#@modfolder:Resources/winter_zeds_blue3.unity3d?zhair_blue"/>
+  </append>
+  <append xpath="//entity_class[@name='animalChicken']">
+    <property name="ReplaceMaterial0" value="#@modfolder:Resources/winter_zeds_blue1.unity3d?chicken_blue"/>
+  </append>
+  <append xpath="//entity_class[@name='animalCoyote']">
+    <property name="ReplaceMaterial0" value="#@modfolder:Resources/winter_zeds_blue1.unity3d?coyote_blue"/>
+  </append>
+  <append xpath="//entity_class[@name='zombieDemolition']">
+    <property name="ReplaceMaterial0" value="#@modfolder:Resources/winter_zeds_blue1.unity3d?demolition_blue"/>
+  </append>
+  <append xpath="//entity_class[@name='animalDireWolf']">
+    <property name="ReplaceMaterial0" value="#@modfolder:Resources/winter_zeds_blue1.unity3d?direwolf_blue"/>
+  </append>
+  <append xpath="//entity_class[@name='animalDoe']">
+    <property name="ReplaceMaterial0" value="#@modfolder:Resources/winter_zeds_blue1.unity3d?doe_blue"/>
+  </append>
+  <append xpath="//entity_class[@name='zombieFarmer']">
+    <property name="ReplaceMaterial0" value="#@modfolder:Resources/winter_zeds_blue1.unity3d?farmer_blue"/>
+    <property name="ReplaceMaterial1" value="#@modfolder:Resources/winter_zeds_blue3.unity3d?zhair_blue"/>
+    <property name="ReplaceMaterial2" value="#@modfolder:Resources/winter_zeds_blue3.unity3d?zeye_blue"/>
+  </append>
+  <append xpath="//entity_class[@name='zombieFatCop']">
+    <property name="ReplaceMaterial0" value="#@modfolder:Resources/winter_zeds_blue1.unity3d?fatcop_blue"/>
+    <property name="ReplaceMaterial1" value="#@modfolder:Resources/winter_zeds_blue3.unity3d?zeye_blue"/>
+  </append>
+  <append xpath="//entity_class[@name='zombieFemaleFat']">
+    <property name="ReplaceMaterial0" value="#@modfolder:Resources/winter_zeds_blue1.unity3d?fatlady_blue"/>
+    <property name="ReplaceMaterial1" value="#@modfolder:Resources/winter_zeds_blue3.unity3d?zeye_blue"/>
+    <property name="ReplaceMaterial2" value="#@modfolder:Resources/winter_zeds_blue3.unity3d?zhair_blue"/>
+  </append>
+  <append xpath="//entity_class[@name='zombieFatHawaiian']">
+    <property name="ReplaceMaterial0" value="#@modfolder:Resources/winter_zeds_blue2.unity3d?fattourist_blue"/>
+    <property name="ReplaceMaterial1" value="#@modfolder:Resources/winter_zeds_blue3.unity3d?zeye_blue"/>
+  </append>
+  <append xpath="//entity_class[@name='zombieWightFeral']">
+    <property name="ReplaceMaterial0" value="#@modfolder:Resources/winter_zeds_blue2.unity3d?feral_blue"/>
+    <property name="ReplaceMaterial1" value="#@modfolder:Resources/winter_zeds_blue3.unity3d?zeye_blue"/>
+  </append>
+  <append xpath="//entity_class[@name='zombieFootballPlayer']">
+    <property name="ReplaceMaterial0" value="#@modfolder:Resources/winter_zeds_blue2.unity3d?football_blue"/>
+    <property name="ReplaceMaterial1" value="#@modfolder:Resources/winter_zeds_blue3.unity3d?zeye_blue"/>
+  </append>
+  <append xpath="//entity_class[@name='zombieMaleHazmat']">
+    <property name="ReplaceMaterial0" value="#@modfolder:Resources/winter_zeds_blue2.unity3d?hazmat_blue"/>
+    <property name="ReplaceMaterial1" value="#@modfolder:Resources/winter_zeds_blue3.unity3d?zeye_blue"/>
+  </append>
+  <append xpath="//entity_class[@name='zombieSkateboarder']">
+    <property name="ReplaceMaterial0" value="#@modfolder:Resources/winter_zeds_blue2.unity3d?hoodie_blue"/>
+    <property name="ReplaceMaterial1" value="#@modfolder:Resources/winter_zeds_blue3.unity3d?zeye_blue"/>
+  </append>
+  <append xpath="//entity_class[@name='zombieJoe']">
+    <property name="ReplaceMaterial0" value="#@modfolder:Resources/winter_zeds_blue2.unity3d?joe_blue"/>
+    <property name="ReplaceMaterial1" value="#@modfolder:Resources/winter_zeds_blue3.unity3d?zmouth_blue"/>
+    <property name="ReplaceMaterial2" value="#@modfolder:Resources/winter_zeds_blue3.unity3d?zhair_blue"/>
+    <property name="ReplaceMaterial3" value="#@modfolder:Resources/winter_zeds_blue3.unity3d?zeye_blue"/>
+  </append>
+  <append xpath="//entity_class[@name='zombieLab']">
+    <property name="ReplaceMaterial0" value="#@modfolder:Resources/winter_zeds_blue2.unity3d?lab_blue"/>
+    <property name="ReplaceMaterial1" value="#@modfolder:Resources/winter_zeds_blue3.unity3d?zeye_blue"/>
+    <property name="ReplaceMaterial2" value="#@modfolder:Resources/winter_zeds_blue3.unity3d?zhair_blue"/>
+  </append>
+  <append xpath="//entity_class[@name='zombieMarlene']">
+    <property name="ReplaceMaterial0" value="#@modfolder:Resources/winter_zeds_blue2.unity3d?marlene_blue"/>
+    <property name="ReplaceMaterial1" value="#@modfolder:Resources/winter_zeds_blue3.unity3d?zeye_blue"/>
+    <property name="ReplaceMaterial2" value="#@modfolder:Resources/winter_zeds_blue3.unity3d?zhair_blue"/>
+  </append>
+  <append xpath="//entity_class[@name='zombieMoe']">
+    <property name="ReplaceMaterial0" value="#@modfolder:Resources/winter_zeds_blue2.unity3d?moe_blue"/>
+    <property name="ReplaceMaterial1" value="#@modfolder:Resources/winter_zeds_blue3.unity3d?zeye_blue"/>
+    <property name="ReplaceMaterial2" value="#@modfolder:Resources/winter_zeds_blue3.unity3d?zhair_blue"/>
+  </append>
+  <append xpath="//entity_class[@name='animalMountainLion']">
+    <property name="ReplaceMaterial0" value="#@modfolder:Resources/winter_zeds_blue2.unity3d?mountainlion_blue"/>
+  </append>
+  <append xpath="//entity_class[@name='zombieNurse']">
+    <property name="ReplaceMaterial0" value="#@modfolder:Resources/winter_zeds_blue2.unity3d?nurse_blue"/>
+    <property name="ReplaceMaterial1" value="#@modfolder:Resources/winter_zeds_blue3.unity3d?zeye_blue"/>
+  </append>
+  <append xpath="//entity_class[@name='zombieOldTimer']">
+    <property name="ReplaceMaterial0" value="#@modfolder:Resources/winter_zeds_blue2.unity3d?oldtimer_blue"/>
+    <property name="ReplaceMaterial1" value="#@modfolder:Resources/winter_zeds_blue3.unity3d?zeye_blue"/>
+    <property name="ReplaceMaterial2" value="#@modfolder:Resources/winter_zeds_blue3.unity3d?zhair_blue"/>
+  </append>
+  <append xpath="//entity_class[@name='animalRabbit']">
+    <property name="ReplaceMaterial0" value="#@modfolder:Resources/winter_zeds_blue2.unity3d?rabbit_blue"/>
+  </append>
+  <append xpath="//entity_class[@name='zombieScreamer']">
+    <property name="ReplaceMaterial0" value="#@modfolder:Resources/winter_zeds_blue2.unity3d?screamer_blue"/>
+    <property name="ReplaceMaterial1" value="#@modfolder:Resources/winter_zeds_blue3.unity3d?zeye_blue"/>
+    <property name="ReplaceMaterial2" value="#@modfolder:Resources/winter_zeds_blue3.unity3d?zlonghair_blue"/>
+  </append>
+  <append xpath="//entity_class[@name='animalSnake']">
+    <property name="ReplaceMaterial0" value="#@modfolder:Resources/winter_zeds_blue2.unity3d?snake_blue"/>
+  </append>
+  <append xpath="//entity_class[@name='zombieSnow']">
+    <property name="ReplaceMaterial0" value="#@modfolder:Resources/winter_zeds_blue3.unity3d?snowman_blue"/>
+    <property name="ReplaceMaterial1" value="#@modfolder:Resources/winter_zeds_blue3.unity3d?zeye_blue"/>
+  </append>
+  <append xpath="//entity_class[@name='zombieSoldier']">
+    <property name="ReplaceMaterial0" value="#@modfolder:Resources/winter_zeds_blue3.unity3d?zeye_blue"/>
+    <property name="ReplaceMaterial1" value="#@modfolder:Resources/winter_zeds_blue3.unity3d?soldier_blue"/>
+  </append>
+  <append xpath="//entity_class[@name='zombieSpider']">
+    <property name="ReplaceMaterial0" value="#@modfolder:Resources/winter_zeds_blue3.unity3d?spider_blue"/>
+    <property name="ReplaceMaterial1" value="#@modfolder:Resources/winter_zeds_blue3.unity3d?zeye_blue"/>
+  </append>
+  <append xpath="//entity_class[@name='animalStag']">
+    <property name="ReplaceMaterial0" value="#@modfolder:Resources/winter_zeds_blue3.unity3d?stag_blue"/>
+  </append>
+  <append xpath="//entity_class[@name='zombieSteve']">
+    <property name="ReplaceMaterial0" value="#@modfolder:Resources/winter_zeds_blue3.unity3d?steve_blue"/>
+    <property name="ReplaceMaterial1" value="#@modfolder:Resources/winter_zeds_blue3.unity3d?zeye_blue"/>
+    <property name="ReplaceMaterial2" value="#@modfolder:Resources/winter_zeds_blue3.unity3d?zhair_blue"/>
+  </append>
+  <append xpath="//entity_class[@name='zombieStripper']">
+    <property name="ReplaceMaterial0" value="#@modfolder:Resources/winter_zeds_blue3.unity3d?stripper_blue"/>
+    <property name="ReplaceMaterial1" value="#@modfolder:Resources/winter_zeds_blue3.unity3d?zeye_blue"/>
+    <property name="ReplaceMaterial2" value="#@modfolder:Resources/winter_zeds_blue3.unity3d?zhair_blue"/>
+  </append>
+  <append xpath="//entity_class[@name='zombieBusinessMan']">
+    <property name="ReplaceMaterial0" value="#@modfolder:Resources/winter_zeds_blue3.unity3d?suit_blue"/>
+    <property name="ReplaceMaterial1" value="#@modfolder:Resources/winter_zeds_blue3.unity3d?zhair_blue"/>
+    <property name="ReplaceMaterial2" value="#@modfolder:Resources/winter_zeds_blue3.unity3d?zeye_blue"/>
+  </append>
+  <append xpath="//entity_class[@name='animalZombieVulture']">
+    <property name="ReplaceMaterial0" value="#@modfolder:Resources/winter_zeds_blue3.unity3d?vulture_blue"/>
+  </append>
+  <append xpath="//entity_class[@name='animalWolf']">
+    <property name="ReplaceMaterial0" value="#@modfolder:Resources/winter_zeds_blue3.unity3d?wolf_blue"/>
+  </append>
+  <append xpath="//entity_class[@name='zombieUtilityWorker']">
+    <property name="ReplaceMaterial0" value="#@modfolder:Resources/winter_zeds_blue3.unity3d?worker_blue"/>
+    <property name="ReplaceMaterial1" value="#@modfolder:Resources/winter_zeds_blue3.unity3d?zeye_blue"/>
+    <property name="ReplaceMaterial2" value="#@modfolder:Resources/winter_zeds_blue3.unity3d?zhair_blue"/>
+  </append>
+  <append xpath="//entity_class[@name='zombieYo']">
+    <property name="ReplaceMaterial0" value="#@modfolder:Resources/winter_zeds_blue3.unity3d?yo_blue"/>
+    <property name="ReplaceMaterial1" value="#@modfolder:Resources/winter_zeds_blue3.unity3d?zeye_blue"/>
+    <property name="ReplaceMaterial2" value="#@modfolder:Resources/winter_zeds_blue3.unity3d?zhair_blue"/>
+  </append>
+  <append xpath="//entity_class[@name='animalZombieBear']">
+    <property name="ReplaceMaterial0" value="#@modfolder:Resources/winter_zeds_blue3.unity3d?zbear_blue"/>
+  </append>
+  <append xpath="//entity_class[@name='animalBossGrace']">
+    <property name="ReplaceMaterial0" value="#@modfolder:Resources/winter_zeds_blue3.unity3d?zboar_blue"/>
+  </append>
+  <append xpath="//entity_class[@name='animalZombieDog']">
+    <property name="ReplaceMaterial0" value="#@modfolder:Resources/winter_zeds_blue3.unity3d?zdog_blue"/>
+  </append>
+  <append xpath="//entity_class[@name='animalDireWolf']">
+    <property name="ReplaceMaterial0" value="#@modfolder:Resources/winter_zeds_blue3.unity3d?zwolf_blue"/>
   </append>
 </configs>

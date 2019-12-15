@@ -19,7 +19,11 @@
     </append>
   
   <set xpath="/worldgeneration/weather/property[@class='Rainy']/property[@name='Spectrum']/@value">snowy</set>
-  <set xpath="/worldgeneration//spectrum/@name">snow</set>
+
+  <remove xpath="/worldgeneration//spectrum" />
+  <append xpath="/worldgeneration/biomes/biome">
+    <spectrum name="snow" />
+  </append>
   
   <!-- Change the fill up to with ice, instead of water. I don't think this does anything though -->
   <set xpath="/worldgeneration/biomes/biome//layers/layer[@filluptorg]/@blockname">terrIce</set>

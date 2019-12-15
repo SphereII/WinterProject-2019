@@ -7,10 +7,7 @@
   <set xpath="/recipes/recipe[ starts-with(@name, 'ammoCrossbowBolt')]/ingredient[@name='resourceFeather']/@count">3</set>
 
   <append xpath="/recipes">
-  <recipe name="snowShovel" count="1" craft_area="workstation">
-    <ingredient name="resourceForgedIron" count="15" />
-    <ingredient name="resourceWood" count="10" />
-  </recipe>
+  
 
     <recipe name="clothbedroll" count="1">
       <ingredient name="resourceCloth" count="20"/>
@@ -21,6 +18,9 @@
     </recipe>
     <recipe name="drinkJarRiverWater" count="1" craft_area="campfire" craft_tool="toolCookingPot"  craft_time="20">
       <ingredient name="drinkJarRiverWaterFrozen" count="1"/>
+    </recipe>
+    <recipe name="drinkJarBoiledWater" count="1" craft_area="campfire" craft_tool="toolCookingPot"  craft_time="20">
+      <ingredient name="drinkJarBoiledWaterFrozen" count="1"/>
     </recipe>
 
     <recipe name="drinkJarPureMineralWater" count="1" craft_area="campfire" craft_tool="toolCookingPot"  craft_time="20">

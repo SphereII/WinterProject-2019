@@ -20,7 +20,6 @@
 			<property name="Stacknumber" value="1"/>
 			<property name="IsDecoration" value="false"/>
 			<property name="ImposterDontBlock" value="true"/>
-			<drop event="Destroy" name="resourceWood" count="1,2"/>
 			<property name="FilterTags" value="fdecor,fother"/>
 			<property name="SortOrder1" value="7000"/>
 			<property name="SortOrder2" value="0002"/>
@@ -44,9 +43,12 @@
       <property name="Extends" value="SamaraWell"/>
       <property name="LootList" value="665"/>
     </block>
+    <!-- Upgrade to let Samara out -->
     <block name="SamaraWell04">
       <property name="Extends" value="SamaraWell"/>
       <property name="LootList" value="666"/>
+      <drop event="Destroy" name="SamaraMorganBody" count="1" prob="1"/>
+
     </block>
 
     <!-- Example of using an Activeblock (in this case a picture) to loop a video. Manually activated by adding a wire to the picture then disconnection it.  Turn on and off as desired. Vanilla compatible -->

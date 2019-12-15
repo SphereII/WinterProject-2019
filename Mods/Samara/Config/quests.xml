@@ -1,54 +1,74 @@
 ﻿<configs>
   <append xpath="/quests">
-  <quest id="quest_Samara_Diary01">
-    <property name="group_name_key" value="Samara Morgan's Diary" />
-    <property name="name_key" value="Samara Morgan's Diary" />
-    <property name="subtitle_key" value="Find Samara Morgan's Diary" />
-    <property name="description_key" value="The diary couldn't be completely destroyed. Find the missing pieces." />
-    <property name="icon" value="ui_game_symbol_quest"/>
-    <property name="repeatable" value="false"/>
-    <property name="category_key" value="challenge"/>
-    <property name="difficulty" value="medium"/>
-    <property name="difficulty_tier" value="1"/>
-    <property name="offer_key" value="The missing diary could give us a clue on how to remove her curse."/>
-    <property name="statement_key" value="The missing diary could give us a clue on how to remove her curse"/>
-    <property name="response_key" value="Fetch ([DECEA3]{poi.distance} {poi.direction}[-])"/>
-    <property name="login_rally_reset" value="true"/>
+    <!-- Each part of Samara's Diary involves being sent to find a note. This note will give a hint to what the player needs to do. The hint is in the note, not the quest line. 
+    Having the instructions in the quest line seems to be too In-Your-Face on how to solve the riddle. Instead, item actions will change dependening on cvar values.  Those items will call the next
+    quest.
+    -->
 
-    <property name="completiontype" value="AutoComplete"/>
-    <property name="completion_key" value="Great job. Keep looking for the other parts."/>
-
-     <objective type="TreasureChest">
-        <property name="block" value="SamaraWell01"/>
-        <property name="distance" value="500-750"/>
-      </objective>
-    <action type="GiveCVarBuffSDX, Mods" id="quest_Samara_Diary" value="1" />    
-    <reward type="Exp" value="500"/>
-    
-    
-  </quest>
-    <quest id="quest_Samara_Diary02">
+    <!--
+    quest_Samara_Diary01 - Santa gives you a map. Talks about the postcards and pictures. Find and Use/destroy the pictures - The Start ( Samara was born ) (1970 )
+                            -> The Nun Hospital where she was born
+                            -> The fountain where her mother tried to drown her
+                            -> The church tower where her mother was held captive by an evil priest
+                            -> The nun hospital abandoned 
+    quest_Samara_Diary02 - On the back of the post card, a rough map is seen. Find and Use/destroy the horses - Post-Adoption - In the Morgan's care ( 1970-1977 )
+                            -> (4) different horse figurines / pictures ?
+    quest_Samara_Diary03 - The last horse you break gives you a map. Find and use/destroy the  - The Well: Anna pushes Samara in the well at Shelter Mountain Inn. Anna commits suicide. ( October 1978. )
+                           -> Memories are holding a restless spirit. Destroy her strongest memories
+                           -> Hair brush
+                           -> Her dress
+                            -> Do you want to open the well and save Samara?
+                              -> Curse is not broken!
+    quest_samara_Diary04 - Video recording equipment. Take the equipment to Santa  - Samara makes the cursed video ( October 1978 )
+                            -> Electrical Parts
+                            -> TV
+                            -> Broken DVD Recorder
+                            -> Take to Sannta
+                                -> Gives you a DVD back
+                                -> Curse is lifted.
+    -->
+    <quest id="quest_Samara_Diary01">
       <property name="group_name_key" value="Samara Morgan's Diary" />
       <property name="name_key" value="Samara Morgan's Diary" />
       <property name="subtitle_key" value="Find Samara Morgan's Diary" />
-      <property name="description_key" value="The diary couldn't be completely destroyed. Find the missing pieces." />
+      <property name="description_key" value="There was a diary written by Samara Morgan's biological mother. There may be clues on how to stop her. Richard tried to destroy the diary, but couldn't completely do it. You must find the pieces." />
       <property name="icon" value="ui_game_symbol_quest"/>
       <property name="repeatable" value="false"/>
       <property name="category_key" value="challenge"/>
       <property name="difficulty" value="medium"/>
       <property name="difficulty_tier" value="1"/>
-      <property name="offer_key" value="The missing diary could give us a clue on how to remove her curse."/>
-      <property name="statement_key" value="The missing diary could give us a clue on how to remove her curse"/>
-      <property name="response_key" value="Fetch ([DECEA3]{poi.distance} {poi.direction}[-])"/>
+      <property name="completiontype" value="AutoComplete"/>
+      <property name="completion_key" value="Great job. Keep looking for the other parts."/>
+
+      <objective type="TreasureChest">
+        <property name="block" value="SamaraWell01"/>
+        <property name="distance" value="500-750"/>
+      </objective>
+      <action type="GiveCVarBuffSDX, Mods" id="quest_Samara_Diary" value="1" />
+      <action type="GiveCVarBuffSDX, Mods" id="buffCurseSamaraPictures" value="0" />
+      <reward type="Exp" value="500"/>
+    </quest>
+    <quest id="quest_Samara_Diary02">
+      <property name="group_name_key" value="Samara Morgan's Diary" />
+      <property name="name_key" value="Samara Morgan's Diary" />
+      <property name="subtitle_key" value="Find Samara Morgan's Diary" />
+      <property name="description_key" value="There was a diary written by Samara Morgan's biological mother. There may be clues on how to stop her. Richard tried to destroy the diary, but couldn't completely do it. You must find the pieces." />
+      <property name="icon" value="ui_game_symbol_quest"/>
+      <property name="repeatable" value="false"/>
+      <property name="category_key" value="challenge"/>
+      <property name="difficulty" value="medium"/>
+
+      <property name="difficulty_tier" value="1"/>
 
       <property name="completiontype" value="AutoComplete"/>
       <property name="completion_key" value="Great job. Keep looking for the other parts."/>
-       <objective type="TreasureChest">
+      <objective type="TreasureChest">
         <property name="block" value="SamaraWell02"/>
         <property name="distance" value="500-750"/>
       </objective>
 
       <action type="GiveCVarBuffSDX, Mods" id="quest_Samara_Diary" value="2" />
+      <action type="GiveCVarBuffSDX, Mods" id="buffCurseSamaraHorses" value="0" />
       <reward type="Exp" value="500"/>
     </quest>
 
@@ -56,7 +76,7 @@
       <property name="group_name_key" value="Samara Morgan's Diary" />
       <property name="name_key" value="Samara Morgan's Diary" />
       <property name="subtitle_key" value="Find Samara Morgan's Diary" />
-      <property name="description_key" value="The diary couldn't be completely destroyed. Find the missing pieces." />
+      <property name="description_key" value="There was a diary written by Samara Morgan's biological mother. There may be clues on how to stop her. Richard tried to destroy the diary, but couldn't completely do it. You must find the pieces." />
       <property name="icon" value="ui_game_symbol_quest"/>
       <property name="repeatable" value="false"/>
       <property name="category_key" value="challenge"/>
@@ -69,80 +89,40 @@
 
       <property name="completiontype" value="AutoComplete"/>
       <property name="completion_key" value="Great job. Keep looking for the last part."/>
-      
-  
-       <objective type="TreasureChest">
+
+      <objective type="TreasureChest">
         <property name="block" value="SamaraWell03"/>
         <property name="distance" value="500-750"/>
       </objective>
-  
+
       <action type="GiveCVarBuffSDX, Mods" id="quest_Samara_Diary" value="3" />
+      <action type="GiveCVarBuffSDX, Mods" id="buffCurseSamaraMemories" value="0" />
+
       <reward type="Exp" value="500"/>
-   </quest>
+    </quest>
 
     <quest id="quest_Samara_Diary04">
       <property name="group_name_key" value="Samara Morgan's Diary" />
       <property name="name_key" value="Samara Morgan's Diary" />
       <property name="subtitle_key" value="Find Samara Morgan's Diary" />
-      <property name="description_key" value="The diary couldn't be completely destroyed. Find the missing pieces." />
+      <property name="description_key" value="There was a diary written by Samara Morgan's biological mother. There may be clues on how to stop her. Richard tried to destroy the diary, but couldn't completely do it. You must find the pieces." />
       <property name="icon" value="ui_game_symbol_quest"/>
       <property name="repeatable" value="false"/>
       <property name="category_key" value="challenge"/>
       <property name="difficulty" value="medium"/>
       <property name="difficulty_tier" value="1"/>
-      <property name="offer_key" value="The missing diary could give us a clue on how to remove her curse."/>
-      <property name="statement_key" value="The missing diary could give us a clue on how to remove her curse"/>
-      <property name="response_key" value="Fetch ([DECEA3]{poi.distance} {poi.direction}[-])"/>
-
       <property name="completiontype" value="AutoComplete"/>
       <property name="completion_key" value="Great job. Keep looking for the other parts."/>
-   
-       <objective type="TreasureChest">
+
+      <objective type="TreasureChest">
         <property name="block" value="SamaraWell04"/>
         <property name="distance" value="500-750"/>
       </objective>
-      
+
+      <objective type="BlockUpgrade" id="SamaraWell04" value="1" phase="2"/>
       <action type="GiveCVarBuffSDX, Mods" id="quest_Samara_Diary" value="4" />
-      
       <!-- Recipe unlock -->
       <action type="GiveCVarBuffSDX, Mods" id="SamaraMorganDiary" value="1" />
     </quest>
-
-    <quest id="quest_Samara_Diary05">
-      <property name="group_name_key" value="Samara Morgan's Diary" />
-      <property name="name_key" value="Samara Morgan's Diary" />
-      <property name="subtitle_key" value="Fix Samara Morgan's Diary" />
-      <property name="description_key" value="The diary couldn't be completely destroyed. Put it back together." />
-      <property name="icon" value="ui_game_symbol_quest"/>
-      <property name="repeatable" value="false"/>
-      <property name="category_key" value="challenge"/>
-      <property name="difficulty" value="medium"/>
-      <property name="difficulty_tier" value="1"/>
-      <property name="offer_key" value="The missing diary could give us a clue on how to remove her curse."/>
-      <property name="statement_key" value="You need to assemble the diary pieces now to read them."/>
-
-      <property name="completiontype" value="AutoComplete"/>
-      <property name="completion_key" value="Great job."/>
-
-      <objective type="FetchKeep" id="resourceDuctTape" value="3" phase="1"/>
-      <objective type="FetchKeep" id="SamamaMorganDiary01" value="1" phase="1"/>
-      <objective type="FetchKeep" id="SamamaMorganDiary02" value="1" phase="1"/>
-      <objective type="FetchKeep" id="SamamaMorganDiary03" value="1" phase="1"/>
-      <objective type="FetchKeep" id="SamamaMorganDiary04" value="1" phase="1"/>
-
-      <objective type="Craft">
-        <property name="phase" value="2"/>
-        <property name="item" value="SamaraMorganDiary"/>
-        <property name="count" value="1"/>
-      </objective>
-
-      <reward type="Exp" value="500"/>
-    </quest>
-  </append>
-  <append xpath="/quests/quest_items">
-    <quest_item id="3" name="Samara's Diary 1/4" icon="questCassadoreSupplies" icon_color="255,255,255"/>
-    <quest_item id="4" name="Samara's Diary 2/4" icon="questCassadoreSupplies" icon_color="255,255,255"/>
-    <quest_item id="5" name="Samara's Diary 3/4" icon="questCassadoreSupplies" icon_color="255,255,255"/>
-    <quest_item id="6" name="Samara's Diary 4/4" icon="questCassadoreSupplies" icon_color="255,255,255"/>
   </append>
 </configs>

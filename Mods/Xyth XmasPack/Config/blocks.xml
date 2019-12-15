@@ -6,17 +6,19 @@
   <set xpath="/blocks/block[@name='woodChair1']/@name">old_woodChair1</set>
   <set xpath="/blocks/block[@name='oldChair1']/@name">old_oldChair1</set>
   <set xpath="/blocks/block[@name='candleTableLight']/@name">old_candleTable</set>
-  
-	<set xpath="/blocks/block[@name='questRallyMarker']/property[@name='Model']/@value">#@modfolder:Resources/RallyFlags.unity3d?rally_pointprefab_X</set>
+
+  <remove xpath="/blocks/block[@name='treePlant02']" />
+
+  <set xpath="/blocks/block[@name='questRallyMarker']/property[@name='Model']/@value">#@modfolder:Resources/RallyFlags.unity3d?rally_pointprefab_X</set>
   <append xpath="/blocks/block[@name='questRallyMarker']">
-		  <!-- Flag model by s.probka is licensed under CC Attribution  -->
-<!--    <property name="MultiBlockDim" value="1,9,1"/> -->
+    <!-- Flag model by s.probka is licensed under CC Attribution  -->
+    <!--    <property name="MultiBlockDim" value="1,9,1"/> -->
     <property name="Collide" value="sight,movement,melee,bullet,arrow,rocket"/>
 
 
   </append>
-  
-  
+
+
 
   <append xpath="/blocks">
 
@@ -96,7 +98,7 @@
       <property name="Tag" value="TreeTrunk"/>
       <property name="IsPlant" value="true"/>
       <property name="ParticleOnDeath" value="treeGib_burnt"/>
-	  <drop event="Harvest" name="resourceWood" count="30" tag="oreWoodHarvest"/>
+      <drop event="Harvest" name="resourceWood" count="30" tag="oreWoodHarvest"/>
       <property name="ActiveRadiusEffects" value="buffPuking1"/>
 
 
@@ -130,8 +132,8 @@
       <property name="Tag" value="TreeTrunk"/>
       <property name="IsPlant" value="true"/>
       <property name="ParticleOnDeath" value="treeGib_burnt"/>
-	  <drop event="Harvest" name="resourceWood" count="30" tag="oreWoodHarvest"/>
-      
+      <drop event="Harvest" name="resourceWood" count="30" tag="oreWoodHarvest"/>
+
       <!-- Adding a slight warming effect on the tree -->
       <property name="ActiveRadiusEffects" value="buffCampfireAOE(3)"/>
 
@@ -154,7 +156,7 @@
       <property name="CreativeMode" value="Player"/>
       <property name="CanPlayersSpawnOn" value="false"/>
       <property name="ParticleOnDeath" value="treeGib_burnt"/>
-	   <drop event="Harvest" name="resourceWood" count="15" tag="oreWoodHarvest"/>
+      <drop event="Harvest" name="resourceWood" count="15" tag="oreWoodHarvest"/>
     </block>
     <block name="icicle">
       <property name="Material" value="Msnow" />

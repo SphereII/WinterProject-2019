@@ -1,5 +1,31 @@
 <configs>
-	<append xpath="/items">	
+	<append xpath="/items">
+    <item name="snowShovel">
+      <property name="Extends" value="meleeToolShovelIron"/>
+      <property name="DescriptionKey" value="snowShovelDesc" />
+      <property name="Meshfile" value="#@modfolder:Resources/XmasDeco.unity3d?SnowShovel_X" />
+      <property name="DropMeshfile" value="#@modfolder:Resources/XmasDeco.unity3d?SnowShovel_X" />
+      <property name="CustomIcon" value="snowShovel" />
+      <effect_group name="Base Effects">
+        <passive_effect name="MaxRange" operation="base_set" value="3.4"/>
+        <passive_effect name="BlockRange" operation="base_set" value="4"/>
+        <passive_effect name="EntityDamage" operation="base_set" value="13"/>
+
+        <passive_effect name="BlockDamage" operation="base_set" value="18"/>
+        <passive_effect name="DamageModifier" operation="perc_add" value="-.7" tags="wood"/>
+        <passive_effect name="DamageModifier" operation="perc_add" value="-.5" tags="stone"/>
+        <passive_effect name="DamageModifier" operation="perc_add" value="-.75" tags="metal"/>
+        <passive_effect name="DamageModifier" operation="perc_add" value="1" tags="earth"/>
+
+        <passive_effect name="DamageModifier" operation="perc_add" value="1.5" tags="snow"/>
+        <passive_effect name="AttacksPerMinute" operation="base_set" value="50"/>
+        <passive_effect name="StaminaLoss" operation="base_set" value="16" tags="primary"/>
+        <passive_effect name="DegradationMax" operation="base_set" value="200,800" tier="1,6"/>
+        <passive_effect name="ModSlots" operation="base_set" value="0,5" tier="1,6"/>
+        <passive_effect name="ModPowerBonus" operation="perc_add" value=".15" tags="EntityDamage,BlockDamage"/>
+        <passive_effect name="ModPowerBonus" operation="base_add" value="200" tags="EconomicValue"/>
+      </effect_group>
+    </item>
 		<item name="rabbitItem">
 			<property name="DescriptionKey" value="toysDesc" />
 			<property name="Meshfile" value="#@modfolder:Resources/XmasDeco.unity3d?RabbitItem_X" /> 
@@ -17,32 +43,7 @@
 			<property name="Group" value="Basics,Decor/Miscellaneous" />
 			<property name="EconomicValue" value="25" />
 		</item> 
-		<item name="snowShovel">
-			<property name="Extends" value="meleeToolShovelIron"/>
-			<property name="DescriptionKey" value="snowShovelDesc" />
-			<property name="Meshfile" value="#@modfolder:Resources/XmasDeco.unity3d?SnowShovel_X" /> 
-			<property name="DropMeshfile" value="#@modfolder:Resources/XmasDeco.unity3d?SnowShovel_X" />
-			<property name="CustomIcon" value="snowShovel" />
-			<effect_group name="Base Effects">
-				<passive_effect name="MaxRange" operation="base_set" value="3.4"/>
-				<passive_effect name="BlockRange" operation="base_set" value="4"/>
-				<passive_effect name="EntityDamage" operation="base_set" value="13"/>
-				<!-- meleeToolShovelIron -->
-				<passive_effect name="BlockDamage" operation="base_set" value="18"/>
-				<passive_effect name="DamageModifier" operation="perc_add" value="-.7" tags="wood"/>
-				<passive_effect name="DamageModifier" operation="perc_add" value="-.5" tags="stone"/>
-				<passive_effect name="DamageModifier" operation="perc_add" value="-.75" tags="metal"/>
-				<passive_effect name="DamageModifier" operation="perc_add" value="1" tags="earth"/>
-				<!-- Added the bonus for snow -->
-				<passive_effect name="DamageModifier" operation="perc_add" value="1.5" tags="snow"/>
-				<passive_effect name="AttacksPerMinute" operation="base_set" value="50"/>
-				<passive_effect name="StaminaLoss" operation="base_set" value="16" tags="primary"/>
-				<passive_effect name="DegradationMax" operation="base_set" value="200,800" tier="1,6"/>
-				<passive_effect name="ModSlots" operation="base_set" value="0,5" tier="1,6"/>
-				<passive_effect name="ModPowerBonus" operation="perc_add" value=".15" tags="EntityDamage,BlockDamage"/>
-				<passive_effect name="ModPowerBonus" operation="base_add" value="200" tags="EconomicValue"/>
-			</effect_group>
-		</item>
+	
 		<item name="candyCane">
 			<property name="Extends" value="meleeClubIron" />
 			<property name="Material" value="Mwood" />

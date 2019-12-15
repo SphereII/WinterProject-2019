@@ -18,5 +18,9 @@
 			<ingredient name="resourceGlue" count="1" />
 			<ingredient name="resourcePaper" count="30" />
 		</recipe>
+    <recipe name="snowShovel" count="1" craft_area="workstation">
+      <ingredient name="resourceForgedIron" count="15" />
+      <ingredient name="resourceWood" count="10" />
+    </recipe>
 	</append>
 </configs>

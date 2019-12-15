@@ -19,6 +19,45 @@ SamaraMorganDiary03,item,Items,"Samara: Round we go. The World is spinnig. When 
 SamaraMorganDiary04_title,item,Items,"Samara Morgan's Diary Part 4"
 SamaraMorganDiary04,item,Items,"Doctor: Samara, how did you make these pictures?\nSamara: I don't...make them...I see them...and then...they just...are.\nDoctor: Samara I need you to start telling me the truth.\nSamara: Can I see my mommy?\nDoctor: No, Samara. Not until we can figure out what's wrong with you.\nSamara: I love my mommy.\nDoctor: Yes you do. But you don't want to hurt her anymore. You don't want to hurt anyone.\nSamara: But I do, and I'm sorry. It won't stop."
 
+
+
+samaraMorganMemoriesBinds_NoCurse_title,item,Items,"The artifact crumbles."
+samaraMorganemoriessBinds_NoCurse,item,Items,"The artifact crumbles in your hands."
+
+samaraMorganMemories01,item,Items,"An old hair brush"
+samaraMorganMemories01Desc,item,Items,"An old hair brush with a beautiful horse engraved on it."
+samaraMorganMemories01_ToolTip_title,item,Items,"An old hair brush"
+samaraMorganMemories01_ToolTip,items,Items,"an old hair brush with a beautifully engraved horse on the handle."
+
+samaraMorganMemories02,item,Items,"A ratty old white dress"
+samaraMorganMemories02Desc,item,Items,"A ratty old white dress"
+samaraMorganMemories02_ToolTip_title,item,Items,"A ratty old white dress"
+samaraMorganMemories02_ToolTip,items,Items,"A ratty old white dress, with signs of mildew on it. It's threadbare."
+
+
+samaraMorganPictureBinds_NoCurse_title,item,Items,"The picture crumbles."
+samaraMorganPictureBinds_NoCurse,item,Items,"The picture crumbles in your hands."
+
+samaraPostCard01,item,Items,"An old postcard"
+samaraPostcard01Desc,item,Items,"An old postcard with the picture of a church's bell tower."
+samaraPostcard01_ToolTip_title,item,Items,"An old postcard"
+samaraPostcard01_ToolTip,items,Items,"An old post card with the picture of a church's bell tower. \n\n( 1970: Father Galen Burke ) "
+
+samaraPostcard02,item,Items,"An old postcard"
+samaraPostcard02Desc,item,Items,"An old postcard with the picture of what looks like a group of nun's."
+samaraPostcard02_ToolTip_title,item,Items,"An old postcard"
+samaraPostcard02_ToolTip,items,Items,"An old postcard with the picture of what looks like a group of nun's. \n\n( 1970: The Sisters of Christ ) "
+
+samaraPostcard03,item,Items,"An old postcard"
+samaraPostcard03Desc,item,Items,"An old postcard with the picture of an abandoned hospital with a well in front of it."
+samaraPostcard03_ToolTip_title,item,Items,"An old postcard"
+samaraPostcard03_ToolTip,items,Items,"An old postcard with the picture of an abandoned hospital with a well in front of it. \n\n( 1971: The Sisters of Christ's abandoned Hospital )"
+
+samaraPostcard04,item,Items,"A brittle old picture"
+samaraPostcard04Desc,item,Items,"A brittle picture of what appears to be an abandoned building."
+samaraPostcard04_ToolTip_title,item,Items,"An old picture"
+samaraPostcard04_ToolTip,items,Items,"On the back of the picture, it's dated to be 1972.  It seems as if the hospital deterioated really quickly. \n\n( 1972: The Sisters of Christ's abandoned Hospital )"
+
 samaraHorse01,item,Items,"A strange horse"
 samaraHorse01Desc,item,Items,"A strange horse with a date carved in the bottom: Kentucky Derby Champion 1973"
 samaraHorse01_ToolTip_title,item,Items,"Kentucky Derby Champion 1973"
@@ -54,3 +93,10 @@ samaraMorganBinds_04,item,Items,"Her binds that ties her to this world has been 
 
 samaraMorganBinds_NoCurse_title,item,Items,"Your broke the horse."
 samaraMorganBinds_NoCurse,item,Items,"The horse breaks very easily in your hands."
+
+samaraMorganFreed_title,item,Items,"Samara's Grave crumbles."
+samaraMorganFreed,item,Items,"The resting place of Samara Morgan crumbles in front of you. A sharp hiss of air comes from the depths of the well before falling silent.\n\n\nWhy did you free her?\n\nYou weren't supposed to help her. Don't you understand? She never sleeps...."
+
+samaraMorganWell_title,item,Items,"Samara Morgan's Body"
+samaraMorganWell,item,Items,"The small slight figure of Samara lies in your hands. Rescued from her watery grave, you prepare a proper burial for her. She has led a cursed life and after life, but you sincerely hope she finds the peace she has been denied for her entire existence.\n\nAs you gentle lower her into a proper grave, you say a small prayer to send her body and her soul to rest.\n\nAn overwhelming sense of well being fills your soul.\n\nYou hear a whisper in your ear, 'What have you done? Why did you help her? She's out now."
+SamaraWell04Desc,item,Items,"The body of a small girl, long since dead."
