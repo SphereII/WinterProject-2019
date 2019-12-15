@@ -2,7 +2,7 @@
 
 <xml>
 	<ModInfo>
-		<Name value="SphereII Winter Project Main Menu" />
+		<Name value="SphereII Winter Project Menu" />
 		<Description value="A modlet that extends SMX Main Menu for the Winter Project"/>
 		<Author value="sphereii" />
 		<Version value="1.0.0.0" />

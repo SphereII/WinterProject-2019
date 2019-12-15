@@ -42,7 +42,6 @@
     <None Include="Mods\Oignon Vehicles Pack\Resources\wip.unity3d" />
     <None Include="Mods\README.md" />
     <None Include="Mods\Rebar Club\Resources\rebarclub.unity3d" />
-    <None Include="Mods\Samara\Resources\ChristmasMusic2.unity3d" />
     <None Include="Mods\Samara\Resources\Samara.unity3d" />
     <None Include="Mods\Samara\Resources\SamaraCurse.unity3d" />
     <None Include="Mods\Samara\Resources\Scare_Blocks.unity3d" />
@@ -51,6 +50,7 @@
     <None Include="Mods\SMXhudTHB\README.md" />
     <None Include="Mods\SphereII Music Boxes\README.md" />
     <None Include="Mods\SphereII Music Boxes\Resources\ChristmasMusic.unity3d" />
+    <None Include="Mods\SphereII Music Boxes\Resources\ChristmasMusic2.unity3d" />
     <None Include="Mods\SphereII Music Boxes\Resources\MediaCases.unity3d" />
     <None Include="Mods\SphereII Music Boxes\Resources\singing-bell-com.unity3d" />
     <None Include="Mods\SphereII Music Boxes\Resources\VideoPlayers.unity3d" />
@@ -65,8 +65,8 @@
     <None Include="Mods\SphereII Winter Project Menu\Resources\Flies.unity3d" />
     <None Include="Mods\SphereII Winter Project Menu\Resources\MenuParticles.unity3d" />
     <None Include="Mods\SphereII Winter Project\README.md" />
+    <None Include="Mods\SphereII Winter Project\Resources\FrostShieldParticle.unity3d" />
     <None Include="Mods\SphereII Winter Project\Resources\SnowFog.unity3d" />
-    <None Include="Mods\SphereII Winter Project\Resources\snowShovel.unity3d" />
     <None Include="Mods\SphereII Winter Project\Resources\WinterTrees.unity3d" />
     <None Include="Mods\Subquake_OptimizedWallTorches\README.md" />
     <None Include="Mods\Subquake_OptimizedWallTorches\Resources\Subquake_WallTorch" />
@@ -84,6 +84,9 @@
     <None Include="Mods\winter_zeds_blue\Resources\winter_zeds_blue1.unity3d" />
     <None Include="Mods\winter_zeds_blue\Resources\winter_zeds_blue2.unity3d" />
     <None Include="Mods\winter_zeds_blue\Resources\winter_zeds_blue3.unity3d" />
+    <None Include="Mods\winter_zeds_white\Resources\winter_zeds_white1.unity3d" />
+    <None Include="Mods\winter_zeds_white\Resources\winter_zeds_white2.unity3d" />
+    <None Include="Mods\winter_zeds_white\Resources\winter_zeds_white3.unity3d" />
     <None Include="Mods\Xyth EntitiesWinter\Config\Resources\FrostShieldParticle.unity3d" />
     <None Include="Mods\Xyth EntitiesWinter\Resources\Abominable.unity3d" />
     <None Include="Mods\Xyth EntitiesWinter\Resources\AbominableSounds.unity3d" />
@@ -97,6 +100,27 @@
     <None Include="Mods\Xyth EntitiesWinter\Resources\Snowmen.unity3d" />
     <None Include="Mods\Xyth XmasPack\Resources\RallyFlags.unity3d" />
     <None Include="Mods\Xyth XmasPack\Resources\XmasDeco.unity3d" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="0Harmony">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\7DaysToDie_Data\Managed\0Harmony.dll</HintPath>
+    </Reference>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\7DaysToDie_Data\Managed\Assembly-CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="DMT">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\7DaysToDie_Data\Managed\DMT.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="UnityEngine">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\7DaysToDie_Data\Managed\UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AnimationModule">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\7DaysToDie_Data\Managed\UnityEngine.AnimationModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\7DaysToDie_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Mods\0-SphereIICore\Config\blocks.xml" />
@@ -129,22 +153,29 @@
     <Content Include="Mods\CCTV\UIAtlases\ItemIconAtlas\CCTV2.png" />
     <Content Include="Mods\CCTV\UIAtlases\ItemIconAtlas\CCTVSchematic.png" />
     <Content Include="Mods\Donovan_BetterBridges\Config\blocks.xml" />
+    <Content Include="Mods\Donovan_BetterBridges\mod.xml" />
     <Content Include="Mods\Donovan_BetterBridges\ModInfo.xml" />
     <Content Include="Mods\Donovan_BetterSpears\Config\items.xml" />
+    <Content Include="Mods\Donovan_BetterSpears\mod.xml" />
     <Content Include="Mods\Donovan_BetterSpears\ModInfo.xml" />
     <Content Include="Mods\Donovan_CraftJail\Config\blocks.xml" />
     <Content Include="Mods\Donovan_CraftJail\Config\recipes.xml" />
+    <Content Include="Mods\Donovan_CraftJail\mod.xml" />
     <Content Include="Mods\Donovan_CraftJail\ModInfo.xml" />
     <Content Include="Mods\Donovan_CraftSpikes\Config\recipes.xml" />
+    <Content Include="Mods\Donovan_CraftSpikes\mod.xml" />
     <Content Include="Mods\Donovan_CraftSpikes\ModInfo.xml" />
     <Content Include="Mods\JaxTeller718_Charcoal\Config\items.xml" />
     <Content Include="Mods\JaxTeller718_Charcoal\Config\Localization.txt" />
     <Content Include="Mods\JaxTeller718_Charcoal\Config\loot.xml" />
+    <Content Include="Mods\JaxTeller718_Charcoal\mod.xml" />
     <Content Include="Mods\JaxTeller718_Charcoal\ModInfo.xml" />
     <Content Include="Mods\JaxTeller718_Charcoal\UIAtlases\ItemIconAtlas\resourceCharcoal.png" />
     <Content Include="Mods\JaxTeller718_EggsInFridges\Config\loot.xml" />
+    <Content Include="Mods\JaxTeller718_EggsInFridges\mod.xml" />
     <Content Include="Mods\JaxTeller718_EggsInFridges\ModInfo.xml" />
     <Content Include="Mods\JaxTeller718_MoreFeathers\Config\loot.xml" />
+    <Content Include="Mods\JaxTeller718_MoreFeathers\mod.xml" />
     <Content Include="Mods\JaxTeller718_MoreFeathers\ModInfo.xml" />
     <Content Include="Mods\JaxTeller718_WorkingStoves\Config\blocks.xml" />
     <Content Include="Mods\JaxTeller718_WorkingStoves\Config\items.xml" />
@@ -152,8 +183,10 @@
     <Content Include="Mods\JaxTeller718_WorkingStoves\Config\recipes.xml" />
     <Content Include="Mods\JaxTeller718_WorkingStoves\Config\ui_display.xml" />
     <Content Include="Mods\JaxTeller718_WorkingStoves\Config\XUi\xui.xml" />
+    <Content Include="Mods\JaxTeller718_WorkingStoves\mod.xml" />
     <Content Include="Mods\JaxTeller718_WorkingStoves\ModInfo.xml" />
     <Content Include="Mods\JaxTeller718_ZombieHandAdjustment\Config\items.xml" />
+    <Content Include="Mods\JaxTeller718_ZombieHandAdjustment\mod.xml" />
     <Content Include="Mods\JaxTeller718_ZombieHandAdjustment\ModInfo.xml" />
     <Content Include="Mods\JunkItems\Config\items.xml" />
     <Content Include="Mods\JunkItems\Config\loot.xml" />
@@ -241,6 +274,7 @@
     <Content Include="Mods\MeanCloud%27%27s Scrap Bone Knives\Config\items.xml" />
     <Content Include="Mods\MeanCloud%27%27s Scrap Bone Knives\Config\materials.xml" />
     <Content Include="Mods\MeanCloud%27%27s Scrap Bone Knives\Config\recipes.xml" />
+    <Content Include="Mods\MeanCloud%27%27s Scrap Bone Knives\mod.xml" />
     <Content Include="Mods\MeanCloud%27%27s Scrap Bone Knives\ModInfo.xml" />
     <Content Include="Mods\More Vanilla Food\Config\buffs.xml" />
     <Content Include="Mods\More Vanilla Food\Config\items.xml" />
@@ -249,6 +283,7 @@
     <Content Include="Mods\More Vanilla Food\Config\progression.xml" />
     <Content Include="Mods\More Vanilla Food\Config\recipes.xml" />
     <Content Include="Mods\More Vanilla Food\Config\ui_display.xml" />
+    <Content Include="Mods\More Vanilla Food\mod.xml" />
     <Content Include="Mods\More Vanilla Food\ModInfo.xml" />
     <Content Include="Mods\More Vanilla Food\UIAtlases\ItemIconAtlas\ATBBJamSandwich.png" />
     <Content Include="Mods\More Vanilla Food\UIAtlases\ItemIconAtlas\ATBerryTea.png" />
@@ -318,6 +353,7 @@
     <Content Include="Mods\Samara\Config\items.xml" />
     <Content Include="Mods\Samara\Config\item_modifiers.xml" />
     <Content Include="Mods\Samara\Config\Localization.txt" />
+    <Content Include="Mods\Samara\Config\loot.xml" />
     <Content Include="Mods\Samara\Config\quests.xml" />
     <Content Include="Mods\Samara\Config\recipes.xml" />
     <Content Include="Mods\Samara\Config\sounds.xml" />
@@ -335,6 +371,21 @@
     <Content Include="Mods\Samara\Resources\overlay02.mp4" />
     <Content Include="Mods\Samara\Resources\overlay03.mp4" />
     <Content Include="Mods\Samara\Resources\shock.mp4" />
+    <Content Include="Mods\Samara\UIAtlases\ItemIconAtlas\audioCD03.png" />
+    <Content Include="Mods\Samara\UIAtlases\ItemIconAtlas\audioCD04.png" />
+    <Content Include="Mods\Samara\UIAtlases\ItemIconAtlas\audioCD05.png" />
+    <Content Include="Mods\Samara\UIAtlases\ItemIconAtlas\audioCD06.png" />
+    <Content Include="Mods\Samara\UIAtlases\ItemIconAtlas\Picture01.png" />
+    <Content Include="Mods\Samara\UIAtlases\ItemIconAtlas\postCard01.jpg" />
+    <Content Include="Mods\Samara\UIAtlases\ItemIconAtlas\postCard02.jpg" />
+    <Content Include="Mods\Samara\UIAtlases\ItemIconAtlas\postCard03.jpg" />
+    <Content Include="Mods\Samara\UIAtlases\ItemIconAtlas\postCard04.jpg" />
+    <Content Include="Mods\Samara\UIAtlases\ItemIconAtlas\samaraHorse01.png" />
+    <Content Include="Mods\Samara\UIAtlases\ItemIconAtlas\samaraHorse02.png" />
+    <Content Include="Mods\Samara\UIAtlases\ItemIconAtlas\samaraHorse03.png" />
+    <Content Include="Mods\Samara\UIAtlases\ItemIconAtlas\samaraHorse04.png" />
+    <Content Include="Mods\Samara\UIAtlases\ItemIconAtlas\samaraplasticHairBrush.png" />
+    <Content Include="Mods\Samara\UIAtlases\ItemIconAtlas\SamaraWell.png" />
     <Content Include="Mods\Samara\UIAtlases\ItemIconAtlas\xmascd.png" />
     <Content Include="Mods\Sittable Furnitures\Config\archetypes.xml" />
     <Content Include="Mods\Sittable Furnitures\Config\blocks.xml" />
@@ -346,6 +397,7 @@
     <Content Include="Mods\Sittable Furnitures\Config\recipes.xml" />
     <Content Include="Mods\Sittable Furnitures\Config\sounds.xml" />
     <Content Include="Mods\Sittable Furnitures\Config\vehicles.xml" />
+    <Content Include="Mods\Sittable Furnitures\mod.xml" />
     <Content Include="Mods\Sittable Furnitures\ModInfo.xml" />
     <Content Include="Mods\Sittable Furnitures\UIAtlases\ItemIconAtlas\3barstool.png" />
     <Content Include="Mods\Sittable Furnitures\UIAtlases\ItemIconAtlas\3bath.png" />
@@ -472,6 +524,7 @@
     <Content Include="Mods\SphereII Santas\Config\loot.xml" />
     <Content Include="Mods\SphereII Santas\Config\npc.xml" />
     <Content Include="Mods\SphereII Santas\Config\sounds.xml" />
+    <Content Include="Mods\SphereII Santas\mod.xml" />
     <Content Include="Mods\SphereII Santas\ModInfo.xml" />
     <Content Include="Mods\SphereII Take And Replace\Config\blocks.xml" />
     <Content Include="Mods\SphereII Take And Replace\Config\Localization.txt" />
@@ -486,6 +539,8 @@
     <Content Include="Mods\SphereII Winter Project Menu\Config\XUi_Menu\styles.xml" />
     <Content Include="Mods\SphereII Winter Project Menu\Config\XUi_Menu\windows.xml" />
     <Content Include="Mods\SphereII Winter Project Menu\Config\XUi_Menu\xui.xml" />
+    <Content Include="Mods\SphereII Winter Project Menu\Harmony\Harmony-SphereII Winter Project Main Menu.dll" />
+    <Content Include="Mods\SphereII Winter Project Menu\Harmony\Harmony-SphereII Winter Project Main Menu.pdb" />
     <Content Include="Mods\SphereII Winter Project Menu\mod.xml" />
     <Content Include="Mods\SphereII Winter Project Menu\ModInfo.xml" />
     <Content Include="Mods\SphereII Winter Project Menu\Textures\menu\smx_winterp_bg.png" />
@@ -504,11 +559,11 @@
     </Content>
     <Content Include="Mods\SphereII Winter Project\Config\recipes.xml" />
     <Content Include="Mods\SphereII Winter Project\Config\rwgmixer.xml" />
-    <Content Include="Mods\SphereII Winter Project\Config\traders.xml" />
     <Content Include="Mods\SphereII Winter Project\Harmony\Harmony-SphereII Winter Project.dll" />
     <Content Include="Mods\SphereII Winter Project\Harmony\Harmony-SphereII Winter Project.pdb" />
     <Content Include="Mods\SphereII Winter Project\mod.xml" />
     <Content Include="Mods\SphereII Winter Project\ModInfo.xml" />
+    <Content Include="Mods\SphereII Winter Project\UIAtlases\ItemIconAtlas\foodHoneyFrozen.png" />
     <Content Include="Mods\SphereII Winter Project\UIAtlases\ItemIconAtlas\snowShovel.png" />
     <Content Include="Mods\Stallionsdens Lootable Objects\Config\blockplaceholders.xml" />
     <Content Include="Mods\Stallionsdens Lootable Objects\Config\blocks.xml" />
@@ -523,6 +578,7 @@
     <Content Include="Mods\Stallionsdens Store Shelves\Mod.xml" />
     <Content Include="Mods\Stallionsdens Store Shelves\ModInfo.xml" />
     <Content Include="Mods\Subquake_OptimizedWallTorches\Config\blocks.xml" />
+    <Content Include="Mods\Subquake_OptimizedWallTorches\mod.xml" />
     <Content Include="Mods\Subquake_OptimizedWallTorches\ModInfo.xml" />
     <Content Include="Mods\Subquake_OptimizedWallTorches\Terms of Use.txt" />
     <Content Include="Mods\Valmars Expanded Ammo Types\Config\buffs.xml" />
@@ -654,10 +710,16 @@
     <Content Include="Mods\Wasteland Weapons\UIAtlases\ItemIconAtlas\railspike.png" />
     <Content Include="Mods\Wasteland Weapons\UIAtlases\ItemIconAtlas\railwayrifle.png" />
     <Content Include="Mods\Wasteland Weapons\UIAtlases\ItemIconAtlas\ShotgunEM.png" />
+    <Content Include="Mods\WinterProjecttrailer.mp4" />
     <Content Include="Mods\winter_zeds_blue\Config\blocks.xml" />
     <Content Include="Mods\winter_zeds_blue\Config\entityclasses.xml" />
     <Content Include="Mods\winter_zeds_blue\mod.xml" />
     <Content Include="Mods\winter_zeds_blue\ModInfo.xml" />
+    <Content Include="Mods\winter_zeds_white\Config\blocks.xml" />
+    <Content Include="Mods\winter_zeds_white\Config\entityclasses.xml" />
+    <Content Include="Mods\winter_zeds_white\Config\entitygroups.xml" />
+    <Content Include="Mods\winter_zeds_white\mod.xml" />
+    <Content Include="Mods\winter_zeds_white\ModInfo.xml" />
     <Content Include="Mods\Xyth EntitiesWinter\Config\blocks.xml" />
     <Content Include="Mods\Xyth EntitiesWinter\Config\buffs.xml" />
     <Content Include="Mods\Xyth EntitiesWinter\Config\entityclasses.xml" />
@@ -707,9 +769,9 @@
     <Compile Include="Mods\0-SphereIICore\Harmony\NPCFeatures\EntityNPCFixSpeed.cs" />
     <Compile Include="Mods\0-SphereIICore\Harmony\NPCFeatures\EntityNPCGreetingFix.cs" />
     <Compile Include="Mods\0-SphereIICore\Harmony\NPCFeatures\EntityNPCMakeVulnerable.cs" />
-    <Compile Include="Mods\0-SphereIICore\Harmony\PlayerFeatures\PlayerMoveController.cs" />
     <Compile Include="Mods\0-SphereIICore\Harmony\PlayerFeatures\AntiNerdPole.cs" />
     <Compile Include="Mods\0-SphereIICore\Harmony\PlayerFeatures\OneBlockCrouch.cs" />
+    <Compile Include="Mods\0-SphereIICore\Harmony\PlayerFeatures\PlayerMoveController.cs" />
     <Compile Include="Mods\0-SphereIICore\Harmony\PlayerFeatures\SoftHands.cs" />
     <Compile Include="Mods\0-SphereIICore\Harmony\PrefabFeatures\DisableTraderProtection.cs" />
     <Compile Include="Mods\0-SphereIICore\Harmony\Progression\ZeroXP.cs" />
@@ -741,8 +803,8 @@
     <Compile Include="Mods\0-SphereIICore\Scripts\Buffs\RequirementEveryXHourSDX.cs" />
     <Compile Include="Mods\0-SphereIICore\Scripts\Buffs\RequirementOnSpecificBiomeSDX.cs" />
     <Compile Include="Mods\0-SphereIICore\Scripts\Buffs\RequirementSameFactionSDX.cs" />
-    <Compile Include="Mods\0-SphereIICore\Scripts\Dialogs\DialogActionExecuteCommandSDX.cs" />
     <Compile Include="Mods\0-SphereIICore\Scripts\Dialogs\DialogActionAddCVar.cs" />
+    <Compile Include="Mods\0-SphereIICore\Scripts\Dialogs\DialogActionExecuteCommandSDX.cs" />
     <Compile Include="Mods\0-SphereIICore\Scripts\Dialogs\DialogActionGiveToNPC.cs" />
     <Compile Include="Mods\0-SphereIICore\Scripts\Dialogs\DialogActionOpenDialogSDX.cs" />
     <Compile Include="Mods\0-SphereIICore\Scripts\Dialogs\DialogActionShowToolTipSDX.cs" />
@@ -789,7 +851,6 @@
     <Compile Include="Mods\0-SphereIICore\Scripts\Items\ItemActionEntryResharpenSDX.cs" />
     <Compile Include="Mods\0-SphereIICore\Scripts\Items\ItemsUtilities.cs" />
     <Compile Include="Mods\0-SphereIICore\Scripts\MinEvents\MinEventActionAddBuffByFactionSDX.cs" />
-    <Compile Include="Mods\0-SphereIICore\Scripts\MinEvents\MinEventActionShowToolTipSDX.cs" />
     <Compile Include="Mods\0-SphereIICore\Scripts\MinEvents\MinEventActionAnimatorSDX.cs" />
     <Compile Include="Mods\0-SphereIICore\Scripts\MinEvents\MinEventActionCreateItemSDX.cs" />
     <Compile Include="Mods\0-SphereIICore\Scripts\MinEvents\MinEventActionGiveQuestSDX.cs" />
@@ -797,15 +858,16 @@
     <Compile Include="Mods\0-SphereIICore\Scripts\MinEvents\MinEventActionNotifyTeam.cs" />
     <Compile Include="Mods\0-SphereIICore\Scripts\MinEvents\MinEventActionPlayerLevelSDX.cs" />
     <Compile Include="Mods\0-SphereIICore\Scripts\MinEvents\MinEventActionPumpQuestSDX.cs" />
-    <Compile Include="Mods\0-SphereIICore\Scripts\MinEvents\MinEventActionToggleCamera.cs" />
+    <Compile Include="Mods\0-SphereIICore\Scripts\MinEvents\MinEventActionShowToolTipSDX.cs" />
     <Compile Include="Mods\0-SphereIICore\Scripts\MinEvents\MinEventActionSkillPointSDX.cs" />
     <Compile Include="Mods\0-SphereIICore\Scripts\MinEvents\MinEventActionSpawnBabySDX.cs" />
+    <Compile Include="Mods\0-SphereIICore\Scripts\MinEvents\MinEventActionToggleCamera.cs" />
     <Compile Include="Mods\0-SphereIICore\Scripts\MusicBoxes\MusicBox.cs" />
     <Compile Include="Mods\0-SphereIICore\Scripts\MusicBoxes\MusicBoxScript.cs" />
     <Compile Include="Mods\0-SphereIICore\Scripts\Quests\ObjectiveBuffSDX.cs" />
     <Compile Include="Mods\0-SphereIICore\Scripts\Quests\ObjectiveGotoPOISDX.cs" />
-    <Compile Include="Mods\0-SphereIICore\Scripts\Quests\QuestActionGiveCVarBuffSDX.cs" />
     <Compile Include="Mods\0-SphereIICore\Scripts\Quests\QuestActionGiveBuffSDX.cs" />
+    <Compile Include="Mods\0-SphereIICore\Scripts\Quests\QuestActionGiveCVarBuffSDX.cs" />
     <Compile Include="Mods\0-SphereIICore\Scripts\Quests\QuestActionPlaySound.cs" />
     <Compile Include="Mods\0-SphereIICore\Scripts\Quests\QuestActionReplaceEntitySDX.cs" />
     <Compile Include="Mods\0-SphereIICore\Scripts\Quests\QuestActionSpawnEntitySDX.cs" />
@@ -826,27 +888,6 @@
     <Compile Include="Mods\SphereII Santas\Scripts\Santa.cs" />
     <Compile Include="Mods\SphereII Winter Project Menu\Harmony\Harmony.cs" />
     <Compile Include="Mods\SphereII Winter Project\Harmony\PrefabInstance.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <Reference Include="0Harmony">
-      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\7DaysToDie_Data\Managed\0Harmony.dll</HintPath>
-    </Reference>
-    <Reference Include="Assembly-CSharp">
-      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\7DaysToDie_Data\Managed\Assembly-CSharp.dll</HintPath>
-    </Reference>
-    <Reference Include="DMT">
-      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\7DaysToDie_Data\Managed\DMT.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Xml" />
-    <Reference Include="UnityEngine">
-      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\7DaysToDie_Data\Managed\UnityEngine.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.AnimationModule">
-      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\7DaysToDie_Data\Managed\UnityEngine.AnimationModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.CoreModule">
-      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\7DaysToDie_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

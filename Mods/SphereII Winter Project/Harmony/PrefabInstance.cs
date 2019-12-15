@@ -46,6 +46,7 @@ public class SphereII_WinterProject
 
                     _bad.bTraderArea = false;
                     _bad.bExcludeDistantPOIMesh = true;
+                    _bad.bCopyAirBlocks = true;
                 }
 
             }
@@ -64,6 +65,7 @@ public class SphereII_WinterProject
             __instance.yOffset -= 8;
             __instance.bTraderArea = false;
             __instance.bExcludeDistantPOIMesh = true;
+            __instance.bCopyAirBlocks = true;
         }
 
     }
