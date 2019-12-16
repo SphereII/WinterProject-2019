@@ -62,7 +62,10 @@ public class SphereII_WinterProject
     {
         public static void Postfix(Prefab __instance)
         {
-            __instance.yOffset -= 8;
+            if (__instance.yOffset == -1)
+                __instance.yOffset = -8;
+            else
+                __instance.yOffset -= 8;
             __instance.bTraderArea = false;
             __instance.bExcludeDistantPOIMesh = true;
             __instance.bCopyAirBlocks = true;
