@@ -189,7 +189,7 @@
       <property name="Model" value="#@modfolder:Resources/XmasDeco.unity3d?IceBlock_X"/>
       <!-- Ice Blocks by vanquish99 is licensed under CC Attribution -->
       <property name="CanPickup" value="false" />
-      <property name="CustomIcon" value="iceblock" />
+      <property name="CustomIcon" value="iceBlock" />
       <property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
       <property name="ImposterExchange" value="imposterBlock" param1="62" />
       <property name="DropScale" value="2" />
@@ -210,7 +210,7 @@
       <property name="Model" value="#@modfolder:Resources/XmasDeco.unity3d?SnowBlock_X"/>
       <!-- Ice Blocks by vanquish99 is licensed under CC Attribution -->
       <property name="CanPickup" value="false" />
-      <property name="CustomIcon" value="snowblock" />
+      <property name="CustomIcon" value="snowBlock" />
       <property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
       <property name="ImposterExchange" value="imposterBlock" param1="62" />
       <property name="DropScale" value="2" />
@@ -253,28 +253,6 @@
       <drop event="Harvest" name="resourceWood" count="1" tag="oreWoodHarvest"/>
       <property name="ParticleOnDeath" value="treeGib_small_dust" />
     </block>
-    <!--		<block name="stockings1">
-			<property name="Material" value="Mcloth" />
-			<property name="Shape" value="ModelEntity" /> 
-			<property name="Model" value="#@modfolder:Resources/XmasDeco.unity3d?Stockings1_X" />		
-			<property name="IsDecoration" value="true" />
-			<property name="ImposterExclude" value="true" />
-			<property name="Weight" value="30" />
-			<property name="CanPickup" value="true" />
-			<property name="DescriptionKey" value="" />
-			<drop event="Destroy" name="cloth" count="1,3" prob="1" />
-		</block>
-		<block name="stockings2">
-			<property name="Material" value="Mcloth" />
-			<property name="Shape" value="ModelEntity" /> 
-			<property name="Model" value="#@modfolder:Resources/XmasDeco.unity3d?Stockings2_X" />		
-			<property name="IsDecoration" value="true" />
-			<property name="ImposterExclude" value="true" />
-			<property name="Weight" value="30" />
-			<property name="CanPickup" value="true" />
-			<property name="DescriptionKey" value="" />
-			<drop event="Destroy" name="cloth" count="1,3" prob="1" />
-		</block> -->
     <block name="wrappingstation">
       <property name="Extends" value="workbench"/>
       <property name="Class" value="Workstation"/>
@@ -352,7 +330,7 @@
       <property name="OnlySimpleRotations" value="true" />
       <property name="CanPickup" value="true" />
       <property name="HeatMapStrength" value="1" />
-      <property name="CustomIcon" value="xmasCandle" />
+      <property name="CustomIcon" value="XmasCandle" />
       <property name="HeatMapTime" value="1200" />
       <property name="HeatMapFrequency" value="15" />
       <drop event="Destroy" name="candle" count="1" />

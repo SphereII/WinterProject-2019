@@ -151,11 +151,9 @@
 			<property name="ModelType" value="Standard" />
 			<property name="HasRagdoll" value="true" />
 			<property name="PhysicsBody" value="vulture" />
-			<property name="SurfaceCategory" value="organic"/>
+			<property name="SurfaceCategory" value="earth"/>
 			<property name="Mass" value="10"/>
 			<property name="Mesh" value="#@modfolder:Resources/Swarms.unity3d?SnowSwarm_X" /> 
-		
-			<property name="AttackIndexes" value="0" />
 			<property name="HandItem" value="meleeHandSnowstorm" />
 			<property name="SoundRandom" value="" />
 			<property name="SoundRandomTime" value="60.0"/>
@@ -169,12 +167,12 @@
 			<property name="DeadBodyHitPoints" value="1" />
 			<property name="LootDropProb" value="0"/> 
 			<property name="TimeStayAfterDeath" value="2.0"/>
+			<property name="Buffs" value="buffSnowSwarm"/>		 
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="50"/>
-				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="buffSnowSwarm"/>
 			</effect_group>
 			<property name="MoveSpeed" value=".15"/>
-			<property name="MoveSpeedAggro" value=".6, 1.0"/> <!-- Used when player in vehicle -->
+			<property name="MoveSpeedAggro" value=".6, 1.0"/> 
 		</entity_class> 
 		<entity_class name="animalBloodFlySwarm_X" extends="animalZombieVulture">
 			<property name="Tags" value="insect,hostile"/>
