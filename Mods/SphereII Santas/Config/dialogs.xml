@@ -23,7 +23,12 @@
       <statement id="noah" text="dialog_trader_statement_noah" nextstatementid="background" />
       <statement id="currentjobs" text="dialog_trader_statement_currentjobs" nextstatementid="start">
         <response_entry id="nevermind" ref_text="dialog_trader_response_nevermind" />
-        <quest_entry type="add" id="1" />
+        <quest_entry type="add" listindex="0" />
+        <quest_entry type="add" listindex="1" />
+        <quest_entry type="add" listindex="2" />
+        <quest_entry type="add" listindex="3" />
+        <quest_entry type="add" listindex="4" />
+        <response_entry id="nevermind" />
       </statement>
       <statement id="nojobs" text="dialog_trader_statement_nojobs" nextstatementid="start" />
       <statement id="admin" text="dialog_trader_statement_admin">

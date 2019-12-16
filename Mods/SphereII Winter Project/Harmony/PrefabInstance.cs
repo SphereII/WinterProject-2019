@@ -62,6 +62,8 @@ public class SphereII_WinterProject
     {
         public static void Postfix(Prefab __instance)
         {
+            // Prefabs are -1 seems to behave very strangely. Sink them by 8, regardless. Either o one will notice it being one-less snow buried, but may
+            // result in floating buildings. 
             if (__instance.yOffset == -1)
                 __instance.yOffset = -8;
             else
