@@ -10,7 +10,6 @@
     <entity name="zombieFatCop_white"/>
     <entity name="zombieFemaleFat_white"/>
     <entity name="zombieFatHawaiian_white"/>
-    <entity name="zombieWightFeral_white"/>
     <entity name="zombieFootballPlayer_white"/>
     <entity name="zombieMaleHazmat_white"/>
     <entity name="zombieSkateboarder_white"/>
@@ -30,6 +29,11 @@
     <entity name="zombieYo_white"/>
   </append>
 
+
+  <insertBefore xpath="//entity[@name='zombieWightFeral']">
+    <entity name="zombieWightFeral_white"/>
+  </insertBefore>
+  
   <insertBefore xpath="//entity[@name='zombieScreamer']">
     <entity name="zombieScreamer_white"/>
   </insertBefore>

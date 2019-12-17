@@ -7,8 +7,19 @@
   <set xpath="/recipes/recipe[ starts-with(@name, 'ammoCrossbowBolt')]/ingredient[@name='resourceFeather']/@count">3</set>
 
   <append xpath="/recipes">
-  
 
+    <recipe name="ammoArrowIron" count="1">
+      <ingredient name="resourceArrowHeadIron" count="1"/>
+      <ingredient name="resourceWood" count="1"/>
+      <ingredient name="resourceScrapPolymers" count="1"/>
+    </recipe>
+
+    <recipe name="ammoArrowStone" count="1">
+      <ingredient name="resourceRockSmall" count="1"/>
+      <ingredient name="resourceWood" count="1"/>
+      <ingredient name="resourceScrapPolymers" count="1"/>
+    </recipe>
+    
     <recipe name="clothbedroll" count="1">
       <ingredient name="resourceCloth" count="20"/>
     </recipe>
