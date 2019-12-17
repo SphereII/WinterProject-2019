@@ -375,14 +375,13 @@
 			<property class="Action0">
 				<property name="Delay" value="0.7"/> <!-- obsolete if rounds per minute exists -->
 				<property name="Range" value="3.0"/>
-				<property name="DamageEntity" value="5"/>
-				<property name="DamageBlock" value="5"/>
+				<property name="DamageEntity" value="0"/>
+				<property name="DamageBlock" value="0"/>
 				<property name="Buff" value="buffFrostbite"/> 
 			</property>
 
 			<effect_group name="Base Effects">
 				<passive_effect name="ModSlots" operation="base_set" value="0"/>
-				<passive_effect name="BuffProcChance" operation="base_set" value="1" tags="buffFrostbite"/>
 			</effect_group>
 		</item>
 
