@@ -42,7 +42,8 @@
     <placeholder name="tv">
       <block name="wreath" prob="0.4"/>
       <block name="XmasPoster01" prob="0.4"/>
-      <block name="original_tv" prob="0.2" />
+      <block name="original_tv" prob="0.1" />
+	  <block name="WinterPlayerTV" prob="0.2" />
     </placeholder>
 
     <placeholder name="curtain_top1Sheet3">
