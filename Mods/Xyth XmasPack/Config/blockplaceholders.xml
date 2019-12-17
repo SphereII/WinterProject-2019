@@ -4,7 +4,7 @@
   <set xpath="/blockplaceholders/placeholder[@name='cntWorkstationsRandomLootHelper']/block[@name='workbench']/@prob">20</set>
   <set xpath="/blockplaceholders/placeholder[@name='cntWorkstationsRandomLootHelper']/block[@name='chemistryStation']/@prob">20</set>
   <set xpath="/blockplaceholders/placeholder[@name='cntWorkstationsRandomLootHelper']/block[@name='cementMixer']/@prob">20</set>
-  
+
   <!-- add the wrapping station to be distributed -->
   <append xpath="/blockplaceholders/placeholder[@name='cntWorkstationsRandomLootHelper']">
     <block name="wrappingstation" prob="20" />
@@ -30,7 +30,7 @@
       <block name="xmasGift" prob="0.3"/>
       <block name="air" prob="0.2" />
       <block name="rabbitBlock" prob="0.2" />
-      
+
     </placeholder>
 
     <placeholder name="candleTableLight">
@@ -43,6 +43,21 @@
       <block name="wreath" prob="0.4"/>
       <block name="XmasPoster01" prob="0.4"/>
       <block name="original_tv" prob="0.2" />
+    </placeholder>
+
+    <placeholder name="curtain_top1Sheet3">
+      <block name="curtain_top1Sheet3" prob="0.4"/>
+      <block name="icicle" prob="0.2"/>
+      <block name="icicles" prob="0.2"/>
+      <block name="lightString" prob="0.2"/>
+    </placeholder>
+
+    <placeholder name="miniblindTopSheet">
+      <block name="miniblindTopSheet" prob="0.4"/>
+      <block name="icicle" prob="0.2"/>
+      <block name="icicles" prob="0.2"/>
+      <block name="lightString" prob="0.2"/>
+
     </placeholder>
   </append>
 </configs>

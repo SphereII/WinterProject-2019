@@ -71,145 +71,257 @@
 
   <append xpath="/recipes">
     <recipe name="foodCanBeef" >
-      <ingredient name="foodCanBeefFrozen" count="1" />
+      <ingredient name="foodCanBeefFrozen" count="1" craft_area="campfire" craft_tool="toolCookingPot"  craft_time="20"/>
     </recipe>
     <recipe name="foodCanChicken" >
-      <ingredient name="foodCanChickenFrozen" count="1" />
+      <ingredient name="foodCanChickenFrozen" count="1" craft_area="campfire" craft_tool="toolCookingPot"  craft_time="20"/>
     </recipe>
     <recipe name="foodCanLamb" >
-      <ingredient name="foodCanLambFrozen" count="1" />
+      <ingredient name="foodCanLambFrozen" count="1" craft_area="campfire" craft_tool="toolCookingPot"  craft_time="20"/>
     </recipe>
     <recipe name="foodCanCatfood" >
-      <ingredient name="foodCanCatfoodFrozen" count="1" />
+      <ingredient name="foodCanCatfoodFrozen" count="1" craft_area="campfire" craft_tool="toolCookingPot"  craft_time="20" />
     </recipe>
     <recipe name="foodCanDogfood" >
-      <ingredient name="foodCanDogfoodFrozen" count="1" />
+      <ingredient name="foodCanDogfoodFrozen" count="1" craft_area="campfire" craft_tool="toolCookingPot"  craft_time="20" />
     </recipe>
     <recipe name="foodCanChili" >
-      <ingredient name="foodCanChiliFrozen" count="1" />
+      <ingredient name="foodCanChiliFrozen" count="1" craft_area="campfire" craft_tool="toolCookingPot"  craft_time="20" />
     </recipe>
     <recipe name="foodCanTuna" >
-      <ingredient name="foodCanTunaFrozen" count="1" />
+      <ingredient name="foodCanTunaFrozen" count="1"  craft_area="campfire" craft_tool="toolCookingPot"  craft_time="20"/>
     </recipe>
     <recipe name="foodCanSham" >
-      <ingredient name="foodCanShamFrozen" count="1" />
+      <ingredient name="foodCanShamFrozen" count="1" craft_area="campfire" craft_tool="toolCookingPot"  craft_time="20"/>
     </recipe>
     <recipe name="foodCanPasta" >
-      <ingredient name="foodCanPastaFrozen" count="1" />
+      <ingredient name="foodCanPastaFrozen" count="1" craft_area="campfire" craft_tool="toolCookingPot"  craft_time="20" />
     </recipe>
     <recipe name="foodCanSalmon" >
-      <ingredient name="foodCanSalmonFrozen" count="1" />
+      <ingredient name="foodCanSalmonFrozen" count="1" craft_area="campfire" craft_tool="toolCookingPot"  craft_time="20" />
     </recipe>
     <recipe name="foodCanMiso" >
-      <ingredient name="foodCanMisoFrozen" count="1" />
+      <ingredient name="foodCanMisoFrozen" count="1" craft_area="campfire" craft_tool="toolCookingPot"  craft_time="20" />
     </recipe>
     <recipe name="foodCanPeas" >
-      <ingredient name="foodCanPeasFrozen" count="1" />
+      <ingredient name="foodCanPeasFrozen" count="1"  craft_area="campfire" craft_tool="toolCookingPot"  craft_time="20"/>
     </recipe>
     <recipe name="foodCanPears" >
-      <ingredient name="foodCanPearsFrozen" count="1" />
+      <ingredient name="foodCanPearsFrozen" count="1" craft_area="campfire" craft_tool="toolCookingPot"  craft_time="20" />
     </recipe>
     <recipe name="foodCanSoup" >
-      <ingredient name="foodCanSoupFrozen" count="1" />
+      <ingredient name="foodCanSoupFrozen" count="1" craft_area="campfire" craft_tool="toolCookingPot"  craft_time="20" />
     </recipe>
     <recipe name="foodCanStock" >
-      <ingredient name="foodCanStockFrozen" count="1" />
+      <ingredient name="foodCanStockFrozen" count="1" craft_area="campfire" craft_tool="toolCookingPot"  craft_time="20" />
     </recipe>
     <recipe name="foodCornOnTheCob" >
-      <ingredient name="foodCornOnTheCobFrozen" count="1" />
+      <ingredient name="foodCornOnTheCobFrozen" count="1"  craft_area="campfire" craft_tool="toolCookingPot"  craft_time="20"/>
     </recipe>
     <recipe name="foodCornBread" >
-      <ingredient name="foodCornBreadFrozen" count="1" />
+      <ingredient name="foodCornBreadFrozen" count="1" craft_area="campfire" craft_tool="toolCookingPot"  craft_time="20" />
     </recipe>
     <recipe name="foodMoldyBread" >
-      <ingredient name="foodMoldyBreadFrozen" count="1" />
+      <ingredient name="foodMoldyBreadFrozen" count="1" craft_area="campfire" craft_tool="toolCookingPot"  craft_time="20" />
     </recipe>
     <recipe name="foodShamSandwich" >
-      <ingredient name="foodShamSandwichFrozen" count="1" />
+      <ingredient name="foodShamSandwichFrozen" count="1" craft_area="campfire" craft_tool="toolCookingPot"  craft_time="20" />
     </recipe>
     <recipe name="foodCharredMeat" >
-      <ingredient name="foodCharredMeatFrozen" count="1" />
+      <ingredient name="foodCharredMeatFrozen" count="1"  craft_area="campfire" craft_tool="toolCookingPot"  craft_time="20"/>
     </recipe>
     <recipe name="foodGrilledMeat" >
-      <ingredient name="foodGrilledMeatFrozen" count="1" />
+      <ingredient name="foodGrilledMeatFrozen" count="1" craft_area="campfire" craft_tool="toolCookingPot"  craft_time="20" />
     </recipe>
     <recipe name="foodBoiledMeat" >
-      <ingredient name="foodBoiledMeatFrozen" count="1" />
+      <ingredient name="foodBoiledMeatFrozen" count="1"  craft_area="campfire" craft_tool="toolCookingPot"  craft_time="20"/>
     </recipe>
     <recipe name="foodMeatStew" >
-      <ingredient name="foodMeatStewFrozen" count="1" />
+      <ingredient name="foodMeatStewFrozen" count="1" craft_area="campfire" craft_tool="toolCookingPot"  craft_time="20" />
     </recipe>
     <recipe name="foodSteakAndPotato" >
-      <ingredient name="foodSteakAndPotatoFrozen" count="1" />
+      <ingredient name="foodSteakAndPotatoFrozen" count="1" craft_area="campfire" craft_tool="toolCookingPot"  craft_time="20" />
     </recipe>
     <recipe name="foodShamChowder" >
-      <ingredient name="foodShamChowderFrozen" count="1" />
+      <ingredient name="foodShamChowderFrozen" count="1" craft_area="campfire" craft_tool="toolCookingPot"  craft_time="20" />
     </recipe>
     <recipe name="foodHoboStew" >
-      <ingredient name="foodHoboStewFrozen" count="1" />
+      <ingredient name="foodHoboStewFrozen" count="1" craft_area="campfire" craft_tool="toolCookingPot"  craft_time="20" />
     </recipe>
     <recipe name="foodFishTacos" >
-      <ingredient name="foodFishTacosFrozen" count="1" />
+      <ingredient name="foodFishTacosFrozen" count="1" craft_area="campfire" craft_tool="toolCookingPot"  craft_time="20" />
     </recipe>
     <recipe name="foodChiliDog" >
-      <ingredient name="foodChiliDogFrozen" count="1" />
+      <ingredient name="foodChiliDogFrozen" count="1"  craft_area="campfire" craft_tool="toolCookingPot"  craft_time="20"/>
     </recipe>
     <recipe name="foodBakedPotato" >
-      <ingredient name="foodBakedPotatoFrozen" count="1" />
+      <ingredient name="foodBakedPotatoFrozen" count="1"  craft_area="campfire" craft_tool="toolCookingPot"  craft_time="20"/>
     </recipe>
     <recipe name="foodBlueberryPie" >
-      <ingredient name="foodBlueberryPieFrozen" count="1" />
+      <ingredient name="foodBlueberryPieFrozen" count="1" craft_area="campfire" craft_tool="toolCookingPot"  craft_time="20" />
     </recipe>
     <recipe name="foodPumpkinPie" >
-      <ingredient name="foodPumpkinPieFrozen" count="1" />
+      <ingredient name="foodPumpkinPieFrozen" count="1" craft_area="campfire" craft_tool="toolCookingPot"  craft_time="20" />
     </recipe>
     <recipe name="foodPumpkinCheesecake" >
-      <ingredient name="foodPumpkinCheesecakeFrozen" count="1" />
+      <ingredient name="foodPumpkinCheesecakeFrozen" count="1"  craft_area="campfire" craft_tool="toolCookingPot"  craft_time="20"/>
     </recipe>
     <recipe name="foodPumpkinBread" >
-      <ingredient name="foodPumpkinBreadFrozen" count="1" />
+      <ingredient name="foodPumpkinBreadFrozen" count="1"  craft_area="campfire" craft_tool="toolCookingPot"  craft_time="20"/>
     </recipe>
     <recipe name="foodEggBoiled" >
-      <ingredient name="foodEggBoiledFrozen" count="1" />
+      <ingredient name="foodEggBoiledFrozen" count="1" craft_area="campfire" craft_tool="toolCookingPot"  craft_time="20" />
     </recipe>
     <recipe name="foodBaconAndEggs" >
-      <ingredient name="foodBaconAndEggsFrozen" count="1" />
+      <ingredient name="foodBaconAndEggsFrozen" count="1" craft_area="campfire" craft_tool="toolCookingPot"  craft_time="20" />
     </recipe>
     <recipe name="foodVegetableStew" >
-      <ingredient name="foodVegetableStewFrozen" count="1" />
+      <ingredient name="foodVegetableStewFrozen" count="1" craft_area="campfire" craft_tool="toolCookingPot"  craft_time="20" />
     </recipe>
     <recipe name="foodRawMeat" >
-      <ingredient name="foodRawMeatFrozen" count="1" />
+      <ingredient name="foodRawMeatFrozen" count="1" craft_area="campfire" craft_tool="toolCookingPot"  craft_time="20" />
     </recipe>
     <recipe name="foodRottingFlesh" >
-      <ingredient name="foodRottingFleshFrozen" count="1" />
+      <ingredient name="foodRottingFleshFrozen" count="1"  craft_area="campfire" craft_tool="toolCookingPot"  craft_time="20"/>
     </recipe>
     <recipe name="foodEgg" >
-      <ingredient name="foodEggFrozen" count="1" />
+      <ingredient name="foodEggFrozen" count="1" craft_area="campfire" craft_tool="toolCookingPot"  craft_time="20" />
     </recipe>
     <recipe name="foodCornMeal" >
-      <ingredient name="foodCornMealFrozen" count="1" />
+      <ingredient name="foodCornMealFrozen" count="1" craft_area="campfire" craft_tool="toolCookingPot"  craft_time="20" />
     </recipe>
     <recipe name="foodCropBlueberries" >
-      <ingredient name="foodCropBlueberriesFrozen" count="1" />
+      <ingredient name="foodCropBlueberriesFrozen" count="1"  craft_area="campfire" craft_tool="toolCookingPot"  craft_time="20"/>
     </recipe>
     <recipe name="foodCropCorn" >
-      <ingredient name="foodCropCornFrozen" count="1" />
+      <ingredient name="foodCropCornFrozen" count="1" craft_area="campfire" craft_tool="toolCookingPot"  craft_time="20" />
     </recipe>
     <recipe name="foodCropGraceCorn" >
-      <ingredient name="foodCropGraceCornFrozen" count="1" />
+      <ingredient name="foodCropGraceCornFrozen" count="1" craft_area="campfire" craft_tool="toolCookingPot"  craft_time="20" />
     </recipe>
     <recipe name="foodCropPotato" >
-      <ingredient name="foodCropPotatoFrozen" count="1" />
+      <ingredient name="foodCropPotatoFrozen" count="1" craft_area="campfire" craft_tool="toolCookingPot"  craft_time="20" />
     </recipe>
     <recipe name="foodCropMushrooms" >
-      <ingredient name="foodCropMushroomsFrozen" count="1" />
+      <ingredient name="foodCropMushroomsFrozen" count="1"  craft_area="campfire" craft_tool="toolCookingPot"  craft_time="20"/>
     </recipe>
     <recipe name="foodCropYuccaFruit" >
-      <ingredient name="foodCropYuccaFruitFrozen" count="1" />
+      <ingredient name="foodCropYuccaFruitFrozen" count="1"  craft_area="campfire" craft_tool="toolCookingPot"  craft_time="20"/>
     </recipe>
     <recipe name="foodCropPumpkin" >
-      <ingredient name="foodCropPumpkinFrozen" count="1" />
+      <ingredient name="foodCropPumpkinFrozen" count="1"  craft_area="campfire" craft_tool="toolCookingPot"  craft_time="20"/>
+    </recipe>
+  </append>
+
+
+  <append xpath="/recipes">
+    <recipe name="Berry Tea" craft_area="campfire" craft_tool="toolCookingPot"  craft_time="20" >
+      <ingredient name="Berry TeaFrozen" count="1"   />
+    </recipe>
+    <recipe name="Iced Mixed Tea" craft_area="campfire" craft_tool="toolCookingPot"  craft_time="20" >
+      <ingredient name="Iced Mixed TeaFrozen" count="1"   />
+    </recipe>
+    <recipe name="Iced Coffee" craft_area="campfire" craft_tool="toolCookingPot"  craft_time="20" >
+      <ingredient name="Iced CoffeeFrozen" count="1"   />
+    </recipe>
+    <recipe name="Yucca Chips" craft_area="campfire" craft_tool="toolCookingPot"  craft_time="20" >
+      <ingredient name="Yucca ChipsFrozen" count="1"   />
+    </recipe>
+    <recipe name="Hashbrown" craft_area="campfire" craft_tool="toolCookingPot"  craft_time="20" >
+      <ingredient name="HashbrownFrozen" count="1"   />
+    </recipe>
+    <recipe name="Mashed Potato" craft_area="campfire" craft_tool="toolCookingPot"  craft_time="20" >
+      <ingredient name="Mashed PotatoFrozen" count="1"   />
+    </recipe>
+    <recipe name="Corn Grits" craft_area="campfire" craft_tool="toolCookingPot"  craft_time="20" >
+      <ingredient name="Corn GritsFrozen" count="1"   />
+    </recipe>
+    <recipe name="Blueberry Jam" craft_area="campfire" craft_tool="toolCookingPot"  craft_time="20" >
+      <ingredient name="Blueberry JamFrozen" count="1"   />
+    </recipe>
+    <recipe name="Yucca Jam" craft_area="campfire" craft_tool="toolCookingPot"  craft_time="20" >
+      <ingredient name="Yucca JamFrozen" count="1"   />
+    </recipe>
+    <recipe name="Egg Salad" craft_area="campfire" craft_tool="toolCookingPot"  craft_time="20" >
+      <ingredient name="Egg SaladFrozen" count="1"   />
+    </recipe>
+    <recipe name="Fried Meat" craft_area="campfire" craft_tool="toolCookingPot"  craft_time="20" >
+      <ingredient name="Fried MeatFrozen" count="1"   />
+    </recipe>
+    <recipe name="Corn Chips" craft_area="campfire" craft_tool="toolCookingPot"  craft_time="20" >
+      <ingredient name="Corn ChipsFrozen" count="1"   />
+    </recipe>
+    <recipe name="Blueberry Jam Sandwich" craft_area="campfire" craft_tool="toolCookingPot"  craft_time="20" >
+      <ingredient name="Blueberry Jam SandwichFrozen" count="1"   />
+    </recipe>
+    <recipe name="Yucca Jam Sandwich" craft_area="campfire" craft_tool="toolCookingPot"  craft_time="20" >
+      <ingredient name="Yucca Jam SandwichFrozen" count="1"   />
+    </recipe>
+    <recipe name="Coffee Cake" craft_area="campfire" craft_tool="toolCookingPot"  craft_time="20" >
+      <ingredient name="Coffee CakeFrozen" count="1"   />
+    </recipe>
+    <recipe name="Mushroom Pie" craft_area="campfire" craft_tool="toolCookingPot"  craft_time="20" >
+      <ingredient name="Mushroom PieFrozen" count="1"   />
+    </recipe>
+    <recipe name="Meat and Beer Pie" craft_area="campfire" craft_tool="toolCookingPot"  craft_time="20" >
+      <ingredient name="Meat and Beer PieFrozen" count="1"   />
+    </recipe>
+    <recipe name="Fried Mushrooms" craft_area="campfire" craft_tool="toolCookingPot"  craft_time="20" >
+      <ingredient name="Fried MushroomsFrozen" count="1"   />
+    </recipe>
+    <recipe name="Fried Egg" craft_area="campfire" craft_tool="toolCookingPot"  craft_time="20" >
+      <ingredient name="Fried EggFrozen" count="1"   />
+    </recipe>
+    <recipe name="French Toast" craft_area="campfire" craft_tool="toolCookingPot"  craft_time="20" >
+      <ingredient name="French ToastFrozen" count="1"   />
+    </recipe>
+    <recipe name="Honey Glazed Meat" craft_area="campfire" craft_tool="toolCookingPot"  craft_time="20" >
+      <ingredient name="Honey Glazed MeatFrozen" count="1"   />
+    </recipe>
+    <recipe name="Blueberry Soda" craft_area="campfire" craft_tool="toolCookingPot"  craft_time="20" >
+      <ingredient name="Blueberry SodaFrozen" count="1"   />
+    </recipe>
+    <recipe name="Kvass Soda" craft_area="campfire" craft_tool="toolCookingPot"  craft_time="20" >
+      <ingredient name="Kvass SodaFrozen" count="1"   />
+    </recipe>
+    <recipe name="Carbonated Water" craft_area="campfire" craft_tool="toolCookingPot"  craft_time="20" >
+      <ingredient name="Carbonated WaterFrozen" count="1"   />
+    </recipe>
+    <recipe name="Distilled Vodka" craft_area="campfire" craft_tool="toolCookingPot"  craft_time="20" >
+      <ingredient name="Distilled VodkaFrozen" count="1"   />
+    </recipe>
+    <recipe name="Snowberry Gin" craft_area="campfire" craft_tool="toolCookingPot"  craft_time="20" >
+      <ingredient name="Snowberry GinFrozen" count="1"   />
+    </recipe>
+    <recipe name="Sugar Extract" craft_area="campfire" craft_tool="toolCookingPot"  craft_time="20" >
+      <ingredient name="Sugar ExtractFrozen" count="1"   />
+    </recipe>
+    <recipe name="Rock Candy" craft_area="campfire" craft_tool="toolCookingPot"  craft_time="20" >
+      <ingredient name="Rock CandyFrozen" count="1"   />
+    </recipe>
+    <recipe name="Blueberry Candy" craft_area="campfire" craft_tool="toolCookingPot"  craft_time="20" >
+      <ingredient name="Blueberry CandyFrozen" count="1"   />
+    </recipe>
+    <recipe name="Snowberry Candy" craft_area="campfire" craft_tool="toolCookingPot"  craft_time="20" >
+      <ingredient name="Snowberry CandyFrozen" count="1"   />
+    </recipe>
+    <recipe name="Plain Fudge" craft_area="campfire" craft_tool="toolCookingPot"  craft_time="20" >
+      <ingredient name="Plain FudgeFrozen" count="1"   />
+    </recipe>
+    <recipe name="Energy Tablet" craft_area="campfire" craft_tool="toolCookingPot"  craft_time="20" >
+      <ingredient name="Energy TabletFrozen" count="1"   />
+    </recipe>
+    <recipe name="Sponge Cake" craft_area="campfire" craft_tool="toolCookingPot"  craft_time="20" >
+      <ingredient name="Sponge CakeFrozen" count="1"   />
+    </recipe>
+    <recipe name="Blueberry Sponge Cake" craft_area="campfire" craft_tool="toolCookingPot"  craft_time="20" >
+      <ingredient name="Blueberry Sponge CakeFrozen" count="1"   />
+    </recipe>
+    <recipe name="Yucca Sponge Cake" craft_area="campfire" craft_tool="toolCookingPot"  craft_time="20" >
+      <ingredient name="Yucca Sponge CakeFrozen" count="1"   />
+    </recipe>
+    <recipe name="Custard Pie" craft_area="campfire" craft_tool="toolCookingPot"  craft_time="20" >
+      <ingredient name="Custard PieFrozen" count="1"   />
     </recipe>
   </append>
 </configs>

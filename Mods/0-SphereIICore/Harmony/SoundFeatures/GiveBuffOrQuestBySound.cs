@@ -3,7 +3,7 @@ using Harmony;
 using System;
 using System.Collections.Generic;
 using UnityEngine;
-
+using System.Linq;
 
 // This class populates a static variable that will help us link Sound Data with Buff / Quests.
 public class SphereII_GiveBuffOrQuestBySound
@@ -13,7 +13,8 @@ public class SphereII_GiveBuffOrQuestBySound
     {
         AdvLogging.DisplayLog(AdvFeatureClass, "Searching for " + soundGroupName);
 
-        if (SoundDataNodeClassSDX.SoundDataSDXInfo.ContainsKey(soundGroupName))
+        // Dictionary search for substring
+        if (SoundDataNodeClassSDX.SoundDataSDXInfo.Any(kvp => kvp.Key.Contains(soundGroupName)))
         {
             AdvLogging.DisplayLog(AdvFeatureClass, "Found Sound Node. Checking for buffs");
 
@@ -51,7 +52,7 @@ public class SphereII_Audio_Manager_Play
     static bool Prefix(Audio.Manager __instance, Vector3 position, string soundGroupName)
     {
         AdvLogging.DisplayLog(AdvFeatureClass, "AudioManager.Play(): Vector3, String, int: " + soundGroupName);
-        SphereII_GiveBuffOrQuestBySound.CheckForBuffOrQuest(soundGroupName, position);
+        SphereII_GiveBuffOrQuestBySound.CheckForBuffOrQuest(soundGroupName.Split('/').Last(), position);
         return true;
     }
 }
@@ -72,7 +73,7 @@ public class SphereII_Audio_Server_Play
         if (entity == null)
             return true;
 
-        SphereII_GiveBuffOrQuestBySound.CheckForBuffOrQuest(soundGroupName, entity.position);
+        SphereII_GiveBuffOrQuestBySound.CheckForBuffOrQuest(soundGroupName.Split('/').Last(), entity.position);
         return true;
     }
 }
@@ -92,7 +93,7 @@ public class SphereII_Audio_Client_Play_1
             return true;
 
 
-        SphereII_GiveBuffOrQuestBySound.CheckForBuffOrQuest(soundGoupName, myEntity.position);
+        SphereII_GiveBuffOrQuestBySound.CheckForBuffOrQuest(soundGoupName.Split('/').Last(), myEntity.position);
         return true;
     }
 }
@@ -109,7 +110,7 @@ public class SphereII_Audio_Client_Play_2
     {
         AdvLogging.DisplayLog(AdvFeatureClass, "Audio.Client.Play(): Vector3, string: " + soundGoupName);
 
-        SphereII_GiveBuffOrQuestBySound.CheckForBuffOrQuest(soundGoupName, position);
+        SphereII_GiveBuffOrQuestBySound.CheckForBuffOrQuest(soundGoupName.Split('/').Last(), position);
         return true;
     }
 }
