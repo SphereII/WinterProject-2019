@@ -129,6 +129,7 @@
 			 <property name="MoveSpeed" value="0.8"/>
 			 <property name="MoveSpeedAggro" value="0.8, 1.25"/>
 			 <property name="MoveSpeedPanic" value="0.9"/>
+      <property name="EntityActiveWhen" value="Night" />
 		</entity_class>
 		<entity_class name="Snowcop" extends="zombieTemplateMale"><!-- Snowman by junaidamin is licensed under CC Attribution -->
 			<property name="AvatarController" value="MecanimSDX, Mods" />
