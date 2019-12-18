@@ -369,7 +369,55 @@
       <drop event="Destroy" count="0"/>
       <drop event="Fall" name="resourcePaper" count="1" prob="0.187" stick_chance="0"/>
     </block>
-
+   <block name="XmasPoster02">
+      <property name="Material" value="Mpaper" />
+      <property name="Shape" value="ModelEntity" />
+      <property name="Model" value="#@modfolder:Resources/XmasMoviePosters.unity3d?Posterhorror"/>
+      <property name="CanPickup" value="true" />
+      <!--     <property name="CustomIcon" value="" /> -->
+      <property name="Collide" value="melee,bullet,arrow,rocket"/>
+      <drop event="Harvest" name="resourcePaper" count="1" tool_category="harvestingTools"/>
+      <drop event="Destroy" count="0"/>
+      <drop event="Fall" name="resourcePaper" count="1" prob="0.187" stick_chance="0"/>
+    </block>
+	   <block name="XmasPoster03">
+      <property name="Material" value="Mpaper" />
+      <property name="Shape" value="ModelEntity" />
+      <property name="Model" value="#@modfolder:Resources/XmasMoviePosters.unity3d?Posterjack"/>
+      <property name="CanPickup" value="true" />
+      <!--     <property name="CustomIcon" value="" /> -->
+      <property name="Collide" value="melee,bullet,arrow,rocket"/>
+      <drop event="Harvest" name="resourcePaper" count="1" tool_category="harvestingTools"/>
+      <drop event="Destroy" count="0"/>
+      <drop event="Fall" name="resourcePaper" count="1" prob="0.187" stick_chance="0"/>
+    </block>
+	   <block name="XmasPoster04">
+      <property name="Material" value="Mpaper" />
+      <property name="Shape" value="ModelEntity" />
+      <property name="Model" value="#@modfolder:Resources/XmasMoviePosters.unity3d?Posterkrampus"/>
+      <property name="CanPickup" value="true" />
+      <!--     <property name="CustomIcon" value="" /> -->
+      <property name="Collide" value="melee,bullet,arrow,rocket"/>
+      <drop event="Harvest" name="resourcePaper" count="1" tool_category="harvestingTools"/>
+      <drop event="Destroy" count="0"/>
+      <drop event="Fall" name="resourcePaper" count="1" prob="0.187" stick_chance="0"/>
+    </block>
+	
+	   <block name="XmasPoster05">
+      <property name="Material" value="Mpaper" />
+      <property name="Shape" value="ModelEntity" />
+      <property name="Model" value="#@modfolder:Resources/XmasMoviePosters.unity3d?Posterslay"/>
+      <property name="CanPickup" value="true" />
+      <!--     <property name="CustomIcon" value="" /> -->
+      <property name="Collide" value="melee,bullet,arrow,rocket"/>
+      <drop event="Harvest" name="resourcePaper" count="1" tool_category="harvestingTools"/>
+      <drop event="Destroy" count="0"/>
+      <drop event="Fall" name="resourcePaper" count="1" prob="0.187" stick_chance="0"/>
+    </block>
+	
+	
+	
+	
     <!-- change the wood table to be based off of a loot replace -->
     <block name="woodTable">
       <property name="CreativeMode" value="Dev"/>
