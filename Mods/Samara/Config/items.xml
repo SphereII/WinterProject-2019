@@ -358,7 +358,7 @@
 			<property name="CreativeMode" value="None"/>
 			<property class="Action0">
 				<property name="Delay" value="0"/> <!-- obsolete if rounds per minute exists -->
-				<property name="Range" value="3.6"/>
+				<property name="Range" value="3.0"/>
 				<property name="Sphere" value=".5"/>
 				<property name="DamageEntity" value="30"/>
 				<property name="DamageBlock" value="40"/>
