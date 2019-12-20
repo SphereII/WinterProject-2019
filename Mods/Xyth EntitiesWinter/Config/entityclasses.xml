@@ -7,6 +7,7 @@
 			<property name="Tags" value="entity,animal,hostile,bear,perkAT05"/>
 			<property name="AvatarController" value="MecanimSDX, Mods" />
 			<property name="RootMotion" value="false" />
+			<property name="HasRagdoll" value="true" />
 		</entity_class> 
 		<entity_class name="ArcticFox" extends="animalTemplateTimid" >
 			<property name="Mesh" value="#@modfolder:Resources/ArcticFox.unity3d?ArcticFox_X" /> 
@@ -88,7 +89,7 @@
 		<entity_class name="Snowman" extends="zombieTemplateMale"><!-- Snowman by junaidamin is licensed under CC Attribution -->
 			<property name="AvatarController" value="MecanimSDX, Mods" />
 			<property name="RootMotion" value="false" />
-			<property name="HasRagdoll" value="false" />
+			<property name="HasRagdoll" value="true" />
 			<property name="Mesh" value="#@modfolder:Resources/Snowmen.unity3d?Snowman_X" /> 
 			<property name="Class" value="EntityZombie"/>
 			<property name="HandItem" value="handZombieSnowman"/> 
@@ -129,12 +130,11 @@
 			 <property name="MoveSpeed" value="0.8"/>
 			 <property name="MoveSpeedAggro" value="0.8, 1.25"/>
 			 <property name="MoveSpeedPanic" value="0.9"/>
-      <property name="EntityActiveWhen" value="Night" />
 		</entity_class>
 		<entity_class name="Snowcop" extends="zombieTemplateMale"><!-- Snowman by junaidamin is licensed under CC Attribution -->
 			<property name="AvatarController" value="MecanimSDX, Mods" />
 			<property name="RootMotion" value="false" />
-			<property name="HasRagdoll" value="false" />
+			<property name="HasRagdoll" value="true" />
 			<property name="Mesh" value="#@modfolder:Resources/Snowmen.unity3d?Snowcop_X" /> 
 			<property name="Class" value="EntityZombieCop"/>
 			<property name="HandItem" value="handZombieSnowmanCop"/> 
