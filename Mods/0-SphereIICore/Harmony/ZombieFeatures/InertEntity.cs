@@ -41,19 +41,13 @@ public class SphereII_InertEntity
     {
         public static bool Prefix(EntityAlive __instance)
         {
-            if(__instance == null)
-                return true;
-
-            if (__instance != null && __instance.emodel != null && __instance.emodel.avatarController != null && __instance.IsAlive())
-                __instance.emodel.avatarController.GetAnimator().enabled = true;
-
-            if (__instance.IsDead())
-                return true;
-
             if (SphereII_InertEntity.IsInert(__instance))
             {
                 if ((__instance.WorldTimeBorn + 15) > __instance.world.worldTime)
+                {
+                    __instance.emodel.avatarController.GetAnimator().enabled = true;
                     return true;
+                }
 
                 __instance.emodel.avatarController.GetAnimator().enabled = false;
                 return false;
@@ -69,7 +63,7 @@ public class SphereII_InertEntity
     [HarmonyPatch("CanDamageEntity")]
     public class SphereII_Entity_CanUpdateEntity
     {
-        public static bool Prefix(EntityAlive __instance, ref bool __result )
+        public static bool Prefix(EntityAlive __instance, ref bool __result)
         {
             if (SphereII_InertEntity.IsInert(__instance))
             {
@@ -103,7 +97,7 @@ public class SphereII_InertEntity
                         return false;
 
                 }
-                
+
             }
 
             return true;
