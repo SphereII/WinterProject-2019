@@ -41,6 +41,8 @@ public class SphereII_InertEntity
     {
         public static bool Prefix(EntityAlive __instance)
         {
+            if(__instance == null)
+                return true;
 
             if (__instance != null && __instance.emodel != null && __instance.emodel.avatarController != null && __instance.IsAlive())
                 __instance.emodel.avatarController.GetAnimator().enabled = true;
