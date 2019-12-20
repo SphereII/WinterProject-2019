@@ -48,9 +48,55 @@
         <triggered_effect trigger="onSelfLeaveGame" action="StopSound" sound="buffScaryScream" />
       </effect_group>
     </buff>
-
+	
+	<!-- buffs used to enable effects that only play if cursed   -->
+	<buff name="buffCurseShockDelay" description_key="buffShockedDesc" tooltip_key="buffShockedTooltip" icon="ui_game_symbol_electric_power" name_key="buffShockedName" hidden="true">
+		<stack_type value="ignore"/>
+		<duration value="2"/>
+		<effect_group>
+			<requirement name="HasBuff" buff="buffCurseSamara"/>
+			<triggered_effect trigger="onSelfBuffFinish" action="AddBuff" buff="buffCurseShock"/>
+		</effect_group>
+	</buff>
+	<buff name="buffCurseShock" description_key="buffShockedDesc" tooltip_key="buffShockedTooltip" icon="ui_game_symbol_electric_power" name_key="buffShockedName" hidden="true">
+		<damage_type value="electrical"/>
+		<stack_type value="ignore"/>
+		<duration value="3"/>
+		<effect_group>
+			<requirement name="HasBuff" buff="buffCurseSamara"/>
+			<requirement name="NotHasBuff" buff="buffCurseShockDelay2"/>
+			<passive_effect name="HealthChangeOT" operation="base_add" value="-2"/>
+			<passive_effect name="RunSpeed" operation="perc_subtract" value="0.9,0" duration="0,3.2"/>
+			<passive_effect name="WalkSpeed" operation="perc_subtract" value="0.9,0" duration="0,3.2"/>
+			<passive_effect name="CrouchSpeed" operation="perc_subtract" value="0.9,0" duration="0,3.2"/>
+			<passive_effect name="JumpStrength" operation="perc_subtract" value="0.9,0" duration="0,3.2"/>
+			<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_electric_shock" local_offset="0,0.75,0"/>
+			<triggered_effect trigger="onSelfEnteredGame" action="AttachParticleEffectToEntity" particle="p_electric_shock" local_offset="0,0.75,0"/>
+			<triggered_effect trigger="onSelfDied" action="RemoveParticleEffectFromEntity" particle="p_electric_shock"/>
+			<triggered_effect trigger="onSelfBuffFinish" action="RemoveParticleEffectFromEntity" particle="p_electric_shock"/>
+			<triggered_effect trigger="onSelfBuffFinish" action="AddBuff" buff="buffCurseShockDelay2"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="RemoveParticleEffectFromEntity" particle="p_electric_shock"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="ETrapHit" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfLeaveGame" action="RemoveParticleEffectFromEntity" particle="p_electric_shock"/>
+			<triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="electric_fence_impact"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="FadeOutSound" sound="electric_fence_impact"/>
+			<triggered_effect trigger="onSelfLeaveGame" action="StopSound" sound="electric_fence_impact"/>
+		</effect_group>
+	</buff>
+	<buff name="buffCurseShockDelay2" description_key="buffShockedDesc" tooltip_key="buffShockedTooltip" icon="ui_game_symbol_electric_power" name_key="buffShockedName" hidden="true">
+		<stack_type value="ignore"/>
+		<duration value="55"/>
+		<effect_group>
+			<requirement name="HasBuff" buff="buffCurseSamara"/>
+			<triggered_effect trigger="onSelfBuffFinish" action="RemoveBuff" buff="buffCurseShockDelay2"/>
+		</effect_group>
+	</buff>	
+	
+	
+	
+	
+	
     <!-- buffs that show video full screen over the top of the UI and player.  These will loop until the duration ends.  -->
-
 
     <buff name="buffCutscene00"  name_key="Buff" icon="ui_game_symbol_destruction2" hidden="true">
       <duration value="40"/>
@@ -371,10 +417,20 @@
 			<stack_type value="replace"/>
 			<update_rate value="3"/>
 			<effect_group>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="30" buff="buffFrostbite" target_tags="player"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="3" buff="buffFrostbite2" target_tags="player"/>
+			</effect_group>
+	</buff>
+	<buff name="buffSnowSwarmBoss" name_key="buffSnowSwarmBossName" description_key="buffSnowSwarmBossDesc" tooltip_key="buffSnowSwarmBossTooltip" >
+			<damage_type value="cold"/>
+			<stack_type value="replace"/>
+			<update_rate value="3"/>
+			<effect_group>
 				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="50" buff="buffFrostbite" target_tags="player"/>
 				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="10" buff="buffFrostbite2" target_tags="player"/>
 			</effect_group>
-		</buff>
+	</buff>
+	
 	<buff name="buffFrostbite" name_key="buffFrostbiteName" description_key="buffFrostbiteDesc" tooltip_key="buffFrostbiteTooltip" icon="ui_game_symbol_cold" icon_color="255,0,0" icon_blink="false">
 		<damage_type value="cold"/>
 		<stack_type value="replace"/>

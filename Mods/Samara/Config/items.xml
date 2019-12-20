@@ -384,7 +384,16 @@
 				<passive_effect name="ModSlots" operation="base_set" value="0"/>
 			</effect_group>
 		</item>
-
+		<item name="handIceHead">
+			<property name="Extends" value="meleeHandZombie01"/>
+			<property name="CreativeMode" value="None"/>
+			<property class="Action0">
+				<property name="DamageEntity" value="50"/>
+				<property name="DamageBlock" value="30"/>
+				<property name="Buff" value="criticalBlunt,injuryStunned,injurySprainedLeg" />
+				<property name="Buff_chance" value="0.5,0.3,0.3" /> 
+			</property>
+		</item>	
 
 		<item name="meleeHandBloodFly">
 			<property name="Extends" value="meleeHandMaster"/>
