@@ -1,7 +1,7 @@
 <!--Created using the 7 Days To Dialog Application-->
 <configs>
   <append xpath="/dialogs">
-    <dialog id="Santa Claus" startstatementid="start">
+    <dialog id="trader" startstatementid="start">
       <statement id="start" text="Merry Christmas! How can I help you today?">
         <response_entry id="responseID_-515384779" ref_text="I have some questions..." />
         <response_entry id="shop" ref_text="dialog_trader_response_shop" />
