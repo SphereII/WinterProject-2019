@@ -417,15 +417,6 @@
 			<stack_type value="replace"/>
 			<update_rate value="3"/>
 			<effect_group>
-				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="30" buff="buffFrostbite" target_tags="player"/>
-				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="3" buff="buffFrostbite2" target_tags="player"/>
-			</effect_group>
-	</buff>
-	<buff name="buffSnowSwarmBoss" name_key="buffSnowSwarmBossName" description_key="buffSnowSwarmBossDesc" tooltip_key="buffSnowSwarmBossTooltip" >
-			<damage_type value="cold"/>
-			<stack_type value="replace"/>
-			<update_rate value="3"/>
-			<effect_group>
 				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="50" buff="buffFrostbite" target_tags="player"/>
 				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="10" buff="buffFrostbite2" target_tags="player"/>
 			</effect_group>
@@ -445,9 +436,11 @@
 	<buff name="buffFrostbite2" name_key="buffFrostbite2Name" description_key="buffFrostbite2Desc" tooltip_key="buffFrostbite2Tooltip" icon="ui_game_symbol_cold" icon_color="255,0,0" icon_blink="true">
 		<damage_type value="cold"/>
 		<stack_type value="replace"/>
-		<duration value="5"/>
+		<duration value="4"/>
 		<effect_group>
-			<passive_effect name="StaminaLossMaxMult" operation="perc_add" value="8"/>
+			<passive_effect name="StaminaLossMaxMult" operation="perc_add" value="10"/>
+			<passive_effect name="HealthMaxModifierOT" operation="base_subtract" value=".5"/>
+			<passive_effect name="HealthChangeOT" operation="base_subtract" value=".5"/>
 			<triggered_effect trigger="onSelfDied" action="RemoveBuff" buff="buffFrostbite2"/>
 		</effect_group>
 	</buff>
