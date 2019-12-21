@@ -236,7 +236,8 @@ public class FoodSpoilage_Mod
 
 
 
-                        EntityPlayerLocal player = __instance.xui.playerUI.entityPlayer;
+                        //EntityPlayerLocal player = __instance.xui.playerUI.entityPlayer;
+                        EntityPlayerLocal player = GameManager.Instance.World.GetPrimaryPlayer();
                         if (player)
                         {
                             int Count = 1;
