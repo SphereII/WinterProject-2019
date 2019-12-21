@@ -23,21 +23,20 @@
 		<SoundDataNode name="buffCutscene06"> <AudioSource name="Sounds/AudioSource_Notifications"/>
 			<AudioClip ClipName="#@modfolder:Resources/SamaraCurse.unity3d?cutscene06sound" Loop="false" />  
 			<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value=".01"/> </SoundDataNode>		
-		<SoundDataNode name="SharkIdle"> <AudioSource name="Sounds/AudioSource_Notifications"/>
+		<SoundDataNode name="SharkIdle"> <AudioSource name="Sounds/AudioSource_CreatureSenseAlert"/>
 			<AudioClip ClipName="#@modfolder:Resources/SnowShark.unity3d?idle" Loop="true" />  
-			<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="0.001"/> </SoundDataNode>
+			<Channel name="Mouth"/> <Priority name="3"/> <maxVoicesPerEntity value="1"/> <LowestPitch name="0.95"/> <HighestPitch name="1.05"/> <LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="3"/> </SoundDataNode>
 			
-		<SoundDataNode name="SharkAlert"> <AudioSource name="Sounds/AudioSource_Notifications"/>
+		<SoundDataNode name="SharkAlert"> <AudioSource name="Sounds/AudioSource_CreatureSenseAlert"/>
 			<AudioClip ClipName="#@modfolder:Resources/SnowShark.unity3d?approach" Loop="true" />  
-			<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value=".001"/> </SoundDataNode>	
+			<Channel name="Mouth"/> <Priority name="3"/> <maxVoicesPerEntity value="1"/> <LowestPitch name="0.95"/> <HighestPitch name="1.05"/> <LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="3"/> </SoundDataNode>
 			
-		<SoundDataNode name="SharkAttack"> <AudioSource name="Sounds/AudioSource_Notifications"/>
+		<SoundDataNode name="SharkAttack"> <AudioSource name="Sounds/AudioSource_CreatureSenseAlert"/>
 			<AudioClip ClipName="#@modfolder:Resources/SnowShark.unity3d?attack" Loop="true" />  
-			<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value=".001"/> </SoundDataNode>		
-	  
+			<Channel name="Mouth"/> <Priority name="3"/> <maxVoicesPerEntity value="1"/> <LowestPitch name="0.95"/> <HighestPitch name="1.05"/> <LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="3"/> </SoundDataNode>
 	</append>
 
-  <append xpath="/Sounds/SoundDataNode[@name='zombiefemalescoutalert']">
-    <buff value="buffCurseSamara" />
-  </append>
+    <append xpath="/Sounds/SoundDataNode[@name='zombiefemalescoutalert']">
+    	<buff value="buffCurseSamara" />
+    </append>
 </configs>

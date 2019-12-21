@@ -19,9 +19,17 @@
 			<property name="Class" value="EntityAnimalRabbit"/>
 			<property name="MaxViewAngle" value="360"/>
 			<property name="MaxTurnSpeed" value="180" />
+			<drop event="Harvest" name="foodRawMeat" count="4" tool_category="Butcher"/>
+			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="20"/> 
+			<drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="4"/>
+			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="8"/>
+			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="4"/>
+			<drop event="Harvest" name="foodRawMeat" count="2" tag="WasteTreasuresCompleteHarvest"/>
+			<drop event="Harvest" name="resourceLeather" count="2" tag="WasteTreasuresCompleteHarvest"/>
+			<drop event="Harvest" name="resourceBone" count="2" tag="WasteTreasuresCompleteHarvest"/>
 		</entity_class>
 
-		<entity_class name="SealCub" extends="animalChicken" >
+		<entity_class name="SealCub" extends="animalRabbit" >
 			<property name="Mesh" value="#@modfolder:Resources/SealCub.unity3d?SealCub_X" /> 
 			<property name="AvatarController" value="MecanimSDX, Mods" />
 			<property name="EntityType" value="Animal"/>
@@ -32,6 +40,15 @@
 			<property name="MoveSpeedPanic" value=".8"/>
 			<property name="MaxViewAngle" value="360"/>
 			<property name="MaxTurnSpeed" value="180" />
+			<drop event="Harvest" name="foodRawMeat" count="4" tool_category="Butcher"/>
+			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="20"/> 
+			<drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="4"/>
+			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="8"/>
+			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="4"/>
+			<drop event="Harvest" name="foodRawMeat" count="2" tag="WasteTreasuresCompleteHarvest"/>
+			<drop event="Harvest" name="resourceLeather" count="2" tag="WasteTreasuresCompleteHarvest"/>
+			<drop event="Harvest" name="resourceBone" count="2" tag="WasteTreasuresCompleteHarvest"/>
+			
 		</entity_class>
 		<entity_class name="Abominable" extends="zombieTemplateMale"><!-- Snowman by junaidamin is licensed under CC Attribution -->
 			<property name="AvatarController" value="MecanimSDX, Mods" />
@@ -264,8 +281,8 @@
 			<property name="AttackTimeoutNight" value="1.1"/>
 			<property name="ExperienceGain" value="170"/>
 			<property name="DeadBodyHitPoints" value="150"/>
-			<drop event="Harvest" name="femur" tool_category="Butcher" count="1"/> 
-			<drop event="Harvest" name="rottingFlesh" tool_category="Butcher" count="1"/>
+			<drop event="Harvest" name="femur" tool_category="Butcher" count="4"/> 
+			<drop event="Harvest" name="rottingFlesh" tool_category="Butcher" count="2"/>
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="30"/>
 				<passive_effect name="HealthMax" operation="perc_add" value="0"/> <!-- Animal HP scale -->
