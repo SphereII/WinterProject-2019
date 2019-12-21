@@ -29,7 +29,7 @@
 			<drop event="Harvest" name="resourceBone" count="2" tag="WasteTreasuresCompleteHarvest"/>
 		</entity_class>
 
-		<entity_class name="SealCub" extends="animalRabbit" >
+		<entity_class name="SealCub" extends="animalTemplateTimid" >
 			<property name="Mesh" value="#@modfolder:Resources/SealCub.unity3d?SealCub_X" /> 
 			<property name="AvatarController" value="MecanimSDX, Mods" />
 			<property name="EntityType" value="Animal"/>

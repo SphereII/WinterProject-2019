@@ -45,19 +45,19 @@
     </placeholder>
 	
 	<placeholder name="paintingPictureRandomHelper">
-		<block name="XmasPoster01" prob="0.4"/>
-		<block name="XmasPoster02" prob="0.4"/>
-		<block name="XmasPoster03" prob="0.4"/>
-		<block name="XmasPoster04" prob="0.4"/>
-		<block name="XmasPoster05" prob="0.4"/>
+		<block name="XmasPoster01" prob="1"/>
+		<block name="XmasPoster02" prob="1"/>
+		<block name="XmasPoster03" prob="1"/>
+		<block name="XmasPoster04" prob="1"/>
+		<block name="XmasPoster05" prob="1"/>
 	</placeholder>
 	
 	<placeholder name="cntPaintingPictureSafeRandomLootHelper">
-		<block name="XmasPoster01" prob="0.05"/>
-		<block name="XmasPoster02" prob="0.05"/>
-		<block name="XmasPoster03" prob="0.05"/>
-		<block name="XmasPoster04" prob="0.05"/>
-		<block name="XmasPoster05" prob="0.05"/>
+		<block name="XmasPoster01" prob="0.1"/>
+		<block name="XmasPoster02" prob="0.1"/>
+		<block name="XmasPoster03" prob="0.1"/>
+		<block name="XmasPoster04" prob="0.1"/>
+		<block name="XmasPoster05" prob="0.1"/>
 	</placeholder>
 	
 
