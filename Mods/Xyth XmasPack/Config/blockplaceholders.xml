@@ -13,8 +13,7 @@
   <!-- put the crhstimas trees in a placeholder block, with a chance of spawning an iron table instead. Should thin out some aggressive trees spawns in certain buildings. -->
   <append xpath="/blockplaceholders">
     <placeholder name="woodTable">
-      <block name="ChristmasTreeCB" prob="0.3"/>
-      <block name="ChristmasTreeSmall" prob="0.3"/>
+      <block name="ChristmasTreeCB" prob="0.6"/>
       <block name="air" prob="0.4" />
     </placeholder>
 

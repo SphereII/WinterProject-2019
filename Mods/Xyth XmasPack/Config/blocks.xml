@@ -138,26 +138,6 @@
       <property name="ActiveRadiusEffects" value="buffCampfireAOE(3)"/>
 
     </block>
-    <block name="ChristmasTreeSmall">
-      <property name="CustomIcon" value="xmasTree" />
-      <property name="Shape" value="ModelEntity" />
-      <property name="Model" value="#@modfolder:Resources/XmasDeco.unity3d?ChristmasTreeSmall_X"/>
-      <property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
-      <property name="Path" value="solid"/>
-      <property name="StabilitySupport" value="false"/>
-      <property name="ModelOffset" value="-.4,0,0"/>
-      <!-- left the model at 000 in Unity so LOD component is on top parent so needs offseting -->
-      <drop event="Destroy" count="0" />
-      <property name="DisplayType" value="blockMulti" />
-      <property name="MultiBlockDim" value="3,3,3" />
-      <property name="BigDecorationRadius" value="3" />
-      <!-- dont spawn this tree with biomes.xml !!  -->
-      <property name="Material" value="MtreeWoodSmall"/>
-      <property name="CreativeMode" value="Player"/>
-      <property name="CanPlayersSpawnOn" value="false"/>
-      <property name="ParticleOnDeath" value="treeGib_burnt"/>
-      <drop event="Harvest" name="resourceWood" count="15" tag="oreWoodHarvest"/>
-    </block>
     <block name="icicle">
       <property name="Material" value="Msnow" />
       <property name="Shape" value="ModelEntity" />
