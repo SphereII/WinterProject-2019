@@ -235,7 +235,8 @@ public class FoodSpoilage_Mod
                             strSpoiledItem = __instance.ItemStack.itemValue.ItemClass.Properties.GetString("SpoiledItem");
 
 
-                        EntityPlayerLocal player = GameManager.Instance.World.GetPrimaryPlayer();
+
+                        EntityPlayerLocal player = __instance.xui.playerUI.entityPlayer;
                         if (player)
                         {
                             int Count = 1;
