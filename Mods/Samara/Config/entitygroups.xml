@@ -2,6 +2,9 @@
   <append xpath="/entitygroups/entitygroup[ starts-with(@name, 'EnemyAnimals')]">
 	<entity name="animalSnowShark" prob="0.2"/>
 	<entity name="animalSnowSwarm_X" prob="0.2"/>
-	<entity name="zombieDeadHead" prob="0.3"/>
   </append> 
+  <append xpath="/entitygroups/entitygroup[@name='ZombiesAll']"> 
+	<entity name="zombieDeadHead" prob="0.5"/>
+  </append>
+  
 </configs>
