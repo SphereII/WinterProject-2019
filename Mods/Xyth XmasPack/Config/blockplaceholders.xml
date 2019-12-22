@@ -39,9 +39,9 @@
     </placeholder>
 
     <placeholder name="tv">
-      <block name="wreath" prob="0.4"/>
+      <block name="wreath" prob="0.5"/>
       <block name="original_tv" prob="0.1" />
-	  <block name="WinterPlayerTV" prob="0.2" />
+	  <block name="WinterPlayerTV" prob="0.5" />
     </placeholder>
 	
 	<placeholder name="paintingPictureRandomHelper">
@@ -51,15 +51,6 @@
 		<block name="XmasPoster04" prob="1"/>
 		<block name="XmasPoster05" prob="1"/>
 	</placeholder>
-	
-	<placeholder name="cntPaintingPictureSafeRandomLootHelper">
-		<block name="XmasPoster01" prob="0.1"/>
-		<block name="XmasPoster02" prob="0.1"/>
-		<block name="XmasPoster03" prob="0.1"/>
-		<block name="XmasPoster04" prob="0.1"/>
-		<block name="XmasPoster05" prob="0.1"/>
-	</placeholder>
-	
 
     <placeholder name="curtain_top1Sheet3">
       <block name="curtain_top1Sheet3" prob="0.4"/>

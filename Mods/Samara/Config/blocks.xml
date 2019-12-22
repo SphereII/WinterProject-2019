@@ -110,7 +110,7 @@
 			  <!-- Allows the  Trigger to work, set to false if you want to disactive the blocks special effects -->
 			  <property name="AlwaysActive" value="true" />
 			  <!-- How far out the tile entity will re-scan to detect the player, 4 is the default setting.  If there is no additional requirements (see below) the effect will fire if AlwaysActive is true and the player is within the activation distance. -->
-			  <property name="ActivationDistance" value="4" />
+			  <property name="ActivationDistance" value="2" />
 <!-- End of required configuration settings  -->	
 			  
 <!-- Optional configuration settings,  you may pick one additional requirement to determine if the effect will trigger    -->
@@ -156,38 +156,16 @@
 			<property name="Place" value="TowardsPlacerInverted"/>
 			<property name="Stacknumber" value="1"/>
 			<property name="CustomIcon" value="Picture01"/>
-<!--			<property name="ActiveRadiusEffects" value="buffCampfireAOE(5)"/> -->
-			<property name="ActiveRadiusEffects" value="buffSamaraHum(3)"/><!-- Enabling the sound, note match the value with distance below -->
+			<property name="ActiveRadiusEffects" value="buffSamaraHum(2)"/><!-- Enabling the sound, note match the value with distance below -->
 			<property name="Class" value="TriggeredSDX, Mods"/>
 			<property name="LootList" value="7"/> <!-- a lootlist is required but not actually used -->
 			<property name="AlwaysActive" value="true" />
-			<property name="ActivationDistance" value="3" />
+			<property name="ActivationDistance" value="2" />
 			<property name="ActivationBuffs" value="buffCursed" /> 
 		</block>	
 
-		<block name="cntJumpMedicineCabinetClosed02">
-			<property name="Extends" value="cntMedicineCabinetOpen"/>
-			<property name="CreativeMode" value="Player"/>
-			<property name="Collide" value="sight,movement,melee,rocket"/>
-			<property name="Material" value="Mglass"/>
-			<property name="StabilitySupport" value="false"/>
-			<property name="Shape" value="ModelEntity"/>
-			<property name="Model" value="#@modfolder:Resources/SamaraCurse.unity3d?JumpMedcab02_X"/> <!-- Example: This one has the .mp4 clip attached in Unity. --> 
-			<property name="Place" value="TowardsPlacerInverted"/>
-			<property name="Stacknumber" value="1"/>
-			<property name="CustomIcon" value="Picture01"/>
-<!--			<property name="ActiveRadiusEffects" value="buffCampfireAOE(5)"/> -->
-			<property name="ActiveRadiusEffects" value="buffSamaraHum(3)"/><!-- Enabling the sound, note match the value with distance below -->
-			<property name="Class" value="TriggeredSDX, Mods"/>
-			<property name="LootList" value="7"/> <!-- a lootlist is required but not actually used -->
-			<property name="AlwaysActive" value="true" />
-			<property name="ActivationDistance" value="3" />
-			<property name="ActivationBuffs" value="buffCursed" /> 
-
-
 <!-- Painting Morphs  -->
-	
-		</block>		
+				
 		<block name="paintingLorienZed">
 			<property name="Extends" value="paintingBen"/>
 			<property name="CreativeMode" value="Player"/>
@@ -199,11 +177,11 @@
 			<property name="Place" value="TowardsPlacerInverted"/>
 			<property name="Stacknumber" value="1"/>
 			<property name="CustomIcon" value="paintingLorien"/>
-			<property name="ActiveRadiusEffects" value="buffSamaraHum(3)"/>
+			<property name="ActiveRadiusEffects" value="buffSamaraHum(2)"/>
 			<property name="Class" value="TriggeredSDX, Mods"/>
 			<property name="LootList" value="7"/> <!-- a lootlist is required but not actually used -->
 			<property name="AlwaysActive" value="true" />
-			<property name="ActivationDistance" value="3" />
+			<property name="ActivationDistance" value="2" />
 			<property name="ActivationBuffs" value="buffCursed" /> 
 		 </block>
 
@@ -225,11 +203,11 @@
 			<property name="Place" value="TowardsPlacerInverted"/>
 			<property name="Stacknumber" value="1"/>
 			<property name="CustomIcon" value="paintingLorien"/>
-			<property name="ActiveRadiusEffects" value="buffSamaraHum(3)"/>
+			<property name="ActiveRadiusEffects" value="buffSamaraHum(2)"/>
 			<property name="Class" value="TriggeredSDX, Mods"/>
 			<property name="LootList" value="7"/> <!-- a lootlist is required but not actually used -->
 			<property name="AlwaysActive" value="true" />
-			<property name="ActivationDistance" value="3" />
+			<property name="ActivationDistance" value="2" />
 			<property name="ActivationBuffs" value="buffCursed" /> 
 		 </block>
 
@@ -248,11 +226,11 @@
 			<property name="Shape" value="ModelEntity"/>
 			<property name="Model" value="#@modfolder:Resources/SamaraCurse.unity3d?DerekPaintingMorph01"/> <!-- Example: This one has the .mp4 clip attached in Unity. --> 
 			<property name="CustomIcon" value="paintingDerek"/>
-			<property name="ActiveRadiusEffects" value="buffSamaraHum(3)"/>
+			<property name="ActiveRadiusEffects" value="buffSamaraHum(2)"/>
 			<property name="Class" value="TriggeredSDX, Mods"/>
 			<property name="LootList" value="7"/> <!-- a lootlist is required but not actually used -->
 			<property name="AlwaysActive" value="true" />
-			<property name="ActivationDistance" value="3" />
+			<property name="ActivationDistance" value="2" />
 			<property name="ActivationBuffs" value="buffCursed" /> 
 		</block>
 		<block name="hiddenSafepaintingDerekZed">
@@ -273,11 +251,11 @@
 			<property name="Place" value="TowardsPlacerInverted"/>
 			<property name="Stacknumber" value="1"/>
 			<property name="CustomIcon" value="paintingBen"/>
-			<property name="ActiveRadiusEffects" value="buffSamaraHum(3)"/>
+			<property name="ActiveRadiusEffects" value="buffSamaraHum(2)"/>
 			<property name="Class" value="TriggeredSDX, Mods"/>
 			<property name="LootList" value="7"/> <!-- a lootlist is required but not actually used -->
 			<property name="AlwaysActive" value="true" />
-			<property name="ActivationDistance" value="3" />
+			<property name="ActivationDistance" value="2" />
 			<property name="ActivationBuffs" value="buffCursed" /> 
 		 </block>
 
@@ -299,11 +277,11 @@
 			<property name="Place" value="TowardsPlacerInverted"/>
 			<property name="Stacknumber" value="1"/>
 			<property name="CustomIcon" value="paintingDuke"/>
-			<property name="ActiveRadiusEffects" value="buffSamaraHum(3)"/>
+			<property name="ActiveRadiusEffects" value="buffSamaraHum(2)"/>
 			<property name="Class" value="TriggeredSDX, Mods"/>
 			<property name="LootList" value="7"/> <!-- a lootlist is required but not actually used -->
 			<property name="AlwaysActive" value="true" />
-			<property name="ActivationDistance" value="3" />
+			<property name="ActivationDistance" value="2" />
 			<property name="ActivationBuffs" value="buffCursed" /> 
 		 </block>
 
@@ -326,11 +304,11 @@
 			<property name="Place" value="TowardsPlacerInverted"/>
 			<property name="Stacknumber" value="1"/>
 			<property name="CustomIcon" value="paintingKen"/>
-			<property name="ActiveRadiusEffects" value="buffSamaraHum(3)"/>
+			<property name="ActiveRadiusEffects" value="buffSamaraHum(2)"/>
 			<property name="Class" value="TriggeredSDX, Mods"/>
 			<property name="LootList" value="7"/> <!-- a lootlist is required but not actually used -->
 			<property name="AlwaysActive" value="true" />
-			<property name="ActivationDistance" value="3" />
+			<property name="ActivationDistance" value="2" />
 			<property name="ActivationBuffs" value="buffCursed" /> 
 		 </block>
 
@@ -352,11 +330,11 @@
 			<property name="Place" value="TowardsPlacerInverted"/>
 			<property name="Stacknumber" value="1"/>
 			<property name="CustomIcon" value="paintingNoah"/>
-			<property name="ActiveRadiusEffects" value="buffSamaraHum(3)"/>
+			<property name="ActiveRadiusEffects" value="buffSamaraHum(2)"/>
 			<property name="Class" value="TriggeredSDX, Mods"/>
 			<property name="LootList" value="7"/> <!-- a lootlist is required but not actually used -->
 			<property name="AlwaysActive" value="true" />
-			<property name="ActivationDistance" value="3" />
+			<property name="ActivationDistance" value="2" />
 			<property name="ActivationBuffs" value="buffCursed" /> 
 		 </block>
 
@@ -382,11 +360,11 @@
 			<property name="Place" value="TowardsPlacerInverted"/>
 			<property name="Stacknumber" value="1"/>
 			<property name="CustomIcon" value="paintingKen"/>
-			<property name="ActiveRadiusEffects" value="buffSamaraHum(3)"/>
+			<property name="ActiveRadiusEffects" value="buffSamaraHum(2)"/>
 			<property name="Class" value="TriggeredSDX, Mods"/>
 			<property name="LootList" value="7"/> <!-- a lootlist is required but not actually used -->
 			<property name="AlwaysActive" value="true" />
-			<property name="ActivationDistance" value="3" />
+			<property name="ActivationDistance" value="2" />
 			<property name="ActivationBuffs" value="buffCursed" /> 
 		 </block>
 

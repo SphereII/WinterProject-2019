@@ -3,11 +3,9 @@
  
    <append xpath="/blockplaceholders">
 		<placeholder name="cntMedicineCabinetClosedRandomLootHelper">
-			<block name="cntJumpMedicineCabinetClosed" prob="10"/>
+			<block name="cntJumpMedicineCabinetClosed01" prob="10"/>
 		</placeholder> 
-		<placeholder name="cntMedicineCabinetFaucetRandomLootHelper">
-			<block name="cntJumpMedicineCabinetClosed" prob="10"/>
-		</placeholder>
+
 		<placeholder name="paintingPictureRandomHelper">
 			<block name="JumpPic02" prob="1" />
 			<block name="JumpPic03" prob="1" />
@@ -22,14 +20,14 @@
 		</placeholder>
 		
 		<placeholder name="cntPaintingPictureSafeRandomLootHelper">
-			<block name="hiddenSafepaintingLorienZed" prob=".1" />
-			<block name="hiddenSafepaintingLorienEyes" prob=".1" />
-			<block name="hiddenSafepaintingDerekZed" prob=".1" />
-			<block name="hiddenSafepaintingKenZed" prob=".1" />
-			<block name="hiddenSafepaintingDukeZed" prob=".1" />
-			<block name="hiddenSafepaintingNoahZed" prob=".1" />
-			<block name="hiddenSafepaintingBenZed" prob=".1" />
-			<block name="hiddenSafeposterMorph01" prob=".1" />
+			<block name="hiddenSafepaintingLorienZed" prob="1" />
+			<block name="hiddenSafepaintingLorienEyes" prob="1" />
+			<block name="hiddenSafepaintingDerekZed" prob="1" />
+			<block name="hiddenSafepaintingKenZed" prob="1" />
+			<block name="hiddenSafepaintingDukeZed" prob="1" />
+			<block name="hiddenSafepaintingNoahZed" prob="1" />
+			<block name="hiddenSafepaintingBenZed" prob="1" />
+			<block name="hiddenSafeposterMorph01" prob="1" />
 		</placeholder>
 		
 		<placeholder name="cntForestRandomLootHelper">
