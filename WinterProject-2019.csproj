@@ -81,12 +81,12 @@
     <None Include="Mods\Wasteland Weapons\Resources\RailwayRifle1.unity3d" />
     <None Include="Mods\Wasteland Weapons\Resources\Sounds.unity3d" />
     <None Include="Mods\Wasteland Weapons\Resources\SpikeTest.unity3d" />
-    <None Include="Mods\winter_zeds_blue\Resources\winter_zeds_blue1.unity3d" />
-    <None Include="Mods\winter_zeds_blue\Resources\winter_zeds_blue2.unity3d" />
-    <None Include="Mods\winter_zeds_blue\Resources\winter_zeds_blue3.unity3d" />
-    <None Include="Mods\winter_zeds_white\Resources\winter_zeds_white1.unity3d" />
-    <None Include="Mods\winter_zeds_white\Resources\winter_zeds_white2.unity3d" />
-    <None Include="Mods\winter_zeds_white\Resources\winter_zeds_white3.unity3d" />
+    <None Include="Mods\winter zeds blue\Resources\winter_zeds_blue1.unity3d" />
+    <None Include="Mods\winter zeds blue\Resources\winter_zeds_blue2.unity3d" />
+    <None Include="Mods\winter zeds blue\Resources\winter_zeds_blue3.unity3d" />
+    <None Include="Mods\winter zeds white\Resources\winter_zeds_white1.unity3d" />
+    <None Include="Mods\winter zeds white\Resources\winter_zeds_white2.unity3d" />
+    <None Include="Mods\winter zeds white\Resources\winter_zeds_white3.unity3d" />
     <None Include="Mods\Xyth EntitiesWinter\Config\Resources\FrostShieldParticle.unity3d" />
     <None Include="Mods\Xyth EntitiesWinter\Resources\Abominable.unity3d" />
     <None Include="Mods\Xyth EntitiesWinter\Resources\AbominableSounds.unity3d" />
@@ -515,6 +515,9 @@
     <Content Include="Mods\SphereII NPC Dialog Windows\Textures\trader\smx_trader_bg.png" />
     <Content Include="Mods\SphereII NPC Dialog Windows\UIAtlases\ItemIconAtlas\smx_bulletpoint_icon.png" />
     <Content Include="Mods\SphereII Santas\Config\blocks.xml" />
+    <Content Include="Mods\SphereII Santas\Config\dialogs - Copy.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Mods\SphereII Santas\Config\dialogs.xml">
       <SubType>Designer</SubType>
     </Content>
@@ -547,7 +550,9 @@
     <Content Include="Mods\SphereII Winter Project Menu\Textures\menu\smx_winterp_btn1.png" />
     <Content Include="Mods\SphereII Winter Project Menu\Textures\menu\smx_winterp_btn2.png" />
     <Content Include="Mods\SphereII Winter Project Menu\Textures\menu\smx_winterp_hdr.png" />
-    <Content Include="Mods\SphereII Winter Project\Config\biomes.xml" />
+    <Content Include="Mods\SphereII Winter Project\Config\biomes.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Mods\SphereII Winter Project\Config\blocks.xml" />
     <Content Include="Mods\SphereII Winter Project\Config\buffs.xml" />
     <Content Include="Mods\SphereII Winter Project\Config\entityclasses.xml" />
@@ -558,7 +563,9 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="Mods\SphereII Winter Project\Config\recipes.xml" />
-    <Content Include="Mods\SphereII Winter Project\Config\rwgmixer.xml" />
+    <Content Include="Mods\SphereII Winter Project\Config\rwgmixer.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Mods\SphereII Winter Project\Harmony\Harmony-SphereII Winter Project.dll" />
     <Content Include="Mods\SphereII Winter Project\Harmony\Harmony-SphereII Winter Project.pdb" />
     <Content Include="Mods\SphereII Winter Project\mod.xml" />
@@ -711,20 +718,22 @@
     <Content Include="Mods\Wasteland Weapons\UIAtlases\ItemIconAtlas\railwayrifle.png" />
     <Content Include="Mods\Wasteland Weapons\UIAtlases\ItemIconAtlas\ShotgunEM.png" />
     <Content Include="Mods\WinterProjecttrailer.mp4" />
-    <Content Include="Mods\winter_zeds_blue\Config\blocks.xml" />
-    <Content Include="Mods\winter_zeds_blue\Config\entityclasses.xml" />
-    <Content Include="Mods\winter_zeds_blue\mod.xml" />
-    <Content Include="Mods\winter_zeds_blue\ModInfo.xml" />
-    <Content Include="Mods\winter_zeds_white\Config\blocks.xml" />
-    <Content Include="Mods\winter_zeds_white\Config\entityclasses.xml" />
-    <Content Include="Mods\winter_zeds_white\Config\entitygroups.xml" />
-    <Content Include="Mods\winter_zeds_white\mod.xml" />
-    <Content Include="Mods\winter_zeds_white\ModInfo.xml" />
+    <Content Include="Mods\winter zeds blue\Config\blocks.xml" />
+    <Content Include="Mods\winter zeds blue\Config\entityclasses.xml" />
+    <Content Include="Mods\winter zeds blue\mod.xml" />
+    <Content Include="Mods\winter zeds blue\ModInfo.xml" />
+    <Content Include="Mods\winter zeds white\Config\blocks.xml" />
+    <Content Include="Mods\winter zeds white\Config\entityclasses.xml" />
+    <Content Include="Mods\winter zeds white\Config\entitygroups.xml" />
+    <Content Include="Mods\winter zeds white\mod.xml" />
+    <Content Include="Mods\winter zeds white\ModInfo.xml" />
     <Content Include="Mods\Xyth EntitiesWinter\Config\blocks.xml" />
     <Content Include="Mods\Xyth EntitiesWinter\Config\buffs.xml" />
     <Content Include="Mods\Xyth EntitiesWinter\Config\entityclasses.xml" />
     <Content Include="Mods\Xyth EntitiesWinter\Config\entitygroups.xml" />
-    <Content Include="Mods\Xyth EntitiesWinter\Config\items.xml" />
+    <Content Include="Mods\Xyth EntitiesWinter\Config\items.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Mods\Xyth EntitiesWinter\Config\sounds.xml" />
     <Content Include="Mods\Xyth EntitiesWinter\mod.xml" />
     <Content Include="Mods\Xyth EntitiesWinter\ModInfo.xml" />
@@ -785,7 +794,9 @@
     <Compile Include="Mods\0-SphereIICore\Harmony\UI\DisableXPIconNotification.cs" />
     <Compile Include="Mods\0-SphereIICore\Harmony\UI\UnlockEnemyHealthBar.cs" />
     <Compile Include="Mods\0-SphereIICore\Harmony\ZombieFeatures\HeadshotOnly.cs" />
+    <Compile Include="Mods\0-SphereIICore\Harmony\ZombieFeatures\InertEntity.cs" />
     <Compile Include="Mods\0-SphereIICore\Harmony\ZombieFeatures\LowerResolutionUMA.cs" />
+    <Compile Include="Mods\0-SphereIICore\Harmony\ZombieFeatures\RandomDeathSpawn.cs" />
     <Compile Include="Mods\0-SphereIICore\Harmony\ZombieFeatures\RandomSize.cs" />
     <Compile Include="Mods\0-SphereIICore\Harmony\ZombieFeatures\RandomWalk.cs" />
     <Compile Include="Mods\0-SphereIICore\Harmony\ZombieFeatures\UMATweaks.cs" />
@@ -888,6 +899,9 @@
     <Compile Include="Mods\SphereII Santas\Scripts\Santa.cs" />
     <Compile Include="Mods\SphereII Winter Project Menu\Harmony\Harmony.cs" />
     <Compile Include="Mods\SphereII Winter Project\Harmony\PrefabInstance.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Mods\0-SphereIICore\Harmony\Animation\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
