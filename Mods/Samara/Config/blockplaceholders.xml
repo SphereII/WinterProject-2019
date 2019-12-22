@@ -1,9 +1,11 @@
 ﻿<configs>
 
- 
+  <remove xpath="/blockplaceholders/placeholder[@name='cntMedicineCabinetClosedRandomLootHelper']" />
    <append xpath="/blockplaceholders">
-		<placeholder name="cntMedicineCabinetClosedRandomLootHelper">
-			<block name="cntJumpMedicineCabinetClosed01" prob="10"/>
+     <placeholder name="cntMedicineCabinetClosedRandomLootHelper">
+       <block name="cntMedicineCabinetOpen" prob=".33"/>
+       <block name="cntMedicineCabinetClosed" prob=".33"/>
+      <block name="cntJumpMedicineCabinetClosed01" prob=".33"/>
 		</placeholder> 
 
 		<placeholder name="paintingPictureRandomHelper">
