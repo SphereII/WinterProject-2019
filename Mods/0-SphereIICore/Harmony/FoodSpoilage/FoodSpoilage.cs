@@ -243,11 +243,9 @@ public class FoodSpoilage_Mod
                     AdvLogging.DisplayLog(AdvFeatureClass, strDisplay);
 
                     // Update the NextSpoilageTick value
-                    String temp2 = "World Time + TickPer Loss: " + ((int)GameManager.Instance.World.GetWorldTime() + TickPerLoss);
+                    __instance.ItemStack.itemValue.NextSpoilageTick = (int)GameManager.Instance.World.GetWorldTime() + TickPerLoss;
                     __instance.ItemStack.itemValue.NextSpoilageTick = (int)GameManager.Instance.World.GetWorldTime() + TickPerLoss;
 
-                    temp2 += "  After World Time + TickPer Loss: " + ((int)GameManager.Instance.World.GetWorldTime() + TickPerLoss);
-                    Debug.Log(temp2);
                     // If the spoil time is is greater than the degradation, loop around the stack, removing each layer of items.
                     while (DegradationMax <= __instance.ItemStack.itemValue.CurrentSpoilage)
                     //if(DegradationMax <= __instance.ItemStack.itemValue.CurrentSpoilage)
