@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class SphereII_InertEntity
 {
-
+    // <property name="EntityActiveWhen" value="night" />
     public static bool IsInert(EntityAlive alive)
     {
         if (alive == null)

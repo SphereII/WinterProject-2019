@@ -3,8 +3,8 @@
   <append xpath="/dialogs">
     <dialog id="Santa Claus" startstatementid="start">
       <statement id="start" text="Merry Christmas! How can I help you today?">
+        <response_entry id="responseID_-1322472451" ref_text="Do you have a few moments to talk?" />
         <response_entry id="responseID_-1209551555" ref_text="Something strange happened to me." />
-        <response_entry id="responseID_467859618" ref_text="I have some questions." />
         <response_entry id="shop" ref_text="dialog_trader_response_shop" />
         <response_entry id="jobsnone" ref_text="dialog_trader_response_jobsnone" />
         <response_entry id="jobshave" ref_text="dialog_trader_response_jobshave" />
@@ -16,21 +16,18 @@
         <response_entry id="theduke" ref_text="dialog_trader_response_theduke" />
         <response_entry id="cassadores" ref_text="dialog_trader_response_cassadores" />
         <response_entry id="noah" ref_text="dialog_trader_response_noah" />
-        <response_entry id="nevermind" ref_text="Never mind" />
       </statement>
       <statement id="navezgane" text="dialog_trader_statement_navezgane" nextstatementid="background" />
       <statement id="theduke" text="dialog_trader_statement_theduke" nextstatementid="background" />
       <statement id="cassadores" text="dialog_trader_statement_cassadores" nextstatementid="background" />
       <statement id="noah" text="dialog_trader_statement_noah" nextstatementid="background" />
       <statement id="currentjobs" text="dialog_trader_statement_currentjobs" nextstatementid="start">
-        <response_entry id="nevermind" ref_text="Never mind" />
         <quest_entry type="add" id="1" />
       </statement>
       <statement id="nojobs" text="dialog_trader_statement_nojobs" nextstatementid="start" />
       <statement id="admin" text="dialog_trader_statement_admin">
         <response_entry id="restock" ref_text="dialog_trader_response_restock" />
         <response_entry id="resetquests" ref_text="dialog_trader_response_resetquests" />
-        <response_entry id="nevermind" ref_text="Never mind" />
       </statement>
       <statement id="statement_2010767743" text="Ask away! You have dug me out of this.. uh.. um.. office!">
         <response_entry id="responseID_-212330694" ref_text="Are there any other survivors?" />
@@ -38,11 +35,11 @@
       </statement>
       <statement id="statement_-870605562" text="Oh? Come here, let me take a look at you and see if we can sort it out.">
         <response_entry id="responseID_-1258758310" ref_text="I heard this ear piercing scream." />
-        <response_entry id="nevermind" ref_text="Never mind" />
       </statement>
       <statement id="statement_-756733377" text="Ahh! Survivors, yes, oh yes, there's other survivors out there. Even some settlements!">
         <response_entry id="responseID_1633658367" ref_text="Where can I find one of these settlements?" />
         <response_entry id="response_-446635060" ref_text="Who are in these settlements?" />
+        <response_entry id="responseID_1746593105" ref_text="How can I help these settlements?" />
         <response_entry id="responseID_-2029644013" ref_text="Thank you." />
       </statement>
       <statement id="statement_187814882" text="Men and women, mostly. There wasn't... there's was a lot of children that survived past the first wave, despite all the efforts. Surviving this apocalypse was the biggest challenge that man has faced.">
@@ -66,6 +63,15 @@
         <response_entry id="responseID_770389203" ref_text="Thank you" />
       </statement>
       <statement id="statement_177965516" text="I'm afraid there isn't anything you or I can do about it. Hopefully it will pass quickly and easily. Be very careful! While the curse is in your mind, it can still affect and hurt you. Be safe!" />
+      <statement id="statement_1806145321" text="That is a very generous offer. Thank you so much. If you have anything to send out, I can deliver them to people in the settlements.">
+        <response_entry id="responseID_643263348" ref_text="Sorry, I don't have anything on me." />
+        <response_entry id="responseID_1712134540" ref_text="[ Claim Reward ( Cookies ) ]" />
+        <response_entry id="responseID_1086459248" ref_text="I want to give you some cookies." />
+      </statement>
+      <statement id="statement_2141655383" text="Those look delicious! Thank you!">
+        <response_entry id="responseID_-1044964853" ref_text="You are welcome." />
+      </statement>
+      <statement id="statement_-1215472861" text="You have been so generous with your cookies, I'd like to give you something! Please, take this." nextstatementid="statement_1806145321" />
       <response id="shop" text="dialog_trader_response_shop">
         <action type="Trader" id="trade" />
       </response>
@@ -82,7 +88,12 @@
       <response id="cassadores" text="dialog_trader_response_cassadores" nextstatementid="cassadores" />
       <response id="noah" text="dialog_trader_response_noah" nextstatementid="noah" />
       <response id="whiteriveroutposts" text="dialog_trader_response_whiteriveroutposts" nextstatementid="whiteriveroutposts" />
-      <response id="nevermind" text="Never mind" nextstatementid="start" />
+      <response id="responseID_1712134540" text="[ Claim Reward ( Cookies ) ]" nextstatementid="statement_-1215472861">
+        <requirement type="HasCVarSDX, Mods" value="6" requirementtype="Hide" operator="LTE" id="cvarCookieCheer" Hash="Requirement_-1741213978" />
+        <requirement type="HasCVarSDX, Mods" value="1" requirementtype="Hide" operator="LT" id="cvarCookieCheerReward" Hash="Requirement_538379543" />
+        <action type="RewardSkillPoint, Mods" value="2" />
+        <action type="AddCVar, Mods" id="cvarCookieCheerReward" value="1" operator="set" />
+      </response>
       <response id="admin" text="dialog_trader_response_admin" nextstatementid="admin">
         <requirement type="Admin" requirementtype="Hide" Hash="Requirement_1524861875" />
       </response>
@@ -104,7 +115,7 @@
       <response id="responseID_1633658367" text="Where can I find one of these settlements?" nextstatementid="statement_-289738816" />
       <response id="response_1571038643" text="Are there other survivors?" nextstatementid="statement_-756733377" />
       <response id="responseID_-1611980678" text="What have you been doing here all this time?" nextstatementid="statement_1443152389" />
-      <response id="responseID_467859618" text="I have some questions." nextstatementid="statement_2010767743" />
+      <response id="responseID_1746593105" text="How can I help these settlements?" nextstatementid="statement_1806145321" />
       <response id="responseID_-212330694" text="Are there any other survivors?" nextstatementid="statement_-756733377" />
       <response id="response_1725357091" text="I heard this awful scream. It shook my soul." nextstatementid="statement_860086142">
         <requirement type="HasCVarSDX, Mods" value="1" requirementtype="Hide" operator="GTE" id="cvarScreamerCursed" Hash="Requirement_1720558892" />
@@ -120,6 +131,14 @@
         <requirement type="HasCVarSDX, Mods" value="1" requirementtype="Hide" operator="GTE" id="buffScreamerCursed" Hash="Requirement_1902109704" />
       </response>
       <response id="responseID_-83587429" text="What can I do to get rid of it?" nextstatementid="statement_177965516" />
+      <response id="responseID_-1322472451" text="Do you have a few moments to talk?" nextstatementid="statement_2010767743" />
+      <response id="responseID_1086459248" text="I want to give you some cookies." nextstatementid="statement_2141655383">
+        <requirement type="HasItemSDX, Mods" value="5" requirementtype="Hide" id="Cookies" Hash="Requirement_911988823" />
+        <requirement type="HasCVarSDX, Mods" value="5" requirementtype="Hide" operator="GTE" id="cvarCookieCheer" Hash="Requirement_53234252" />
+        <action type="AddCVar, Mods" id="cvarCookieCheer" value="1" operator="add" />
+      </response>
+      <response id="responseID_-1044964853" text="You are welcome." nextstatementid="statement_1806145321" />
+      <response id="responseID_643263348" text="Sorry, I don't have anything on me." nextstatementid="start" />
     </dialog>
   </append>
 </configs>
