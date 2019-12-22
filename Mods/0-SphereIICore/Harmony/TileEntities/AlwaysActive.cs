@@ -12,8 +12,8 @@ using UnityEngine;
 
           <property name="ActivateOnLook" value="true" />
 
-      <!-- Triggers the block if the buff buffCurseSamara is active on the player, or if the player has a cvar called "cvar" with a value of 4, or if myOtherCvar is available, regardless of value -->
-      <property name="ActivationBuffs" value="buffCurseSamara,cvar(4),myOtherCvar" />
+      <!-- Triggers the block if the buff buffCursed is active on the player, or if the player has a cvar called "cvar" with a value of 4, or if myOtherCvar is available, regardless of value -->
+      <property name="ActivationBuffs" value="buffCursed,cvar(4),myOtherCvar" />
 */
 public class SphereII_TileEntityAlwaysActive
 {

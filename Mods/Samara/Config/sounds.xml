@@ -40,6 +40,6 @@
 	</append>
 
     <append xpath="/Sounds/SoundDataNode[@name='zombiefemalescoutalert']">
-    	<buff value="buffCurseSamara" />
+    	<buff value="buffCursed" />
     </append>
 </configs>

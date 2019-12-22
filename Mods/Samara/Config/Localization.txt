@@ -1,4 +1,5 @@
 ﻿Key,Source,Context,English
+Cursed,,"Cursed"
 quest_Samara_Diary01,Quest,Quest Info,"Find the pieces of Samara's Diary"
 quest_Samara_Diary01_description,Quest,Quest Info,"Seek out the pieces of Samara Morgan's diary, and we may have a chance of figuring this out."
 quest_Samara_Diary01_subtitle,Quest,Quest Info,"Find the Diary"

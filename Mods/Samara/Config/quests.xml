@@ -45,7 +45,7 @@
         <property name="distance" value="500-750"/>
       </objective>
       <action type="GiveCVarBuffSDX, Mods" id="quest_Samara_Diary" value="1" />
-      <action type="GiveCVarBuffSDX, Mods" id="buffCurseSamaraPictures" value="0" />
+      <action type="GiveCVarBuffSDX, Mods" id="buffCursedPictures" value="0" />
       <reward type="Exp" value="500"/>
     </quest>
     <quest id="quest_Samara_Diary02">
@@ -68,7 +68,7 @@
       </objective>
 
       <action type="GiveCVarBuffSDX, Mods" id="quest_Samara_Diary" value="2" />
-      <action type="GiveCVarBuffSDX, Mods" id="buffCurseSamaraHorses" value="0" />
+      <action type="GiveCVarBuffSDX, Mods" id="buffCursedHorses" value="0" />
       <reward type="Exp" value="500"/>
     </quest>
 
@@ -96,7 +96,7 @@
       </objective>
 
       <action type="GiveCVarBuffSDX, Mods" id="quest_Samara_Diary" value="3" />
-      <action type="GiveCVarBuffSDX, Mods" id="buffCurseSamaraMemories" value="0" />
+      <action type="GiveCVarBuffSDX, Mods" id="buffCursedMemories" value="0" />
 
       <reward type="Exp" value="500"/>
     </quest>

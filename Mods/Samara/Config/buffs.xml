@@ -19,7 +19,7 @@
       <duration value="4"/>
       <stack_type value="ignore"/>
       <effect_group>
-        <requirement name="HasBuff" buff="buffCurseSamara"/>
+        <requirement name="HasBuff" buff="buffCursed"/>
         <triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="buffSamaraHum" play_in_head="true"/>
         <triggered_effect trigger="onSelfBuffFinish" action="StopSound" sound="buffSamaraHum" />
         <triggered_effect trigger="onSelfBuffRemove" action="StopSound" sound="buffSamaraHum" />
@@ -30,7 +30,7 @@
       <duration value="4"/>
       <stack_type value="ignore"/>
       <effect_group>
-        <requirement name="HasBuff" buff="buffCurseSamara"/>
+        <requirement name="HasBuff" buff="buffCursed"/>
         <triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="buffSamaraScream" play_in_head="true"/>
         <triggered_effect trigger="onSelfBuffFinish" action="StopSound" sound="buffSamaraScream" />
         <triggered_effect trigger="onSelfBuffRemove" action="StopSound" sound="buffSamaraScream" />
@@ -41,7 +41,7 @@
       <duration value="10"/>
       <stack_type value="ignore"/>
       <effect_group>
-        <requirement name="HasBuff" buff="buffCurseSamara"/>
+        <requirement name="HasBuff" buff="buffCursed"/>
         <triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="buffScaryScream" play_in_head="true"/>
         <triggered_effect trigger="onSelfBuffFinish" action="StopSound" sound="buffScaryScream" />
         <triggered_effect trigger="onSelfBuffRemove" action="StopSound" sound="buffScaryScream" />
@@ -54,7 +54,7 @@
 		<stack_type value="ignore"/>
 		<duration value="2"/>
 		<effect_group>
-			<requirement name="HasBuff" buff="buffCurseSamara"/>
+			<requirement name="HasBuff" buff="buffCursed"/>
 			<triggered_effect trigger="onSelfBuffFinish" action="AddBuff" buff="buffCurseShock"/>
 		</effect_group>
 	</buff>
@@ -63,7 +63,7 @@
 		<stack_type value="ignore"/>
 		<duration value="3"/>
 		<effect_group>
-			<requirement name="HasBuff" buff="buffCurseSamara"/>
+			<requirement name="HasBuff" buff="buffCursed"/>
 			<requirement name="NotHasBuff" buff="buffCurseShockDelay2"/>
 			<passive_effect name="HealthChangeOT" operation="base_add" value="-2"/>
 			<passive_effect name="RunSpeed" operation="perc_subtract" value="0.9,0" duration="0,3.2"/>
@@ -87,7 +87,7 @@
 		<stack_type value="ignore"/>
 		<duration value="55"/>
 		<effect_group>
-			<requirement name="HasBuff" buff="buffCurseSamara"/>
+			<requirement name="HasBuff" buff="buffCursed"/>
 			<triggered_effect trigger="onSelfBuffFinish" action="RemoveBuff" buff="buffCurseShockDelay2"/>
 		</effect_group>
 	</buff>	
@@ -116,7 +116,7 @@
       <duration value="4"/>
       <stack_type value="ignore"/>
       <effect_group>
-        <requirement name="HasBuff" buff="buffCurseSamara"/>
+        <requirement name="HasBuff" buff="buffCursed"/>
         <triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="#@modfolder:Resources/SamaraCurse.unity3d?Cutscene01" parent_transform="CameraNode" local_offset="0,0,0" local_rotation="0,0,0"/>
         <triggered_effect trigger="onSelfBuffFinish" action="RemovePrefabFromEntity" prefab="#@modfolder:Resources/SamaraCurse.unity3d?Cutscene01"/>
       </effect_group>
@@ -125,7 +125,7 @@
       <duration value="8"/>
       <stack_type value="ignore"/>
       <effect_group>
-        <requirement name="HasBuff" buff="buffCurseSamara"/>
+        <requirement name="HasBuff" buff="buffCursed"/>
         <triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="#@modfolder:Resources/SamaraCurse.unity3d?Cutscene02" parent_transform="CameraNode" local_offset="0,0,0" local_rotation="0,0,0"/>
         <triggered_effect trigger="onSelfBuffFinish" action="RemovePrefabFromEntity" prefab="#@modfolder:Resources/SamaraCurse.unity3d?Cutscene02"/>
       </effect_group>
@@ -135,7 +135,7 @@
       <duration value="4"/>
       <stack_type value="ignore"/>
       <effect_group>
-        <requirement name="HasBuff" buff="buffCurseSamara"/>
+        <requirement name="HasBuff" buff="buffCursed"/>
         <triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="#@modfolder:Resources/SamaraCurse.unity3d?Cutscene03" parent_transform="CameraNode" local_offset="0,0,0" local_rotation="0,0,0"/>
         <triggered_effect trigger="onSelfBuffFinish" action="RemovePrefabFromEntity" prefab="#@modfolder:Resources/SamaraCurse.unity3d?Cutscene03"/>
       </effect_group>
@@ -145,7 +145,7 @@
       <duration value="5"/>
       <stack_type value="ignore"/>
       <effect_group>
-        <requirement name="HasBuff" buff="buffCurseSamara"/>
+        <requirement name="HasBuff" buff="buffCursed"/>
         <triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="#@modfolder:Resources/SamaraCurse.unity3d?Cutscene04" parent_transform="CameraNode" local_offset="0,0,0" local_rotation="0,0,0"/>
         <triggered_effect trigger="onSelfBuffFinish" action="RemovePrefabFromEntity" prefab="#@modfolder:Resources/SamaraCurse.unity3d?Cutscene04"/>
         <triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="buffSamaraScream" play_in_head="true"/>
@@ -157,7 +157,7 @@
       <duration value="5"/>
       <stack_type value="ignore"/>
       <effect_group>
-        <requirement name="HasBuff" buff="buffCurseSamara"/>
+        <requirement name="HasBuff" buff="buffCursed"/>
         <triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="#@modfolder:Resources/SamaraCurse.unity3d?Cutscene05" parent_transform="CameraNode" local_offset="0,0,0" local_rotation="0,0,0"/>
         <triggered_effect trigger="onSelfBuffFinish" action="RemovePrefabFromEntity" prefab="#@modfolder:Resources/SamaraCurse.unity3d?Cutscene05"/>
       </effect_group>
@@ -166,7 +166,7 @@
       <duration value="107"/>
       <stack_type value="ignore"/>
       <effect_group>
-        <requirement name="HasBuff" buff="buffCurseSamara"/>
+        <requirement name="HasBuff" buff="buffCursed"/>
         <triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="#@modfolder:Resources/SamaraCurse.unity3d?Cutscene06" parent_transform="CameraNode" local_offset="0,0,0" local_rotation="0,0,0"/>
         <triggered_effect trigger="onSelfBuffFinish" action="RemovePrefabFromEntity" prefab="#@modfolder:Resources/SamaraCurse.unity3d?Cutscene06"/>
         <triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="buffCutscene06" play_in_head="true"/>
@@ -183,7 +183,7 @@
       <stack_type value="ignore"/>
       <effect_group>
         <requirement name="IsFPV"/>
-        <requirement name="HasBuff" buff="buffCurseSamara"/>
+        <requirement name="HasBuff" buff="buffCursed"/>
         <triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="#@modfolder:Resources/SamaraCurse.unity3d?Overlay01" parent_transform="CameraNode" local_offset="0,0,0" local_rotation="0,0,0"/>
         <triggered_effect trigger="onSelfBuffFinish" action="RemovePrefabFromEntity" prefab="#@modfolder:Resources/SamaraCurse.unity3d?Overlay01"/>
 
@@ -198,7 +198,7 @@
       <stack_type value="ignore"/>
       <effect_group>
         <requirement name="IsFPV"/>
-        <requirement name="HasBuff" buff="buffCurseSamara"/>
+        <requirement name="HasBuff" buff="buffCursed"/>
         <triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="#@modfolder:Resources/SamaraCurse.unity3d?Overlay02" parent_transform="CameraNode" local_offset="0,0,0" local_rotation="0,0,0"/>
         <triggered_effect trigger="onSelfBuffFinish" action="RemovePrefabFromEntity" prefab="#@modfolder:Resources/SamaraCurse.unity3d?Overlay02"/>
       </effect_group>
@@ -208,15 +208,35 @@
       <stack_type value="ignore"/>
       <effect_group>
         <requirement name="IsFPV"/>
-        <requirement name="HasBuff" buff="buffCurseSamara"/>
+        <requirement name="HasBuff" buff="buffCursed"/>
         <triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="#@modfolder:Resources/SamaraCurse.unity3d?Overlay03" parent_transform="CameraNode" local_offset="0,0,0" local_rotation="0,0,0"/>
         <triggered_effect trigger="onSelfBuffFinish" action="RemovePrefabFromEntity" prefab="#@modfolder:Resources/SamaraCurse.unity3d?Overlay03"/>
       </effect_group>
     </buff>
 
     <!-- buff for activating the Activeblocks if you want to configure that to trigger when the player has a buff and is near the Pic.  -->
+    <buff name="buffCursed" name_key="Cursed" icon="ui_game_symbol_destruction2" remove_on_death="false" hidden="false">
+      <duration value="0"/>
+      <stack_type value="replace"/>
+    </buff>
 
-    <buff name="buffCurseSamara" name_key="Buff" icon="ui_game_symbol_destruction2" remove_on_death="false" hidden="false">
+    <buff name="buffScreamerCursed" name_key="Cursed" icon="ui_game_symbol_destruction2" remove_on_death="false" hidden="false">
+      <duration value="1200"/>
+      <stack_type value="replace"/>
+      <effect_group name="Cursed from Screamers">
+        <triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffCursed"/>
+        <triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="cvarScreamerCursed" operation="set" value="1" />
+      </effect_group>
+
+      <effect_group name="Remove Cursed">
+        <triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="cvarScreamerCursed" operation="set" value="0" />
+        <triggered_effect trigger="onSelfBuffRemove" action="RemoveBuff" buff="buffCursed"/>
+
+      </effect_group>
+    </buff>
+
+    
+    <buff name="buffCursedSamaraMorgan" name_key="Buff" icon="ui_game_symbol_destruction2" remove_on_death="false" hidden="false">
       <duration value="0"/>
       <stack_type value="replace"/>
     </buff>
@@ -224,7 +244,7 @@
     <!-- This buff is to be used when players activate the horse icons. The intention is that they can activate the horses at any time, and their effect will be different
     dependeing on the character state: Are thy cursed? What level of a curse do they have?
     -->
-    <buff name="buffCurseSamaraHorses" remove_on_death="false" hidden="true">
+    <buff name="buffCursedHorses" remove_on_death="false" hidden="true">
       <duration value="0.1" />
       <stack_type value="ignore"/>
 
@@ -232,7 +252,7 @@
       telling them exactly what it's for, in case they stumble upon it before they even found out about curses 
       -->
       <effect_group tiered="false" name="No Curses">
-        <requirement name="NotHasBuff" buff="buffCurseSamara"/>
+        <requirement name="NotHasBuff" buff="buffCursedSamaraMorgan"/>
         <triggered_effect trigger="onSelfBuffRemove" action="ShowToolTipSDX, Mods" message_key="samaraMorganBinds_NoCurse" />
         <!-- Reset the counter, just in case -->
         <triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="curseSamaraMorganHorses" operation="set" value="0" />
@@ -245,7 +265,7 @@
       -->
       <!-- Fourth Horse -->
       <effect_group name="Destroy_4">
-        <requirement name="HasBuff" buff="buffCurseSamara"/>
+        <requirement name="HasBuff" buff="buffCursedSamaraMorgan"/>
         <requirement name="CVarCompare" target="self" cvar="curseSamaraMorganHorses" operation="Equals" value="3"/>
         <triggered_effect trigger="onSelfBuffRemove" action="PlaySound" sound="buffSamaraScream" />
         <triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="curseSamaraMorganHorses" operation="add" value="1" />
@@ -257,7 +277,7 @@
 
       <!-- Third Horse -->
       <effect_group name="Destroy_3">
-        <requirement name="HasBuff" buff="buffCurseSamara"/>
+        <requirement name="HasBuff" buff="buffCursedSamaraMorgan"/>
         <requirement name="CVarCompare" target="self" cvar="curseSamaraMorganHorses" operation="Equals" value="2"/>
         <triggered_effect trigger="onSelfBuffRemove" action="PlaySound" sound="buffSamaraScream" />
         <triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="curseSamaraMorganHorses" operation="add" value="1" />
@@ -268,7 +288,7 @@
 
       <!-- Second Horse -->
       <effect_group name="Destroy_2">
-        <requirement name="HasBuff" buff="buffCurseSamara"/>
+        <requirement name="HasBuff" buff="buffCursedSamaraMorgan"/>
         <requirement name="CVarCompare" target="self" cvar="curseSamaraMorganHorses" operation="Equals" value="1"/>
         <triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="curseSamaraMorganHorses" operation="add" value="1" />
         <triggered_effect trigger="onSelfBuffRemove" action="PlaySound" sound="buffSamaraScream" />
@@ -279,7 +299,7 @@
 
       <!-- First horse -->
       <effect_group name="Destroy">
-        <requirement name="HasBuff" buff="buffCurseSamara"/>
+        <requirement name="HasBuff" buff="buffCursedSamaraMorgan"/>
         <requirement name="CVarCompare" target="self" cvar="curseSamaraMorganHorses" operation="Equals" value="0"/>
         <triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="curseSamaraMorganHorses" operation="add" value="1" />
         <triggered_effect trigger="onSelfBuffRemove" action="PlaySound" sound="buffSamaraScream" />
@@ -291,7 +311,7 @@
    
     </buff>
 
-    <buff name="buffCurseSamaraWell" remove_on_death="false" hidden="true">
+    <buff name="buffCursedWell" remove_on_death="false" hidden="true">
       <duration value="0.1" />
       <stack_type value="ignore"/>
       <effect_group name="Destroy_4">
@@ -303,7 +323,7 @@
       </effect_group>
     </buff>
 
-    <buff name="buffCurseSamaraMemories" remove_on_death="false" hidden="true">
+    <buff name="buffCursedMemories" remove_on_death="false" hidden="true">
       <duration value="0.1" />
       <stack_type value="ignore"/>
 
@@ -311,7 +331,7 @@
       telling them exactly what it's for, in case they stumble upon it before they even found out about curses 
       -->
       <effect_group tiered="false" name="No Curses">
-        <requirement name="NotHasBuff" buff="buffCurseSamara"/>
+        <requirement name="NotHasBuff" buff="buffCursedSamaraMorgan"/>
         <triggered_effect trigger="onSelfBuffRemove" action="ShowToolTipSDX, Mods" message_key="samaraMorganMemoriesBinds_NoCurse" />
         <!-- Reset the counter, just in case -->
         <triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="curseSamaraMorganMemories" operation="set" value="0" />
@@ -323,7 +343,7 @@
       as each effect_group adds to the cvar, updating the cvar number before the next effect_group fires.
       -->
       <effect_group name="Destroy_2">
-        <requirement name="HasBuff" buff="buffCurseSamara"/>
+        <requirement name="HasBuff" buff="buffCursedSamaraMorgan"/>
         <requirement name="CVarCompare" target="self" cvar="curseSamaraMorganMemories" operation="Equals" value="1"/>
         <triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="curseSamaraMorganMemories" operation="add" value="1" />
         <triggered_effect trigger="onSelfBuffRemove" action="PlaySound" sound="buffSamaraScream" />
@@ -335,7 +355,7 @@
       </effect_group>
 
       <effect_group name="Destroy">
-        <requirement name="HasBuff" buff="buffCurseSamara"/>
+        <requirement name="HasBuff" buff="buffCursedSamaraMorgan"/>
         <requirement name="CVarCompare" target="self" cvar="curseSamaraMorganMemories" operation="Equals" value="0"/>
         <triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="curseSamaraMorganMemories" operation="add" value="1" />
         <triggered_effect trigger="onSelfBuffRemove" action="PlaySound" sound="buffSamaraScream" />
@@ -346,7 +366,7 @@
 
 
     </buff>
-    <buff name="buffCurseSamaraPictures" remove_on_death="false" hidden="true">
+    <buff name="buffCursedPictures" remove_on_death="false" hidden="true">
       <duration value="0.1" />
       <stack_type value="ignore"/>
 
@@ -354,7 +374,7 @@
       telling them exactly what it's for, in case they stumble upon it before they even found out about curses 
       -->
       <effect_group tiered="false" name="No Curses">
-        <requirement name="NotHasBuff" buff="buffCurseSamara"/>
+        <requirement name="NotHasBuff" buff="buffCursedSamaraMorgan"/>
         <triggered_effect trigger="onSelfBuffRemove" action="ShowToolTipSDX, Mods" message_key="samaraMorganPictureBinds_NoCurse" />
         <!-- Reset the counter, just in case -->
         <triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="curseSamaraMorganPictures" operation="set" value="0" />
@@ -367,7 +387,7 @@
       -->
       <!-- Fourth Horse -->
       <effect_group name="Destroy_4">
-        <requirement name="HasBuff" buff="buffCurseSamara"/>
+        <requirement name="HasBuff" buff="buffCursedSamaraMorgan"/>
         <requirement name="CVarCompare" target="self" cvar="curseSamaraMorganPictures" operation="Equals" value="3"/>
         <triggered_effect trigger="onSelfBuffRemove" action="PlaySound" sound="buffSamaraScream" />
         <triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="curseSamaraMorganPictures" operation="add" value="1" />
@@ -379,7 +399,7 @@
 
       <!-- Third Horse -->
       <effect_group name="Destroy_3">
-        <requirement name="HasBuff" buff="buffCurseSamara"/>
+        <requirement name="HasBuff" buff="buffCursedSamaraMorgan"/>
         <requirement name="CVarCompare" target="self" cvar="curseSamaraMorganPictures" operation="Equals" value="2"/>
         <triggered_effect trigger="onSelfBuffRemove" action="PlaySound" sound="buffSamaraScream" />
         <triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="curseSamaraMorganPictures" operation="add" value="1" />
@@ -390,7 +410,7 @@
 
       <!-- Second Horse -->
       <effect_group name="Destroy_2">
-        <requirement name="HasBuff" buff="buffCurseSamara"/>
+        <requirement name="HasBuff" buff="buffCursedSamaraMorgan"/>
         <requirement name="CVarCompare" target="self" cvar="curseSamaraMorganPictures" operation="Equals" value="1"/>
         <triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="curseSamaraMorganPictures" operation="add" value="1" />
         <triggered_effect trigger="onSelfBuffRemove" action="PlaySound" sound="buffSamaraScream" />
@@ -401,7 +421,7 @@
 
       <!-- First horse -->
       <effect_group name="Destroy">
-        <requirement name="HasBuff" buff="buffCurseSamara"/>
+        <requirement name="HasBuff" buff="buffCursedSamaraMorgan"/>
         <requirement name="CVarCompare" target="self" cvar="curseSamaraMorganPictures" operation="Equals" value="0"/>
         <triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="curseSamaraMorganPictures" operation="add" value="1" />
         <triggered_effect trigger="onSelfBuffRemove" action="PlaySound" sound="buffSamaraScream" />
@@ -461,7 +481,7 @@
     </effect_group>
     <effect_group name="SamaraCurse">
       <requirement name="CVarCompare" cvar="$SamaraCurse" operation="EQ" value="1"/>
-      <triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffCurseSamara" />
+      <triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffCursedSamaraMorgan" />
     </effect_group>
   </append>
 

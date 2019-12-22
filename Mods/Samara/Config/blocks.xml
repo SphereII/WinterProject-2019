@@ -29,7 +29,7 @@
       <property name="LootList" value="663"/> <!-- a lootlist is required but not actually used -->
 			<property name="AlwaysActive" value="true" />
 			<property name="ActivationDistance" value="6" />
-			<property name="ActivationBuffs" value="buffCurseSamara" /> 
+			<property name="ActivationBuffs" value="buffCursed" /> 
 		</block>
     <block name="SamaraWell01">
       <property name="Extends" value="SamaraWell"/>
@@ -114,8 +114,8 @@
 <!-- End of required configuration settings  -->	
 			  
 <!-- Optional configuration settings,  you may pick one additional requirement to determine if the effect will trigger    -->
-			   <!-- Triggers the block if the buff buffCurseSamara is active on the player, or if the player has a cvar called "myCvar", with a value of 4, or if myOtherCvar is available, regardless of value -->
-			  <property name="ActivationBuffs" value="buffCurseSamara,myCvar(4),myOtherCvar" /> 
+			   <!-- Triggers the block if the buff buffCursed is active on the player, or if the player has a cvar called "myCvar", with a value of 4, or if myOtherCvar is available, regardless of value -->
+			  <property name="ActivationBuffs" value="buffCursed,myCvar(4),myOtherCvar" /> 
 			  <!-- Triggers the block if the player is looking at the block (commented out here because we want the buff as the trigger-->
 		<!--  <property name="ActivateOnLook" value="true" /> -->
 <!-- End of Optional configuration settings             -->	
@@ -142,7 +142,7 @@
 			<property name="LootList" value="7"/> <!-- a lootlist is required but not actually used -->
 			<property name="AlwaysActive" value="true" />
 			<property name="ActivationDistance" value="2" />
-			<property name="ActivationBuffs" value="buffCurseSamara" /> 
+			<property name="ActivationBuffs" value="buffCursed" /> 
 		</block>
 
 		<block name="cntJumpMedicineCabinetClosed01">
@@ -162,7 +162,7 @@
 			<property name="LootList" value="7"/> <!-- a lootlist is required but not actually used -->
 			<property name="AlwaysActive" value="true" />
 			<property name="ActivationDistance" value="3" />
-			<property name="ActivationBuffs" value="buffCurseSamara" /> 
+			<property name="ActivationBuffs" value="buffCursed" /> 
 		</block>	
 
 		<block name="cntJumpMedicineCabinetClosed02">
@@ -182,7 +182,7 @@
 			<property name="LootList" value="7"/> <!-- a lootlist is required but not actually used -->
 			<property name="AlwaysActive" value="true" />
 			<property name="ActivationDistance" value="3" />
-			<property name="ActivationBuffs" value="buffCurseSamara" /> 
+			<property name="ActivationBuffs" value="buffCursed" /> 
 
 
 <!-- Painting Morphs  -->
@@ -204,7 +204,7 @@
 			<property name="LootList" value="7"/> <!-- a lootlist is required but not actually used -->
 			<property name="AlwaysActive" value="true" />
 			<property name="ActivationDistance" value="3" />
-			<property name="ActivationBuffs" value="buffCurseSamara" /> 
+			<property name="ActivationBuffs" value="buffCursed" /> 
 		 </block>
 
 		<block name="hiddenSafepaintingLorienZed">
@@ -230,7 +230,7 @@
 			<property name="LootList" value="7"/> <!-- a lootlist is required but not actually used -->
 			<property name="AlwaysActive" value="true" />
 			<property name="ActivationDistance" value="3" />
-			<property name="ActivationBuffs" value="buffCurseSamara" /> 
+			<property name="ActivationBuffs" value="buffCursed" /> 
 		 </block>
 
 		<block name="hiddenSafepaintingLorienEyes">
@@ -253,7 +253,7 @@
 			<property name="LootList" value="7"/> <!-- a lootlist is required but not actually used -->
 			<property name="AlwaysActive" value="true" />
 			<property name="ActivationDistance" value="3" />
-			<property name="ActivationBuffs" value="buffCurseSamara" /> 
+			<property name="ActivationBuffs" value="buffCursed" /> 
 		</block>
 		<block name="hiddenSafepaintingDerekZed">
 			<property name="Extends" value="paintingDerekZed"/>
@@ -278,7 +278,7 @@
 			<property name="LootList" value="7"/> <!-- a lootlist is required but not actually used -->
 			<property name="AlwaysActive" value="true" />
 			<property name="ActivationDistance" value="3" />
-			<property name="ActivationBuffs" value="buffCurseSamara" /> 
+			<property name="ActivationBuffs" value="buffCursed" /> 
 		 </block>
 
 		<block name="hiddenSafepaintingBenZed">
@@ -304,7 +304,7 @@
 			<property name="LootList" value="7"/> <!-- a lootlist is required but not actually used -->
 			<property name="AlwaysActive" value="true" />
 			<property name="ActivationDistance" value="3" />
-			<property name="ActivationBuffs" value="buffCurseSamara" /> 
+			<property name="ActivationBuffs" value="buffCursed" /> 
 		 </block>
 
 		<block name="hiddenSafepaintingDukeZed">
@@ -331,7 +331,7 @@
 			<property name="LootList" value="7"/> <!-- a lootlist is required but not actually used -->
 			<property name="AlwaysActive" value="true" />
 			<property name="ActivationDistance" value="3" />
-			<property name="ActivationBuffs" value="buffCurseSamara" /> 
+			<property name="ActivationBuffs" value="buffCursed" /> 
 		 </block>
 
 		<block name="hiddenSafepaintingKenZed">
@@ -357,7 +357,7 @@
 			<property name="LootList" value="7"/> <!-- a lootlist is required but not actually used -->
 			<property name="AlwaysActive" value="true" />
 			<property name="ActivationDistance" value="3" />
-			<property name="ActivationBuffs" value="buffCurseSamara" /> 
+			<property name="ActivationBuffs" value="buffCursed" /> 
 		 </block>
 
 		<block name="hiddenSafepaintingNoahZed">
@@ -387,7 +387,7 @@
 			<property name="LootList" value="7"/> <!-- a lootlist is required but not actually used -->
 			<property name="AlwaysActive" value="true" />
 			<property name="ActivationDistance" value="3" />
-			<property name="ActivationBuffs" value="buffCurseSamara" /> 
+			<property name="ActivationBuffs" value="buffCursed" /> 
 		 </block>
 
 		<block name="hiddenSafePosterMorph01">
@@ -421,7 +421,7 @@
 			<property name="LootList" value="7"/> <!-- a lootlist is required but not actually used -->
 			<property name="AlwaysActive" value="true" />
 			<property name="ActivationDistance" value="6" />
-			<property name="ActivationBuffs" value="buffCurseSamara" /> 
+			<property name="ActivationBuffs" value="buffCursed" /> 
 		</block>	
 		
 	</append>
