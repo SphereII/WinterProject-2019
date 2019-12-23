@@ -50,6 +50,7 @@
 		<block name="XmasPoster03" prob="1"/>
 		<block name="XmasPoster04" prob="1"/>
 		<block name="XmasPoster05" prob="1"/>
+		<block name="InfoPoster01" prob="1"/>
 	</placeholder>
 
     <placeholder name="curtain_top1Sheet3">

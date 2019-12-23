@@ -17,11 +17,8 @@
 
 
   </append>
-
-
-
   <append xpath="/blocks">
-
+   
     <block name="xmasGift">
       <property name="Class" value="Loot" />
       <property name="LootList" value="8" />
@@ -383,7 +380,7 @@
       <drop event="Fall" name="resourcePaper" count="1" prob="0.187" stick_chance="0"/>
     </block>
 	
-	   <block name="XmasPoster05">
+	<block name="XmasPoster05">
       <property name="Material" value="Mpaper" />
       <property name="Shape" value="ModelEntity" />
       <property name="Model" value="#@modfolder:Resources/XmasMoviePosters.unity3d?Posterslay"/>
@@ -394,11 +391,20 @@
       <drop event="Destroy" count="0"/>
       <drop event="Fall" name="resourcePaper" count="1" prob="0.187" stick_chance="0"/>
     </block>
-	
-	
-	
-	
-    <!-- change the wood table to be based off of a loot replace -->
+	<block name="InfoPoster01">
+      <property name="Material" value="Mpaper" />
+      <property name="Shape" value="ModelEntity" />
+      <property name="Model" value="#@modfolder:Resources/XmasMoviePosters.unity3d?PosterInfo01" />
+      <property name="CanPickup" value="true" />
+      <!--     <property name="CustomIcon" value="" /> -->
+      <property name="Collide" value="melee,bullet,arrow,rocket"/>
+      <drop event="Harvest" name="resourcePaper" count="1" tool_category="harvestingTools"/>
+      <drop event="Destroy" count="0"/>
+      <drop event="Fall" name="resourcePaper" count="1" prob="0.187" stick_chance="0"/>
+      <property name="DescriptionKey" value="Infoposter" />
+	</block>
+  
+      <!-- change the wood table to be based off of a loot replace -->
     <block name="woodTable">
       <property name="CreativeMode" value="Dev"/>
       <property name="CustomIcon" value="cntWastelandRandomLootHelper"/>
