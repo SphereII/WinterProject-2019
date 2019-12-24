@@ -1,5 +1,5 @@
 <configs>
-	<append xpath="/items">	
+  <append xpath="/items">
     <item name="foodFrozenBase">
       <property name="HoldType" value="31"/>
       <property name="Meshfile" value="#Other/Items?Misc/parcelPrefab.prefab"/>
@@ -9,6 +9,18 @@
       <property name="Stacknumber" value="125"/>
       <property name="Group" value="Food"/>
       <property name="DescriptionKey" value="foodFrozenDesc" />
+      <property name="ItemTypeIcon" value="cold"/>
+    </item>
+
+    <item name="foodFrozenTinFoil">
+      <property name="HoldType" value="31"/>
+      <property name="Meshfile" value="#Other/Items?Misc/parcelPrefab.prefab"/>
+      <property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+      <property name="Material" value="Morganic"/>
+      <property name="EconomicValue" value="1"/>
+      <property name="Stacknumber" value="125"/>
+      <property name="Group" value="Food"/>
+      <property name="DescriptionKey" value="foodFrozenTinFoil" />
       <property name="ItemTypeIcon" value="cold"/>
     </item>
 
@@ -66,7 +78,7 @@
       <property name="CustomIcon" value="drinkJarBoiledWater" />
     </item>
   </append>
- <!-- Adding spoilage to drinks -->
+  <!-- Adding spoilage to drinks -->
   <append xpath="/items/item[@name='drinkJarBlackStrapCoffee']">
     <property name="Spoilable" value="true" />
     <property name="SpoiledItem" value="drinkJarBlackStrapCoffeeFrozen" />
@@ -847,59 +859,59 @@
   <append xpath="/items">
     <item name="Berry TeaFrozen" >
       <property name="Extends" value="foodFrozenBase" />
-      <property name="CustomIcon" value="Berry Tea" />
+      <property name="CustomIcon" value="ATBerryTea"/>
     </item>
     <item name="Iced Mixed TeaFrozen" >
       <property name="Extends" value="foodFrozenBase" />
-      <property name="CustomIcon" value="Iced Mixed Tea" />
+      <property name="CustomIcon" value="ATMixedTea"/>
     </item>
     <item name="Iced CoffeeFrozen" >
       <property name="Extends" value="foodFrozenBase" />
-      <property name="CustomIcon" value="Iced Coffee" />
+      <property name="CustomIcon" value="ATIcedCoffee"/>
     </item>
     <item name="Yucca ChipsFrozen" >
       <property name="Extends" value="foodFrozenBase" />
-      <property name="CustomIcon" value="Yucca Chips" />
+      <property name="CustomIcon" value="ATYuccaChips"/>
     </item>
     <item name="HashbrownFrozen" >
       <property name="Extends" value="foodFrozenBase" />
-      <property name="CustomIcon" value="Hashbrown" />
+      <property name="CustomIcon" value="ATHashbrown"/>
     </item>
     <item name="Mashed PotatoFrozen" >
       <property name="Extends" value="foodFrozenBase" />
-      <property name="CustomIcon" value="Mashed Potato" />
+      <property name="CustomIcon" value="ATMashPotato"/>
     </item>
     <item name="Corn GritsFrozen" >
       <property name="Extends" value="foodFrozenBase" />
-      <property name="CustomIcon" value="Corn Grits" />
+      <property name="CustomIcon" value="ATCornGrits"/>
     </item>
     <item name="Blueberry JamFrozen" >
       <property name="Extends" value="foodFrozenBase" />
-      <property name="CustomIcon" value="Blueberry Jam" />
+      <property name="CustomIcon" value="ATBlueberryJam"/>
     </item>
     <item name="Yucca JamFrozen" >
       <property name="Extends" value="foodFrozenBase" />
-      <property name="CustomIcon" value="Yucca Jam" />
+      <property name="CustomIcon" value="ATYuccaJam"/>
     </item>
     <item name="Egg SaladFrozen" >
       <property name="Extends" value="foodFrozenBase" />
-      <property name="CustomIcon" value="Egg Salad" />
+      <property name="CustomIcon" value="ATEggSalad"/>
     </item>
     <item name="Fried MeatFrozen" >
       <property name="Extends" value="foodFrozenBase" />
-      <property name="CustomIcon" value="Fried Meat" />
+      <property name="CustomIcon" value="ATFriedMeat"/>
     </item>
     <item name="Corn ChipsFrozen" >
       <property name="Extends" value="foodFrozenBase" />
-      <property name="CustomIcon" value="Corn Chips" />
+      <property name="CustomIcon" value="ATCornChips"/>
     </item>
     <item name="Blueberry Jam SandwichFrozen" >
       <property name="Extends" value="foodFrozenBase" />
-      <property name="CustomIcon" value="Blueberry Jam Sandwich" />
+      <property name="CustomIcon" value="ATBBJamSandwich"/>
     </item>
     <item name="Yucca Jam SandwichFrozen" >
       <property name="Extends" value="foodFrozenBase" />
-      <property name="CustomIcon" value="Yucca Jam Sandwich" />
+      <property name="CustomIcon" value="ATYuccaJamSandwich"/>
     </item>
     <item name="Clay Roasted MeatFrozen" >
       <property name="Extends" value="foodFrozenBase" />
@@ -907,91 +919,938 @@
     </item>
     <item name="Coffee CakeFrozen" >
       <property name="Extends" value="foodFrozenBase" />
-      <property name="CustomIcon" value="Coffee Cake" />
+      <property name="CustomIcon" value="ATCoffeeCake"/>
     </item>
     <item name="Mushroom PieFrozen" >
       <property name="Extends" value="foodFrozenBase" />
-      <property name="CustomIcon" value="Mushroom Pie" />
+      <property name="CustomIcon" value="ATMushroomPie"/>
     </item>
     <item name="Meat and Beer PieFrozen" >
       <property name="Extends" value="foodFrozenBase" />
-      <property name="CustomIcon" value="Meat and Beer Pie" />
+      <property name="CustomIcon" value="ATMeatAndBeerPie"/>
     </item>
     <item name="Fried MushroomsFrozen" >
       <property name="Extends" value="foodFrozenBase" />
-      <property name="CustomIcon" value="Fried Mushrooms" />
+      <property name="CustomIcon" value="ATFriedMushrooms"/>
     </item>
     <item name="Fried EggFrozen" >
       <property name="Extends" value="foodFrozenBase" />
-      <property name="CustomIcon" value="Fried Egg" />
+      <property name="CustomIcon" value="ATFriedEgg"/>
     </item>
     <item name="French ToastFrozen" >
       <property name="Extends" value="foodFrozenBase" />
-      <property name="CustomIcon" value="French Toast" />
+      <property name="CustomIcon" value="ATFrenchToast"/>
     </item>
     <item name="Honey Glazed MeatFrozen" >
       <property name="Extends" value="foodFrozenBase" />
-      <property name="CustomIcon" value="Honey Glazed Meat" />
+      <property name="CustomIcon" value="ATHoneyGlazedMeat"/>
     </item>
     <item name="Blueberry SodaFrozen" >
       <property name="Extends" value="foodFrozenBase" />
-      <property name="CustomIcon" value="Blueberry Soda" />
+      <property name="CustomIcon" value="ATBlueberrySoda"/>
     </item>
     <item name="Kvass SodaFrozen" >
       <property name="Extends" value="foodFrozenBase" />
-      <property name="CustomIcon" value="Kvass Soda" />
+      <property name="CustomIcon" value="ATKvassSoda"/>
     </item>
     <item name="Carbonated WaterFrozen" >
       <property name="Extends" value="foodFrozenBase" />
-      <property name="CustomIcon" value="Carbonated Water" />
+      <property name="CustomIcon" value="ATCarbonatedWater"/>
     </item>
     <item name="Distilled VodkaFrozen" >
       <property name="Extends" value="foodFrozenBase" />
-      <property name="CustomIcon" value="Distilled Vodka" />
+      <property name="CustomIcon" value="ATVodka"/>
     </item>
     <item name="Snowberry GinFrozen" >
       <property name="Extends" value="foodFrozenBase" />
-      <property name="CustomIcon" value="Snowberry Gin" />
+      <property name="CustomIcon" value="ATSnowberryGin"/>
     </item>
     <item name="Sugar ExtractFrozen" >
       <property name="Extends" value="foodFrozenBase" />
-      <property name="CustomIcon" value="Sugar Extract" />
+      <property name="CustomIcon" value="ATSugarExtract"/>
     </item>
     <item name="Rock CandyFrozen" >
       <property name="Extends" value="foodFrozenBase" />
-      <property name="CustomIcon" value="Rock Candy" />
+      <property name="CustomIcon" value="ATRockCandy"/>
     </item>
     <item name="Blueberry CandyFrozen" >
       <property name="Extends" value="foodFrozenBase" />
-      <property name="CustomIcon" value="Blueberry Candy" />
+      <property name="CustomIcon" value="ATRockCandyBlueberry"/>
     </item>
     <item name="Snowberry CandyFrozen" >
       <property name="Extends" value="foodFrozenBase" />
-      <property name="CustomIcon" value="Snowberry Candy" />
+      <property name="CustomIcon" value="ATRockCandySnowberry"/>
     </item>
     <item name="Plain FudgeFrozen" >
       <property name="Extends" value="foodFrozenBase" />
-      <property name="CustomIcon" value="Plain Fudge" />
+      <property name="CustomIcon" value="ATFudge"/>
     </item>
     <item name="Energy TabletFrozen" >
       <property name="Extends" value="foodFrozenBase" />
-      <property name="CustomIcon" value="Energy Tablet" />
+      <property name="CustomIcon" value="ATEnergyTablet"/>
     </item>
     <item name="Sponge CakeFrozen" >
       <property name="Extends" value="foodFrozenBase" />
-      <property name="CustomIcon" value="Sponge Cake" />
+      <property name="CustomIcon" value="ATSpongeCake"/>
     </item>
     <item name="Blueberry Sponge CakeFrozen" >
       <property name="Extends" value="foodFrozenBase" />
-      <property name="CustomIcon" value="Blueberry Sponge Cake" />
+      <property name="CustomIcon" value="ATBlueberrySponge"/>
     </item>
     <item name="Yucca Sponge CakeFrozen" >
       <property name="Extends" value="foodFrozenBase" />
-      <property name="CustomIcon" value="Yucca Sponge Cake" />
+      <property name="CustomIcon" value="ATYuccaSponge"/>
     </item>
     <item name="Custard PieFrozen" >
       <property name="Extends" value="foodFrozenBase" />
-      <property name="CustomIcon" value="Custard Pie" />
+      <property name="CustomIcon" value="ATCustardPie"/>
     </item>
+  </append>
+
+  <append xpath="/items">
+    <item name="foodHoneyThermos" >
+      <property name="Extends" value="foodHoney" />
+      <property name="TickPerLoss" value="40" />
+      <property name="CustomIcon" value="foodHoney" />
+    </item>
+    <item name="foodHoneyThermos" >
+      <property name="Extends" value="foodHoney" />
+      <property name="TickPerLoss" value="40" />
+      <property name="CustomIcon" value="foodHoney" />
+    </item>
+    <item name="drinkJarRiverWaterThermos" >
+      <property name="Extends" value="drinkJarRiverWater" />
+      <property name="TickPerLoss" value="40" />
+      <property name="CustomIcon" value="drinkJarRiverWater" />
+    </item>
+    <item name="drinkJarRiverWaterThermos" >
+      <property name="Extends" value="drinkJarRiverWater" />
+      <property name="TickPerLoss" value="40" />
+      <property name="CustomIcon" value="drinkJarRiverWater" />
+    </item>
+    <item name="drinkJarBoiledWaterThermos" >
+      <property name="Extends" value="drinkJarBoiledWater" />
+      <property name="TickPerLoss" value="40" />
+      <property name="CustomIcon" value="drinkJarBoiledWater" />
+    </item>
+    <item name="drinkJarBoiledWaterThermos" >
+      <property name="Extends" value="drinkJarBoiledWater" />
+      <property name="TickPerLoss" value="40" />
+      <property name="CustomIcon" value="drinkJarBoiledWater" />
+    </item>
+    <item name="drinkJarPureMineralWaterThermos" >
+      <property name="Extends" value="drinkJarPureMineralWater" />
+      <property name="TickPerLoss" value="40" />
+      <property name="CustomIcon" value="drinkJarPureMineralWater" />
+    </item>
+    <item name="drinkJarPureMineralWaterThermos" >
+      <property name="Extends" value="drinkJarPureMineralWater" />
+      <property name="TickPerLoss" value="40" />
+      <property name="CustomIcon" value="drinkJarPureMineralWater" />
+    </item>
+    <item name="drinkJarYuccaJuiceThermos" >
+      <property name="Extends" value="drinkJarYuccaJuice" />
+      <property name="TickPerLoss" value="40" />
+      <property name="CustomIcon" value="drinkJarYuccaJuice" />
+    </item>
+    <item name="drinkJarYuccaJuiceThermos" >
+      <property name="Extends" value="drinkJarYuccaJuice" />
+      <property name="TickPerLoss" value="40" />
+      <property name="CustomIcon" value="drinkJarYuccaJuice" />
+    </item>
+    <item name="drinkJarGoldenRodTeaThermos" >
+      <property name="Extends" value="drinkJarGoldenRodTea" />
+      <property name="TickPerLoss" value="40" />
+      <property name="CustomIcon" value="drinkJarGoldenRodTea" />
+    </item>
+    <item name="drinkJarGoldenRodTeaThermos" >
+      <property name="Extends" value="drinkJarGoldenRodTea" />
+      <property name="TickPerLoss" value="40" />
+      <property name="CustomIcon" value="drinkJarGoldenRodTea" />
+    </item>
+    <item name="drinkJarRedTeaThermos" >
+      <property name="Extends" value="drinkJarRedTea" />
+      <property name="TickPerLoss" value="40" />
+      <property name="CustomIcon" value="drinkJarRedTea" />
+    </item>
+    <item name="drinkJarRedTeaThermos" >
+      <property name="Extends" value="drinkJarRedTea" />
+      <property name="TickPerLoss" value="40" />
+      <property name="CustomIcon" value="drinkJarRedTea" />
+    </item>
+    <item name="drinkJarYuccaCocktailThermos" >
+      <property name="Extends" value="drinkJarYuccaCocktail" />
+      <property name="TickPerLoss" value="40" />
+      <property name="CustomIcon" value="drinkJarYuccaCocktail" />
+    </item>
+    <item name="drinkJarYuccaCocktailThermos" >
+      <property name="Extends" value="drinkJarYuccaCocktail" />
+      <property name="TickPerLoss" value="40" />
+      <property name="CustomIcon" value="drinkJarYuccaCocktail" />
+    </item>
+    <item name="drinkYuccaJuiceSmoothieThermos" >
+      <property name="Extends" value="drinkYuccaJuiceSmoothie" />
+      <property name="TickPerLoss" value="40" />
+      <property name="CustomIcon" value="drinkYuccaJuiceSmoothie" />
+    </item>
+    <item name="drinkYuccaJuiceSmoothieThermos" >
+      <property name="Extends" value="drinkYuccaJuiceSmoothie" />
+      <property name="TickPerLoss" value="40" />
+      <property name="CustomIcon" value="drinkYuccaJuiceSmoothie" />
+    </item>
+    <item name="drinkCanMegaCrushThermos" >
+      <property name="Extends" value="drinkCanMegaCrush" />
+      <property name="TickPerLoss" value="40" />
+      <property name="CustomIcon" value="drinkCanMegaCrush" />
+    </item>
+    <item name="drinkCanMegaCrushThermos" >
+      <property name="Extends" value="drinkCanMegaCrush" />
+      <property name="TickPerLoss" value="40" />
+      <property name="CustomIcon" value="drinkCanMegaCrush" />
+    </item>
+    <item name="drinkJarCoffeeThermos" >
+      <property name="Extends" value="drinkJarCoffee" />
+      <property name="TickPerLoss" value="40" />
+      <property name="CustomIcon" value="drinkJarCoffee" />
+    </item>
+    <item name="drinkJarCoffeeThermos" >
+      <property name="Extends" value="drinkJarCoffee" />
+      <property name="TickPerLoss" value="40" />
+      <property name="CustomIcon" value="drinkJarCoffee" />
+    </item>
+    <item name="drinkJarBlackStrapCoffeeThermos" >
+      <property name="Extends" value="drinkJarBlackStrapCoffee" />
+      <property name="TickPerLoss" value="40" />
+      <property name="CustomIcon" value="drinkJarBlackStrapCoffee" />
+    </item>
+    <item name="drinkJarBlackStrapCoffeeThermos" >
+      <property name="Extends" value="drinkJarBlackStrapCoffee" />
+      <property name="TickPerLoss" value="40" />
+      <property name="CustomIcon" value="drinkJarBlackStrapCoffee" />
+    </item>
+    <item name="drinkJarBeerThermos" >
+      <property name="Extends" value="drinkJarBeer" />
+      <property name="TickPerLoss" value="40" />
+      <property name="CustomIcon" value="drinkJarBeer" />
+    </item>
+    <item name="drinkJarBeerThermos" >
+      <property name="Extends" value="drinkJarBeer" />
+      <property name="TickPerLoss" value="40" />
+      <property name="CustomIcon" value="drinkJarBeer" />
+    </item>
+    <item name="foodCanBeefThermos" >
+      <property name="Extends" value="foodCanBeef" />
+      <property name="TickPerLoss" value="40" />
+      <property name="CustomIcon" value="foodCanBeef" />
+    </item>
+    <item name="foodCanBeefThermos" >
+      <property name="Extends" value="foodCanBeef" />
+      <property name="TickPerLoss" value="40" />
+      <property name="CustomIcon" value="foodCanBeef" />
+    </item>
+    <item name="foodCanChickenThermos" >
+      <property name="Extends" value="foodCanChicken" />
+      <property name="TickPerLoss" value="40" />
+      <property name="CustomIcon" value="foodCanChicken" />
+    </item>
+    <item name="foodCanChickenThermos" >
+      <property name="Extends" value="foodCanChicken" />
+      <property name="TickPerLoss" value="40" />
+      <property name="CustomIcon" value="foodCanChicken" />
+    </item>
+    <item name="foodCanLambThermos" >
+      <property name="Extends" value="foodCanLamb" />
+      <property name="TickPerLoss" value="40" />
+      <property name="CustomIcon" value="foodCanLamb" />
+    </item>
+    <item name="foodCanLambThermos" >
+      <property name="Extends" value="foodCanLamb" />
+      <property name="TickPerLoss" value="40" />
+      <property name="CustomIcon" value="foodCanLamb" />
+    </item>
+    <item name="foodCanCatfoodThermos" >
+      <property name="Extends" value="foodCanCatfood" />
+      <property name="TickPerLoss" value="40" />
+      <property name="CustomIcon" value="foodCanCatfood" />
+    </item>
+    <item name="foodCanCatfoodThermos" >
+      <property name="Extends" value="foodCanCatfood" />
+      <property name="TickPerLoss" value="40" />
+      <property name="CustomIcon" value="foodCanCatfood" />
+    </item>
+    <item name="foodCanDogfoodThermos" >
+      <property name="Extends" value="foodCanDogfood" />
+      <property name="TickPerLoss" value="40" />
+      <property name="CustomIcon" value="foodCanDogfood" />
+    </item>
+    <item name="foodCanDogfoodThermos" >
+      <property name="Extends" value="foodCanDogfood" />
+      <property name="TickPerLoss" value="40" />
+      <property name="CustomIcon" value="foodCanDogfood" />
+    </item>
+    <item name="foodCanChiliThermos" >
+      <property name="Extends" value="foodCanChili" />
+      <property name="TickPerLoss" value="40" />
+      <property name="CustomIcon" value="foodCanChili" />
+    </item>
+    <item name="foodCanChiliThermos" >
+      <property name="Extends" value="foodCanChili" />
+      <property name="TickPerLoss" value="40" />
+      <property name="CustomIcon" value="foodCanChili" />
+    </item>
+    <item name="foodCanTunaThermos" >
+      <property name="Extends" value="foodCanTuna" />
+      <property name="TickPerLoss" value="40" />
+      <property name="CustomIcon" value="foodCanTuna" />
+    </item>
+    <item name="foodCanTunaThermos" >
+      <property name="Extends" value="foodCanTuna" />
+      <property name="TickPerLoss" value="40" />
+      <property name="CustomIcon" value="foodCanTuna" />
+    </item>
+    <item name="foodCanShamThermos" >
+      <property name="Extends" value="foodCanSham" />
+      <property name="TickPerLoss" value="40" />
+      <property name="CustomIcon" value="foodCanSham" />
+    </item>
+    <item name="foodCanShamThermos" >
+      <property name="Extends" value="foodCanSham" />
+      <property name="TickPerLoss" value="40" />
+      <property name="CustomIcon" value="foodCanSham" />
+    </item>
+    <item name="foodCanPastaThermos" >
+      <property name="Extends" value="foodCanPasta" />
+      <property name="TickPerLoss" value="40" />
+      <property name="CustomIcon" value="foodCanPasta" />
+    </item>
+    <item name="foodCanPastaThermos" >
+      <property name="Extends" value="foodCanPasta" />
+      <property name="TickPerLoss" value="40" />
+      <property name="CustomIcon" value="foodCanPasta" />
+    </item>
+    <item name="foodCanSalmonThermos" >
+      <property name="Extends" value="foodCanSalmon" />
+      <property name="TickPerLoss" value="40" />
+      <property name="CustomIcon" value="foodCanSalmon" />
+    </item>
+    <item name="foodCanSalmonThermos" >
+      <property name="Extends" value="foodCanSalmon" />
+      <property name="TickPerLoss" value="40" />
+      <property name="CustomIcon" value="foodCanSalmon" />
+    </item>
+    <item name="foodCanMisoThermos" >
+      <property name="Extends" value="foodCanMiso" />
+      <property name="TickPerLoss" value="40" />
+      <property name="CustomIcon" value="foodCanMiso" />
+    </item>
+    <item name="foodCanMisoThermos" >
+      <property name="Extends" value="foodCanMiso" />
+      <property name="TickPerLoss" value="40" />
+      <property name="CustomIcon" value="foodCanMiso" />
+    </item>
+    <item name="foodCanPeasThermos" >
+      <property name="Extends" value="foodCanPeas" />
+      <property name="TickPerLoss" value="40" />
+      <property name="CustomIcon" value="foodCanPeas" />
+    </item>
+    <item name="foodCanPeasThermos" >
+      <property name="Extends" value="foodCanPeas" />
+      <property name="TickPerLoss" value="40" />
+      <property name="CustomIcon" value="foodCanPeas" />
+    </item>
+    <item name="foodCanPearsThermos" >
+      <property name="Extends" value="foodCanPears" />
+      <property name="TickPerLoss" value="40" />
+      <property name="CustomIcon" value="foodCanPears" />
+    </item>
+    <item name="foodCanPearsThermos" >
+      <property name="Extends" value="foodCanPears" />
+      <property name="TickPerLoss" value="40" />
+      <property name="CustomIcon" value="foodCanPears" />
+    </item>
+    <item name="foodCanSoupThermos" >
+      <property name="Extends" value="foodCanSoup" />
+      <property name="TickPerLoss" value="40" />
+      <property name="CustomIcon" value="foodCanSoup" />
+    </item>
+    <item name="foodCanSoupThermos" >
+      <property name="Extends" value="foodCanSoup" />
+      <property name="TickPerLoss" value="40" />
+      <property name="CustomIcon" value="foodCanSoup" />
+    </item>
+    <item name="foodCanStockThermos" >
+      <property name="Extends" value="foodCanStock" />
+      <property name="TickPerLoss" value="40" />
+      <property name="CustomIcon" value="foodCanStock" />
+    </item>
+    <item name="foodCanStockThermos" >
+      <property name="Extends" value="foodCanStock" />
+      <property name="TickPerLoss" value="40" />
+      <property name="CustomIcon" value="foodCanStock" />
+    </item>
+    <item name="foodCornOnTheCobFoil" >
+      <property name="Extends" value="foodCornOnTheCob" />
+      <property name="TickPerLoss" value="40" />
+      <property name="CustomIcon" value="foodCornOnTheCob" />
+    </item>
+    <item name="foodCornOnTheCobFoil" >
+      <property name="Extends" value="foodCornOnTheCob" />
+      <property name="TickPerLoss" value="40" />
+      <property name="CustomIcon" value="foodCornOnTheCob" />
+    </item>
+    <item name="foodCornBreadFoil" >
+      <property name="Extends" value="foodCornBread" />
+      <property name="TickPerLoss" value="40" />
+      <property name="CustomIcon" value="foodCornBread" />
+    </item>
+    <item name="foodCornBreadFoil" >
+      <property name="Extends" value="foodCornBread" />
+      <property name="TickPerLoss" value="40" />
+      <property name="CustomIcon" value="foodCornBread" />
+    </item>
+    <item name="foodMoldyBreadFoil" >
+      <property name="Extends" value="foodMoldyBread" />
+      <property name="TickPerLoss" value="40" />
+      <property name="CustomIcon" value="foodMoldyBread" />
+    </item>
+    <item name="foodMoldyBreadFoil" >
+      <property name="Extends" value="foodMoldyBread" />
+      <property name="TickPerLoss" value="40" />
+      <property name="CustomIcon" value="foodMoldyBread" />
+    </item>
+    <item name="foodShamSandwichFoil" >
+      <property name="Extends" value="foodShamSandwich" />
+      <property name="TickPerLoss" value="40" />
+      <property name="CustomIcon" value="foodShamSandwich" />
+    </item>
+    <item name="foodShamSandwichFoil" >
+      <property name="Extends" value="foodShamSandwich" />
+      <property name="TickPerLoss" value="40" />
+      <property name="CustomIcon" value="foodShamSandwich" />
+    </item>
+    <item name="foodCharredMeatFoil" >
+      <property name="Extends" value="foodCharredMeat" />
+      <property name="TickPerLoss" value="40" />
+      <property name="CustomIcon" value="foodCharredMeat" />
+    </item>
+    <item name="foodCharredMeatFoil" >
+      <property name="Extends" value="foodCharredMeat" />
+      <property name="TickPerLoss" value="40" />
+      <property name="CustomIcon" value="foodCharredMeat" />
+    </item>
+    <item name="foodGrilledMeatFoil" >
+      <property name="Extends" value="foodGrilledMeat" />
+      <property name="TickPerLoss" value="40" />
+      <property name="CustomIcon" value="foodGrilledMeat" />
+    </item>
+    <item name="foodGrilledMeatFoil" >
+      <property name="Extends" value="foodGrilledMeat" />
+      <property name="TickPerLoss" value="40" />
+      <property name="CustomIcon" value="foodGrilledMeat" />
+    </item>
+    <item name="foodBoiledMeatFoil" >
+      <property name="Extends" value="foodBoiledMeat" />
+      <property name="TickPerLoss" value="40" />
+      <property name="CustomIcon" value="foodBoiledMeat" />
+    </item>
+    <item name="foodBoiledMeatFoil" >
+      <property name="Extends" value="foodBoiledMeat" />
+      <property name="TickPerLoss" value="40" />
+      <property name="CustomIcon" value="foodBoiledMeat" />
+    </item>
+    <item name="foodMeatStewThermos" >
+      <property name="Extends" value="foodMeatStew" />
+      <property name="TickPerLoss" value="40" />
+      <property name="CustomIcon" value="foodMeatStew" />
+    </item>
+    <item name="foodMeatStewThermos" >
+      <property name="Extends" value="foodMeatStew" />
+      <property name="TickPerLoss" value="40" />
+      <property name="CustomIcon" value="foodMeatStew" />
+    </item>
+    <item name="foodSteakAndPotatoFoil" >
+      <property name="Extends" value="foodSteakAndPotato" />
+      <property name="TickPerLoss" value="40" />
+      <property name="CustomIcon" value="foodSteakAndPotato" />
+    </item>
+    <item name="foodSteakAndPotatoFoil" >
+      <property name="Extends" value="foodSteakAndPotato" />
+      <property name="TickPerLoss" value="40" />
+      <property name="CustomIcon" value="foodSteakAndPotato" />
+    </item>
+    <item name="foodShamChowderThermos" >
+      <property name="Extends" value="foodShamChowder" />
+      <property name="TickPerLoss" value="40" />
+      <property name="CustomIcon" value="foodShamChowder" />
+    </item>
+    <item name="foodShamChowderThermos" >
+      <property name="Extends" value="foodShamChowder" />
+      <property name="TickPerLoss" value="40" />
+      <property name="CustomIcon" value="foodShamChowder" />
+    </item>
+    <item name="foodHoboStewThermos" >
+      <property name="Extends" value="foodHoboStew" />
+      <property name="TickPerLoss" value="40" />
+      <property name="CustomIcon" value="foodHoboStew" />
+    </item>
+    <item name="foodHoboStewThermos" >
+      <property name="Extends" value="foodHoboStew" />
+      <property name="TickPerLoss" value="40" />
+      <property name="CustomIcon" value="foodHoboStew" />
+    </item>
+    <item name="foodFishTacosFoil" >
+      <property name="Extends" value="foodFishTacos" />
+      <property name="TickPerLoss" value="40" />
+      <property name="CustomIcon" value="foodFishTacos" />
+    </item>
+    <item name="foodFishTacosFoil" >
+      <property name="Extends" value="foodFishTacos" />
+      <property name="TickPerLoss" value="40" />
+      <property name="CustomIcon" value="foodFishTacos" />
+    </item>
+    <item name="foodChiliDogFoil" >
+      <property name="Extends" value="foodChiliDog" />
+      <property name="TickPerLoss" value="40" />
+      <property name="CustomIcon" value="foodChiliDog" />
+    </item>
+    <item name="foodChiliDogFoil" >
+      <property name="Extends" value="foodChiliDog" />
+      <property name="TickPerLoss" value="40" />
+      <property name="CustomIcon" value="foodChiliDog" />
+    </item>
+    <item name="foodBakedPotatoFoil" >
+      <property name="Extends" value="foodBakedPotato" />
+      <property name="TickPerLoss" value="40" />
+      <property name="CustomIcon" value="foodBakedPotato" />
+    </item>
+    <item name="foodBakedPotatoFoil" >
+      <property name="Extends" value="foodBakedPotato" />
+      <property name="TickPerLoss" value="40" />
+      <property name="CustomIcon" value="foodBakedPotato" />
+    </item>
+    <item name="foodBlueberryPieFoil" >
+      <property name="Extends" value="foodBlueberryPie" />
+      <property name="TickPerLoss" value="40" />
+      <property name="CustomIcon" value="foodBlueberryPie" />
+    </item>
+    <item name="foodBlueberryPieFoil" >
+      <property name="Extends" value="foodBlueberryPie" />
+      <property name="TickPerLoss" value="40" />
+      <property name="CustomIcon" value="foodBlueberryPie" />
+    </item>
+    <item name="foodPumpkinPieFoil" >
+      <property name="Extends" value="foodPumpkinPie" />
+      <property name="TickPerLoss" value="40" />
+      <property name="CustomIcon" value="foodPumpkinPie" />
+    </item>
+    <item name="foodPumpkinPieFoil" >
+      <property name="Extends" value="foodPumpkinPie" />
+      <property name="TickPerLoss" value="40" />
+      <property name="CustomIcon" value="foodPumpkinPie" />
+    </item>
+    <item name="foodPumpkinCheesecakeFoil" >
+      <property name="Extends" value="foodPumpkinCheesecake" />
+      <property name="TickPerLoss" value="40" />
+      <property name="CustomIcon" value="foodPumpkinCheesecake" />
+    </item>
+    <item name="foodPumpkinCheesecakeFoil" >
+      <property name="Extends" value="foodPumpkinCheesecake" />
+      <property name="TickPerLoss" value="40" />
+      <property name="CustomIcon" value="foodPumpkinCheesecake" />
+    </item>
+    <item name="foodPumpkinBreadFoil" >
+      <property name="Extends" value="foodPumpkinBread" />
+      <property name="TickPerLoss" value="40" />
+      <property name="CustomIcon" value="foodPumpkinBread" />
+    </item>
+    <item name="foodPumpkinBreadFoil" >
+      <property name="Extends" value="foodPumpkinBread" />
+      <property name="TickPerLoss" value="40" />
+      <property name="CustomIcon" value="foodPumpkinBread" />
+    </item>
+    <item name="foodEggBoiledThermos" >
+      <property name="Extends" value="foodEggBoiled" />
+      <property name="TickPerLoss" value="40" />
+      <property name="CustomIcon" value="foodEggBoiled" />
+    </item>
+    <item name="foodEggBoiledThermos" >
+      <property name="Extends" value="foodEggBoiled" />
+      <property name="TickPerLoss" value="40" />
+      <property name="CustomIcon" value="foodEggBoiled" />
+    </item>
+    <item name="foodEggBoiledFoil" >
+      <property name="Extends" value="foodEggBoiled" />
+      <property name="TickPerLoss" value="40" />
+      <property name="CustomIcon" value="foodEggBoiled" />
+    </item>
+    <item name="foodEggBoiledFoil" >
+      <property name="Extends" value="foodEggBoiled" />
+      <property name="TickPerLoss" value="40" />
+      <property name="CustomIcon" value="foodEggBoiled" />
+    </item>
+    <item name="foodBaconAndEggsThermos" >
+      <property name="Extends" value="foodBaconAndEggs" />
+      <property name="TickPerLoss" value="40" />
+      <property name="CustomIcon" value="foodBaconAndEggs" />
+    </item>
+    <item name="foodBaconAndEggsThermos" >
+      <property name="Extends" value="foodBaconAndEggs" />
+      <property name="TickPerLoss" value="40" />
+      <property name="CustomIcon" value="foodBaconAndEggs" />
+    </item>
+    <item name="foodBaconAndEggsFoil" >
+      <property name="Extends" value="foodBaconAndEggs" />
+      <property name="TickPerLoss" value="40" />
+      <property name="CustomIcon" value="foodBaconAndEggs" />
+    </item>
+    <item name="foodBaconAndEggsFoil" >
+      <property name="Extends" value="foodBaconAndEggs" />
+      <property name="TickPerLoss" value="40" />
+      <property name="CustomIcon" value="foodBaconAndEggs" />
+    </item>
+    <item name="foodVegetableStewThermos" >
+      <property name="Extends" value="foodVegetableStew" />
+      <property name="TickPerLoss" value="40" />
+      <property name="CustomIcon" value="foodVegetableStew" />
+    </item>
+    <item name="foodVegetableStewThermos" >
+      <property name="Extends" value="foodVegetableStew" />
+      <property name="TickPerLoss" value="40" />
+      <property name="CustomIcon" value="foodVegetableStew" />
+    </item>
+    <item name="foodRawMeatFoil" >
+      <property name="Extends" value="foodRawMeat" />
+      <property name="TickPerLoss" value="40" />
+      <property name="CustomIcon" value="foodRawMeat" />
+    </item>
+    <item name="foodRawMeatFoil" >
+      <property name="Extends" value="foodRawMeat" />
+      <property name="TickPerLoss" value="40" />
+      <property name="CustomIcon" value="foodRawMeat" />
+    </item>
+    <item name="foodRottingFleshFoil" >
+      <property name="Extends" value="foodRottingFlesh" />
+      <property name="TickPerLoss" value="40" />
+      <property name="CustomIcon" value="foodRottingFlesh" />
+    </item>
+    <item name="foodRottingFleshFoil" >
+      <property name="Extends" value="foodRottingFlesh" />
+      <property name="TickPerLoss" value="40" />
+      <property name="CustomIcon" value="foodRottingFlesh" />
+    </item>
+    <item name="foodEggThermos" >
+      <property name="Extends" value="foodEgg" />
+      <property name="TickPerLoss" value="40" />
+      <property name="CustomIcon" value="foodEgg" />
+    </item>
+    <item name="foodEggThermos" >
+      <property name="Extends" value="foodEgg" />
+      <property name="TickPerLoss" value="40" />
+      <property name="CustomIcon" value="foodEgg" />
+    </item>
+    <item name="foodEggFoil" >
+      <property name="Extends" value="foodEgg" />
+      <property name="TickPerLoss" value="40" />
+      <property name="CustomIcon" value="foodEgg" />
+    </item>
+    <item name="foodEggFoil" >
+      <property name="Extends" value="foodEgg" />
+      <property name="TickPerLoss" value="40" />
+      <property name="CustomIcon" value="foodEgg" />
+    </item>
+    <item name="foodCornMealFoil" >
+      <property name="Extends" value="foodCornMeal" />
+      <property name="TickPerLoss" value="40" />
+      <property name="CustomIcon" value="foodCornMeal" />
+    </item>
+    <item name="foodCornMealFoil" >
+      <property name="Extends" value="foodCornMeal" />
+      <property name="TickPerLoss" value="40" />
+      <property name="CustomIcon" value="foodCornMeal" />
+    </item>
+    <item name="foodCropCornFoil" >
+      <property name="Extends" value="foodCropCorn" />
+      <property name="TickPerLoss" value="40" />
+      <property name="CustomIcon" value="foodCropCorn" />
+    </item>
+    <item name="foodCropCornFoil" >
+      <property name="Extends" value="foodCropCorn" />
+      <property name="TickPerLoss" value="40" />
+      <property name="CustomIcon" value="foodCropCorn" />
+    </item>
+    <item name="foodCropGraceCornFoil" >
+      <property name="Extends" value="foodCropGraceCorn" />
+      <property name="TickPerLoss" value="40" />
+      <property name="CustomIcon" value="foodCropGraceCorn" />
+    </item>
+    <item name="foodCropGraceCornFoil" >
+      <property name="Extends" value="foodCropGraceCorn" />
+      <property name="TickPerLoss" value="40" />
+      <property name="CustomIcon" value="foodCropGraceCorn" />
+    </item>
+    <item name="foodCropYuccaFruitFoil" >
+      <property name="Extends" value="foodCropYuccaFruit" />
+      <property name="TickPerLoss" value="40" />
+      <property name="CustomIcon" value="foodCropYuccaFruit" />
+    </item>
+    <item name="foodCropYuccaFruitFoil" >
+      <property name="Extends" value="foodCropYuccaFruit" />
+      <property name="TickPerLoss" value="40" />
+      <property name="CustomIcon" value="foodCropYuccaFruit" />
+    </item>
+    <item name="Berry TeaThermos" >
+      <property name="Extends" value="Berry Tea" />
+      <property name="TickPerLoss" value="40" />
+    </item>
+   
+    <item name="Iced Mixed TeaThermos" >
+      <property name="Extends" value="Iced Mixed Tea" />
+      <property name="TickPerLoss" value="40" />
+    </item>
+    <item name="Iced Mixed TeaThermos" >
+      <property name="Extends" value="Iced Mixed Tea" />
+      <property name="TickPerLoss" value="40" />
+    </item>
+    <item name="Iced CoffeeThermos" >
+      <property name="Extends" value="Iced Coffee" />
+      <property name="TickPerLoss" value="40" />
+    </item>
+    <item name="Iced CoffeeThermos" >
+      <property name="Extends" value="Iced Coffee" />
+      <property name="TickPerLoss" value="40" />
+    </item>
+    <item name="Yucca ChipsThermos" >
+      <property name="Extends" value="Yucca Chips" />
+      <property name="TickPerLoss" value="40" />
+    </item>
+    <item name="Yucca ChipsThermos" >
+      <property name="Extends" value="Yucca Chips" />
+      <property name="TickPerLoss" value="40" />
+    </item>
+    <item name="HashbrownFoil" >
+      <property name="Extends" value="Hashbrown" />
+      <property name="TickPerLoss" value="40" />
+    </item>
+    <item name="HashbrownFoil" >
+      <property name="Extends" value="Hashbrown" />
+      <property name="TickPerLoss" value="40" />
+    </item>
+    <item name="Mashed PotatoFoil" >
+      <property name="Extends" value="Mashed Potato" />
+      <property name="TickPerLoss" value="40" />
+    </item>
+    <item name="Mashed PotatoFoil" >
+      <property name="Extends" value="Mashed Potato" />
+      <property name="TickPerLoss" value="40" />
+    </item>
+    <item name="Corn GritsFoil" >
+      <property name="Extends" value="Corn Grits" />
+      <property name="TickPerLoss" value="40" />
+    </item>
+    <item name="Corn GritsFoil" >
+      <property name="Extends" value="Corn Grits" />
+      <property name="TickPerLoss" value="40" />
+    </item>
+    <item name="Blueberry JamThermos" >
+      <property name="Extends" value="Blueberry Jam" />
+      <property name="TickPerLoss" value="40" />
+    </item>
+    <item name="Blueberry JamThermos" >
+      <property name="Extends" value="Blueberry Jam" />
+      <property name="TickPerLoss" value="40" />
+    </item>
+    <item name="Yucca JamThermos" >
+      <property name="Extends" value="Yucca Jam" />
+      <property name="TickPerLoss" value="40" />
+    </item>
+    <item name="Yucca JamThermos" >
+      <property name="Extends" value="Yucca Jam" />
+      <property name="TickPerLoss" value="40" />
+    </item>
+    <item name="Egg SaladThermos" >
+      <property name="Extends" value="Egg Salad" />
+      <property name="TickPerLoss" value="40" />
+    </item>
+    <item name="Egg SaladThermos" >
+      <property name="Extends" value="Egg Salad" />
+      <property name="TickPerLoss" value="40" />
+    </item>
+    <item name="Egg SaladFoil" >
+      <property name="Extends" value="Egg Salad" />
+      <property name="TickPerLoss" value="40" />
+    </item>
+    <item name="Egg SaladFoil" >
+      <property name="Extends" value="Egg Salad" />
+      <property name="TickPerLoss" value="40" />
+    </item>
+    <item name="Fried MeatFoil" >
+      <property name="Extends" value="Fried Meat" />
+      <property name="TickPerLoss" value="40" />
+    </item>
+    <item name="Fried MeatFoil" >
+      <property name="Extends" value="Fried Meat" />
+      <property name="TickPerLoss" value="40" />
+    </item>
+    <item name="Corn ChipsFoil" >
+      <property name="Extends" value="Corn Chips" />
+      <property name="TickPerLoss" value="40" />
+    </item>
+    <item name="Corn ChipsFoil" >
+      <property name="Extends" value="Corn Chips" />
+      <property name="TickPerLoss" value="40" />
+    </item>
+    <item name="Blueberry Jam SandwichFoil" >
+      <property name="Extends" value="Blueberry Jam Sandwich" />
+      <property name="TickPerLoss" value="40" />
+    </item>
+    <item name="Blueberry Jam SandwichFoil" >
+      <property name="Extends" value="Blueberry Jam Sandwich" />
+      <property name="TickPerLoss" value="40" />
+    </item>
+    <item name="Yucca Jam SandwichFoil" >
+      <property name="Extends" value="Yucca Jam Sandwich" />
+      <property name="TickPerLoss" value="40" />
+    </item>
+    <item name="Yucca Jam SandwichFoil" >
+      <property name="Extends" value="Yucca Jam Sandwich" />
+      <property name="TickPerLoss" value="40" />
+    </item>
+    <item name="Mushroom PieFoil" >
+      <property name="Extends" value="Mushroom Pie" />
+      <property name="TickPerLoss" value="40" />
+    </item>
+    <item name="Mushroom PieFoil" >
+      <property name="Extends" value="Mushroom Pie" />
+      <property name="TickPerLoss" value="40" />
+    </item>
+    <item name="Meat and Beer PieFoil" >
+      <property name="Extends" value="Meat and Beer Pie" />
+      <property name="TickPerLoss" value="40" />
+    </item>
+    <item name="Meat and Beer PieFoil" >
+      <property name="Extends" value="Meat and Beer Pie" />
+      <property name="TickPerLoss" value="40" />
+    </item>
+    <item name="Fried MushroomsThermos" >
+      <property name="Extends" value="Fried Mushrooms" />
+      <property name="TickPerLoss" value="40" />
+    </item>
+    <item name="Fried MushroomsThermos" >
+      <property name="Extends" value="Fried Mushrooms" />
+      <property name="TickPerLoss" value="40" />
+    </item>
+    <item name="Fried MushroomsFoil" >
+      <property name="Extends" value="Fried Mushrooms" />
+      <property name="TickPerLoss" value="40" />
+    </item>
+    <item name="Fried MushroomsFoil" >
+      <property name="Extends" value="Fried Mushrooms" />
+      <property name="TickPerLoss" value="40" />
+    </item>
+    <item name="Fried EggThermos" >
+      <property name="Extends" value="Fried Egg" />
+      <property name="TickPerLoss" value="40" />
+    </item>
+    <item name="Fried EggThermos" >
+      <property name="Extends" value="Fried Egg" />
+      <property name="TickPerLoss" value="40" />
+    </item>
+    <item name="Fried EggFoil" >
+      <property name="Extends" value="Fried Egg" />
+      <property name="TickPerLoss" value="40" />
+    </item>
+    <item name="Fried EggFoil" >
+      <property name="Extends" value="Fried Egg" />
+      <property name="TickPerLoss" value="40" />
+    </item>
+    <item name="French ToastThermos" >
+      <property name="Extends" value="French Toast" />
+      <property name="TickPerLoss" value="40" />
+    </item>
+    <item name="French ToastThermos" >
+      <property name="Extends" value="French Toast" />
+      <property name="TickPerLoss" value="40" />
+    </item>
+    <item name="French ToastFoil" >
+      <property name="Extends" value="French Toast" />
+      <property name="TickPerLoss" value="40" />
+    </item>
+    <item name="French ToastFoil" >
+      <property name="Extends" value="French Toast" />
+      <property name="TickPerLoss" value="40" />
+    </item>
+    <item name="Honey Glazed MeatFoil" >
+      <property name="Extends" value="Honey Glazed Meat" />
+      <property name="TickPerLoss" value="40" />
+    </item>
+    <item name="Honey Glazed MeatFoil" >
+      <property name="Extends" value="Honey Glazed Meat" />
+      <property name="TickPerLoss" value="40" />
+    </item>
+    <item name="Blueberry SodaThermos" >
+      <property name="Extends" value="Blueberry Soda" />
+      <property name="TickPerLoss" value="40" />
+    </item>
+    <item name="Blueberry SodaThermos" >
+      <property name="Extends" value="Blueberry Soda" />
+      <property name="TickPerLoss" value="40" />
+    </item>
+    <item name="Kvass SodaThermos" >
+      <property name="Extends" value="Kvass Soda" />
+      <property name="TickPerLoss" value="40" />
+    </item>
+    <item name="Kvass SodaThermos" >
+      <property name="Extends" value="Kvass Soda" />
+      <property name="TickPerLoss" value="40" />
+    </item>
+    <item name="Carbonated WaterThermos" >
+      <property name="Extends" value="Carbonated Water" />
+      <property name="TickPerLoss" value="40" />
+    </item>
+    <item name="Carbonated WaterThermos" >
+      <property name="Extends" value="Carbonated Water" />
+      <property name="TickPerLoss" value="40" />
+    </item>
+    <item name="Plain FudgeThermos" >
+      <property name="Extends" value="Plain Fudge" />
+      <property name="TickPerLoss" value="40" />
+    </item>
+    <item name="Plain FudgeThermos" >
+      <property name="Extends" value="Plain Fudge" />
+      <property name="TickPerLoss" value="40" />
+    </item>
+    <item name="Sponge CakeFoil" >
+      <property name="Extends" value="Sponge Cake" />
+      <property name="TickPerLoss" value="40" />
+    </item>
+    <item name="Sponge CakeFoil" >
+      <property name="Extends" value="Sponge Cake" />
+      <property name="TickPerLoss" value="40" />
+    </item>
+    <item name="Blueberry Sponge CakeFoil" >
+      <property name="Extends" value="Blueberry Sponge Cake" />
+      <property name="TickPerLoss" value="40" />
+    </item>
+    <item name="Blueberry Sponge CakeFoil" >
+      <property name="Extends" value="Blueberry Sponge Cake" />
+      <property name="TickPerLoss" value="40" />
+    </item>
+    <item name="Yucca Sponge CakeFoil" >
+      <property name="Extends" value="Yucca Sponge Cake" />
+      <property name="TickPerLoss" value="40" />
+    </item>
+    <item name="Yucca Sponge CakeFoil" >
+      <property name="Extends" value="Yucca Sponge Cake" />
+      <property name="TickPerLoss" value="40" />
+    </item>
+    <item name="Custard PieFoil" >
+      <property name="Extends" value="Custard Pie" />
+      <property name="TickPerLoss" value="40" />
+    </item>
+    <item name="Custard PieFoil" >
+      <property name="Extends" value="Custard Pie" />
+      <property name="TickPerLoss" value="40" />
+    </item>
+
   </append>
 </configs>
