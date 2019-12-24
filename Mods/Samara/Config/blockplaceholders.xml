@@ -11,6 +11,7 @@
 		<placeholder name="paintingPictureRandomHelper">
 			<block name="JumpPic02" prob="1" />
 			<block name="JumpPic03" prob="1" />
+			<block name="JumpPic04" prob="1" />
 			<block name="paintingLorienZed" prob="1" />
 			<block name="paintingLorienEyes" prob="1" />
 			<block name="paintingDerekZed" prob="1" />
