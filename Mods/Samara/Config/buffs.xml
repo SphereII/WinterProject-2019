@@ -94,14 +94,14 @@
 	
 	<buff name="buffCurseLightsOutDelay" description_key="buffLightsOutDesc" tooltip_key="buffLightsOutTooltip" icon="ui_game_symbol_destruction2" name_key="buffLightsOutName" hidden="true">
 		<stack_type value="ignore"/>
-		<duration value="3"/>
+		<duration value="2"/>
 		<effect_group>
 			<requirement name="HasBuff" buff="buffCursed"/>
 			<triggered_effect trigger="onSelfBuffFinish" action="AddBuff" buff="buffCurseLightsOut"/>
 		</effect_group>
 	</buff>	
-	<buff name="buffCurseLightsOut" name_key="Buff" icon="ui_game_symbol_destruction2" remove_on_death="true" hidden="false">
-      <duration value="10"/>
+	<buff name="buffCurseLightsOut" name_key="Buff" icon="ui_game_symbol_destruction2" remove_on_death="true" hidden="true">
+      <duration value="5"/>
       <stack_type value="ignore"/>
       <effect_group>
         <requirement name="HasBuff" buff="buffCursed"/>
@@ -112,7 +112,7 @@
     </buff>
 	<buff name="buffCurseLightsOutDelay2" description_key="buffShockedDesc" tooltip_key="buffShockedTooltip" icon="ui_game_symbol_destruction2" name_key="buffShockedName" hidden="true">
 		<stack_type value="ignore"/>
-		<duration value="47"/>
+		<duration value="53"/>
 		<effect_group>
 			<requirement name="HasBuff" buff="buffCursed"/>
 			<triggered_effect trigger="onSelfBuffFinish" action="RemoveBuff" buff="buffCurseLightsOutDelay2"/>
@@ -147,12 +147,15 @@
       </effect_group>
     </buff>
     <buff name="buffCutscene02" name_key="Buff" icon="ui_game_symbol_destruction2" remove_on_death="true" hidden="true">
-      <duration value="8"/>
+      <duration value="6"/>
       <stack_type value="ignore"/>
       <effect_group>
         <requirement name="HasBuff" buff="buffCursed"/>
         <triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="#@modfolder:Resources/SamaraCurse.unity3d?Cutscene02" parent_transform="CameraNode" local_offset="0,0,0" local_rotation="0,0,0"/>
         <triggered_effect trigger="onSelfBuffFinish" action="RemovePrefabFromEntity" prefab="#@modfolder:Resources/SamaraCurse.unity3d?Cutscene02"/>
+	    <triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="buffSamaraScream" play_in_head="true"/>
+        <triggered_effect trigger="onSelfBuffRemove" action="FadeOutSound" sound="buffSamaraScream" play_in_head="true"/>
+        <triggered_effect trigger="onSelfLeaveGame" action="StopSound" sound="buffSamaraScream" />
       </effect_group>
     </buff>
 
