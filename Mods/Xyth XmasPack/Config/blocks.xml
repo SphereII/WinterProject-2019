@@ -264,7 +264,8 @@
       <property name="Collide" value="movement,melee,bullet,arrow,rocket" />
       <property name="DescriptionKey" value="poinsettia" />
       <drop event="Destroy" count="0" />
-      <drop event="Harvest" name="resourceWood" count="1" tool_category="harvestingTools" />
+	  <drop event="Destroy" name="resourceClay" count="1,2" prob="1" />
+      <drop event="Harvest" name="resourceClay" count="3" tool_category="harvestingTools" />
       <property name="CanPlayersSpawnOn" value="false" />
       <property name="ParticleOnDeath" value="treeGib_small_dust" />
     </block>
@@ -340,7 +341,7 @@
       <property name="Shape" value="ModelEntity" />
       <property name="Model" value="#@modfolder:Resources/XmasDeco.unity3d?XmasPoster01_X"/>
       <property name="CanPickup" value="true" />
-      <!--     <property name="CustomIcon" value="" /> -->
+      <property name="CustomIcon" value="xmasPoster" />
       <property name="Collide" value="melee,bullet,arrow,rocket"/>
       <drop event="Harvest" name="resourcePaper" count="1" tool_category="harvestingTools"/>
       <drop event="Destroy" count="0"/>
@@ -351,18 +352,18 @@
       <property name="Shape" value="ModelEntity" />
       <property name="Model" value="#@modfolder:Resources/XmasMoviePosters.unity3d?Posterhorror"/>
       <property name="CanPickup" value="true" />
-      <!--     <property name="CustomIcon" value="" /> -->
+	  <property name="CustomIcon" value="horror" />
       <property name="Collide" value="melee,bullet,arrow,rocket"/>
       <drop event="Harvest" name="resourcePaper" count="1" tool_category="harvestingTools"/>
       <drop event="Destroy" count="0"/>
       <drop event="Fall" name="resourcePaper" count="1" prob="0.187" stick_chance="0"/>
     </block>
-	   <block name="XmasPoster03">
+	<block name="XmasPoster03">
       <property name="Material" value="Mpaper" />
       <property name="Shape" value="ModelEntity" />
       <property name="Model" value="#@modfolder:Resources/XmasMoviePosters.unity3d?Posterjack"/>
       <property name="CanPickup" value="true" />
-      <!--     <property name="CustomIcon" value="" /> -->
+      <property name="CustomIcon" value="jack" />
       <property name="Collide" value="melee,bullet,arrow,rocket"/>
       <drop event="Harvest" name="resourcePaper" count="1" tool_category="harvestingTools"/>
       <drop event="Destroy" count="0"/>
@@ -373,7 +374,7 @@
       <property name="Shape" value="ModelEntity" />
       <property name="Model" value="#@modfolder:Resources/XmasMoviePosters.unity3d?Posterkrampus"/>
       <property name="CanPickup" value="true" />
-      <!--     <property name="CustomIcon" value="" /> -->
+      <property name="CustomIcon" value="krampus" />
       <property name="Collide" value="melee,bullet,arrow,rocket"/>
       <drop event="Harvest" name="resourcePaper" count="1" tool_category="harvestingTools"/>
       <drop event="Destroy" count="0"/>
@@ -385,7 +386,7 @@
       <property name="Shape" value="ModelEntity" />
       <property name="Model" value="#@modfolder:Resources/XmasMoviePosters.unity3d?Posterslay"/>
       <property name="CanPickup" value="true" />
-      <!--     <property name="CustomIcon" value="" /> -->
+      <property name="CustomIcon" value="slay" />
       <property name="Collide" value="melee,bullet,arrow,rocket"/>
       <drop event="Harvest" name="resourcePaper" count="1" tool_category="harvestingTools"/>
       <drop event="Destroy" count="0"/>
@@ -395,7 +396,7 @@
       <property name="Material" value="Mpaper" />
       <property name="Shape" value="ModelEntity" />
       <property name="Model" value="#@modfolder:Resources/XmasMoviePosters.unity3d?PosterInfo01" />
-      <property name="CanPickup" value="true" />
+      <property name="CanPickup" value="false" />
       <!--     <property name="CustomIcon" value="" /> -->
       <property name="Collide" value="melee,bullet,arrow,rocket"/>
       <drop event="Harvest" name="resourcePaper" count="1" tool_category="harvestingTools"/>
