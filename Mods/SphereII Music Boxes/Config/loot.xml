@@ -6,12 +6,13 @@
       <item name="audioCD04" count="1" prob="0.3"/>
       <item name="audioCD05" count="1" prob="0.3"/>
       <item name="audioCD06" count="1" prob="0.3"/>
-
-      <item name="dvd01" count="1" prob="0.3"/>
       <item name="dvd01" count="1" prob="0.3"/>
       <item name="dvd02" count="1" prob="0.3"/>
       <item name="dvd03" count="1" prob="0.3"/>
-  </append>
+	  <item name="dvd04" count="1" prob="0.3"/>
+      <item name="dvd05" count="1" prob="0.3"/>
+      <item name="dvd06" count="1" prob="0.3"/>
+	</append>
 
   <append xpath="/lootcontainers">
     <lootgroup name="questVideoPlayer" count="1" >

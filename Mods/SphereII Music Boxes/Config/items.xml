@@ -68,6 +68,26 @@
 		  <property name="Stacknumber" value="1"/>
 		  <property name="VideoSource" value="#@modfolder:Resources/Videos.unity3d?samara" />
 		</item>
+		<item name="dvd05">
+		  <property name="Extends" value="casinoCoin"/>
+		  <property name="Meshfile" value="#@modfolder:Resources/MediaCases2.unity3d?DVDCase05_X" /> 
+		  <property name="HandMeshfile" value="#@modfolder:Resources/MediaCases2.unity3d?DVDCase05_X"/> 
+		  <property name="HoldType" value="21"/> 
+		  <property name="CustomIcon" value="DVD" />
+		  <property name="Material" value="Mplastics"/>
+		  <property name="Stacknumber" value="1"/>
+		  <property name="VideoSource" value="#@modfolder:Resources/Videos.unity3d?fireplace" />
+		</item>
+		<item name="dvd06">
+		  <property name="Extends" value="casinoCoin"/>
+		  <property name="Meshfile" value="#@modfolder:Resources/MediaCases2.unity3d?DVDCase06_X" /> 
+		  <property name="HandMeshfile" value="#@modfolder:Resources/MediaCases2.unity3d?DVDCase06_X"/> 
+		  <property name="HoldType" value="21"/> 
+		  <property name="CustomIcon" value="DVD" />
+		  <property name="Material" value="Mplastics"/>
+		  <property name="Stacknumber" value="1"/>
+		  <property name="VideoSource" value="#@modfolder:Resources/Videos.unity3d?xmasyoga" />
+		</item>		
 
     <!--  More Music CDs   -->
     <item name="audioCD03">
