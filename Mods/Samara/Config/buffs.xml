@@ -190,29 +190,7 @@
         <triggered_effect trigger="onSelfBuffFinish" action="RemovePrefabFromEntity" prefab="#@modfolder:Resources/SamaraCurse.unity3d?Cutscene05"/>
       </effect_group>
     </buff>
-    <buff name="buffCutscene06" name_key="Buff" icon="ui_game_symbol_destruction2" remove_on_death="true" hidden="true">
-      <duration value="107"/>
-      <stack_type value="ignore"/>
-      <effect_group>
-        <requirement name="HasBuff" buff="buffCursed"/>
-        <triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="#@modfolder:Resources/SamaraCurse.unity3d?Cutscene06" parent_transform="CameraNode" local_offset="0,0,0" local_rotation="0,0,0"/>
-        <triggered_effect trigger="onSelfBuffFinish" action="RemovePrefabFromEntity" prefab="#@modfolder:Resources/SamaraCurse.unity3d?Cutscene06"/>
-        <triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="buffCutscene06" play_in_head="true"/>
-        <triggered_effect trigger="onSelfBuffFinish" action="StopSound" sound="buffCutscene06" />
-        <triggered_effect trigger="onSelfBuffRemove" action="StopSound" sound="buffCutscene06" />
-        <triggered_effect trigger="onSelfLeaveGame" action="StopSound" sound="buffCutscene06" />
-      </effect_group>
-    </buff>
-<!--    <buff name="buffCutscene07" name_key="Buff" icon="ui_game_symbol_destruction2" remove_on_death="true" hidden="true">
-      <duration value="5"/>
-      <stack_type value="ignore"/>
-      <effect_group>
-        <requirement name="HasBuff" buff="buffCursed"/>
-        <triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="#@modfolder:Resources/SamaraCurse.unity3d?Cutscene07" parent_transform="CameraNode" local_offset="0,0,0" local_rotation="0,0,0"/>
-        <triggered_effect trigger="onSelfBuffFinish" action="RemovePrefabFromEntity" prefab="#@modfolder:Resources/SamaraCurse.unity3d?Cutscene07"/>
-		<triggered_effect trigger="onSelfBuffRemove" action="RemovePrefabFromEntity" prefab="#@modfolder:Resources/SamaraCurse.unity3d?Cutscene07"/>
-      </effect_group>
-    </buff> -->
+
     <!-- buffs that show video in the distance/sky with UI and player showing in FPV only.  There is a 10 FPS hit so keep duration short.-->
 
     <buff name="buffOverlay01" name_key="Buff" icon="ui_game_symbol_destruction2" remove_on_death="true" hidden="true">

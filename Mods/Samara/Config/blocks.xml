@@ -120,6 +120,9 @@
 		<!--  <property name="ActivateOnLook" value="true" /> -->
 <!-- End of Optional configuration settings             -->	
 		</block>
+		
+<!--  These two are traps, be careful not to get too close  --> 
+		
 		<block name="JumpPic03">
 			<property name="CreativeMode" value="Player"/>
 			<property name="Collide" value="sight,movement,melee,rocket"/>
@@ -170,7 +173,7 @@
 			<property name="ActivationBuffs" value="buffCursed" /> 
 		</block>
 		
-		
+<!-- 	Other blocks for fun  -->	
 		
 
 		<block name="cntJumpMedicineCabinetClosed01">
@@ -180,19 +183,19 @@
 			<property name="Material" value="Mglass"/>
 			<property name="StabilitySupport" value="false"/>
 			<property name="Shape" value="ModelEntity"/>
-			<property name="Model" value="#@modfolder:Resources/SamaraCurse.unity3d?JumpMedcab01_X"/> <!-- Example: This one has the .mp4 clip attached in Unity. --> 
+			<property name="Model" value="#@modfolder:Resources/SamaraCurse.unity3d?JumpMedcab01_X"/> 
 			<property name="Place" value="TowardsPlacerInverted"/>
 			<property name="Stacknumber" value="1"/>
 			<property name="CustomIcon" value="Picture01"/>
-			<property name="ActiveRadiusEffects" value="buffSamaraHum(2)"/><!-- Enabling the sound, note match the value with distance below -->
+			<property name="ActiveRadiusEffects" value="buffSamaraHum(2)"/>
 			<property name="Class" value="TriggeredSDX, Mods"/>
-			<property name="LootList" value="7"/> <!-- a lootlist is required but not actually used -->
+			<property name="LootList" value="7"/> 
 			<property name="AlwaysActive" value="true" />
 			<property name="ActivationDistance" value="2" />
 			<property name="ActivationBuffs" value="buffCursed" /> 
 		</block>	
 
-<!-- Painting Morphs  -->
+<!-- Painting Morphs, various methods but all morph between two images and some have morphing sub images (eyes)  -->
 				
 		<block name="paintingLorienZed">
 			<property name="Extends" value="paintingBen"/>
@@ -375,7 +378,7 @@
 		</block>	
 
 		
-	<!-- Posters  -->	
+	<!-- Morphing Posters  -->	
 		
 		<block name="posterMorph01">
 			<property name="Extends" value="paintingBen"/>
