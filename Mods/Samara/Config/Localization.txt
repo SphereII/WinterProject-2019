@@ -1,12 +1,21 @@
 ﻿Key,Source,Context,English
-Cursed,,"Cursed"
-quest_Samara_Diary01,Quest,Quest Info,"Find the pieces of Samara's Diary"
-quest_Samara_Diary01_description,Quest,Quest Info,"Seek out the pieces of Samara Morgan's diary, and we may have a chance of figuring this out."
-quest_Samara_Diary01_subtitle,Quest,Quest Info,"Find the Diary"
-quest_Samara_Diary01_offer,Quest,Quest Info,"Find the missing diary piece so we can try to make sense of this story."
-quest_Samara_Diary01_statement,,Quest,Quest Info,newKey,Find the missing Diary pieces.
-quest_Samara_Diary01_response,,Quest,Quest Info,newKey,Fetch ([DECEA3]{poi.distance} {poi.direction}[-])
-quest_Samara_Diary01_completion,Quest,Quest Info,newKey,"Great job. Let's see if we can find the other pieces."
+Cursed,,buffs,"Cursed By A Sceamer"
+CursedDesc,,buffs,"Cursed By A Sceamer; Her shriek rattled your brain. What's real, what's not...."
+buffSamaraAOE,,buffs,"Samara Morgan's Thoughts"
+buffSamaraAttack,,buffs,"Samara Morgan's Thoughts"
+quest_Samara_Diary01,Quest,Quest Info,"Find Samara's Diary"
+quest_Samara_Diary01_description,Quest,Quest Info,"Richard Morgan tried to make this diary disappear, but we know it exists. "
+
+quest_Samara_Diary02,Quest,Quest Info,"Find Richard's beloved Horses"
+quest_Samara_Diary02_description,Quest,Quest Info,"Richard Morgan seems to have loved the horses more than Samara. Get rid of them to try to appease her."
+
+quest_Samara_Diary03,Quest,Quest Info,"Find Samara's things"
+quest_Samara_Diary03_description,Quest,Quest Info,"Samara loved her few items she had in this world. They could be keeping her here. Destroy them."
+
+quest_Samara_Diary04,Quest,Quest Info,"Investigate Cabin B4"
+quest_Samara_Diary04,Quest,Quest Info,"The last thing written in the diary was her visiting Cabin B4 up in Shelter Mountain."
+
+
 
 SamaraMorganDiary01_title,item,Items,"Samara Morgan's Diary Part 1"
 SamaraMorganDiary01,item,Items,"You start to play it and it's like somebody's nightmare. And then this woman comes on, smiling at you, right? Seeing you... through the screen. Then when it's over, your phone rings, someone knows you watched the tape... and what they say is, 'You will die in seven days'."
@@ -55,9 +64,9 @@ samaraPostcard03_ToolTip_title,item,Items,"An old postcard"
 samaraPostcard03_ToolTip,items,Items,"An old postcard with the picture of an abandoned hospital with a well in front of it. \n\n( 1971: The Sisters of Christ's abandoned Hospital )"
 
 samaraPostcard04,item,Items,"A brittle old picture"
-samaraPostcard04Desc,item,Items,"A brittle picture of what appears to be an abandoned building."
+samaraPostcard04Desc,item,Items,"A brittle picture of what appears to be an old barn"
 samaraPostcard04_ToolTip_title,item,Items,"An old picture"
-samaraPostcard04_ToolTip,items,Items,"On the back of the picture, it's dated to be 1972.  It seems as if the hospital deterioated really quickly. \n\n( 1972: The Sisters of Christ's abandoned Hospital )"
+samaraPostcard04_ToolTip,items,Items,"An old crumbling barn features predominantly on the postcard. \n\n( Undated: Morgan Farm, Moesko Island )"
 
 samaraHorse01,item,Items,"A strange horse"
 samaraHorse01Desc,item,Items,"A strange horse with a date carved in the bottom: Kentucky Derby Champion 1973"
@@ -101,3 +110,5 @@ samaraMorganFreed,item,Items,"The resting place of Samara Morgan crumbles in fro
 samaraMorganWell_title,item,Items,"Samara Morgan's Body"
 samaraMorganWell,item,Items,"The small slight figure of Samara lies in your hands. Rescued from her watery grave, you prepare a proper burial for her. She has led a cursed life and after life, but you sincerely hope she finds the peace she has been denied for her entire existence.\n\nAs you gentle lower her into a proper grave, you say a small prayer to send her body and her soul to rest.\n\nAn overwhelming sense of well being fills your soul.\n\nYou hear a whisper in your ear, 'What have you done? Why did you help her? She's out now."
 SamaraWell04Desc,item,Items,"The body of a small girl, long since dead."
+Samaradvd03,items,Tool,A DVD Video,,,,,
+Samaradvd03Desc,items,Tool,"A DVD Video... I wonder whats on it",,,,,

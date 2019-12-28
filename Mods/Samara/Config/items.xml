@@ -95,6 +95,20 @@
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffExtinguishFire"/>
       </effect_group>
     </item>
+
+    <item name="Samaradvd03">
+      <property name="Extends" value="casinoCoin"/>
+      <property name="Meshfile" value="#@modfolder(SphereII Music Boxes):Resources/MediaCases.unity3d?DVDCase01_X" />
+      <property name="HandMeshfile" value="#@modfolder(SphereII Music Boxes):Resources/MediaCases.unity3d?DVDCase01_X"/>
+      <property name="HoldType" value="21"/>
+      <property name="CustomIcon" value="DVD" />
+      <property name="Material" value="Mplastics"/>
+      <property name="Stacknumber" value="1"/>
+      <!-- In the MyVideos.unity3d bundle, it expects  Sample320.mp4 -->
+      <property name="VideoSource" value="#@modfolder:Resources/SamaraCurse.unity3d?Cutscene06" />
+      <property name="SoundDataNode" value="buffCutscene06" />
+
+    </item>
     <item name="makeupSamara">
       <property name="CreativeMode" value="Dev" />
       <property name="CustomIcon" value="medicalAloeCream" />
@@ -137,6 +151,7 @@
 
     <item name="SamamaMorganDiary01">
       <property name="Extends" value="schematicMaster"/>
+      <property name="CustomIcon" value="diary" />
       <property name="DescriptionKey" value="SamamaMorganDiary01"/>
       <property class="Action0">
         <property name="Class" value="Eat"/>
@@ -151,62 +166,7 @@
       </effect_group>
     </item>
 
-    <item name="SamamaMorganDiary02">
-      <property name="Extends" value="SamamaMorganDiary01"/>
-      <property name="DescriptionKey" value="SamamaMorganDiary02"/>
-      <property class="Action0">
-        <property name="Class" value="Eat"/>
-        <property name="Delay" value="1.0"/>
-        <property name="Use_time" value="..."/>
-        <property name="Sound_start" value="read_skillbook"/>
-        <property name="Consume" value="false"/>
-      </property>
-      <effect_group tiered="false">
-        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="curseSamaraMorgan" operation="add" value="1"/>
-        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolTipSDX, Mods" message_key="SamaraMorganDiary02" sound="buffScaryScream"/>
-      </effect_group>
-    </item>
-    <item name="SamamaMorganDiary03">
-      <property name="Extends" value="SamamaMorganDiary01"/>
-      <property name="DescriptionKey" value="SamamaMorganDiary03"/>
-      <property class="Action0">
-        <property name="Class" value="Eat"/>
-        <property name="Delay" value="1.0"/>
-        <property name="Use_time" value="..."/>
-        <property name="Sound_start" value="read_skillbook"/>
-        <property name="Consume" value="false"/>
-      </property>
-      <effect_group tiered="false">
-        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="curseSamaraMorgan" operation="add" value="1"/>
-        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolTipSDX, Mods" message_key="SamaraMorganDiary03"/>
-      </effect_group>
-    </item>
-    <item name="SamamaMorganDiary04">
-      <property name="Extends" value="SamamaMorganDiary01"/>
-      <property name="DescriptionKey" value="SamamaMorganDiary04"/>
-      <property class="Action0">
-        <property name="Class" value="Eat"/>
-        <property name="Delay" value="1.0"/>
-        <property name="Use_time" value="..."/>
-        <property name="Sound_start" value="read_skillbook"/>
-        <property name="Consume" value="false"/>
-      </property>
-      <effect_group tiered="false">
-        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="curseSamaraMorgan" operation="add" value="1"/>
-        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolTipSDX, Mods" message_key="SamaraMorganDiary04"/>
-      </effect_group>
-    </item>
-
-    <!-- The Full Diary -->
-    <item name="SamaraMorganDiary">
-      <property name="Extends" value="SamamaMorganDiary01"/>
-      <effect_group tiered="false">
-        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="curseSamaraMorgan" operation="add" value="1"/>
-        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolTipSDX, Mods" message_key="samaraMorganFreed"/>
-      </effect_group>
-    </item>
-
-    <!-- Resets the Player-->
+      <!-- Resets the Player-->
     <item name="SamaraMorganClear">
       <property name="Extends" value="schematicMaster" />
       <property name="CustomIcon" value="samaraHorse01" />
@@ -221,7 +181,7 @@
       </property>
       <effect_group tiered="false">
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="curseSamaraMorganHorses" operation="set" value="0"/>
-        <triggered_effect trigger="onSelfPrimaryActionEnd" action="RemoveBuff" buff="buffCurseSamara"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="RemoveBuff" buff="buffCursed"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="curseSamaraMorganPictures" operation="set" value="0"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="CVarLogValue" cvar="curseSamaraMorganHorses"/>
       </effect_group>
@@ -239,13 +199,13 @@
         <property name="Consume" value="true"/>
       </property>
       <effect_group tiered="false">
-        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffCurseSamaraWell"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffCursedWell"/>
       </effect_group>
       </item>
     
     <item name="SamaraMemories01">
       <property name="Extends" value="schematicMaster" />
-      <property name="CustomIcon" value="samaraplasticHairBrush" />
+      <property name="CustomIcon" value="hair-brush" />
       <property name="DescriptionKey" value="samaraMemories01Desc" />
       <property class="Action0">
         <property name="Class" value="Eat"/>
@@ -255,12 +215,12 @@
         <property name="Consume" value="true"/>
       </property>
       <effect_group tiered="false">
-        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffCurseSamaraMemories"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffCursedMemories"/>
       </effect_group>
     </item>
     <item name="SamaraMemories02">
       <property name="Extends" value="schematicMaster" />
-      <property name="CustomIcon" value="samaraplasticHairBrush" />
+      <property name="CustomIcon" value="dress" />
       <property name="DescriptionKey" value="samaraMorganMemories02Desc" />
       <property class="Action0">
         <property name="Class" value="Eat"/>
@@ -270,12 +230,12 @@
         <property name="Consume" value="true"/>
       </property>
       <effect_group tiered="false">
-        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffCurseSamaraMemories"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffCursedMemories"/>
       </effect_group>
     </item>
     <item name="SamaraPostCard01">
       <property name="Extends" value="schematicMaster" />
-      <property name="CustomIcon" value="postCard01" />
+      <property name="CustomIcon" value="belem-tower" />
       <property name="DescriptionKey" value="samaraPostcard01Desc" />
       <property class="Action0">
         <property name="Class" value="Eat"/>
@@ -285,37 +245,37 @@
         <property name="Consume" value="true"/>
       </property>
       <effect_group tiered="false">
-        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffCurseSamaraPictures"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffCursedPictures"/>
       </effect_group>
     </item>
     <item name="SamaraPostCard02">
       <property name="Extends" value="SamaraPostCard01" />
-      <property name="CustomIcon" value="postCard02" />
+      <property name="CustomIcon" value="nuns" />
       <property name="DescriptionKey" value="SamaraPostCard02Desc" />
       <effect_group tiered="false">
-        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffCurseSamaraPictures"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffCursedPictures"/>
       </effect_group>
     </item>
     <item name="SamaraPostCard03">
       <property name="Extends" value="SamaraPostCard01" />
-      <property name="CustomIcon" value="postCard03" />
+      <property name="CustomIcon" value="nuns" />
       <property name="DescriptionKey" value="SamaraPostCard03Desc" />
       <effect_group tiered="false">
-        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffCurseSamaraPictures"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffCursedPictures"/>
       </effect_group>
     </item>
     <item name="SamaraPostCard04">
       <property name="Extends" value="SamaraPostCard01" />
-      <property name="CustomIcon" value="postCard04" />
+      <property name="CustomIcon" value="barn" />
       <property name="DescriptionKey" value="SamaraPostCard04Desc" />
       <effect_group tiered="false">
-        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffCurseSamaraPictures"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffCursedPictures"/>
       </effect_group>
     </item>
     
     <item name="SamaraMorganHorse01">
       <property name="Extends" value="schematicMaster" />
-      <property name="CustomIcon" value="samaraHorse01" />
+      <property name="CustomIcon" value="horse" />
       <property name="DescriptionKey" value="samaraHorse01Desc" />
       <property class="Action0">
         <property name="Class" value="Eat"/>
@@ -325,31 +285,28 @@
         <property name="Consume" value="true"/>
       </property>
       <effect_group tiered="false">
-        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffCurseSamaraHorses"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffCursedHorses"/>
       </effect_group>
     </item>
     <item name="SamaraMorganHorse02">
       <property name="Extends" value="SamaraMorganHorse01" />
-      <property name="CustomIcon" value="samaraHorse02" />
       <property name="DescriptionKey" value="samaraHorse02Desc" />
       <effect_group tiered="false">
-        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffCurseSamaraHorses"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffCursedHorses"/>
       </effect_group>
     </item>
     <item name="SamaraMorganHorse03">
       <property name="Extends" value="SamaraMorganHorse01" />
-      <property name="CustomIcon" value="samaraHorse03" />
       <property name="DescriptionKey" value="samaraHorse03Desc" />
       <effect_group tiered="false">
-        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffCurseSamaraHorses"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffCursedHorses"/>
       </effect_group>
     </item>
     <item name="SamaraMorganHorse04">
       <property name="Extends" value="SamaraMorganHorse01" />
-      <property name="CustomIcon" value="samaraHorse04" />
       <property name="DescriptionKey" value="samaraHorse04Desc" />
       <effect_group tiered="false">
-        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffCurseSamaraHorses"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffCursedHorses"/>
       </effect_group>
     </item>
 

@@ -1,6 +1,6 @@
 ﻿<configs>
   <append xpath="/recipes">
-
+<!--
     <recipe name="SamaraMorganDiary" count="1" tags="learnable" >
       <ingredient name="resourceDuctTape" count="3"/>
       <ingredient name="SamamaMorganDiary01" count="1"/>
@@ -8,6 +8,6 @@
       <ingredient name="SamamaMorganDiary03" count="1"/>
       <ingredient name="SamamaMorganDiary04" count="1"/>
     </recipe>
-
+-->
   </append>
 </configs>

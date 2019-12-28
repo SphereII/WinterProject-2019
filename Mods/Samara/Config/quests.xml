@@ -6,6 +6,12 @@
     -->
 
     <!--
+    
+    Level 1: Memories
+    Level 2: Horses
+    Level 3: Her Items
+    Level 4: Free her
+    
     quest_Samara_Diary01 - Santa gives you a map. Talks about the postcards and pictures. Find and Use/destroy the pictures - The Start ( Samara was born ) (1970 )
                             -> The Nun Hospital where she was born
                             -> The fountain where her mother tried to drown her
@@ -27,46 +33,44 @@
                                 -> Gives you a DVD back
                                 -> Curse is lifted.
     -->
+    
+    
+    <!-- Find the Diary -->
     <quest id="quest_Samara_Diary01">
       <property name="group_name_key" value="Samara Morgan's Diary" />
-      <property name="name_key" value="Samara Morgan's Diary" />
-      <property name="subtitle_key" value="Find Samara Morgan's Diary" />
-      <property name="description_key" value="There was a diary written by Samara Morgan's biological mother. There may be clues on how to stop her. Richard tried to destroy the diary, but couldn't completely do it. You must find the pieces." />
+      <property name="name_key" value="quest_Samara_Diary01" />
+      <property name="subtitle_key" value="quest_Samara_Diary01" />
+      <property name="description_key" value="quest_Samara_Diary01Desc" />
       <property name="icon" value="ui_game_symbol_quest"/>
-      <property name="repeatable" value="false"/>
+      <property name="repeatable" value="true"/>
       <property name="category_key" value="challenge"/>
       <property name="difficulty" value="medium"/>
       <property name="difficulty_tier" value="1"/>
+      
       <property name="completiontype" value="AutoComplete"/>
-      <property name="completion_key" value="Great job. Keep looking for the other parts."/>
 
       <objective type="TreasureChest">
-        <property name="block" value="SamaraWell01"/>
+        <property name="block" value="SamaraChest"/>
         <property name="distance" value="500-750"/>
       </objective>
       <action type="GiveCVarBuffSDX, Mods" id="quest_Samara_Diary" value="1" />
       <action type="GiveCVarBuffSDX, Mods" id="buffCursedPictures" value="0" />
       <reward type="Exp" value="500"/>
     </quest>
+
+    <!-- Find the Horses -->
     <quest id="quest_Samara_Diary02">
       <property name="group_name_key" value="Samara Morgan's Diary" />
-      <property name="name_key" value="Samara Morgan's Diary" />
-      <property name="subtitle_key" value="Find Samara Morgan's Diary" />
-      <property name="description_key" value="There was a diary written by Samara Morgan's biological mother. There may be clues on how to stop her. Richard tried to destroy the diary, but couldn't completely do it. You must find the pieces." />
+      <property name="name_key" value="quest_Samara_Diary02" />
+      <property name="subtitle_key" value="quest_Samara_Diary02" />
+      <property name="description_key" value="quest_Samara_Diary02Desc" />
       <property name="icon" value="ui_game_symbol_quest"/>
       <property name="repeatable" value="false"/>
       <property name="category_key" value="challenge"/>
       <property name="difficulty" value="medium"/>
 
       <property name="difficulty_tier" value="1"/>
-
-      <property name="completiontype" value="AutoComplete"/>
-      <property name="completion_key" value="Great job. Keep looking for the other parts."/>
-      <objective type="TreasureChest">
-        <property name="block" value="SamaraWell02"/>
-        <property name="distance" value="500-750"/>
-      </objective>
-
+      <objective type="FetchKeep" id="resourceYuccaFibers" value="10" phase="1"/>
       <action type="GiveCVarBuffSDX, Mods" id="quest_Samara_Diary" value="2" />
       <action type="GiveCVarBuffSDX, Mods" id="buffCursedHorses" value="0" />
       <reward type="Exp" value="500"/>
@@ -100,26 +104,26 @@
 
       <reward type="Exp" value="500"/>
     </quest>
-
     <quest id="quest_Samara_Diary04">
       <property name="group_name_key" value="Samara Morgan's Diary" />
       <property name="name_key" value="Samara Morgan's Diary" />
       <property name="subtitle_key" value="Find Samara Morgan's Diary" />
       <property name="description_key" value="There was a diary written by Samara Morgan's biological mother. There may be clues on how to stop her. Richard tried to destroy the diary, but couldn't completely do it. You must find the pieces." />
       <property name="icon" value="ui_game_symbol_quest"/>
-      <property name="repeatable" value="false"/>
+      <property name="repeatable" value="true"/>
       <property name="category_key" value="challenge"/>
       <property name="difficulty" value="medium"/>
       <property name="difficulty_tier" value="1"/>
       <property name="completiontype" value="AutoComplete"/>
       <property name="completion_key" value="Great job. Keep looking for the other parts."/>
 
-      <objective type="TreasureChest">
+      <objective type="TreasureChest" phase="1">
         <property name="block" value="SamaraWell04"/>
         <property name="distance" value="500-750"/>
       </objective>
 
-      <objective type="BlockUpgrade" id="SamaraWell04" value="1" phase="2"/>
+      <objective type="Scrap" id="SamaraMorganBody" value="1" phase="2" />
+
       <action type="GiveCVarBuffSDX, Mods" id="quest_Samara_Diary" value="4" />
       <!-- Recipe unlock -->
       <action type="GiveCVarBuffSDX, Mods" id="SamaraMorganDiary" value="1" />

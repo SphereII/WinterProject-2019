@@ -8,8 +8,8 @@
 			<property name="AvatarController" value="MecanimSDX, Mods" />
 			<property name="HandItem" value="handSamara"/> 
 			<property name="RightHandJointName" value="Muzzle" />
-
-			<property name="MoveSpeed" value="0.25"/> 
+      <property name="Buffs" value="buffSamaraAOE"/>
+      <property name="MoveSpeed" value="0.25"/> 
 			<property name="MoveSpeedAggro" value=".8, 1.1"/> 
 			<property name="MoveSpeedPanic" value="1.1"/>
 			<property name="AttackTimeoutDay" value="3.0"/> 
@@ -17,19 +17,10 @@
 			<property name="PainResistPerHit" value=".85"/>
 			<property name="CanClimbLadders" value="true"/>
 			<property name="CanClimbVertical" value="true"/>
-<!--			<property name="AITask-1" value="Look"/>
-			<property name="AITask-2" value="RangedAttackTarget" data="itemType=1;cooldown=3;duration=4;minRange=3;maxRange=30"/>
-			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityZombie,0,EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/>
-			<property name="AITask-4" value="ApproachSpot"/>  
-			<property name="AITask-5" value="Swim"/> 
-			<property name="AITask-6" value="Wander"/>
-			<property name="AITask-7" value="BreakBlock"/> 
-			<property name="AITask-8" value="Leap"/> 
-			<property name="AITask-9" value=""/>	
-			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombie,EntityNPC,EntityEnemyAnimal,EntityPlayer"/> 
-			<property name="AITarget-2" value="BlockingTargetTask"/> 
-			<property name="AITarget-3" value="SetAsTargetNearestEnemySDX, Mods" data="class=Entity,80"/>
-			<property name="AITarget-4" value=""/> -->
+      <property name="AITask-1" value="Look"/>
+      <property name="AITask-2" value="ApproachAndFollowTargetSDX, Mods" data="incentives=Leader"/>
+      <property name="AITask-3" value="" />
+      <property name="AITarget-1" value=""/>
 			<property name="RandomIndexes" value="2" /> 
 			<property name="SoundRandom" value="Enemies/Base_Zombie_Female/zombiefemaleroam"/>
 			<property name="SoundAlert" value="Enemies/Base_Zombie_Female/zombiefemalealert"/>
@@ -41,6 +32,10 @@
 			<property name="ExperienceGain" value="1550"/> 
 			<property name="DeadBodyHitPoints" value="1000"/>
 			<property name="TimeStayAfterDeath" value="5"/>
+      <effect_group name="Base Effects">
+        <passive_effect name="HealthMax" operation="base_set" value="100000"/>
+        <passive_effect name="HealthMax" operation="perc_add" value="0"/>
+      </effect_group>
 		</entity_class> 
 		<entity_class name="animalSnowShark" extends="animalTemplateHostile">
 			<property name="Tags" value="entity,animal,hostile,perkAT05"/>

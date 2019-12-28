@@ -66,6 +66,7 @@
       <statement id="statement_1806145321" text="That is a very generous offer. Thank you so much. If you have anything to send out, I can deliver them to people in the settlements.">
         <response_entry id="responseID_1712134540" ref_text="[ Claim Reward ( Cookies ) ]" />
         <response_entry id="responseID_1086459248" ref_text="I want to give you some cookies." />
+        <response_entry id="responseID_643263348" ref_text="Sorry, I don't have anything on me." />
       </statement>
       <statement id="statement_2141655383" text="Those look delicious! Thank you!">
         <response_entry id="responseID_-1044964853" ref_text="You are welcome." />
@@ -75,10 +76,10 @@
         <action type="Trader" id="trade" />
       </response>
       <response id="jobsnone" text="dialog_trader_response_jobsnone" nextstatementid="nojobs">
-        <requirement type="QuestStatus" value="InProgress" requirementtype="Hide" Hash="Requirement_642165640" />
+        <requirement type="QuestStatus" value="InProgress" requirementtype="Hide" Hash="Requirement_-173196111" />
       </response>
       <response id="jobshave" text="dialog_trader_response_jobshave" nextstatementid="currentjobs">
-        <requirement type="QuestStatus" value="NotStarted" requirementtype="Hide" Hash="Requirement_1302710497" />
+        <requirement type="QuestStatus" value="NotStarted" requirementtype="Hide" Hash="Requirement_1092543938" />
         <action type="AddJournalEntry" id="questTip" />
       </response>
       <response id="background" text="dialog_trader_response_background" nextstatementid="background" />
@@ -88,11 +89,13 @@
       <response id="noah" text="dialog_trader_response_noah" nextstatementid="noah" />
       <response id="whiteriveroutposts" text="dialog_trader_response_whiteriveroutposts" nextstatementid="whiteriveroutposts" />
       <response id="responseID_1712134540" text="[ Claim Reward ( Cookies ) ]" nextstatementid="statement_-1215472861">
-        <requirement type="HasCVarSDX, Mods" value="6" requirementtype="Hide" operator="GTE" id="cvarCookieCheer" Hash="Requirement_-1741213978" />
-        <requirement type="HasCVarSDX, Mods" value="1" requirementtype="Hide" operator="LT" id="cvarCookieCheerReward" Hash="Requirement_538379543" />
+        <requirement type="HasCVarSDX, Mods" value="1" requirementtype="Hide" operator="LT" id="cvarCookieCheerReward" Hash="Requirement_209730601" />
+        <requirement type="HasCVarSDX, Mods" value="5" requirementtype="Hide" operator="GT" id="cvarCookieCheer" Hash="Requirement_-1656870478" />
+        <action type="RewardSkillPoint, Mods" value="2" />
+        <action type="AddCVar, Mods" id="cvarCookieCheerReward" value="1" operator="set" />
       </response>
       <response id="admin" text="dialog_trader_response_admin" nextstatementid="admin">
-        <requirement type="Admin" requirementtype="Hide" Hash="Requirement_1524861875" />
+        <requirement type="Admin" requirementtype="Hide" Hash="Requirement_-382481877" />
       </response>
       <response id="restock" text="dialog_trader_response_restock">
         <action type="Trader" id="restock" />
@@ -102,39 +105,43 @@
       </response>
       <response id="done" text="dialog_trader_response_nevermind" />
       <response id="response_1129844706" text="I'm sorry to bother you, but something happened.... It's hard to explain." nextstatementid="statement_-870605562">
-        <requirement type="HasBuffSDX, Mods" value="buffCurseSamara" requirementtype="Hide" Hash="Requirement_-2010972828" />
+        <requirement type="HasBuffSDX, Mods" value="buffCurseSamara" requirementtype="Hide" Hash="Requirement_845431924" />
       </response>
       <response id="response_-446635060" text="Who are in these settlements?" nextstatementid="statement_187814882" />
       <response id="response_122342337" text="Thank you" nextstatementid="start" />
       <response id="responseID_-2029644013" text="Thank you." nextstatementid="start" />
       <response id="response_396756102" text="Thank you." nextstatementid="start" />
       <response id="responseID_-2027940077" text="Thank you" nextstatementid="statement_-756733377" />
-      <response id="responseID_1633658367" text="Where can I find one of these settlements?" nextstatementid="statement_-289738816" />
+      <response id="responseID_1633658367" text="Where can I find one of these settlements?" nextstatementid="statement_-289738816">
+        <action type="AddCVar, Mods" id="ggg" value="5" operator="add" />
+        <action type="AddCVar, Mods" id="vg" operator="add" />
+      </response>
       <response id="response_1571038643" text="Are there other survivors?" nextstatementid="statement_-756733377" />
       <response id="responseID_-1611980678" text="What have you been doing here all this time?" nextstatementid="statement_1443152389" />
       <response id="responseID_1746593105" text="How can I help these settlements?" nextstatementid="statement_1806145321" />
       <response id="responseID_-212330694" text="Are there any other survivors?" nextstatementid="statement_-756733377" />
       <response id="response_1725357091" text="I heard this awful scream. It shook my soul." nextstatementid="statement_860086142">
-        <requirement type="HasCVarSDX, Mods" value="1" requirementtype="Hide" operator="GTE" id="cvarScreamerCursed" Hash="Requirement_1720558892" />
+        <requirement type="HasCVarSDX, Mods" value="1" requirementtype="Hide" operator="GTE" id="cvarScreamerCursed" Hash="Requirement_-2088211748" />
       </response>
       <response id="responseID_341682324" text="I heard this awful scream." nextstatementid="statement_860086142" />
       <response id="responseID_-119085542" text="Thank you" nextstatementid="start" />
       <response id="responseID_1969445490" text="I heard this awful scream." nextstatementid="statement_860086142" />
       <response id="responseID_770389203" text="Thank you" nextstatementid="start" />
       <response id="responseID_-1209551555" text="Something strange happened to me." nextstatementid="statement_-870605562">
-        <requirement type="HasBuffSDX, Mods" value="buffCursed" requirementtype="Hide" Hash="Requirement_-1617948202" />
+        <requirement type="HasBuffSDX, Mods" value="buffCursed" requirementtype="Hide" Hash="Requirement_-979058826" />
       </response>
       <response id="responseID_-1258758310" text="I heard this ear piercing scream." nextstatementid="statement_860086142">
-        <requirement type="HasCVarSDX, Mods" value="1" requirementtype="Hide" operator="GTE" id="buffScreamerCursed" Hash="Requirement_1902109704" />
+        <requirement type="HasCVarSDX, Mods" value="1" requirementtype="Hide" operator="GTE" id="buffScreamerCursed" Hash="Requirement_-1249663067" />
       </response>
       <response id="responseID_-83587429" text="What can I do to get rid of it?" nextstatementid="statement_177965516" />
       <response id="responseID_-1322472451" text="Do you have a few moments to talk?" nextstatementid="statement_2010767743" />
       <response id="responseID_1086459248" text="I want to give you some cookies." nextstatementid="statement_2141655383">
-        <requirement type="HasItemSDX, Mods" value="5" requirementtype="Hide" id="Cookies" Hash="Requirement_911988823" />
-        <requirement type="HasCVarSDX, Mods" value="5" requirementtype="Hide" operator="LTE" id="cvarCookieCheer" Hash="Requirement_53234252" />
+        <requirement type="HasItemSDX, Mods" value="5" requirementtype="Hide" id="Cookies" Hash="Requirement_1751903718" />
+        <requirement type="HasCVarSDX, Mods" value="5" requirementtype="Hide" operator="LTE" id="cvarCookieCheer" Hash="Requirement_589566265" />
         <action type="AddCVar, Mods" id="cvarCookieCheer" value="1" operator="add" />
       </response>
       <response id="responseID_-1044964853" text="You are welcome." nextstatementid="statement_1806145321" />
+      <response id="responseID_643263348" text="Sorry, I don't have anything on me." nextstatementid="start" />
     </dialog>
   </append>
 </configs>

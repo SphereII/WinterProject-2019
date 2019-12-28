@@ -1,0 +1,51 @@
+<!--Created using the 7 Days To Dialog Application-->
+<configs>
+  <append xpath="/dialogs">
+    <dialog id="My NPC" startstatementid="start">
+      <statement id="start" text="Hello Survivor!">
+        <response_entry id="responseID_1889839326" ref_text="Something happened to me the other day." />
+        <response_entry id="nevermind" ref_text="Never mind" />
+      </statement>
+      <statement id="statement_2051955206" text="Oh? What happened?">
+        <response_entry id="responseID_1995874780" ref_text="Never mind" />
+      </statement>
+      <statement id="statement_-1055092549" text="Can you describe the video?">
+        <response_entry id="responseID_-1096595522" ref_text="There was static  on the video, and a glowing ring." />
+        <response_entry id="nevermind" ref_text="Never mind" />
+      </statement>
+      <statement id="statement_1762800986" text="Oh! That sounds like Samara's video. That doesn't bode well for you, my friend.">
+        <response_entry id="responseID_-1457430882" ref_text="Who is Samara?" />
+        <response_entry id="nevermind" ref_text="Never mind" />
+      </statement>
+      <statement id="statement_292732104" text="Samara Morgan was her name. She was adopted a long time ago by Anna and Richard Morgan from Moeski Island. They were horse breeders, from what I can recall. That is, until tragic events happened.">
+        <response_entry id="responseID_-1041272651" ref_text="What tragic event?" />
+        <response_entry id="nevermind" ref_text="Never mind" />
+      </statement>
+      <statement id="statement_1832118435" text="I don't know the stories very well, but strange things started happening on the island as Samara got older. Things came to ahead when they lost all their horses, and Samara and Anna were sent away to the hospital for a stay.">
+        <response_entry id="responseID_-1176222492" ref_text="Did they get better after the hospital stay?" />
+        <response_entry id="responseID_397607024" ref_text="Never mind" />
+      </statement>
+      <statement id="statement_1001136460" text="No, I don't think they did. They came back but things still weren't right. Last I heard was they went on vacation with Samara as a way to relax and find peace. Anna and Richard came back, but Samara didn't.">
+        <response_entry id="responseID_259476758" ref_text="What happened to Anna and Richard?" />
+        <response_entry id="responseID_1188713183" ref_text="What happened to Samara?" />
+        <response_entry id="responseID_-1912412291" ref_text="Never mind" />
+      </statement>
+      <statement id="statement_1653843751" text="No idea. From what I heard, no one asked, no one cared. " nextstatementid="statement_1001136460" />
+      <statement id="statement_2063843941" text="A while after they came back without Samara, Anna was found at the bottom of the cliff; appearantly a suicide. Not sure about Richard. I haven't heard from him in years." nextstatementid="statement_1001136460" />
+      <response id="responseID_1889839326" text="Something happened to me the other day." nextstatementid="statement_2051955206">
+        <requirement type="HasBuffSDX, Mods" value="buffCursed" requirementtype="Hide" Hash="Requirement_-979058826" />
+      </response>
+      <response id="responseID_397607024" text="Never mind" nextstatementid="statement_1762800986" />
+      <response id="responseID_1995874780" text="Never mind" nextstatementid="start" />
+      <response id="responseID_-1096595522" text="There was static  on the video, and a glowing ring." nextstatementid="statement_1762800986">
+        <requirement type="HasBuffSDX, Mods" value="buffCursedSamaraMorgan" requirementtype="Hide" Hash="Requirement_-1648598083" />
+      </response>
+      <response id="responseID_1188713183" text="What happened to Samara?" nextstatementid="statement_1653843751" />
+      <response id="responseID_259476758" text="What happened to Anna and Richard?" nextstatementid="statement_2063843941" />
+      <response id="responseID_-1912412291" text="Never mind" nextstatementid="statement_1832118435" />
+      <response id="responseID_-1457430882" text="Who is Samara?" nextstatementid="statement_292732104" />
+      <response id="responseID_-1041272651" text="What tragic event?" nextstatementid="statement_1832118435" />
+      <response id="responseID_-1176222492" text="Did they get better after the hospital stay?" nextstatementid="statement_1001136460" />
+    </dialog>
+  </append>
+</configs>

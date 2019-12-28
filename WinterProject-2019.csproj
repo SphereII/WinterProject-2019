@@ -111,6 +111,9 @@
     <Reference Include="DMT">
       <HintPath>C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\7DaysToDie_Data\Managed\DMT.dll</HintPath>
     </Reference>
+    <Reference Include="Mono.Cecil">
+      <HintPath>..\DMT\DMT\bin\Debug\Mono.Cecil.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml" />
     <Reference Include="UnityEngine">
       <HintPath>C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\7DaysToDie_Data\Managed\UnityEngine.dll</HintPath>
@@ -123,8 +126,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Mods\0-SphereIICore\Config\blocks.xml" />
-    <Content Include="Mods\0-SphereIICore\Config\buffs.xml" />
+    <Content Include="Mods\0-SphereIICore\Config\blocks.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Mods\0-SphereIICore\Config\buffs.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Mods\0-SphereIICore\Config\XUi\xui.xml" />
     <Content Include="Mods\0-SphereIICore\Documentation\Examples\blocks.xml" />
     <Content Include="Mods\0-SphereIICore\Documentation\Examples\entityclasses.xml" />
@@ -165,6 +172,8 @@
     <Content Include="Mods\Donovan_CraftSpikes\Config\recipes.xml" />
     <Content Include="Mods\Donovan_CraftSpikes\mod.xml" />
     <Content Include="Mods\Donovan_CraftSpikes\ModInfo.xml" />
+    <Content Include="Mods\EmuGuiManager\mod.xml" />
+    <Content Include="Mods\EmuGuiManager\ModInfo.xml" />
     <Content Include="Mods\JaxTeller718_Charcoal\Config\items.xml" />
     <Content Include="Mods\JaxTeller718_Charcoal\Config\Localization.txt" />
     <Content Include="Mods\JaxTeller718_Charcoal\Config\loot.xml" />
@@ -347,16 +356,22 @@
     <Content Include="Mods\Rebar Club\UIAtlases\ItemIconAtlas\rebarclubicon.png" />
     <Content Include="Mods\Samara\Config\blockplaceholders.xml" />
     <Content Include="Mods\Samara\Config\blocks.xml" />
-    <Content Include="Mods\Samara\Config\buffs.xml" />
+    <Content Include="Mods\Samara\Config\buffs.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Mods\Samara\Config\entityclasses.xml" />
     <Content Include="Mods\Samara\Config\entitygroups.xml" />
-    <Content Include="Mods\Samara\Config\items.xml" />
+    <Content Include="Mods\Samara\Config\items.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Mods\Samara\Config\item_modifiers.xml" />
     <Content Include="Mods\Samara\Config\Localization.txt" />
     <Content Include="Mods\Samara\Config\loot.xml" />
     <Content Include="Mods\Samara\Config\quests.xml" />
     <Content Include="Mods\Samara\Config\recipes.xml" />
-    <Content Include="Mods\Samara\Config\sounds.xml" />
+    <Content Include="Mods\Samara\Config\sounds.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Mods\Samara\Config\XUi\windows.xml" />
     <Content Include="Mods\Samara\mod.xml" />
     <Content Include="Mods\Samara\ModInfo.xml" />
@@ -736,7 +751,9 @@
     </Content>
     <Content Include="Mods\Xyth EntitiesWinter\Config\sounds.xml" />
     <Content Include="Mods\Xyth EntitiesWinter\mod.xml" />
-    <Content Include="Mods\Xyth EntitiesWinter\ModInfo.xml" />
+    <Content Include="Mods\Xyth EntitiesWinter\ModInfo.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Mods\Xyth XmasPack\Config\blockplaceholders.xml" />
     <Content Include="Mods\Xyth XmasPack\Config\blocks.xml" />
     <Content Include="Mods\Xyth XmasPack\Config\Items.xml" />
@@ -800,6 +817,7 @@
     <Compile Include="Mods\0-SphereIICore\Harmony\ZombieFeatures\RandomSize.cs" />
     <Compile Include="Mods\0-SphereIICore\Harmony\ZombieFeatures\RandomWalk.cs" />
     <Compile Include="Mods\0-SphereIICore\Harmony\ZombieFeatures\UMATweaks.cs" />
+    <Compile Include="Mods\0-SphereIICore\PatchScripts\FoodSpoilagePatch.cs" />
     <Compile Include="Mods\0-SphereIICore\PatchScripts\DialogPatches.cs" />
     <Compile Include="Mods\0-SphereIICore\PatchScripts\EAITaskPatches.cs" />
     <Compile Include="Mods\0-SphereIICore\PatchScripts\EntityAlivePatcher.cs" />
@@ -816,8 +834,11 @@
     <Compile Include="Mods\0-SphereIICore\Scripts\Buffs\RequirementSameFactionSDX.cs" />
     <Compile Include="Mods\0-SphereIICore\Scripts\Dialogs\DialogActionAddCVar.cs" />
     <Compile Include="Mods\0-SphereIICore\Scripts\Dialogs\DialogActionExecuteCommandSDX.cs" />
+    <Compile Include="Mods\0-SphereIICore\Scripts\Dialogs\DialogActionGetItemSDX.cs" />
+    <Compile Include="Mods\0-SphereIICore\Scripts\Dialogs\DialogActionRewardSkillPoint.cs" />
     <Compile Include="Mods\0-SphereIICore\Scripts\Dialogs\DialogActionGiveToNPC.cs" />
     <Compile Include="Mods\0-SphereIICore\Scripts\Dialogs\DialogActionOpenDialogSDX.cs" />
+    <Compile Include="Mods\0-SphereIICore\Scripts\Dialogs\DialogActionGiveQuestSDX.cs" />
     <Compile Include="Mods\0-SphereIICore\Scripts\Dialogs\DialogActionShowToolTipSDX.cs" />
     <Compile Include="Mods\0-SphereIICore\Scripts\Dialogs\DialogRequirementHasBuffSDX.cs" />
     <Compile Include="Mods\0-SphereIICore\Scripts\Dialogs\DialogRequirementHasCVar.cs" />
@@ -895,6 +916,10 @@
     <Compile Include="Mods\0-SphereIICore\Scripts\XUiC\XUiC_EntityInformationPanelSDX.cs" />
     <Compile Include="Mods\0-SphereIICore\Scripts\XUiC\XUiC_HireInformationPopupSDX.cs" />
     <Compile Include="Mods\0-SphereIICore\Scripts\XUiC\XUiC_JoinInformationPopupSDX.cs" />
+    <Compile Include="Mods\EmuGuiManager\PatchScripts\EmuNguiWindowManagerPatch.cs" />
+    <Compile Include="Mods\EmuGuiManager\PatchScripts\EmuXuiPatch.cs" />
+    <Compile Include="Mods\EmuGuiManager\Scripts\EmuGuiManager.cs" />
+    <Compile Include="Mods\Samara\Scripts\SamaraWell.cs" />
     <Compile Include="Mods\SphereII Legacy Distant Terrain\Harmony\LegacyDistantTerrain.cs" />
     <Compile Include="Mods\SphereII Santas\Scripts\Santa.cs" />
     <Compile Include="Mods\SphereII Winter Project Menu\Harmony\Harmony.cs" />

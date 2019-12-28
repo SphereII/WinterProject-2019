@@ -1,4 +1,5 @@
 ﻿<configs>
+  <!--
   <append xpath="/lootcontainers/lootgroup[@name='junkPersonal']">
     <item name="SamaraMorganHorse01" />
     <item name="SamaraMorganHorse02" />
@@ -11,4 +12,15 @@
     <item name="SamaraMemories01" />
     <item name="SamaraMemories02" />
   </append>
+
+  <append xpath="/lootcontainers">
+    <lootgroup name="SamamaMorganDiary01">
+      <item name="SamamaMorganDiary01" />
+    </lootgroup>
+    <lootcontainer id="663" count="1" size="1,1" sound_open="UseActions/open_garbage" sound_close="UseActions/close_garbage" loot_quality_template="qualBaseTemplate">
+      <item name="SamamaMorganDiary01" count="1"/>
+    </lootcontainer>
+ 
+  </append>
+  -->
 </configs>

@@ -1,4 +1,9 @@
 <configs>
+
+  <remove xpath="/items/item[@name='drinkJarBoiledWater']/effect_group/triggered_effect[@cvar='.DiseaseRoll']" />
+  
+  <remove xpath="/items/item[@name='drinkJarBoiledWater']/effect_group/triggered_effect[@buff='buffDysenteryCatch']" />
+  
   <append xpath="/items">
     <item name="foodFrozenBase">
       <property name="HoldType" value="31"/>
