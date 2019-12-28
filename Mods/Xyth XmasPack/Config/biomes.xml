@@ -1,0 +1,6 @@
+﻿<configs>
+  <append xpath="/worldgeneration/biomes/biome//decorations">
+    <decoration type="block" blockname="ChristmasTreeNice" prob="0.00003" />
+    <decoration type="block" blockname="ChristmasTreeNaughty" prob =".00003"/>
+  </append>
+ </configs>

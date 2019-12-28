@@ -79,7 +79,7 @@
       <property name="DisplayType" value="blockMulti" />
       <property name="MultiBlockDim" value="3,5,3" />
       <property name="BigDecorationRadius" value="3" />
-      <property name="Class" value="ModelTree"/>
+<!--      <property name="Class" value="ModelTree"/> -->
       <property name="Material" value="MtreeWoodSmall"/>
       <property name="LightOpacity" value="0"/>
       <property name="ImposterExclude" value="true"/>
@@ -96,9 +96,11 @@
       <property name="IsPlant" value="true"/>
       <property name="ParticleOnDeath" value="treeGib_burnt"/>
       <drop event="Harvest" name="resourceWood" count="30" tag="oreWoodHarvest"/>
-      <property name="ActiveRadiusEffects" value="buffPuking1"/>
-
-
+		<property name="Class" value="TriggeredSDX, Mods"/>
+		<property name="LootList" value="7"/> <!-- a lootlist is required but not actually used -->
+		<property name="AlwaysActive" value="true" />
+		<property name="ActivationDistance" value="3" />
+		<property name="ActiveRadiusEffects" value="buffPuking01(3)"/>
     </block>
     <block name="ChristmasTreeNice">
       <property name="CustomIcon" value="xmasTree" />
@@ -113,7 +115,7 @@
       <property name="DisplayType" value="blockMulti" />
       <property name="MultiBlockDim" value="3,5,3" />
       <property name="BigDecorationRadius" value="3" />
-      <property name="Class" value="ModelTree"/>
+<!--      <property name="Class" value="ModelTree"/> -->
       <property name="Material" value="MtreeWoodSmall"/>
       <property name="LightOpacity" value="0"/>
       <property name="ImposterExclude" value="true"/>
@@ -130,10 +132,11 @@
       <property name="IsPlant" value="true"/>
       <property name="ParticleOnDeath" value="treeGib_burnt"/>
       <drop event="Harvest" name="resourceWood" count="30" tag="oreWoodHarvest"/>
-
-      <!-- Adding a slight warming effect on the tree -->
-      <property name="ActiveRadiusEffects" value="buffCampfireAOE(3)"/>
-
+		<property name="Class" value="TriggeredSDX, Mods"/>
+		<property name="LootList" value="7"/> <!-- a lootlist is required but not actually used -->
+		<property name="AlwaysActive" value="true" />
+		<property name="ActivationDistance" value="3" />
+        <property name="ActiveRadiusEffects" value="buffCampfireAOEEffect(3)"/>
     </block>
     <block name="icicle">
       <property name="Material" value="Msnow" />
