@@ -27,6 +27,18 @@ public class FoodSpoilage_Mod
 
         }
     }
+
+    [HarmonyPatch(typeof(ItemValue))]
+    [HarmonyPatch("Clone")]
+    public class SphereII_itemValue_Clone
+    {
+        public static ItemValue Postfix(ItemValue __result, ItemValue __instance)
+        {
+            __result.CurrentSpoilage = __instance.CurrentSpoilage;
+            __result.NextSpoilageTick = __instance.NextSpoilageTick;
+            return __result;
+        }
+    }
     // NextSpoilageTick in ItemValue is an int, but when writen it gets converted over to a ushort, and re-read as an int. This could be due to refactoring of base code,
     // since none of these calls need to be ushort, change the ushort to just cast as an int.
     [HarmonyPatch(typeof(ItemValue))]
