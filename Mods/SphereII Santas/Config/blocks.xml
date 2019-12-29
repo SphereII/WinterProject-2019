@@ -1,3 +1,5 @@
 ﻿<configs>
+  <!--
   <set xpath="/blocks/block[@name='spawnTrader']/property[@name='SpawnClass']/@value">Santa</set>
+  -->
 </configs>
