@@ -457,7 +457,7 @@
 			</effect_group>
 	</buff>
 	
-	<buff name="buffFrostbite" name_key="buffFrostbiteName" description_key="buffFrostbiteDesc" tooltip_key="buffFrostbiteTooltip" icon="ui_game_symbol_cold" icon_color="255,0,0" icon_blink="false">
+	<buff name="buffFrostbite"  description_key="buffFrostbiteDesc" tooltip_key="buffFrostbiteTooltip" icon="ui_game_symbol_cold" icon_color="255,0,0" icon_blink="false">
 		<damage_type value="cold"/>
 		<stack_type value="replace"/>
 		<duration value="10"/>
@@ -468,7 +468,7 @@
 			<triggered_effect trigger="onSelfDied" action="RemoveBuff" buff="buffFrostbite"/>
 		</effect_group>
 	</buff>
-	<buff name="buffFrostbite2" name_key="buffFrostbite2Name" description_key="buffFrostbite2Desc" tooltip_key="buffFrostbite2Tooltip" icon="ui_game_symbol_cold" icon_color="255,0,0" icon_blink="true">
+	<buff name="buffFrostbite2" description_key="buffFrostbite2Desc" tooltip_key="buffFrostbite2Tooltip" icon="ui_game_symbol_cold" icon_color="255,0,0" icon_blink="true">
 		<damage_type value="cold"/>
 		<stack_type value="replace"/>
 		<duration value="4"/>

@@ -3,6 +3,15 @@ Cursed,,buffs,"Cursed By A Sceamer"
 CursedDesc,,buffs,"Cursed By A Sceamer; Her shriek rattled your brain. What's real, what's not...."
 buffSamaraAOE,,buffs,"Samara Morgan's Thoughts"
 buffSamaraAttack,,buffs,"Samara Morgan's Thoughts"
+
+buffFrostbite,,buffs,"Frostbite"
+buffFrostbite2,,buffs,"Biting Frostbite"
+
+buffFrostbiteDesc,,buffs,"Your skin turns slightly white from the frost bite"
+buffFrostbite2Desc,,buffs,"Your skin turns an unnatural white from the frost bite"
+buffFrostbiteTooltip,,buffs,"You are suffering frost bite."
+buffFrostbite2Tooltip,,buffs,"You are suffering from severe frostbite. Seek shelter!"
+
 quest_Samara_Diary01,Quest,Quest Info,"Find Samara's Diary"
 quest_Samara_Diary01_description,Quest,Quest Info,"Richard Morgan tried to make this diary disappear, but we know it exists. "
 
