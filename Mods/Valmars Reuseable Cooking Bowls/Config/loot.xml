@@ -1,4 +1,5 @@
 <Valmar>
+  <!--
 <append xpath="/lootcontainers/lootgroup[@name='rottenFood']">	
 		<item name="bowl" prob="0.001" />
 		<item name="dinnerPlate" prob="0.001" />
@@ -84,4 +85,5 @@
 		<item name="bowl" prob="0.001" />
 		<item name="dinnerPlate" prob="0.001" />
 </append> 
+-->
 </Valmar>

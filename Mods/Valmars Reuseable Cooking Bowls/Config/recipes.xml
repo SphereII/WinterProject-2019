@@ -1,4 +1,5 @@
 <Valmar>
+  <!--
 <append xpath="/recipes">
 <recipe name="cornBread" count="1" scrapable="False" craft_area="campfire" craft_tool="toolBowlWater">
     <ingredient name="foodCornMeal" count="1"/>
@@ -23,7 +24,7 @@
     <ingredient name="drinkJarBoiledWater" count="1"/>
 	<ingredient name="bowl" count="1"/>
 </recipe> 
-        <!-- Expanded Food Mod -->
+        
     <recipe name="bowl" count="1" scrapable="False" craft_area="campfire">
         <ingredient name="resourceClayLump" count="3"/>
     </recipe>
@@ -211,4 +212,5 @@
     <ingredient name="dinnerPlate" count="1"/>
 </recipe>
 </append>
+-->
 </Valmar>
