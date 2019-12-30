@@ -48,4 +48,8 @@
     <item name="VideoPlayerTV" prob="0.6" />
   </append>
 
+  <append xpath="//lootgroup[@name='cupboard']">
+    <item name="foodFrozenTinFoil" prob="1.0" />
+    <item name="drinkThermosEmpty" prob="0.1" />
+  </append>
 </configs>
