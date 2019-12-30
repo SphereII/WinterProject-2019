@@ -260,7 +260,7 @@
     </block>
     <block name="poinsettia">
       <property name="CustomIcon" value="poinsettia" />
-      <property name="Material" value="MtreeWoodSmall" />
+      <property name="Material" value="Mwood_weak" />
       <property name="Shape" value="ModelEntity" />
       <property name="Model" value="#@modfolder:Resources/XmasDeco.unity3d?Poinsettia_X" />
       <property name="CanPickup" value="true" />

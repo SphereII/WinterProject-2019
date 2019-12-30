@@ -77,7 +77,7 @@
         <passive_effect name="BlockRange" operation="base_set" value="4"/>
         <passive_effect name="EntityDamage" operation="base_set" value="13"/>
 
-        <passive_effect name="BlockDamage" operation="base_set" value="18"/>
+        <passive_effect name="BlockDamage" operation="base_set" value="28"/>
         <passive_effect name="DamageModifier" operation="perc_add" value="-.7" tags="wood"/>
         <passive_effect name="DamageModifier" operation="perc_add" value="-.5" tags="stone"/>
         <passive_effect name="DamageModifier" operation="perc_add" value="-.75" tags="metal"/>

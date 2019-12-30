@@ -27,6 +27,7 @@
       <property name="Group" value="Food"/>
       <property name="DescriptionKey" value="foodFrozenTinFoil" />
       <property name="ItemTypeIcon" value="cold"/>
+	  <property name="CustomIcon" value="tinfoil" />
     </item>
 
     <!-- Frozen Drinks -->
