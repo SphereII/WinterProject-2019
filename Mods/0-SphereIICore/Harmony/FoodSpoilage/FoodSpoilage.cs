@@ -50,19 +50,7 @@ public class FoodSpoilage_Mod
             _bw.Write((float)__instance.CurrentSpoilage);
             _bw.Write((float)__instance.NextSpoilageTick);
         }
-        //static IEnumerable<CodeInstruction> Transpiler(IEnumerable<CodeInstruction> instructions)
-        //{
-        //    // Grab all the instructions
-        //    var codes = new List<CodeInstruction>(instructions);
-
-        //    for (int i = 0; i < codes.Count; i++)
-        //    {
-        //        if (codes[i].opcode == OpCodes.Conv_U2)
-        //            codes[i].opcode = OpCodes.Conv_I;
-        //    }
-
-        //    return codes.AsEnumerable();
-        //}
+     
     }
 
 

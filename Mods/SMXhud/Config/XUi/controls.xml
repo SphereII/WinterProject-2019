@@ -38,7 +38,7 @@
 					<sprite name="border" depth="1" size="0,0" sprite="ui_game_filled_circle" color="0,0,0,128" pivot="center" /> <!-- MANDATORY ASSET, OR IT BLOWS UP -->
 					<sprite name="background" depth="2" size="100,100" atlas="hudElements" sprite="smx_icon_background" color="[hudElementsBG]" effect="outline" pivot="center" globalopacitymod="0.9" />
 					<sprite name="icon" depth="3" size="52,56" atlas="UIAtlas" color="255,255,255,255" pivot="center" foregroundlayer="true" />
-					<label name="text" depth="4" width="48" height="48" pos="-15,15" font_size="20" font_face="AgencyB" crispness="Never" effect="outline" color="[white]" justify="center" pivot="center" visible="false" />
+					<label name="text" depth="4" width="48" height="48" pos="-15,15" font_size="20" font_face="ReferenceFont" crispness="Never" effect="outline" color="[white]" justify="center" pivot="center" visible="false" />
 				</rect>
 			</radial_entry>
 		</append>
@@ -62,11 +62,11 @@
 
 					<sprite name="disabledOverlay" depth="5" pos="1,-1" size="82,82" color="[darkGrey_half_alpha]" type="sliced" visible="false" /> <!-- MANDATORY ASSET, OR IT BLOWS UP -->
 
-					<label name="stackValue" depth="7" pos="3,-55" size="73,28" text="{itemcount}" font_size="22" font_face="AgencyB" crispness="Never" effect="outline" upper_case="true" justify="center" />
-					<label name="timer" depth="7" pos="35,-38" size="70,24" font_size="24" font_face="AgencyB" crispness="Never" effect="outline" upper_case="true" color="[beige]" justify="center" pivot="center" />
+					<label name="stackValue" depth="7" pos="3,-55" size="73,28" text="{itemcount}" font_size="22" font_face="ReferenceFont" crispness="Never" effect="outline" upper_case="true" justify="center" />
+					<label name="timer" depth="7" pos="35,-38" size="70,24" font_size="24" font_face="ReferenceFont" crispness="Never" effect="outline" upper_case="true" color="[beige]" justify="center" pivot="center" />
 					<sprite name="cancel" depth="9" size="40,40" atlas="hudIcons" sprite="smx_general_cancel_icon" type="sliced" foregroundlayer="true" visible="false" />
 
-					<label name="itemName" depth="12" pos="36,-35" size="0,0" text="" font_size="26" font_face="AgencyB" crispness="Never" effect="outline" overflow="resizefreely" justify="center" pivot="center" above_soft_cursor="true" />
+					<label name="itemName" depth="12" pos="36,-35" size="0,0" text="" font_size="26" font_face="ReferenceFont" crispness="Never" effect="outline" overflow="resizefreely" justify="center" pivot="center" above_soft_cursor="true" />
 
 					<sprite name="assembleIcon" depth="13" pos="19,-19" size="40,40" sprite="{stacklockicon}" visible="{isassemblelocked}" foregroundlayer="true" />
 				</rect>
@@ -83,8 +83,8 @@
 
 					<sprite name="SMXobjectiveBG" depth="0" pos="-15,11" size="340,36" atlas="hudElements" sprite="smx_objective_background" color="[hudElementsBG]" globalopacitymod="1.0" />
 
-					<label name="SMXqtObjective" depth="1" pos="0,4" width="{objectivetextwidth}" text="{objectiveoptional}{objectivedescription} " font_size="22" color="[white]" font_face="AgencyB" crispness="Never" effect="outline" upper_case="true" justify="left" visible="{hasobjective}" />
-					<label name="SMXqtState" depth="1" pos="0,4" width="{objectivetextwidth}" text=" [{objectivecompletehexcolor}]{objectivestate}[-]" font_size="22" color="[white]" font_face="AgencyB" crispness="Never" effect="outline" upper_case="true" justify="right" visible="{hasobjective}" />
+					<label name="SMXqtObjective" depth="1" pos="0,4" width="{objectivetextwidth}" text="{objectiveoptional}{objectivedescription} " font_size="22" color="[white]" font_face="ReferenceFont" crispness="Never" effect="outline" upper_case="true" justify="left" visible="{hasobjective}" />
+					<label name="SMXqtState" depth="1" pos="0,4" width="{objectivetextwidth}" text=" [{objectivecompletehexcolor}]{objectivestate}[-]" font_size="22" color="[white]" font_face="ReferenceFont" crispness="Never" effect="outline" upper_case="true" justify="right" visible="{hasobjective}" />
 				</rect>
 			</smx_quest_objective_tracker_entry>
 		</append>
@@ -98,7 +98,7 @@
 					<button name="back"        depth="${1+depth|4}" style="press, hover, smx_hud_icon_colors" pos="${height/2|15},${-height/2|-15}" size="40,40" pivot="center" atlas="hudIcons" sprite="smx_general_arrow_icon" disabledcolor="[disabledColor]" sound="[paging_click]" tooltip_key="${tooltip_key|}" />
 					<sprite name="background"  depth="${1+depth|4}" style="icon30px" pos="${2+height|32},0" width="${width-height*2-4|136}" height="${height|30}" pivot="topleft" color="[black]" type="sliced" foregroundlayer="${foregroundlayer|false}" />
 					<filledsprite name="fill"  depth="${2+depth|5}" pos="${2+height|32},0" width="${width-height*2-4|136}" height="${height|30}" pivot="topleft" color="[white]" fill="{fillvalue}" filldirection="horizontal" visible="{isnumber}" foregroundlayer="true" />
-					<label name="currentValue" depth="${3+depth|6}" pos="${2+height|32},${-height/2|-15}" width="${width-height*2-4|136}" height="${height-2|28}" pivot="left" text="{val|always}" font_size="${Defined(font_size) ? font_size : height-4|26}" justify="center" color="[white]" font_face="AgencyB" crispness="Never" effect="outline" effect_color="[black]" effect_distance="1,1" />
+					<label name="currentValue" depth="${3+depth|6}" pos="${2+height|32},${-height/2|-15}" width="${width-height*2-4|136}" height="${height-2|28}" pivot="left" text="{val|always}" font_size="${Defined(font_size) ? font_size : height-4|26}" justify="center" color="[white]" font_face="ReferenceFont" crispness="Never" effect="outline" effect_color="[black]" effect_distance="1,1" />
 					<button name="forward"     depth="${1+depth|4}" style="press, hover, smx_hud_icon_colors" pos="${width-height/2|185},${-height/2|-15}" size="40,40" pivot="center" atlas="hudIcons" sprite="smx_general_arrow_icon" disabledcolor="[disabledColor]" sound="[paging_click]" tooltip_key="${tooltip_key|}" flip="Horizontally" />
 					<panel name="directvalue" style="press, scroll, hover, drag" pos="${2+height|32},0" width="${width-height*2-4|136}" height="${height|30}" pivot="topleft" disableautobackground="true" tooltip_key="${tooltip_key|}" />
 				</rect>
