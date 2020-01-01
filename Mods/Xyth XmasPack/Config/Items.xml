@@ -5,6 +5,7 @@
 		<property name="HoldType" value="3"/>
 		<property name="Meshfile" value="#@modfolder:Resources/Thermos.unity3d?Thermos" />
 		<property name="DropMeshfile" value="#@modfolder:Resources/Thermos.unity3d?Thermos"/>
+		<property name="CustomIcon" value="thermos" />
 		<property name="Material" value="Mglass"/>
 		<property name="Stacknumber" value="5"/> <!-- STK resource -->
 		<property name="Weight" value="10"/>
@@ -30,6 +31,7 @@
 		<property name="Meshfile" value="#@modfolder:Resources/Thermos.unity3d?Thermos" />
 		<property name="DropMeshfile" value="#@modfolder:Resources/Thermos.unity3d?Thermos"/>
 		<property name="Material" value="Mglass"/>
+		<property name="CustomIcon" value="thermos" />
 		<property name="Stacknumber" value="5"/> <!-- STK resource -->
 		<property name="Weight" value="10"/>
 		<property name="EconomicValue" value="20"/>
