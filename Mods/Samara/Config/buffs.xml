@@ -246,7 +246,7 @@
       <effect_group name="Remove Cursed">
         <triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="cvarScreamerCursed" operation="set" value="0" />
         <triggered_effect trigger="onSelfBuffRemove" action="RemoveBuff" buff="buffCursed"/>
-		<triggered_effect trigger="onSelfBuffFinish" action="RemoveBuff" buff="buffCursed"/>
+		    <triggered_effect trigger="onSelfBuffFinish" action="RemoveBuff" buff="buffCursed"/>
       </effect_group>
     </buff>
 

@@ -27,26 +27,26 @@
 		</recipe>
 
 -->
-		<recipe name="Ski" count="1" craft_area="workbench">
+		<recipe name="Ski" count="1" craft_area="workbench" tags="perkGreaseMonkey,learnable,workbenchCrafting">
 			<ingredient name="resourceNail" count="15"/>
 			<ingredient name="resourceWood" count="30"/>
 			<ingredient name="resourceMechanicalParts" count="10"/>
 			<ingredient name="resourceForgedIron" count="10"/>
 		</recipe>
 
-		<recipe name="Snowboard" count="1" craft_area="workbench">
+		<recipe name="Snowboard" count="1" craft_area="workbench" tags="perkGreaseMonkey,learnable,workbenchCrafting">
 			<ingredient name="resourceNail" count="25"/>
 			<ingredient name="resourceWood" count="30"/>
 			<ingredient name="resourceMechanicalParts" count="10"/>
 			<ingredient name="resourceForgedIron" count="10"/>
 		</recipe>
 
-		<recipe name="Sledge" count="1" craft_area="workbench">
+		<recipe name="Sledge" count="1" craft_area="workbench" tags="perkGreaseMonkey,learnable,workbenchCrafting">
 			<ingredient name="resourceNail" count="10"/>
 			<ingredient name="resourceWood" count="20"/>
 		</recipe>
 
-		<recipe name="Big Sled" count="1" craft_area="workbench">
+		<recipe name="Big Sled" count="1" craft_area="workbench" tags="perkGreaseMonkey,learnable,workbenchCrafting">
 			<ingredient name="resourceNail" count="25"/>
 			<ingredient name="resourceWood" count="30"/>
 		</recipe>
