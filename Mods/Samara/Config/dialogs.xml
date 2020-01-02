@@ -1,0 +1,182 @@
+<!--Created using the 7 Days To Dialog Application-->
+<configs>
+  <append xpath="/dialogs">
+    <dialog id="CursesDialog" startstatementid="start">
+      <statement id="start" text="dialog_trader_statement_start">
+        <response_entry id="responseID_-2088969424" ref_text="Something strange happened to me." />
+        <response_entry id="shop" ref_text="dialog_trader_response_shop" />
+        <response_entry id="jobsnone" ref_text="dialog_trader_response_jobsnone" />
+        <response_entry id="jobshave" ref_text="dialog_trader_response_jobshave" />
+        <response_entry id="admin" ref_text="dialog_trader_response_admin" />
+        <response_entry id="done" ref_text="dialog_trader_response_nevermind" />
+      </statement>
+      <statement id="background" text="dialog_trader_statement_background">
+        <response_entry id="navezgane" ref_text="dialog_trader_response_navezgane" />
+        <response_entry id="theduke" ref_text="dialog_trader_response_theduke" />
+        <response_entry id="cassadores" ref_text="dialog_trader_response_cassadores" />
+        <response_entry id="noah" ref_text="dialog_trader_response_noah" />
+        <response_entry id="nevermind" ref_text="dialog_trader_response_nevermind" />
+      </statement>
+      <statement id="navezgane" text="dialog_trader_statement_navezgane" nextstatementid="background" />
+      <statement id="theduke" text="dialog_trader_statement_theduke" nextstatementid="background" />
+      <statement id="cassadores" text="dialog_trader_statement_cassadores" nextstatementid="background" />
+      <statement id="noah" text="dialog_trader_statement_noah" nextstatementid="background" />
+      <statement id="currentjobs" text="dialog_trader_statement_currentjobs" nextstatementid="start">
+        <response_entry id="nevermind" ref_text="dialog_trader_response_nevermind" />
+        <quest_entry type="add" id="1" />
+      </statement>
+      <statement id="nojobs" text="dialog_trader_statement_nojobs" nextstatementid="start" />
+      <statement id="admin" text="dialog_trader_statement_admin">
+        <response_entry id="restock" ref_text="dialog_trader_response_restock" />
+        <response_entry id="resetquests" ref_text="dialog_trader_response_resetquests" />
+        <response_entry id="nevermind" ref_text="dialog_trader_response_nevermind" />
+      </statement>
+      <statement id="statement_-911053284" text="A lot of survivors have come and gone through my door, each telling a tale or two. Some are a lot stranger than others. What's your tale? Maybe I can help.">
+        <response_entry id="response_1544326785" ref_text="I seen a very strange video." />
+        <response_entry id="response_1374956358" ref_text="I heard a loud scream. It hurt my ears." />
+        <response_entry id="response_1277759608" ref_text="Never mind. I don't want to talk about it." />
+      </statement>
+      <statement id="statement_1825662454" text="A scream? Was it by any chance a little girl in a white gown?">
+        <response_entry id="responseID_-2044119719" ref_text="No, it wasn't from a girl." />
+        <response_entry id="response_1949193699" ref_text="Yes! It was a little girl." />
+        <response_entry id="responseID_-1816999489" ref_text="I don't want to talk about it." />
+      </statement>
+      <statement id="statement_570755" text="Other survivors have called them different things, like scramers and witches. One guy even said he was sure she was a scout for the undead, if you can believe that!">
+        <response_entry id="response_-1619478389" ref_text="I haven't felt right since I heard the scream. What does it do?" />
+        <response_entry id="responseID_-1620771424" ref_text="What's her story?" />
+      </statement>
+      <statement id="statement_-934124723" text="Hmm, that'd be a first for me. Sorry, I can't help you with that.">
+        <response_entry id="response_172563136" ref_text="Thanks... you've been a big help." />
+      </statement>
+      <statement id="statement_1709391836" text="Well, it's not just a single her. From what I gather, they were in a large choir before the apcalypse happend. From the audio cds I've heard, they sounded amazing. People from all around would come and hear them sing.">
+        <response_entry id="response_-908346532" ref_text="They still do..." />
+      </statement>
+      <statement id="statement_-1964541540" text="What do you mean? People still come when they sing? There's no people anymore...">
+        <response_entry id="response_1159530012" ref_text="The undead come." />
+      </statement>
+      <statement id="statement_2042917692" text="Wow. Really? One could say the girls had life long friends...">
+        <response_entry id="responseID_1785660431" ref_text="You need to get out more." />
+        <response_entry id="response_2032191363" ref_text="Ha! I get it. That was a joke!" />
+      </statement>
+      <statement id="statement_-1296294849" text="Hallucinations seem to be the most common thing to experience from it. Things move that shouldn't move. One guy even said it was a shocking experience!">
+        <response_entry id="responseID_-1144522923" ref_text="That seems a bit far fetch." />
+        <response_entry id="response_172128771" ref_text="How can I get rid of it?" />
+      </statement>
+      <statement id="statement_-1186374644" text="It'll pass on its own. Just be very careful when you are out and about. even though you know they are hallucinations, a single mistep could end your story.">
+        <response_entry id="response_1743203988" ref_text="Thank you. I'll be careful." />
+      </statement>
+      <statement id="statement_113540401" text="I'm not here to judge. I'm just telling you what others have told me. Some of these survivors may be a big unhinged in the apocalypse, but enough have told me similar stories for me to believe it.">
+        <response_entry id="responseID_1232077073" ref_text="Their stories aren't the only things unhinged around here." />
+        <response_entry id="responseID_-1127505608" ref_text="I don't believe it." />
+        <response_entry id="response_1949206230" ref_text="I believe you." />
+        <response_entry id="responseID_1776533721" ref_text="Thanks" />
+      </statement>
+      <statement id="statement_1278125788" text="That's fine. I'm not forcing you too.">
+        <response_entry id="response_1691070598" ref_text="Thanks" />
+      </statement>
+      <statement id="statement_696519040" text="And what do you mean by that?">
+        <response_entry id="responseID_845310413" ref_text="I think you are eating with only one chopstick, my friend." />
+        <response_entry id="responseID_-1518495351" ref_text="I think you are as crazy as a bag of hammers." />
+        <response_entry id="responseID_1914720825" ref_text="Nothing, your gate door was a bit loose. I fixed it for you." />
+      </statement>
+      <statement id="statement_-1817427719" text="Well, alright. Thank you for fixing it.">
+        <response_entry id="responseID_-581876162" ref_text="Any time." />
+      </statement>
+      <statement id="statement_-425807045" text="At least I have hammers. You won't get any of mine anymore.">
+        <response_entry id="response_1110710329" ref_text="I'll find sub-par hammers elsewhere then." />
+      </statement>
+      <statement id="statement_219039082" text="Ha! Very funny. I don't get a lot of humour around here. Most people that come through my door was just wise crackers. But not you. Here's a gift for being so witty!">
+        <response_entry id="response_-514234855" ref_text="Thanks. I'll accept the gift." />
+        <response_entry id="responseID_1303045766" ref_text="No thank you. I don't want it. It'll probably break." />
+      </statement>
+      <statement id="statement_1590747344" text="A video? Can you describe it?">
+        <response_entry id="response_1230984892" ref_text="There was a strange glowing ring." />
+        <response_entry id="responseID_233506901" ref_text="Never mind" />
+      </statement>
+      <statement id="statement_-1609352553" text="That sounds like you watched Samara Morgan's video.">
+        <response_entry id="response_-1130590735" ref_text="Who is Samara Morgan?" />
+        <response_entry id="responseID_-510829499" ref_text="Never mind" />
+      </statement>
+      <statement id="statement_-763794064" text="As the story goes, Samara was adopted by a Richard and Anna Morgan. Shortly after she went to live with them, strange things started happened to the family and the farm. A lot of people blamed poor Samara, but she was just a little girl.">
+        <response_entry id="response_-1331421506" ref_text="Thank you for the information." />
+      </statement>
+      <response id="shop" text="dialog_trader_response_shop">
+        <requirement type="HasBuffSDX, Mods" value="buffBadAttitude" requirementtype="Hide" Hash="Requirement_-1230867493" />
+        <action type="Trader" id="trade" />
+      </response>
+      <response id="jobsnone" text="dialog_trader_response_jobsnone" nextstatementid="nojobs">
+        <requirement type="QuestStatus" value="InProgress" requirementtype="Hide" Hash="Requirement_1318699843" />
+      </response>
+      <response id="jobshave" text="dialog_trader_response_jobshave" nextstatementid="currentjobs">
+        <requirement type="QuestStatus" value="NotStarted" requirementtype="Hide" Hash="Requirement_1079517332" />
+        <action type="AddJournalEntry" id="questTip" />
+      </response>
+      <response id="background" text="dialog_trader_response_background" nextstatementid="background" />
+      <response id="navezgane" text="dialog_trader_response_navezgane" nextstatementid="navezgane" />
+      <response id="theduke" text="dialog_trader_response_theduke" nextstatementid="theduke" />
+      <response id="cassadores" text="dialog_trader_response_cassadores" nextstatementid="cassadores" />
+      <response id="noah" text="dialog_trader_response_noah" nextstatementid="noah" />
+      <response id="whiteriveroutposts" text="dialog_trader_response_whiteriveroutposts" nextstatementid="whiteriveroutposts" />
+      <response id="nevermind" text="dialog_trader_response_nevermind" nextstatementid="start" />
+      <response id="admin" text="dialog_trader_response_admin" nextstatementid="admin">
+        <requirement type="Admin" requirementtype="Hide" Hash="Requirement_-666464561" />
+      </response>
+      <response id="restock" text="dialog_trader_response_restock">
+        <action type="Trader" id="restock" />
+      </response>
+      <response id="resetquests" text="dialog_trader_response_resetquests">
+        <action type="Trader" id="reset_quests" />
+      </response>
+      <response id="done" text="dialog_trader_response_nevermind" />
+      <response id="responseID_-2088969424" text="Something strange happened to me." nextstatementid="statement_-911053284">
+        <requirement type="HasBuffSDX, Mods" value="buffCursed" requirementtype="Hide" Hash="Requirement_-1434088733" />
+        <requirement type="HasBuffSDX, Mods" value="buffBadAttitude" requirementtype="Hide" Hash="Requirement_-1230867493" />
+      </response>
+      <response id="response_1374956358" text="I heard a loud scream. It hurt my ears." nextstatementid="statement_1825662454">
+        <requirement type="HasBuffSDX, Mods" value="buffScreamerCursed" requirementtype="Hide" Hash="Requirement_1335115275" />
+      </response>
+      <response id="response_1277759608" text="Never mind. I don't want to talk about it." nextstatementid="start" />
+      <response id="response_1949193699" text="Yes! It was a little girl." nextstatementid="statement_570755" />
+      <response id="responseID_-2044119719" text="No, it wasn't from a girl." nextstatementid="statement_-934124723" />
+      <response id="responseID_-1816999489" text="I don't want to talk about it." nextstatementid="start" />
+      <response id="response_172563136" text="Thanks... you've been a big help." nextstatementid="start" />
+      <response id="responseID_-1620771424" text="What's her story?" nextstatementid="statement_1709391836" />
+      <response id="response_-908346532" text="They still do..." nextstatementid="statement_-1964541540" />
+      <response id="response_1159530012" text="The undead come." nextstatementid="statement_2042917692" />
+      <response id="response_2032191363" text="Ha! I get it. That was a joke!" nextstatementid="statement_570755" />
+      <response id="responseID_1785660431" text="You need to get out more." nextstatementid="statement_570755" />
+      <response id="response_-1619478389" text="I haven't felt right since I heard the scream. What does it do?" nextstatementid="statement_-1296294849" />
+      <response id="response_172128771" text="How can I get rid of it?" nextstatementid="statement_-1186374644" />
+      <response id="response_1743203988" text="Thank you. I'll be careful." nextstatementid="start" />
+      <response id="responseID_-1144522923" text="That seems a bit far fetch." nextstatementid="statement_113540401" />
+      <response id="response_1949206230" text="I believe you." nextstatementid="start" />
+      <response id="responseID_-1127505608" text="I don't believe it." nextstatementid="statement_1278125788" />
+      <response id="responseID_1232077073" text="Their stories aren't the only things unhinged around here." nextstatementid="statement_696519040" />
+      <response id="responseID_1776533721" text="Thanks" nextstatementid="start" />
+      <response id="response_1691070598" text="Thanks" />
+      <response id="responseID_1914720825" text="Nothing, your gate door was a bit loose. I fixed it for you." nextstatementid="statement_-1817427719" />
+      <response id="responseID_-1518495351" text="I think you are as crazy as a bag of hammers." nextstatementid="statement_-425807045">
+        <action type="AddBuff" id="buffBadAttitude" />
+      </response>
+      <response id="responseID_-581876162" text="Any time." nextstatementid="start" />
+      <response id="response_1110710329" text="I'll find sub-par hammers elsewhere then." />
+      <response id="responseID_845310413" text="I think you are eating with only one chopstick, my friend." nextstatementid="statement_219039082">
+        <action type="AddBuff" id="buffBadAttitude" />
+      </response>
+      <response id="response_-514234855" text="Thanks. I'll accept the gift.">
+        <action type="GetItemSDX, Mods" id="dvd04" />
+        <action type="GetItemSDX, Mods" id="VideoPlayer" />
+        <action type="AddBuff" id="buffBadAttitude" />
+      </response>
+      <response id="responseID_1303045766" text="No thank you. I don't want it. It'll probably break." />
+      <response id="response_1544326785" text="I seen a very strange video." nextstatementid="statement_1590747344">
+        <requirement type="HasBuffSDX, Mods" value="buffCursedSamaraMorgan" requirementtype="Hide" Hash="Requirement_-101666296" />
+      </response>
+      <response id="response_1230984892" text="There was a strange glowing ring." nextstatementid="statement_-1609352553" />
+      <response id="responseID_233506901" text="Never mind" nextstatementid="start" />
+      <response id="response_-1130590735" text="Who is Samara Morgan?" nextstatementid="statement_-763794064" />
+      <response id="responseID_-510829499" text="Never mind" nextstatementid="start" />
+      <response id="response_-1331421506" text="Thank you for the information." nextstatementid="statement_-1609352553" />
+    </dialog>
+  </append>
+</configs>
