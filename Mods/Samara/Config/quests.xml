@@ -70,7 +70,7 @@
       <property name="difficulty" value="medium"/>
 
       <property name="difficulty_tier" value="1"/>
-      <objective type="FetchKeep" id="resourceYuccaFibers" value="10" phase="1"/>
+      <objective type="FetchKeep" id="resourceYuccaFibers" value="4" phase="1"/>
       <action type="GiveCVarBuffSDX, Mods" id="quest_Samara_Diary" value="2" />
       <action type="GiveCVarBuffSDX, Mods" id="buffCursedHorses" value="0" />
       <reward type="Exp" value="500"/>
@@ -123,6 +123,7 @@
       </objective>
 
       <objective type="Scrap" id="SamaraMorganBody" value="1" phase="2" />
+      <action type="GiveCVarBuffSDX, Mods" id="SamaraBodyFound" value="1" />
 
       <action type="GiveCVarBuffSDX, Mods" id="quest_Samara_Diary" value="4" />
       <!-- Recipe unlock -->

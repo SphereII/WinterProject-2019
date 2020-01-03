@@ -170,6 +170,8 @@
         <response_entry id="response_1559341662" ref_text="Okay" />
       </statement>
       <statement id="statement_1371118153" text="Let's talk about more about this Samara business. I've been looking up newspaper articles that I've been storing for years to try to get more information for you.">
+        <response_entry id="response_1990407042" ref_text="I have the DVD now." />
+        <response_entry id="response_1554810611" ref_text="I have the spare parts" />
         <response_entry id="responseID_1507843966" ref_text="[ Pictures ]" />
         <response_entry id="responseID_76486222" ref_text="[ Samara's Memories ]" />
         <response_entry id="response_-1271784871" ref_text="[ Horses ] " />
@@ -252,7 +254,60 @@
       <statement id="statement_759720541" text="We don't know what Samara was or is. She led a toturred life. She wanted to be loved, but couldn't control her thoughts.">
         <response_entry id="response_-2145927645" ref_text="Couldn't or wouldn't?" />
       </statement>
-      <statement id="statement_-1960440832" text="I like to believe there's some good in everyone, but you may be right. She may not have wanted to control them. But she did want us to know about her." nextstatementid="statement_759720541" />
+      <statement id="statement_-1960440832" text="I like to believe there's some good in everyone, but you may be right. She may not have wanted to control them. But she did want us to know about her.">
+        <response_entry id="response_1507659575" ref_text="Know about her? She's dead. Why would she care?" />
+      </statement>
+      <statement id="statement_1929307888" text="Samara Morgan is dead. She died years ago at the bottom of that well. Whatever was inside of that little girl, however, did not die with her.">
+        <response_entry id="response_1958032391" ref_text="It's not dead then? With everything I've done, it lives?" />
+      </statement>
+      <statement id="statement_-1778677533" text="It looks like it. You are still cursed it seems. We thought destroying the things that she loved and hated would let her soul free and leave. I think we were wrong. We are very wrong.">
+        <response_entry id="response_-1384724228" ref_text="She is still coming for me?" />
+      </statement>
+      <statement id="statement_-2054310279" text="Yes, she is.">
+        <response_entry id="response_-92236955" ref_text="I've wasted all this time listening to you when I could have been running." />
+      </statement>
+      <statement id="statement_-1114866312" text="Run? No, you wouldn't be able to out run her. She'll get you. But I don't think it was wasted time.  You dug into her past and together we pieced together aspects of her life. I think that's what she wanted. She wanted her story to be out.">
+        <response_entry id="response_-204844403" ref_text="To what end? I'm still dead when she comes for me." />
+      </statement>
+      <statement id="statement_-586293420" text="If her goal was to let people know her story, maybe that's what we need to do. Let more people know.">
+        <response_entry id="response_-2064346467" ref_text="You want me to write a book?" />
+        <response_entry id="response_-2062358013" ref_text="You know. Isn't that enough?" />
+        <response_entry id="response_-780212454" ref_text="I'm done with you. You've killed me." />
+      </statement>
+      <statement id="statement_1491270808" text="I don't think that would work. She already has the diary.">
+        <response_entry id="response_1441135985" ref_text="It was just an idea..." />
+      </statement>
+      <statement id="statement_272570392" text="Obviously it isn't. You watched the video, then we worked toge..... wait.. you watched the video. What if the video is the key?">
+        <response_entry id="response_-1829292311" ref_text="What do you mean? How is the video the key?" />
+      </statement>
+      <statement id="statement_1345208007" text="She wants more people to watch the video! It tells her story through her eyes and thoughts. That's what is important. We need to copy the video tape.">
+        <response_entry id="response_949223669" ref_text="How do we do that?" />
+      </statement>
+      <statement id="statement_1790083874" text="I have a broken duplicator here. If you can find me some mechanical parts, I might be able to fix it.">
+        <response_entry id="response_1043406159" ref_text="I'll find some." />
+      </statement>
+      <statement id="statement_335517511" text="That's great. Let me take them and see if I can fix it.">
+        <response_entry id="response_1082666055" ref_text="[ WAIT ]" />
+      </statement>
+      <statement id="statement_-1547291539" text="I got the DVD working. If you have the DVD, I can make a copy.">
+        <response_entry id="responseID_-1176316112" ref_text="I don't have the DVD." />
+        <response_entry id="response_-622069112" ref_text="I have the DVD" />
+      </statement>
+      <statement id="statement_-443382724" text="Thank you. Let me make a copy of it.">
+        <response_entry id="response_2127147936" ref_text="Thank you for doing this for me." />
+      </statement>
+      <statement id="statement_258652666" text="Come back when you have it. If I don't see you again, I just want to let you know I enjoyed our time together, and I'm sorry this happened to you.">
+        <response_entry id="response_1601539022" ref_text="I'm not done yet..." />
+      </statement>
+      <statement id="statement_843248462" text="You are welcome. I'm sorry you had to experience. I've made a copy of the DVD, and I shipped it out to someone I know.">
+        <response_entry id="response_1658290028" ref_text="Who did you send it to?" />
+      </statement>
+      <statement id="statement_1450290941" text="Let's not get into any sort of details. What we just did is not good karma, and I hope they either figure it out, and their soul finds peace.">
+        <response_entry id="response_1753254079" ref_text="Did we just kill someone?" />
+      </statement>
+      <statement id="statement_305002939" text="No. Samara did. Best not to think about it.">
+        <response_entry id="response_1977811390" ref_text="Okay..." />
+      </statement>
       <response id="shop" text="dialog_trader_response_shop">
         <requirement type="HasBuffSDX, Mods" value="buffBadAttitude" requirementtype="Hide" Hash="Requirement_-1230867493" />
         <action type="Trader" id="trade" />
@@ -371,6 +426,7 @@
       <response id="response_-1149064645" text="[ Samara Morgan ]" nextstatementid="statement_1371118153">
         <requirement type="HasBuffSDX, Mods" value="buffCursedSamaraMorgan" requirementtype="Hide" Hash="Requirement_-101666296" />
         <requirement type="HasCVarSDX, Mods" value="1" requirementtype="Hide" operator="GTE" id="quest_Samara_Diary" Hash="Requirement_-2138114132" />
+        <requirement type="HasBuffSDX, Mods" value="buffBadAttitude" requirementtype="Hide" Hash="Requirement_-1230867493" />
       </response>
       <response id="response_-1271784871" text="[ Horses ] " nextstatementid="statement_2008929533" />
       <response id="response_60838677" text="Never mind" nextstatementid="start" />
@@ -415,6 +471,42 @@
       <response id="response_170492573" text="If she died at the bottom of that well, how did she make the video?" nextstatementid="statement_808268362" />
       <response id="response_692561290" text="Why did she make the video?" nextstatementid="statement_759720541" />
       <response id="response_-2145927645" text="Couldn't or wouldn't?" nextstatementid="statement_-1960440832" />
+      <response id="response_1507659575" text="Know about her? She's dead. Why would she care?" nextstatementid="statement_1929307888" />
+      <response id="response_1958032391" text="It's not dead then? With everything I've done, it lives?" nextstatementid="statement_-1778677533" />
+      <response id="response_-1384724228" text="She is still coming for me?" nextstatementid="statement_-2054310279" />
+      <response id="response_-92236955" text="I've wasted all this time listening to you when I could have been running." nextstatementid="statement_-1114866312" />
+      <response id="response_-204844403" text="To what end? I'm still dead when she comes for me." nextstatementid="statement_-586293420" />
+      <response id="response_-2064346467" text="You want me to write a book?" nextstatementid="statement_1491270808" />
+      <response id="response_1441135985" text="It was just an idea..." nextstatementid="statement_-586293420" />
+      <response id="response_-780212454" text="I'm done with you. You've killed me.">
+        <action type="AddBuff" id="buffBadAttitude" />
+      </response>
+      <response id="response_-2062358013" text="You know. Isn't that enough?" nextstatementid="statement_272570392" />
+      <response id="response_-1829292311" text="What do you mean? How is the video the key?" nextstatementid="statement_1345208007" />
+      <response id="response_949223669" text="How do we do that?" nextstatementid="statement_1790083874" />
+      <response id="response_1043406159" text="I'll find some.">
+        <action type="AddCVar, Mods" id="cvarSamaraSpareParts" value="1" operator="set" />
+      </response>
+      <response id="response_1554810611" text="I have the spare parts" nextstatementid="statement_335517511">
+        <requirement type="HasCVarSDX, Mods" value="1" requirementtype="Hide" operator="GTE" id="cvarSamaraSpareParts" Hash="Requirement_-257165338" />
+        <requirement type="HasItemSDX, Mods" value="10" requirementtype="Hide" id="resourceMechanicalParts" Hash="Requirement_1536938656" />
+        <action type="GiveToNPC, Mods" id="resourceMechanicalParts" value="10" />
+      </response>
+      <response id="response_1082666055" text="[ WAIT ]" nextstatementid="statement_-1547291539">
+        <action type="AddCVar, Mods" id="cvarSamaraMorganDuplicator" value="1" operator="set" />
+      </response>
+      <response id="response_-622069112" text="I have the DVD" nextstatementid="statement_-443382724">
+        <requirement type="HasItemSDX, Mods" value="1" requirementtype="Hide" id="dvd4" Hash="Requirement_1884960059" />
+      </response>
+      <response id="responseID_-1176316112" text="I don't have the DVD." nextstatementid="statement_258652666" />
+      <response id="response_1601539022" text="I'm not done yet..." />
+      <response id="response_1990407042" text="I have the DVD now." nextstatementid="statement_-443382724">
+        <requirement type="HasCVarSDX, Mods" value="1" requirementtype="Hide" operator="GTE" id="cvarSamaraMorganDuplicator" Hash="Requirement_-2112646631" />
+      </response>
+      <response id="response_2127147936" text="Thank you for doing this for me." nextstatementid="statement_843248462" />
+      <response id="response_1658290028" text="Who did you send it to?" nextstatementid="statement_1450290941" />
+      <response id="response_1753254079" text="Did we just kill someone?" nextstatementid="statement_305002939" />
+      <response id="response_1977811390" text="Okay..." nextstatementid="statement_843248462" />
     </dialog>
   </append>
 </configs>
