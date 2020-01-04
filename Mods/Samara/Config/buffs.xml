@@ -457,7 +457,7 @@
 			</effect_group>
 	</buff>
 	
-	<buff name="buffFrostbite"  description_key="buffFrostbiteDesc" tooltip_key="buffFrostbiteTooltip" icon="ui_game_symbol_cold" icon_color="255,0,0" icon_blink="false">
+	<buff name="buffFrostbite"  description_key="buffFrostbiteDesc" tooltip_key="buffFrostbiteTooltip" icon="ui_game_symbol_cold" icon_color="255,128,0" icon_blink="false">
 		<damage_type value="cold"/>
 		<stack_type value="replace"/>
 		<duration value="10"/>
