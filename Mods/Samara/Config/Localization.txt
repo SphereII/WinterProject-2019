@@ -14,17 +14,8 @@ buffFrostbite2Tooltip,,buffs,"You are suffering from severe frostbite. Seek shel
 
 quest_Samara_Diary01,Quest,Quest Info,"Find Samara's Diary"
 quest_Samara_Diary01_description,Quest,Quest Info,"Richard Morgan tried to make this diary disappear, but we know it exists. "
-
-quest_Samara_Diary02,Quest,Quest Info,"Find Richard's beloved Horses"
-quest_Samara_Diary02_description,Quest,Quest Info,"Richard Morgan seems to have loved the horses more than Samara. Get rid of them to try to appease her."
-
-quest_Samara_Diary03,Quest,Quest Info,"Find Samara's things"
-quest_Samara_Diary03_description,Quest,Quest Info,"Samara loved her few items she had in this world. They could be keeping her here. Destroy them."
-
-quest_Samara_Diary04,Quest,Quest Info,"Investigate Cabin B4"
-quest_Samara_Diary04,Quest,Quest Info,"The last thing written in the diary was her visiting Cabin B4 up in Shelter Mountain."
-
-
+quest_Samara_Well,Quest,Quest Info,"Explore Shelter Mountain Inn Area"
+quest_Samara_WellDesc,Quest,Quest Info,"Explore the old Shelter Mountain Inn for clues"
 
 SamaraMorganDiary01_title,item,Items,"Samara Morgan's Diary Part 1"
 SamaraMorganDiary01,item,Items,"You start to play it and it's like somebody's nightmare. And then this woman comes on, smiling at you, right? Seeing you... through the screen. Then when it's over, your phone rings, someone knows you watched the tape... and what they say is, 'You will die in seven days'."
@@ -116,8 +107,6 @@ samaraMorganBinds_NoCurse,item,Items,"The horse breaks very easily in your hands
 samaraMorganFreed_title,item,Items,"Samara's Grave crumbles."
 samaraMorganFreed,item,Items,"The resting place of Samara Morgan crumbles in front of you. A sharp hiss of air comes from the depths of the well before falling silent.\n\n\nWhy did you free her?\n\nYou weren't supposed to help her. Don't you understand? She never sleeps...."
 
-samaraMorganWell_title,item,Items,"Samara Morgan's Body"
-samaraMorganWell,item,Items,"The small slight figure of Samara lies in your hands. Rescued from her watery grave, you prepare a proper burial for her. She has led a cursed life and after life, but you sincerely hope she finds the peace she has been denied for her entire existence.\n\nAs you gentle lower her into a proper grave, you say a small prayer to send her body and her soul to rest.\n\nAn overwhelming sense of well being fills your soul.\n\nYou hear a whisper in your ear, 'What have you done? Why did you help her? She's out now."
-SamaraWell04Desc,item,Items,"The body of a small girl, long since dead."
-Samaradvd03,items,Tool,A DVD Video,,,,,
-Samaradvd03Desc,items,Tool,"A DVD Video... I wonder whats on it",,,,,
+SamaraMorganBody,item,Items,"The body of a small girl, long since dead."
+SamaraMorganBody_title,item,Items,"Samara Morgan's Body"
+SamaraMorganBody,item,Items,"The small slight figure of Samara lies in your hands. Rescued from her watery grave, you prepare a proper burial for her. She has led a cursed life and after life, but you sincerely hope she finds the peace she has been denied for her entire existence.\n\nAs you gentle lower her into a proper grave, you say a small prayer to send her body and her soul to rest.\n\nAn overwhelming sense of well being fills your soul.\n\nYou hear a whisper in your ear, 'What have you done? Why did you help her? She's out now."

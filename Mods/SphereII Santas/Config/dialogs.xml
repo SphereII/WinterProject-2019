@@ -153,8 +153,8 @@
       <response id="responseID_1501234670" text="Never mind" nextstatementid="statement_-519986495" />
       <response id="responseID_-1126011483" text="Never mind" nextstatementid="statement_-519986495" />
       <response id="responseID_95882368" text="I have the diary." nextstatementid="statement_2035626429">
-        <requirement type="HasItemSDX, Mods" value="1" requirementtype="Hide" id="SamamaMorganDiary01" Hash="Requirement_312342928" />
-        <action type="GiveToNPC, Mods" id="SamamaMorganDiary01" value="1" />
+        <requirement type="HasItemSDX, Mods" value="1" requirementtype="Hide" id="SamaraMorganDiary01" Hash="Requirement_312342928" />
+        <action type="GiveToNPC, Mods" id="SamaraMorganDiary01" value="1" />
       </response>
       <response id="responseID_1251227836" text="What do I need to do?" nextstatementid="statement_-455566351">
         <requirement type="HasCVarSDX, Mods" value="1" requirementtype="Hide" operator="EQ" id="quest_Samara_Diary" Hash="Requirement_1469821968" />
@@ -181,8 +181,8 @@
       </response>
       <response id="responseID_-858108138" text="What do I need to do?" nextstatementid="statement_1177502279" />
       <response id="responseID_-65611192" text="I have the diary." nextstatementid="statement_2035626429">
-        <requirement type="HasItemSDX, Mods" value="1" requirementtype="Hide" id="SamamaMorganDiary01" Hash="Requirement_312342928" />
-        <action type="GiveToNPC, Mods" id="SamamaMorganDiary01" value="1" />
+        <requirement type="HasItemSDX, Mods" value="1" requirementtype="Hide" id="SamaraMorganDiary01" Hash="Requirement_312342928" />
+        <action type="GiveToNPC, Mods" id="SamaraMorganDiary01" value="1" />
       </response>
       <response id="responseID_492189568" text="I lost the diary." nextstatementid="statement_1257455475">
         <requirement type="HasFailedQuestSDX, Mods" value="quest_Samara_Diary01" requirementtype="Hide" Hash="Requirement_1701042637" />

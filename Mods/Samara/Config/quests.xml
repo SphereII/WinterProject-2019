@@ -58,57 +58,11 @@
       <reward type="Exp" value="500"/>
     </quest>
 
-    <!-- Find the Horses -->
-    <quest id="quest_Samara_Diary02">
-      <property name="group_name_key" value="Samara Morgan's Diary" />
-      <property name="name_key" value="quest_Samara_Diary02" />
-      <property name="subtitle_key" value="quest_Samara_Diary02" />
-      <property name="description_key" value="quest_Samara_Diary02Desc" />
-      <property name="icon" value="ui_game_symbol_quest"/>
-      <property name="repeatable" value="false"/>
-      <property name="category_key" value="challenge"/>
-      <property name="difficulty" value="medium"/>
-
-      <property name="difficulty_tier" value="1"/>
-      <objective type="FetchKeep" id="resourceYuccaFibers" value="4" phase="1"/>
-      <action type="GiveCVarBuffSDX, Mods" id="quest_Samara_Diary" value="2" />
-      <action type="GiveCVarBuffSDX, Mods" id="buffCursedHorses" value="0" />
-      <reward type="Exp" value="500"/>
-    </quest>
-
-    <quest id="quest_Samara_Diary03">
-      <property name="group_name_key" value="Samara Morgan's Diary" />
-      <property name="name_key" value="Samara Morgan's Diary" />
-      <property name="subtitle_key" value="Find Samara Morgan's Diary" />
-      <property name="description_key" value="There was a diary written by Samara Morgan's biological mother. There may be clues on how to stop her. Richard tried to destroy the diary, but couldn't completely do it. You must find the pieces." />
-      <property name="icon" value="ui_game_symbol_quest"/>
-      <property name="repeatable" value="false"/>
-      <property name="category_key" value="challenge"/>
-      <property name="difficulty" value="medium"/>
-      <property name="difficulty_tier" value="1"/>
-      <property name="offer_key" value="The missing diary could give us a clue on how to remove her curse."/>
-      <property name="statement_key" value="The missing diary could give us a clue on how to remove her curse"/>
-      <property name="response_key" value="Fetch ([DECEA3]{poi.distance} {poi.direction}[-])"/>
-      <property name="difficulty_tier" value="4"/>
-
-      <property name="completiontype" value="AutoComplete"/>
-      <property name="completion_key" value="Great job. Keep looking for the last part."/>
-
-      <objective type="TreasureChest">
-        <property name="block" value="SamaraWell03"/>
-        <property name="distance" value="500-750"/>
-      </objective>
-
-      <action type="GiveCVarBuffSDX, Mods" id="quest_Samara_Diary" value="3" />
-      <action type="GiveCVarBuffSDX, Mods" id="buffCursedMemories" value="0" />
-
-      <reward type="Exp" value="500"/>
-    </quest>
-    <quest id="quest_Samara_Diary04">
-      <property name="group_name_key" value="Samara Morgan's Diary" />
-      <property name="name_key" value="Samara Morgan's Diary" />
-      <property name="subtitle_key" value="Find Samara Morgan's Diary" />
-      <property name="description_key" value="There was a diary written by Samara Morgan's biological mother. There may be clues on how to stop her. Richard tried to destroy the diary, but couldn't completely do it. You must find the pieces." />
+     <quest id="quest_Samara_Well">
+      <property name="group_name_key" value="quest_Samara_Well" />
+      <property name="name_key" value="quest_Samara_Well" />
+      <property name="subtitle_key" value="quest_Samara_Well" />
+      <property name="description_key" value="quest_Samara_WellDesc" />
       <property name="icon" value="ui_game_symbol_quest"/>
       <property name="repeatable" value="true"/>
       <property name="category_key" value="challenge"/>
@@ -118,16 +72,12 @@
       <property name="completion_key" value="Great job. Keep looking for the other parts."/>
 
       <objective type="TreasureChest" phase="1">
-        <property name="block" value="SamaraWell04"/>
-        <property name="distance" value="500-750"/>
+        <property name="block" value="SamaraWell"/>
+        <property name="distance" value="1000-2000"/>
       </objective>
 
-      <objective type="Scrap" id="SamaraMorganBody" value="1" phase="2" />
       <action type="GiveCVarBuffSDX, Mods" id="SamaraBodyFound" value="1" />
-
       <action type="GiveCVarBuffSDX, Mods" id="quest_Samara_Diary" value="4" />
-      <!-- Recipe unlock -->
-      <action type="GiveCVarBuffSDX, Mods" id="SamaraMorganDiary" value="1" />
     </quest>
   </append>
 </configs>

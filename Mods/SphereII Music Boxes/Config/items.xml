@@ -122,6 +122,7 @@
 		  <property name="Material" value="Mplastics"/>
 		  <property name="Stacknumber" value="1"/>
 		  <property name="VideoSource" value="#@modfolder:Resources/Videos.unity3d?samara" />
+      <property name="OnPlayBuff" value="buffCursedSamaraMorgan" />
 		</item>
 		<item name="dvd05">
 		  <property name="Extends" value="casinoCoin"/>
