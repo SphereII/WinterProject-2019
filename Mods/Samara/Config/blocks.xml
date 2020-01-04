@@ -125,7 +125,7 @@
 <!-- End of Optional configuration settings             -->	
 		</block>
 		
-<!--  These two are traps, be careful not to get too close  --> 
+<!--  These two are traps, be careful not to get too close.  There are lots of posibilities for new trap designs using this method.  --> 
 		
 		<block name="JumpPic03">
 			<property name="CreativeMode" value="Player"/>

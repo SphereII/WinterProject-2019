@@ -101,7 +101,7 @@
 		</effect_group>
 	</buff>	
 	<buff name="buffCurseLightsOut" name_key="Buff" icon="ui_game_symbol_destruction2" remove_on_death="true" hidden="true">
-      <duration value="5"/>
+      <duration value="4"/>
       <stack_type value="ignore"/>
       <effect_group>
         <requirement name="HasBuff" buff="buffCursed"/>
@@ -112,7 +112,7 @@
     </buff>
 	<buff name="buffCurseLightsOutDelay2" description_key="buffShockedDesc" tooltip_key="buffShockedTooltip" icon="ui_game_symbol_destruction2" name_key="buffShockedName" hidden="true">
 		<stack_type value="ignore"/>
-		<duration value="53"/>
+		<duration value="54"/>
 		<effect_group>
 			<requirement name="HasBuff" buff="buffCursed"/>
 			<triggered_effect trigger="onSelfBuffFinish" action="RemoveBuff" buff="buffCurseLightsOutDelay2"/>
@@ -426,7 +426,7 @@
 			</effect_group>
 	</buff>
 	
-	<buff name="buffFrostbite"  description_key="buffFrostbiteDesc" tooltip_key="buffFrostbiteTooltip" icon="ui_game_symbol_cold" icon_color="255,0,0" icon_blink="false">
+	<buff name="buffFrostbite"  description_key="buffFrostbiteDesc" tooltip_key="buffFrostbiteTooltip" icon="ui_game_symbol_cold" icon_color="255,128,0" icon_blink="false">
 		<damage_type value="cold"/>
 		<stack_type value="replace"/>
 		<duration value="10"/>
