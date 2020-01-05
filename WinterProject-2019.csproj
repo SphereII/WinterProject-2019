@@ -582,7 +582,9 @@
     <Content Include="Mods\SphereII Winter Project\Config\biomes.xml">
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="Mods\SphereII Winter Project\Config\blocks.xml" />
+    <Content Include="Mods\SphereII Winter Project\Config\blocks.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Mods\SphereII Winter Project\Config\buffs.xml" />
     <Content Include="Mods\SphereII Winter Project\Config\entityclasses.xml" />
     <Content Include="Mods\SphereII Winter Project\Config\items.xml" />
