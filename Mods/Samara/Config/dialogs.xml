@@ -380,7 +380,9 @@
         <action type="GetItemSDX, Mods" id="VideoPlayer" />
         <action type="AddBuff" id="buffBadAttitude" />
       </response>
-      <response id="responseID_1303045766" text="No thank you. I don't want it. It'll probably break." />
+      <response id="responseID_1303045766" text="No thank you. I don't want it. It'll probably break.">
+        <action type="AddBuff" id="buffBadAttittude" />
+      </response>
       <response id="response_1544326785" text="I seen a very strange video." nextstatementid="statement_1590747344">
         <requirement type="HasBuffSDX, Mods" value="buffCursedSamaraMorgan" requirementtype="Hide" Hash="Requirement_-101666296" />
       </response>

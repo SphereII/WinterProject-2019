@@ -359,6 +359,7 @@
     <Content Include="Mods\Samara\Config\buffs.xml">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="Mods\Samara\Config\dialogs.xml" />
     <Content Include="Mods\Samara\Config\entityclasses.xml" />
     <Content Include="Mods\Samara\Config\entitygroups.xml" />
     <Content Include="Mods\Samara\Config\items.xml">
@@ -367,6 +368,7 @@
     <Content Include="Mods\Samara\Config\item_modifiers.xml" />
     <Content Include="Mods\Samara\Config\Localization.txt" />
     <Content Include="Mods\Samara\Config\loot.xml" />
+    <Content Include="Mods\Samara\Config\npc.xml" />
     <Content Include="Mods\Samara\Config\quests.xml" />
     <Content Include="Mods\Samara\Config\recipes.xml" />
     <Content Include="Mods\Samara\Config\sounds.xml">
@@ -390,7 +392,17 @@
     <Content Include="Mods\Samara\UIAtlases\ItemIconAtlas\audioCD04.png" />
     <Content Include="Mods\Samara\UIAtlases\ItemIconAtlas\audioCD05.png" />
     <Content Include="Mods\Samara\UIAtlases\ItemIconAtlas\audioCD06.png" />
+    <Content Include="Mods\Samara\UIAtlases\ItemIconAtlas\barn.png" />
+    <Content Include="Mods\Samara\UIAtlases\ItemIconAtlas\belem-tower.png" />
+    <Content Include="Mods\Samara\UIAtlases\ItemIconAtlas\diary.png" />
+    <Content Include="Mods\Samara\UIAtlases\ItemIconAtlas\dress.png" />
+    <Content Include="Mods\Samara\UIAtlases\ItemIconAtlas\hair-brush.png" />
+    <Content Include="Mods\Samara\UIAtlases\ItemIconAtlas\horse.png" />
+    <Content Include="Mods\Samara\UIAtlases\ItemIconAtlas\hospital.png" />
+    <Content Include="Mods\Samara\UIAtlases\ItemIconAtlas\mirror.png" />
+    <Content Include="Mods\Samara\UIAtlases\ItemIconAtlas\nun.png" />
     <Content Include="Mods\Samara\UIAtlases\ItemIconAtlas\Picture01.png" />
+    <Content Include="Mods\Samara\UIAtlases\ItemIconAtlas\Picture03.png" />
     <Content Include="Mods\Samara\UIAtlases\ItemIconAtlas\postCard01.jpg" />
     <Content Include="Mods\Samara\UIAtlases\ItemIconAtlas\postCard02.jpg" />
     <Content Include="Mods\Samara\UIAtlases\ItemIconAtlas\postCard03.jpg" />
@@ -506,7 +518,9 @@
     <Content Include="Mods\SphereII Legacy Distant Terrain\mod.xml" />
     <Content Include="Mods\SphereII Legacy Distant Terrain\ModInfo.xml" />
     <Content Include="Mods\SphereII Music Boxes\Config\blocks.xml" />
-    <Content Include="Mods\SphereII Music Boxes\Config\items.xml" />
+    <Content Include="Mods\SphereII Music Boxes\Config\items.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Mods\SphereII Music Boxes\Config\Localization.txt" />
     <Content Include="Mods\SphereII Music Boxes\Config\loot.xml" />
     <Content Include="Mods\SphereII Music Boxes\Config\quests.xml" />
@@ -571,7 +585,7 @@
     <Content Include="Mods\SphereII Winter Project\Config\blocks.xml" />
     <Content Include="Mods\SphereII Winter Project\Config\buffs.xml" />
     <Content Include="Mods\SphereII Winter Project\Config\entityclasses.xml" />
-    <Content Include="Mods\SphereII Winter Project\Config\Items.xml" />
+    <Content Include="Mods\SphereII Winter Project\Config\items.xml" />
     <Content Include="Mods\SphereII Winter Project\Config\Localization.txt" />
     <Content Include="Mods\SphereII Winter Project\Config\loot.xml" />
     <Content Include="Mods\SphereII Winter Project\Config\quests.xml">
@@ -816,6 +830,7 @@
     <Compile Include="Mods\0-SphereIICore\Scripts\Buffs\RequirementSameFactionSDX.cs" />
     <Compile Include="Mods\0-SphereIICore\Scripts\Dialogs\DialogActionAddCVar.cs" />
     <Compile Include="Mods\0-SphereIICore\Scripts\Dialogs\DialogActionExecuteCommandSDX.cs" />
+    <Compile Include="Mods\0-SphereIICore\Scripts\Dialogs\DialogActionRemoveBuffSDX.cs" />
     <Compile Include="Mods\0-SphereIICore\Scripts\Dialogs\DialogActionGetItemSDX.cs" />
     <Compile Include="Mods\0-SphereIICore\Scripts\Dialogs\DialogActionRewardSkillPoint.cs" />
     <Compile Include="Mods\0-SphereIICore\Scripts\Dialogs\DialogActionGiveToNPC.cs" />
@@ -824,6 +839,8 @@
     <Compile Include="Mods\0-SphereIICore\Scripts\Dialogs\DialogActionShowToolTipSDX.cs" />
     <Compile Include="Mods\0-SphereIICore\Scripts\Dialogs\DialogRequirementHasBuffSDX.cs" />
     <Compile Include="Mods\0-SphereIICore\Scripts\Dialogs\DialogRequirementHasCVar.cs" />
+    <Compile Include="Mods\0-SphereIICore\Scripts\Dialogs\DialogRequirementHasCompletedQuestSDX.cs" />
+    <Compile Include="Mods\0-SphereIICore\Scripts\Dialogs\DialogRequirementHasFailedQuestSDX.cs" />
     <Compile Include="Mods\0-SphereIICore\Scripts\Dialogs\DialogRequirementHasItemSDX.cs" />
     <Compile Include="Mods\0-SphereIICore\Scripts\Dialogs\DialogRequirementHasQuestSDX.cs" />
     <Compile Include="Mods\0-SphereIICore\Scripts\Dialogs\DialogRequirementHasTaskSDX.cs" />
