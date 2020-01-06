@@ -791,13 +791,12 @@ public static class EntityUtilities
     public static bool CheckIncentive(int EntityID, List<String> lstIncentives, EntityAlive entity)
     {
         bool result = false;
-        EntityAlive myEntity = GameManager.Instance.World.GetEntity(EntityID) as EntityAlive;
+        EntityAliveSDX myEntity = GameManager.Instance.World.GetEntity(EntityID) as EntityAliveSDX;
         if(myEntity == null)
             return result;
 
         foreach(String strIncentive in lstIncentives)
         {
-            DisplayLog("CheckIncentive(): Incentive: " + strIncentive);
             // Check if the entity that is looking at us has the right buff for us to follow.
             if(myEntity.Buffs.HasBuff(strIncentive))
                 return true;
@@ -807,7 +806,7 @@ public static class EntityUtilities
                 // Check if there's a cvar for that incentive, such as $Mother or $Leader.
                 if(myEntity.Buffs.HasCustomVar(strIncentive))
                 {
-                    DisplayLog(" Incentive: " + strIncentive + " Value: " + myEntity.Buffs.GetCustomVar(strIncentive));
+                    // DisplayLog(" Incentive: " + strIncentive + " Value: " + this.Buffs.GetCustomVar(strIncentive));
                     if((int)myEntity.Buffs.GetCustomVar(strIncentive) == entity.entityId)
                         return true;
                 }

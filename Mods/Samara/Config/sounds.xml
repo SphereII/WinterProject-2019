@@ -1,28 +1,5 @@
 <configs>
 
-  <!-- Apply these random buffs to the close of workstation, or other places deemed 'safe' to display overlays and cutscenes -->
-  <append xpath="/Sounds/SoundDataNode[@name='campfire_close']">
-    <buff value="buffCursedSamaraRandomEffect" />
-  </append>
-  <append xpath="/Sounds/SoundDataNode[@name='chem_station_close']">
-    <buff value="buffCursedSamaraRandomEffect" />
-  </append>
-  <append xpath="/Sounds/SoundDataNode[@name='forge_close']">
-    <buff value="buffCursedSamaraRandomEffect" />
-  </append>
-  <append xpath="/Sounds/SoundDataNode[@name='traderdislikegreeting']">
-    <buff value="buffCursedSamaraRandomEffect" />
-  </append>
-
-  <!-- Let's dish out some bad karma -->
-  <append xpath="/Sounds/SoundDataNode[@name='rabbitdeath']">
-    <buff value="buffBadKarma" />
-  </append>
-  <append xpath="/Sounds/SoundDataNode[@name='chickendeath']">
-    <buff value="buffBadKarma" />
-  </append>
-
-
   <!--  If the video clip you want to show doesnt have embedded sound, or you want that sound to play inside the player head, you can call a .unity3d sound prefab using a sound node instead.    -->
 
   <append xpath="/Sounds">

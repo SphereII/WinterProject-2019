@@ -36,11 +36,8 @@ public class SphereII_WinterProject
     {
         public static bool PrefabInstance_Prefix(ref Vector3i _position, ref Prefab _bad)
         {
-            if ( _bad != null)
-                Debug.Log("Prefab: " + _bad.filename + " YOffset: " + _bad.yOffset + " After: " + (_bad.yOffset - -8));
-
             // Only apply these changes to navezgane world
-            if (GamePrefs.GetString(EnumGamePrefs.GameWorld) == "Navezgane")
+           if(GamePrefs.GetString(EnumGamePrefs.GameWorld) == "Navezgane")
             {
               //  _position.y -= 8;
                 if(_bad != null)
@@ -65,7 +62,6 @@ public class SphereII_WinterProject
     {
         public static void Postfix(Prefab __instance)
         {
-            Debug.Log("Prefab: " + __instance.filename + " YOffset: " + __instance.yOffset + " After: " + (__instance.yOffset - -8));
             // Prefabs are -1 seems to behave very strangely. Sink them by 8, regardless. Either o one will notice it being one-less snow buried, but may
             // result in floating buildings. 
             if (__instance.yOffset == -1)
@@ -90,19 +86,6 @@ public class SphereII_WinterProject
 
     }
 
-    [HarmonyPatch(typeof(Prefab))]
-    [HarmonyPatch("CopyIntoLocal")]
-    public class SphereII_WinterProject_Prefab_Prefix
-    {
-        public static bool Prefix(Prefab __instance, Vector3i _destinationPos, ChunkCluster _cluster, QuestTags _questTags)
-        {
-            if (__instance.size.y <= 8)
-                return false;
-
-            return true;
-        }
-
-    }
     [HarmonyPatch(typeof(PrefabInstance))]
     [HarmonyPatch("CopyIntoChunk")]
     public class SphereII_WinterProject_PrefabInstance_CopyIntoChunk
@@ -113,15 +96,4 @@ public class SphereII_WinterProject
         }
     }
 
-    [HarmonyPatch(typeof(PrefabInstance))]
-    [HarmonyPatch("CopyIntoChunk")]
-    public class SphereII_WinterProject_PrefabInstance_CopyIntoChunk_Prefix
-    {
-        public static bool Prefix(PrefabInstance __instance, Chunk _chunk)
-        {
-            if (__instance.prefab.size.y <= 8)
-                return false;
-            return true;
-        }
-    }
 }

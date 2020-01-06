@@ -1,0 +1,12 @@
+<mod>
+	<info>
+		<author>TormentedEmu</author>
+		<name>EmuGuiManager</name>
+		<description>A patch mod to enable display font changes.</description>
+		<mod_version>1.0</mod_version>
+		<game_version>17.1(b8)</game_version>
+		<launcher_version>0.7.3</launcher_version>
+	</info>
+	<config_mods>
+	</config_mods>
+</mod>
