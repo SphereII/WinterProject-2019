@@ -96,19 +96,7 @@
       </effect_group>
     </item>
 
-    <item name="Samaradvd03">
-      <property name="Extends" value="casinoCoin"/>
-      <property name="Meshfile" value="#@modfolder(SphereII Music Boxes):Resources/MediaCases.unity3d?DVDCase01_X" />
-      <property name="HandMeshfile" value="#@modfolder(SphereII Music Boxes):Resources/MediaCases.unity3d?DVDCase01_X"/>
-      <property name="HoldType" value="21"/>
-      <property name="CustomIcon" value="DVD" />
-      <property name="Material" value="Mplastics"/>
-      <property name="Stacknumber" value="1"/>
-      <!-- In the MyVideos.unity3d bundle, it expects  Sample320.mp4 -->
-      <property name="VideoSource" value="#@modfolder:Resources/SamaraCurse.unity3d?Cutscene06" />
-      <property name="SoundDataNode" value="buffCutscene06" />
-
-    </item>
+   
     <item name="makeupSamara">
       <property name="CreativeMode" value="Dev" />
       <property name="CustomIcon" value="medicalAloeCream" />
@@ -149,10 +137,10 @@
       <property name="DescriptionKey" value="makeupGroupDesc"/>
     </item>
 
-    <item name="SamamaMorganDiary01">
+    <item name="SamaraMorganDiary01">
       <property name="Extends" value="schematicMaster"/>
       <property name="CustomIcon" value="diary" />
-      <property name="DescriptionKey" value="SamamaMorganDiary01"/>
+      <property name="DescriptionKey" value="SamaraMorganDiary01"/>
       <property class="Action0">
         <property name="Class" value="Eat"/>
         <property name="Delay" value="1.0"/>
@@ -187,22 +175,7 @@
       </effect_group>
     </item>
 
-    <item name="SamaraMorganBody">
-      <property name="Extends" value="schematicMaster" />
-        <property name="Model" value="Entities/Misc/body_bagPrefab"/>
-        <property name="DescriptionKey" value="SamaraWell04Desc"/>
-      <property class="Action0">
-        <property name="Class" value="Eat"/>
-        <property name="Delay" value="1.0"/>
-        <property name="Use_time" value="..."/>
-        <property name="Sound_start" value="read_skillbook"/>
-        <property name="Consume" value="true"/>
-      </property>
-      <effect_group tiered="false">
-        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffCursedWell"/>
-      </effect_group>
-      </item>
-    
+     
     <item name="SamaraMemories01">
       <property name="Extends" value="schematicMaster" />
       <property name="CustomIcon" value="hair-brush" />
@@ -250,7 +223,7 @@
     </item>
     <item name="SamaraPostCard02">
       <property name="Extends" value="SamaraPostCard01" />
-      <property name="CustomIcon" value="nuns" />
+      <property name="CustomIcon" value="nun" />
       <property name="DescriptionKey" value="SamaraPostCard02Desc" />
       <effect_group tiered="false">
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffCursedPictures"/>
@@ -258,7 +231,7 @@
     </item>
     <item name="SamaraPostCard03">
       <property name="Extends" value="SamaraPostCard01" />
-      <property name="CustomIcon" value="nuns" />
+      <property name="CustomIcon" value="nun" />
       <property name="DescriptionKey" value="SamaraPostCard03Desc" />
       <effect_group tiered="false">
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffCursedPictures"/>

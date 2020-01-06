@@ -3,42 +3,28 @@ Cursed,,buffs,"Cursed By A Sceamer"
 CursedDesc,,buffs,"Cursed By A Sceamer; Her shriek rattled your brain. What's real, what's not...."
 buffSamaraAOE,,buffs,"Samara Morgan's Thoughts"
 buffSamaraAttack,,buffs,"Samara Morgan's Thoughts"
+buffSamaraAttackTooltip,,,"Don't you get it? She never sleeps..."
+buffCursedSamaraMorganRemove,,,"She never sleeps. She never sleeps. She'll come again."
 
 buffFrostbite,,buffs,"Frostbite"
 buffFrostbite2,,buffs,"Biting Frostbite"
-
 buffFrostbiteDesc,,buffs,"Your skin turns slightly white from the frost bite"
 buffFrostbite2Desc,,buffs,"Your skin turns an unnatural white from the frost bite"
 buffFrostbiteTooltip,,buffs,"You are suffering frost bite."
 buffFrostbite2Tooltip,,buffs,"You are suffering from severe frostbite. Seek shelter!"
 
+buffBadKarma,,buffs,"Maw's Revenge"
+buffBadKarmaDesc,,buffs,"Maw's Revenge. You've killed once of its beloved creatures."
+buffBadKarmaTooltip,,buffs,"Maw's Revenge. You've killed once of its beloved creatures."
+
 quest_Samara_Diary01,Quest,Quest Info,"Find Samara's Diary"
 quest_Samara_Diary01_description,Quest,Quest Info,"Richard Morgan tried to make this diary disappear, but we know it exists. "
+quest_Samara_Well,Quest,Quest Info,"Explore Shelter Mountain Inn Area"
+quest_Samara_WellDesc,Quest,Quest Info,"Explore the old Shelter Mountain Inn for clues"
 
-quest_Samara_Diary02,Quest,Quest Info,"Find Richard's beloved Horses"
-quest_Samara_Diary02_description,Quest,Quest Info,"Richard Morgan seems to have loved the horses more than Samara. Get rid of them to try to appease her."
-
-quest_Samara_Diary03,Quest,Quest Info,"Find Samara's things"
-quest_Samara_Diary03_description,Quest,Quest Info,"Samara loved her few items she had in this world. They could be keeping her here. Destroy them."
-
-quest_Samara_Diary04,Quest,Quest Info,"Investigate Cabin B4"
-quest_Samara_Diary04,Quest,Quest Info,"The last thing written in the diary was her visiting Cabin B4 up in Shelter Mountain."
-
-
-
-SamaraMorganDiary01_title,item,Items,"Samara Morgan's Diary Part 1"
-SamaraMorganDiary01,item,Items,"You start to play it and it's like somebody's nightmare. And then this woman comes on, smiling at you, right? Seeing you... through the screen. Then when it's over, your phone rings, someone knows you watched the tape... and what they say is, 'You will die in seven days'."
-
-SamaraMorganDiary02_title,item,Items,"Samara Morgan's Diary Part 2"
-SamaraMorganDiary02,item,Items,"Doctor: That's why you're here so that we can help you to make it stop.\nSamara: He's going to leave me here.\nDoctor: Who?\nSamara: Daddy.\nDoctor: Your daddy loves you.\nSamara: Daddy loves the horses. He wants me to go away.\nDoctor: No he doesn't.\nSamara: But he doesn't know.\nDoctor: Doesn't know what?\nSamara:\nDoctor: Samara?"
-
-SamaraMorganDiary03_title,item,Items,"Samara Morgan's Diary Part 3"
-SamaraMorganDiary03,item,Items,"Samara: Round we go. The World is spinnig. When it stops it's just begginig. Sun comes up, we live and we cry. SUn comes down and the we alll die.\nSamara: Here we go, the world is spinning. When it stops, it's just beginning. Sun comes up, we all laugh. Sun goes down, we all die..."
-
-SamaraMorganDiary04_title,item,Items,"Samara Morgan's Diary Part 4"
-SamaraMorganDiary04,item,Items,"Doctor: Samara, how did you make these pictures?\nSamara: I don't...make them...I see them...and then...they just...are.\nDoctor: Samara I need you to start telling me the truth.\nSamara: Can I see my mommy?\nDoctor: No, Samara. Not until we can figure out what's wrong with you.\nSamara: I love my mommy.\nDoctor: Yes you do. But you don't want to hurt her anymore. You don't want to hurt anyone.\nSamara: But I do, and I'm sorry. It won't stop."
-
-
+SamaraMorganDiary01_title,item,Items,"Samara Morgan's Diary"
+SamaraMorganDiary01,item,Items,"Samara Morgan's Diary"
+SamaraMorganDiary01Desc,item,Items,"An old diary, filled with scribbles and nearly illegible writing. Inside the cover, it says 'Samara Morgan, Moesko Island'"
 
 samaraMorganMemoriesBinds_NoCurse_title,item,Items,"The artifact crumbles."
 samaraMorganemoriessBinds_NoCurse,item,Items,"The artifact crumbles in your hands."
@@ -46,13 +32,12 @@ samaraMorganemoriessBinds_NoCurse,item,Items,"The artifact crumbles in your hand
 samaraMorganMemories01,item,Items,"An old hair brush"
 samaraMorganMemories01Desc,item,Items,"An old hair brush with a beautiful horse engraved on it."
 samaraMorganMemories01_ToolTip_title,item,Items,"An old hair brush"
-samaraMorganMemories01_ToolTip,items,Items,"an old hair brush with a beautifully engraved horse on the handle."
+samaraMorganMemories01_ToolTip,items,Items,"An old hair brush with a beautifully engraved horse on the handle. It crumbles in your hand as you hold it."
 
 samaraMorganMemories02,item,Items,"A ratty old white dress"
 samaraMorganMemories02Desc,item,Items,"A ratty old white dress"
 samaraMorganMemories02_ToolTip_title,item,Items,"A ratty old white dress"
-samaraMorganMemories02_ToolTip,items,Items,"A ratty old white dress, with signs of mildew on it. It's threadbare."
-
+samaraMorganMemories02_ToolTip,items,Items,"A ratty old white dress, with signs of mildew on it. It's threadbare. It comes undone in your hands as you hold it."
 
 samaraMorganPictureBinds_NoCurse_title,item,Items,"The picture crumbles."
 samaraMorganPictureBinds_NoCurse,item,Items,"The picture crumbles in your hands."
@@ -60,43 +45,42 @@ samaraMorganPictureBinds_NoCurse,item,Items,"The picture crumbles in your hands.
 samaraPostCard01,item,Items,"An old postcard"
 samaraPostcard01Desc,item,Items,"An old postcard with the picture of a church's bell tower."
 samaraPostcard01_ToolTip_title,item,Items,"An old postcard"
-samaraPostcard01_ToolTip,items,Items,"An old post card with the picture of a church's bell tower. \n\n( 1970: Father Galen Burke ) "
+samaraPostcard01_ToolTip,items,Items,"An old post card with the picture of a church's bell tower. \n\n( 1970: Father Galen Burke ). \nIt crumbles in your hands. "
 
 samaraPostcard02,item,Items,"An old postcard"
 samaraPostcard02Desc,item,Items,"An old postcard with the picture of what looks like a group of nun's."
 samaraPostcard02_ToolTip_title,item,Items,"An old postcard"
-samaraPostcard02_ToolTip,items,Items,"An old postcard with the picture of what looks like a group of nun's. \n\n( 1970: The Sisters of Christ ) "
+samaraPostcard02_ToolTip,items,Items,"An old postcard with the picture of what looks like a group of nun's. \n\n( 1970: The Sisters of Christ ). \nIt crumbles in your hands.   "
 
 samaraPostcard03,item,Items,"An old postcard"
 samaraPostcard03Desc,item,Items,"An old postcard with the picture of an abandoned hospital with a well in front of it."
 samaraPostcard03_ToolTip_title,item,Items,"An old postcard"
-samaraPostcard03_ToolTip,items,Items,"An old postcard with the picture of an abandoned hospital with a well in front of it. \n\n( 1971: The Sisters of Christ's abandoned Hospital )"
+samaraPostcard03_ToolTip,items,Items,"An old postcard with the picture of an abandoned hospital with a well in front of it. \n\n( 1971: The Sisters of Christ's abandoned Hospital ). \nIt crumbles in your hands. "
 
 samaraPostcard04,item,Items,"A brittle old picture"
 samaraPostcard04Desc,item,Items,"A brittle picture of what appears to be an old barn"
 samaraPostcard04_ToolTip_title,item,Items,"An old picture"
-samaraPostcard04_ToolTip,items,Items,"An old crumbling barn features predominantly on the postcard. \n\n( Undated: Morgan Farm, Moesko Island )"
+samaraPostcard04_ToolTip,items,Items,"An old crumbling barn features predominantly on the postcard. \n\n( Undated: Morgan Farm, Moesko Island ). \nIt crumbles in your hands. "
 
 samaraHorse01,item,Items,"A strange horse"
 samaraHorse01Desc,item,Items,"A strange horse with a date carved in the bottom: Kentucky Derby Champion 1973"
 samaraHorse01_ToolTip_title,item,Items,"Kentucky Derby Champion 1973"
-samaraHorse01_ToolTip,items,Items,"A small engraving adorns the bottom of the small statuette:  \nBreeder: Anna Morgan. \nMoesko Island \nWinner 1973"
+samaraHorse01_ToolTip,items,Items,"A small engraving adorns the bottom of the small statuette:  \nBreeder: Anna Morgan. \nMoesko Island \nWinner 1973. \nIt crumbles in your hands. "
 
 samaraHorse02,item,Items,"A strange horse"
 samaraHorse02Desc,item,Items,"A strange horse with a date carved in the bottom: Nakayama Grand Jump 1974"
 samaraHorse02_ToolTip_title,item,Items,"Nakayama Grand Jump 1974"
-samaraHorse02_ToolTip,items,Items,"A small engraving adorns the bottom of the small statuette:  \nBreeder: Richard Morgan. \nMoesko Island \nWinner 1974"
+samaraHorse02_ToolTip,items,Items,"A small engraving adorns the bottom of the small statuette:  \nBreeder: Richard Morgan. \nMoesko Island \nWinner 1974. \nIt crumbles in your hands. "
 
 samaraHorse03,item,Items,"A strange horse"
 samaraHorse03Desc,item,Items,"A strange horse with a date carved in the bottom: The Royal Ascot 1976"
 samaraHorse03_ToolTip_title,item,Items,"The Royal Ascot 1976"
-samaraHorse03_ToolTip,items,Items,"A small engraving adorns the bottom of the small statuette:  \nBreeder: Anna Morgan. \nMoesko Island \nWinner 1976"
+samaraHorse03_ToolTip,items,Items,"A small engraving adorns the bottom of the small statuette:  \nBreeder: Anna Morgan. \nMoesko Island \nWinner 1976. \nIt crumbles in your hands. "
 
 samaraHorse04,item,Items,"A strange horse"
 samaraHorse04Desc,item,Items,"A strange horse with a date carved in the bottom: Best Of Show 1978"
-
 samaraHorse04_ToolTip_title,item,Items,"Best of Show 1978"
-samaraHorse04_ToolTip,item,Items,"A small engraving adorns the bottom of the small statuette:  Breeder: Richard Morgan. Moesko Island"
+samaraHorse04_ToolTip,item,Items,"A small engraving adorns the bottom of the small statuette:  Breeder: Richard Morgan. Moesko Island. \nIt crumbles in your hands. "
 
 samaraMorganBinds_title,item,Items,"You snap the horse into two."
 samaraMorganBinds,item,Items,"Without knowing where the words are coming from, you find yourself uttering the words 'I release this bond of this evil spirit from this world. Back to the dark depths! Begone!'\n\nYou gasp for breath as a chill runs down your spine."
@@ -116,8 +100,6 @@ samaraMorganBinds_NoCurse,item,Items,"The horse breaks very easily in your hands
 samaraMorganFreed_title,item,Items,"Samara's Grave crumbles."
 samaraMorganFreed,item,Items,"The resting place of Samara Morgan crumbles in front of you. A sharp hiss of air comes from the depths of the well before falling silent.\n\n\nWhy did you free her?\n\nYou weren't supposed to help her. Don't you understand? She never sleeps...."
 
-samaraMorganWell_title,item,Items,"Samara Morgan's Body"
-samaraMorganWell,item,Items,"The small slight figure of Samara lies in your hands. Rescued from her watery grave, you prepare a proper burial for her. She has led a cursed life and after life, but you sincerely hope she finds the peace she has been denied for her entire existence.\n\nAs you gentle lower her into a proper grave, you say a small prayer to send her body and her soul to rest.\n\nAn overwhelming sense of well being fills your soul.\n\nYou hear a whisper in your ear, 'What have you done? Why did you help her? She's out now."
-SamaraWell04Desc,item,Items,"The body of a small girl, long since dead."
-Samaradvd03,items,Tool,A DVD Video,,,,,
-Samaradvd03Desc,items,Tool,"A DVD Video... I wonder whats on it",,,,,
+SamaraMorganBody,item,Items,"The body of a small girl, long since dead."
+SamaraMorganBody_title,item,Items,"Samara Morgan's Body"
+SamaraMorganBody,item,Items,"The small slight figure of Samara lies in your hands. Rescued from her watery grave, you prepare a proper burial for her. She has led a cursed life and after life, but you sincerely hope she finds the peace she has been denied for her entire existence.\n\nAs you gentle lower her into a proper grave, you say a small prayer to send her body and her soul to rest.\n\nAn overwhelming sense of well being fills your soul.\n\nYou hear a whisper in your ear, 'What have you done? Why did you help her? She's out now."

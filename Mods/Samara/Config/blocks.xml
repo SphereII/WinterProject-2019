@@ -5,7 +5,31 @@
 
 	<append xpath="/blocks">
 
-	
+    <block name="SamaraMorganBody">
+      <property name="Extends" value="bodyBagYellow" />
+  
+      <property name="DescriptionKey" value="SamaraMorganBody"/>
+    </block>
+    <block name="SamaraChest">
+      <property name="Class" value="Loot" />
+      <property name="CustomIcon" value="cntChest01" />
+      <property name="Material" value="MwoodReinforced" />
+      <property name="StabilitySupport" value="false" />
+      <property name="Shape" value="Ext3dModel" />
+      <property name="Texture" value="293" />
+      <property name="Mesh" value="models" />
+      <property name="Model" value="LootContainers/chest01" param1="main_mesh" />
+      <property name="HandleFace" value="Bottom" />
+      <property name="ImposterExchange" value="imposterQuarter" param1="154" />
+      <property name="IsTerrainDecoration" value="true" />
+      <property name="LootList" value="665" />
+      <property name="CreativeMode" value="None" />
+      <drop event="Destroy" name="resourceWood" count="1,3" />
+      <drop event="Fall" name="terrDestroyedWoodDebris" count="1" prob="0.75" stick_chance="1" />
+      <property
+        name="FilterTags" value="floot" />
+    </block>
+    
  	<!--  Quest Blocks  -->
 		<block name="SamaraWell">
 			<property name="CreativeMode" value="Player"/>
@@ -26,29 +50,9 @@
 			<property name="DescriptionKey" value="decorativeBlockGroupDesc"/>
 			<property name="CustomIcon" value="SamaraWell"/>
       <property name="Class" value="Loot"/>
-      <property name="LootList" value="663"/> <!-- a lootlist is required but not actually used -->
+      <property name="LootList" value="666"/> <!-- a lootlist is required but not actually used -->
 			<property name="AlwaysActive" value="true" />
 			<property name="ActivationDistance" value="6" />
-			<property name="ActivationBuffs" value="buffCursed" /> 
-		</block>
-    <block name="SamaraWell01">
-      <property name="Extends" value="SamaraWell"/>
-      <property name="LootList" value="663"/>
-    </block>
-    <block name="SamaraWell02">
-      <property name="Extends" value="SamaraWell"/>
-      <property name="LootList" value="664"/>
-    </block>
-    <block name="SamaraWell03">
-      <property name="Extends" value="SamaraWell"/>
-      <property name="LootList" value="665"/>
-    </block>
-    <!-- Upgrade to let Samara out -->
-    <block name="SamaraWell04">
-      <property name="Extends" value="SamaraWell"/>
-      <property name="LootList" value="666"/>
-      <drop event="Destroy" name="SamaraMorganBody" count="1" prob="1"/>
-
     </block>
 
     <!-- Example of using an Activeblock (in this case a picture) to loop a video. Manually activated by adding a wire to the picture then disconnection it.  Turn on and off as desired. Vanilla compatible -->
@@ -121,7 +125,7 @@
 <!-- End of Optional configuration settings             -->	
 		</block>
 		
-<!--  These two are traps, be careful not to get too close  --> 
+<!--  These two are traps, be careful not to get too close.  There are lots of posibilities for new trap designs using this method.  --> 
 		
 		<block name="JumpPic03">
 			<property name="CreativeMode" value="Player"/>
