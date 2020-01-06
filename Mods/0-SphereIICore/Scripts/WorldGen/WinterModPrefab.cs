@@ -13,14 +13,14 @@ public static class WinterModPrefab
     //  static BlockValue ice = new BlockValue((uint)Block.GetBlockByName("terrIce", false).blockID);
 
     private static Random Rand = new Random(Guid.NewGuid().GetHashCode());
-    public static bool Logging = true;
+    public static bool Logging = false;
     public static bool Rpc = true;
 
     public static void SetSnowChunk(Chunk chunk, Vector3i position, Vector3i size)
     {
         //var position = chunk.GetWorldPos();
         Write("SetSnowChunk " + position);
-        ProcessChunk(chunk, position, size, false, Logging, Rpc, false, null);
+        ProcessChunk(chunk, position, size, false, Logging, Rpc, false);
 
         //SetSnow(position.x, position.z, 16, 16, GameManager.Instance.World.ChunkCache, false, true);
     }
@@ -33,10 +33,10 @@ public static class WinterModPrefab
             AlreadyFilled = true;
             //Debug.Log("POI is resetting for a quest.");
         }
-        SetSnow(position.x, position.z, prefab.size.x, prefab.size.z, cluster, Rpc, Logging, AlreadyFilled, prefab);
+        SetSnow(position.x, position.z, prefab.size.x, prefab.size.z, cluster, Rpc, Logging, AlreadyFilled, prefab.size.y);
     }
 
-    private static void ProcessChunk(Chunk chunk, Vector3i position, Vector3i size, bool regen, bool log, bool notifyRpc, bool isPrefab, Prefab prefab)
+    private static void ProcessChunk(Chunk chunk, Vector3i position, Vector3i size, bool regen, bool log, bool notifyRpc, bool isPrefab)
     {
 
         if (chunk == null)
@@ -45,10 +45,6 @@ public static class WinterModPrefab
             return;
         }
 
-        if (prefab != null)
-        {
-            Write("Placing: " + prefab.filename + " YOffSet: " + prefab.size.ToString());
-        }
         notifyRpc = GameManager.Instance.World.ChunkCache.DisplayedChunkGameObjects.ContainsKey(chunk.Key);
 
         List<BlockChangeInfo> Changes = null;
@@ -73,7 +69,7 @@ public static class WinterModPrefab
 
                 if (worldX < minX || worldX > maxX || worldZ < minZ || worldZ > maxZ)
                 {
-                //    Write("Out of bounds " + position + " s: " + size + " wp: " + worldX + "," + worldZ);
+                    //    Write("Out of bounds " + position + " s: " + size + " wp: " + worldX + "," + worldZ);
                     continue;
                 }
 
@@ -93,12 +89,11 @@ public static class WinterModPrefab
 
                     // Test if we still need to go down further
                     var b = chunk.GetBlock(chunkX, y, chunkZ);
-                    
-                    if (b.ischild == false)
-                    {
-                        if (b.type == 0)
-                            continue; //still air 
-                    }
+                    if (b.type == 0)
+                        continue; //still air 
+
+                    //if (Block.list[b.type].blockMaterial.StabilitySupport == false)
+                    //    continue;
 
                     // This is the height of the snow where we are aiming at. It'll at least be 8 blocks high, but depending on the terrain or obstacles we meet
                     // on the way down, it could be lower.
@@ -110,13 +105,19 @@ public static class WinterModPrefab
                         snowHeight = 3;
                     }
 
-                    
+
                     // level off the snow with the rest of the terrain health
-                    if (y < tHeightWithSnow + 2 )
+                    if (y < tHeightWithSnow + 2)
                         snowHeight = Math.Abs(y - tHeightWithSnow) + 1;
 
+                    //// Prefab size
+                    //if (size.y < 9)
+                    //{
+                    //    Write("Little POI Detected: Old Height: " + snowHeight + " Prefab Size: " + size.y);
+                    //    if (!Block.list[b.type].shape.IsTerrain())
+                    //        continue;
 
-                 
+                    //}
 
                     if (log)
                     {
@@ -131,20 +132,19 @@ public static class WinterModPrefab
 
                     Write("Current Block is: " + b.Block.GetBlockName());
                     int snowY = y;
-       
-                    //for (snowY = y + 1; snowY < y + snowHeight; snowY++) //&& snowY < tHeight
-                     for( int x = 0; x <= snowHeight; x++)   
+
+                    for (snowY = y; snowY < y + snowHeight; snowY++) //&& snowY < tHeight
                     {
-                        snowY = x + y;
+
 
                         if (snowY > 255)
                             continue;
 
                         var check = chunk.GetBlock(chunkX, snowY, chunkZ);
-                  
-                            //if (log)
-                            //    Write("Set " + worldX + "," + snowY + "," + worldZ + " to snow || world  " + chunk.GetWorldPos() + " applied: " + (check.type != snow.type) + "  rpc: " + Rpc);
-                       
+
+                        //if (log)
+                        //    Write("Set " + worldX + "," + snowY + "," + worldZ + " to snow || world  " + chunk.GetWorldPos() + " applied: " + (check.type != snow.type) + "  rpc: " + Rpc);
+
                         if (check.type != snow.type)
                         {
 
@@ -184,7 +184,7 @@ public static class WinterModPrefab
     }
 
 
-    public static void SetSnow(int startX, int startZ, int width, int depth, ChunkCluster cluster, bool notifyRpc, bool log, bool AlreadyFilled, Prefab prefab)
+    public static void SetSnow(int startX, int startZ, int width, int depth, ChunkCluster cluster, bool notifyRpc, bool log, bool AlreadyFilled, int height)
     {
 
         Write("Set snow " + startX + "," + startZ + " by " + width + "," + depth);
@@ -193,7 +193,7 @@ public static class WinterModPrefab
         Chunk chunk = cluster.GetChunkSync(World.toChunkXZ(startX), World.toChunkXZ(startZ));
 
         var worldPos = new Vector3i(startX, 0, startZ);
-        var size = new Vector3i(width, 0, depth);
+        var size = new Vector3i(width, height, depth);
 
         List<long> processed = new List<long>();
 
@@ -217,7 +217,7 @@ public static class WinterModPrefab
                         if (processed.Contains(chunk.Key))
                             continue;
                         processed.Add(chunk.Key);
-                        ProcessChunk(chunk, worldPos, size, AlreadyFilled, log, notifyRpc, true, prefab);
+                        ProcessChunk(chunk, worldPos, size, AlreadyFilled, log, notifyRpc, true);
 
 
 
