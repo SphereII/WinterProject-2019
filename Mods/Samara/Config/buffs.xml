@@ -163,8 +163,8 @@
         </effect_group>
       </duration>
     </buff>
-
-
+    
+    
     <!-- Short Samara picture, shows her, the well, and an eye  -->
     <buff name="buffCutscene01" name_key="Buff" icon="ui_game_symbol_destruction2" remove_on_death="true" hidden="true">
       <duration value="4"/>
@@ -542,6 +542,9 @@
       <requirement name="CVarCompare" cvar="$SamaraCurse" operation="EQ" value="1"/>
       <triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffCursedSamaraMorgan" />
     </effect_group>
+  </append>
+
+  <append xpath="/buffs/buff[@name='buffStatusCheck01']/effect_group">
 
     <!-- if you die, Samara will release you from your bind -->
     <triggered_effect trigger="onSelfRespawn" action="ShowToolbeltMessage" message_key="buffCursedSamaraMorgan_Remove">
@@ -552,11 +555,6 @@
     <triggered_effect trigger="onSelfRespawn" action="RemoveBuff" buff="buffCursedSamaraMorgan" >
       <requirement name="HasBuff" buff="buffCursedSamaraMorgan"/>
     </triggered_effect>
-  </append>
-
-  <append xpath="/buffs/buff[@name='buffStatusCheck01']/effect_group">
-
-  
 
     <!-- Item buffs    -->
 

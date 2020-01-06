@@ -118,7 +118,7 @@ public class BlockMusicBox : BlockLoot
         #region GetActivationText
 
         PlayerActionsLocal playerInput = ((EntityPlayerLocal)_entityFocusing).playerInput;
-        string keybindString = UIUtils.GetKeybindString(playerInput.Activate, playerInput.PermanentActions.Activate);
+        string keybindString = playerInput.Activate.GetBindingXuiMarkupString(XUiUtils.EmptyBindingStyle.EmptyString, XUiUtils.DisplayStyle.Plain) + playerInput.PermanentActions.Activate.GetBindingXuiMarkupString(XUiUtils.EmptyBindingStyle.EmptyString, XUiUtils.DisplayStyle.Plain);
         Block block = Block.list[_blockValue.type];
         string blockName = block.GetBlockName();
 
@@ -155,22 +155,20 @@ public class BlockMusicBox : BlockLoot
     }
 
     // Handles what happens to the contents of the box when you pick up the block.
-    private void EventData_Event(object obj)
+    private void EventData_Event(TimerEventData timerData)
     {
         #region EventData_Event
         World world = GameManager.Instance.World;
-        object[] array = (object[])obj;
+     
+        object[] array = (object[])timerData.Data;
         int clrIdx = (int)array[0];
         BlockValue blockValue = (BlockValue)array[1];
         Vector3i vector3i = (Vector3i)array[2];
         BlockValue block = world.GetBlock(vector3i);
         EntityPlayerLocal entityPlayerLocal = array[3] as EntityPlayerLocal;
-
         TileEntityLootContainer tileEntityLootContainer = world.GetTileEntity(clrIdx, vector3i) as TileEntityLootContainer;
-        if (tileEntityLootContainer != null)
-        {
+        if (tileEntityLootContainer == null)
             world.GetGameManager().DropContentOfLootContainerServer(blockValue, vector3i, tileEntityLootContainer.entityId);
-        }
 
         // Pick up the item and put it inyor your inventory.
         LocalPlayerUI uiforPlayer = LocalPlayerUI.GetUIForPlayer(entityPlayerLocal);
@@ -205,7 +203,7 @@ public class BlockMusicBox : BlockLoot
         _player
         };
         timerEventData.Event += this.EventData_Event;
-        childByType.SetTimer(this.TakeDelay, timerEventData);
+        childByType.SetTimer(this.TakeDelay, timerEventData, -1f, "");
         #endregion
     }
 
@@ -268,6 +266,23 @@ public class BlockMusicBox : BlockLoot
                         if (array[i].IsEmpty())
                             continue;
 
+                        if (array[i].itemValue.ItemClass.Properties.Values.ContainsKey("OnPlayBuff"))
+                        {
+                            String Buff = array[i].itemValue.ItemClass.Properties.Values["OnPlayBuff"];
+                            _player.Buffs.AddBuff(Buff);
+                        }
+
+                        if (array[i].itemValue.ItemClass.Properties.Values.ContainsKey("OnPlayQuest"))
+                        {
+                            String Quest = array[i].itemValue.ItemClass.Properties.Values["OnPlayQuest"];
+                            if (_player is EntityPlayerLocal)
+                            {
+                                QuestClass myQuest = QuestClass.GetQuest(Quest);
+                                if (myQuest != null)
+                                    (_player as EntityPlayerLocal).QuestJournal.AddQuest(myQuest.CreateQuest());
+                            }
+                                
+                        }
                         // Check for a SoundDataNode for a potential sound clip.
                         if (array[i].itemValue.ItemClass.Properties.Values.ContainsKey("SoundDataNode"))
                         {
