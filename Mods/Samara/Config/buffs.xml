@@ -544,7 +544,7 @@
     </effect_group>
 
     <!-- if you die, Samara will release you from your bind -->
-    <triggered_effect trigger="onSelfRespawn" action="ShowToolbeltMessage" message_key="buffCursedSamaraMorganRemove">
+    <triggered_effect trigger="onSelfRespawn" action="ShowToolbeltMessage" message_key="buffCursedSamaraMorgan_Remove">
       <requirement name="HasBuff" buff="buffCursedSamaraMorgan"/>
     </triggered_effect>
 
