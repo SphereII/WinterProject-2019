@@ -317,7 +317,7 @@
         <response_entry id="response_1977811390" ref_text="Okay..." />
       </statement>
       <response id="shop" text="dialog_trader_response_shop">
-        <requirement type="HasBuffSDX, Mods" value="buffBadAttitude" requirementtype="Hide" match="not" Hash="Requirement_-1230867493" />
+        <!--requirement type="HasBuffSDX, Mods" value="buffBadAttitude" requirementtype="Hide" match="not" Hash="Requirement_-1230867493" /-->
         <action type="Trader" id="trade" />
       </response>
       <response id="jobsnone" text="dialog_trader_response_jobsnone" nextstatementid="nojobs">
