@@ -317,7 +317,7 @@
         <response_entry id="response_1977811390" ref_text="Okay..." />
       </statement>
       <response id="shop" text="dialog_trader_response_shop">
-        <requirement type="HasBuffSDX, Mods" value="buffBadAttitude" requirementtype="Hide" Hash="Requirement_-1230867493" />
+        <requirement type="HasBuffSDX, Mods" value="buffBadAttitude" requirementtype="Hide" match="not" Hash="Requirement_-1230867493" />
         <action type="Trader" id="trade" />
       </response>
       <response id="jobsnone" text="dialog_trader_response_jobsnone" nextstatementid="nojobs">
@@ -346,7 +346,7 @@
       <response id="done" text="dialog_trader_response_nevermind" />
       <response id="responseID_-2088969424" text="Something strange happened to me." nextstatementid="statement_-911053284">
         <requirement type="HasBuffSDX, Mods" value="buffCursed" requirementtype="Hide" Hash="Requirement_-1434088733" />
-        <requirement type="HasBuffSDX, Mods" value="buffBadAttitude" requirementtype="Hide" Hash="Requirement_-1230867493" />
+        <requirement type="HasBuffSDX, Mods" value="buffBadAttitude" requirementtype="Hide" match="not" Hash="Requirement_-1230867493" />
       </response>
       <response id="response_1374956358" text="I heard a loud scream. It hurt my ears." nextstatementid="statement_1825662454">
         <requirement type="HasBuffSDX, Mods" value="buffScreamerCursed" requirementtype="Hide" Hash="Requirement_1335115275" />
