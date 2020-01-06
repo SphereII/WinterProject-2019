@@ -118,7 +118,7 @@ public class BlockMusicBox : BlockLoot
         #region GetActivationText
 
         PlayerActionsLocal playerInput = ((EntityPlayerLocal)_entityFocusing).playerInput;
-        string keybindString = playerInput.Activate.GetBindingXuiMarkupString(XUiUtils.EmptyBindingStyle.EmptyString, XUiUtils.DisplayStyle.Plain) + playerInput.PermanentActions.Activate.GetBindingXuiMarkupString(XUiUtils.EmptyBindingStyle.EmptyString, XUiUtils.DisplayStyle.Plain);
+        string keybindString = UIUtils.GetKeybindString(playerInput.Activate, playerInput.PermanentActions.Activate);
         Block block = Block.list[_blockValue.type];
         string blockName = block.GetBlockName();
 
@@ -268,23 +268,6 @@ public class BlockMusicBox : BlockLoot
                         if (array[i].IsEmpty())
                             continue;
 
-                        if (array[i].itemValue.ItemClass.Properties.Values.ContainsKey("OnPlayBuff"))
-                        {
-                            String Buff = array[i].itemValue.ItemClass.Properties.Values["OnPlayBuff"];
-                            _player.Buffs.AddBuff(Buff);
-                        }
-
-                        if (array[i].itemValue.ItemClass.Properties.Values.ContainsKey("OnPlayQuest"))
-                        {
-                            String Quest = array[i].itemValue.ItemClass.Properties.Values["OnPlayQuest"];
-                            if (_player is EntityPlayerLocal)
-                            {
-                                QuestClass myQuest = QuestClass.GetQuest(Quest);
-                                if (myQuest != null)
-                                    (_player as EntityPlayerLocal).QuestJournal.AddQuest(myQuest.CreateQuest());
-                            }
-                                
-                        }
                         // Check for a SoundDataNode for a potential sound clip.
                         if (array[i].itemValue.ItemClass.Properties.Values.ContainsKey("SoundDataNode"))
                         {
