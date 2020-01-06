@@ -359,6 +359,8 @@
     <Content Include="Mods\Samara\Config\buffs.xml">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="Mods\Samara\Config\dialogs.xml" />
+    <Content Include="Mods\Samara\Config\dialogs2.xml" />
     <Content Include="Mods\Samara\Config\entityclasses.xml" />
     <Content Include="Mods\Samara\Config\entitygroups.xml" />
     <Content Include="Mods\Samara\Config\items.xml">
@@ -367,6 +369,7 @@
     <Content Include="Mods\Samara\Config\item_modifiers.xml" />
     <Content Include="Mods\Samara\Config\Localization.txt" />
     <Content Include="Mods\Samara\Config\loot.xml" />
+    <Content Include="Mods\Samara\Config\npc.xml" />
     <Content Include="Mods\Samara\Config\quests.xml" />
     <Content Include="Mods\Samara\Config\recipes.xml" />
     <Content Include="Mods\Samara\Config\sounds.xml">
@@ -817,13 +820,16 @@
     <Compile Include="Mods\0-SphereIICore\Scripts\Dialogs\DialogActionAddCVar.cs" />
     <Compile Include="Mods\0-SphereIICore\Scripts\Dialogs\DialogActionExecuteCommandSDX.cs" />
     <Compile Include="Mods\0-SphereIICore\Scripts\Dialogs\DialogActionGetItemSDX.cs" />
+    <Compile Include="Mods\0-SphereIICore\Scripts\Dialogs\DialogActionRemoveBuffSDX.cs" />
     <Compile Include="Mods\0-SphereIICore\Scripts\Dialogs\DialogActionRewardSkillPoint.cs" />
     <Compile Include="Mods\0-SphereIICore\Scripts\Dialogs\DialogActionGiveToNPC.cs" />
     <Compile Include="Mods\0-SphereIICore\Scripts\Dialogs\DialogActionOpenDialogSDX.cs" />
     <Compile Include="Mods\0-SphereIICore\Scripts\Dialogs\DialogActionGiveQuestSDX.cs" />
     <Compile Include="Mods\0-SphereIICore\Scripts\Dialogs\DialogActionShowToolTipSDX.cs" />
     <Compile Include="Mods\0-SphereIICore\Scripts\Dialogs\DialogRequirementHasBuffSDX.cs" />
+    <Compile Include="Mods\0-SphereIICore\Scripts\Dialogs\DialogRequirementHasCompletedQuestSDX.cs" />
     <Compile Include="Mods\0-SphereIICore\Scripts\Dialogs\DialogRequirementHasCVar.cs" />
+    <Compile Include="Mods\0-SphereIICore\Scripts\Dialogs\DialogRequirementHasFailedQuestSDX.cs" />
     <Compile Include="Mods\0-SphereIICore\Scripts\Dialogs\DialogRequirementHasItemSDX.cs" />
     <Compile Include="Mods\0-SphereIICore\Scripts\Dialogs\DialogRequirementHasQuestSDX.cs" />
     <Compile Include="Mods\0-SphereIICore\Scripts\Dialogs\DialogRequirementHasTaskSDX.cs" />
