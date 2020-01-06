@@ -36,8 +36,7 @@ public class EAIApproachAndFollowTargetSDX : EAIApproachAndAttackTarget
 
     public override void SetData(DictionarySave<string, string> data)
     {
-        foreach (KeyValuePair<string, string> myData in data.Dict)
-            Debug.Log("Key: " + myData.Key + " My Data: " + myData.Value);
+        
         base.SetData(data);
         string text;
         if (data.TryGetValue("incentives", out text))
