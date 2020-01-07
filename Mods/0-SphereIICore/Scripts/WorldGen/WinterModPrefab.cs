@@ -69,7 +69,7 @@ public static class WinterModPrefab
 
                 if (worldX < minX || worldX > maxX || worldZ < minZ || worldZ > maxZ)
                 {
-                //    Write("Out of bounds " + position + " s: " + size + " wp: " + worldX + "," + worldZ);
+                    //    Write("Out of bounds " + position + " s: " + size + " wp: " + worldX + "," + worldZ);
                     continue;
                 }
 
@@ -105,9 +105,9 @@ public static class WinterModPrefab
                         snowHeight = 3;
                     }
 
-                    
+
                     // level off the snow with the rest of the terrain health
-                    if (y < tHeightWithSnow + 2 )
+                    if (y < tHeightWithSnow + 2)
                         snowHeight = Math.Abs(y - tHeightWithSnow) + 1;
 
                     //// Prefab size
@@ -132,7 +132,7 @@ public static class WinterModPrefab
 
                     Write("Current Block is: " + b.Block.GetBlockName());
                     int snowY = y;
-       
+
                     for (snowY = y; snowY < y + snowHeight; snowY++) //&& snowY < tHeight
                     {
 
@@ -141,10 +141,10 @@ public static class WinterModPrefab
                             continue;
 
                         var check = chunk.GetBlock(chunkX, snowY, chunkZ);
-                  
-                            //if (log)
-                            //    Write("Set " + worldX + "," + snowY + "," + worldZ + " to snow || world  " + chunk.GetWorldPos() + " applied: " + (check.type != snow.type) + "  rpc: " + Rpc);
-                       
+
+                        //if (log)
+                        //    Write("Set " + worldX + "," + snowY + "," + worldZ + " to snow || world  " + chunk.GetWorldPos() + " applied: " + (check.type != snow.type) + "  rpc: " + Rpc);
+
                         if (check.type != snow.type)
                         {
 
