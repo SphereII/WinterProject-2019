@@ -132,8 +132,9 @@ public static class WinterModPrefab
 
                     Write("Current Block is: " + b.Block.GetBlockName());
                     int snowY = y;
-
-                    for (snowY = y; snowY < y + snowHeight; snowY++) //&& snowY < tHeight
+                    // Raise the level by one, since we don't want to replace the roof with snow, or the current block.
+                    int StartingSnow = y + 1;
+                    for (snowY = StartingSnow; snowY < y + snowHeight; snowY++) //&& snowY < tHeight
                     {
 
 

@@ -34,41 +34,39 @@ public class SphereII_WinterProject
     // Navezgane only - Since it's pregenerated, it uses a different prefabs loading, with preset locations. This will adjust the prefabs for only navezgane.
     public class SphereII_WinterProject_PrefabInstance
     {
-        public static bool PrefabInstance_Prefix(ref Vector3i _position, ref Prefab _bad)
+        public static bool PrefabInstance_Prefix(ref PrefabInstance __instance, ref Prefab _bad)
         {
-            //  //if ( _bad != null)
-            Debug.Log("Prefab: " + _bad.filename + " YOffset: " + _bad.yOffset + " Position: " + _position);
 
-          //  // Only apply these changes to navezgane world
-          ////  if(GamePrefs.GetString(EnumGamePrefs.GameWorld) == "Navezgane")
-          //  {
-          //      //  _position.y -= 8;
-          //      if(_bad != null)
-          //      {
-                    
-          //          Debug.Log("Navezgane Prefab: " + _bad.filename + " YOffset: " + _bad.yOffset + " Position: " + _position) ;
-          //          //         _bad.yOffset -= 8;
-          //          _bad.bTraderArea = false;
-          //          _bad.bExcludeDistantPOIMesh = true;
-          //          _bad.bCopyAirBlocks = true;
-          //      }
+//            Debug.Log("PrefabInstance");
+//            //  // Only apply these changes to navezgane world
+////            if (GamePrefs.GetString(EnumGamePrefs.GameWorld) == "Navezgane")
+//            {
+//                if (_bad != null)
+//                {
+//                    Debug.Log("Changing Boundary");
+//                    __instance.boundingBoxPosition.y -= 8;
 
-          //  }
+//                    _bad.yOffset = _bad.size.y < 9 ? -(8 - _bad.size.y) : -8;
+//                    _bad.bTraderArea = false;
+//                    _bad.bExcludeDistantPOIMesh = true;
+//                    _bad.bCopyAirBlocks = true;
+//                }
+//            }
             return true;
         }
     }
 
     [HarmonyPatch(typeof(Prefab))]
     [HarmonyPatch("loadBlockData")]
-    
     public class SphereII_WinterProject_LoadBlockData
     {
         public static bool Postfix(bool __result, ref Prefab __instance)
         {
             if(__result)
             {
-                if(__instance.size.y < 9)
+                if(__instance.size.y < 10)
                 {
+                    Debug.Log("\n**************");
                     Debug.Log("Winter Project Prefab Filter : " + __instance.filename + " yOffset: " + __instance.yOffset + " Size: " + __instance.size.ToString());
                     Debug.Log("Disabling POI that is too short. Expect the next line to be a WRN about it. Ignore it. ");
                     return false;
@@ -122,7 +120,7 @@ public class SphereII_WinterProject
     {
         public static void Postfix(Prefab __instance, Vector3i _destinationPos, ChunkCluster _cluster, QuestTags _questTags)
         {
-          Debug.Log("CopyIntoLocal(): " + __instance.PrefabName);
+      //    Debug.Log("CopyIntoLocal(): " + __instance.PrefabName);
           WinterModPrefab.SetSnowPrefab(__instance, _cluster, _destinationPos, _questTags);
         }
 
@@ -135,7 +133,7 @@ public class SphereII_WinterProject
     {
         public static void Postfix(PrefabInstance __instance, Chunk _chunk)
         {
-            Debug.Log("CopyIntoChunk(): " + __instance.prefab.PrefabName);
+         //   Debug.Log("CopyIntoChunk(): " + __instance.prefab.PrefabName);
             WinterModPrefab.SetSnowChunk(_chunk, __instance.boundingBoxPosition, __instance.boundingBoxSize);
         }
     }
