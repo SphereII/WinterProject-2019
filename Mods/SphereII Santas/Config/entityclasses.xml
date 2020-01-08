@@ -3,7 +3,7 @@
 		<entity_class name="Santa" extends="npcTraderTemplate">
 		  <property name="Tags" value="npc"/>
 		  <property name="Mesh" value="#@modfolder:Resources/Santas.unity3d?SantaClaus_X"/>
-		  <property name="NPCID" value="SantaClaus"/>
+		  <property name="NPCID" value="traitorjoel"/>
 		  <property name="AvatarController" value="MecanimSDX, Mods" />
 		  <property name="Class" value="SantaTrader, Mods"/>
 		  <property name="ModelType" value="Standard"/>
