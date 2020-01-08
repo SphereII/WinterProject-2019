@@ -1,0 +1,10 @@
+<configs>
+<append xpath="/progression/perks/perk[@name='perkDeepCuts']">
+	<effect_group>
+	<requirement name="HoldingItemHasTags" tags="perkDeepCuts"/>
+	<triggered_effect trigger="onSelfPrimaryActionRayHit" action="AddBuff" target="self" buff="bleedcalculate"/>
+	<triggered_effect trigger="onSelfSecondaryActionRayHit" action="AddBuff" target="self" buff="bleedcalculate"/>
+	</effect_group>
+</append>
+
+</configs>

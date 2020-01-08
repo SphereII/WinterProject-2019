@@ -1,0 +1,934 @@
+<configs>
+
+
+
+<append xpath="/buffs/buff[@name='buffStatusCheck01']">
+<effect_group name="gorecvar">
+<!-- <requirement name="HoldingItemHasTags" tags="melee"/> -->
+<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" target="self" cvar="hitrow" operation="set" value="1"/>
+<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" target="self" cvar="lefthitrow" operation="set" value="1"/>
+<triggered_effect trigger="onSelfWaterSubmerge" action="RemovePart" part="Gore"/>
+<triggered_effect trigger="onSelfWaterSubmerge" action="RemovePart" part="Gore2"/>
+<triggered_effect trigger="onSelfWaterSubmerge" action="RemovePart" part="Gore3"/>
+<triggered_effect trigger="onSelfWaterSubmerge" action="RemovePart" part="LeftHandGore"/>
+<triggered_effect trigger="onSelfWaterSubmerge" action="RemovePart" part="RightHandGore"/>
+</effect_group>
+<effect_group name="gorespear">
+<requirement name="HoldingItemHasTags" tags="perkJavelinMaster"/>
+<requirement name="EntityTagCompare" target="other" tags="Entity"/> 
+<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="self" cvar="hitrow" operation="add" value="1"/>
+<triggered_effect trigger="onSelfAttackedOther" action="AddPart" part="Gore1" prefab="#@modfolder:Resources/gore.unity3d?GoreWeapon" localPos="0.02,0.98,0" parentTransform="#HeldItemRoot">
+<requirement name="CVarCompare" target="self" cvar="hitrow" operation="GTE" value="3"/>
+</triggered_effect>
+<triggered_effect trigger="onSelfAttackedOther" action="AddPart" part="Gore2" prefab="#@modfolder:Resources/gore.unity3d?GoreWeapon" localPos="0.02,0.85,0" parentTransform="Handle">
+<requirement name="CVarCompare" target="self" cvar="hitrow" operation="GTE" value="6"/>
+</triggered_effect>
+</effect_group>
+<effect_group name="goreknife">
+<requirement name="HoldingItemHasTags" tags="knife"/>
+<requirement name="EntityTagCompare" target="other" tags="Entity"/> 
+<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="self" cvar="hitrow" operation="add" value="1"/>
+<triggered_effect trigger="onSelfAttackedOther" action="AddPart" part="Gore3" prefab="#@modfolder:Resources/gore.unity3d?GoreWeapon" localPos="0.006,0.06,0" parentTransform="#HeldItemRoot">
+<requirement name="CVarCompare" target="self" cvar="hitrow" operation="GTE" value="3"/>
+</triggered_effect>
+<triggered_effect trigger="onSelfAttackedOther" action="AddPart" part="Gore4" prefab="#@modfolder:Resources/gore.unity3d?GoreWeapon2" localPos="0.01,-0.07,0.04" parentTransform="#HeldItemRoot">
+<requirement name="CVarCompare" target="self" cvar="hitrow" operation="GTE" value="6"/>
+</triggered_effect>
+</effect_group>
+<effect_group name="goremachete">
+<requirement name="HoldingItemHasTags" tags="machete"/>
+<requirement name="EntityTagCompare" target="other" tags="Entity"/> 
+<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="self" cvar="hitrow" operation="add" value="1"/>
+<triggered_effect trigger="onSelfAttackedOther" action="AddPart" part="Gore5" prefab="#@modfolder:Resources/gore.unity3d?GoreWeapon" localPos="0.02,0.1,0.06" parentTransform="#HeldItemRoot">
+<requirement name="CVarCompare" target="self" cvar="hitrow" operation="GTE" value="3"/>
+</triggered_effect>
+<triggered_effect trigger="onSelfAttackedOther" action="AddPart" part="Gore6" prefab="#@modfolder:Resources/gore.unity3d?GoreWeapon2" localPos="0.02,-0.035,0.04" parentTransform="#HeldItemRoot">
+<requirement name="CVarCompare" target="self" cvar="hitrow" operation="GTE" value="6"/>
+</triggered_effect>
+</effect_group>
+<effect_group name="goreaxe">
+<requirement name="HoldingItemHasTags" tags="axe"/>
+<requirement name="EntityTagCompare" target="other" tags="Entity"/> 
+<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="self" cvar="hitrow" operation="add" value="1"/>
+<triggered_effect trigger="onSelfAttackedOther" action="AddPart" part="Gore7" prefab="#@modfolder:Resources/gore.unity3d?GoreWeapon" localPos="0.008,0.06,0.14" parentTransform="#HeldItemRoot">
+<requirement name="CVarCompare" target="self" cvar="hitrow" operation="GTE" value="3"/>
+</triggered_effect>
+<triggered_effect trigger="onSelfAttackedOther" action="AddPart" part="Gore8" prefab="#@modfolder:Resources/gore.unity3d?GoreWeapon2" localPos="0.013,0.1,0.07" parentTransform="#HeldItemRoot">
+<requirement name="CVarCompare" target="self" cvar="hitrow" operation="GTE" value="6"/>
+</triggered_effect>
+</effect_group>
+<effect_group name="goreshovel">
+<requirement name="HoldingItemHasTags" tags="shovel"/>
+<requirement name="EntityTagCompare" target="other" tags="Entity"/> 
+<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="self" cvar="hitrow" operation="add" value="1"/>
+<triggered_effect trigger="onSelfAttackedOther" action="AddPart" part="Gore9" prefab="#@modfolder:Resources/gore.unity3d?GoreWeapon" localPos="0.06,0.6,0" parentTransform="#HeldItemRoot">
+<requirement name="CVarCompare" target="self" cvar="hitrow" operation="GTE" value="3"/>
+</triggered_effect>
+<triggered_effect trigger="onSelfAttackedOther" action="AddPart" part="Gore10" prefab="#@modfolder:Resources/gore.unity3d?GoreWeapon2" localPos="0.06,0.55,0.03" parentTransform="#HeldItemRoot">
+<requirement name="CVarCompare" target="self" cvar="hitrow" operation="GTE" value="6"/>
+</triggered_effect>
+</effect_group>
+<effect_group name="gorehammer">
+<requirement name="HoldingItemHasTags" tags="perkSkullCrusher"/>
+<requirement name="EntityTagCompare" target="other" tags="Entity"/> 
+<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="self" cvar="hitrow" operation="add" value="1"/>
+<triggered_effect trigger="onSelfAttackedOther" action="AddPart" part="Gore11" prefab="#@modfolder:Resources/gore.unity3d?GoreWeapon" localPos="-0.055,0.12,0.16" parentTransform="#HeldItemRoot">
+<requirement name="CVarCompare" target="self" cvar="hitrow" operation="GTE" value="3"/>
+</triggered_effect>
+<triggered_effect trigger="onSelfAttackedOther" action="AddPart" part="Gore12" prefab="#@modfolder:Resources/gore.unity3d?GoreWeapon2" localPos="-0.035,0.13,0.08" parentTransform="#HeldItemRoot">
+<requirement name="CVarCompare" target="self" cvar="hitrow" operation="GTE" value="6"/>
+</triggered_effect>
+</effect_group>
+<effect_group name="gorebat">
+<requirement name="HoldingItemHasTags" tags="Bat"/>
+<requirement name="EntityTagCompare" target="other" tags="Entity"/> 
+<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="self" cvar="hitrow" operation="add" value="1"/>
+<triggered_effect trigger="onSelfAttackedOther" action="AddPart" part="Gore13" prefab="#@modfolder:Resources/gore.unity3d?GoreWeapon" localPos="0.01,0.4,0.02" parentTransform="#HeldItemRoot">
+<requirement name="CVarCompare" target="self" cvar="hitrow" operation="GTE" value="3"/>
+</triggered_effect>
+<triggered_effect trigger="onSelfAttackedOther" action="AddPart" part="Gore14" prefab="#@modfolder:Resources/gore.unity3d?GoreWeapon2" localPos="0.0125,0.3,0.045" parentTransform="#HeldItemRoot">
+<requirement name="CVarCompare" target="self" cvar="hitrow" operation="GTE" value="5"/>
+</triggered_effect>
+<triggered_effect trigger="onSelfAttackedOther" action="AddPart" part="Gore15" prefab="#@modfolder:Resources/gore.unity3d?GoreWeapon2" localPos="0.0125,0.4,-0.05" parentTransform="Handle">
+<requirement name="CVarCompare" target="self" cvar="hitrow" operation="GTE" value="8"/>
+</triggered_effect>
+</effect_group>
+<effect_group name="goreclub">
+<requirement name="HoldingItemHasTags" tags="Cluby"/>
+<requirement name="EntityTagCompare" target="other" tags="Entity"/> 
+<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="self" cvar="hitrow" operation="add" value="1"/>
+<triggered_effect trigger="onSelfAttackedOther" action="AddPart" part="Gore16" prefab="#@modfolder:Resources/gore.unity3d?GoreWeapon"  localPos="0.005,0.18,0.02" parentTransform="#HeldItemRoot">
+<requirement name="CVarCompare" target="self" cvar="hitrow" operation="GTE" value="3"/>
+</triggered_effect>
+<triggered_effect trigger="onSelfAttackedOther" action="AddPart" part="Gore17" prefab="#@modfolder:Resources/gore.unity3d?GoreWeapon2" localPos="0.01,0.1,0.03" parentTransform="#HeldItemRoot">
+<requirement name="CVarCompare" target="self" cvar="hitrow" operation="GTE" value="6"/>
+</triggered_effect>
+</effect_group>
+<effect_group name="goreknuckles">
+<requirement name="HoldingItemHasTags" tags="perkBrawler"/>
+<requirement name="HoldingItemHasTags" tags="blunt"/>
+<requirement name="EntityTagCompare" target="other" tags="Entity"/> 
+<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="self" cvar="hitrow" operation="add" value="1">
+<requirement name="IsSecondaryAttack"/>
+</triggered_effect>
+<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="self" cvar="lefthitrow" operation="add" value="1">
+<requirement name="IsPrimaryAttack"/>
+</triggered_effect>
+<triggered_effect trigger="onSelfAttackedOther" action="AddPart" part="LeftHandGore" prefab="#@modfolder:Resources/gore.unity3d?GoreWeapon" localPos="0.03,-0.14,-0.01" parentTransform="Propjoint">
+<requirement name="CVarCompare" target="self" cvar="lefthitrow" operation="GTE" value="3"/>
+<requirement name="IsPrimaryAttack"/>
+</triggered_effect>
+<triggered_effect trigger="onSelfAttackedOther" action="AddPart" part="LeftHandGore2" prefab="#@modfolder:Resources/gore.unity3d?GoreWeapon2" localPos="0.03,-0.19,-0.01" parentTransform="Propjoint">
+<requirement name="CVarCompare" target="self" cvar="lefthitrow" operation="GTE" value="6"/>
+<requirement name="IsPrimaryAttack"/>
+</triggered_effect>
+<triggered_effect trigger="onSelfAttackedOther" action="AddPart" part="RightHandGore" prefab="#@modfolder:Resources/gore.unity3d?GoreWeapon2" localPos="0.03,-0.15,-0.01" parentTransform="#HeldItemRoot">
+<requirement name="CVarCompare" target="self" cvar="hitrow" operation="GTE" value="3"/>
+<requirement name="IsSecondaryAttack"/>
+</triggered_effect>
+<triggered_effect trigger="onSelfAttackedOther" action="AddPart" part="RightHandGore2" prefab="#@modfolder:Resources/gore.unity3d?GoreWeapon" localPos="0.03,-0.16,-0.01" parentTransform="#HeldItemRoot">
+<requirement name="CVarCompare" target="self" cvar="hitrow" operation="GTE" value="6"/>
+<requirement name="IsSecondaryAttack"/>
+</triggered_effect>
+</effect_group>
+<effect_group name="gorepickaxe">
+<requirement name="HoldingItemHasTags" tags="miningTool"/>
+<requirement name="EntityTagCompare" target="other" tags="Entity"/> 
+<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="self" cvar="hitrow" operation="add" value="1"/>
+<triggered_effect trigger="onSelfAttackedOther" action="AddPart" part="Gore18" prefab="#@modfolder:Resources/gore.unity3d?GoreWeapon" localPos="0.005,0.06,0.32" parentTransform="#HeldItemRoot">
+<requirement name="CVarCompare" target="self" cvar="hitrow" operation="GTE" value="3"/>
+</triggered_effect>
+<triggered_effect trigger="onSelfAttackedOther" action="AddPart" part="Gore19" prefab="#@modfolder:Resources/gore.unity3d?GoreWeapon2" localPos="0.005,0.06,0.25" parentTransform="#HeldItemRoot">
+<requirement name="CVarCompare" target="self" cvar="hitrow" operation="GTE" value="3"/>
+</triggered_effect>
+</effect_group>
+
+<effect_group name="goreshotgun">
+<requirement name="HoldingItemHasTags" tags="shotgun"/>
+<requirement name="EntityTagCompare" target="other" tags="Entity"/> 
+<requirement name="TargetRange" target="other" operation="LTE" value="2"/>
+<triggered_effect trigger="onSelfAttackedOther" action="RemovePart" part="GoreShotgun"/>
+<!-- <triggered_effect trigger="onSelfAttackedOther" action="AttachPrefabToHeldItem" prefab="#@modfolder:Resources/gore.unity3d?GoreRWeapon" parent_transform="Attachments" local_offset="0,-0.2,0.5" local_rotation="0,-90,0"> -->
+<triggered_effect trigger="onSelfAttackedOther" action="AddPart" part="GoreShotgun" prefab="#@modfolder:Resources/gore.unity3d?GoreRWeapon" localPos="0,-0.2,0.5" localRot="0,-90,0" parentTransform="Attachments">
+<requirement name="HoldingItemHasTags" tags="modGunShotgunTubeExtenderMagazine"/>
+<requirement name="CVarCompare" target="self" cvar="hitrow" operation="GTE" value="1"/>
+</triggered_effect>
+<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="self" cvar="hitrow" operation="add" value="1"/>
+<triggered_effect trigger="onSelfAttackedOther" action="AddPart" part="GoreShotgun" prefab="#@modfolder:Resources/gore.unity3d?GoreRWeapon" localPos="0,-0.2,0.5" localRot="0,-90,0" parentTransform="Attachments">
+<requirement name="!HoldingItemHasTags" tags="modGunShotgunTubeExtenderMagazine,flaredBarrel"/>
+<requirement name="CVarCompare" target="self" cvar="hitrow" operation="GTE" value="1"/>
+</triggered_effect>
+<triggered_effect trigger="onSelfAttackedOther" action="AddPart" part="GoreShotgun" prefab="#@modfolder:Resources/gore.unity3d?GoreRWeapon" localPos="0,-0.2,0.25" localRot="0,-90,0" parentTransform="Attachments">
+<requirement name="!HoldingItemHasTags" tags="modGunShotgunTubeExtenderMagazine"/>
+<requirement name="HoldingItemHasTags" tags="flaredBarrel"/>
+<requirement name="CVarCompare" target="self" cvar="hitrow" operation="GTE" value="1"/>
+</triggered_effect>
+
+</effect_group>
+<effect_group name="dismember ranged">
+<requirement name="HoldingItemHasTags" tags="melee,ranged"/>
+<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="tnohead" operation="set" value="0"/>
+<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="tnoleftarm" operation="set" value="0"/>
+<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="tnorightarm" operation="set" value="0"/>
+<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="tnoleftlowleg" operation="set" value="0"/>
+<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="tnoleftupleg" operation="set" value="0"/>
+<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="tnorightlowleg" operation="set" value="0"/>
+<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="tnorightupleg" operation="set" value="0"/>
+<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="tnohead" operation="set" value="1">
+<requirement name="HitLocation" body_parts="Head"/>
+</triggered_effect>
+<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="tnoleftarm" operation="set" value="1">
+<requirement name="HitLocation" body_parts="LeftUpperArm,LeftLowerArm"/>
+</triggered_effect>
+<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="tnorightarm" operation="set" value="1">
+<requirement name="HitLocation" body_parts="RightUpperArm,RightLowerArm"/>
+</triggered_effect>
+<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="tnoleftlowleg" operation="set" value="1">
+<requirement name="HitLocation" body_parts="LeftLowerLeg"/>
+</triggered_effect>
+<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="tnoleftupleg" operation="set" value="1">
+<requirement name="HitLocation" body_parts="LeftUpperLeg"/>
+</triggered_effect>
+<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="tnorightlowleg" operation="set" value="1">
+<requirement name="HitLocation" body_parts="RightLowerLeg"/>
+</triggered_effect>
+<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="tnorightupleg" operation="set" value="1">
+<requirement name="HitLocation" body_parts="RightUpperLeg"/>
+</triggered_effect>
+
+<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" buff="GoreCheckTemp"/> 
+<!-- <triggered_effect trigger="onSelfKilledOther" action="AddBuff" target="self" buff="GoreFailCheck"/>  -->
+<!-- </triggered_effect> -->
+</effect_group>
+<effect_group name="goreupdater">
+<triggered_effect trigger="onDismember" action="AddBuff" target="self" buff="elcalculator"/> 
+<triggered_effect trigger="onDismember" action="AddBuff" target="other" buff="elcalculatorself"/> 
+<triggered_effect trigger="onDismember" action="ModifyCVar" target="other" cvar="demembred" operation="set" value="1"/>
+<!-- <triggered_effect trigger="onDismember" action="RemoveBuff" target="other" buff="GoreCheckTemp"/>  -->
+<!-- <triggered_effect trigger="onDismember" action="AddBuff" target="other" buff="GoreCheckTemp"/>  -->
+<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="self" buff="bodycalc"/> 
+<!-- <triggered_effect trigger="onSelfKilledOther" action="AddBuff" target="other" buff="GoreCheckTemp"/>  -->
+<!-- <triggered_effect trigger="onSelfKilledOther" action="RemoveBuff" target="other" buff="GoreCheckTemp"/>  -->
+
+</effect_group>
+
+		 <effect_group name="Hit Counter Melee">
+			<!-- <requirement name="EntityTagCompare" target="other" tags="armored"/> -->
+			<requirement name="HoldingItemHasTags" tags="melee"/>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="torsohit" operation="add" value="1">
+			 <requirement name="HitLocation" body_parts="Torso"/>
+		</triggered_effect>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="headhit" operation="add" value="1">
+			<requirement name="HitLocation" body_parts="Head"/>
+		</triggered_effect>
+					<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="uparmlefthit" operation="add" value="1">
+			 <requirement name="HitLocation" body_parts="LeftUpperArm,LeftLowerArm"/>
+		</triggered_effect>
+							<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="uparmrighthit" operation="add" value="1">
+			 <requirement name="HitLocation" body_parts="RightUpperArm,RightLowerArm"/>
+		</triggered_effect>
+							<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="upleglefthit" operation="add" value="1">
+			 <requirement name="HitLocation" body_parts="LeftUpperLeg"/>
+		</triggered_effect>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="lowleglefthit" operation="add" value="1">
+			<requirement name="HitLocation" body_parts="LeftLowerLeg"/>
+		</triggered_effect>
+							<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="uplegrighthit" operation="add" value="1">
+			 <requirement name="HitLocation" body_parts="RightUpperLeg"/>
+		</triggered_effect>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="lowlegrighthit" operation="add" value="1">
+			<requirement name="HitLocation" body_parts="RightLowerLeg"/>
+		</triggered_effect>
+					<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="torsohit" operation="add" value="1">
+			 <requirement name="HitLocation" body_parts="Torso"/>
+			 <requirement name="IsSecondaryAttack"/>
+		</triggered_effect>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="headhit" operation="add" value="1">
+			<requirement name="HitLocation" body_parts="Head"/>
+			<requirement name="IsSecondaryAttack"/>
+		</triggered_effect>
+							<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="uparmlefthit" operation="add" value="1">
+			 <requirement name="HitLocation" body_parts="LeftUpperArm,LeftLowerArm"/>
+			 <requirement name="IsSecondaryAttack"/>
+		</triggered_effect>
+							<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="uparmrighthit" operation="add" value="1">
+			 <requirement name="HitLocation" body_parts="RightUpperArm,RightLowerArm"/>
+			 <requirement name="IsSecondaryAttack"/>
+		</triggered_effect>
+							<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="upleglefthit" operation="add" value="1">
+			 <requirement name="HitLocation" body_parts="LeftUpperLeg"/>
+			 <requirement name="IsSecondaryAttack"/>
+		</triggered_effect>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="lowleglefthit" operation="add" value="1">
+			<requirement name="HitLocation" body_parts="LeftLowerLeg"/>
+			<requirement name="IsSecondaryAttack"/>
+		</triggered_effect>
+							<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="uplegrighthit" operation="add" value="1">
+			 <requirement name="HitLocation" body_parts="RightUpperLeg"/>
+			 <requirement name="IsSecondaryAttack"/>
+		</triggered_effect>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="lowlegrighthit" operation="add" value="1">
+			<requirement name="HitLocation" body_parts="RightLowerLeg"/>
+			<requirement name="IsSecondaryAttack"/>
+		</triggered_effect>
+	
+			</effect_group>
+					 <effect_group name="Hit Counter Ranged">
+			<!-- <requirement name="EntityTagCompare" target="other" tags="armored"/> -->
+			<requirement name="HoldingItemHasTags" tags="ranged"/>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="torsohit" operation="add" value="3">
+			 <requirement name="HitLocation" body_parts="Torso"/>
+		</triggered_effect>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="headhit" operation="add" value="5">
+			<requirement name="HitLocation" body_parts="Head"/>
+		</triggered_effect>
+					<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="uparmlefthit" operation="add" value="3">
+			 <requirement name="HitLocation" body_parts="LeftUpperArm,LeftLowerArm"/>
+		</triggered_effect>
+							<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="uparmrighthit" operation="add" value="3">
+			 <requirement name="HitLocation" body_parts="RightUpperArm,RightLowerArm"/>
+		</triggered_effect>
+							<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="upleglefthit" operation="add" value="3">
+			 <requirement name="HitLocation" body_parts="LeftUpperLeg"/>
+		</triggered_effect>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="lowleglefthit" operation="add" value="3">
+			<requirement name="HitLocation" body_parts="LeftLowerLeg"/>
+		</triggered_effect>
+							<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="uplegrighthit" operation="add" value="3">
+			 <requirement name="HitLocation" body_parts="RightUpperLeg"/>
+		</triggered_effect>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="lowlegrighthit" operation="add" value="3">
+			<requirement name="HitLocation" body_parts="RightLowerLeg"/>
+		</triggered_effect>
+			</effect_group>
+			
+			
+ </append>
+ 
+ 
+
+<append xpath="/buffs">	
+
+							<buff name="BuffNoHead">
+		<stack_type value="replace"/>
+			<update_rate value="2"/>
+		<duration value="0.1"/>
+		<effect_group>
+			</effect_group>
+	</buff>
+	
+								<buff name="GoreCheckTemp" remove_on_death="false">
+		<stack_type value="ignore"/>
+		<update_rate value="0.1"/>
+		<duration value="0.1"/>
+		<effect_group name="Body Hit Animal specifics">
+		<!-- RABBIT -->
+				<triggered_effect trigger="onSelfBuffRemove" action="AttachPrefabToEntity" prefab="#@modfolder:Resources/gore.unity3d?GoreAnimal" parent_transform="Graphics"  local_offset="0,0.02,0.1">
+						<requirement name="EntityTagCompare" target="self" tags="rabbit"/>
+				<requirement name="CVarCompare" target="self" cvar="headhit" operation="GTE" value="1"/>
+		</triggered_effect>
+				<triggered_effect trigger="onSelfBuffRemove" action="AttachPrefabToEntity" prefab="#@modfolder:Resources/gore.unity3d?GoreAnimal2" parent_transform="Graphics"  local_offset="0,0,-0.1" local_rotation="-90,90,0">
+						<requirement name="EntityTagCompare" target="self" tags="rabbit"/>	
+				<requirement name="CVarCompare" target="self" cvar="torsohit" operation="GTE" value="1"/>
+		</triggered_effect>		
+		<!-- CHICKEN -->
+				<triggered_effect trigger="onSelfBuffRemove" action="AttachPrefabToEntity" prefab="#@modfolder:Resources/gore.unity3d?GoreAnimal2" parent_transform="Graphics"  local_offset="0,0,0" local_rotation="-90,90,0">
+						<requirement name="EntityTagCompare" target="self" tags="chicken"/>
+				<requirement name="CVarCompare" target="self" cvar="torsohit" operation="GTE" value="1"/>
+		</triggered_effect>		
+		<!-- SNAKE -->
+				<triggered_effect trigger="onSelfBuffRemove" action="AttachPrefabToEntity" prefab="#@modfolder:Resources/gore.unity3d?GoreAnimal" parent_transform="head"  local_offset="0,0,0.05" local_rotation="-90,90,0">
+						<requirement name="EntityTagCompare" target="self" tags="snake"/>
+				<requirement name="CVarCompare" target="self" cvar="headhit" operation="GTE" value="1"/>
+		</triggered_effect>
+				<triggered_effect trigger="onSelfBuffRemove" action="AttachPrefabToEntity" prefab="#@modfolder:Resources/gore.unity3d?GoreAnimal2" parent_transform="body15"  local_offset="0,0,0" local_rotation="-90,90,0">
+						<requirement name="EntityTagCompare" target="self" tags="snake"/>
+				<requirement name="CVarCompare" target="self" cvar="torsohit" operation="GTE" value="1"/>
+		</triggered_effect>			
+          <!-- VULTURE -->
+			<triggered_effect trigger="onSelfBuffRemove" action="AttachPrefabToEntity" prefab="#@modfolder:Resources/gore.unity3d?GoreSplash" parent_transform="Head"  local_offset="0,0,0" local_rotation="0,0,0">
+				<requirement name="CVarCompare" target="self" cvar="headhit" operation="GTE" value="1"/>
+				<requirement name="EntityTagCompare" target="self" tags="vulture"/>
+		</triggered_effect>	
+				<triggered_effect trigger="onSelfBuffRemove" action="AttachPrefabToEntity" prefab="#@modfolder:Resources/gore.unity3d?GoreAnimal2" parent_transform="Spine3"  local_offset="0,0.2,0.2" local_rotation="-90,90,0">
+				<requirement name="EntityTagCompare" target="self" tags="vulture"/>	
+				<requirement name="CVarCompare" target="self" cvar="torsohit" operation="GTE" value="1"/>
+		</triggered_effect>		
+						<triggered_effect trigger="onSelfBuffRemove" action="AttachPrefabToEntity" prefab="#@modfolder:Resources/gore.unity3d?GoreAnimal2" parent_transform="Spine3"  local_offset="0,0.2,0.2" local_rotation="-90,90,0">
+				<requirement name="EntityTagCompare" target="self" tags="vulture"/>	
+				<requirement name="CVarCompare" target="self" cvar="uparmlefthit" operation="GTE" value="1"/>
+		</triggered_effect>		
+						<triggered_effect trigger="onSelfBuffRemove" action="AttachPrefabToEntity" prefab="#@modfolder:Resources/gore.unity3d?GoreAnimal2" parent_transform="Spine3"  local_offset="0,0.2,0.2" local_rotation="-90,90,0">
+				<requirement name="EntityTagCompare" target="self" tags="vulture"/>	
+				<requirement name="CVarCompare" target="self" cvar="uparmrighthit" operation="GTE" value="1"/>
+		</triggered_effect>		
+		
+		</effect_group>
+		
+		
+		<effect_group name="4 Legged Boys">
+		<requirement name="EntityTagCompare" target="self" tags="boar,coyote,wolf,deer,mountainlion,dog,bear"/>	
+			<triggered_effect trigger="onSelfBuffRemove" action="AttachPrefabToEntity" prefab="#@modfolder:Resources/gore.unity3d?GoreSplashFat" parent_transform="Spine1"  local_offset="0.12,0,-0.2" local_rotation="0,90,0">	
+				<requirement name="CVarCompare" target="self" cvar="torsohit" operation="GTE" value="1"/>
+		</triggered_effect>	
+						<triggered_effect trigger="onSelfBuffRemove" action="RemovePrefabFromEntity" prefab="/GoreSplashFat" parent_transform="Spine1" >	
+				<requirement name="CVarCompare" target="self" cvar="torsohit" operation="GTE" value="5"/>
+		</triggered_effect>		
+					<triggered_effect trigger="onSelfBuffRemove" action="AttachPrefabToEntity" prefab="#@modfolder:Resources/gore.unity3d?GoreSplashFat2" parent_transform="Spine1"  local_offset="0.12,0,-0.2" local_rotation="0,90,0">	
+				<requirement name="CVarCompare" target="self" cvar="torsohit" operation="GTE" value="5"/>
+		</triggered_effect>	
+			<triggered_effect trigger="onSelfBuffRemove" action="AttachPrefabToEntity" prefab="#@modfolder:Resources/gore.unity3d?GoreSplash" parent_transform="Head"  local_offset="0,0,0.25" local_rotation="0,0,0">
+				<requirement name="CVarCompare" target="self" cvar="headhit" operation="GTE" value="1"/>
+		</triggered_effect>	
+								<triggered_effect trigger="onSelfBuffRemove" action="RemovePrefabFromEntity" prefab="/GoreSplash" parent_transform="Head" >	
+				<requirement name="CVarCompare" target="self" cvar="headhit" operation="GTE" value="6"/>
+		</triggered_effect>		
+			<triggered_effect trigger="onSelfBuffRemove" action="AttachPrefabToEntity" prefab="#@modfolder:Resources/gore.unity3d?GoreSplashAnimal2" parent_transform="Head"  local_offset="0,0,0.25" local_rotation="0,0,0">
+				<requirement name="CVarCompare" target="self" cvar="headhit" operation="GTE" value="6"/>
+		</triggered_effect>	
+		
+				<triggered_effect trigger="onSelfBuffRemove" action="AttachPrefabToEntity" prefab="#@modfolder:Resources/gore.unity3d?GoreAnimalLeg" parent_transform="LeftHand"  local_offset="-0.02,0,0" local_rotation="0,-90,0">
+				<requirement name="CVarCompare" target="self" cvar="uparmlefthit" operation="GTE" value="1"/>
+		</triggered_effect>	
+		<triggered_effect trigger="onSelfBuffRemove" action="AttachPrefabToEntity" prefab="#@modfolder:Resources/gore.unity3d?GoreAnimalLeg" parent_transform="LeftHand"  local_offset="-0.02,0,0" local_rotation="0,-90,0">
+				<requirement name="CVarCompare" target="self" cvar="lowarmlefthit" operation="GTE" value="1"/>
+		</triggered_effect>			
+		<triggered_effect trigger="onSelfBuffRemove" action="AttachPrefabToEntity" prefab="#@modfolder:Resources/gore.unity3d?GoreAnimalLeg" parent_transform="LeftFoot"  local_offset="-0.02,0,0" local_rotation="0,-90,0">
+				<requirement name="CVarCompare" target="self" cvar="upleglefthit" operation="GTE" value="1"/>
+		</triggered_effect>	
+		<triggered_effect trigger="onSelfBuffRemove" action="AttachPrefabToEntity" prefab="#@modfolder:Resources/gore.unity3d?GoreAnimalLeg" parent_transform="LeftFoot"  local_offset="-0.02,0,0" local_rotation="0,-90,0">
+				<requirement name="CVarCompare" target="self" cvar="lowleglefthit" operation="GTE" value="1"/>
+		</triggered_effect>			
+		
+				<triggered_effect trigger="onSelfBuffRemove" action="AttachPrefabToEntity" prefab="#@modfolder:Resources/gore.unity3d?GoreAnimalLeg" parent_transform="RightFoot"  local_offset="0.02,0,0" local_rotation="0,90,0">	
+				<requirement name="CVarCompare" target="self" cvar="uplegrighthit" operation="GTE" value="1"/>
+		</triggered_effect>	
+		<triggered_effect trigger="onSelfBuffRemove" action="AttachPrefabToEntity" prefab="#@modfolder:Resources/gore.unity3d?GoreAnimalLeg" parent_transform="RightFoot"  local_offset="0.02,0,0" local_rotation="0,90,0">
+				<requirement name="CVarCompare" target="self" cvar="lowlegrighthit" operation="GTE" value="1"/>
+		</triggered_effect>		
+				<triggered_effect trigger="onSelfBuffRemove" action="AttachPrefabToEntity" prefab="#@modfolder:Resources/gore.unity3d?GoreAnimalLeg" parent_transform="RightHand"  local_offset="0.02,0,0" local_rotation="0,90,0">	
+				<requirement name="CVarCompare" target="self" cvar="uparmrighthit" operation="GTE" value="1"/>
+		</triggered_effect>	
+		<triggered_effect trigger="onSelfBuffRemove" action="AttachPrefabToEntity" prefab="#@modfolder:Resources/gore.unity3d?GoreAnimalLeg" parent_transform="RightHand"  local_offset="0.02,0,0" local_rotation="0,90,0">
+				<requirement name="CVarCompare" target="self" cvar="lowarmrighthit" operation="GTE" value="1"/>
+		</triggered_effect>				
+         </effect_group>
+		 
+		 
+					<effect_group name="Body Hit Tier 1">
+					<requirement name="EntityTagCompare" target="self" tags="zombie"/>
+					<!-- HEAD -->
+					<triggered_effect trigger="onSelfBuffRemove" action="AttachPrefabToEntity" prefab="#@modfolder:Resources/gore.unity3d?Proj" parent_transform="Head"  local_offset="0,0,0.05">
+				<requirement name="CVarCompare" target="self" cvar="headhit" operation="GTE" value="2"/>
+				<requirement name="CVarCompare" target="self" cvar="nohead" operation="Equals" value="0"/>
+		</triggered_effect>
+		        <!-- TORSO -->
+		<triggered_effect trigger="onSelfBuffRemove" action="AttachPrefabToEntity" prefab="#@modfolder:Resources/gore.unity3d?GoreSplash" parent_transform="Spine3"  local_offset="0,0,0">
+				<requirement name="CVarCompare" target="self" cvar="torsohit" operation="GTE" value="2"/>
+				 <requirement name="!EntityTagCompare" target="self" tags="Fat"/>
+		</triggered_effect>
+		        <!-- TORSO FAT -->
+		<triggered_effect trigger="onSelfBuffRemove" action="AttachPrefabToEntity" prefab="#@modfolder:Resources/gore.unity3d?GoreSplashFat" parent_transform="Spine3"  local_offset="0,0.08,0.2">
+				<requirement name="CVarCompare" target="self" cvar="torsohit" operation="GTE" value="2"/>
+				 <requirement name="EntityTagCompare" target="self" tags="Fat"/>
+		</triggered_effect>		
+		     <!-- ARMS -->
+		<triggered_effect trigger="onSelfBuffRemove" action="AttachPrefabToEntity" prefab="#@modfolder:Resources/gore.unity3d?GoreArm" parent_transform="LeftArm" local_offset="-0.13,-0.055,0" local_rotation="-90,90,0">
+				<requirement name="CVarCompare" target="self" cvar="uparmlefthit" operation="GTE" value="2"/>
+				<requirement name="CVarCompare" target="self" cvar="noleftarm" operation="Equals" value="0"/>
+		</triggered_effect>		
+		<triggered_effect trigger="onSelfBuffRemove" action="AttachPrefabToEntity" prefab="#@modfolder:Resources/gore.unity3d?GoreArmLow" parent_transform="LeftForeArm" local_offset="-0.13,-0.065,0" local_rotation="-90,90,0">
+				<requirement name="CVarCompare" target="self" cvar="uparmlefthit" operation="GTE" value="2"/>
+				<requirement name="CVarCompare" target="self" cvar="noleftarm" operation="Equals" value="0"/>
+		</triggered_effect>		
+		<triggered_effect trigger="onSelfBuffRemove" action="AttachPrefabToEntity" prefab="#@modfolder:Resources/gore.unity3d?GoreArm" parent_transform="RightArm" local_offset="0.13,0.055,0" local_rotation="90,-90,0">
+						<requirement name="CVarCompare" target="self" cvar="uparmrighthit" operation="GTE" value="2"/>
+						<requirement name="CVarCompare" target="self" cvar="norightarm" operation="Equals" value="0"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfBuffRemove" action="AttachPrefabToEntity" prefab="#@modfolder:Resources/gore.unity3d?GoreArmLow" parent_transform="RightForeArm" local_offset="0.13,0.065,0" local_rotation="90,-90,0">		
+				<requirement name="CVarCompare" target="self" cvar="uparmrighthit" operation="GTE" value="2"/>
+				<requirement name="CVarCompare" target="self" cvar="norightarm" operation="Equals" value="0"/>
+		</triggered_effect>		
+		    <!-- LEGS -->
+		<triggered_effect trigger="onSelfBuffRemove" action="AttachPrefabToEntity" prefab="#@modfolder:Resources/gore.unity3d?GoreLeg" parent_transform="LeftUpLeg" local_offset="0,-0.205,0.07" local_rotation="0,0,0">
+						<requirement name="CVarCompare" target="self" cvar="upleglefthit" operation="GTE" value="2"/>
+						<requirement name="CVarCompare" target="self" cvar="noleftupleg" operation="Equals" value="0"/>
+		</triggered_effect>		
+		<triggered_effect trigger="onSelfBuffRemove" action="AttachPrefabToEntity" prefab="#@modfolder:Resources/gore.unity3d?GoreLegLow" parent_transform="LeftLeg" local_offset="0,-0.195,-0.06" local_rotation="0,0,0">
+						<requirement name="CVarCompare" target="self" cvar="lowleglefthit" operation="GTE" value="2"/>
+						<requirement name="CVarCompare" target="self" cvar="noleftlowleg" operation="Equals" value="0"/>
+						<requirement name="CVarCompare" target="self" cvar="noleftupleg" operation="Equals" value="0"/>
+		</triggered_effect>		
+		<triggered_effect trigger="onSelfBuffRemove" action="AttachPrefabToEntity" prefab="#@modfolder:Resources/gore.unity3d?GoreLeg" parent_transform="RightUpLeg" local_offset="0,-0.205,0.07" local_rotation="0,0,0">
+						<requirement name="CVarCompare" target="self" cvar="uplegrighthit" operation="GTE" value="2"/>
+						<requirement name="CVarCompare" target="self" cvar="norightupleg" operation="Equals" value="0"/>
+		</triggered_effect>		
+		<triggered_effect trigger="onSelfBuffRemove" action="AttachPrefabToEntity" prefab="#@modfolder:Resources/gore.unity3d?GoreLegLow" parent_transform="RightLeg" local_offset="0,-0.195,-0.06" local_rotation="0,0,0">		
+				<requirement name="CVarCompare" target="self" cvar="lowlegrighthit" operation="GTE" value="2"/>
+				<requirement name="CVarCompare" target="self" cvar="norightlowleg" operation="Equals" value="0"/>
+				<requirement name="CVarCompare" target="self" cvar="norightupleg" operation="Equals" value="0"/>
+		</triggered_effect>			
+			</effect_group>
+			
+					<effect_group name="Body Hit Tier 2">		
+					<requirement name="EntityTagCompare" target="self" tags="zombie"/>
+					<!-- //TORSO -->
+		<triggered_effect trigger="onSelfBuffRemove" action="RemovePrefabFromEntity" target="self" prefab="/GoreSplash" parent_transform="Spine3">
+		<requirement name="CVarCompare" target="self" cvar="torsohit" operation="GTE" value="5"/>
+		</triggered_effect>				
+		<triggered_effect trigger="onSelfBuffRemove" action="RemovePrefabFromEntity" target="self" prefab="/GoreSplashFat" parent_transform="Spine3">
+		<requirement name="CVarCompare" target="self" cvar="torsohit" operation="GTE" value="5"/>
+		</triggered_effect>							
+		<triggered_effect trigger="onSelfBuffRemove" action="AttachPrefabToEntity" prefab="#@modfolder:Resources/gore.unity3d?GoreSplash2" parent_transform="Spine3">
+		        <requirement name="CVarCompare" target="self" cvar="torsohit" operation="GTE" value="5"/>
+				<requirement name="!EntityTagCompare" target="self" tags="Fat"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfBuffRemove" action="AttachPrefabToEntity" prefab="#@modfolder:Resources/gore.unity3d?GoreSplashFat2" parent_transform="Spine3"  local_offset="0,0.08,0.2">
+		        <requirement name="CVarCompare" target="self" cvar="torsohit" operation="GTE" value="5"/>
+				<requirement name="EntityTagCompare" target="self" tags="Fat"/>
+		</triggered_effect>		
+		<!-- HEAD -->
+		<triggered_effect trigger="onSelfBuffRemove" action="RemovePrefabFromEntity" target="self" prefab="/Proj" parent_transform="Head">
+		<requirement name="CVarCompare" target="self" cvar="headhit" operation="GTE" value="5"/>
+		</triggered_effect>							
+		<triggered_effect trigger="onSelfBuffRemove" action="AttachPrefabToEntity" prefab="#@modfolder:Resources/gore.unity3d?Proj2" parent_transform="Head" local_offset="0,0,0.05">
+		        <requirement name="CVarCompare" target="self" cvar="headhit" operation="GTE" value="5"/>
+				<requirement name="CVarCompare" target="self" cvar="nohead" operation="Equals" value="0"/>
+		</triggered_effect>		
+		<!-- ARMS -->
+				<triggered_effect trigger="onSelfBuffRemove" action="RemovePrefabFromEntity" target="self" prefab="/GoreArm" parent_transform="LeftArm">
+		<requirement name="CVarCompare" target="self" cvar="uparmlefthit" operation="GTE" value="4"/>
+		</triggered_effect>					
+				<triggered_effect trigger="onSelfBuffRemove" action="RemovePrefabFromEntity" target="self" prefab="/GoreArmLow" parent_transform="LeftForeArm">
+		<requirement name="CVarCompare" target="self" cvar="uparmlefthit" operation="GTE" value="4"/>
+		</triggered_effect>		
+				<triggered_effect trigger="onSelfBuffRemove" action="RemovePrefabFromEntity" target="self" prefab="/GoreArm" parent_transform="RightArm">
+		<requirement name="CVarCompare" target="self" cvar="uparmrighthit" operation="GTE" value="4"/>
+		</triggered_effect>					
+				<triggered_effect trigger="onSelfBuffRemove" action="RemovePrefabFromEntity" target="self" prefab="/GoreArmLow" parent_transform="RightForeArm">
+		<requirement name="CVarCompare" target="self" cvar="uparmrighthit" operation="GTE" value="4"/>
+		</triggered_effect>										
+				<triggered_effect trigger="onSelfBuffRemove" action="AttachPrefabToEntity" prefab="#@modfolder:Resources/gore.unity3d?GoreArm2" parent_transform="LeftArm" local_offset="-0.13,-0.055,0" local_rotation="-90,90,0">
+				<requirement name="CVarCompare" target="self" cvar="uparmlefthit" operation="GTE" value="4"/>
+				<requirement name="CVarCompare" target="self" cvar="noleftarm" operation="Equals" value="0"/>
+		</triggered_effect>		
+		<triggered_effect trigger="onSelfBuffRemove" action="AttachPrefabToEntity" prefab="#@modfolder:Resources/gore.unity3d?GoreArmLow2" parent_transform="LeftForeArm" local_offset="-0.13,-0.065,0" local_rotation="-90,90,0">
+				<requirement name="CVarCompare" target="self" cvar="uparmlefthit" operation="GTE" value="4"/>
+				<requirement name="CVarCompare" target="self" cvar="noleftarm" operation="Equals" value="0"/>
+		</triggered_effect>		
+		<triggered_effect trigger="onSelfBuffRemove" action="AttachPrefabToEntity" prefab="#@modfolder:Resources/gore.unity3d?GoreArm2" parent_transform="RightArm" local_offset="0.13,0.055,0" local_rotation="90,-90,0">
+						<requirement name="CVarCompare" target="self" cvar="uparmrighthit" operation="GTE" value="4"/>
+						<requirement name="CVarCompare" target="self" cvar="norightarm" operation="Equals" value="0"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfBuffRemove" action="AttachPrefabToEntity" prefab="#@modfolder:Resources/gore.unity3d?GoreArmLow2" parent_transform="RightForeArm" local_offset="0.13,0.065,0" local_rotation="90,-90,0">		
+				<requirement name="CVarCompare" target="self" cvar="uparmrighthit" operation="GTE" value="4"/>
+				<requirement name="CVarCompare" target="self" cvar="norightarm" operation="Equals" value="0"/>
+		</triggered_effect>		
+		<!-- LEGS -->
+		<triggered_effect trigger="onSelfBuffRemove" action="RemovePrefabFromEntity" target="self" prefab="/GoreLeg" parent_transform="LeftUpLeg">
+		<requirement name="CVarCompare" target="self" cvar="upleglefthit" operation="GTE" value="4"/>
+		</triggered_effect>		
+		<triggered_effect trigger="onSelfBuffRemove" action="RemovePrefabFromEntity" target="self" prefab="/GoreLegLow" parent_transform="LeftLeg">
+		<requirement name="CVarCompare" target="self" cvar="lowleglefthit" operation="GTE" value="4"/>
+		</triggered_effect>		
+		<triggered_effect trigger="onSelfBuffRemove" action="RemovePrefabFromEntity" target="self" prefab="/GoreLeg" parent_transform="RightUpLeg">
+		<requirement name="CVarCompare" target="self" cvar="uplegrighthit" operation="GTE" value="4"/>
+		</triggered_effect>		
+		<triggered_effect trigger="onSelfBuffRemove" action="RemovePrefabFromEntity" target="self" prefab="/GoreLegLow" parent_transform="RightLeg">
+		<requirement name="CVarCompare" target="self" cvar="lowlegrighthit" operation="GTE" value="4"/>
+		</triggered_effect>						
+				<triggered_effect trigger="onSelfBuffRemove" action="AttachPrefabToEntity" prefab="#@modfolder:Resources/gore.unity3d?GoreLeg2" parent_transform="LeftUpLeg" local_offset="0,-0.205,0.04" local_rotation="0,0,0">
+						<requirement name="CVarCompare" target="self" cvar="upleglefthit" operation="GTE" value="4"/>
+						<requirement name="CVarCompare" target="self" cvar="noleftupleg" operation="Equals" value="0"/>
+		</triggered_effect>		
+		<triggered_effect trigger="onSelfBuffRemove" action="AttachPrefabToEntity" prefab="#@modfolder:Resources/gore.unity3d?GoreLegLow2" parent_transform="LeftLeg" local_offset="0,-0.195,-0.08" local_rotation="0,0,0">
+						<requirement name="CVarCompare" target="self" cvar="lowleglefthit" operation="GTE" value="4"/>
+						<requirement name="CVarCompare" target="self" cvar="noleftlowleg" operation="Equals" value="0"/>
+						<requirement name="CVarCompare" target="self" cvar="noleftupleg" operation="Equals" value="0"/>
+		</triggered_effect>		
+		<triggered_effect trigger="onSelfBuffRemove" action="AttachPrefabToEntity" prefab="#@modfolder:Resources/gore.unity3d?GoreLeg2" parent_transform="RightUpLeg" local_offset="0,-0.205,0.04" local_rotation="0,0,0">
+						<requirement name="CVarCompare" target="self" cvar="uplegrighthit" operation="GTE" value="4"/>
+						<requirement name="CVarCompare" target="self" cvar="norightupleg" operation="Equals" value="0"/>
+		</triggered_effect>		
+		<triggered_effect trigger="onSelfBuffRemove" action="AttachPrefabToEntity" prefab="#@modfolder:Resources/gore.unity3d?GoreLegLow2" parent_transform="RightLeg" local_offset="0,-0.195,-0.08" local_rotation="0,0,0">		
+				<requirement name="CVarCompare" target="self" cvar="lowlegrighthit" operation="GTE" value="4"/>
+				<requirement name="CVarCompare" target="self" cvar="norightlowleg" operation="Equals" value="0"/>
+				<requirement name="CVarCompare" target="self" cvar="norightupleg" operation="Equals" value="0"/>
+		</triggered_effect>		
+					</effect_group>
+			
+			
+		<effect_group name="main updater">	
+					<!-- <triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="#@modfolder:Resources/gore.unity3d?GoreSplash" parent_transform="Head"/> -->
+
+			</effect_group>
+
+		
+		<effect_group name="Gore flow on dismember">
+		<!-- DISMEMBER EFFECTS -->
+		<triggered_effect trigger="onSelfBuffRemove" action="AttachPrefabToEntity" target="self" prefab="#@modfolder:Resources/gore.unity3d?GoreHead" parent_transform="HeadGore">
+		<requirement name="CVarCompare" target="self" cvar="nohead" operation="Equals" value="1"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfBuffRemove" action="AttachPrefabToEntity" target="self" prefab="#@modfolder:Resources/gore.unity3d?GoreFlow2" parent_transform="LeftUpperArmGore" local_offset="-0.02,0,0" local_rotation="0,0,180">
+		<requirement name="CVarCompare" target="self" cvar="noleftarm" operation="Equals" value="1"/>
+		</triggered_effect>		
+		
+				<triggered_effect trigger="onSelfBuffRemove" action="AttachPrefabToEntity" target="self" prefab="#@modfolder:Resources/gore.unity3d?GoreFlow2" parent_transform="RightUpperArmGore" local_offset="-0.02,0,0" local_rotation="0,0,180">
+		<requirement name="CVarCompare" target="self" cvar="norightarm" operation="Equals" value="1"/>
+		</triggered_effect>		
+		
+						<triggered_effect trigger="onSelfBuffRemove" action="AttachPrefabToEntity" target="self" prefab="#@modfolder:Resources/gore.unity3d?GoreFlow2" parent_transform="LeftLowerLegGore" local_offset="-0.02,0,0" local_rotation="0,0,140">
+		<requirement name="CVarCompare" target="self" cvar="noleftlowleg" operation="Equals" value="1"/>
+		</triggered_effect>		
+		
+								<triggered_effect trigger="onSelfBuffRemove" action="AttachPrefabToEntity" target="self" prefab="#@modfolder:Resources/gore.unity3d?GoreFlow2" parent_transform="RightLowerLegGore" local_offset="-0.02,0,0" local_rotation="0,0,140">
+		<requirement name="CVarCompare" target="self" cvar="norightlowleg" operation="Equals" value="1"/>
+		</triggered_effect>		
+		
+								<triggered_effect trigger="onSelfBuffRemove" action="AttachPrefabToEntity" target="self" prefab="#@modfolder:Resources/gore.unity3d?GoreFlow2" parent_transform="LeftUpperLegGore" local_offset="-0.02,0,0" local_rotation="0,0,140">
+		<requirement name="CVarCompare" target="self" cvar="noleftupleg" operation="Equals" value="1"/>
+		</triggered_effect>		
+		
+								<triggered_effect trigger="onSelfBuffRemove" action="AttachPrefabToEntity" target="self" prefab="#@modfolder:Resources/gore.unity3d?GoreFlow2" parent_transform="RightUpperLegGore" local_offset="-0.02,0,0" local_rotation="0,0,140">
+		<requirement name="CVarCompare" target="self" cvar="norightupleg" operation="Equals" value="1"/>
+		</triggered_effect>		
+		
+		<!-- REMOVE FLOW DOWN LEGS -->
+										<triggered_effect trigger="onSelfBuffRemove" action="RemovePrefabFromEntity" target="self" prefab="/GoreFlow2" parent_transform="LeftLowerLegGore" local_offset="-0.02,0,0" local_rotation="0,0,140">
+		<requirement name="CVarCompare" target="self" cvar="noleftupleg" operation="Equals" value="1"/>
+		</triggered_effect>		
+										<triggered_effect trigger="onSelfBuffRemove" action="RemovePrefabFromEntity" target="self" prefab="/GoreFlow2" parent_transform="RightLowerLegGore" local_offset="-0.02,0,0" local_rotation="0,0,140">
+		<requirement name="CVarCompare" target="self" cvar="norightupleg" operation="Equals" value="1"/>
+		</triggered_effect>		
+			</effect_group>
+			
+			
+			<effect_group name="Remove body hits on dismember">
+		<!--             REMOVE BODY HITS ON DISMEMBER-->
+												<triggered_effect trigger="onSelfBuffRemove" action="RemovePrefabFromEntity" target="self" prefab="/Proj" parent_transform="Head">
+		<requirement name="CVarCompare" target="self" cvar="nohead" operation="Equals" value="1"/>
+		</triggered_effect>		
+														<triggered_effect trigger="onSelfBuffRemove" action="RemovePrefabFromEntity" target="self" prefab="/Proj2" parent_transform="Head">
+		<requirement name="CVarCompare" target="self" cvar="nohead" operation="Equals" value="1"/>
+		</triggered_effect>		
+		
+												<triggered_effect trigger="onSelfBuffRemove" action="RemovePrefabFromEntity" target="self" prefab="/GoreArm" parent_transform="LeftArm">
+		<requirement name="CVarCompare" target="self" cvar="noleftarm" operation="Equals" value="1"/>
+		</triggered_effect>		
+												<triggered_effect trigger="onSelfBuffRemove" action="RemovePrefabFromEntity" target="self" prefab="/GoreArmLow" parent_transform="LeftForeArm">
+		<requirement name="CVarCompare" target="self" cvar="noleftarm" operation="Equals" value="1"/>
+		</triggered_effect>			
+												<triggered_effect trigger="onSelfBuffRemove" action="RemovePrefabFromEntity" target="self" prefab="/GoreArm2" parent_transform="LeftArm">
+		<requirement name="CVarCompare" target="self" cvar="noleftarm" operation="Equals" value="1"/>
+		</triggered_effect>		
+												<triggered_effect trigger="onSelfBuffRemove" action="RemovePrefabFromEntity" target="self" prefab="/GoreArmLow2" parent_transform="LeftForeArm">
+		<requirement name="CVarCompare" target="self" cvar="noleftarm" operation="Equals" value="1"/>
+		</triggered_effect>					
+
+												<triggered_effect trigger="onSelfBuffRemove" action="RemovePrefabFromEntity" target="self" prefab="/GoreArm" parent_transform="RightArm">
+		<requirement name="CVarCompare" target="self" cvar="norightarm" operation="Equals" value="1"/>
+		</triggered_effect>		
+												<triggered_effect trigger="onSelfBuffRemove" action="RemovePrefabFromEntity" target="self" prefab="/GoreArmLow" parent_transform="RightForeArm">
+		<requirement name="CVarCompare" target="self" cvar="norightarm" operation="Equals" value="1"/>
+		</triggered_effect>		
+												<triggered_effect trigger="onSelfBuffRemove" action="RemovePrefabFromEntity" target="self" prefab="/GoreArm2" parent_transform="RightArm">
+		<requirement name="CVarCompare" target="self" cvar="norightarm" operation="Equals" value="1"/>
+		</triggered_effect>		
+												<triggered_effect trigger="onSelfBuffRemove" action="RemovePrefabFromEntity" target="self" prefab="/GoreArmLow2" parent_transform="RightForeArm">
+		<requirement name="CVarCompare" target="self" cvar="norightarm" operation="Equals" value="1"/>
+		</triggered_effect>						
+		
+
+           <!-- LEFT LEG -->
+												<triggered_effect trigger="onSelfBuffRemove" action="RemovePrefabFromEntity" target="self" prefab="/GoreLeg" parent_transform="LeftUpLeg">
+		<requirement name="CVarCompare" target="self" cvar="noleftupleg" operation="Equals" value="1"/>
+		</triggered_effect>		
+												<triggered_effect trigger="onSelfBuffRemove" action="RemovePrefabFromEntity" target="self" prefab="/GoreLegLow" parent_transform="LeftLeg">
+		<requirement name="CVarCompare" target="self" cvar="noleftlowleg" operation="Equals" value="1"/>
+		</triggered_effect>			
+												<triggered_effect trigger="onSelfBuffRemove" action="RemovePrefabFromEntity" target="self" prefab="/GoreLegLow" parent_transform="LeftLeg">
+		<requirement name="CVarCompare" target="self" cvar="noleftupleg" operation="Equals" value="1"/>
+		</triggered_effect>		
+		
+												<triggered_effect trigger="onSelfBuffRemove" action="RemovePrefabFromEntity" target="self" prefab="/GoreLeg2" parent_transform="LeftUpLeg">
+		<requirement name="CVarCompare" target="self" cvar="noleftupleg" operation="Equals" value="1"/>
+		</triggered_effect>						
+												<triggered_effect trigger="onSelfBuffRemove" action="RemovePrefabFromEntity" target="self" prefab="/GoreLegLow2" parent_transform="LeftLeg">
+		<requirement name="CVarCompare" target="self" cvar="noleftlowleg" operation="Equals" value="1"/>
+		</triggered_effect>			
+												<triggered_effect trigger="onSelfBuffRemove" action="RemovePrefabFromEntity" target="self" prefab="/GoreLegLow2" parent_transform="LeftLeg">
+		<requirement name="CVarCompare" target="self" cvar="noleftupleg" operation="Equals" value="1"/>
+		</triggered_effect>			
+	
+	<!-- //RIGHT LEG -->
+												<triggered_effect trigger="onSelfBuffRemove" action="RemovePrefabFromEntity" target="self" prefab="/GoreLeg" parent_transform="RightUpLeg">
+		<requirement name="CVarCompare" target="self" cvar="norightupleg" operation="Equals" value="1"/>
+		</triggered_effect>		
+												<triggered_effect trigger="onSelfBuffRemove" action="RemovePrefabFromEntity" target="self" prefab="/GoreLegLow" parent_transform="RightLeg">
+		<requirement name="CVarCompare" target="self" cvar="norightlowleg" operation="Equals" value="1"/>
+		</triggered_effect>		
+												<triggered_effect trigger="onSelfBuffRemove" action="RemovePrefabFromEntity" target="self" prefab="/GoreLegLow" parent_transform="RightLeg">
+		<requirement name="CVarCompare" target="self" cvar="norightupleg" operation="Equals" value="1"/>
+		</triggered_effect>				
+		
+												<triggered_effect trigger="onSelfBuffRemove" action="RemovePrefabFromEntity" target="self" prefab="/GoreLeg2" parent_transform="RightUpLeg">
+		<requirement name="CVarCompare" target="self" cvar="norightupleg" operation="Equals" value="1"/>
+		</triggered_effect>		
+												<triggered_effect trigger="onSelfBuffRemove" action="RemovePrefabFromEntity" target="self" prefab="/GoreLegLow2" parent_transform="RightLeg">
+		<requirement name="CVarCompare" target="self" cvar="norightlowleg" operation="Equals" value="1"/>
+		</triggered_effect>	
+												<triggered_effect trigger="onSelfBuffRemove" action="RemovePrefabFromEntity" target="self" prefab="/GoreLegLow2" parent_transform="RightLeg">
+		<requirement name="CVarCompare" target="self" cvar="norightupleg" operation="Equals" value="1"/>
+		</triggered_effect>						
+			</effect_group>
+	</buff>
+	
+								<buff name="bodycalc">
+		<stack_type value="ignore"/>
+		<duration value="0.05"/>
+		<effect_group>
+				<triggered_effect trigger="onSelfBuffRemove" action="RemoveBuff" target="other" buff="GoreCheckTemp"/>
+			</effect_group>
+	</buff>	
+		
+								<!-- <buff name="GoreFailCheck"> -->
+		<!-- <stack_type value="ignore"/> -->
+		<!-- <duration value="0.01"/> -->
+		<!-- <effect_group> -->
+				<!-- <triggered_effect trigger="onSelfBuffRemove" action="AddBuff" target="selfAOE" range="15" buff="GoreCheckRemover"/> -->
+			<!-- </effect_group> -->
+	<!-- </buff>	 -->
+	
+									<!-- <buff name="GoreCheckRemover" remove_on_death="false"> -->
+		<!-- <stack_type value="ignore"/> -->
+		<!-- <duration value="5"/> -->
+		<!-- <effect_group> -->
+				<!-- <triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" target="self" buff="GoreCheckTemp"/> -->
+			<!-- </effect_group> -->
+	<!-- </buff>	 -->
+		
+		
+								<buff name="elcalculator">
+		<stack_type value="ignore"/>
+		<duration value="0.01"/>
+		<effect_group name="Update dismember cvar">
+	<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" target="other" cvar="nohead" operation="set" value="1">
+<requirement name="CVarCompare" target="other" cvar="tnohead" operation="Equals" value="1"/>
+</triggered_effect>
+<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" target="other" cvar="noleftarm" operation="set" value="1">
+<requirement name="CVarCompare" target="other" cvar="tnoleftarm" operation="Equals" value="1"/>
+</triggered_effect>
+<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" target="other" cvar="norightarm" operation="set" value="1">
+<requirement name="CVarCompare" target="other" cvar="tnorightarm" operation="Equals" value="1"/>
+</triggered_effect>
+<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" target="other" cvar="noleftlowleg" operation="set" value="1">
+<requirement name="CVarCompare" target="other" cvar="tnoleftlowleg" operation="Equals" value="1"/>
+</triggered_effect>
+<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" target="other" cvar="noleftupleg" operation="set" value="1">
+<requirement name="CVarCompare" target="other" cvar="tnoleftupleg" operation="Equals" value="1"/>
+</triggered_effect>
+<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" target="other" cvar="norightlowleg" operation="set" value="1">
+<requirement name="CVarCompare" target="other" cvar="tnorightlowleg" operation="Equals" value="1"/>
+</triggered_effect>
+<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" target="other" cvar="norightupleg" operation="set" value="1">
+<requirement name="CVarCompare" target="other" cvar="tnorightupleg" operation="Equals" value="1"/>
+</triggered_effect>
+			</effect_group>
+	</buff>
+	
+								<buff name="elcalculatorself" remove_on_death="false">
+		<stack_type value="ignore"/>
+		<duration value="0.01"/>
+		<effect_group name="Update dismember cvar">
+	<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" target="self" cvar="nohead" operation="set" value="1">
+<requirement name="CVarCompare" target="self" cvar="tnohead" operation="Equals" value="1"/>
+</triggered_effect>
+<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" target="self" cvar="noleftarm" operation="set" value="1">
+<requirement name="CVarCompare" target="self" cvar="tnoleftarm" operation="Equals" value="1"/>
+</triggered_effect>
+<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" target="self" cvar="norightarm" operation="set" value="1">
+<requirement name="CVarCompare" target="self" cvar="tnorightarm" operation="Equals" value="1"/>
+</triggered_effect>
+<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" target="self" cvar="noleftlowleg" operation="set" value="1">
+<requirement name="CVarCompare" target="self" cvar="tnoleftlowleg" operation="Equals" value="1"/>
+</triggered_effect>
+<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" target="self" cvar="noleftupleg" operation="set" value="1">
+<requirement name="CVarCompare" target="self" cvar="tnoleftupleg" operation="Equals" value="1"/>
+</triggered_effect>
+<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" target="self" cvar="norightlowleg" operation="set" value="1">
+<requirement name="CVarCompare" target="self" cvar="tnorightlowleg" operation="Equals" value="1"/>
+</triggered_effect>
+<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" target="self" cvar="norightupleg" operation="set" value="1">
+<requirement name="CVarCompare" target="self" cvar="tnorightupleg" operation="Equals" value="1"/>
+</triggered_effect>
+
+	<triggered_effect trigger="onSelfDied" action="ModifyCVar" target="self" cvar="nohead" operation="set" value="1">
+<requirement name="CVarCompare" target="self" cvar="tnohead" operation="Equals" value="1"/>
+</triggered_effect>
+<triggered_effect trigger="onSelfDied" action="ModifyCVar" target="self" cvar="noleftarm" operation="set" value="1">
+<requirement name="CVarCompare" target="self" cvar="tnoleftarm" operation="Equals" value="1"/>
+</triggered_effect>
+<triggered_effect trigger="onSelfDied" action="ModifyCVar" target="self" cvar="norightarm" operation="set" value="1">
+<requirement name="CVarCompare" target="self" cvar="tnorightarm" operation="Equals" value="1"/>
+</triggered_effect>
+<triggered_effect trigger="onSelfDied" action="ModifyCVar" target="self" cvar="noleftlowleg" operation="set" value="1">
+<requirement name="CVarCompare" target="self" cvar="tnoleftlowleg" operation="Equals" value="1"/>
+</triggered_effect>
+<triggered_effect trigger="onSelfDied" action="ModifyCVar" target="self" cvar="noleftupleg" operation="set" value="1">
+<requirement name="CVarCompare" target="self" cvar="tnoleftupleg" operation="Equals" value="1"/>
+</triggered_effect>
+<triggered_effect trigger="onSelfDied" action="ModifyCVar" target="self" cvar="norightlowleg" operation="set" value="1">
+<requirement name="CVarCompare" target="self" cvar="tnorightlowleg" operation="Equals" value="1"/>
+</triggered_effect>
+<triggered_effect trigger="onSelfDied" action="ModifyCVar" target="self" cvar="norightupleg" operation="set" value="1">
+<requirement name="CVarCompare" target="self" cvar="tnorightupleg" operation="Equals" value="1"/>
+</triggered_effect>
+
+<triggered_effect trigger="onSelfDied" action="RemoveBuff" target="self" buff="elcalculatorself"/>
+			</effect_group>
+	</buff>	
+	
+								<!-- <buff name="elcalculatorself"> -->
+		<!-- <stack_type value="ignore"/> -->
+		<!-- <duration value="0.01"/> -->
+		<!-- <effect_group name="Update dismember cvar"> -->
+	<!-- <triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" target="self" cvar="nohead" operation="set" value="1"> -->
+<!-- <requirement name="CVarCompare" target="self" cvar="tnohead" operation="Equals" value="1"/> -->
+<!-- </triggered_effect> -->
+<!-- <triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" target="self" cvar="noleftarm" operation="set" value="1"> -->
+<!-- <requirement name="CVarCompare" target="self" cvar="tnoleftarm" operation="Equals" value="1"/> -->
+<!-- </triggered_effect> -->
+<!-- <triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" target="self" cvar="norightarm" operation="set" value="1"> -->
+<!-- <requirement name="CVarCompare" target="self" cvar="tnorightarm" operation="Equals" value="1"/> -->
+<!-- </triggered_effect> -->
+<!-- <triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" target="self" cvar="noleftlowleg" operation="set" value="1"> -->
+<!-- <requirement name="CVarCompare" target="self" cvar="tnoleftlowleg" operation="Equals" value="1"/> -->
+<!-- </triggered_effect> -->
+<!-- <triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" target="self" cvar="noleftupleg" operation="set" value="1"> -->
+<!-- <requirement name="CVarCompare" target="self" cvar="tnoleftupleg" operation="Equals" value="1"/> -->
+<!-- </triggered_effect> -->
+<!-- <triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" target="self" cvar="norightlowleg" operation="set" value="1"> -->
+<!-- <requirement name="CVarCompare" target="self" cvar="tnorightlowleg" operation="Equals" value="1"/> -->
+<!-- </triggered_effect> -->
+<!-- <triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" target="self" cvar="norightupleg" operation="set" value="1"> -->
+<!-- <requirement name="CVarCompare" target="self" cvar="tnorightupleg" operation="Equals" value="1"/> -->
+<!-- </triggered_effect> -->
+				<!-- <triggered_effect trigger="onSelfBuffRemove" action="RemoveBuff" target="self" buff="GoreCheckTemp"/> -->
+			<!-- </effect_group> -->
+	<!-- </buff>	 -->
+	
+
+	
+		<buff name="bleedcalculate">
+		<stack_type value="ignore"/>
+		<duration value="0.01"/>
+		<effect_group>
+		<requirement name="NotHasBuff" target="other" buff="bleedingvisual"/>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" target="other" cvar="bleedtorso" operation="set" value="1">
+<requirement name="HitLocation" body_parts="Torso"/>
+</triggered_effect>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" target="other" cvar="bleedleftarm" operation="set" value="1">
+<requirement name="HitLocation" body_parts="LeftUpperArm,LeftLowerArm"/>
+</triggered_effect>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" target="other" cvar="bleedrightarm" operation="set" value="1">
+<requirement name="HitLocation" body_parts="RightUpperArm,RightLowerArm"/>
+</triggered_effect>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" target="other" cvar="bleedrightLeg" operation="set" value="1">
+<requirement name="HitLocation" body_parts="RightUpperLeg,RightLowerLeg"/>
+</triggered_effect>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" target="other" cvar="bleedleftLeg" operation="set" value="1">
+<requirement name="HitLocation" body_parts="LeftUpperLeg,LeftLowerLeg"/>
+</triggered_effect>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" target="other" cvar="bleedhead" operation="set" value="1">
+<requirement name="HitLocation" body_parts="Head"/>
+</triggered_effect>
+		<triggered_effect trigger="onSelfBuffRemove" action="AddBuff" target="other" buff="bleedingvisual"/>
+
+			</effect_group>
+	</buff>
+	
+			<buff name="bleedingvisual">
+		<stack_type value="ignore"/>
+		<duration value="0"/>
+		<effect_group name="start bleed">
+		<triggered_effect trigger="onSelfBuffUpdate" action="AttachPrefabToEntity" target="self" prefab="#@modfolder:Resources/gore.unity3d?GoreFlow" parent_transform="HeadGore">
+		<requirement name="CVarCompare" target="self" cvar="bleedhead" operation="Equals" value="1"/>
+		</triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AttachPrefabToEntity" target="self" prefab="#@modfolder:Resources/gore.unity3d?GoreFlow" parent_transform="Head">
+		<requirement name="CVarCompare" target="self" cvar="bleedhead" operation="Equals" value="1"/>
+		<requirement name="EntityTagCompare" target="self" tags="animal"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfBuffUpdate" action="AttachPrefabToEntity" target="self" prefab="#@modfolder:Resources/gore.unity3d?GoreFlow" parent_transform="Spine3">
+		<requirement name="CVarCompare" target="self" cvar="bleedtorso" operation="Equals" value="1"/>
+		<requirement name="!EntityTagCompare" target="self" tags="animal"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfBuffUpdate" action="AttachPrefabToEntity" target="self" prefab="#@modfolder:Resources/gore.unity3d?GoreFlow" parent_transform="Spine1">
+		<requirement name="CVarCompare" target="self" cvar="bleedtorso" operation="Equals" value="1"/>
+		<requirement name="EntityTagCompare" target="self" tags="animal"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfBuffUpdate" action="AttachPrefabToEntity" target="self" prefab="#@modfolder:Resources/gore.unity3d?GoreFlow" parent_transform="LeftArm">
+		<requirement name="CVarCompare" target="self" cvar="bleedleftarm" operation="Equals" value="1"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfBuffUpdate" action="AttachPrefabToEntity" target="self" prefab="#@modfolder:Resources/gore.unity3d?GoreFlow" parent_transform="RightArm">
+		<requirement name="CVarCompare" target="self" cvar="bleedrightarm" operation="Equals" value="1"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfBuffUpdate" action="AttachPrefabToEntity" target="self" prefab="#@modfolder:Resources/gore.unity3d?GoreFlow" parent_transform="LeftLeg">
+		<requirement name="CVarCompare" target="self" cvar="bleedleftleg" operation="Equals" value="1"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfBuffUpdate" action="AttachPrefabToEntity" target="self" prefab="#@modfolder:Resources/gore.unity3d?GoreFlow" parent_transform="RightLeg">
+		<requirement name="CVarCompare" target="self" cvar="bleedrightleg" operation="Equals" value="1"/>
+		</triggered_effect>		
+			</effect_group>
+		<effect_group name="stop bleed">	
+		<requirement name="CVarCompare" target="self" cvar="bleedCounter" operation="Equals" value="0"/>.
+		  <triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" target="self" buff="bleedingvisual"/>
+		</effect_group>
+		<effect_group name="remove">
+		<triggered_effect trigger="onSelfBuffRemove" action="RemovePrefabFromEntity" target="self" prefab="/GoreFlow" parent_transform="HeadGore"/>
+		<triggered_effect trigger="onSelfBuffRemove" action="RemovePrefabFromEntity" target="self" prefab="/GoreFlow" parent_transform="Head"/>
+		<triggered_effect trigger="onSelfBuffRemove" action="RemovePrefabFromEntity" target="self" prefab="/GoreFlow" parent_transform="Spine3"/>
+		<triggered_effect trigger="onSelfBuffRemove" action="RemovePrefabFromEntity" target="self" prefab="/GoreFlow" parent_transform="Spine1"/>
+		<triggered_effect trigger="onSelfBuffRemove" action="RemovePrefabFromEntity" target="self" prefab="/GoreFlow" parent_transform="LeftArm"/>
+		<triggered_effect trigger="onSelfBuffRemove" action="RemovePrefabFromEntity" target="self" prefab="/GoreFlow" parent_transform="RightArm"/>
+		<triggered_effect trigger="onSelfBuffRemove" action="RemovePrefabFromEntity" target="self" prefab="/GoreFlow" parent_transform="LeftLeg"/>
+		<triggered_effect trigger="onSelfBuffRemove" action="RemovePrefabFromEntity" target="self" prefab="/GoreFlow" parent_transform="RightLeg"/>
+		<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" target="self" cvar="bleedhead" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" target="self" cvar="bleedleftarm" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" target="self" cvar="bleedrightarm" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" target="self" cvar="bleedleftleg" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" target="self" cvar="bleedrightleg" operation="set" value="0"/>
+		<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" target="self" cvar="bleedtorso" operation="set" value="0"/>
+		</effect_group>
+	</buff>
+
+	
+
+			
+							<buff name="GoreCheck">
+		<stack_type value="ignore"/>
+		<duration value="0.1"/>
+		<effect_group>
+		<triggered_effect trigger="onSelfBuffStart"  action="ModifyCVar" target="self" cvar="nohead" operation="set" value="1">
+<requirement name="CVarCompare" target="self" cvar="tnohead" operation="Equals" value="1"/>
+</triggered_effect>
+
+		<triggered_effect trigger="onSelfBuffStart"  action="ModifyCVar" target="self" cvar="norightarm" operation="set" value="1">
+<requirement name="CVarCompare" target="self" cvar="tnorightarm" operation="Equals" value="1"/>
+</triggered_effect>
+
+		<triggered_effect trigger="onSelfBuffStart"  action="ModifyCVar" target="self" cvar="noleftarm" operation="set" value="1">
+<requirement name="CVarCompare" target="self" cvar="tnoleftarm" operation="Equals" value="1"/>
+</triggered_effect>
+
+<!-- <triggered_effect trigger="onSelfDied" action="AttachPrefabToEntity" target="self" prefab="#@modfolder:Resources/tablet.unity3d?Tablet" parent_transform="HeadGore"> -->
+<!-- <requirement name="CVarCompare" target="self" cvar="nohead" operation="Equals" value="1"/> -->
+<!-- </triggered_effect> -->
+		<!-- <triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" target="self" prefab="#@modfolder:Resources/tablet.unity3d?GoreHead" parent_transform="HeadGore"/> -->
+		<!-- <triggered_effect trigger="onSelfBuffFinish" action="RemovePrefabFromEntity" target="self" prefab="/GoreHead" parent_transform="HeadGore"/> -->
+			</effect_group>
+	</buff>
+	
+	
+	
+		</append>
+</configs>

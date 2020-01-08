@@ -1,0 +1,44 @@
+<configs>
+
+<append xpath="/items/item/effect_group[@name]">
+    <!-- <effect_group name="gorecvar"> -->
+<triggered_effect trigger="onSelfEquipStop" action="ModifyCVar" target="self" cvar="hitrow" operation="set" value="1"/>
+<triggered_effect trigger="onSelfEquipStop" action="ModifyCVar" target="self" cvar="lefthitrow" operation="set" value="1"/>
+<triggered_effect trigger="onSelfEquipStop" action="RemovePart" part="LeftHandGore"/>
+<triggered_effect trigger="onSelfEquipStop" action="RemovePart" part="RightHandGore"/>
+<triggered_effect trigger="onSelfEquipStop" action="RemovePart" part="LeftHandGore2"/>
+<triggered_effect trigger="onSelfEquipStop" action="RemovePart" part="RightHandGore2"/>
+<triggered_effect trigger="onSelfEquipStop" action="RemovePart" part="GoreShotgun"/>
+<triggered_effect trigger="onSelfWaterSubmerge" action="RemovePart" part="Gore"/>
+<triggered_effect trigger="onSelfWaterSubmerge" action="RemovePart" part="Gore2"/>
+<triggered_effect trigger="onSelfWaterSubmerge" action="RemovePart" part="Gore3"/>
+<triggered_effect trigger="onSelfWaterSubmerge" action="RemovePart" part="Gore4"/>
+<triggered_effect trigger="onSelfWaterSubmerge" action="RemovePart" part="Gore5"/>
+<triggered_effect trigger="onSelfWaterSubmerge" action="RemovePart" part="Gore6"/>
+<triggered_effect trigger="onSelfWaterSubmerge" action="RemovePart" part="Gore7"/>
+<triggered_effect trigger="onSelfWaterSubmerge" action="RemovePart" part="Gore8"/>
+<triggered_effect trigger="onSelfWaterSubmerge" action="RemovePart" part="Gore9"/>
+<triggered_effect trigger="onSelfWaterSubmerge" action="RemovePart" part="Gore10"/>
+<triggered_effect trigger="onSelfWaterSubmerge" action="RemovePart" part="Gore11"/>
+<triggered_effect trigger="onSelfWaterSubmerge" action="RemovePart" part="Gore12"/>
+<triggered_effect trigger="onSelfWaterSubmerge" action="RemovePart" part="Gore13"/>
+<triggered_effect trigger="onSelfWaterSubmerge" action="RemovePart" part="Gore14"/>
+<triggered_effect trigger="onSelfWaterSubmerge" action="RemovePart" part="Gore15"/>
+<triggered_effect trigger="onSelfWaterSubmerge" action="RemovePart" part="Gore16"/>
+<triggered_effect trigger="onSelfWaterSubmerge" action="RemovePart" part="Gore17"/>
+<triggered_effect trigger="onSelfWaterSubmerge" action="RemovePart" part="Gore18"/>
+<triggered_effect trigger="onSelfWaterSubmerge" action="RemovePart" part="Gore19"/>
+<triggered_effect trigger="onSelfWaterSubmerge" action="RemovePart" part="LeftHandGore"/>
+<triggered_effect trigger="onSelfWaterSubmerge" action="RemovePart" part="RightHandGore"/>
+
+<!-- </effect_group> -->
+</append>
+
+
+<append xpath="/items/item[@name='meleeClubBaseballBat']/property[@name='Tags']/@value">,Bat</append>
+<append xpath="/items/item[@name='meleeClubWood']/property[@name='Tags']/@value">,Cluby</append>
+<append xpath="/items/item[@name='meleeClubIron']/property[@name='Tags']/@value">,Cluby</append>
+<append xpath="/items/item[@name='meleeClubCandy']/property[@name='Tags']/@value">,Cluby</append>
+
+
+</configs>
