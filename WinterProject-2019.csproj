@@ -533,17 +533,10 @@
     <Content Include="Mods\SphereII NPC Dialog Windows\Textures\trader\smx_trader_bg.png" />
     <Content Include="Mods\SphereII NPC Dialog Windows\UIAtlases\ItemIconAtlas\smx_bulletpoint_icon.png" />
     <Content Include="Mods\SphereII Santas\Config\blocks.xml" />
-    <Content Include="Mods\SphereII Santas\Config\dialogs - Copy.xml">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="Mods\SphereII Santas\Config\dialogs.xml">
-      <SubType>Designer</SubType>
-    </Content>
     <Content Include="Mods\SphereII Santas\Config\entityclasses.xml" />
     <Content Include="Mods\SphereII Santas\Config\entitygroups.xml" />
     <Content Include="Mods\SphereII Santas\Config\items.xml" />
     <Content Include="Mods\SphereII Santas\Config\loot.xml" />
-    <Content Include="Mods\SphereII Santas\Config\npc.xml" />
     <Content Include="Mods\SphereII Santas\Config\sounds.xml" />
     <Content Include="Mods\SphereII Santas\mod.xml" />
     <Content Include="Mods\SphereII Santas\ModInfo.xml" />

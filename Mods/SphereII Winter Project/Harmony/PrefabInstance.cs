@@ -97,7 +97,6 @@ public class SphereII_WinterProject
             //__instance.bExcludeDistantPOIMesh = true;
             //__instance.bCopyAirBlocks = true;
         }
-
     }
 
     [HarmonyPatch(typeof(Prefab))]
