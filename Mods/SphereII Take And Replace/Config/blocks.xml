@@ -20,7 +20,7 @@
         <property name="SortOrder1" value="7080"/>
         <property name="Class" value="TakeAndReplace, Mods"/>
         <property name="CanPickup" value="true" param1="boardedWindowsSheet_weak" />
-        <property name="TakeDelay" value="15" />
+        <property name="TakeDelay" value="10" />
       </block>
     </insertBefore>
 
@@ -29,39 +29,39 @@
     <append xpath="/blocks/block[@name='doorFrameWhiteBoarded1']">
       <property name="Class" value="TakeAndReplace, Mods"/>
       <property name="CanPickup" value="true" param1="boardedWindowsSheet_weak" />
-      <property name="TakeDelay" value="15" />
+      <property name="TakeDelay" value="10" />
     </append>
 
     <append xpath="/blocks/block[@name='doorFrameWhiteBoarded2']">
       <property name="Class" value="TakeAndReplace, Mods"/>
       <property name="CanPickup" value="true" param1="boardedWindowsSheet_weak" />
-      <property name="TakeDelay" value="15" />
+      <property name="TakeDelay" value="10" />
 
     </append>
     <append xpath="/blocks/block[@name='doorFrameMetalBoarded1']">
       <property name="Class" value="TakeAndReplace, Mods"/>
       <property name="CanPickup" value="true" param1="boardedWindowsSheet_weak" />
-      <property name="TakeDelay" value="15" />
+      <property name="TakeDelay" value="10" />
 
     </append>
     <append xpath="/blocks/block[@name='doorFrameMetalBoarded2']">
       <property name="Class" value="TakeAndReplace, Mods"/>
       <property name="CanPickup" value="true" param1="boardedWindowsSheet_weak" />
-      <property name="TakeDelay" value="15" />
+      <property name="TakeDelay" value="10" />
     </append>
 
     <!-- Let's pull off the boarded windows too, but use weak item instead.-->
     <append xpath="//block[@name='boardedWindowsSheet4']" >
       <property name="Class" value="TakeAndReplace, Mods"/>
       <property name="CanPickup" value="true" param1="boardedWindowsSheet_weak" />
-      <property name="TakeDelay" value="15" />
+      <property name="TakeDelay" value="10" />
     </append>
 
     <!-- Sometimes the fences are used as barrier.-->
     <append xpath="//block[@name='woodFenceFarmSheet']" >
       <property name="Class" value="TakeAndReplace, Mods"/>
       <property name="CanPickup" value="true" param1="boardedWindowsSheet_weak" />
-      <property name="TakeDelay" value="15" />
+      <property name="TakeDelay" value="10" />
     </append>
 
     <!-- append xpath="/blocks/block[@name ='cntShippingCrateHero']" >
@@ -73,45 +73,45 @@
     <append xpath="/blocks/block[@name ='cntShippingCrateLabEquipment']" >
       <property name="Class" value="TakeAndReplace, Mods"/>
       <property name="CanPickup" value="true" param1="boardedWindowsSheet_weak" />
-      <property name="TakeDelay" value="15" />
+      <property name="TakeDelay" value="10" />
     </append>
 
 
     <append xpath="/blocks/block[@name ='cntShippingCrateShamway']" >
       <property name="Class" value="TakeAndReplace, Mods"/>
       <property name="CanPickup" value="true" param1="boardedWindowsSheet_weak" />
-      <property name="TakeDelay" value="15" />
+      <property name="TakeDelay" value="10" />
     </append>
 
     <append xpath="/blocks/block[@name ='cntShippingCrateBookstore']" >
       <property name="Class" value="TakeAndReplace, Mods"/>
       <property name="CanPickup" value="true" param1="boardedWindowsSheet_weak" />
-      <property name="TakeDelay" value="15" />
+      <property name="TakeDelay" value="10" />
     </append>
 
     <append xpath="/blocks/block[@name ='cntShippingCrateCarParts']" >
       <property name="Class" value="TakeAndReplace, Mods"/>
       <property name="CanPickup" value="true" param1="boardedWindowsSheet_weak" />
-      <property name="TakeDelay" value="15" />
+      <property name="TakeDelay" value="10" />
     </append>
 
 
     <append xpath="/blocks/block[@name ='cntShippingCrateConstructionSupplies']" >
       <property name="Class" value="TakeAndReplace, Mods"/>
       <property name="CanPickup" value="true" param1="boardedWindowsSheet_weak" />
-      <property name="TakeDelay" value="15" />
+      <property name="TakeDelay" value="10" />
     </append>
 
     <append xpath="/blocks/block[@name ='cntShippingCrateShotgunMessiah']" >
       <property name="Class" value="TakeAndReplace, Mods"/>
       <property name="CanPickup" value="true" param1="boardedWindowsSheet_weak" />
-      <property name="TakeDelay" value="15" />
+      <property name="TakeDelay" value="10" />
     </append>
 
     <append xpath="/blocks/block[@name ='cntShippingCrateWorkingStiffs']" >
       <property name="Class" value="TakeAndReplace, Mods"/>
       <property name="CanPickup" value="true" param1="boardedWindowsSheet_weak" />
-      <property name="TakeDelay" value="15" />
+      <property name="TakeDelay" value="10" />
     </append>
 
 </configs>
