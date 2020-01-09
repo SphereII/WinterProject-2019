@@ -154,13 +154,13 @@
 		</item>			
 		
 		
-									<item name="Carousel">
+									<item name="CarouselFurniture">
 			<property name="Extends" value="vehicleMinibikePlaceable"/>
 			<property name="Meshfile" value="#@modfolder:Resources/test.unity3d?Carousel.prefab"/>
 			<property name="Stacknumber" value="1"/>
 			<property name="CustomIcon" value="3carousel"/>
 			<property class="Action1">
-				<property name="Vehicle" value="Carousel"/>
+				<property name="Vehicle" value="CarouselFurniture"/>
 				<property name="VehicleSize" value="0.2, 0.2, 0.2"/>
 			</property>
 			<effect_group name="Base Effects" tiered = "false">

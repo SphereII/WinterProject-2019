@@ -4,7 +4,7 @@
 			<!-- New vehicles -->
 	<append xpath="/vehicles">
 		
-													<vehicle name="Carousel">
+													<vehicle name="CarouselFurniture">
 
 			<property name="cameraDistance" value="4, 7"/>
 			<property name="cameraTurnRate" value=".2, .35"/>

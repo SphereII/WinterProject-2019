@@ -53,7 +53,7 @@
 	<ingredient name="resourceWood" count="25"/>
 </recipe>
 
-<recipe name="Carousel" count="1" craft_area="tablesaw">
+<recipe name="CarouselFurniture" count="1" craft_area="tablesaw">
 	<ingredient name="resourceNail" count="10"/>
 	<ingredient name="resourceMetalPipe" count="10"/>
 </recipe>

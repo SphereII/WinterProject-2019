@@ -148,7 +148,7 @@
 		</entity_class>
 		
 			
-										<entity_class name="Carousel">
+										<entity_class name="CarouselFurniture">
 			<property name="Tags" value="vehicle"/>
 			<property name="Class" value="EntityVJeep"/>
 			<property name="Parent" value="Cars"/>

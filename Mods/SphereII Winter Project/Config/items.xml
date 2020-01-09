@@ -1042,846 +1042,1426 @@
   <append xpath="/items">
     <item name="foodHoneyThermos" >
       <property name="Extends" value="foodHoney" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="foodHoney" />
+      <property class="Action0">
+        <property name="Class" value="Eat"/>
+        <property name="Delay" value="2.1"/>
+        <property name="Use_time" value="..."/>
+        <property name="Sound_start" value="player_eating"/>
+        <property name="Create_item" value="drinkThermosEmpty"/>
+      </property>
     </item>
     <item name="foodHoneyThermos" >
       <property name="Extends" value="foodHoney" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="foodHoney" />
+      <property class="Action0">
+        <property name="Class" value="Eat"/>
+        <property name="Delay" value="2.1"/>
+        <property name="Use_time" value="..."/>
+        <property name="Sound_start" value="player_eating"/>
+        <property name="Create_item" value="drinkThermosEmpty"/>
+      </property>
     </item>
     <item name="drinkJarRiverWaterThermos" >
       <property name="Extends" value="drinkJarRiverWater" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="drinkJarRiverWater" />
+      <property class="Action0">
+        <property name="Class" value="Eat"/>
+        <property name="Delay" value="2.1"/>
+        <property name="Use_time" value="..."/>
+        <property name="Sound_start" value="player_eating"/>
+        <property name="Create_item" value="drinkThermosEmpty"/>
+      </property>
     </item>
     <item name="drinkJarRiverWaterThermos" >
       <property name="Extends" value="drinkJarRiverWater" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="drinkJarRiverWater" />
+      <property class="Action0">
+        <property name="Class" value="Eat"/>
+        <property name="Delay" value="2.1"/>
+        <property name="Use_time" value="..."/>
+        <property name="Sound_start" value="player_eating"/>
+        <property name="Create_item" value="drinkThermosEmpty"/>
+      </property>
     </item>
     <item name="drinkJarBoiledWaterThermos" >
       <property name="Extends" value="drinkJarBoiledWater" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="drinkJarBoiledWater" />
+      <property class="Action0">
+        <property name="Class" value="Eat"/>
+        <property name="Delay" value="2.1"/>
+        <property name="Use_time" value="..."/>
+        <property name="Sound_start" value="player_eating"/>
+        <property name="Create_item" value="drinkThermosEmpty"/>
+      </property>
     </item>
     <item name="drinkJarBoiledWaterThermos" >
       <property name="Extends" value="drinkJarBoiledWater" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="drinkJarBoiledWater" />
+      <property class="Action0">
+        <property name="Class" value="Eat"/>
+        <property name="Delay" value="2.1"/>
+        <property name="Use_time" value="..."/>
+        <property name="Sound_start" value="player_eating"/>
+        <property name="Create_item" value="drinkThermosEmpty"/>
+      </property>
     </item>
     <item name="drinkJarPureMineralWaterThermos" >
       <property name="Extends" value="drinkJarPureMineralWater" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="drinkJarPureMineralWater" />
+      <property class="Action0">
+        <property name="Class" value="Eat"/>
+        <property name="Delay" value="2.1"/>
+        <property name="Use_time" value="..."/>
+        <property name="Sound_start" value="player_eating"/>
+        <property name="Create_item" value="drinkThermosEmpty"/>
+      </property>
     </item>
     <item name="drinkJarPureMineralWaterThermos" >
       <property name="Extends" value="drinkJarPureMineralWater" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="drinkJarPureMineralWater" />
+      <property class="Action0">
+        <property name="Class" value="Eat"/>
+        <property name="Delay" value="2.1"/>
+        <property name="Use_time" value="..."/>
+        <property name="Sound_start" value="player_eating"/>
+        <property name="Create_item" value="drinkThermosEmpty"/>
+      </property>
     </item>
     <item name="drinkJarYuccaJuiceThermos" >
       <property name="Extends" value="drinkJarYuccaJuice" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="drinkJarYuccaJuice" />
+      <property class="Action0">
+        <property name="Class" value="Eat"/>
+        <property name="Delay" value="2.1"/>
+        <property name="Use_time" value="..."/>
+        <property name="Sound_start" value="player_eating"/>
+        <property name="Create_item" value="drinkThermosEmpty"/>
+      </property>
     </item>
     <item name="drinkJarYuccaJuiceThermos" >
       <property name="Extends" value="drinkJarYuccaJuice" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="drinkJarYuccaJuice" />
+      <property class="Action0">
+        <property name="Class" value="Eat"/>
+        <property name="Delay" value="2.1"/>
+        <property name="Use_time" value="..."/>
+        <property name="Sound_start" value="player_eating"/>
+        <property name="Create_item" value="drinkThermosEmpty"/>
+      </property>
     </item>
     <item name="drinkJarGoldenRodTeaThermos" >
       <property name="Extends" value="drinkJarGoldenRodTea" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="drinkJarGoldenRodTea" />
+      <property class="Action0">
+        <property name="Class" value="Eat"/>
+        <property name="Delay" value="2.1"/>
+        <property name="Use_time" value="..."/>
+        <property name="Sound_start" value="player_eating"/>
+        <property name="Create_item" value="drinkThermosEmpty"/>
+      </property>
     </item>
     <item name="drinkJarGoldenRodTeaThermos" >
       <property name="Extends" value="drinkJarGoldenRodTea" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="drinkJarGoldenRodTea" />
+      <property class="Action0">
+        <property name="Class" value="Eat"/>
+        <property name="Delay" value="2.1"/>
+        <property name="Use_time" value="..."/>
+        <property name="Sound_start" value="player_eating"/>
+        <property name="Create_item" value="drinkThermosEmpty"/>
+      </property>
     </item>
     <item name="drinkJarRedTeaThermos" >
       <property name="Extends" value="drinkJarRedTea" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="drinkJarRedTea" />
+      <property class="Action0">
+        <property name="Class" value="Eat"/>
+        <property name="Delay" value="2.1"/>
+        <property name="Use_time" value="..."/>
+        <property name="Sound_start" value="player_eating"/>
+        <property name="Create_item" value="drinkThermosEmpty"/>
+      </property>
     </item>
     <item name="drinkJarRedTeaThermos" >
       <property name="Extends" value="drinkJarRedTea" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="drinkJarRedTea" />
+      <property class="Action0">
+        <property name="Class" value="Eat"/>
+        <property name="Delay" value="2.1"/>
+        <property name="Use_time" value="..."/>
+        <property name="Sound_start" value="player_eating"/>
+        <property name="Create_item" value="drinkThermosEmpty"/>
+      </property>
     </item>
     <item name="drinkJarYuccaCocktailThermos" >
       <property name="Extends" value="drinkJarYuccaCocktail" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="drinkJarYuccaCocktail" />
+      <property class="Action0">
+        <property name="Class" value="Eat"/>
+        <property name="Delay" value="2.1"/>
+        <property name="Use_time" value="..."/>
+        <property name="Sound_start" value="player_eating"/>
+        <property name="Create_item" value="drinkThermosEmpty"/>
+      </property>
     </item>
     <item name="drinkJarYuccaCocktailThermos" >
       <property name="Extends" value="drinkJarYuccaCocktail" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="drinkJarYuccaCocktail" />
+      <property class="Action0">
+        <property name="Class" value="Eat"/>
+        <property name="Delay" value="2.1"/>
+        <property name="Use_time" value="..."/>
+        <property name="Sound_start" value="player_eating"/>
+        <property name="Create_item" value="drinkThermosEmpty"/>
+      </property>
     </item>
     <item name="drinkYuccaJuiceSmoothieThermos" >
       <property name="Extends" value="drinkYuccaJuiceSmoothie" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="drinkYuccaJuiceSmoothie" />
+      <property class="Action0">
+        <property name="Class" value="Eat"/>
+        <property name="Delay" value="2.1"/>
+        <property name="Use_time" value="..."/>
+        <property name="Sound_start" value="player_eating"/>
+        <property name="Create_item" value="drinkThermosEmpty"/>
+      </property>
     </item>
     <item name="drinkYuccaJuiceSmoothieThermos" >
       <property name="Extends" value="drinkYuccaJuiceSmoothie" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="drinkYuccaJuiceSmoothie" />
+      <property class="Action0">
+        <property name="Class" value="Eat"/>
+        <property name="Delay" value="2.1"/>
+        <property name="Use_time" value="..."/>
+        <property name="Sound_start" value="player_eating"/>
+        <property name="Create_item" value="drinkThermosEmpty"/>
+      </property>
     </item>
     <item name="drinkCanMegaCrushThermos" >
       <property name="Extends" value="drinkCanMegaCrush" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="drinkCanMegaCrush" />
+      <property class="Action0">
+        <property name="Class" value="Eat"/>
+        <property name="Delay" value="2.1"/>
+        <property name="Use_time" value="..."/>
+        <property name="Sound_start" value="player_eating"/>
+        <property name="Create_item" value="drinkThermosEmpty"/>
+      </property>
     </item>
     <item name="drinkCanMegaCrushThermos" >
       <property name="Extends" value="drinkCanMegaCrush" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="drinkCanMegaCrush" />
+      <property class="Action0">
+        <property name="Class" value="Eat"/>
+        <property name="Delay" value="2.1"/>
+        <property name="Use_time" value="..."/>
+        <property name="Sound_start" value="player_eating"/>
+        <property name="Create_item" value="drinkThermosEmpty"/>
+      </property>
     </item>
     <item name="drinkJarCoffeeThermos" >
       <property name="Extends" value="drinkJarCoffee" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="drinkJarCoffee" />
+      <property class="Action0">
+        <property name="Class" value="Eat"/>
+        <property name="Delay" value="2.1"/>
+        <property name="Use_time" value="..."/>
+        <property name="Sound_start" value="player_eating"/>
+        <property name="Create_item" value="drinkThermosEmpty"/>
+      </property>
     </item>
     <item name="drinkJarCoffeeThermos" >
       <property name="Extends" value="drinkJarCoffee" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="drinkJarCoffee" />
+      <property class="Action0">
+        <property name="Class" value="Eat"/>
+        <property name="Delay" value="2.1"/>
+        <property name="Use_time" value="..."/>
+        <property name="Sound_start" value="player_eating"/>
+        <property name="Create_item" value="drinkThermosEmpty"/>
+      </property>
     </item>
     <item name="drinkJarBlackStrapCoffeeThermos" >
       <property name="Extends" value="drinkJarBlackStrapCoffee" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="drinkJarBlackStrapCoffee" />
+      <property class="Action0">
+        <property name="Class" value="Eat"/>
+        <property name="Delay" value="2.1"/>
+        <property name="Use_time" value="..."/>
+        <property name="Sound_start" value="player_eating"/>
+        <property name="Create_item" value="drinkThermosEmpty"/>
+      </property>
     </item>
     <item name="drinkJarBlackStrapCoffeeThermos" >
       <property name="Extends" value="drinkJarBlackStrapCoffee" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="drinkJarBlackStrapCoffee" />
+      <property class="Action0">
+        <property name="Class" value="Eat"/>
+        <property name="Delay" value="2.1"/>
+        <property name="Use_time" value="..."/>
+        <property name="Sound_start" value="player_eating"/>
+        <property name="Create_item" value="drinkThermosEmpty"/>
+      </property>
     </item>
     <item name="drinkJarBeerThermos" >
       <property name="Extends" value="drinkJarBeer" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="drinkJarBeer" />
+      <property class="Action0">
+        <property name="Class" value="Eat"/>
+        <property name="Delay" value="2.1"/>
+        <property name="Use_time" value="..."/>
+        <property name="Sound_start" value="player_eating"/>
+        <property name="Create_item" value="drinkThermosEmpty"/>
+      </property>
     </item>
     <item name="drinkJarBeerThermos" >
       <property name="Extends" value="drinkJarBeer" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="drinkJarBeer" />
+      <property class="Action0">
+        <property name="Class" value="Eat"/>
+        <property name="Delay" value="2.1"/>
+        <property name="Use_time" value="..."/>
+        <property name="Sound_start" value="player_eating"/>
+        <property name="Create_item" value="drinkThermosEmpty"/>
+      </property>
     </item>
     <item name="foodCanBeefThermos" >
       <property name="Extends" value="foodCanBeef" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="foodCanBeef" />
+      <property class="Action0">
+        <property name="Class" value="Eat"/>
+        <property name="Delay" value="2.1"/>
+        <property name="Use_time" value="..."/>
+        <property name="Sound_start" value="player_eating"/>
+        <property name="Create_item" value="drinkThermosEmpty"/>
+      </property>
     </item>
     <item name="foodCanBeefThermos" >
       <property name="Extends" value="foodCanBeef" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="foodCanBeef" />
+      <property class="Action0">
+        <property name="Class" value="Eat"/>
+        <property name="Delay" value="2.1"/>
+        <property name="Use_time" value="..."/>
+        <property name="Sound_start" value="player_eating"/>
+        <property name="Create_item" value="drinkThermosEmpty"/>
+      </property>
     </item>
     <item name="foodCanChickenThermos" >
       <property name="Extends" value="foodCanChicken" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="foodCanChicken" />
+      <property class="Action0">
+        <property name="Class" value="Eat"/>
+        <property name="Delay" value="2.1"/>
+        <property name="Use_time" value="..."/>
+        <property name="Sound_start" value="player_eating"/>
+        <property name="Create_item" value="drinkThermosEmpty"/>
+      </property>
     </item>
     <item name="foodCanChickenThermos" >
       <property name="Extends" value="foodCanChicken" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="foodCanChicken" />
+      <property class="Action0">
+        <property name="Class" value="Eat"/>
+        <property name="Delay" value="2.1"/>
+        <property name="Use_time" value="..."/>
+        <property name="Sound_start" value="player_eating"/>
+        <property name="Create_item" value="drinkThermosEmpty"/>
+      </property>
     </item>
     <item name="foodCanLambThermos" >
       <property name="Extends" value="foodCanLamb" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="foodCanLamb" />
+      <property class="Action0">
+        <property name="Class" value="Eat"/>
+        <property name="Delay" value="2.1"/>
+        <property name="Use_time" value="..."/>
+        <property name="Sound_start" value="player_eating"/>
+        <property name="Create_item" value="drinkThermosEmpty"/>
+      </property>
     </item>
     <item name="foodCanLambThermos" >
       <property name="Extends" value="foodCanLamb" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="foodCanLamb" />
+      <property class="Action0">
+        <property name="Class" value="Eat"/>
+        <property name="Delay" value="2.1"/>
+        <property name="Use_time" value="..."/>
+        <property name="Sound_start" value="player_eating"/>
+        <property name="Create_item" value="drinkThermosEmpty"/>
+      </property>
     </item>
     <item name="foodCanCatfoodThermos" >
       <property name="Extends" value="foodCanCatfood" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="foodCanCatfood" />
+      <property class="Action0">
+        <property name="Class" value="Eat"/>
+        <property name="Delay" value="2.1"/>
+        <property name="Use_time" value="..."/>
+        <property name="Sound_start" value="player_eating"/>
+        <property name="Create_item" value="drinkThermosEmpty"/>
+      </property>
     </item>
     <item name="foodCanCatfoodThermos" >
       <property name="Extends" value="foodCanCatfood" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="foodCanCatfood" />
+      <property class="Action0">
+        <property name="Class" value="Eat"/>
+        <property name="Delay" value="2.1"/>
+        <property name="Use_time" value="..."/>
+        <property name="Sound_start" value="player_eating"/>
+        <property name="Create_item" value="drinkThermosEmpty"/>
+      </property>
     </item>
     <item name="foodCanDogfoodThermos" >
       <property name="Extends" value="foodCanDogfood" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="foodCanDogfood" />
+      <property class="Action0">
+        <property name="Class" value="Eat"/>
+        <property name="Delay" value="2.1"/>
+        <property name="Use_time" value="..."/>
+        <property name="Sound_start" value="player_eating"/>
+        <property name="Create_item" value="drinkThermosEmpty"/>
+      </property>
     </item>
     <item name="foodCanDogfoodThermos" >
       <property name="Extends" value="foodCanDogfood" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="foodCanDogfood" />
+      <property class="Action0">
+        <property name="Class" value="Eat"/>
+        <property name="Delay" value="2.1"/>
+        <property name="Use_time" value="..."/>
+        <property name="Sound_start" value="player_eating"/>
+        <property name="Create_item" value="drinkThermosEmpty"/>
+      </property>
     </item>
     <item name="foodCanChiliThermos" >
       <property name="Extends" value="foodCanChili" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="foodCanChili" />
+      <property class="Action0">
+        <property name="Class" value="Eat"/>
+        <property name="Delay" value="2.1"/>
+        <property name="Use_time" value="..."/>
+        <property name="Sound_start" value="player_eating"/>
+        <property name="Create_item" value="drinkThermosEmpty"/>
+      </property>
     </item>
     <item name="foodCanChiliThermos" >
       <property name="Extends" value="foodCanChili" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="foodCanChili" />
+      <property class="Action0">
+        <property name="Class" value="Eat"/>
+        <property name="Delay" value="2.1"/>
+        <property name="Use_time" value="..."/>
+        <property name="Sound_start" value="player_eating"/>
+        <property name="Create_item" value="drinkThermosEmpty"/>
+      </property>
     </item>
     <item name="foodCanTunaThermos" >
       <property name="Extends" value="foodCanTuna" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="foodCanTuna" />
+      <property class="Action0">
+        <property name="Class" value="Eat"/>
+        <property name="Delay" value="2.1"/>
+        <property name="Use_time" value="..."/>
+        <property name="Sound_start" value="player_eating"/>
+        <property name="Create_item" value="drinkThermosEmpty"/>
+      </property>
     </item>
     <item name="foodCanTunaThermos" >
       <property name="Extends" value="foodCanTuna" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="foodCanTuna" />
+      <property class="Action0">
+        <property name="Class" value="Eat"/>
+        <property name="Delay" value="2.1"/>
+        <property name="Use_time" value="..."/>
+        <property name="Sound_start" value="player_eating"/>
+        <property name="Create_item" value="drinkThermosEmpty"/>
+      </property>
     </item>
     <item name="foodCanShamThermos" >
       <property name="Extends" value="foodCanSham" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="foodCanSham" />
+      <property class="Action0">
+        <property name="Class" value="Eat"/>
+        <property name="Delay" value="2.1"/>
+        <property name="Use_time" value="..."/>
+        <property name="Sound_start" value="player_eating"/>
+        <property name="Create_item" value="drinkThermosEmpty"/>
+      </property>
     </item>
     <item name="foodCanShamThermos" >
       <property name="Extends" value="foodCanSham" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="foodCanSham" />
+      <property class="Action0">
+        <property name="Class" value="Eat"/>
+        <property name="Delay" value="2.1"/>
+        <property name="Use_time" value="..."/>
+        <property name="Sound_start" value="player_eating"/>
+        <property name="Create_item" value="drinkThermosEmpty"/>
+      </property>
     </item>
     <item name="foodCanPastaThermos" >
       <property name="Extends" value="foodCanPasta" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="foodCanPasta" />
+      <property class="Action0">
+        <property name="Class" value="Eat"/>
+        <property name="Delay" value="2.1"/>
+        <property name="Use_time" value="..."/>
+        <property name="Sound_start" value="player_eating"/>
+        <property name="Create_item" value="drinkThermosEmpty"/>
+      </property>
     </item>
     <item name="foodCanPastaThermos" >
       <property name="Extends" value="foodCanPasta" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="foodCanPasta" />
+      <property class="Action0">
+        <property name="Class" value="Eat"/>
+        <property name="Delay" value="2.1"/>
+        <property name="Use_time" value="..."/>
+        <property name="Sound_start" value="player_eating"/>
+        <property name="Create_item" value="drinkThermosEmpty"/>
+      </property>
     </item>
     <item name="foodCanSalmonThermos" >
       <property name="Extends" value="foodCanSalmon" />
-      <property name="TickPerLoss" value="40" />
-      <property name="CustomIcon" value="foodCanSalmon" />
+      <property name="TickPerLoss" value="120" />
+      <property name="CustomIcon" value="foodCanSalmon" /><property class="Action0">
+        <property name="Class" value="Eat"/>
+        <property name="Delay" value="2.1"/>
+        <property name="Use_time" value="..."/>
+        <property name="Sound_start" value="player_eating"/>
+        <property name="Create_item" value="drinkThermosEmpty"/>
+      </property>
     </item>
     <item name="foodCanSalmonThermos" >
       <property name="Extends" value="foodCanSalmon" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="foodCanSalmon" />
+      <property class="Action0">
+        <property name="Class" value="Eat"/>
+        <property name="Delay" value="2.1"/>
+        <property name="Use_time" value="..."/>
+        <property name="Sound_start" value="player_eating"/>
+        <property name="Create_item" value="drinkThermosEmpty"/>
+      </property>
     </item>
     <item name="foodCanMisoThermos" >
       <property name="Extends" value="foodCanMiso" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="foodCanMiso" />
+      <property class="Action0">
+        <property name="Class" value="Eat"/>
+        <property name="Delay" value="2.1"/>
+        <property name="Use_time" value="..."/>
+        <property name="Sound_start" value="player_eating"/>
+        <property name="Create_item" value="drinkThermosEmpty"/>
+      </property>
     </item>
     <item name="foodCanMisoThermos" >
       <property name="Extends" value="foodCanMiso" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="foodCanMiso" />
+      <property class="Action0">
+        <property name="Class" value="Eat"/>
+        <property name="Delay" value="2.1"/>
+        <property name="Use_time" value="..."/>
+        <property name="Sound_start" value="player_eating"/>
+        <property name="Create_item" value="drinkThermosEmpty"/>
+      </property>
     </item>
     <item name="foodCanPeasThermos" >
       <property name="Extends" value="foodCanPeas" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="foodCanPeas" />
+      <property class="Action0">
+        <property name="Class" value="Eat"/>
+        <property name="Delay" value="2.1"/>
+        <property name="Use_time" value="..."/>
+        <property name="Sound_start" value="player_eating"/>
+        <property name="Create_item" value="drinkThermosEmpty"/>
+      </property>
     </item>
     <item name="foodCanPeasThermos" >
       <property name="Extends" value="foodCanPeas" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="foodCanPeas" />
+      <property class="Action0">
+        <property name="Class" value="Eat"/>
+        <property name="Delay" value="2.1"/>
+        <property name="Use_time" value="..."/>
+        <property name="Sound_start" value="player_eating"/>
+        <property name="Create_item" value="drinkThermosEmpty"/>
+      </property>
     </item>
     <item name="foodCanPearsThermos" >
       <property name="Extends" value="foodCanPears" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="foodCanPears" />
+      <property class="Action0">
+        <property name="Class" value="Eat"/>
+        <property name="Delay" value="2.1"/>
+        <property name="Use_time" value="..."/>
+        <property name="Sound_start" value="player_eating"/>
+        <property name="Create_item" value="drinkThermosEmpty"/>
+      </property>
     </item>
     <item name="foodCanPearsThermos" >
       <property name="Extends" value="foodCanPears" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="foodCanPears" />
+      <property class="Action0">
+        <property name="Class" value="Eat"/>
+        <property name="Delay" value="2.1"/>
+        <property name="Use_time" value="..."/>
+        <property name="Sound_start" value="player_eating"/>
+        <property name="Create_item" value="drinkThermosEmpty"/>
+      </property>
     </item>
     <item name="foodCanSoupThermos" >
       <property name="Extends" value="foodCanSoup" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="foodCanSoup" />
+      <property class="Action0">
+        <property name="Class" value="Eat"/>
+        <property name="Delay" value="2.1"/>
+        <property name="Use_time" value="..."/>
+        <property name="Sound_start" value="player_eating"/>
+        <property name="Create_item" value="drinkThermosEmpty"/>
+      </property>
     </item>
     <item name="foodCanSoupThermos" >
       <property name="Extends" value="foodCanSoup" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="foodCanSoup" />
+      <property class="Action0">
+        <property name="Class" value="Eat"/>
+        <property name="Delay" value="2.1"/>
+        <property name="Use_time" value="..."/>
+        <property name="Sound_start" value="player_eating"/>
+        <property name="Create_item" value="drinkThermosEmpty"/>
+      </property>
     </item>
     <item name="foodCanStockThermos" >
       <property name="Extends" value="foodCanStock" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="foodCanStock" />
+      <property class="Action0">
+        <property name="Class" value="Eat"/>
+        <property name="Delay" value="2.1"/>
+        <property name="Use_time" value="..."/>
+        <property name="Sound_start" value="player_eating"/>
+        <property name="Create_item" value="drinkThermosEmpty"/>
+      </property>
     </item>
     <item name="foodCanStockThermos" >
       <property name="Extends" value="foodCanStock" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="foodCanStock" />
+      <property class="Action0">
+        <property name="Class" value="Eat"/>
+        <property name="Delay" value="2.1"/>
+        <property name="Use_time" value="..."/>
+        <property name="Sound_start" value="player_eating"/>
+        <property name="Create_item" value="drinkThermosEmpty"/>
+      </property>
     </item>
     <item name="foodCornOnTheCobFoil" >
       <property name="Extends" value="foodCornOnTheCob" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="foodCornOnTheCob" />
     </item>
     <item name="foodCornOnTheCobFoil" >
       <property name="Extends" value="foodCornOnTheCob" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="foodCornOnTheCob" />
     </item>
     <item name="foodCornBreadFoil" >
       <property name="Extends" value="foodCornBread" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="foodCornBread" />
     </item>
     <item name="foodCornBreadFoil" >
       <property name="Extends" value="foodCornBread" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="foodCornBread" />
     </item>
     <item name="foodMoldyBreadFoil" >
       <property name="Extends" value="foodMoldyBread" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="foodMoldyBread" />
     </item>
     <item name="foodMoldyBreadFoil" >
       <property name="Extends" value="foodMoldyBread" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="foodMoldyBread" />
     </item>
     <item name="foodShamSandwichFoil" >
       <property name="Extends" value="foodShamSandwich" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="foodShamSandwich" />
     </item>
     <item name="foodShamSandwichFoil" >
       <property name="Extends" value="foodShamSandwich" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="foodShamSandwich" />
     </item>
     <item name="foodCharredMeatFoil" >
       <property name="Extends" value="foodCharredMeat" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="foodCharredMeat" />
     </item>
     <item name="foodCharredMeatFoil" >
       <property name="Extends" value="foodCharredMeat" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="foodCharredMeat" />
     </item>
     <item name="foodGrilledMeatFoil" >
       <property name="Extends" value="foodGrilledMeat" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="foodGrilledMeat" />
     </item>
     <item name="foodGrilledMeatFoil" >
       <property name="Extends" value="foodGrilledMeat" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="foodGrilledMeat" />
     </item>
     <item name="foodBoiledMeatFoil" >
       <property name="Extends" value="foodBoiledMeat" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="foodBoiledMeat" />
     </item>
     <item name="foodBoiledMeatFoil" >
       <property name="Extends" value="foodBoiledMeat" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="foodBoiledMeat" />
     </item>
     <item name="foodMeatStewThermos" >
       <property name="Extends" value="foodMeatStew" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="foodMeatStew" />
     </item>
     <item name="foodMeatStewThermos" >
       <property name="Extends" value="foodMeatStew" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="foodMeatStew" />
     </item>
     <item name="foodSteakAndPotatoFoil" >
       <property name="Extends" value="foodSteakAndPotato" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="foodSteakAndPotato" />
     </item>
     <item name="foodSteakAndPotatoFoil" >
       <property name="Extends" value="foodSteakAndPotato" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="foodSteakAndPotato" />
     </item>
     <item name="foodShamChowderThermos" >
       <property name="Extends" value="foodShamChowder" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="foodShamChowder" />
     </item>
     <item name="foodShamChowderThermos" >
       <property name="Extends" value="foodShamChowder" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="foodShamChowder" />
     </item>
     <item name="foodHoboStewThermos" >
       <property name="Extends" value="foodHoboStew" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="foodHoboStew" />
     </item>
     <item name="foodHoboStewThermos" >
       <property name="Extends" value="foodHoboStew" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="foodHoboStew" />
     </item>
     <item name="foodFishTacosFoil" >
       <property name="Extends" value="foodFishTacos" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="foodFishTacos" />
     </item>
     <item name="foodFishTacosFoil" >
       <property name="Extends" value="foodFishTacos" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="foodFishTacos" />
     </item>
     <item name="foodChiliDogFoil" >
       <property name="Extends" value="foodChiliDog" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="foodChiliDog" />
     </item>
     <item name="foodChiliDogFoil" >
       <property name="Extends" value="foodChiliDog" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="foodChiliDog" />
     </item>
     <item name="foodBakedPotatoFoil" >
       <property name="Extends" value="foodBakedPotato" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="foodBakedPotato" />
     </item>
     <item name="foodBakedPotatoFoil" >
       <property name="Extends" value="foodBakedPotato" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="foodBakedPotato" />
     </item>
     <item name="foodBlueberryPieFoil" >
       <property name="Extends" value="foodBlueberryPie" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="foodBlueberryPie" />
     </item>
     <item name="foodBlueberryPieFoil" >
       <property name="Extends" value="foodBlueberryPie" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="foodBlueberryPie" />
     </item>
     <item name="foodPumpkinPieFoil" >
       <property name="Extends" value="foodPumpkinPie" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="foodPumpkinPie" />
     </item>
     <item name="foodPumpkinPieFoil" >
       <property name="Extends" value="foodPumpkinPie" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="foodPumpkinPie" />
     </item>
     <item name="foodPumpkinCheesecakeFoil" >
       <property name="Extends" value="foodPumpkinCheesecake" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="foodPumpkinCheesecake" />
     </item>
     <item name="foodPumpkinCheesecakeFoil" >
       <property name="Extends" value="foodPumpkinCheesecake" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="foodPumpkinCheesecake" />
     </item>
     <item name="foodPumpkinBreadFoil" >
       <property name="Extends" value="foodPumpkinBread" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="foodPumpkinBread" />
     </item>
     <item name="foodPumpkinBreadFoil" >
       <property name="Extends" value="foodPumpkinBread" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="foodPumpkinBread" />
     </item>
     <item name="foodEggBoiledThermos" >
       <property name="Extends" value="foodEggBoiled" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="foodEggBoiled" />
     </item>
     <item name="foodEggBoiledThermos" >
       <property name="Extends" value="foodEggBoiled" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="foodEggBoiled" />
     </item>
     <item name="foodEggBoiledFoil" >
       <property name="Extends" value="foodEggBoiled" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="foodEggBoiled" />
     </item>
     <item name="foodEggBoiledFoil" >
       <property name="Extends" value="foodEggBoiled" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="foodEggBoiled" />
     </item>
     <item name="foodBaconAndEggsThermos" >
       <property name="Extends" value="foodBaconAndEggs" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="foodBaconAndEggs" />
     </item>
     <item name="foodBaconAndEggsThermos" >
       <property name="Extends" value="foodBaconAndEggs" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="foodBaconAndEggs" />
     </item>
     <item name="foodBaconAndEggsFoil" >
       <property name="Extends" value="foodBaconAndEggs" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="foodBaconAndEggs" />
     </item>
     <item name="foodBaconAndEggsFoil" >
       <property name="Extends" value="foodBaconAndEggs" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="foodBaconAndEggs" />
     </item>
     <item name="foodVegetableStewThermos" >
       <property name="Extends" value="foodVegetableStew" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="foodVegetableStew" />
     </item>
     <item name="foodVegetableStewThermos" >
       <property name="Extends" value="foodVegetableStew" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="foodVegetableStew" />
     </item>
     <item name="foodRawMeatFoil" >
       <property name="Extends" value="foodRawMeat" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="foodRawMeat" />
     </item>
     <item name="foodRawMeatFoil" >
       <property name="Extends" value="foodRawMeat" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="foodRawMeat" />
     </item>
     <item name="foodRottingFleshFoil" >
       <property name="Extends" value="foodRottingFlesh" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="foodRottingFlesh" />
     </item>
     <item name="foodRottingFleshFoil" >
       <property name="Extends" value="foodRottingFlesh" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="foodRottingFlesh" />
     </item>
     <item name="foodEggThermos" >
       <property name="Extends" value="foodEgg" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="foodEgg" />
     </item>
     <item name="foodEggThermos" >
       <property name="Extends" value="foodEgg" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="foodEgg" />
     </item>
     <item name="foodEggFoil" >
       <property name="Extends" value="foodEgg" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="foodEgg" />
     </item>
     <item name="foodEggFoil" >
       <property name="Extends" value="foodEgg" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="foodEgg" />
     </item>
     <item name="foodCornMealFoil" >
       <property name="Extends" value="foodCornMeal" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="foodCornMeal" />
     </item>
     <item name="foodCornMealFoil" >
       <property name="Extends" value="foodCornMeal" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="foodCornMeal" />
     </item>
     <item name="foodCropCornFoil" >
       <property name="Extends" value="foodCropCorn" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="foodCropCorn" />
     </item>
     <item name="foodCropCornFoil" >
       <property name="Extends" value="foodCropCorn" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="foodCropCorn" />
     </item>
     <item name="foodCropGraceCornFoil" >
       <property name="Extends" value="foodCropGraceCorn" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="foodCropGraceCorn" />
     </item>
     <item name="foodCropGraceCornFoil" >
       <property name="Extends" value="foodCropGraceCorn" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="foodCropGraceCorn" />
     </item>
     <item name="foodCropYuccaFruitFoil" >
       <property name="Extends" value="foodCropYuccaFruit" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="foodCropYuccaFruit" />
     </item>
     <item name="foodCropYuccaFruitFoil" >
       <property name="Extends" value="foodCropYuccaFruit" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="foodCropYuccaFruit" />
     </item>
     <item name="Berry TeaThermos" >
       <property name="Extends" value="Berry Tea" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
+      <property class="Action0">
+        <property name="Class" value="Eat"/>
+        <property name="Delay" value="2.1"/>
+        <property name="Use_time" value="..."/>
+        <property name="Sound_start" value="player_eating"/>
+        <property name="Create_item" value="drinkThermosEmpty"/>
+      </property>
     </item>
    
     <item name="Iced Mixed TeaThermos" >
       <property name="Extends" value="Iced Mixed Tea" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
+      <property class="Action0">
+        <property name="Class" value="Eat"/>
+        <property name="Delay" value="2.1"/>
+        <property name="Use_time" value="..."/>
+        <property name="Sound_start" value="player_eating"/>
+        <property name="Create_item" value="drinkThermosEmpty"/>
+      </property>
     </item>
     <item name="Iced Mixed TeaThermos" >
       <property name="Extends" value="Iced Mixed Tea" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
+      <property class="Action0">
+        <property name="Class" value="Eat"/>
+        <property name="Delay" value="2.1"/>
+        <property name="Use_time" value="..."/>
+        <property name="Sound_start" value="player_eating"/>
+        <property name="Create_item" value="drinkThermosEmpty"/>
+      </property>
     </item>
     <item name="Iced CoffeeThermos" >
       <property name="Extends" value="Iced Coffee" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
+      <property class="Action0">
+        <property name="Class" value="Eat"/>
+        <property name="Delay" value="2.1"/>
+        <property name="Use_time" value="..."/>
+        <property name="Sound_start" value="player_eating"/>
+        <property name="Create_item" value="drinkThermosEmpty"/>
+      </property>
     </item>
     <item name="Iced CoffeeThermos" >
       <property name="Extends" value="Iced Coffee" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
+      <property class="Action0">
+        <property name="Class" value="Eat"/>
+        <property name="Delay" value="2.1"/>
+        <property name="Use_time" value="..."/>
+        <property name="Sound_start" value="player_eating"/>
+        <property name="Create_item" value="drinkThermosEmpty"/>
+      </property>
     </item>
     <item name="Yucca ChipsThermos" >
       <property name="Extends" value="Yucca Chips" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
+      <property class="Action0">
+        <property name="Class" value="Eat"/>
+        <property name="Delay" value="2.1"/>
+        <property name="Use_time" value="..."/>
+        <property name="Sound_start" value="player_eating"/>
+        <property name="Create_item" value="drinkThermosEmpty"/>
+      </property>
     </item>
     <item name="Yucca ChipsThermos" >
       <property name="Extends" value="Yucca Chips" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
+      <property class="Action0">
+        <property name="Class" value="Eat"/>
+        <property name="Delay" value="2.1"/>
+        <property name="Use_time" value="..."/>
+        <property name="Sound_start" value="player_eating"/>
+        <property name="Create_item" value="drinkThermosEmpty"/>
+      </property>
     </item>
     <item name="HashbrownFoil" >
       <property name="Extends" value="Hashbrown" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
     </item>
     <item name="HashbrownFoil" >
       <property name="Extends" value="Hashbrown" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
     </item>
     <item name="Mashed PotatoFoil" >
       <property name="Extends" value="Mashed Potato" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
     </item>
     <item name="Mashed PotatoFoil" >
       <property name="Extends" value="Mashed Potato" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
     </item>
     <item name="Corn GritsFoil" >
       <property name="Extends" value="Corn Grits" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
     </item>
     <item name="Corn GritsFoil" >
       <property name="Extends" value="Corn Grits" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
     </item>
     <item name="Blueberry JamThermos" >
       <property name="Extends" value="Blueberry Jam" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
+      <property class="Action0">
+        <property name="Class" value="Eat"/>
+        <property name="Delay" value="2.1"/>
+        <property name="Use_time" value="..."/>
+        <property name="Sound_start" value="player_eating"/>
+        <property name="Create_item" value="drinkThermosEmpty"/>
+      </property>
     </item>
     <item name="Blueberry JamThermos" >
       <property name="Extends" value="Blueberry Jam" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
+      <property class="Action0">
+        <property name="Class" value="Eat"/>
+        <property name="Delay" value="2.1"/>
+        <property name="Use_time" value="..."/>
+        <property name="Sound_start" value="player_eating"/>
+        <property name="Create_item" value="drinkThermosEmpty"/>
+      </property>
     </item>
     <item name="Yucca JamThermos" >
       <property name="Extends" value="Yucca Jam" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
+      <property class="Action0">
+        <property name="Class" value="Eat"/>
+        <property name="Delay" value="2.1"/>
+        <property name="Use_time" value="..."/>
+        <property name="Sound_start" value="player_eating"/>
+        <property name="Create_item" value="drinkThermosEmpty"/>
+      </property>
     </item>
     <item name="Yucca JamThermos" >
       <property name="Extends" value="Yucca Jam" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
+      <property class="Action0">
+        <property name="Class" value="Eat"/>
+        <property name="Delay" value="2.1"/>
+        <property name="Use_time" value="..."/>
+        <property name="Sound_start" value="player_eating"/>
+        <property name="Create_item" value="drinkThermosEmpty"/>
+      </property>
     </item>
     <item name="Egg SaladThermos" >
       <property name="Extends" value="Egg Salad" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
+      <property class="Action0">
+        <property name="Class" value="Eat"/>
+        <property name="Delay" value="2.1"/>
+        <property name="Use_time" value="..."/>
+        <property name="Sound_start" value="player_eating"/>
+        <property name="Create_item" value="drinkThermosEmpty"/>
+      </property>
     </item>
     <item name="Egg SaladThermos" >
       <property name="Extends" value="Egg Salad" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
+      <property class="Action0">
+        <property name="Class" value="Eat"/>
+        <property name="Delay" value="2.1"/>
+        <property name="Use_time" value="..."/>
+        <property name="Sound_start" value="player_eating"/>
+        <property name="Create_item" value="drinkThermosEmpty"/>
+      </property>
     </item>
     <item name="Egg SaladFoil" >
       <property name="Extends" value="Egg Salad" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
     </item>
     <item name="Egg SaladFoil" >
       <property name="Extends" value="Egg Salad" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
     </item>
     <item name="Fried MeatFoil" >
       <property name="Extends" value="Fried Meat" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
     </item>
     <item name="Fried MeatFoil" >
       <property name="Extends" value="Fried Meat" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
     </item>
     <item name="Corn ChipsFoil" >
       <property name="Extends" value="Corn Chips" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
     </item>
     <item name="Corn ChipsFoil" >
       <property name="Extends" value="Corn Chips" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
     </item>
     <item name="Blueberry Jam SandwichFoil" >
       <property name="Extends" value="Blueberry Jam Sandwich" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
     </item>
     <item name="Blueberry Jam SandwichFoil" >
       <property name="Extends" value="Blueberry Jam Sandwich" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
     </item>
     <item name="Yucca Jam SandwichFoil" >
       <property name="Extends" value="Yucca Jam Sandwich" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
     </item>
     <item name="Yucca Jam SandwichFoil" >
       <property name="Extends" value="Yucca Jam Sandwich" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
     </item>
     <item name="Mushroom PieFoil" >
       <property name="Extends" value="Mushroom Pie" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
     </item>
     <item name="Mushroom PieFoil" >
       <property name="Extends" value="Mushroom Pie" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
     </item>
     <item name="Meat and Beer PieFoil" >
       <property name="Extends" value="Meat and Beer Pie" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
     </item>
     <item name="Meat and Beer PieFoil" >
       <property name="Extends" value="Meat and Beer Pie" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
     </item>
     <item name="Fried MushroomsThermos" >
       <property name="Extends" value="Fried Mushrooms" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
+      <property class="Action0">
+        <property name="Class" value="Eat"/>
+        <property name="Delay" value="2.1"/>
+        <property name="Use_time" value="..."/>
+        <property name="Sound_start" value="player_eating"/>
+        <property name="Create_item" value="drinkThermosEmpty"/>
+      </property>
     </item>
     <item name="Fried MushroomsThermos" >
       <property name="Extends" value="Fried Mushrooms" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
+      <property class="Action0">
+        <property name="Class" value="Eat"/>
+        <property name="Delay" value="2.1"/>
+        <property name="Use_time" value="..."/>
+        <property name="Sound_start" value="player_eating"/>
+        <property name="Create_item" value="drinkThermosEmpty"/>
+      </property>
     </item>
     <item name="Fried MushroomsFoil" >
       <property name="Extends" value="Fried Mushrooms" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
     </item>
     <item name="Fried MushroomsFoil" >
       <property name="Extends" value="Fried Mushrooms" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
     </item>
     <item name="Fried EggThermos" >
       <property name="Extends" value="Fried Egg" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
+      <property class="Action0">
+        <property name="Class" value="Eat"/>
+        <property name="Delay" value="2.1"/>
+        <property name="Use_time" value="..."/>
+        <property name="Sound_start" value="player_eating"/>
+        <property name="Create_item" value="drinkThermosEmpty"/>
+      </property>
     </item>
     <item name="Fried EggThermos" >
       <property name="Extends" value="Fried Egg" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
+      <property class="Action0">
+        <property name="Class" value="Eat"/>
+        <property name="Delay" value="2.1"/>
+        <property name="Use_time" value="..."/>
+        <property name="Sound_start" value="player_eating"/>
+        <property name="Create_item" value="drinkThermosEmpty"/>
+      </property>
     </item>
     <item name="Fried EggFoil" >
       <property name="Extends" value="Fried Egg" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
     </item>
     <item name="Fried EggFoil" >
       <property name="Extends" value="Fried Egg" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
     </item>
     <item name="French ToastThermos" >
       <property name="Extends" value="French Toast" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
+      <property class="Action0">
+        <property name="Class" value="Eat"/>
+        <property name="Delay" value="2.1"/>
+        <property name="Use_time" value="..."/>
+        <property name="Sound_start" value="player_eating"/>
+        <property name="Create_item" value="drinkThermosEmpty"/>
+      </property>
     </item>
     <item name="French ToastThermos" >
       <property name="Extends" value="French Toast" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
+      <property class="Action0">
+        <property name="Class" value="Eat"/>
+        <property name="Delay" value="2.1"/>
+        <property name="Use_time" value="..."/>
+        <property name="Sound_start" value="player_eating"/>
+        <property name="Create_item" value="drinkThermosEmpty"/>
+      </property>
     </item>
     <item name="French ToastFoil" >
       <property name="Extends" value="French Toast" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
     </item>
     <item name="French ToastFoil" >
       <property name="Extends" value="French Toast" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
     </item>
     <item name="Honey Glazed MeatFoil" >
       <property name="Extends" value="Honey Glazed Meat" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
     </item>
     <item name="Honey Glazed MeatFoil" >
       <property name="Extends" value="Honey Glazed Meat" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
     </item>
     <item name="Blueberry SodaThermos" >
       <property name="Extends" value="Blueberry Soda" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
+      <property class="Action0">
+        <property name="Class" value="Eat"/>
+        <property name="Delay" value="2.1"/>
+        <property name="Use_time" value="..."/>
+        <property name="Sound_start" value="player_eating"/>
+        <property name="Create_item" value="drinkThermosEmpty"/>
+      </property>
     </item>
     <item name="Blueberry SodaThermos" >
       <property name="Extends" value="Blueberry Soda" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
+      <property class="Action0">
+        <property name="Class" value="Eat"/>
+        <property name="Delay" value="2.1"/>
+        <property name="Use_time" value="..."/>
+        <property name="Sound_start" value="player_eating"/>
+        <property name="Create_item" value="drinkThermosEmpty"/>
+      </property>
     </item>
     <item name="Kvass SodaThermos" >
       <property name="Extends" value="Kvass Soda" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
+      <property class="Action0">
+        <property name="Class" value="Eat"/>
+        <property name="Delay" value="2.1"/>
+        <property name="Use_time" value="..."/>
+        <property name="Sound_start" value="player_eating"/>
+        <property name="Create_item" value="drinkThermosEmpty"/>
+      </property>
     </item>
     <item name="Kvass SodaThermos" >
       <property name="Extends" value="Kvass Soda" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
+      <property class="Action0">
+        <property name="Class" value="Eat"/>
+        <property name="Delay" value="2.1"/>
+        <property name="Use_time" value="..."/>
+        <property name="Sound_start" value="player_eating"/>
+        <property name="Create_item" value="drinkThermosEmpty"/>
+      </property>
     </item>
     <item name="Carbonated WaterThermos" >
       <property name="Extends" value="Carbonated Water" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
+      <property class="Action0">
+        <property name="Class" value="Eat"/>
+        <property name="Delay" value="2.1"/>
+        <property name="Use_time" value="..."/>
+        <property name="Sound_start" value="player_eating"/>
+        <property name="Create_item" value="drinkThermosEmpty"/>
+      </property>
     </item>
     <item name="Carbonated WaterThermos" >
       <property name="Extends" value="Carbonated Water" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
+      <property class="Action0">
+        <property name="Class" value="Eat"/>
+        <property name="Delay" value="2.1"/>
+        <property name="Use_time" value="..."/>
+        <property name="Sound_start" value="player_eating"/>
+        <property name="Create_item" value="drinkThermosEmpty"/>
+      </property>
     </item>
     <item name="Plain FudgeThermos" >
       <property name="Extends" value="Plain Fudge" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
+      <property class="Action0">
+        <property name="Class" value="Eat"/>
+        <property name="Delay" value="2.1"/>
+        <property name="Use_time" value="..."/>
+        <property name="Sound_start" value="player_eating"/>
+        <property name="Create_item" value="drinkThermosEmpty"/>
+      </property>
     </item>
     <item name="Plain FudgeThermos" >
       <property name="Extends" value="Plain Fudge" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
+      <property class="Action0">
+        <property name="Class" value="Eat"/>
+        <property name="Delay" value="2.1"/>
+        <property name="Use_time" value="..."/>
+        <property name="Sound_start" value="player_eating"/>
+        <property name="Create_item" value="drinkThermosEmpty"/>
+      </property>
     </item>
     <item name="Sponge CakeFoil" >
       <property name="Extends" value="Sponge Cake" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
     </item>
     <item name="Sponge CakeFoil" >
       <property name="Extends" value="Sponge Cake" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
     </item>
     <item name="Blueberry Sponge CakeFoil" >
       <property name="Extends" value="Blueberry Sponge Cake" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
     </item>
     <item name="Blueberry Sponge CakeFoil" >
       <property name="Extends" value="Blueberry Sponge Cake" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
     </item>
     <item name="Yucca Sponge CakeFoil" >
       <property name="Extends" value="Yucca Sponge Cake" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
     </item>
     <item name="Yucca Sponge CakeFoil" >
       <property name="Extends" value="Yucca Sponge Cake" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
     </item>
     <item name="Custard PieFoil" >
       <property name="Extends" value="Custard Pie" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
     </item>
     <item name="Custard PieFoil" >
       <property name="Extends" value="Custard Pie" />
-      <property name="TickPerLoss" value="40" />
+      <property name="TickPerLoss" value="120" />
     </item>
 
   </append>
