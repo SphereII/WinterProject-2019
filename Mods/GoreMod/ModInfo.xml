@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <xml>
 	<ModInfo>
-		<Name value="Gore Mod" />
+		<Name value="GoreMod" />
 		<Description value="Adds tons of effect (blood on item, enemies, more gore, etc..)" />
 		<Author value="Moong oignonchaud" />
 		<Version value="1.1" />
