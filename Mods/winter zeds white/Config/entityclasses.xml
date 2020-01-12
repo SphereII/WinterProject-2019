@@ -135,9 +135,27 @@
     </entity_class>
     <entity_class name="animalZombieDog_white" extends="animalZombieDog">
       <property name="ReplaceMaterial0" value="#@modfolder:Resources/winter_zeds_white3.unity3d?zdog_blue"/>
+      <drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher" />
+      <drop event="Harvest" name="foodRottingFlesh" tag="butcherHarvest" count="10" />
+      <drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="4" />
+      <drop event="Harvest" name="resourceAnimalFat" tag="butcherHarvest" count="1" />
+      <drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="15" />
+      <drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="5" />
+      <drop event="Harvest" name="foodRottingFlesh" count="1" tag="WasteTreasuresCompleteHarvest" />
+      <drop event="Harvest" name="resourceLeather" count="1" tag="WasteTreasuresCompleteHarvest" />
+      <drop event="Harvest" name="resourceBone" count="1" tag="WasteTreasuresCompleteHarvest" />
     </entity_class>
     <entity_class name="animalZombieWolf_white" extends="animalDireWolf">
       <property name="ReplaceMaterial0" value="#@modfolder:Resources/winter_zeds_white3.unity3d?zwolf_blue"/>
+      <drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher" />
+      <drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="25" />
+      <drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="10" />
+      <drop event="Harvest" name="resourceAnimalFat" tag="butcherHarvest" count="3" />
+      <drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="15" />
+      <drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="5" />
+      <drop event="Harvest" name="foodRawMeat" count="1" tag="WasteTreasuresCompleteHarvest" />
+      <drop event="Harvest" name="resourceLeather" count="1" tag="WasteTreasuresCompleteHarvest" />
+      <drop event="Harvest" name="resourceBone" count="1" tag="WasteTreasuresCompleteHarvest" />
     </entity_class>
   </append>
 </configs>
