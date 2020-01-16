@@ -1715,211 +1715,463 @@
       <property name="Extends" value="foodCornOnTheCob" />
       <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="foodCornOnTheCob" />
+      <property class="Action0">
+        <property name="Class" value="Eat" />
+        <property name="Delay" value="2.1" />
+        <property name="Use_time" value="..." />
+        <property name="Sound_start" value="player_eating" />
+      </property>
     </item>
     <item name="foodCornOnTheCobFoil" >
       <property name="Extends" value="foodCornOnTheCob" />
       <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="foodCornOnTheCob" />
+      <property class="Action0">
+        <property name="Class" value="Eat" />
+        <property name="Delay" value="2.1" />
+        <property name="Use_time" value="..." />
+        <property name="Sound_start" value="player_eating" />
+      </property>
     </item>
     <item name="foodCornBreadFoil" >
       <property name="Extends" value="foodCornBread" />
       <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="foodCornBread" />
+      <property class="Action0">
+        <property name="Class" value="Eat" />
+        <property name="Delay" value="2.1" />
+        <property name="Use_time" value="..." />
+        <property name="Sound_start" value="player_eating" />
+      </property>
     </item>
     <item name="foodCornBreadFoil" >
       <property name="Extends" value="foodCornBread" />
       <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="foodCornBread" />
+      <property class="Action0">
+        <property name="Class" value="Eat" />
+        <property name="Delay" value="2.1" />
+        <property name="Use_time" value="..." />
+        <property name="Sound_start" value="player_eating" />
+      </property>
     </item>
     <item name="foodMoldyBreadFoil" >
       <property name="Extends" value="foodMoldyBread" />
       <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="foodMoldyBread" />
+      <property class="Action0">
+        <property name="Class" value="Eat" />
+        <property name="Delay" value="2.1" />
+        <property name="Use_time" value="..." />
+        <property name="Sound_start" value="player_eating" />
+      </property>
     </item>
     <item name="foodMoldyBreadFoil" >
       <property name="Extends" value="foodMoldyBread" />
       <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="foodMoldyBread" />
+      <property class="Action0">
+        <property name="Class" value="Eat" />
+        <property name="Delay" value="2.1" />
+        <property name="Use_time" value="..." />
+        <property name="Sound_start" value="player_eating" />
+      </property>
     </item>
     <item name="foodShamSandwichFoil" >
       <property name="Extends" value="foodShamSandwich" />
       <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="foodShamSandwich" />
+      <property class="Action0">
+        <property name="Class" value="Eat" />
+        <property name="Delay" value="2.1" />
+        <property name="Use_time" value="..." />
+        <property name="Sound_start" value="player_eating" />
+      </property>
     </item>
     <item name="foodShamSandwichFoil" >
       <property name="Extends" value="foodShamSandwich" />
       <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="foodShamSandwich" />
+      <property class="Action0">
+        <property name="Class" value="Eat" />
+        <property name="Delay" value="2.1" />
+        <property name="Use_time" value="..." />
+        <property name="Sound_start" value="player_eating" />
+      </property>
     </item>
     <item name="foodCharredMeatFoil" >
       <property name="Extends" value="foodCharredMeat" />
       <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="foodCharredMeat" />
+      <property class="Action0">
+        <property name="Class" value="Eat" />
+        <property name="Delay" value="2.1" />
+        <property name="Use_time" value="..." />
+        <property name="Sound_start" value="player_eating" />
+      </property>
     </item>
     <item name="foodCharredMeatFoil" >
       <property name="Extends" value="foodCharredMeat" />
       <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="foodCharredMeat" />
+      <property class="Action0">
+        <property name="Class" value="Eat" />
+        <property name="Delay" value="2.1" />
+        <property name="Use_time" value="..." />
+        <property name="Sound_start" value="player_eating" />
+      </property>
     </item>
     <item name="foodGrilledMeatFoil" >
       <property name="Extends" value="foodGrilledMeat" />
       <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="foodGrilledMeat" />
+      <property class="Action0">
+        <property name="Class" value="Eat" />
+        <property name="Delay" value="2.1" />
+        <property name="Use_time" value="..." />
+        <property name="Sound_start" value="player_eating" />
+      </property>
     </item>
     <item name="foodGrilledMeatFoil" >
       <property name="Extends" value="foodGrilledMeat" />
       <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="foodGrilledMeat" />
+      <property class="Action0">
+        <property name="Class" value="Eat" />
+        <property name="Delay" value="2.1" />
+        <property name="Use_time" value="..." />
+        <property name="Sound_start" value="player_eating" />
+      </property>
     </item>
     <item name="foodBoiledMeatFoil" >
       <property name="Extends" value="foodBoiledMeat" />
       <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="foodBoiledMeat" />
+      <property class="Action0">
+        <property name="Class" value="Eat" />
+        <property name="Delay" value="2.1" />
+        <property name="Use_time" value="..." />
+        <property name="Sound_start" value="player_eating" />
+      </property>
     </item>
     <item name="foodBoiledMeatFoil" >
       <property name="Extends" value="foodBoiledMeat" />
       <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="foodBoiledMeat" />
+      <property class="Action0">
+        <property name="Class" value="Eat" />
+        <property name="Delay" value="2.1" />
+        <property name="Use_time" value="..." />
+        <property name="Sound_start" value="player_eating" />
+      </property>
     </item>
     <item name="foodMeatStewThermos" >
       <property name="Extends" value="foodMeatStew" />
       <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="foodMeatStew" />
+      <property class="Action0">
+        <property name="Class" value="Eat" />
+        <property name="Delay" value="2.1" />
+        <property name="Use_time" value="..." />
+        <property name="Sound_start" value="player_eating" />
+      </property>
     </item>
     <item name="foodMeatStewThermos" >
       <property name="Extends" value="foodMeatStew" />
       <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="foodMeatStew" />
+      <property class="Action0">
+        <property name="Class" value="Eat" />
+        <property name="Delay" value="2.1" />
+        <property name="Use_time" value="..." />
+        <property name="Sound_start" value="player_eating" />
+      </property>
     </item>
     <item name="foodSteakAndPotatoFoil" >
       <property name="Extends" value="foodSteakAndPotato" />
       <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="foodSteakAndPotato" />
+      <property class="Action0">
+        <property name="Class" value="Eat" />
+        <property name="Delay" value="2.1" />
+        <property name="Use_time" value="..." />
+        <property name="Sound_start" value="player_eating" />
+      </property>
     </item>
     <item name="foodSteakAndPotatoFoil" >
       <property name="Extends" value="foodSteakAndPotato" />
       <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="foodSteakAndPotato" />
+      <property class="Action0">
+        <property name="Class" value="Eat" />
+        <property name="Delay" value="2.1" />
+        <property name="Use_time" value="..." />
+        <property name="Sound_start" value="player_eating" />
+      </property>
     </item>
     <item name="foodShamChowderThermos" >
       <property name="Extends" value="foodShamChowder" />
       <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="foodShamChowder" />
+      <property class="Action0">
+        <property name="Class" value="Eat" />
+        <property name="Delay" value="2.1" />
+        <property name="Use_time" value="..." />
+        <property name="Sound_start" value="player_eating" />
+      </property>
     </item>
     <item name="foodShamChowderThermos" >
       <property name="Extends" value="foodShamChowder" />
       <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="foodShamChowder" />
+      <property class="Action0">
+        <property name="Class" value="Eat" />
+        <property name="Delay" value="2.1" />
+        <property name="Use_time" value="..." />
+        <property name="Sound_start" value="player_eating" />
+      </property>
     </item>
     <item name="foodHoboStewThermos" >
       <property name="Extends" value="foodHoboStew" />
       <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="foodHoboStew" />
+      <property class="Action0">
+        <property name="Class" value="Eat" />
+        <property name="Delay" value="2.1" />
+        <property name="Use_time" value="..." />
+        <property name="Sound_start" value="player_eating" />
+      </property>
     </item>
     <item name="foodHoboStewThermos" >
       <property name="Extends" value="foodHoboStew" />
       <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="foodHoboStew" />
+      <property class="Action0">
+        <property name="Class" value="Eat" />
+        <property name="Delay" value="2.1" />
+        <property name="Use_time" value="..." />
+        <property name="Sound_start" value="player_eating" />
+      </property>
     </item>
     <item name="foodFishTacosFoil" >
       <property name="Extends" value="foodFishTacos" />
       <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="foodFishTacos" />
+      <property class="Action0">
+        <property name="Class" value="Eat" />
+        <property name="Delay" value="2.1" />
+        <property name="Use_time" value="..." />
+        <property name="Sound_start" value="player_eating" />
+      </property>
     </item>
     <item name="foodFishTacosFoil" >
       <property name="Extends" value="foodFishTacos" />
       <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="foodFishTacos" />
+      <property class="Action0">
+        <property name="Class" value="Eat" />
+        <property name="Delay" value="2.1" />
+        <property name="Use_time" value="..." />
+        <property name="Sound_start" value="player_eating" />
+      </property>
     </item>
     <item name="foodChiliDogFoil" >
       <property name="Extends" value="foodChiliDog" />
       <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="foodChiliDog" />
+      <property class="Action0">
+        <property name="Class" value="Eat" />
+        <property name="Delay" value="2.1" />
+        <property name="Use_time" value="..." />
+        <property name="Sound_start" value="player_eating" />
+      </property>
     </item>
     <item name="foodChiliDogFoil" >
       <property name="Extends" value="foodChiliDog" />
       <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="foodChiliDog" />
+      <property class="Action0">
+        <property name="Class" value="Eat" />
+        <property name="Delay" value="2.1" />
+        <property name="Use_time" value="..." />
+        <property name="Sound_start" value="player_eating" />
+      </property>
     </item>
     <item name="foodBakedPotatoFoil" >
       <property name="Extends" value="foodBakedPotato" />
       <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="foodBakedPotato" />
+      <property class="Action0">
+        <property name="Class" value="Eat" />
+        <property name="Delay" value="2.1" />
+        <property name="Use_time" value="..." />
+        <property name="Sound_start" value="player_eating" />
+      </property>
     </item>
     <item name="foodBakedPotatoFoil" >
       <property name="Extends" value="foodBakedPotato" />
       <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="foodBakedPotato" />
+      <property class="Action0">
+        <property name="Class" value="Eat" />
+        <property name="Delay" value="2.1" />
+        <property name="Use_time" value="..." />
+        <property name="Sound_start" value="player_eating" />
+      </property>
     </item>
     <item name="foodBlueberryPieFoil" >
       <property name="Extends" value="foodBlueberryPie" />
       <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="foodBlueberryPie" />
+      <property class="Action0">
+        <property name="Class" value="Eat" />
+        <property name="Delay" value="2.1" />
+        <property name="Use_time" value="..." />
+        <property name="Sound_start" value="player_eating" />
+      </property>
     </item>
     <item name="foodBlueberryPieFoil" >
       <property name="Extends" value="foodBlueberryPie" />
       <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="foodBlueberryPie" />
+      <property class="Action0">
+        <property name="Class" value="Eat" />
+        <property name="Delay" value="2.1" />
+        <property name="Use_time" value="..." />
+        <property name="Sound_start" value="player_eating" />
+      </property>
     </item>
     <item name="foodPumpkinPieFoil" >
       <property name="Extends" value="foodPumpkinPie" />
       <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="foodPumpkinPie" />
+      <property class="Action0">
+        <property name="Class" value="Eat" />
+        <property name="Delay" value="2.1" />
+        <property name="Use_time" value="..." />
+        <property name="Sound_start" value="player_eating" />
+      </property>
     </item>
     <item name="foodPumpkinPieFoil" >
       <property name="Extends" value="foodPumpkinPie" />
       <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="foodPumpkinPie" />
+      <property class="Action0">
+        <property name="Class" value="Eat" />
+        <property name="Delay" value="2.1" />
+        <property name="Use_time" value="..." />
+        <property name="Sound_start" value="player_eating" />
+      </property>
     </item>
     <item name="foodPumpkinCheesecakeFoil" >
       <property name="Extends" value="foodPumpkinCheesecake" />
       <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="foodPumpkinCheesecake" />
+      <property class="Action0">
+        <property name="Class" value="Eat" />
+        <property name="Delay" value="2.1" />
+        <property name="Use_time" value="..." />
+        <property name="Sound_start" value="player_eating" />
+      </property>
     </item>
     <item name="foodPumpkinCheesecakeFoil" >
       <property name="Extends" value="foodPumpkinCheesecake" />
       <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="foodPumpkinCheesecake" />
+      <property class="Action0">
+        <property name="Class" value="Eat" />
+        <property name="Delay" value="2.1" />
+        <property name="Use_time" value="..." />
+        <property name="Sound_start" value="player_eating" />
+      </property>
     </item>
     <item name="foodPumpkinBreadFoil" >
       <property name="Extends" value="foodPumpkinBread" />
       <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="foodPumpkinBread" />
+      <property class="Action0">
+        <property name="Class" value="Eat" />
+        <property name="Delay" value="2.1" />
+        <property name="Use_time" value="..." />
+        <property name="Sound_start" value="player_eating" />
+      </property>
     </item>
     <item name="foodPumpkinBreadFoil" >
       <property name="Extends" value="foodPumpkinBread" />
       <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="foodPumpkinBread" />
+      <property class="Action0">
+        <property name="Class" value="Eat" />
+        <property name="Delay" value="2.1" />
+        <property name="Use_time" value="..." />
+        <property name="Sound_start" value="player_eating" />
+      </property>
     </item>
     <item name="foodEggBoiledThermos" >
       <property name="Extends" value="foodEggBoiled" />
       <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="foodEggBoiled" />
+      <property class="Action0">
+        <property name="Class" value="Eat" />
+        <property name="Delay" value="2.1" />
+        <property name="Use_time" value="..." />
+        <property name="Sound_start" value="player_eating" />
+      </property>
     </item>
     <item name="foodEggBoiledThermos" >
       <property name="Extends" value="foodEggBoiled" />
       <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="foodEggBoiled" />
+      <property class="Action0">
+        <property name="Class" value="Eat" />
+        <property name="Delay" value="2.1" />
+        <property name="Use_time" value="..." />
+        <property name="Sound_start" value="player_eating" />
+      </property>
     </item>
     <item name="foodEggBoiledFoil" >
       <property name="Extends" value="foodEggBoiled" />
       <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="foodEggBoiled" />
+      <property class="Action0">
+        <property name="Class" value="Eat" />
+        <property name="Delay" value="2.1" />
+        <property name="Use_time" value="..." />
+        <property name="Sound_start" value="player_eating" />
+      </property>
     </item>
     <item name="foodEggBoiledFoil" >
       <property name="Extends" value="foodEggBoiled" />
       <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="foodEggBoiled" />
+      <property class="Action0">
+        <property name="Class" value="Eat" />
+        <property name="Delay" value="2.1" />
+        <property name="Use_time" value="..." />
+        <property name="Sound_start" value="player_eating" />
+      </property>
     </item>
     <item name="foodBaconAndEggsThermos" >
       <property name="Extends" value="foodBaconAndEggs" />
       <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="foodBaconAndEggs" />
+      <property class="Action0">
+        <property name="Class" value="Eat" />
+        <property name="Delay" value="2.1" />
+        <property name="Use_time" value="..." />
+        <property name="Sound_start" value="player_eating" />
+      </property>
     </item>
     <item name="foodBaconAndEggsThermos" >
       <property name="Extends" value="foodBaconAndEggs" />
       <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="foodBaconAndEggs" />
+      <property class="Action0">
+        <property name="Class" value="Eat" />
+        <property name="Delay" value="2.1" />
+        <property name="Use_time" value="..." />
+        <property name="Sound_start" value="player_eating" />
+      </property>
     </item>
     <item name="foodBaconAndEggsFoil" >
       <property name="Extends" value="foodBaconAndEggs" />
@@ -1945,21 +2197,45 @@
       <property name="Extends" value="foodRawMeat" />
       <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="foodRawMeat" />
+      <property class="Action0">
+        <property name="Class" value="Eat" />
+        <property name="Delay" value="2.1" />
+        <property name="Use_time" value="..." />
+        <property name="Sound_start" value="player_eating" />
+      </property>
     </item>
     <item name="foodRawMeatFoil" >
       <property name="Extends" value="foodRawMeat" />
       <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="foodRawMeat" />
+      <property class="Action0">
+        <property name="Class" value="Eat" />
+        <property name="Delay" value="2.1" />
+        <property name="Use_time" value="..." />
+        <property name="Sound_start" value="player_eating" />
+      </property>
     </item>
     <item name="foodRottingFleshFoil" >
       <property name="Extends" value="foodRottingFlesh" />
       <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="foodRottingFlesh" />
+      <property class="Action0">
+        <property name="Class" value="Eat" />
+        <property name="Delay" value="2.1" />
+        <property name="Use_time" value="..." />
+        <property name="Sound_start" value="player_eating" />
+      </property>
     </item>
     <item name="foodRottingFleshFoil" >
       <property name="Extends" value="foodRottingFlesh" />
       <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="foodRottingFlesh" />
+      <property class="Action0">
+        <property name="Class" value="Eat" />
+        <property name="Delay" value="2.1" />
+        <property name="Use_time" value="..." />
+        <property name="Sound_start" value="player_eating" />
+      </property>
     </item>
     <item name="foodEggThermos" >
       <property name="Extends" value="foodEgg" />
@@ -1975,51 +2251,111 @@
       <property name="Extends" value="foodEgg" />
       <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="foodEgg" />
+      <property class="Action0">
+        <property name="Class" value="Eat" />
+        <property name="Delay" value="2.1" />
+        <property name="Use_time" value="..." />
+        <property name="Sound_start" value="player_eating" />
+      </property>
     </item>
     <item name="foodEggFoil" >
       <property name="Extends" value="foodEgg" />
       <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="foodEgg" />
+      <property class="Action0">
+        <property name="Class" value="Eat" />
+        <property name="Delay" value="2.1" />
+        <property name="Use_time" value="..." />
+        <property name="Sound_start" value="player_eating" />
+      </property>
     </item>
     <item name="foodCornMealFoil" >
       <property name="Extends" value="foodCornMeal" />
       <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="foodCornMeal" />
+      <property class="Action0">
+        <property name="Class" value="Eat" />
+        <property name="Delay" value="2.1" />
+        <property name="Use_time" value="..." />
+        <property name="Sound_start" value="player_eating" />
+      </property>
     </item>
     <item name="foodCornMealFoil" >
       <property name="Extends" value="foodCornMeal" />
       <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="foodCornMeal" />
+      <property class="Action0">
+        <property name="Class" value="Eat" />
+        <property name="Delay" value="2.1" />
+        <property name="Use_time" value="..." />
+        <property name="Sound_start" value="player_eating" />
+      </property>
     </item>
     <item name="foodCropCornFoil" >
       <property name="Extends" value="foodCropCorn" />
       <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="foodCropCorn" />
+      <property class="Action0">
+        <property name="Class" value="Eat" />
+        <property name="Delay" value="2.1" />
+        <property name="Use_time" value="..." />
+        <property name="Sound_start" value="player_eating" />
+      </property>
     </item>
     <item name="foodCropCornFoil" >
       <property name="Extends" value="foodCropCorn" />
       <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="foodCropCorn" />
+      <property class="Action0">
+        <property name="Class" value="Eat" />
+        <property name="Delay" value="2.1" />
+        <property name="Use_time" value="..." />
+        <property name="Sound_start" value="player_eating" />
+      </property>
     </item>
     <item name="foodCropGraceCornFoil" >
       <property name="Extends" value="foodCropGraceCorn" />
       <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="foodCropGraceCorn" />
+      <property class="Action0">
+        <property name="Class" value="Eat" />
+        <property name="Delay" value="2.1" />
+        <property name="Use_time" value="..." />
+        <property name="Sound_start" value="player_eating" />
+      </property>
     </item>
     <item name="foodCropGraceCornFoil" >
       <property name="Extends" value="foodCropGraceCorn" />
       <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="foodCropGraceCorn" />
+      <property class="Action0">
+        <property name="Class" value="Eat" />
+        <property name="Delay" value="2.1" />
+        <property name="Use_time" value="..." />
+        <property name="Sound_start" value="player_eating" />
+      </property>
     </item>
     <item name="foodCropYuccaFruitFoil" >
       <property name="Extends" value="foodCropYuccaFruit" />
       <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="foodCropYuccaFruit" />
+      <property class="Action0">
+        <property name="Class" value="Eat" />
+        <property name="Delay" value="2.1" />
+        <property name="Use_time" value="..." />
+        <property name="Sound_start" value="player_eating" />
+      </property>
     </item>
     <item name="foodCropYuccaFruitFoil" >
       <property name="Extends" value="foodCropYuccaFruit" />
       <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="foodCropYuccaFruit" />
+      <property class="Action0">
+        <property name="Class" value="Eat" />
+        <property name="Delay" value="2.1" />
+        <property name="Use_time" value="..." />
+        <property name="Sound_start" value="player_eating" />
+      </property>
     </item>
     <item name="Berry TeaThermos" >
       <property name="Extends" value="Berry Tea" />
@@ -2102,26 +2438,62 @@
     <item name="HashbrownFoil" >
       <property name="Extends" value="Hashbrown" />
       <property name="TickPerLoss" value="120" />
+      <property class="Action0">
+        <property name="Class" value="Eat" />
+        <property name="Delay" value="2.1" />
+        <property name="Use_time" value="..." />
+        <property name="Sound_start" value="player_eating" />
+      </property>
     </item>
     <item name="HashbrownFoil" >
       <property name="Extends" value="Hashbrown" />
       <property name="TickPerLoss" value="120" />
+      <property class="Action0">
+        <property name="Class" value="Eat" />
+        <property name="Delay" value="2.1" />
+        <property name="Use_time" value="..." />
+        <property name="Sound_start" value="player_eating" />
+      </property>
     </item>
     <item name="Mashed PotatoFoil" >
       <property name="Extends" value="Mashed Potato" />
       <property name="TickPerLoss" value="120" />
+      <property class="Action0">
+        <property name="Class" value="Eat" />
+        <property name="Delay" value="2.1" />
+        <property name="Use_time" value="..." />
+        <property name="Sound_start" value="player_eating" />
+      </property>
     </item>
     <item name="Mashed PotatoFoil" >
       <property name="Extends" value="Mashed Potato" />
       <property name="TickPerLoss" value="120" />
+      <property class="Action0">
+        <property name="Class" value="Eat" />
+        <property name="Delay" value="2.1" />
+        <property name="Use_time" value="..." />
+        <property name="Sound_start" value="player_eating" />
+      </property>
     </item>
     <item name="Corn GritsFoil" >
       <property name="Extends" value="Corn Grits" />
       <property name="TickPerLoss" value="120" />
+      <property class="Action0">
+        <property name="Class" value="Eat" />
+        <property name="Delay" value="2.1" />
+        <property name="Use_time" value="..." />
+        <property name="Sound_start" value="player_eating" />
+      </property>
     </item>
     <item name="Corn GritsFoil" >
       <property name="Extends" value="Corn Grits" />
       <property name="TickPerLoss" value="120" />
+      <property class="Action0">
+        <property name="Class" value="Eat" />
+        <property name="Delay" value="2.1" />
+        <property name="Use_time" value="..." />
+        <property name="Sound_start" value="player_eating" />
+      </property>
     </item>
     <item name="Blueberry JamThermos" >
       <property name="Extends" value="Blueberry Jam" />
@@ -2192,58 +2564,141 @@
     <item name="Egg SaladFoil" >
       <property name="Extends" value="Egg Salad" />
       <property name="TickPerLoss" value="120" />
+      <property class="Action0">
+        <property name="Class" value="Eat" />
+        <property name="Delay" value="2.1" />
+        <property name="Use_time" value="..." />
+        <property name="Sound_start" value="player_eating" />
+      </property>
     </item>
     <item name="Egg SaladFoil" >
       <property name="Extends" value="Egg Salad" />
       <property name="TickPerLoss" value="120" />
+      <property class="Action0">
+        <property name="Class" value="Eat" />
+        <property name="Delay" value="2.1" />
+        <property name="Use_time" value="..." />
+        <property name="Sound_start" value="player_eating" />
+      </property>
     </item>
     <item name="Fried MeatFoil" >
       <property name="Extends" value="Fried Meat" />
       <property name="TickPerLoss" value="120" />
+      <property class="Action0">
+        <property name="Class" value="Eat" />
+        <property name="Delay" value="2.1" />
+        <property name="Use_time" value="..." />
+        <property name="Sound_start" value="player_eating" />
+      </property>
     </item>
     <item name="Fried MeatFoil" >
       <property name="Extends" value="Fried Meat" />
       <property name="TickPerLoss" value="120" />
+      <property class="Action0">
+        <property name="Class" value="Eat" />
+        <property name="Delay" value="2.1" />
+        <property name="Use_time" value="..." />
+        <property name="Sound_start" value="player_eating" />
+      </property>
     </item>
     <item name="Corn ChipsFoil" >
       <property name="Extends" value="Corn Chips" />
       <property name="TickPerLoss" value="120" />
+      <property class="Action0">
+        <property name="Class" value="Eat" />
+        <property name="Delay" value="2.1" />
+        <property name="Use_time" value="..." />
+        <property name="Sound_start" value="player_eating" />
+      </property>
     </item>
     <item name="Corn ChipsFoil" >
       <property name="Extends" value="Corn Chips" />
       <property name="TickPerLoss" value="120" />
+      <property class="Action0">
+        <property name="Class" value="Eat" />
+        <property name="Delay" value="2.1" />
+        <property name="Use_time" value="..." />
+        <property name="Sound_start" value="player_eating" />
+      </property>
     </item>
     <item name="Blueberry Jam SandwichFoil" >
       <property name="Extends" value="Blueberry Jam Sandwich" />
       <property name="TickPerLoss" value="120" />
+      <property class="Action0">
+        <property name="Class" value="Eat" />
+        <property name="Delay" value="2.1" />
+        <property name="Use_time" value="..." />
+        <property name="Sound_start" value="player_eating" />
+      </property>
     </item>
     <item name="Blueberry Jam SandwichFoil" >
       <property name="Extends" value="Blueberry Jam Sandwich" />
       <property name="TickPerLoss" value="120" />
+      <property class="Action0">
+        <property name="Class" value="Eat" />
+        <property name="Delay" value="2.1" />
+        <property name="Use_time" value="..." />
+        <property name="Sound_start" value="player_eating" />
+      </property>
     </item>
     <item name="Yucca Jam SandwichFoil" >
       <property name="Extends" value="Yucca Jam Sandwich" />
       <property name="TickPerLoss" value="120" />
+      <property class="Action0">
+        <property name="Class" value="Eat" />
+        <property name="Delay" value="2.1" />
+        <property name="Use_time" value="..." />
+        <property name="Sound_start" value="player_eating" />
+      </property>
     </item>
     <item name="Yucca Jam SandwichFoil" >
       <property name="Extends" value="Yucca Jam Sandwich" />
       <property name="TickPerLoss" value="120" />
+      <property class="Action0">
+        <property name="Class" value="Eat" />
+        <property name="Delay" value="2.1" />
+        <property name="Use_time" value="..." />
+        <property name="Sound_start" value="player_eating" />
+      </property>
     </item>
     <item name="Mushroom PieFoil" >
       <property name="Extends" value="Mushroom Pie" />
       <property name="TickPerLoss" value="120" />
+      <property class="Action0">
+        <property name="Class" value="Eat" />
+        <property name="Delay" value="2.1" />
+        <property name="Use_time" value="..." />
+        <property name="Sound_start" value="player_eating" />
+      </property>
     </item>
     <item name="Mushroom PieFoil" >
       <property name="Extends" value="Mushroom Pie" />
       <property name="TickPerLoss" value="120" />
+      <property class="Action0">
+        <property name="Class" value="Eat" />
+        <property name="Delay" value="2.1" />
+        <property name="Use_time" value="..." />
+        <property name="Sound_start" value="player_eating" />
+      </property>
     </item>
     <item name="Meat and Beer PieFoil" >
       <property name="Extends" value="Meat and Beer Pie" />
       <property name="TickPerLoss" value="120" />
+      <property class="Action0">
+        <property name="Class" value="Eat" />
+        <property name="Delay" value="2.1" />
+        <property name="Use_time" value="..." />
+        <property name="Sound_start" value="player_eating" />
+      </property>
     </item>
     <item name="Meat and Beer PieFoil" >
       <property name="Extends" value="Meat and Beer Pie" />
-      <property name="TickPerLoss" value="120" />
+      <property name="TickPerLoss" value="120" />	<property class="Action0">
+		<property name="Class" value="Eat" />
+		<property name="Delay" value="2.1" />
+		<property name="Use_time" value="..." />
+		<property name="Sound_start" value="player_eating" />
+	</property>
     </item>
     <item name="Fried MushroomsThermos" >
       <property name="Extends" value="Fried Mushrooms" />
@@ -2270,10 +2725,22 @@
     <item name="Fried MushroomsFoil" >
       <property name="Extends" value="Fried Mushrooms" />
       <property name="TickPerLoss" value="120" />
+      <property class="Action0">
+        <property name="Class" value="Eat" />
+        <property name="Delay" value="2.1" />
+        <property name="Use_time" value="..." />
+        <property name="Sound_start" value="player_eating" />
+      </property>
     </item>
     <item name="Fried MushroomsFoil" >
       <property name="Extends" value="Fried Mushrooms" />
       <property name="TickPerLoss" value="120" />
+      <property class="Action0">
+        <property name="Class" value="Eat" />
+        <property name="Delay" value="2.1" />
+        <property name="Use_time" value="..." />
+        <property name="Sound_start" value="player_eating" />
+      </property>
     </item>
     <item name="Fried EggThermos" >
       <property name="Extends" value="Fried Egg" />
@@ -2300,10 +2767,22 @@
     <item name="Fried EggFoil" >
       <property name="Extends" value="Fried Egg" />
       <property name="TickPerLoss" value="120" />
+      <property class="Action0">
+        <property name="Class" value="Eat" />
+        <property name="Delay" value="2.1" />
+        <property name="Use_time" value="..." />
+        <property name="Sound_start" value="player_eating" />
+      </property>
     </item>
     <item name="Fried EggFoil" >
       <property name="Extends" value="Fried Egg" />
       <property name="TickPerLoss" value="120" />
+      <property class="Action0">
+        <property name="Class" value="Eat" />
+        <property name="Delay" value="2.1" />
+        <property name="Use_time" value="..." />
+        <property name="Sound_start" value="player_eating" />
+      </property>
     </item>
     <item name="French ToastThermos" >
       <property name="Extends" value="French Toast" />
@@ -2330,18 +2809,42 @@
     <item name="French ToastFoil" >
       <property name="Extends" value="French Toast" />
       <property name="TickPerLoss" value="120" />
+      <property class="Action0">
+        <property name="Class" value="Eat" />
+        <property name="Delay" value="2.1" />
+        <property name="Use_time" value="..." />
+        <property name="Sound_start" value="player_eating" />
+      </property>
     </item>
     <item name="French ToastFoil" >
       <property name="Extends" value="French Toast" />
       <property name="TickPerLoss" value="120" />
+      <property class="Action0">
+        <property name="Class" value="Eat" />
+        <property name="Delay" value="2.1" />
+        <property name="Use_time" value="..." />
+        <property name="Sound_start" value="player_eating" />
+      </property>
     </item>
     <item name="Honey Glazed MeatFoil" >
       <property name="Extends" value="Honey Glazed Meat" />
       <property name="TickPerLoss" value="120" />
+      <property class="Action0">
+        <property name="Class" value="Eat" />
+        <property name="Delay" value="2.1" />
+        <property name="Use_time" value="..." />
+        <property name="Sound_start" value="player_eating" />
+      </property>
     </item>
     <item name="Honey Glazed MeatFoil" >
       <property name="Extends" value="Honey Glazed Meat" />
       <property name="TickPerLoss" value="120" />
+      <property class="Action0">
+        <property name="Class" value="Eat" />
+        <property name="Delay" value="2.1" />
+        <property name="Use_time" value="..." />
+        <property name="Sound_start" value="player_eating" />
+      </property>
     </item>
     <item name="Blueberry SodaThermos" >
       <property name="Extends" value="Blueberry Soda" />
@@ -2434,34 +2937,82 @@
     <item name="Sponge CakeFoil" >
       <property name="Extends" value="Sponge Cake" />
       <property name="TickPerLoss" value="120" />
+      <property class="Action0">
+        <property name="Class" value="Eat" />
+        <property name="Delay" value="2.1" />
+        <property name="Use_time" value="..." />
+        <property name="Sound_start" value="player_eating" />
+      </property>
     </item>
     <item name="Sponge CakeFoil" >
       <property name="Extends" value="Sponge Cake" />
       <property name="TickPerLoss" value="120" />
+      <property class="Action0">
+        <property name="Class" value="Eat" />
+        <property name="Delay" value="2.1" />
+        <property name="Use_time" value="..." />
+        <property name="Sound_start" value="player_eating" />
+      </property>
     </item>
     <item name="Blueberry Sponge CakeFoil" >
       <property name="Extends" value="Blueberry Sponge Cake" />
       <property name="TickPerLoss" value="120" />
+      <property class="Action0">
+        <property name="Class" value="Eat" />
+        <property name="Delay" value="2.1" />
+        <property name="Use_time" value="..." />
+        <property name="Sound_start" value="player_eating" />
+      </property>
     </item>
     <item name="Blueberry Sponge CakeFoil" >
       <property name="Extends" value="Blueberry Sponge Cake" />
       <property name="TickPerLoss" value="120" />
+      <property class="Action0">
+        <property name="Class" value="Eat" />
+        <property name="Delay" value="2.1" />
+        <property name="Use_time" value="..." />
+        <property name="Sound_start" value="player_eating" />
+      </property>
     </item>
     <item name="Yucca Sponge CakeFoil" >
       <property name="Extends" value="Yucca Sponge Cake" />
       <property name="TickPerLoss" value="120" />
+      <property class="Action0">
+        <property name="Class" value="Eat" />
+        <property name="Delay" value="2.1" />
+        <property name="Use_time" value="..." />
+        <property name="Sound_start" value="player_eating" />
+      </property>
     </item>
     <item name="Yucca Sponge CakeFoil" >
       <property name="Extends" value="Yucca Sponge Cake" />
       <property name="TickPerLoss" value="120" />
+      <property class="Action0">
+        <property name="Class" value="Eat" />
+        <property name="Delay" value="2.1" />
+        <property name="Use_time" value="..." />
+        <property name="Sound_start" value="player_eating" />
+      </property>
     </item>
     <item name="Custard PieFoil" >
       <property name="Extends" value="Custard Pie" />
       <property name="TickPerLoss" value="120" />
+      <property class="Action0">
+        <property name="Class" value="Eat" />
+        <property name="Delay" value="2.1" />
+        <property name="Use_time" value="..." />
+        <property name="Sound_start" value="player_eating" />
+      </property>
     </item>
     <item name="Custard PieFoil" >
       <property name="Extends" value="Custard Pie" />
       <property name="TickPerLoss" value="120" />
+      <property class="Action0">
+        <property name="Class" value="Eat" />
+        <property name="Delay" value="2.1" />
+        <property name="Use_time" value="..." />
+        <property name="Sound_start" value="player_eating" />
+      </property>
     </item>
 
   </append>
