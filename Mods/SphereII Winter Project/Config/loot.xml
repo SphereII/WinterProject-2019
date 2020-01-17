@@ -42,6 +42,10 @@
   <append xpath="//item[@name='foodCropPotato']/@name">Frozen</append>
 
 
+  <append xpath="//lootcontainer[@id='34']">
+    <item name="ammoGasCan" count="500,2000" prob="1" />
+  </append>
+  
   <append xpath="//lootcontainer[@id='6']">
     <item name="Carousel" prob="0.6"/>
     <item name="VideoPlayer" prob="0.6"/>
