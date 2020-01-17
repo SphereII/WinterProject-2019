@@ -1,6 +1,6 @@
 <configs>
 	<append xpath="/recipes">
-
+<!--
 		<recipe name="Berry Tea" count="1" craft_time="20" craft_area="campfire" tags="learnable,perkMasterChef" craft_tool="toolCookingPot" >
 			<ingredient name="resourceCropSnowberryPlant" count="1"/>
 			<ingredient name="foodCropBlueberries" count="1"/>
@@ -78,12 +78,7 @@
 			<ingredient name="Yucca Jam" count="1"/>
 		</recipe>
 
-		<!--<recipe name="Clay Roasted Meat" count="1" craft_time="30" craft_area="campfire" tags="learnable,perkMasterChef" >
-			<ingredient name="resourceYuccaFibers" count="10"/>
-			<ingredient name="resourceClayLump" count="10"/>
-			<ingredient name="foodRawMeat" count="5"/>
-		</recipe>-->
-
+	
 		<recipe name="Coffee Cake" count="1" craft_time="50" craft_area="campfire" tags="learnable,perkMasterChef" craft_tool="toolCookingPot">
 			<ingredient name="drinkJarBoiledWater" count="1"/>
 			<ingredient name="foodCornMeal" count="2"/>
@@ -130,7 +125,6 @@
 			<ingredient name="foodHoney" count="1"/>
 		</recipe>
 
-		<!--====Version 2====-->
 		<recipe name="Sugar Extract" count="1" craft_time="15" craft_area="campfire" tags="learnable,perkMasterChef" craft_tool="toolCookingPot" >
 			<ingredient name="foodHoney" count="1"/>
 			<ingredient name="drinkJarBoiledWater" count="1"/>
@@ -219,5 +213,6 @@
 			<ingredient name="resourceAnimalFat" count="1"/>
 			<ingredient name="drinkJarBoiledWater" count="1"/>
 		</recipe>
+    -->
 	</append>
 </configs>

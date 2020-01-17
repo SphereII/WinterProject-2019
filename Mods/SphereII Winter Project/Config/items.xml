@@ -1,9 +1,9 @@
 <configs>
 
   <remove xpath="/items/item[@name='drinkJarBoiledWater']/effect_group/triggered_effect[@cvar='.DiseaseRoll']" />
-  
+
   <remove xpath="/items/item[@name='drinkJarBoiledWater']/effect_group/triggered_effect[@buff='buffDysenteryCatch']" />
-  
+
   <append xpath="/items">
     <item name="foodFrozenBase">
       <property name="HoldType" value="31"/>
@@ -27,33 +27,35 @@
       <property name="Group" value="Food"/>
       <property name="DescriptionKey" value="foodFrozenTinFoil" />
       <property name="ItemTypeIcon" value="cold"/>
-	  <property name="CustomIcon" value="tinfoil" />
+      <property name="CustomIcon" value="tinfoil" />
     </item>
-	
-	<item name="drinkThermosEmpty">
-		<property name="HoldType" value="3"/>
-		<property name="Meshfile" value="#@modfolder:Resources/Thermos.unity3d?Thermos" />
-		<property name="DropMeshfile" value="#@modfolder:Resources/Thermos.unity3d?Thermos"/>
-		<property name="CustomIcon" value="thermos" />
-		<property name="Material" value="Mglass"/>
-		<property name="Stacknumber" value="5"/> <!-- STK resource -->
-		<property name="Weight" value="10"/>
-		<property name="EconomicValue" value="6"/>
-		<property name="CraftingIngredientTime" value="9"/>
-		<property class="Action1"> <!-- UseAction -->
-			<property name="Class" value="ExchangeItem"/>
-			<property name="Delay" value="1.0"/>
-			<property name="Change_item_to" value="drinkJarRiverWaterThermos"/>
-			<property name="Do_block_action" value="deplete1"/>
-			<property name="Focused_blockname_1" value="water"/>
-			<property name="Focused_blockname_2" value="waterMoving"/>
-			<property name="Focused_blockname_3" value="waterStaticBucket"/>
-			<property name="Focused_blockname_4" value="waterMovingBucket"/>
-			<property name="Focused_blockname_5" value="terrWaterPOI"/>
-			<property name="Sound_start" value="bucketfill_water"/>
-		</property>
-		<property name="Group" value="Resources"/>
-	</item>
+
+    <item name="drinkThermosEmpty">
+      <property name="HoldType" value="3"/>
+      <property name="Meshfile" value="#@modfolder:Resources/Thermos.unity3d?Thermos" />
+      <property name="DropMeshfile" value="#@modfolder:Resources/Thermos.unity3d?Thermos"/>
+      <property name="CustomIcon" value="thermos" />
+      <property name="Material" value="Mglass"/>
+      <property name="Stacknumber" value="5"/>
+      <!-- STK resource -->
+      <property name="Weight" value="10"/>
+      <property name="EconomicValue" value="6"/>
+      <property name="CraftingIngredientTime" value="9"/>
+      <property class="Action1">
+        <!-- UseAction -->
+        <property name="Class" value="ExchangeItem"/>
+        <property name="Delay" value="1.0"/>
+        <property name="Change_item_to" value="drinkJarRiverWaterThermos"/>
+        <property name="Do_block_action" value="deplete1"/>
+        <property name="Focused_blockname_1" value="water"/>
+        <property name="Focused_blockname_2" value="waterMoving"/>
+        <property name="Focused_blockname_3" value="waterStaticBucket"/>
+        <property name="Focused_blockname_4" value="waterMovingBucket"/>
+        <property name="Focused_blockname_5" value="terrWaterPOI"/>
+        <property name="Sound_start" value="bucketfill_water"/>
+      </property>
+      <property name="Group" value="Resources"/>
+    </item>
 
 
     <!-- Frozen Drinks -->
@@ -1051,6 +1053,14 @@
         <property name="Sound_start" value="player_eating"/>
         <property name="Create_item" value="drinkThermosEmpty"/>
       </property>
+      <effect_group tiered="false">
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="8"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="2"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+        <display_value name="dCureInfection" value=".05"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffInfectionAddCurePerc" operation="add" value="5"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffInfectionAddCure"/>
+      </effect_group>
     </item>
     <item name="foodHoneyThermos" >
       <property name="Extends" value="foodHoney" />
@@ -1063,6 +1073,14 @@
         <property name="Sound_start" value="player_eating"/>
         <property name="Create_item" value="drinkThermosEmpty"/>
       </property>
+      <effect_group tiered="false">
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="8"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="2"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+        <display_value name="dCureInfection" value=".05"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffInfectionAddCurePerc" operation="add" value="5"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffInfectionAddCure"/>
+      </effect_group>
     </item>
     <item name="drinkJarRiverWaterThermos" >
       <property name="Extends" value="drinkJarRiverWater" />
@@ -1075,6 +1093,25 @@
         <property name="Sound_start" value="player_eating"/>
         <property name="Create_item" value="drinkThermosEmpty"/>
       </property>
+      <effect_group tiered="false">
+        <requirement name="NotHasBuff" buff="buffIsOnFire"/>
+
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="10"/>
+        <display_value name="dStaminaRegen" value=".15"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="set" value="12"/>
+        <display_value name="dDysenteryRisk" value=".12"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="add" value="@$MetabolismResist"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDysenteryCatch">
+          <requirement name="RandomRoll" seed_type="Random" min_max="1,100" operation="LTE" value="@.DiseaseRoll"/>
+        </triggered_effect>
+      </effect_group>
+
+      <effect_group tiered="false">
+        <requirement name="HasBuff" buff="buffIsOnFire"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffExtinguishFire"/>
+      </effect_group>
     </item>
     <item name="drinkJarRiverWaterThermos" >
       <property name="Extends" value="drinkJarRiverWater" />
@@ -1087,6 +1124,25 @@
         <property name="Sound_start" value="player_eating"/>
         <property name="Create_item" value="drinkThermosEmpty"/>
       </property>
+      <effect_group tiered="false">
+        <requirement name="NotHasBuff" buff="buffIsOnFire"/>
+
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="10"/>
+        <display_value name="dStaminaRegen" value=".15"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="set" value="12"/>
+        <display_value name="dDysenteryRisk" value=".12"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="add" value="@$MetabolismResist"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDysenteryCatch">
+          <requirement name="RandomRoll" seed_type="Random" min_max="1,100" operation="LTE" value="@.DiseaseRoll"/>
+        </triggered_effect>
+      </effect_group>
+
+      <effect_group tiered="false">
+        <requirement name="HasBuff" buff="buffIsOnFire"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffExtinguishFire"/>
+      </effect_group>
     </item>
     <item name="drinkJarBoiledWaterThermos" >
       <property name="Extends" value="drinkJarBoiledWater" />
@@ -1099,6 +1155,25 @@
         <property name="Sound_start" value="player_eating"/>
         <property name="Create_item" value="drinkThermosEmpty"/>
       </property>
+      <effect_group tiered="false">
+        <requirement name="NotHasBuff" buff="buffIsOnFire"/>
+
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="20"/>
+        <display_value name="dStaminaRegen" value=".15"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="set" value="3"/>
+        <display_value name="dDysenteryRisk" value=".03"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="add" value="@$MetabolismResist"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDysenteryCatch">
+          <requirement name="RandomRoll" seed_type="Random" min_max="1,100" operation="LTE" value="@.DiseaseRoll"/>
+        </triggered_effect>
+      </effect_group>
+
+      <effect_group tiered="false">
+        <requirement name="HasBuff" buff="buffIsOnFire"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffExtinguishFire"/>
+      </effect_group>
     </item>
     <item name="drinkJarBoiledWaterThermos" >
       <property name="Extends" value="drinkJarBoiledWater" />
@@ -1111,6 +1186,25 @@
         <property name="Sound_start" value="player_eating"/>
         <property name="Create_item" value="drinkThermosEmpty"/>
       </property>
+      <effect_group tiered="false">
+        <requirement name="NotHasBuff" buff="buffIsOnFire"/>
+
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="20"/>
+        <display_value name="dStaminaRegen" value=".15"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="set" value="3"/>
+        <display_value name="dDysenteryRisk" value=".03"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="add" value="@$MetabolismResist"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDysenteryCatch">
+          <requirement name="RandomRoll" seed_type="Random" min_max="1,100" operation="LTE" value="@.DiseaseRoll"/>
+        </triggered_effect>
+      </effect_group>
+
+      <effect_group tiered="false">
+        <requirement name="HasBuff" buff="buffIsOnFire"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffExtinguishFire"/>
+      </effect_group>
     </item>
     <item name="drinkJarPureMineralWaterThermos" >
       <property name="Extends" value="drinkJarPureMineralWater" />
@@ -1123,6 +1217,23 @@
         <property name="Sound_start" value="player_eating"/>
         <property name="Create_item" value="drinkThermosEmpty"/>
       </property>
+      <effect_group tiered="false">
+        <requirement name="NotHasBuff" buff="buffIsOnFire"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="60"/>
+        <display_value name="dStaminaRegen" value=".15"/>
+        <display_value name="dEfficientDigestion" value=".15"/>
+        <display_value name="dDuration" value="303"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffRedTeaDuration" operation="add" value="303"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffRedTeaDuration" operation="set" value="903">
+          <requirement name="CVarCompare" cvar="$buffRedTeaDuration" operation="GT" value="903"/>
+        </triggered_effect>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables,buffRedTea"/>
+      </effect_group>
+
+      <effect_group tiered="false">
+        <requirement name="HasBuff" buff="buffIsOnFire"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffExtinguishFire"/>
+      </effect_group>
     </item>
     <item name="drinkJarPureMineralWaterThermos" >
       <property name="Extends" value="drinkJarPureMineralWater" />
@@ -1135,6 +1246,23 @@
         <property name="Sound_start" value="player_eating"/>
         <property name="Create_item" value="drinkThermosEmpty"/>
       </property>
+      <effect_group tiered="false">
+        <requirement name="NotHasBuff" buff="buffIsOnFire"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="60"/>
+        <display_value name="dStaminaRegen" value=".15"/>
+        <display_value name="dEfficientDigestion" value=".15"/>
+        <display_value name="dDuration" value="303"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffRedTeaDuration" operation="add" value="303"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffRedTeaDuration" operation="set" value="903">
+          <requirement name="CVarCompare" cvar="$buffRedTeaDuration" operation="GT" value="903"/>
+        </triggered_effect>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables,buffRedTea"/>
+      </effect_group>
+
+      <effect_group tiered="false">
+        <requirement name="HasBuff" buff="buffIsOnFire"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffExtinguishFire"/>
+      </effect_group>
     </item>
     <item name="drinkJarYuccaJuiceThermos" >
       <property name="Extends" value="drinkJarYuccaJuice" />
@@ -1147,6 +1275,18 @@
         <property name="Sound_start" value="player_eating"/>
         <property name="Create_item" value="drinkThermosEmpty"/>
       </property>
+      <effect_group tiered="false">
+        <requirement name="NotHasBuff" buff="buffIsOnFire"/>
+
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="34"/>
+        <display_value name="dStaminaRegen" value=".15"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+      </effect_group>
+
+      <effect_group tiered="false">
+        <requirement name="HasBuff" buff="buffIsOnFire"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffExtinguishFire"/>
+      </effect_group>
     </item>
     <item name="drinkJarYuccaJuiceThermos" >
       <property name="Extends" value="drinkJarYuccaJuice" />
@@ -1159,6 +1299,18 @@
         <property name="Sound_start" value="player_eating"/>
         <property name="Create_item" value="drinkThermosEmpty"/>
       </property>
+      <effect_group tiered="false">
+        <requirement name="NotHasBuff" buff="buffIsOnFire"/>
+
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="34"/>
+        <display_value name="dStaminaRegen" value=".15"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+      </effect_group>
+
+      <effect_group tiered="false">
+        <requirement name="HasBuff" buff="buffIsOnFire"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffExtinguishFire"/>
+      </effect_group>
     </item>
     <item name="drinkJarGoldenRodTeaThermos" >
       <property name="Extends" value="drinkJarGoldenRodTea" />
@@ -1171,6 +1323,23 @@
         <property name="Sound_start" value="player_eating"/>
         <property name="Create_item" value="drinkThermosEmpty"/>
       </property>
+      <effect_group tiered="false">
+        <requirement name="NotHasBuff" buff="buffIsOnFire"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="24"/>
+        <display_value name="dStaminaRegen" value=".15"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+      </effect_group>
+
+      <effect_group tiered="false">
+        <requirement name="HasBuff" buff="buffIsOnFire"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffExtinguishFire"/>
+      </effect_group>
+
+      <effect_group tiered="false">
+        <display_value name="dCureDysentery" value=".2"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDysenteryAddCurePerc" operation="add" value="20"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDysenteryAddCure"/>
+      </effect_group>
     </item>
     <item name="drinkJarGoldenRodTeaThermos" >
       <property name="Extends" value="drinkJarGoldenRodTea" />
@@ -1183,6 +1352,23 @@
         <property name="Sound_start" value="player_eating"/>
         <property name="Create_item" value="drinkThermosEmpty"/>
       </property>
+      <effect_group tiered="false">
+        <requirement name="NotHasBuff" buff="buffIsOnFire"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="24"/>
+        <display_value name="dStaminaRegen" value=".15"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+      </effect_group>
+
+      <effect_group tiered="false">
+        <requirement name="HasBuff" buff="buffIsOnFire"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffExtinguishFire"/>
+      </effect_group>
+
+      <effect_group tiered="false">
+        <display_value name="dCureDysentery" value=".2"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDysenteryAddCurePerc" operation="add" value="20"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDysenteryAddCure"/>
+      </effect_group>
     </item>
     <item name="drinkJarRedTeaThermos" >
       <property name="Extends" value="drinkJarRedTea" />
@@ -1195,6 +1381,23 @@
         <property name="Sound_start" value="player_eating"/>
         <property name="Create_item" value="drinkThermosEmpty"/>
       </property>
+      <effect_group tiered="false">
+        <requirement name="NotHasBuff" buff="buffIsOnFire"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="24"/>
+        <display_value name="dStaminaRegen" value=".15"/>
+        <display_value name="dEfficientDigestion" value=".15"/>
+        <display_value name="dDuration" value="243"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffRedTeaDuration" operation="add" value="243"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffRedTeaDuration" operation="set" value="723">
+          <requirement name="CVarCompare" cvar="$buffRedTeaDuration" operation="GT" value="723"/>
+        </triggered_effect>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables,buffRedTea"/>
+      </effect_group>
+
+      <effect_group tiered="false">
+        <requirement name="HasBuff" buff="buffIsOnFire"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffExtinguishFire"/>
+      </effect_group>
     </item>
     <item name="drinkJarRedTeaThermos" >
       <property name="Extends" value="drinkJarRedTea" />
@@ -1207,6 +1410,23 @@
         <property name="Sound_start" value="player_eating"/>
         <property name="Create_item" value="drinkThermosEmpty"/>
       </property>
+      <effect_group tiered="false">
+        <requirement name="NotHasBuff" buff="buffIsOnFire"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="24"/>
+        <display_value name="dStaminaRegen" value=".15"/>
+        <display_value name="dEfficientDigestion" value=".15"/>
+        <display_value name="dDuration" value="243"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffRedTeaDuration" operation="add" value="243"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffRedTeaDuration" operation="set" value="723">
+          <requirement name="CVarCompare" cvar="$buffRedTeaDuration" operation="GT" value="723"/>
+        </triggered_effect>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables,buffRedTea"/>
+      </effect_group>
+
+      <effect_group tiered="false">
+        <requirement name="HasBuff" buff="buffIsOnFire"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffExtinguishFire"/>
+      </effect_group>
     </item>
     <item name="drinkJarYuccaCocktailThermos" >
       <property name="Extends" value="drinkJarYuccaCocktail" />
@@ -1219,6 +1439,25 @@
         <property name="Sound_start" value="player_eating"/>
         <property name="Create_item" value="drinkThermosEmpty"/>
       </property>
+      <effect_group tiered="false">
+        <requirement name="NotHasBuff" buff="buffIsOnFire"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="78"/>
+        <display_value name="dStaminaRegen" value=".15"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="22"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="11"/>
+        <display_value name="dHypothermalResist" value="30"/>
+        <display_value name="dDuration" value="903"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffYuccaJuiceSmoothieDuration" operation="add" value="903"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffYuccaJuiceSmoothieDuration" operation="set" value="2703">
+          <requirement name="CVarCompare" cvar="$buffYuccaJuiceSmoothieDuration" operation="GT" value="2703"/>
+        </triggered_effect>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables,buffYuccaJuiceSmoothie"/>
+      </effect_group>
+
+      <effect_group tiered="false">
+        <requirement name="HasBuff" buff="buffIsOnFire"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffExtinguishFire"/>
+      </effect_group>
     </item>
     <item name="drinkJarYuccaCocktailThermos" >
       <property name="Extends" value="drinkJarYuccaCocktail" />
@@ -1231,6 +1470,25 @@
         <property name="Sound_start" value="player_eating"/>
         <property name="Create_item" value="drinkThermosEmpty"/>
       </property>
+      <effect_group tiered="false">
+        <requirement name="NotHasBuff" buff="buffIsOnFire"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="78"/>
+        <display_value name="dStaminaRegen" value=".15"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="22"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="11"/>
+        <display_value name="dHypothermalResist" value="30"/>
+        <display_value name="dDuration" value="903"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffYuccaJuiceSmoothieDuration" operation="add" value="903"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffYuccaJuiceSmoothieDuration" operation="set" value="2703">
+          <requirement name="CVarCompare" cvar="$buffYuccaJuiceSmoothieDuration" operation="GT" value="2703"/>
+        </triggered_effect>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables,buffYuccaJuiceSmoothie"/>
+      </effect_group>
+
+      <effect_group tiered="false">
+        <requirement name="HasBuff" buff="buffIsOnFire"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffExtinguishFire"/>
+      </effect_group>
     </item>
     <item name="drinkYuccaJuiceSmoothieThermos" >
       <property name="Extends" value="drinkYuccaJuiceSmoothie" />
@@ -1243,6 +1501,25 @@
         <property name="Sound_start" value="player_eating"/>
         <property name="Create_item" value="drinkThermosEmpty"/>
       </property>
+      <effect_group tiered="false">
+        <requirement name="NotHasBuff" buff="buffIsOnFire"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="78"/>
+        <display_value name="dStaminaRegen" value=".15"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="22"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="11"/>
+        <display_value name="dHypothermalResist" value="30"/>
+        <display_value name="dDuration" value="903"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffYuccaJuiceSmoothieDuration" operation="add" value="903"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffYuccaJuiceSmoothieDuration" operation="set" value="2703">
+          <requirement name="CVarCompare" cvar="$buffYuccaJuiceSmoothieDuration" operation="GT" value="2703"/>
+        </triggered_effect>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables,buffYuccaJuiceSmoothie"/>
+      </effect_group>
+
+      <effect_group tiered="false">
+        <requirement name="HasBuff" buff="buffIsOnFire"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffExtinguishFire"/>
+      </effect_group>
     </item>
     <item name="drinkYuccaJuiceSmoothieThermos" >
       <property name="Extends" value="drinkYuccaJuiceSmoothie" />
@@ -1255,6 +1532,25 @@
         <property name="Sound_start" value="player_eating"/>
         <property name="Create_item" value="drinkThermosEmpty"/>
       </property>
+      <effect_group tiered="false">
+        <requirement name="NotHasBuff" buff="buffIsOnFire"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="78"/>
+        <display_value name="dStaminaRegen" value=".15"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="22"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="11"/>
+        <display_value name="dHypothermalResist" value="30"/>
+        <display_value name="dDuration" value="903"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffYuccaJuiceSmoothieDuration" operation="add" value="903"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffYuccaJuiceSmoothieDuration" operation="set" value="2703">
+          <requirement name="CVarCompare" cvar="$buffYuccaJuiceSmoothieDuration" operation="GT" value="2703"/>
+        </triggered_effect>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables,buffYuccaJuiceSmoothie"/>
+      </effect_group>
+
+      <effect_group tiered="false">
+        <requirement name="HasBuff" buff="buffIsOnFire"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffExtinguishFire"/>
+      </effect_group>
     </item>
     <item name="drinkCanMegaCrushThermos" >
       <property name="Extends" value="drinkCanMegaCrush" />
@@ -1267,6 +1563,23 @@
         <property name="Sound_start" value="player_eating"/>
         <property name="Create_item" value="drinkThermosEmpty"/>
       </property>
+      <effect_group tiered="false">
+        <requirement name="NotHasBuff" buff="buffIsOnFire"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="60"/>
+        <display_value name="dStaminaRegen" value=".15"/>
+        <display_value name="dRunSpeed" value=".5"/>
+        <display_value name="dDuration" value="123"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffMegaCrushDuration" operation="add" value="123"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffMegaCrushDuration" operation="set" value="363">
+          <requirement name="CVarCompare" cvar="$buffMegaCrushDuration" operation="GT" value="363"/>
+        </triggered_effect>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables,buffMegaCrush"/>
+      </effect_group>
+
+      <effect_group tiered="false">
+        <requirement name="HasBuff" buff="buffIsOnFire"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffExtinguishFire"/>
+      </effect_group>
     </item>
     <item name="drinkCanMegaCrushThermos" >
       <property name="Extends" value="drinkCanMegaCrush" />
@@ -1279,6 +1592,23 @@
         <property name="Sound_start" value="player_eating"/>
         <property name="Create_item" value="drinkThermosEmpty"/>
       </property>
+      <effect_group tiered="false">
+        <requirement name="NotHasBuff" buff="buffIsOnFire"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="60"/>
+        <display_value name="dStaminaRegen" value=".15"/>
+        <display_value name="dRunSpeed" value=".5"/>
+        <display_value name="dDuration" value="123"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffMegaCrushDuration" operation="add" value="123"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffMegaCrushDuration" operation="set" value="363">
+          <requirement name="CVarCompare" cvar="$buffMegaCrushDuration" operation="GT" value="363"/>
+        </triggered_effect>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables,buffMegaCrush"/>
+      </effect_group>
+
+      <effect_group tiered="false">
+        <requirement name="HasBuff" buff="buffIsOnFire"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffExtinguishFire"/>
+      </effect_group>
     </item>
     <item name="drinkJarCoffeeThermos" >
       <property name="Extends" value="drinkJarCoffee" />
@@ -1291,6 +1621,23 @@
         <property name="Sound_start" value="player_eating"/>
         <property name="Create_item" value="drinkThermosEmpty"/>
       </property>
+      <effect_group tiered="false">
+        <requirement name="NotHasBuff" buff="buffIsOnFire"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="24"/>
+        <display_value name="dStaminaRegen" value=".25"/>
+        <display_value name="dHypothermalResist" value="5"/>
+        <display_value name="dDuration" value="183"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffCoffeeDuration" operation="add" value="183"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffCoffeeDuration" operation="set" value="543">
+          <requirement name="CVarCompare" cvar="$buffCoffeeDuration" operation="GT" value="543"/>
+        </triggered_effect>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables,buffCoffee"/>
+      </effect_group>
+
+      <effect_group tiered="false">
+        <requirement name="HasBuff" buff="buffIsOnFire"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffExtinguishFire"/>
+      </effect_group>
     </item>
     <item name="drinkJarCoffeeThermos" >
       <property name="Extends" value="drinkJarCoffee" />
@@ -1303,6 +1650,23 @@
         <property name="Sound_start" value="player_eating"/>
         <property name="Create_item" value="drinkThermosEmpty"/>
       </property>
+      <effect_group tiered="false">
+        <requirement name="NotHasBuff" buff="buffIsOnFire"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="24"/>
+        <display_value name="dStaminaRegen" value=".25"/>
+        <display_value name="dHypothermalResist" value="5"/>
+        <display_value name="dDuration" value="183"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffCoffeeDuration" operation="add" value="183"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffCoffeeDuration" operation="set" value="543">
+          <requirement name="CVarCompare" cvar="$buffCoffeeDuration" operation="GT" value="543"/>
+        </triggered_effect>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables,buffCoffee"/>
+      </effect_group>
+
+      <effect_group tiered="false">
+        <requirement name="HasBuff" buff="buffIsOnFire"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffExtinguishFire"/>
+      </effect_group>
     </item>
     <item name="drinkJarBlackStrapCoffeeThermos" >
       <property name="Extends" value="drinkJarBlackStrapCoffee" />
@@ -1315,6 +1679,23 @@
         <property name="Sound_start" value="player_eating"/>
         <property name="Create_item" value="drinkThermosEmpty"/>
       </property>
+      <effect_group tiered="false">
+        <requirement name="NotHasBuff" buff="buffIsOnFire"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="24"/>
+        <display_value name="dStaminaRegen" value=".3"/>
+        <display_value name="dHypothermalResist" value="10"/>
+        <display_value name="dDuration" value="363"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffCoffeeDuration" operation="add" value="363"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffCoffeeDuration" operation="set" value="1083">
+          <requirement name="CVarCompare" cvar="$buffCoffeeDuration" operation="GT" value="1083"/>
+        </triggered_effect>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables,buffBlackStrapCoffee"/>
+      </effect_group>
+
+      <effect_group tiered="false">
+        <requirement name="HasBuff" buff="buffIsOnFire"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffExtinguishFire"/>
+      </effect_group>
     </item>
     <item name="drinkJarBlackStrapCoffeeThermos" >
       <property name="Extends" value="drinkJarBlackStrapCoffee" />
@@ -1339,6 +1720,23 @@
         <property name="Sound_start" value="player_eating"/>
         <property name="Create_item" value="drinkThermosEmpty"/>
       </property>
+      <effect_group tiered="false">
+        <requirement name="NotHasBuff" buff="buffIsOnFire"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="24"/>
+        <display_value name="dStaminaRegen" value=".3"/>
+        <display_value name="dHypothermalResist" value="10"/>
+        <display_value name="dDuration" value="363"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffCoffeeDuration" operation="add" value="363"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffCoffeeDuration" operation="set" value="1083">
+          <requirement name="CVarCompare" cvar="$buffCoffeeDuration" operation="GT" value="1083"/>
+        </triggered_effect>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables,buffBlackStrapCoffee"/>
+      </effect_group>
+
+      <effect_group tiered="false">
+        <requirement name="HasBuff" buff="buffIsOnFire"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffExtinguishFire"/>
+      </effect_group>
     </item>
     <item name="drinkJarBeerThermos" >
       <property name="Extends" value="drinkJarBeer" />
@@ -1351,6 +1749,23 @@
         <property name="Sound_start" value="player_eating"/>
         <property name="Create_item" value="drinkThermosEmpty"/>
       </property>
+      <effect_group tiered="false">
+        <requirement name="NotHasBuff" buff="buffIsOnFire"/>
+        <display_value name="dStaminaRegen" value=".5"/>
+        <display_value name="dEntityDamageBrawling" value="3"/>
+        <display_value name="dStunResist" value="1"/>
+        <display_value name="dDuration" value="45"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffBeerDuration" operation="add" value="48"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffBeerDuration" operation="set" value="138">
+          <requirement name="CVarCompare" cvar="$buffBeerDuration" operation="GT" value="138"/>
+        </triggered_effect>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffBeer"/>
+      </effect_group>
+
+      <effect_group tiered="false">
+        <requirement name="HasBuff" buff="buffIsOnFire"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffExtinguishFire"/>
+      </effect_group>
     </item>
     <item name="foodCanBeefThermos" >
       <property name="Extends" value="foodCanBeef" />
@@ -1363,6 +1778,11 @@
         <property name="Sound_start" value="player_eating"/>
         <property name="Create_item" value="drinkThermosEmpty"/>
       </property>
+      <effect_group tiered="false">
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="15"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="7"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+      </effect_group>
     </item>
     <item name="foodCanBeefThermos" >
       <property name="Extends" value="foodCanBeef" />
@@ -1375,6 +1795,11 @@
         <property name="Sound_start" value="player_eating"/>
         <property name="Create_item" value="drinkThermosEmpty"/>
       </property>
+      <effect_group tiered="false">
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="15"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="7"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+      </effect_group>
     </item>
     <item name="foodCanChickenThermos" >
       <property name="Extends" value="foodCanChicken" />
@@ -1387,6 +1812,11 @@
         <property name="Sound_start" value="player_eating"/>
         <property name="Create_item" value="drinkThermosEmpty"/>
       </property>
+      <effect_group tiered="false">
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="15"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="7"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+      </effect_group>
     </item>
     <item name="foodCanChickenThermos" >
       <property name="Extends" value="foodCanChicken" />
@@ -1399,6 +1829,11 @@
         <property name="Sound_start" value="player_eating"/>
         <property name="Create_item" value="drinkThermosEmpty"/>
       </property>
+      <effect_group tiered="false">
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="15"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="7"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+      </effect_group>
     </item>
     <item name="foodCanLambThermos" >
       <property name="Extends" value="foodCanLamb" />
@@ -1411,6 +1846,11 @@
         <property name="Sound_start" value="player_eating"/>
         <property name="Create_item" value="drinkThermosEmpty"/>
       </property>
+      <effect_group tiered="false">
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="15"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="7"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+      </effect_group>
     </item>
     <item name="foodCanLambThermos" >
       <property name="Extends" value="foodCanLamb" />
@@ -1423,6 +1863,11 @@
         <property name="Sound_start" value="player_eating"/>
         <property name="Create_item" value="drinkThermosEmpty"/>
       </property>
+      <effect_group tiered="false">
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="15"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="7"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+      </effect_group>
     </item>
     <item name="foodCanCatfoodThermos" >
       <property name="Extends" value="foodCanCatfood" />
@@ -1459,6 +1904,11 @@
         <property name="Sound_start" value="player_eating"/>
         <property name="Create_item" value="drinkThermosEmpty"/>
       </property>
+      <effect_group tiered="false">
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="5"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="2"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+      </effect_group>
     </item>
     <item name="foodCanDogfoodThermos" >
       <property name="Extends" value="foodCanDogfood" />
@@ -1471,6 +1921,11 @@
         <property name="Sound_start" value="player_eating"/>
         <property name="Create_item" value="drinkThermosEmpty"/>
       </property>
+      <effect_group tiered="false">
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="10"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="5"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+      </effect_group>
     </item>
     <item name="foodCanChiliThermos" >
       <property name="Extends" value="foodCanChili" />
@@ -1483,6 +1938,11 @@
         <property name="Sound_start" value="player_eating"/>
         <property name="Create_item" value="drinkThermosEmpty"/>
       </property>
+      <effect_group tiered="false">
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="15"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="7"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+      </effect_group>
     </item>
     <item name="foodCanChiliThermos" >
       <property name="Extends" value="foodCanChili" />
@@ -1495,6 +1955,11 @@
         <property name="Sound_start" value="player_eating"/>
         <property name="Create_item" value="drinkThermosEmpty"/>
       </property>
+      <effect_group tiered="false">
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="15"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="7"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+      </effect_group>
     </item>
     <item name="foodCanTunaThermos" >
       <property name="Extends" value="foodCanTuna" />
@@ -1519,6 +1984,11 @@
         <property name="Sound_start" value="player_eating"/>
         <property name="Create_item" value="drinkThermosEmpty"/>
       </property>
+      <effect_group tiered="false">
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="5"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="2"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+      </effect_group>
     </item>
     <item name="foodCanShamThermos" >
       <property name="Extends" value="foodCanSham" />
@@ -1531,6 +2001,11 @@
         <property name="Sound_start" value="player_eating"/>
         <property name="Create_item" value="drinkThermosEmpty"/>
       </property>
+      <effect_group tiered="false">
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="15"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="7"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+      </effect_group>
     </item>
     <item name="foodCanShamThermos" >
       <property name="Extends" value="foodCanSham" />
@@ -1543,6 +2018,11 @@
         <property name="Sound_start" value="player_eating"/>
         <property name="Create_item" value="drinkThermosEmpty"/>
       </property>
+      <effect_group tiered="false">
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="15"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="7"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+      </effect_group>
     </item>
     <item name="foodCanPastaThermos" >
       <property name="Extends" value="foodCanPasta" />
@@ -1555,6 +2035,11 @@
         <property name="Sound_start" value="player_eating"/>
         <property name="Create_item" value="drinkThermosEmpty"/>
       </property>
+      <effect_group tiered="false">
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="15"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="7"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+      </effect_group>
     </item>
     <item name="foodCanPastaThermos" >
       <property name="Extends" value="foodCanPasta" />
@@ -1567,17 +2052,11 @@
         <property name="Sound_start" value="player_eating"/>
         <property name="Create_item" value="drinkThermosEmpty"/>
       </property>
-    </item>
-    <item name="foodCanSalmonThermos" >
-      <property name="Extends" value="foodCanSalmon" />
-      <property name="TickPerLoss" value="120" />
-      <property name="CustomIcon" value="foodCanSalmon" /><property class="Action0">
-        <property name="Class" value="Eat"/>
-        <property name="Delay" value="2.1"/>
-        <property name="Use_time" value="..."/>
-        <property name="Sound_start" value="player_eating"/>
-        <property name="Create_item" value="drinkThermosEmpty"/>
-      </property>
+      <effect_group tiered="false">
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="15"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="7"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+      </effect_group>
     </item>
     <item name="foodCanSalmonThermos" >
       <property name="Extends" value="foodCanSalmon" />
@@ -1590,6 +2069,28 @@
         <property name="Sound_start" value="player_eating"/>
         <property name="Create_item" value="drinkThermosEmpty"/>
       </property>
+      <effect_group tiered="false">
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="15"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="7"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+      </effect_group>
+    </item>
+    <item name="foodCanSalmonThermos" >
+      <property name="Extends" value="foodCanSalmon" />
+      <property name="TickPerLoss" value="120" />
+      <property name="CustomIcon" value="foodCanSalmon" />
+      <property class="Action0">
+        <property name="Class" value="Eat"/>
+        <property name="Delay" value="2.1"/>
+        <property name="Use_time" value="..."/>
+        <property name="Sound_start" value="player_eating"/>
+        <property name="Create_item" value="drinkThermosEmpty"/>
+      </property>
+      <effect_group tiered="false">
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="15"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="7"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+      </effect_group>
     </item>
     <item name="foodCanMisoThermos" >
       <property name="Extends" value="foodCanMiso" />
@@ -1602,6 +2103,12 @@
         <property name="Sound_start" value="player_eating"/>
         <property name="Create_item" value="drinkThermosEmpty"/>
       </property>
+      <effect_group tiered="false">
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="10"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="5"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+      </effect_group>
     </item>
     <item name="foodCanMisoThermos" >
       <property name="Extends" value="foodCanMiso" />
@@ -1614,6 +2121,12 @@
         <property name="Sound_start" value="player_eating"/>
         <property name="Create_item" value="drinkThermosEmpty"/>
       </property>
+      <effect_group tiered="false">
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="10"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="5"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+      </effect_group>
     </item>
     <item name="foodCanPeasThermos" >
       <property name="Extends" value="foodCanPeas" />
@@ -1626,6 +2139,12 @@
         <property name="Sound_start" value="player_eating"/>
         <property name="Create_item" value="drinkThermosEmpty"/>
       </property>
+      <effect_group tiered="false">
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="5"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="10"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="5"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+      </effect_group>
     </item>
     <item name="foodCanPeasThermos" >
       <property name="Extends" value="foodCanPeas" />
@@ -1638,6 +2157,12 @@
         <property name="Sound_start" value="player_eating"/>
         <property name="Create_item" value="drinkThermosEmpty"/>
       </property>
+      <effect_group tiered="false">
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="5"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="10"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="5"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+      </effect_group>
     </item>
     <item name="foodCanPearsThermos" >
       <property name="Extends" value="foodCanPears" />
@@ -1662,6 +2187,12 @@
         <property name="Sound_start" value="player_eating"/>
         <property name="Create_item" value="drinkThermosEmpty"/>
       </property>
+      <effect_group tiered="false">
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="5"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="10"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="5"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+      </effect_group>
     </item>
     <item name="foodCanSoupThermos" >
       <property name="Extends" value="foodCanSoup" />
@@ -1674,6 +2205,12 @@
         <property name="Sound_start" value="player_eating"/>
         <property name="Create_item" value="drinkThermosEmpty"/>
       </property>
+      <effect_group tiered="false">
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="10"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="5"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+      </effect_group>
     </item>
     <item name="foodCanSoupThermos" >
       <property name="Extends" value="foodCanSoup" />
@@ -1686,6 +2223,12 @@
         <property name="Sound_start" value="player_eating"/>
         <property name="Create_item" value="drinkThermosEmpty"/>
       </property>
+      <effect_group tiered="false">
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="10"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="5"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+      </effect_group>
     </item>
     <item name="foodCanStockThermos" >
       <property name="Extends" value="foodCanStock" />
@@ -1698,6 +2241,12 @@
         <property name="Sound_start" value="player_eating"/>
         <property name="Create_item" value="drinkThermosEmpty"/>
       </property>
+      <effect_group tiered="false">
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="10"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="5"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+      </effect_group>
     </item>
     <item name="foodCanStockThermos" >
       <property name="Extends" value="foodCanStock" />
@@ -1710,6 +2259,12 @@
         <property name="Sound_start" value="player_eating"/>
         <property name="Create_item" value="drinkThermosEmpty"/>
       </property>
+      <effect_group tiered="false">
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="10"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="5"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+      </effect_group>
     </item>
     <item name="foodCornOnTheCobFoil" >
       <property name="Extends" value="foodCornOnTheCob" />
@@ -1721,6 +2276,19 @@
         <property name="Use_time" value="..." />
         <property name="Sound_start" value="player_eating" />
       </property>
+      <effect_group tiered="false">
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="5"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="2"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="set" value="4"/>
+        <display_value name="dFoodPoisoningRisk" value=".04"/>
+        <!-- FP cooked -->
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="add" value="@$MetabolismResist"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffIllFoodPoisoning01">
+          <requirement name="RandomRoll" seed_type="Random" min_max="1,100" operation="LTE" value="@.DiseaseRoll"/>
+        </triggered_effect>
+      </effect_group>
     </item>
     <item name="foodCornOnTheCobFoil" >
       <property name="Extends" value="foodCornOnTheCob" />
@@ -1732,6 +2300,19 @@
         <property name="Use_time" value="..." />
         <property name="Sound_start" value="player_eating" />
       </property>
+      <effect_group tiered="false">
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="5"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="2"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="set" value="4"/>
+        <display_value name="dFoodPoisoningRisk" value=".04"/>
+        <!-- FP cooked -->
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="add" value="@$MetabolismResist"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffIllFoodPoisoning01">
+          <requirement name="RandomRoll" seed_type="Random" min_max="1,100" operation="LTE" value="@.DiseaseRoll"/>
+        </triggered_effect>
+      </effect_group>
     </item>
     <item name="foodCornBreadFoil" >
       <property name="Extends" value="foodCornBread" />
@@ -1743,6 +2324,19 @@
         <property name="Use_time" value="..." />
         <property name="Sound_start" value="player_eating" />
       </property>
+      <effect_group tiered="false">
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="4"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="2"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="set" value="4"/>
+        <display_value name="dFoodPoisoningRisk" value=".04"/>
+        <!-- FP cooked -->
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="add" value="@$MetabolismResist"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffIllFoodPoisoning01">
+          <requirement name="RandomRoll" seed_type="Random" min_max="1,100" operation="LTE" value="@.DiseaseRoll"/>
+        </triggered_effect>
+      </effect_group>
     </item>
     <item name="foodCornBreadFoil" >
       <property name="Extends" value="foodCornBread" />
@@ -1754,6 +2348,19 @@
         <property name="Use_time" value="..." />
         <property name="Sound_start" value="player_eating" />
       </property>
+      <effect_group tiered="false">
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="4"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="2"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="set" value="4"/>
+        <display_value name="dFoodPoisoningRisk" value=".04"/>
+        <!-- FP cooked -->
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="add" value="@$MetabolismResist"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffIllFoodPoisoning01">
+          <requirement name="RandomRoll" seed_type="Random" min_max="1,100" operation="LTE" value="@.DiseaseRoll"/>
+        </triggered_effect>
+      </effect_group>
     </item>
     <item name="foodMoldyBreadFoil" >
       <property name="Extends" value="foodMoldyBread" />
@@ -1765,6 +2372,19 @@
         <property name="Use_time" value="..." />
         <property name="Sound_start" value="player_eating" />
       </property>
+      <effect_group tiered="false">
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="4"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="2"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="set" value="12"/>
+        <display_value name="dFoodPoisoningRisk" value=".12"/>
+        <!-- rotten1 -->
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="add" value="@$MetabolismResist"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffIllFoodPoisoning01">
+          <requirement name="RandomRoll" seed_type="Random" min_max="1,100" operation="LTE" value="@.DiseaseRoll"/>
+        </triggered_effect>
+      </effect_group>
     </item>
     <item name="foodMoldyBreadFoil" >
       <property name="Extends" value="foodMoldyBread" />
@@ -1776,6 +2396,19 @@
         <property name="Use_time" value="..." />
         <property name="Sound_start" value="player_eating" />
       </property>
+      <effect_group tiered="false">
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="4"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="2"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="set" value="12"/>
+        <display_value name="dFoodPoisoningRisk" value=".12"/>
+        <!-- rotten1 -->
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="add" value="@$MetabolismResist"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffIllFoodPoisoning01">
+          <requirement name="RandomRoll" seed_type="Random" min_max="1,100" operation="LTE" value="@.DiseaseRoll"/>
+        </triggered_effect>
+      </effect_group>
     </item>
     <item name="foodShamSandwichFoil" >
       <property name="Extends" value="foodShamSandwich" />
@@ -1787,6 +2420,19 @@
         <property name="Use_time" value="..." />
         <property name="Sound_start" value="player_eating" />
       </property>
+      <effect_group tiered="false">
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="28"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="7"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="set" value="12"/>
+        <display_value name="dFoodPoisoningRisk" value=".12"/>
+        <!-- rotten1 -->
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="add" value="@$MetabolismResist"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffIllFoodPoisoning01">
+          <requirement name="RandomRoll" seed_type="Random" min_max="1,100" operation="LTE" value="@.DiseaseRoll"/>
+        </triggered_effect>
+      </effect_group>
     </item>
     <item name="foodShamSandwichFoil" >
       <property name="Extends" value="foodShamSandwich" />
@@ -1798,6 +2444,19 @@
         <property name="Use_time" value="..." />
         <property name="Sound_start" value="player_eating" />
       </property>
+      <effect_group tiered="false">
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="28"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="7"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="set" value="12"/>
+        <display_value name="dFoodPoisoningRisk" value=".12"/>
+        <!-- rotten1 -->
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="add" value="@$MetabolismResist"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffIllFoodPoisoning01">
+          <requirement name="RandomRoll" seed_type="Random" min_max="1,100" operation="LTE" value="@.DiseaseRoll"/>
+        </triggered_effect>
+      </effect_group>
     </item>
     <item name="foodCharredMeatFoil" >
       <property name="Extends" value="foodCharredMeat" />
@@ -1809,6 +2468,21 @@
         <property name="Use_time" value="..." />
         <property name="Sound_start" value="player_eating" />
       </property>
+      <effect_group tiered="false">
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="10"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyStats" stat="water" operation="add" value="-5"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="5"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+        <display_value name="$waterAmountAdd" value="-5"/>
+
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="set" value="4"/>
+        <display_value name="dFoodPoisoningRisk" value=".04"/>
+        <!-- FP cooked -->
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="add" value="@$MetabolismResist"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffIllFoodPoisoning01">
+          <requirement name="RandomRoll" seed_type="Random" min_max="1,100" operation="LTE" value="@.DiseaseRoll"/>
+        </triggered_effect>
+      </effect_group>
     </item>
     <item name="foodCharredMeatFoil" >
       <property name="Extends" value="foodCharredMeat" />
@@ -1820,6 +2494,21 @@
         <property name="Use_time" value="..." />
         <property name="Sound_start" value="player_eating" />
       </property>
+      <effect_group tiered="false">
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="10"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyStats" stat="water" operation="add" value="-5"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="5"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+        <display_value name="$waterAmountAdd" value="-5"/>
+
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="set" value="4"/>
+        <display_value name="dFoodPoisoningRisk" value=".04"/>
+        <!-- FP cooked -->
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="add" value="@$MetabolismResist"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffIllFoodPoisoning01">
+          <requirement name="RandomRoll" seed_type="Random" min_max="1,100" operation="LTE" value="@.DiseaseRoll"/>
+        </triggered_effect>
+      </effect_group>
     </item>
     <item name="foodGrilledMeatFoil" >
       <property name="Extends" value="foodGrilledMeat" />
@@ -1831,6 +2520,19 @@
         <property name="Use_time" value="..." />
         <property name="Sound_start" value="player_eating" />
       </property>
+      <effect_group tiered="false">
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="10"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="5"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="set" value="4"/>
+        <display_value name="dFoodPoisoningRisk" value=".04"/>
+        <!-- FP cooked -->
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="add" value="@$MetabolismResist"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffIllFoodPoisoning01">
+          <requirement name="RandomRoll" seed_type="Random" min_max="1,100" operation="LTE" value="@.DiseaseRoll"/>
+        </triggered_effect>
+      </effect_group>
     </item>
     <item name="foodGrilledMeatFoil" >
       <property name="Extends" value="foodGrilledMeat" />
@@ -1842,6 +2544,19 @@
         <property name="Use_time" value="..." />
         <property name="Sound_start" value="player_eating" />
       </property>
+      <effect_group tiered="false">
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="10"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="5"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="set" value="4"/>
+        <display_value name="dFoodPoisoningRisk" value=".04"/>
+        <!-- FP cooked -->
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="add" value="@$MetabolismResist"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffIllFoodPoisoning01">
+          <requirement name="RandomRoll" seed_type="Random" min_max="1,100" operation="LTE" value="@.DiseaseRoll"/>
+        </triggered_effect>
+      </effect_group>
     </item>
     <item name="foodBoiledMeatFoil" >
       <property name="Extends" value="foodBoiledMeat" />
@@ -1853,6 +2568,20 @@
         <property name="Use_time" value="..." />
         <property name="Sound_start" value="player_eating" />
       </property>
+      <effect_group tiered="false">
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="10"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="10"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="15"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="set" value="4"/>
+        <display_value name="dFoodPoisoningRisk" value=".04"/>
+        <!-- FP cooked -->
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="add" value="@$MetabolismResist"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffIllFoodPoisoning01">
+          <requirement name="RandomRoll" seed_type="Random" min_max="1,100" operation="LTE" value="@.DiseaseRoll"/>
+        </triggered_effect>
+      </effect_group>
     </item>
     <item name="foodBoiledMeatFoil" >
       <property name="Extends" value="foodBoiledMeat" />
@@ -1864,6 +2593,20 @@
         <property name="Use_time" value="..." />
         <property name="Sound_start" value="player_eating" />
       </property>
+      <effect_group tiered="false">
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="10"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="10"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="15"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="set" value="4"/>
+        <display_value name="dFoodPoisoningRisk" value=".04"/>
+        <!-- FP cooked -->
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="add" value="@$MetabolismResist"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffIllFoodPoisoning01">
+          <requirement name="RandomRoll" seed_type="Random" min_max="1,100" operation="LTE" value="@.DiseaseRoll"/>
+        </triggered_effect>
+      </effect_group>
     </item>
     <item name="foodMeatStewThermos" >
       <property name="Extends" value="foodMeatStew" />
@@ -1875,6 +2618,20 @@
         <property name="Use_time" value="..." />
         <property name="Sound_start" value="player_eating" />
       </property>
+      <effect_group tiered="false">
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="20"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="50"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="25"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="set" value="4"/>
+        <display_value name="dFoodPoisoningRisk" value=".04"/>
+        <!-- FP cooked -->
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="add" value="@$MetabolismResist"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffIllFoodPoisoning01">
+          <requirement name="RandomRoll" seed_type="Random" min_max="1,100" operation="LTE" value="@.DiseaseRoll"/>
+        </triggered_effect>
+      </effect_group>
     </item>
     <item name="foodMeatStewThermos" >
       <property name="Extends" value="foodMeatStew" />
@@ -1886,6 +2643,20 @@
         <property name="Use_time" value="..." />
         <property name="Sound_start" value="player_eating" />
       </property>
+      <effect_group tiered="false">
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="20"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="50"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="25"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="set" value="4"/>
+        <display_value name="dFoodPoisoningRisk" value=".04"/>
+        <!-- FP cooked -->
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="add" value="@$MetabolismResist"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffIllFoodPoisoning01">
+          <requirement name="RandomRoll" seed_type="Random" min_max="1,100" operation="LTE" value="@.DiseaseRoll"/>
+        </triggered_effect>
+      </effect_group>
     </item>
     <item name="foodSteakAndPotatoFoil" >
       <property name="Extends" value="foodSteakAndPotato" />
@@ -1897,6 +2668,19 @@
         <property name="Use_time" value="..." />
         <property name="Sound_start" value="player_eating" />
       </property>
+      <effect_group tiered="false">
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="50"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="25"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="set" value="4"/>
+        <display_value name="dFoodPoisoningRisk" value=".04"/>
+        <!-- FP cooked -->
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="add" value="@$MetabolismResist"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffIllFoodPoisoning01">
+          <requirement name="RandomRoll" seed_type="Random" min_max="1,100" operation="LTE" value="@.DiseaseRoll"/>
+        </triggered_effect>
+      </effect_group>
     </item>
     <item name="foodSteakAndPotatoFoil" >
       <property name="Extends" value="foodSteakAndPotato" />
@@ -1908,6 +2692,19 @@
         <property name="Use_time" value="..." />
         <property name="Sound_start" value="player_eating" />
       </property>
+      <effect_group tiered="false">
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="50"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="25"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="set" value="4"/>
+        <display_value name="dFoodPoisoningRisk" value=".04"/>
+        <!-- FP cooked -->
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="add" value="@$MetabolismResist"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffIllFoodPoisoning01">
+          <requirement name="RandomRoll" seed_type="Random" min_max="1,100" operation="LTE" value="@.DiseaseRoll"/>
+        </triggered_effect>
+      </effect_group>
     </item>
     <item name="foodShamChowderThermos" >
       <property name="Extends" value="foodShamChowder" />
@@ -1919,6 +2716,26 @@
         <property name="Use_time" value="..." />
         <property name="Sound_start" value="player_eating" />
       </property>
+      <effect_group tiered="false">
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="10"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="53"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="80"/>
+        <display_value name="dFortitude" value="1"/>
+        <display_value name="dDuration" value="603"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffShamChowderDuration" operation="add" value="603"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffShamChowderDuration" operation="set" value="1803">
+          <requirement name="CVarCompare" cvar="$buffShamChowderDuration" operation="GT" value="1803"/>
+        </triggered_effect>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables,buffShamChowder"/>
+
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="set" value="4"/>
+        <display_value name="dFoodPoisoningRisk" value=".04"/>
+        <!-- FP cooked -->
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="add" value="@$MetabolismResist"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffIllFoodPoisoning01">
+          <requirement name="RandomRoll" seed_type="Random" min_max="1,100" operation="LTE" value="@.DiseaseRoll"/>
+        </triggered_effect>
+      </effect_group>
     </item>
     <item name="foodShamChowderThermos" >
       <property name="Extends" value="foodShamChowder" />
@@ -1930,6 +2747,26 @@
         <property name="Use_time" value="..." />
         <property name="Sound_start" value="player_eating" />
       </property>
+      <effect_group tiered="false">
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="10"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="53"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="80"/>
+        <display_value name="dFortitude" value="1"/>
+        <display_value name="dDuration" value="603"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffShamChowderDuration" operation="add" value="603"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffShamChowderDuration" operation="set" value="1803">
+          <requirement name="CVarCompare" cvar="$buffShamChowderDuration" operation="GT" value="1803"/>
+        </triggered_effect>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables,buffShamChowder"/>
+
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="set" value="4"/>
+        <display_value name="dFoodPoisoningRisk" value=".04"/>
+        <!-- FP cooked -->
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="add" value="@$MetabolismResist"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffIllFoodPoisoning01">
+          <requirement name="RandomRoll" seed_type="Random" min_max="1,100" operation="LTE" value="@.DiseaseRoll"/>
+        </triggered_effect>
+      </effect_group>
     </item>
     <item name="foodHoboStewThermos" >
       <property name="Extends" value="foodHoboStew" />
@@ -1941,6 +2778,20 @@
         <property name="Use_time" value="..." />
         <property name="Sound_start" value="player_eating" />
       </property>
+      <effect_group tiered="false">
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="20"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="64"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="32"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="set" value="4"/>
+        <display_value name="dFoodPoisoningRisk" value=".04"/>
+        <!-- FP cooked -->
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="add" value="@$MetabolismResist"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffIllFoodPoisoning01">
+          <requirement name="RandomRoll" seed_type="Random" min_max="1,100" operation="LTE" value="@.DiseaseRoll"/>
+        </triggered_effect>
+      </effect_group>
     </item>
     <item name="foodHoboStewThermos" >
       <property name="Extends" value="foodHoboStew" />
@@ -1952,6 +2803,20 @@
         <property name="Use_time" value="..." />
         <property name="Sound_start" value="player_eating" />
       </property>
+      <effect_group tiered="false">
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="20"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="64"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="32"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="set" value="4"/>
+        <display_value name="dFoodPoisoningRisk" value=".04"/>
+        <!-- FP cooked -->
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="add" value="@$MetabolismResist"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffIllFoodPoisoning01">
+          <requirement name="RandomRoll" seed_type="Random" min_max="1,100" operation="LTE" value="@.DiseaseRoll"/>
+        </triggered_effect>
+      </effect_group>
     </item>
     <item name="foodFishTacosFoil" >
       <property name="Extends" value="foodFishTacos" />
@@ -1963,6 +2828,19 @@
         <property name="Use_time" value="..." />
         <property name="Sound_start" value="player_eating" />
       </property>
+      <effect_group tiered="false">
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="46"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="40"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="set" value="4"/>
+        <display_value name="dFoodPoisoningRisk" value=".04"/>
+        <!-- FP cooked -->
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="add" value="@$MetabolismResist"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffIllFoodPoisoning01">
+          <requirement name="RandomRoll" seed_type="Random" min_max="1,100" operation="LTE" value="@.DiseaseRoll"/>
+        </triggered_effect>
+      </effect_group>
     </item>
     <item name="foodFishTacosFoil" >
       <property name="Extends" value="foodFishTacos" />
@@ -1974,6 +2852,19 @@
         <property name="Use_time" value="..." />
         <property name="Sound_start" value="player_eating" />
       </property>
+      <effect_group tiered="false">
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="46"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="40"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="set" value="4"/>
+        <display_value name="dFoodPoisoningRisk" value=".04"/>
+        <!-- FP cooked -->
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="add" value="@$MetabolismResist"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffIllFoodPoisoning01">
+          <requirement name="RandomRoll" seed_type="Random" min_max="1,100" operation="LTE" value="@.DiseaseRoll"/>
+        </triggered_effect>
+      </effect_group>
     </item>
     <item name="foodChiliDogFoil" >
       <property name="Extends" value="foodChiliDog" />
@@ -1985,6 +2876,19 @@
         <property name="Use_time" value="..." />
         <property name="Sound_start" value="player_eating" />
       </property>
+      <effect_group tiered="false">
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="53"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="30"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="set" value="4"/>
+        <display_value name="dFoodPoisoningRisk" value=".04"/>
+        <!-- FP cooked -->
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="add" value="@$MetabolismResist"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffIllFoodPoisoning01">
+          <requirement name="RandomRoll" seed_type="Random" min_max="1,100" operation="LTE" value="@.DiseaseRoll"/>
+        </triggered_effect>
+      </effect_group>
     </item>
     <item name="foodChiliDogFoil" >
       <property name="Extends" value="foodChiliDog" />
@@ -1996,6 +2900,19 @@
         <property name="Use_time" value="..." />
         <property name="Sound_start" value="player_eating" />
       </property>
+      <effect_group tiered="false">
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="53"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="30"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="set" value="4"/>
+        <display_value name="dFoodPoisoningRisk" value=".04"/>
+        <!-- FP cooked -->
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="add" value="@$MetabolismResist"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffIllFoodPoisoning01">
+          <requirement name="RandomRoll" seed_type="Random" min_max="1,100" operation="LTE" value="@.DiseaseRoll"/>
+        </triggered_effect>
+      </effect_group>
     </item>
     <item name="foodBakedPotatoFoil" >
       <property name="Extends" value="foodBakedPotato" />
@@ -2007,6 +2924,19 @@
         <property name="Use_time" value="..." />
         <property name="Sound_start" value="player_eating" />
       </property>
+      <effect_group tiered="false">
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="4"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="0"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="set" value="4"/>
+        <display_value name="dFoodPoisoningRisk" value=".04"/>
+        <!-- FP cooked -->
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="add" value="@$MetabolismResist"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffIllFoodPoisoning01">
+          <requirement name="RandomRoll" seed_type="Random" min_max="1,100" operation="LTE" value="@.DiseaseRoll"/>
+        </triggered_effect>
+      </effect_group>
     </item>
     <item name="foodBakedPotatoFoil" >
       <property name="Extends" value="foodBakedPotato" />
@@ -2018,6 +2948,19 @@
         <property name="Use_time" value="..." />
         <property name="Sound_start" value="player_eating" />
       </property>
+      <effect_group tiered="false">
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="4"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="0"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="set" value="4"/>
+        <display_value name="dFoodPoisoningRisk" value=".04"/>
+        <!-- FP cooked -->
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="add" value="@$MetabolismResist"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffIllFoodPoisoning01">
+          <requirement name="RandomRoll" seed_type="Random" min_max="1,100" operation="LTE" value="@.DiseaseRoll"/>
+        </triggered_effect>
+      </effect_group>
     </item>
     <item name="foodBlueberryPieFoil" >
       <property name="Extends" value="foodBlueberryPie" />
@@ -2029,6 +2972,19 @@
         <property name="Use_time" value="..." />
         <property name="Sound_start" value="player_eating" />
       </property>
+      <effect_group tiered="false">
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="45"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="22"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="set" value="4"/>
+        <display_value name="dFoodPoisoningRisk" value=".04"/>
+        <!-- FP cooked -->
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="add" value="@$MetabolismResist"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffIllFoodPoisoning01">
+          <requirement name="RandomRoll" seed_type="Random" min_max="1,100" operation="LTE" value="@.DiseaseRoll"/>
+        </triggered_effect>
+      </effect_group>
     </item>
     <item name="foodBlueberryPieFoil" >
       <property name="Extends" value="foodBlueberryPie" />
@@ -2040,6 +2996,19 @@
         <property name="Use_time" value="..." />
         <property name="Sound_start" value="player_eating" />
       </property>
+      <effect_group tiered="false">
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="45"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="22"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="set" value="4"/>
+        <display_value name="dFoodPoisoningRisk" value=".04"/>
+        <!-- FP cooked -->
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="add" value="@$MetabolismResist"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffIllFoodPoisoning01">
+          <requirement name="RandomRoll" seed_type="Random" min_max="1,100" operation="LTE" value="@.DiseaseRoll"/>
+        </triggered_effect>
+      </effect_group>
     </item>
     <item name="foodPumpkinPieFoil" >
       <property name="Extends" value="foodPumpkinPie" />
@@ -2051,6 +3020,19 @@
         <property name="Use_time" value="..." />
         <property name="Sound_start" value="player_eating" />
       </property>
+      <effect_group tiered="false">
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="50"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="25"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="set" value="4"/>
+        <display_value name="dFoodPoisoningRisk" value=".04"/>
+        <!-- FP cooked -->
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="add" value="@$MetabolismResist"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffIllFoodPoisoning01">
+          <requirement name="RandomRoll" seed_type="Random" min_max="1,100" operation="LTE" value="@.DiseaseRoll"/>
+        </triggered_effect>
+      </effect_group>
     </item>
     <item name="foodPumpkinPieFoil" >
       <property name="Extends" value="foodPumpkinPie" />
@@ -2062,6 +3044,19 @@
         <property name="Use_time" value="..." />
         <property name="Sound_start" value="player_eating" />
       </property>
+      <effect_group tiered="false">
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="50"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="25"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="set" value="4"/>
+        <display_value name="dFoodPoisoningRisk" value=".04"/>
+        <!-- FP cooked -->
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="add" value="@$MetabolismResist"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffIllFoodPoisoning01">
+          <requirement name="RandomRoll" seed_type="Random" min_max="1,100" operation="LTE" value="@.DiseaseRoll"/>
+        </triggered_effect>
+      </effect_group>
     </item>
     <item name="foodPumpkinCheesecakeFoil" >
       <property name="Extends" value="foodPumpkinCheesecake" />
@@ -2073,6 +3068,28 @@
         <property name="Use_time" value="..." />
         <property name="Sound_start" value="player_eating" />
       </property>
+      <effect_group tiered="false">
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="42"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="21"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="set" value="4"/>
+        <display_value name="dFoodPoisoningRisk" value=".04"/>
+        <!-- FP cooked -->
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="add" value="@$MetabolismResist"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffIllFoodPoisoning01">
+          <requirement name="RandomRoll" seed_type="Random" min_max="1,100" operation="LTE" value="@.DiseaseRoll"/>
+        </triggered_effect>
+      </effect_group>
+      <effect_group tiered="false">
+        <display_value name="dBartering" value=".05"/>
+        <display_value name="dDuration" value="303"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffPumpkinCheesecakeDuration" operation="add" value="303"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffPumpkinCheesecakeDuration" operation="set" value="903">
+          <requirement name="CVarCompare" cvar="$buffPumpkinCheesecakeDuration" operation="GT" value="903"/>
+        </triggered_effect>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffPumpkinCheesecake"/>
+      </effect_group>
     </item>
     <item name="foodPumpkinCheesecakeFoil" >
       <property name="Extends" value="foodPumpkinCheesecake" />
@@ -2084,6 +3101,28 @@
         <property name="Use_time" value="..." />
         <property name="Sound_start" value="player_eating" />
       </property>
+      <effect_group tiered="false">
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="42"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="21"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="set" value="4"/>
+        <display_value name="dFoodPoisoningRisk" value=".04"/>
+        <!-- FP cooked -->
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="add" value="@$MetabolismResist"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffIllFoodPoisoning01">
+          <requirement name="RandomRoll" seed_type="Random" min_max="1,100" operation="LTE" value="@.DiseaseRoll"/>
+        </triggered_effect>
+      </effect_group>
+      <effect_group tiered="false">
+        <display_value name="dBartering" value=".05"/>
+        <display_value name="dDuration" value="303"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffPumpkinCheesecakeDuration" operation="add" value="303"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffPumpkinCheesecakeDuration" operation="set" value="903">
+          <requirement name="CVarCompare" cvar="$buffPumpkinCheesecakeDuration" operation="GT" value="903"/>
+        </triggered_effect>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffPumpkinCheesecake"/>
+      </effect_group>
     </item>
     <item name="foodPumpkinBreadFoil" >
       <property name="Extends" value="foodPumpkinBread" />
@@ -2095,6 +3134,19 @@
         <property name="Use_time" value="..." />
         <property name="Sound_start" value="player_eating" />
       </property>
+      <effect_group tiered="false">
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="12"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="6"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="set" value="4"/>
+        <display_value name="dFoodPoisoningRisk" value=".04"/>
+        <!-- FP cooked -->
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="add" value="@$MetabolismResist"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffIllFoodPoisoning01">
+          <requirement name="RandomRoll" seed_type="Random" min_max="1,100" operation="LTE" value="@.DiseaseRoll"/>
+        </triggered_effect>
+      </effect_group>
     </item>
     <item name="foodPumpkinBreadFoil" >
       <property name="Extends" value="foodPumpkinBread" />
@@ -2106,6 +3158,19 @@
         <property name="Use_time" value="..." />
         <property name="Sound_start" value="player_eating" />
       </property>
+      <effect_group tiered="false">
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="12"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="6"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="set" value="4"/>
+        <display_value name="dFoodPoisoningRisk" value=".04"/>
+        <!-- FP cooked -->
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="add" value="@$MetabolismResist"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffIllFoodPoisoning01">
+          <requirement name="RandomRoll" seed_type="Random" min_max="1,100" operation="LTE" value="@.DiseaseRoll"/>
+        </triggered_effect>
+      </effect_group>
     </item>
     <item name="foodEggBoiledThermos" >
       <property name="Extends" value="foodEggBoiled" />
@@ -2117,6 +3182,19 @@
         <property name="Use_time" value="..." />
         <property name="Sound_start" value="player_eating" />
       </property>
+      <effect_group tiered="false">
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="10"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="5"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="set" value="4"/>
+        <display_value name="dFoodPoisoningRisk" value=".04"/>
+        <!-- FP cooked -->
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="add" value="@$MetabolismResist"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffIllFoodPoisoning01">
+          <requirement name="RandomRoll" seed_type="Random" min_max="1,100" operation="LTE" value="@.DiseaseRoll"/>
+        </triggered_effect>
+      </effect_group>
     </item>
     <item name="foodEggBoiledThermos" >
       <property name="Extends" value="foodEggBoiled" />
@@ -2128,6 +3206,19 @@
         <property name="Use_time" value="..." />
         <property name="Sound_start" value="player_eating" />
       </property>
+      <effect_group tiered="false">
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="10"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="5"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="set" value="4"/>
+        <display_value name="dFoodPoisoningRisk" value=".04"/>
+        <!-- FP cooked -->
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="add" value="@$MetabolismResist"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffIllFoodPoisoning01">
+          <requirement name="RandomRoll" seed_type="Random" min_max="1,100" operation="LTE" value="@.DiseaseRoll"/>
+        </triggered_effect>
+      </effect_group>
     </item>
     <item name="foodEggBoiledFoil" >
       <property name="Extends" value="foodEggBoiled" />
@@ -2139,6 +3230,19 @@
         <property name="Use_time" value="..." />
         <property name="Sound_start" value="player_eating" />
       </property>
+      <effect_group tiered="false">
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="10"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="5"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="set" value="4"/>
+        <display_value name="dFoodPoisoningRisk" value=".04"/>
+        <!-- FP cooked -->
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="add" value="@$MetabolismResist"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffIllFoodPoisoning01">
+          <requirement name="RandomRoll" seed_type="Random" min_max="1,100" operation="LTE" value="@.DiseaseRoll"/>
+        </triggered_effect>
+      </effect_group>
     </item>
     <item name="foodEggBoiledFoil" >
       <property name="Extends" value="foodEggBoiled" />
@@ -2150,6 +3254,19 @@
         <property name="Use_time" value="..." />
         <property name="Sound_start" value="player_eating" />
       </property>
+      <effect_group tiered="false">
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="10"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="5"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="set" value="4"/>
+        <display_value name="dFoodPoisoningRisk" value=".04"/>
+        <!-- FP cooked -->
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="add" value="@$MetabolismResist"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffIllFoodPoisoning01">
+          <requirement name="RandomRoll" seed_type="Random" min_max="1,100" operation="LTE" value="@.DiseaseRoll"/>
+        </triggered_effect>
+      </effect_group>
     </item>
     <item name="foodBaconAndEggsThermos" >
       <property name="Extends" value="foodBaconAndEggs" />
@@ -2161,6 +3278,19 @@
         <property name="Use_time" value="..." />
         <property name="Sound_start" value="player_eating" />
       </property>
+      <effect_group tiered="false">
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="36"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="18"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="set" value="4"/>
+        <display_value name="dFoodPoisoningRisk" value=".04"/>
+        <!-- FP cooked -->
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="add" value="@$MetabolismResist"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffIllFoodPoisoning01">
+          <requirement name="RandomRoll" seed_type="Random" min_max="1,100" operation="LTE" value="@.DiseaseRoll"/>
+        </triggered_effect>
+      </effect_group>
     </item>
     <item name="foodBaconAndEggsThermos" >
       <property name="Extends" value="foodBaconAndEggs" />
@@ -2172,26 +3302,94 @@
         <property name="Use_time" value="..." />
         <property name="Sound_start" value="player_eating" />
       </property>
+      <effect_group tiered="false">
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="36"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="18"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="set" value="4"/>
+        <display_value name="dFoodPoisoningRisk" value=".04"/>
+        <!-- FP cooked -->
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="add" value="@$MetabolismResist"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffIllFoodPoisoning01">
+          <requirement name="RandomRoll" seed_type="Random" min_max="1,100" operation="LTE" value="@.DiseaseRoll"/>
+        </triggered_effect>
+      </effect_group>
     </item>
     <item name="foodBaconAndEggsFoil" >
       <property name="Extends" value="foodBaconAndEggs" />
       <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="foodBaconAndEggs" />
+       <effect_group tiered="false">
+      <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="36"/>
+      <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="18"/>
+      <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+
+      <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="set" value="4"/>
+      <display_value name="dFoodPoisoningRisk" value=".04"/>
+      <!-- FP cooked -->
+      <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="add" value="@$MetabolismResist"/>
+      <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffIllFoodPoisoning01">
+        <requirement name="RandomRoll" seed_type="Random" min_max="1,100" operation="LTE" value="@.DiseaseRoll"/>
+      </triggered_effect>
+    </effect_group>
     </item>
+ 
     <item name="foodBaconAndEggsFoil" >
       <property name="Extends" value="foodBaconAndEggs" />
       <property name="TickPerLoss" value="120" />
-      <property name="CustomIcon" value="foodBaconAndEggs" />
+      <property name="CustomIcon" value="foodBaconAndEggs" />   <effect_group tiered="false">
+      <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="36"/>
+      <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="18"/>
+      <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+
+      <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="set" value="4"/>
+      <display_value name="dFoodPoisoningRisk" value=".04"/>
+      <!-- FP cooked -->
+      <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="add" value="@$MetabolismResist"/>
+      <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffIllFoodPoisoning01">
+        <requirement name="RandomRoll" seed_type="Random" min_max="1,100" operation="LTE" value="@.DiseaseRoll"/>
+      </triggered_effect>
+    </effect_group>
+    </item>
+ 
+    <item name="foodVegetableStewThermos" >
+      <property name="Extends" value="foodVegetableStew" />
+      <property name="TickPerLoss" value="120" />
+      <property name="CustomIcon" value="foodVegetableStew" />
+      <effect_group tiered="false">
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="20"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="31"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="15"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="set" value="4"/>
+        <display_value name="dFoodPoisoningRisk" value=".04"/>
+        <!-- FP cooked -->
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="add" value="@$MetabolismResist"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffIllFoodPoisoning01">
+          <requirement name="RandomRoll" seed_type="Random" min_max="1,100" operation="LTE" value="@.DiseaseRoll"/>
+        </triggered_effect>
+      </effect_group>
     </item>
     <item name="foodVegetableStewThermos" >
       <property name="Extends" value="foodVegetableStew" />
       <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="foodVegetableStew" />
-    </item>
-    <item name="foodVegetableStewThermos" >
-      <property name="Extends" value="foodVegetableStew" />
-      <property name="TickPerLoss" value="120" />
-      <property name="CustomIcon" value="foodVegetableStew" />
+      <effect_group tiered="false">
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="20"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="31"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="15"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="set" value="4"/>
+        <display_value name="dFoodPoisoningRisk" value=".04"/>
+        <!-- FP cooked -->
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="add" value="@$MetabolismResist"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffIllFoodPoisoning01">
+          <requirement name="RandomRoll" seed_type="Random" min_max="1,100" operation="LTE" value="@.DiseaseRoll"/>
+        </triggered_effect>
+      </effect_group>
     </item>
     <item name="foodRawMeatFoil" >
       <property name="Extends" value="foodRawMeat" />
@@ -2203,6 +3401,19 @@
         <property name="Use_time" value="..." />
         <property name="Sound_start" value="player_eating" />
       </property>
+      <effect_group tiered="false">
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="set" value="10"/>
+        <display_value name="dFoodPoisoningRisk" value=".10"/>
+        <!-- raw3 -->
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="add" value="@$MetabolismResist"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffIllFoodPoisoning01">
+          <requirement name="RandomRoll" seed_type="Random" min_max="1,100" operation="LTE" value="@.DiseaseRoll"/>
+        </triggered_effect>
+      </effect_group>
     </item>
     <item name="foodRawMeatFoil" >
       <property name="Extends" value="foodRawMeat" />
@@ -2214,6 +3425,19 @@
         <property name="Use_time" value="..." />
         <property name="Sound_start" value="player_eating" />
       </property>
+      <effect_group tiered="false">
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="set" value="10"/>
+        <display_value name="dFoodPoisoningRisk" value=".10"/>
+        <!-- raw3 -->
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="add" value="@$MetabolismResist"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffIllFoodPoisoning01">
+          <requirement name="RandomRoll" seed_type="Random" min_max="1,100" operation="LTE" value="@.DiseaseRoll"/>
+        </triggered_effect>
+      </effect_group>
     </item>
     <item name="foodRottingFleshFoil" >
       <property name="Extends" value="foodRottingFlesh" />
@@ -2225,6 +3449,18 @@
         <property name="Use_time" value="..." />
         <property name="Sound_start" value="player_eating" />
       </property>
+      <effect_group tiered="false">
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="set" value="18"/>
+        <display_value name="dFoodPoisoningRisk" value=".18"/>
+        <!-- rotten2 -->
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="add" value="@$MetabolismResist"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffIllFoodPoisoning01">
+          <requirement name="RandomRoll" seed_type="Random" min_max="1,100" operation="LTE" value="@.DiseaseRoll"/>
+        </triggered_effect>
+      </effect_group>
     </item>
     <item name="foodRottingFleshFoil" >
       <property name="Extends" value="foodRottingFlesh" />
@@ -2236,16 +3472,54 @@
         <property name="Use_time" value="..." />
         <property name="Sound_start" value="player_eating" />
       </property>
+      <effect_group tiered="false">
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="set" value="18"/>
+        <display_value name="dFoodPoisoningRisk" value=".18"/>
+        <!-- rotten2 -->
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="add" value="@$MetabolismResist"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffIllFoodPoisoning01">
+          <requirement name="RandomRoll" seed_type="Random" min_max="1,100" operation="LTE" value="@.DiseaseRoll"/>
+        </triggered_effect>
+      </effect_group>
     </item>
     <item name="foodEggThermos" >
       <property name="Extends" value="foodEgg" />
       <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="foodEgg" />
+      <effect_group tiered="false">
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="5"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="2"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="set" value="7"/>
+        <display_value name="dFoodPoisoningRisk" value=".07"/>
+        <!-- raw2 -->
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="add" value="@$MetabolismResist"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffIllFoodPoisoning01">
+          <requirement name="RandomRoll" seed_type="Random" min_max="1,100" operation="LTE" value="@.DiseaseRoll"/>
+        </triggered_effect>
+      </effect_group>
     </item>
     <item name="foodEggThermos" >
       <property name="Extends" value="foodEgg" />
       <property name="TickPerLoss" value="120" />
       <property name="CustomIcon" value="foodEgg" />
+      <effect_group tiered="false">
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="5"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="2"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="set" value="7"/>
+        <display_value name="dFoodPoisoningRisk" value=".07"/>
+        <!-- raw2 -->
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="add" value="@$MetabolismResist"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffIllFoodPoisoning01">
+          <requirement name="RandomRoll" seed_type="Random" min_max="1,100" operation="LTE" value="@.DiseaseRoll"/>
+        </triggered_effect>
+      </effect_group>
     </item>
     <item name="foodEggFoil" >
       <property name="Extends" value="foodEgg" />
@@ -2257,6 +3531,19 @@
         <property name="Use_time" value="..." />
         <property name="Sound_start" value="player_eating" />
       </property>
+      <effect_group tiered="false">
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="5"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="2"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="set" value="7"/>
+        <display_value name="dFoodPoisoningRisk" value=".07"/>
+        <!-- raw2 -->
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="add" value="@$MetabolismResist"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffIllFoodPoisoning01">
+          <requirement name="RandomRoll" seed_type="Random" min_max="1,100" operation="LTE" value="@.DiseaseRoll"/>
+        </triggered_effect>
+      </effect_group>
     </item>
     <item name="foodEggFoil" >
       <property name="Extends" value="foodEgg" />
@@ -2268,6 +3555,19 @@
         <property name="Use_time" value="..." />
         <property name="Sound_start" value="player_eating" />
       </property>
+      <effect_group tiered="false">
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="5"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="2"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="set" value="7"/>
+        <display_value name="dFoodPoisoningRisk" value=".07"/>
+        <!-- raw2 -->
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="add" value="@$MetabolismResist"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffIllFoodPoisoning01">
+          <requirement name="RandomRoll" seed_type="Random" min_max="1,100" operation="LTE" value="@.DiseaseRoll"/>
+        </triggered_effect>
+      </effect_group>
     </item>
     <item name="foodCornMealFoil" >
       <property name="Extends" value="foodCornMeal" />
@@ -2279,6 +3579,20 @@
         <property name="Use_time" value="..." />
         <property name="Sound_start" value="player_eating" />
       </property>
+      <effect_group tiered="false">
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="2"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="-5"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="set" value="7"/>
+        <display_value name="dFoodPoisoningRisk" value=".07"/>
+        <!-- raw2 -->
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="add" value="@$MetabolismResist"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffIllFoodPoisoning01">
+          <requirement name="RandomRoll" seed_type="Random" min_max="1,100" operation="LTE" value="@.DiseaseRoll"/>
+        </triggered_effect>
+      </effect_group>
     </item>
     <item name="foodCornMealFoil" >
       <property name="Extends" value="foodCornMeal" />
@@ -2290,6 +3604,20 @@
         <property name="Use_time" value="..." />
         <property name="Sound_start" value="player_eating" />
       </property>
+      <effect_group tiered="false">
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="2"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="-5"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="set" value="7"/>
+        <display_value name="dFoodPoisoningRisk" value=".07"/>
+        <!-- raw2 -->
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="add" value="@$MetabolismResist"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffIllFoodPoisoning01">
+          <requirement name="RandomRoll" seed_type="Random" min_max="1,100" operation="LTE" value="@.DiseaseRoll"/>
+        </triggered_effect>
+      </effect_group>
     </item>
     <item name="foodCropCornFoil" >
       <property name="Extends" value="foodCropCorn" />
@@ -2301,6 +3629,20 @@
         <property name="Use_time" value="..." />
         <property name="Sound_start" value="player_eating" />
       </property>
+      <effect_group tiered="false">
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="2"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="-5"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="set" value="7"/>
+        <display_value name="dFoodPoisoningRisk" value=".07"/>
+        <!-- raw2 -->
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="add" value="@$MetabolismResist"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffIllFoodPoisoning01">
+          <requirement name="RandomRoll" seed_type="Random" min_max="1,100" operation="LTE" value="@.DiseaseRoll"/>
+        </triggered_effect>
+      </effect_group>
     </item>
     <item name="foodCropCornFoil" >
       <property name="Extends" value="foodCropCorn" />
@@ -2312,6 +3654,20 @@
         <property name="Use_time" value="..." />
         <property name="Sound_start" value="player_eating" />
       </property>
+      <effect_group tiered="false">
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="2"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="-5"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="set" value="7"/>
+        <display_value name="dFoodPoisoningRisk" value=".07"/>
+        <!-- raw2 -->
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="add" value="@$MetabolismResist"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffIllFoodPoisoning01">
+          <requirement name="RandomRoll" seed_type="Random" min_max="1,100" operation="LTE" value="@.DiseaseRoll"/>
+        </triggered_effect>
+      </effect_group>
     </item>
     <item name="foodCropGraceCornFoil" >
       <property name="Extends" value="foodCropGraceCorn" />
@@ -2323,6 +3679,19 @@
         <property name="Use_time" value="..." />
         <property name="Sound_start" value="player_eating" />
       </property>
+      <effect_group tiered="false">
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="20"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="20"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="set" value="4"/>
+        <display_value name="dFoodPoisoningRisk" value=".04"/>
+        <!-- FP cooked -->
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="add" value="@$MetabolismResist"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffIllFoodPoisoning01">
+          <requirement name="RandomRoll" seed_type="Random" min_max="1,100" operation="LTE" value="@.DiseaseRoll"/>
+        </triggered_effect>
+      </effect_group>
     </item>
     <item name="foodCropGraceCornFoil" >
       <property name="Extends" value="foodCropGraceCorn" />
@@ -2334,6 +3703,19 @@
         <property name="Use_time" value="..." />
         <property name="Sound_start" value="player_eating" />
       </property>
+      <effect_group tiered="false">
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="20"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="20"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="set" value="4"/>
+        <display_value name="dFoodPoisoningRisk" value=".04"/>
+        <!-- FP cooked -->
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="add" value="@$MetabolismResist"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffIllFoodPoisoning01">
+          <requirement name="RandomRoll" seed_type="Random" min_max="1,100" operation="LTE" value="@.DiseaseRoll"/>
+        </triggered_effect>
+      </effect_group>
     </item>
     <item name="foodCropYuccaFruitFoil" >
       <property name="Extends" value="foodCropYuccaFruit" />
@@ -2345,6 +3727,19 @@
         <property name="Use_time" value="..." />
         <property name="Sound_start" value="player_eating" />
       </property>
+      <effect_group tiered="false">
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="2"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="set" value="7"/>
+        <display_value name="dFoodPoisoningRisk" value=".07"/>
+        <!-- raw2 -->
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="add" value="@$MetabolismResist"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffIllFoodPoisoning01">
+          <requirement name="RandomRoll" seed_type="Random" min_max="1,100" operation="LTE" value="@.DiseaseRoll"/>
+        </triggered_effect>
+      </effect_group>
     </item>
     <item name="foodCropYuccaFruitFoil" >
       <property name="Extends" value="foodCropYuccaFruit" />
@@ -2356,6 +3751,19 @@
         <property name="Use_time" value="..." />
         <property name="Sound_start" value="player_eating" />
       </property>
+      <effect_group tiered="false">
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="2"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="set" value="7"/>
+        <display_value name="dFoodPoisoningRisk" value=".07"/>
+        <!-- raw2 -->
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="add" value="@$MetabolismResist"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffIllFoodPoisoning01">
+          <requirement name="RandomRoll" seed_type="Random" min_max="1,100" operation="LTE" value="@.DiseaseRoll"/>
+        </triggered_effect>
+      </effect_group>
     </item>
     <item name="Berry TeaThermos" >
       <property name="Extends" value="Berry Tea" />
@@ -2368,7 +3776,7 @@
         <property name="Create_item" value="drinkThermosEmpty"/>
       </property>
     </item>
-   
+
     <item name="Iced Mixed TeaThermos" >
       <property name="Extends" value="Iced Mixed Tea" />
       <property name="TickPerLoss" value="120" />
@@ -2693,12 +4101,13 @@
     </item>
     <item name="Meat and Beer PieFoil" >
       <property name="Extends" value="Meat and Beer Pie" />
-      <property name="TickPerLoss" value="120" />	<property class="Action0">
-		<property name="Class" value="Eat" />
-		<property name="Delay" value="2.1" />
-		<property name="Use_time" value="..." />
-		<property name="Sound_start" value="player_eating" />
-	</property>
+      <property name="TickPerLoss" value="120" />
+      <property class="Action0">
+        <property name="Class" value="Eat" />
+        <property name="Delay" value="2.1" />
+        <property name="Use_time" value="..." />
+        <property name="Sound_start" value="player_eating" />
+      </property>
     </item>
     <item name="Fried MushroomsThermos" >
       <property name="Extends" value="Fried Mushrooms" />
