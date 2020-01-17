@@ -332,6 +332,13 @@
       <ingredient name="Custard PieFrozen" count="1"   />
     </recipe>
 
+    <recipe name="foodBaconAndEggs" count="1" craft_area="campfire" craft_tool="toolCookingPot" tags="perkMasterChef,learnable">
+      <ingredient name="foodRawMeatFoil" count="5"/>
+      <ingredient name="foodEgg" count="2"/>
+      <effect_group>
+        <passive_effect name="CraftingIngredientCount" level="2,5" operation="base_add" value="-1" tags="foodRawMeat"/>
+      </effect_group>
+    </recipe>
   </append>
   
   <append xpath="/recipes">
