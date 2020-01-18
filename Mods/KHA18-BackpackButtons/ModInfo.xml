@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+	<ModInfo>
+		<Name value="Custom Backpack Buttons" />
+		<Description value="Adds Stash All, Stash All But First Row and Stack All buttons to the backpack" />
+		<Author value="KhaineGB" />
+		<Version value="1.0" />
+	</ModInfo>
+</xml>
