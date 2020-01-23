@@ -316,33 +316,33 @@
       <statement id="statement_305002939" text="statement_305002939">
         <response_entry id="response_1977811390" ref_text="Okay..." />
       </statement>
-      <response id="shop" text="dialog_trader_statement_shop">
+      <response id="shop" text="dialog_trader_response_shop">
         <action type="Trader" id="trade" />
       </response>
-      <response id="jobsnone" text="dialog_trader_statement_jobsnone" nextstatementid="nojobs">
+      <response id="jobsnone" text="dialog_trader_response_jobsnone" nextstatementid="nojobs">
         <requirement type="QuestStatus" value="InProgress" requirementtype="Hide" Hash="Requirement_1318699843" />
       </response>
-      <response id="jobshave" text="dialog_trader_statement_jobshave" nextstatementid="currentjobs">
+      <response id="jobshave" text="dialog_trader_response_jobshave" nextstatementid="currentjobs">
         <requirement type="QuestStatus" value="NotStarted" requirementtype="Hide" Hash="Requirement_1079517332" />
         <action type="AddJournalEntry" id="questTip" />
       </response>
-      <response id="background" text="dialog_trader_statement_background" nextstatementid="background" />
-      <response id="navezgane" text="dialog_trader_statement_navezgane" nextstatementid="navezgane" />
-      <response id="theduke" text="dialog_trader_statement_theduke" nextstatementid="theduke" />
-      <response id="cassadores" text="dialog_trader_statement_cassadores" nextstatementid="cassadores" />
-      <response id="noah" text="dialog_trader_statement_noah" nextstatementid="noah" />
-      <response id="whiteriveroutposts" text="dialog_trader_statement_whiteriveroutposts" nextstatementid="whiteriveroutposts" />
-      <response id="nevermind" text="dialog_trader_statement_nevermind" nextstatementid="start" />
+      <response id="background" text="dialog_trader_response_background" nextstatementid="background" />
+      <response id="navezgane" text="dialog_trader_response_navezgane" nextstatementid="navezgane" />
+      <response id="theduke" text="dialog_trader_response_theduke" nextstatementid="theduke" />
+      <response id="cassadores" text="dialog_trader_response_cassadores" nextstatementid="cassadores" />
+      <response id="noah" text="dialog_trader_response_noah" nextstatementid="noah" />
+      <response id="whiteriveroutposts" text="dialog_trader_response_whiteriveroutposts" nextstatementid="whiteriveroutposts" />
+      <response id="nevermind" text="dialog_trader_response_nevermind" nextstatementid="start" />
       <response id="admin" text="dialog_trader_statement_admin" nextstatementid="admin">
         <requirement type="Admin" requirementtype="Hide" Hash="Requirement_-666464561" />
       </response>
-      <response id="restock" text="dialog_trader_statement_restock">
+      <response id="restock" text="dialog_trader_response_restock">
         <action type="Trader" id="restock" />
       </response>
-      <response id="resetquests" text="dialog_trader_statement_resetquests">
+      <response id="resetquests" text="dialog_trader_response_resetquests">
         <action type="Trader" id="reset_quests" />
       </response>
-      <response id="done" text="dialog_trader_statement_done" />
+      <response id="done" text="Done" />
       <response id="responseID_-2088969424" text="responseID_-2088969424" nextstatementid="statement_-911053284">
         <requirement type="HasBuffSDX, Mods" value="buffCursed" requirementtype="Hide" Hash="Requirement_-1434088733" />
         <requirement type="HasBuffSDX, Mods" value="buffBadAttitude" match="not" requirementtype="Hide" Hash="Requirement_-1230867493" />

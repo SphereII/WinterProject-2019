@@ -72,12 +72,14 @@ public static class ItemsUtilities
         bool result = false;
         foreach(ItemStack scrapStack in scrapIngredients)
         {
+            int TotalCount = scrapStack.count * OriginalStack.count;
+            scrapStack.count = TotalCount;
             if(!ItemController.xui.PlayerInventory.AddItem(scrapStack, true))
                 ItemController.xui.PlayerInventory.DropItem(scrapStack);
         }
 
-        OriginalStack.count -= 1;
-        ((XUiC_ItemStack)ItemController).ItemStack = ((OriginalStack.count <= 0) ? ItemStack.Empty.Clone() : OriginalStack.Clone());
+        
+        ((XUiC_ItemStack)ItemController).ItemStack = ItemStack.Empty.Clone();
         ((XUiC_ItemStack)ItemController).WindowGroup.Controller.SetAllChildrenDirty();
         
         return result;
