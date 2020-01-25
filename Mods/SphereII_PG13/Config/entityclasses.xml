@@ -1,0 +1,4 @@
+<configs>
+	<!-- change the stripper's meshes with the nurses' skin -->
+	<set xpath="/entity_classes/entity_class[contains(@name, 'Stripper')]/property[@name='Mesh']/@value">Zombies/zombieStandardNurseRagdoll</set>
+</configs>

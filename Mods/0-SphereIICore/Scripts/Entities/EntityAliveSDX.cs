@@ -425,6 +425,9 @@ public class EntityAliveSDX : EntityNPC
     public override void OnUpdateLive()
     {
 
+        if (!SingletonMonoBehaviour<ConnectionManager>.Instance.IsServer)
+            return;
+
         if (lastDoorOpen != Vector3i.zero)
             OpenDoor();
 
@@ -443,10 +446,7 @@ public class EntityAliveSDX : EntityNPC
 
         // Check if there's a player within 10 meters of us. If not, resume wandering.
         emodel.avatarController.SetBool("IsBusy", false);
-
-        if (!SingletonMonoBehaviour<ConnectionManager>.Instance.IsServer)
-            return;
-
+  
 
 
         if (GetAttackTarget() == null || GetRevengeTarget() == null)

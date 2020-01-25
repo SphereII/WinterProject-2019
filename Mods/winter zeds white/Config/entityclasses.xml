@@ -114,9 +114,8 @@
       <property name="ReplaceMaterial2" value="#@modfolder:Resources/winter_zeds_white3.unity3d?zhair_blue"/>
     </entity_class>
     <entity_class name="zombieStripper_white" extends="zombieStripper">
-      <property name="ReplaceMaterial0" value="#@modfolder:Resources/winter_zeds_white3.unity3d?stripper_blue"/>
+      <property name="ReplaceMaterial0" value="#@modfolder:Resources/winter_zeds_white2.unity3d?nurse_blue"/>
       <property name="ReplaceMaterial1" value="#@modfolder:Resources/winter_zeds_white3.unity3d?zeye_blue"/>
-      <property name="ReplaceMaterial2" value="#@modfolder:Resources/winter_zeds_white3.unity3d?zhair_blue"/>
     </entity_class>
     <entity_class name="zombieBusinessMan_white" extends="zombieBusinessMan">
       <property name="ReplaceMaterial0" value="#@modfolder:Resources/winter_zeds_white3.unity3d?suit_blue"/>

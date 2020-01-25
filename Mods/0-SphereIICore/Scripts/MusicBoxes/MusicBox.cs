@@ -118,8 +118,8 @@ public class BlockMusicBox : BlockLoot
         #region GetActivationText
 
         PlayerActionsLocal playerInput = ((EntityPlayerLocal)_entityFocusing).playerInput;
-        // string keybindString = playerInput.Activate.GetBindingXuiMarkupString(XUiUtils.EmptyBindingStyle.EmptyString, XUiUtils.DisplayStyle.Plain) + playerInput.PermanentActions.Activate.GetBindingXuiMarkupString(XUiUtils.EmptyBindingStyle.EmptyString, XUiUtils.DisplayStyle.Plain);
-        string keybindString = UIUtils.GetKeybindString(playerInput.Activate, playerInput.PermanentActions.Activate);
+         string keybindString = playerInput.Activate.GetBindingXuiMarkupString(XUiUtils.EmptyBindingStyle.EmptyString, XUiUtils.DisplayStyle.Plain) + playerInput.PermanentActions.Activate.GetBindingXuiMarkupString(XUiUtils.EmptyBindingStyle.EmptyString, XUiUtils.DisplayStyle.Plain);
+        //string keybindString = UIUtils.GetKeybindString(playerInput.Activate, playerInput.PermanentActions.Activate);
         Block block = Block.list[_blockValue.type];
         string blockName = block.GetBlockName();
 
@@ -137,9 +137,9 @@ public class BlockMusicBox : BlockLoot
             if (myMusicBoxScript)
             {
                 if (myMusicBoxScript.enabled)
-                    strReturn = string.Format("Turn off the " + this.GetBlockName(), keybindString);
+                    strReturn = string.Format(Localization.Get("musicbox_turnOff", string.Empty) + this.GetBlockName(), keybindString);
                 else
-                    strReturn = string.Format("Turn on the " + this.GetBlockName(), keybindString);
+                    strReturn = string.Format(Localization.Get("musicbox_turnOn", string.Empty) + this.GetBlockName(), keybindString);
             }
         }
         return strReturn;

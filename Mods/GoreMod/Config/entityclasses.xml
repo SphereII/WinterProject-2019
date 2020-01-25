@@ -5,13 +5,11 @@
 <append xpath="/entity_classes/entity_class[@name='zombieFemaleFatRadiated']/property[@name='Tags']/@value">,Fat</append>
 <append xpath="/entity_classes/entity_class[@name='zombieFatHawaiian']/property[@name='Tags']/@value">,Fat</append>
 <append xpath="/entity_classes/entity_class[@name='zombieFatHawaiianFeral']/property[@name='Tags']/@value">,Fat</append>
-<append xpath="/entity_classes/entity_class[@name='zombieFatHawaiianRadiated']/property[@name='Tags']/@value">,Fat</append>
 <append xpath="/entity_classes/entity_class[@name='zombieFatCop']/property[@name='Tags']/@value">,Fat</append>
 <append xpath="/entity_classes/entity_class[@name='zombieFatCopFeral']/property[@name='Tags']/@value">,Fat</append>
 <append xpath="/entity_classes/entity_class[@name='zombieFatCopRadiated']/property[@name='Tags']/@value">,Fat</append>
 <append xpath="/entity_classes/entity_class[@name='zombieSnow']/property[@name='Tags']/@value">,Fat</append>
 <append xpath="/entity_classes/entity_class[@name='zombieSnowFeral']/property[@name='Tags']/@value">,Fat</append>
-<append xpath="/entity_classes/entity_class[@name='zombieSnowRadiated']/property[@name='Tags']/@value">,Fat</append>
 <append xpath="/entity_classes/entity_class[@name='zombieBiker']/property[@name='Tags']/@value">,Fat</append>
 <append xpath="/entity_classes/entity_class[@name='zombieBikerFeral']/property[@name='Tags']/@value">,Fat</append>
 <append xpath="/entity_classes/entity_class[@name='zombieBikerRadiated']/property[@name='Tags']/@value">,Fat</append>
