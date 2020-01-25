@@ -283,8 +283,8 @@
 			<property name="AttackTimeoutNight" value="1.1"/>
 			<property name="ExperienceGain" value="170"/>
 			<property name="DeadBodyHitPoints" value="150"/>
-			<drop event="Harvest" name="femur" tool_category="Butcher" count="4"/> 
-			<drop event="Harvest" name="rottingFlesh" tool_category="Butcher" count="2"/>
+			<drop event="Harvest" name="resourceBone" tool_category="Butcher" count="4"/> 
+			<drop event="Harvest" name="foodRottingFlesh" tool_category="Butcher" count="2"/>
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="30"/>
 				<passive_effect name="HealthMax" operation="perc_add" value="0"/> <!-- Animal HP scale -->
