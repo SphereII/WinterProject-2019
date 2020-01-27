@@ -8,6 +8,19 @@
       <property name="AvatarController" value="MecanimSDX, Mods" />
       <property name="RootMotion" value="false" />
       <property name="HasRagdoll" value="true" />
+
+      <property name="DeadBodyHitPoints" value="600"/>
+
+      <drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
+      <drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="50"/>
+      <drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="15"/>
+      <drop event="Harvest" name="resourceAnimalFat" tag="butcherHarvest" count="5"/>
+      <drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="25"/>
+      <drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="5"/>
+      <drop event="Harvest" name="resourceTestosteroneExtract" tag="butcherHarvest" count="2"/>
+      <drop event="Harvest" name="foodRawMeat" count="1" tag="WasteTreasuresCompleteHarvest"/>
+      <drop event="Harvest" name="resourceLeather" count="1" tag="WasteTreasuresCompleteHarvest"/>
+      <drop event="Harvest" name="resourceBone" count="1" tag="WasteTreasuresCompleteHarvest"/>
     </entity_class>
     <entity_class name="ArcticFox" extends="animalTemplateTimid" >
       <property name="Mesh" value="#@modfolder:Resources/ArcticFox.unity3d?ArcticFox_X" />
