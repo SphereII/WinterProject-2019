@@ -69,7 +69,7 @@ public class SphereII_WinterProject
 
     [HarmonyPatch(typeof(Prefab))]
     [HarmonyPatch("CopyBlocksIntoChunkNoEntities")]
-    public class SphereII_WinterProject_Prefab_Prefix
+    public class SphereII_WinterProject_Prefab_Prefix_CopyBlocksIntoChunkNoEntities
     {
         public static bool Prefix(ref Prefab __instance, ref Vector3i _prefabTargetPos)
         {
@@ -83,6 +83,22 @@ public class SphereII_WinterProject
             __instance.bCopyAirBlocks = true;
             return true;
 
+        }
+
+    }
+
+    [HarmonyPatch(typeof(Prefab))]
+    [HarmonyPatch("CopyIntoLocal")]
+    public class SphereII_WinterProject_Prefab_Prefix
+    {
+        public static bool Prefix(Prefab __instance, ref Vector3i _destinationPos, ChunkCluster _cluster, QuestTags _questTags)
+        {
+            // If they are pre-generated Winter Project worlds, don't apply this. They'd have already been applied.
+            if (GamePrefs.GetString(EnumGamePrefs.GameWorld).ToLower().Contains("winter project"))
+                return true;
+
+            _destinationPos.y -= 8;
+            return true;
         }
 
     }
