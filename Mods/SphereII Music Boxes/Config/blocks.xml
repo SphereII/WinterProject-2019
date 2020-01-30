@@ -25,7 +25,12 @@
 		  <property name="CanPickup" value="true" />
 		  <property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
 		  <property name="LootList" value="98"/>
-		</block>
+
+      <property class="RepairItems">
+        <property name="resourceScrapIron" value="10"/>
+      </property>
+
+    </block>
 		
 		  <!--  The rules for playing a video are done in such an order:
 				If VideoSource is an asset bundle, try to load a clip from it.
@@ -45,7 +50,11 @@
 		  <property name="CanPickup" value="true" />
 		  <property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
 		  <property name="LootList" value="98"/>
-		</block>
+      <property class="RepairItems">
+        <property name="resourceScrapIron" value="10"/>
+      </property>
+
+    </block>
 		
 		<block name="VideoPlayerTV">
 		  <property name="Class" value="MusicBox, Mods"/>
@@ -61,7 +70,11 @@
 		  <property name="CanPickup" value="true" />
 		  <property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
 		  <property name="LootList" value="98"/>
-		</block>
+      <property class="RepairItems">
+        <property name="resourceScrapIron" value="10"/>
+      </property>
+
+    </block>
 
 
 	</append>
