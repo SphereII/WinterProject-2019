@@ -1,6 +1,6 @@
 ﻿<configs>
   
-  <append xpath="/lootcontainers/lootgroup[@name='junkPersonal']">
+  <append xpath="/lootcontainers/lootgroup[@name='junk']">
     <item name="SamaraMorganHorse01" />
     <item name="SamaraMorganHorse02" />
     <item name="SamaraMorganHorse03" />
