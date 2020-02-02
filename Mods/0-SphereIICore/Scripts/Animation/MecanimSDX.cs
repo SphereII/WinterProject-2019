@@ -154,7 +154,7 @@ class MecanimSDX : AvatarController
             timeAttackAnimationPlaying -= Time.deltaTime;
         }
 
-        if(!this.m_bVisible && (this.entity == null || !this.entity.RootMotion || this.entity.isEntityRemote))
+        if(!this.m_bVisible && (this.entity == null  || this.entity.isEntityRemote))
         {
             return;
         }
