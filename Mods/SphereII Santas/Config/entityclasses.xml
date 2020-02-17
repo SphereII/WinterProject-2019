@@ -7,6 +7,7 @@
 		  <property name="AvatarController" value="MecanimSDX, Mods" />
 		  <property name="Class" value="SantaTrader, Mods"/>
 		  <property name="ModelType" value="Standard"/>
+      <property name="SoundRandomTime" value="600"/>
       <property name="SoundRandom" value="santaidle" />
       <property name="ParticleOnDeath" value="#@modfolder:Resources/TransformParticle.unity3d?p_Transform_X"/>
       <!-- With true, the zombie just kind of chills out in one place. Set to false to watch it move. -->
