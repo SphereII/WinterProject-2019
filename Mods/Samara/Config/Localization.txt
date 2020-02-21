@@ -1,6 +1,6 @@
 Key,English
-Cursed,"Cursed By A Sceamer"
-CursedDesc,"Cursed By A Sceamer; Her shriek rattled your brain. What's real, what's not...."
+Cursed,"Cursed By A Screamer"
+CursedDesc,"Cursed By A Screamer; Her shriek rattled your brain. What's real, what's not...."
 buffSamaraAOE,"Samara Morgan's Thoughts"
 buffSamaraAttack,"Samara Morgan's Thoughts"
 buffSamaraAttackTooltip,"Don't you get it? She never sleeps..."
