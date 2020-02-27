@@ -24,7 +24,7 @@ quest_Samara_WellDesc,"Explore the old Shelter Mountain Inn for clues"
 
 SamaraMorganDiary01_title,"Samara Morgan's Diary"
 SamaraMorganDiary01,"Samara Morgan's Diary"
-SamaraMorganDiary01Desc,"An old diary, filled with scribbles and nearly illegible writing. Inside the cover, it says 'Samara Morgan, Moesko Island'"
+SamaraMorganDiary01Desc,"An old diary, filled with scribbles and nearly illegible writing. Inside the cover, it says 'Samara Morgan, Moesko Island'. Maybe the trader can read it."
 
 samaraMorganMemoriesBinds_NoCurse_title,"The artifact crumbles."
 samaraMorganemoriessBinds_NoCurse,"The artifact crumbles in your hands."
